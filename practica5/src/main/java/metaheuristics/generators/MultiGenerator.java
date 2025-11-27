@@ -2,6 +2,7 @@ package metaheuristics.generators;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import factory_method.FactoryGenerator;
@@ -15,9 +16,9 @@ public class MultiGenerator extends Generator {
 
 	private GeneratorType Generatortype;
 	private static Generator[] listGenerators = new Generator[GeneratorType.values().length];
-	public static List<State> listGeneratedPP = new ArrayList<State> ();
-	public static Generator activeGenerator;
-	public static List<State> listStateReference = new ArrayList<State>(); 
+	public static final List<State> listGeneratedPP = Collections.synchronizedList(new ArrayList<State>());
+	public static volatile Generator activeGenerator;
+	public static final List<State> listStateReference = Collections.synchronizedList(new ArrayList<State>());
 	
 	public void setGeneratortype(GeneratorType generatortype) {
 		Generatortype = generatortype;
@@ -136,8 +137,8 @@ public class MultiGenerator extends Generator {
 		}
 	}
 	
-	private static ArrayList<State> getListGeneratedPP() {
-		return (ArrayList<State>) listGeneratedPP;
+	private static List<State> getListGeneratedPP() {
+		return listGeneratedPP;
 	}
 
 	public static Generator[] getListGenerators() {
@@ -156,8 +157,13 @@ public class MultiGenerator extends Generator {
 		MultiGenerator.activeGenerator = activeGenerator;
 	}
 
-	public static void setListGeneratedPP(List<State> listGeneratedPP) {
-		MultiGenerator.listGeneratedPP = listGeneratedPP;
+	public static void setListGeneratedPP(List<State> newListGeneratedPP) {
+		synchronized (listGeneratedPP) {
+			listGeneratedPP.clear();
+			if (newListGeneratedPP != null) {
+				listGeneratedPP.addAll(newListGeneratedPP);
+			}
+		}
 	}
 
 	@Override

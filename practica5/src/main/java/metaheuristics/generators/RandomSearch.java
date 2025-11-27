@@ -2,6 +2,7 @@ package metaheuristics.generators;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import local_search.acceptation_type.AcceptType;
@@ -27,8 +28,8 @@ public class RandomSearch extends Generator {
     private GeneratorType typeGenerator;
 
     private float weight;
-    //para acceder desde los algoritmos basados en poblaciones de puntos
-	public static List<State> listStateReference = new ArrayList<State>();
+	//para acceder desde los algoritmos basados en poblaciones de puntos
+	public static final List<State> listStateReference = Collections.synchronizedList(new ArrayList<State>());
 	
 	//problemas dinamicos
     public static int countGender = 0;
@@ -45,10 +46,10 @@ public class RandomSearch extends Generator {
 		this.candidatevalue = new CandidateValue();
 		this.typeGenerator = GeneratorType.RandomSearch;
 		this.weight = 50;
-		listTrace[0] = this.weight;
-		listCountBetterGender[0] = 0;
-		listCountGender[0] = 0;
-		listStateReference = new ArrayList<State>();
+	listTrace[0] = this.weight;
+	listCountBetterGender[0] = 0;
+	listCountGender[0] = 0;
+	listStateReference.clear();
 	}
 	
 	@Override

@@ -1,6 +1,8 @@
 package evolutionary_algorithms.complement;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 import config.tspDynamic.TSPState;
 
@@ -10,9 +12,9 @@ import metaheurictics.strategy.Strategy;
 import problem.definition.State;
 
 public class AIOMutation extends Mutation {
-	
-	
-	public static ArrayList<Object> path = new ArrayList<Object>();
+    
+    
+	public static final List<Object> path = Collections.synchronizedList(new ArrayList<Object>());
 
 	@Override
 	public State mutation(State state, double PM) {

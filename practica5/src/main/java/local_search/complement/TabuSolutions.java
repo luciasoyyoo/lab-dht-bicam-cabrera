@@ -1,13 +1,14 @@
 package local_search.complement;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import problem.definition.State;
 
 public class TabuSolutions {
 	
-	public static List<State> listTabu = new ArrayList<State>();
+	public static final List<State> listTabu = Collections.synchronizedList(new ArrayList<State>());
 
 	public static int maxelements; 
 

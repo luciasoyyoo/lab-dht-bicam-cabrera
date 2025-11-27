@@ -39,16 +39,16 @@ public class Strategy {
 	public Generator generator;
 	public double threshold;
 
-	public ArrayList<State> listStates; //lista de todos los estados generados en cada iteracion
-	public ArrayList<State> listBest; //lista de la mejor solucion en cada iteracion
+	public List<State> listStates; //lista de todos los estados generados en cada iteracion
+	public List<State> listBest; //lista de la mejor solucion en cada iteracion
 	public List<State> listRefPoblacFinal = new ArrayList<State> (); //lista de soluciones no dominadas
 	public Dominance notDominated; 
 
 	
 	public boolean saveListStates; //guardar lista de estados generados
 	public boolean saveListBestStates; // guardar lista con los mejores estados encontrados en cada iteracion
-	public boolean saveFreneParetoMonoObjetivo; //guardar lista de soluciones no dominadas de una ejecución
-	public boolean calculateTime; // calcular tiempo de ejecución de un algoritmo
+	public boolean saveFreneParetoMonoObjetivo; //guardar lista de soluciones no dominadas de una ejecuciï¿½n
+	public boolean calculateTime; // calcular tiempo de ejecuciï¿½n de un algoritmo
 	
 	//calculo del Tiempo inicial y final
 	long initialTime;
@@ -113,14 +113,21 @@ public class Strategy {
 			initializeGenerators();
 			MultiGenerator.initializeGenerators();
 			MultiGenerator.listGeneratedPP.clear();
-			multiGenerator = (MultiGenerator)((MultiGenerator)generator).clone();
+			// create a clone of the MultiGenerator using reflection to access protected clone()
+			try {
+				java.lang.reflect.Method cloneMethod = generator.getClass().getDeclaredMethod("clone");
+				cloneMethod.setAccessible(true);
+				multiGenerator = (MultiGenerator) cloneMethod.invoke(generator);
+			} catch (Exception e) {
+				throw new RuntimeException("Failed to clone MultiGenerator", e);
+			}
 		}
 		else initialize(); //crea el mapa de generadores
 		update(countCurrent);
 		
 		float sumMax = 0; // suma acumulativa para almacenar la evaluacion de la mejor solucion encotrada y calcular el OfflinePerformance
 		int countOff = 0; // variable par contar los OfflinePerformance que se van salvando en el arreglo
-		//ciclio de ejecución del algoritmo
+		//ciclio de ejecuciï¿½n del algoritmo
 		while (!stopexecute.stopIterations(countCurrent, countmaxIterations)){
 			//si se detecta un cambio
 			if(countCurrent == countChange){
@@ -142,7 +149,7 @@ public class Strategy {
 						MultiGenerator.activeGenerator.countBetterGender = 0;
 					}
 					updateWeight();//actualizar el peso de los generadores si se reinician cuando ocurre un cambio
-					//generar el estado candidato de la iteración
+					//generar el estado candidato de la iteraciï¿½n
 					stateCandidate = multiGenerator.generate(operatornumber);
 					problem.Evaluate(stateCandidate);
 					stateCandidate.setEvaluation(stateCandidate.getEvaluation());
@@ -233,7 +240,7 @@ public class Strategy {
 			System.out.println("El tiempo de ejecucion: " + timeExecute);
 		}
 		if(generatorType.equals(GeneratorType.MultiGenerator)){
-			listBest = (ArrayList<State>) multiGenerator.getReferenceList();
+			listBest = new ArrayList<State>(multiGenerator.getReferenceList());
 			//calcular offlinePerformance
 			calculateOffLinePerformance(sumMax, countOff);
 			if(countPeriodo == countCurrent){
@@ -241,7 +248,7 @@ public class Strategy {
 			}
 		}
 		else{
-			listBest = (ArrayList<State>) generator.getReferenceList();
+			listBest = new ArrayList<State>(generator.getReferenceList());
 			calculateOffLinePerformance(sumMax, countOff);
 		} 
 	}
@@ -386,7 +393,7 @@ public class Strategy {
 
 	public static void destroyExecute() {
 		strategy = null;
-		RandomSearch.listStateReference = null;
+		RandomSearch.listStateReference.clear();
 	}
 	
 	public double getThreshold() {
