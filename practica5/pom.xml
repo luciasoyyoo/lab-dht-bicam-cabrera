@@ -19,6 +19,8 @@
     <project.build.sourceEncoding>ISO-8859-1</project.build.sourceEncoding>
     <maven.compiler.source>1.7</maven.compiler.source>
     <maven.compiler.target>1.7</maven.compiler.target>
+  <!-- By default skip OWASP Dependency-Check during regular builds to avoid NVD network issues; set -Ddependency.check.skip=false to enable -->
+  <dependency.check.skip>true</dependency.check.skip>
   </properties>
 
   <dependencies>
@@ -91,6 +93,117 @@
           <target>${maven.compiler.target}</target>
           <encoding>${project.build.sourceEncoding}</encoding>
         </configuration>
+      </plugin>
+      <!-- Quality plugins: JaCoCo, OWASP Dependency-Check, Checkstyle, PMD, SpotBugs(+FindSecBugs) -->
+      <plugin>
+        <groupId>org.jacoco</groupId>
+        <artifactId>jacoco-maven-plugin</artifactId>
+        <version>0.8.8</version>
+        <executions>
+          <execution>
+            <id>prepare-agent</id>
+            <goals>
+              <goal>prepare-agent</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>report</id>
+            <phase>verify</phase>
+            <goals>
+              <goal>report</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+
+      <plugin>
+        <groupId>org.owasp</groupId>
+        <artifactId>dependency-check-maven</artifactId>
+        <version>8.4.0</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>check</goal>
+            </goals>
+            <phase>verify</phase>
+          </execution>
+        </executions>
+        <configuration>
+          <!-- Fail the build on CVSS > 7.0 (adjust as needed) -->
+          <!-- Skip by default during normal builds; enable with -Ddependency.check.skip=false -->
+          <skip>${dependency.check.skip}</skip>
+          <autoUpdate>false</autoUpdate>
+          <failBuildOnCVSS>7</failBuildOnCVSS>
+          <!-- Put reports under target/dependency-check-report.html -->
+          <format>HTML</format>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-checkstyle-plugin</artifactId>
+        <version>3.1.2</version>
+        <executions>
+          <execution>
+            <id>checkstyle</id>
+            <phase>verify</phase>
+            <goals>
+              <goal>check</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <consoleOutput>true</consoleOutput>
+          <failOnViolation>false</failOnViolation>
+          <!-- You can set a custom config file here: configLocation>checkstyle.xml</configLocation> -->
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-pmd-plugin</artifactId>
+        <version>3.17.0</version>
+        <executions>
+          <execution>
+            <id>pmd</id>
+            <phase>verify</phase>
+            <goals>
+              <goal>check</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <failOnViolation>false</failOnViolation>
+          <!-- Use default rulesets, or point to your own rulesetFiles -->
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>com.github.spotbugs</groupId>
+        <artifactId>spotbugs-maven-plugin</artifactId>
+  <version>4.2.3</version>
+        <executions>
+          <execution>
+            <id>spotbugs</id>
+            <phase>verify</phase>
+            <goals>
+              <goal>check</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <effort>Max</effort>
+          <threshold>Low</threshold>
+          <failOnError>false</failOnError>
+        </configuration>
+        <dependencies>
+          <!-- FindSecBugs plugin for security detectors -->
+          <dependency>
+            <groupId>com.h3xstream.findsecbugs</groupId>
+            <artifactId>findsecbugs-plugin</artifactId>
+            <version>1.11.0</version>
+          </dependency>
+        </dependencies>
       </plugin>
     </plugins>
   </build>

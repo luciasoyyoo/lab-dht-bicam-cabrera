@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import metaheurictics.strategy.Strategy;
+import java.util.concurrent.ThreadLocalRandom;
+import java.util.Arrays;
 
 import problem.definition.State;
 import problem.definition.Problem.ProblemType;
@@ -68,7 +70,7 @@ public class EvolutionStrategies extends Generator {
     	iffatherselection = new FactoryFatherSelection();
     	FatherSelection selection = iffatherselection.createSelectFather(selectionType);
     	List<State> fathers = selection.selection(this.listStateReference, truncation);
-    	int pos1 = (int)(Math.random() * fathers.size());
+    	int pos1 = (fathers.size() > 0) ? ThreadLocalRandom.current().nextInt(fathers.size()) : 0;
     	State candidate = (State) Strategy.getStrategy().getProblem().getState().getCopy();
     	candidate.setCode(new ArrayList<Object>(fathers.get(pos1).getCode()));
     	candidate.setEvaluation(fathers.get(pos1).getEvaluation());
@@ -85,6 +87,9 @@ public class EvolutionStrategies extends Generator {
 
 	@Override
 	public State getReference() {
+		if (listStateReference == null || listStateReference.isEmpty()) {
+			return null;
+		}
 		stateReferenceES = listStateReference.get(0);
 		if(Strategy.getStrategy().getProblem().getTypeProblem().equals(ProblemType.Maximizar)){
 			for (int i = 1; i < listStateReference.size(); i++) {
@@ -98,11 +103,11 @@ public class EvolutionStrategies extends Generator {
 					stateReferenceES = listStateReference.get(i);
 			}
 		}
-		return stateReferenceES;
+		return (stateReferenceES == null) ? null : new State(stateReferenceES);
 	}
 	
 	public void setStateRef(State stateRef) {
-		this.stateReferenceES = stateRef;
+		this.stateReferenceES = (stateRef == null) ? null : new State(stateRef);
 	}
 
 	@Override
@@ -112,7 +117,7 @@ public class EvolutionStrategies extends Generator {
 
 	@Override
 	public void setInitialReference(State stateInitialRef) {
-		this.stateReferenceES = stateInitialRef;
+		this.stateReferenceES = (stateInitialRef == null) ? null : new State(stateInitialRef);
 	}
 
 	@Override
@@ -152,15 +157,15 @@ public class EvolutionStrategies extends Generator {
 			}
 			count++;
 		}
-		return listStateReference;
+		return (listStateReference == null) ? new ArrayList<State>() : new ArrayList<State>(listStateReference);
 	}
 
 	public List<State> getListStateReference() {
-		return listStateReference;
+		return (listStateReference == null) ? new ArrayList<State>() : new ArrayList<State>(listStateReference);
 	}
 
 	public void setListStateReference(List<State> listStateReference) {
-		this.listStateReference = listStateReference;
+		this.listStateReference = (listStateReference == null) ? new ArrayList<State>() : new ArrayList<State>(listStateReference);
 	}
 
 	public GeneratorType getTypeGenerator() {
@@ -178,7 +183,7 @@ public class EvolutionStrategies extends Generator {
 			State value = listStateReference.get(i);
 			ReferenceList.add(value);
 		}
-		return ReferenceList;
+		return new ArrayList<State>(ReferenceList);
 	}
 
 	@Override
@@ -208,19 +213,19 @@ public class EvolutionStrategies extends Generator {
 	@Override
 	public int[] getListCountBetterGender() {
 		// TODO Auto-generated method stub
-		return this.listCountBetterGender;
+		return (this.listCountBetterGender == null) ? new int[0] : Arrays.copyOf(this.listCountBetterGender, this.listCountBetterGender.length);
 	}
 
 	@Override
 	public int[] getListCountGender() {
 		// TODO Auto-generated method stub
-		return this.listCountGender;
+		return (this.listCountGender == null) ? new int[0] : Arrays.copyOf(this.listCountGender, this.listCountGender.length);
 	}
 
 	@Override
 	public float[] getTrace() {
 		// TODO Auto-generated method stub
-		return this.listTrace;
+		return (this.listTrace == null) ? new float[0] : Arrays.copyOf(this.listTrace, this.listTrace.length);
 	}
 
 

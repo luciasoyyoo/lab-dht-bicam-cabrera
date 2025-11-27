@@ -28,19 +28,19 @@ public class Problem {
 	}
 
 	public ArrayList<ObjetiveFunction> getFunction() {
-		return function;
+		return (function == null) ? new ArrayList<ObjetiveFunction>() : new ArrayList<ObjetiveFunction>(function);
 	}
 
 	public void setFunction(ArrayList<ObjetiveFunction> function) {
-		this.function = function;
+		this.function = (function == null) ? new ArrayList<ObjetiveFunction>() : new ArrayList<ObjetiveFunction>(function);
 	}
 
 	public State getState() {
-		return state;
+		return (state == null) ? null : new State(state);
 	}
 
 	public void setState(State state) {
-		this.state = state;
+		this.state = (state == null) ? null : new State(state);
 	}
 
 	public ProblemType getTypeProblem() {

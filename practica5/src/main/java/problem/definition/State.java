@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 import metaheuristics.generators.GeneratorType;
 
-public class State {
+public class State implements Cloneable {
 	
 	protected GeneratorType typeGenerator;
 	protected ArrayList<Double> evaluation;
@@ -14,15 +14,24 @@ public class State {
 	protected ArrayList<Object> code;
 	
 	public State(State ps) {
+		if (ps == null) {
+			this.code = new ArrayList<Object>();
+			this.evaluation = null;
+			this.number = 0;
+			this.typeGenerator = null;
+			return;
+		}
 		typeGenerator = ps.getTypeGenerator();
-		evaluation = ps.getEvaluation();
+		ArrayList<Double> eval = ps.getEvaluation();
+		this.evaluation = (eval == null) ? null : new ArrayList<Double>(eval);
 		number = ps.getNumber();
-		code = new ArrayList<Object>(ps.getCode());
+		ArrayList<Object> c = ps.getCode();
+		this.code = (c == null) ? new ArrayList<Object>() : new ArrayList<Object>(c);
 	}
 	
 	public State(ArrayList<Object> code) {
 		super();
-		this.code = code;
+		this.code = (code == null) ? new ArrayList<Object>() : new ArrayList<Object>(code);
 	}
 	
 	public State() {
@@ -30,11 +39,11 @@ public class State {
 	}	
 	
 	public ArrayList<Object> getCode() {
-		return code;
+		return (code == null) ? new ArrayList<Object>() : new ArrayList<Object>(code);
 	}
 
 	public void setCode(ArrayList<Object> listCode) {
-		this.code = listCode;
+		this.code = (listCode == null) ? new ArrayList<Object>() : new ArrayList<Object>(listCode);
 	}
 
 	public GeneratorType getTypeGenerator() {
@@ -46,11 +55,11 @@ public class State {
 
 	
 	public ArrayList<Double> getEvaluation() {
-		return evaluation;
+		return (evaluation == null) ? null : new ArrayList<Double>(evaluation);
 	}
 
 	public void setEvaluation(ArrayList<Double> evaluation) {
-		this.evaluation = evaluation;
+		this.evaluation = (evaluation == null) ? null : new ArrayList<Double>(evaluation);
 	}
 
 	public int getNumber() {
@@ -60,11 +69,11 @@ public class State {
 		this.number = number;
 	}
 	public State clone(){
-		return this;
+		return new State(this);
 	}
 	
 	public Object getCopy(){
-		return new State(this.getCode());
+		return new State(this);
 	}
 	
 	public boolean Comparator(State state){

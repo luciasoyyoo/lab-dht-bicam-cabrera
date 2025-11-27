@@ -79,22 +79,27 @@ public class HillClimbing extends Generator{
 	
 	@Override
 	public List<State> getReferenceList() {
-		listStateReference.add(stateReferenceHC);
-		return listStateReference;
+		if (stateReferenceHC != null) {
+			// keep internal list updated but do not expose it directly
+			if (listStateReference.isEmpty() || listStateReference.get(listStateReference.size() - 1) != stateReferenceHC) {
+				listStateReference.add(stateReferenceHC);
+			}
+		}
+		return new ArrayList<State>(listStateReference);
 	}
 
 	@Override
 	public State getReference() {
-		return stateReferenceHC;
+		return (stateReferenceHC == null) ? null : new State(stateReferenceHC);
 	}
 
 	public void setStateRef(State stateRef) {
-		this.stateReferenceHC = stateRef;
+		this.stateReferenceHC = (stateRef == null) ? null : new State(stateRef);
 	}
 
 	@Override
 	public void setInitialReference(State stateInitialRef) {
-		this.stateReferenceHC = stateInitialRef;
+		this.stateReferenceHC = (stateInitialRef == null) ? null : new State(stateInitialRef);
 	}
 
 	public GeneratorType getGeneratorType() {
@@ -141,18 +146,18 @@ public class HillClimbing extends Generator{
 	@Override
 	public int[] getListCountBetterGender() {
 		// TODO Auto-generated method stub
-		return this.listCountBetterGender;
+		return (this.listCountBetterGender == null) ? new int[0] : java.util.Arrays.copyOf(this.listCountBetterGender, this.listCountBetterGender.length);
 	}
 
 	@Override
 	public int[] getListCountGender() {
 		// TODO Auto-generated method stub
-		return this.listCountGender;
+		return (this.listCountGender == null) ? new int[0] : java.util.Arrays.copyOf(this.listCountGender, this.listCountGender.length);
 	}
 
 	@Override
 	public float[] getTrace() {
 		// TODO Auto-generated method stub
-		return this.listTrace;
+		return (this.listTrace == null) ? new float[0] : java.util.Arrays.copyOf(this.listTrace, this.listTrace.length);
 	}
 }

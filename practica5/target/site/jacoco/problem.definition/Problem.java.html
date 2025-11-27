@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Problem.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">practica5</a> &gt; <a href="index.source.html" class="el_package">problem.definition</a> &gt; <span class="el_source">Problem.java</span></div><h1>Problem.java</h1><pre class="source lang-java linenums">package problem.definition;
+import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
+
+import problem.extension.SolutionMethod;
+import problem.extension.TypeSolutionMethod;
+
+
+import factory_interface.IFFactorySolutionMethod;
+import factory_method.FactorySolutionMethod;
+
+
+public class Problem {
+
+<span class="nc" id="L15">	public enum ProblemType {Maximizar,Minimizar;}</span>
+
+	private ArrayList&lt;ObjetiveFunction&gt; function;
+	private State state;
+	private ProblemType typeProblem;
+	private Codification codification;
+	private Operator operator;
+	private int possibleValue;
+	private TypeSolutionMethod typeSolutionMethod;
+	private IFFactorySolutionMethod factorySolutionMethod;
+	
+	public Problem() {
+<span class="nc" id="L27">		super();</span>
+<span class="nc" id="L28">	}</span>
+
+	public ArrayList&lt;ObjetiveFunction&gt; getFunction() {
+<span class="nc bnc" id="L31" title="All 2 branches missed.">		return (function == null) ? new ArrayList&lt;ObjetiveFunction&gt;() : new ArrayList&lt;ObjetiveFunction&gt;(function);</span>
+	}
+
+	public void setFunction(ArrayList&lt;ObjetiveFunction&gt; function) {
+<span class="nc bnc" id="L35" title="All 2 branches missed.">		this.function = (function == null) ? new ArrayList&lt;ObjetiveFunction&gt;() : new ArrayList&lt;ObjetiveFunction&gt;(function);</span>
+<span class="nc" id="L36">	}</span>
+
+	public State getState() {
+<span class="nc bnc" id="L39" title="All 2 branches missed.">		return (state == null) ? null : new State(state);</span>
+	}
+
+	public void setState(State state) {
+<span class="nc bnc" id="L43" title="All 2 branches missed.">		this.state = (state == null) ? null : new State(state);</span>
+<span class="nc" id="L44">	}</span>
+
+	public ProblemType getTypeProblem() {
+<span class="nc" id="L47">		return typeProblem;</span>
+	}
+	public void setTypeProblem(ProblemType typeProblem) {
+<span class="nc" id="L50">		this.typeProblem = typeProblem;</span>
+<span class="nc" id="L51">	}</span>
+
+	public Codification getCodification() {
+<span class="nc" id="L54">		return codification;</span>
+	}
+	public void setCodification(Codification codification) {
+<span class="nc" id="L57">		this.codification = codification;</span>
+<span class="nc" id="L58">	}</span>
+
+	public Operator getOperator() {
+<span class="nc" id="L61">		return operator;</span>
+	}
+
+	public void setOperator(Operator operator) {
+<span class="nc" id="L65">		this.operator = operator;</span>
+<span class="nc" id="L66">	}</span>
+
+	public int getPossibleValue() {
+<span class="nc" id="L69">		return possibleValue;</span>
+	}
+
+	public void setPossibleValue(int possibleValue) {
+<span class="nc" id="L73">		this.possibleValue = possibleValue;</span>
+<span class="nc" id="L74">	}</span>
+
+	public void Evaluate(State state) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
+<span class="nc" id="L77">		double eval = 0;       </span>
+<span class="nc" id="L78">		ArrayList&lt;Double&gt; evaluation = new ArrayList&lt;Double&gt;(this.function.size());</span>
+<span class="nc bnc" id="L79" title="All 2 branches missed.">		if (typeSolutionMethod == null) {</span>
+<span class="nc" id="L80">			eval= function.get(0).Evaluation(state);</span>
+<span class="nc" id="L81">			evaluation.add(evaluation.size(), eval);</span>
+<span class="nc" id="L82">			state.setEvaluation(evaluation);</span>
+		}
+		else {
+<span class="nc" id="L85">			SolutionMethod method = newSolutionMethod(typeSolutionMethod);</span>
+<span class="nc" id="L86">			method.evaluationState(state);</span>
+		}
+<span class="nc" id="L88">	}</span>
+	
+	public TypeSolutionMethod getTypeSolutionMethod() {
+<span class="nc" id="L91">		return typeSolutionMethod;</span>
+	}
+	public void setTypeSolutionMethod(TypeSolutionMethod typeSolutionMethod) {
+<span class="nc" id="L94">		this.typeSolutionMethod = typeSolutionMethod;</span>
+<span class="nc" id="L95">	}</span>
+	public IFFactorySolutionMethod getFactorySolutionMethod() {
+<span class="nc" id="L97">		return factorySolutionMethod;</span>
+	}
+	public void setFactorySolutionMethod(
+			IFFactorySolutionMethod factorySolutionMethod) {
+<span class="nc" id="L101">		this.factorySolutionMethod = factorySolutionMethod;</span>
+<span class="nc" id="L102">	}</span>
+	
+	public SolutionMethod newSolutionMethod(TypeSolutionMethod typeSolutionMethod) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
+<span class="nc" id="L105">		factorySolutionMethod = new FactorySolutionMethod();</span>
+<span class="nc" id="L106">		SolutionMethod solutionMethod = factorySolutionMethod.createdSolutionMethod(typeSolutionMethod);</span>
+<span class="nc" id="L107">		return solutionMethod;</span>
+	}
+}
+
+	
+	
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

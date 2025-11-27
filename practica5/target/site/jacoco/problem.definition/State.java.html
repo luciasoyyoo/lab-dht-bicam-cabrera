@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>State.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">practica5</a> &gt; <a href="index.source.html" class="el_package">problem.definition</a> &gt; <span class="el_source">State.java</span></div><h1>State.java</h1><pre class="source lang-java linenums">package problem.definition;
+
+
+
+import java.util.ArrayList;
+
+import metaheuristics.generators.GeneratorType;
+
+public class State implements Cloneable {
+	
+	protected GeneratorType typeGenerator;
+	protected ArrayList&lt;Double&gt; evaluation;
+	protected int number;
+	protected ArrayList&lt;Object&gt; code;
+	
+<span class="nc" id="L16">	public State(State ps) {</span>
+<span class="nc bnc" id="L17" title="All 2 branches missed.">		if (ps == null) {</span>
+<span class="nc" id="L18">			this.code = new ArrayList&lt;Object&gt;();</span>
+<span class="nc" id="L19">			this.evaluation = null;</span>
+<span class="nc" id="L20">			this.number = 0;</span>
+<span class="nc" id="L21">			this.typeGenerator = null;</span>
+<span class="nc" id="L22">			return;</span>
+		}
+<span class="nc" id="L24">		typeGenerator = ps.getTypeGenerator();</span>
+<span class="nc" id="L25">		ArrayList&lt;Double&gt; eval = ps.getEvaluation();</span>
+<span class="nc bnc" id="L26" title="All 2 branches missed.">		this.evaluation = (eval == null) ? null : new ArrayList&lt;Double&gt;(eval);</span>
+<span class="nc" id="L27">		number = ps.getNumber();</span>
+<span class="nc" id="L28">		ArrayList&lt;Object&gt; c = ps.getCode();</span>
+<span class="nc bnc" id="L29" title="All 2 branches missed.">		this.code = (c == null) ? new ArrayList&lt;Object&gt;() : new ArrayList&lt;Object&gt;(c);</span>
+<span class="nc" id="L30">	}</span>
+	
+	public State(ArrayList&lt;Object&gt; code) {
+<span class="nc" id="L33">		super();</span>
+<span class="nc bnc" id="L34" title="All 2 branches missed.">		this.code = (code == null) ? new ArrayList&lt;Object&gt;() : new ArrayList&lt;Object&gt;(code);</span>
+<span class="nc" id="L35">	}</span>
+	
+<span class="nc" id="L37">	public State() {</span>
+<span class="nc" id="L38">		code=new ArrayList&lt;Object&gt;();</span>
+<span class="nc" id="L39">	}	</span>
+	
+	public ArrayList&lt;Object&gt; getCode() {
+<span class="nc bnc" id="L42" title="All 2 branches missed.">		return (code == null) ? new ArrayList&lt;Object&gt;() : new ArrayList&lt;Object&gt;(code);</span>
+	}
+
+	public void setCode(ArrayList&lt;Object&gt; listCode) {
+<span class="nc bnc" id="L46" title="All 2 branches missed.">		this.code = (listCode == null) ? new ArrayList&lt;Object&gt;() : new ArrayList&lt;Object&gt;(listCode);</span>
+<span class="nc" id="L47">	}</span>
+
+	public GeneratorType getTypeGenerator() {
+<span class="nc" id="L50">		return typeGenerator;</span>
+	}
+	public void setTypeGenerator(GeneratorType typeGenerator) {
+<span class="nc" id="L53">		this.typeGenerator = typeGenerator;</span>
+<span class="nc" id="L54">	}</span>
+
+	
+	public ArrayList&lt;Double&gt; getEvaluation() {
+<span class="nc bnc" id="L58" title="All 2 branches missed.">		return (evaluation == null) ? null : new ArrayList&lt;Double&gt;(evaluation);</span>
+	}
+
+	public void setEvaluation(ArrayList&lt;Double&gt; evaluation) {
+<span class="nc bnc" id="L62" title="All 2 branches missed.">		this.evaluation = (evaluation == null) ? null : new ArrayList&lt;Double&gt;(evaluation);</span>
+<span class="nc" id="L63">	}</span>
+
+	public int getNumber() {
+<span class="nc" id="L66">		return number;</span>
+	}
+	public void setNumber(int number) {
+<span class="nc" id="L69">		this.number = number;</span>
+<span class="nc" id="L70">	}</span>
+	public State clone(){
+<span class="nc" id="L72">		return new State(this);</span>
+	}
+	
+	public Object getCopy(){
+<span class="nc" id="L76">		return new State(this);</span>
+	}
+	
+	public boolean Comparator(State state){
+
+<span class="nc" id="L81">		boolean result=false;</span>
+<span class="nc bnc" id="L82" title="All 2 branches missed.">		if(state.getCode().equals(getCode())){</span>
+<span class="nc" id="L83">			result=true;</span>
+		}
+<span class="nc" id="L85">		return result;</span>
+	}
+	public double Distance(State state){
+<span class="nc" id="L88">		double distancia = 0;</span>
+<span class="nc bnc" id="L89" title="All 2 branches missed.">		for (int i = 0; i &lt; state.getCode().size(); i++) {</span>
+<span class="nc bnc" id="L90" title="All 2 branches missed.">			if (!(state.getCode().get(i).equals(this.getCode().get(i)))) {</span>
+<span class="nc" id="L91">				distancia++;</span>
+			}
+		}
+<span class="nc" id="L94">	return distancia;</span>
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

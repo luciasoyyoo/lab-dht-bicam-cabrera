@@ -3,6 +3,7 @@ package evolutionary_algorithms.complement;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ThreadLocalRandom;
 
 import metaheurictics.strategy.Strategy;
 import metaheuristics.generators.GeneratorType;
@@ -47,7 +48,9 @@ public class ProbabilisticSampling extends Sampling {
 			for (int l = 0; l < countInd; l++) {
 				boolean find = false;
 				int p = 0;
-				int random = (int)(Math.random() * (double)(sum)) + 1;
+				int random;
+				if (sum > 0) random = ThreadLocalRandom.current().nextInt(sum) + 1;
+				else random = 1;
 				while (p < arrOcc.length && find == false) {
 					random = random - arrOcc[p];
 					if(random <= 0){
@@ -57,8 +60,9 @@ public class ProbabilisticSampling extends Sampling {
 					else p++;
 				}
 				if(find == false){
-					int value = new Integer((int)(Math.random() * (double)(Strategy.getStrategy().getProblem().getCodification().getVariableCount() * 10)));
-					staList.get(l).getCode().add(value);
+					int bound = Strategy.getStrategy().getProblem().getCodification().getVariableCount() * 10;
+					int value = (bound > 0) ? ThreadLocalRandom.current().nextInt(bound) : 0;
+					staList.get(l).getCode().add(Integer.valueOf(value));
 				}
 				
 			}

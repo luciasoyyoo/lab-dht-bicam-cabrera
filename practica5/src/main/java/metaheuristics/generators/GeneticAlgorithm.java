@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import metaheurictics.strategy.Strategy;
+import java.util.concurrent.ThreadLocalRandom;
+import java.util.Arrays;
 
 import problem.definition.State;
 import problem.definition.Problem.ProblemType;
@@ -60,7 +62,7 @@ public class GeneticAlgorithm extends Generator {
 	
     public GeneticAlgorithm() {
 		super();
-		this.listState = getListStateRef(); // llamada al método que devuelve la lista. 
+		this.listState = getListStateRef(); // llamada al mï¿½todo que devuelve la lista. 
 //		this.selectionType = SelectionType.Truncation;
 //		this.crossoverType = CrossoverType.UniformCrossover;
 //		this.mutationType = MutationType.UniformMutation;
@@ -81,8 +83,8 @@ public class GeneticAlgorithm extends Generator {
     	iffatherselection = new FactoryFatherSelection();
     	FatherSelection selection = iffatherselection.createSelectFather(selectionType);
     	List<State> fathers = selection.selection(refList, truncation);
-    	int pos1 = (int)(Math.random() * fathers.size());
-    	int pos2 = (int)(Math.random() * fathers.size());
+    	int pos1 = (fathers.size() > 0) ? ThreadLocalRandom.current().nextInt(fathers.size()) : 0;
+    	int pos2 = (fathers.size() > 0) ? ThreadLocalRandom.current().nextInt(fathers.size()) : 0;
     	
     	State auxState1 = (State) Strategy.getStrategy().getProblem().getState().getCopy();
     	auxState1.setCode(new ArrayList<Object>(fathers.get(pos1).getCode()));
@@ -112,6 +114,9 @@ public class GeneticAlgorithm extends Generator {
     
 	@Override
 	public State getReference() {
+		if (listState == null || listState.isEmpty()) {
+			return null;
+		}
 		stateReferenceGA = listState.get(0);
 		if(Strategy.getStrategy().getProblem().getTypeProblem().equals(ProblemType.Maximizar)){
 			for (int i = 1; i < listState.size(); i++) {
@@ -125,15 +130,15 @@ public class GeneticAlgorithm extends Generator {
 					stateReferenceGA = listState.get(i);
 			}
 		}
-		return stateReferenceGA;
+		return (stateReferenceGA == null) ? null : new State(stateReferenceGA);
 	}
 
 	public void setStateRef(State stateRef) {
-		this.stateReferenceGA = stateRef;
+		this.stateReferenceGA = (stateRef == null) ? null : new State(stateRef);
 	}
 	@Override
 	public void setInitialReference(State stateInitialRef) {
-		this.stateReferenceGA = stateInitialRef;
+		this.stateReferenceGA = (stateInitialRef == null) ? null : new State(stateInitialRef);
 	}
 
 	@Override
@@ -144,11 +149,11 @@ public class GeneticAlgorithm extends Generator {
 	}
 	
 	public List<State> getListState() {
-		return listState;
+		return (listState == null) ? new ArrayList<State>() : new ArrayList<State>(listState);
 	}
 
 	public void setListState(List<State> listState) {
-		this.listState = listState;
+		this.listState = (listState == null) ? new ArrayList<State>() : new ArrayList<State>(listState);
 	}
 	
 	public List<State> getListStateRef(){
@@ -181,7 +186,7 @@ public class GeneticAlgorithm extends Generator {
 			}
 			count++;
 		}
-		return listState;
+		return (listState == null) ? new ArrayList<State>() : new ArrayList<State>(listState);
 	}
 
 	public GeneratorType getGeneratorType() {
@@ -204,7 +209,7 @@ public class GeneticAlgorithm extends Generator {
 			State value = listState.get(i);
 			ReferenceList.add(value);
 		}
-		return ReferenceList;
+		return new ArrayList<State>(ReferenceList);
 	}
 
 	@Override
@@ -234,19 +239,19 @@ public class GeneticAlgorithm extends Generator {
 	@Override
 	public int[] getListCountBetterGender() {
 		// TODO Auto-generated method stub
-		return this.listCountBetterGender;
+		return (this.listCountBetterGender == null) ? new int[0] : Arrays.copyOf(this.listCountBetterGender, this.listCountBetterGender.length);
 	}
 
 	@Override
 	public int[] getListCountGender() {
 		// TODO Auto-generated method stub
-		return this.listCountGender;
+		return (this.listCountGender == null) ? new int[0] : Arrays.copyOf(this.listCountGender, this.listCountGender.length);
 	}
 
 	@Override
 	public float[] getTrace() {
 		// TODO Auto-generated method stub
-		return this.listTrace;
+		return (this.listTrace == null) ? new float[0] : Arrays.copyOf(this.listTrace, this.listTrace.length);
 	}
 
 }

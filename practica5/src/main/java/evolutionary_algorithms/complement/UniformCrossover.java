@@ -1,6 +1,7 @@
 package evolutionary_algorithms.complement;
 
 import metaheurictics.strategy.Strategy;
+import java.util.concurrent.ThreadLocalRandom;
 
 import problem.definition.State;
 
@@ -10,8 +11,8 @@ public class UniformCrossover extends Crossover {
 	public int[] mascara(int length){
 		int[] mascara = new int[length];
 		for (int i = 0; i < mascara.length; i++) {
-			int value = (int)(Math.random() * (int)(2));
-			mascara[0] = value;
+			int value = ThreadLocalRandom.current().nextInt(2);
+			mascara[i] = value;
 		}
 		return mascara;
 	}	
