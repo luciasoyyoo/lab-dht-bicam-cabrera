@@ -5,24 +5,11 @@ import java.lang.reflect.InvocationTargetException;
 public class FactoryLoader {
 
 	public static Object getInstance(String className) throws ClassNotFoundException, IllegalArgumentException, SecurityException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException{
+		// Let exceptions propagate to caller instead of swallowing them (prevents null dereference)
 		@SuppressWarnings("rawtypes")
-		Class c = null;
-		try {
-			c = Class.forName(className);
-		} catch (ClassNotFoundException e) {
-			System.out.println("El nombre de la clase no existe en el classpath");
-			e.printStackTrace();
-		}
-		Object o = null;
-		try {
-			o = c.newInstance();
-		} catch (InstantiationException e) {
-			System.out.println("Ha ocurrido un error al invocar el constructor de la clase");
-			e.printStackTrace();
-		} catch (IllegalAccessException e) {
-			System.out.println("Esta clase no tiene constructores disponibles");
-			e.printStackTrace();
-		}
+		Class c = Class.forName(className);
+		// use getDeclaredConstructor().newInstance() to avoid deprecated Class.newInstance()
+		Object o = c.getDeclaredConstructor().newInstance();
 		return o;
 	}
 }
