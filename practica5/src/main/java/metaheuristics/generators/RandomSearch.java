@@ -4,6 +4,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Arrays;
 
 import local_search.acceptation_type.AcceptType;
 import local_search.acceptation_type.AcceptableCandidate;
@@ -131,19 +132,19 @@ public class RandomSearch extends Generator {
 	@Override
 	public int[] getListCountBetterGender() {
 		// TODO Auto-generated method stub
-		return this.listCountBetterGender;
+		return (this.listCountBetterGender == null) ? null : Arrays.copyOf(this.listCountBetterGender, this.listCountBetterGender.length);
 	}
 
 	@Override
 	public int[] getListCountGender() {
 		// TODO Auto-generated method stub
-		return this.listCountGender;
+		return (this.listCountGender == null) ? null : Arrays.copyOf(this.listCountGender, this.listCountGender.length);
 	}
 
 	@Override
 	public float[] getTrace() {
 		// TODO Auto-generated method stub
-		return this.listTrace;
+		return (this.listTrace == null) ? null : Arrays.copyOf(this.listTrace, this.listTrace.length);
 	}
 
 }

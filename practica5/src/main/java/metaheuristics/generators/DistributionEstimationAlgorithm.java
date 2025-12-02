@@ -3,6 +3,7 @@ package metaheuristics.generators;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Arrays;
 
 import metaheurictics.strategy.Strategy;
 
@@ -27,7 +28,7 @@ public class DistributionEstimationAlgorithm extends Generator {
 
 	private State stateReferenceDA;
 	private List<State> referenceList = new ArrayList<State>(); 
-	public static List<State> sonList = new ArrayList<State>(); 
+	private static final List<State> sonList = new ArrayList<State>(); 
 	private IFFactoryFatherSelection iffatherselection;
 	private IFFSampling iffsampling;
 	private IFFactoryReplace iffreplace;
@@ -35,13 +36,13 @@ public class DistributionEstimationAlgorithm extends Generator {
 	private SamplingType Samplingtype;
 	
 //	private ReplaceType replaceType;
-	public static ReplaceType replaceType;
-	public static SelectionType selectionType;
+	public static final ReplaceType replaceType = ReplaceType.GenerationalReplace;
+	public static final SelectionType selectionType = SelectionType.TruncationSelection;
 	
 	private GeneratorType generatorType;
 	//private ProblemState candidate;
-	public static int truncation;
-	public static int countRef = 0;
+	public static final int truncation = 0;
+	public static final int countRef = 0;
 	private float weight;
 	
 	//problemas dinamicos
@@ -54,10 +55,7 @@ public class DistributionEstimationAlgorithm extends Generator {
 	
 	public DistributionEstimationAlgorithm() {
 		super();
-		this.referenceList = getListStateRef(); // llamada al método que devuelve la lista. 
-//		this.selectionType = SelectionType.Truncation;
-		//this.replaceType = ReplaceType.Generational;
-//		this.replaceType = ReplaceType.Smallest;
+		this.referenceList = getListStateRef(); // llamada al mï¿½todo que devuelve la lista. 
 		this.generatorType = GeneratorType.DistributionEstimationAlgorithm;
 		this.distributionType = DistributionType.Univariate;
 		this.Samplingtype = SamplingType.ProbabilisticSampling;
@@ -232,7 +230,8 @@ public class DistributionEstimationAlgorithm extends Generator {
 
 	@Override
 	public List<State> getSonList() {
-		return sonList;
+		// return a defensive copy to avoid exposing internal mutable list
+		return new ArrayList<State>(sonList);
 	}
 
 	public boolean awardUpdateREF(State stateCandidate) {
@@ -269,19 +268,19 @@ public class DistributionEstimationAlgorithm extends Generator {
 	@Override
 	public int[] getListCountBetterGender() {
 		// TODO Auto-generated method stub
-		return this.listCountBetterGender;
+		return (this.listCountBetterGender == null) ? null : Arrays.copyOf(this.listCountBetterGender, this.listCountBetterGender.length);
 	}
 
 	@Override
 	public int[] getListCountGender() {
 		// TODO Auto-generated method stub
-		return this.listCountGender;
+		return (this.listCountGender == null) ? null : Arrays.copyOf(this.listCountGender, this.listCountGender.length);
 	}
 
 	@Override
 	public float[] getTrace() {
 		// TODO Auto-generated method stub
-		return this.listTrace;
+		return (this.listTrace == null) ? null : Arrays.copyOf(this.listTrace, this.listTrace.length);
 	}
 
 

@@ -3,6 +3,7 @@ package metaheuristics.generators;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Arrays;
 
 
 import metaheurictics.strategy.Strategy;
@@ -22,11 +23,11 @@ public class ParticleSwarmOptimization extends Generator {
 	public static int coutSwarm = 0;           //CANTIDAD DE CUMULOS
 	public static int countParticleBySwarm = 0; //CANTIDAD DE PARTICULAS POR CUMULO
 	private float weight = 50;
-	public static double wmax = 0.9;
-	public static double wmin = 0.2;
-	public static int learning1 = 2, learning2 = 2;
+	public static final double wmax = 0.9;
+	public static final double wmin = 0.2;
+	public static final int learning1 = 2, learning2 = 2;
 	public static double constriction;
-	public static boolean binary = false;
+	public static final boolean binary = false;
 	public static State[] lBest; 
 	public static State gBest;
 	public static int countCurrentIterPSO;
@@ -246,7 +247,7 @@ public class ParticleSwarmOptimization extends Generator {
 	@Override
 	public List<State> getReferenceList() {
 		// TODO Auto-generated method stub
-		return this.listStateReference;
+		return new ArrayList<State>(this.listStateReference);
 	}
 
 	@Override
@@ -276,19 +277,19 @@ public class ParticleSwarmOptimization extends Generator {
 	@Override
 	public int[] getListCountBetterGender() {
 		// TODO Auto-generated method stub
-		return this.listCountBetterGender;
+		return (this.listCountBetterGender == null) ? null : Arrays.copyOf(this.listCountBetterGender, this.listCountBetterGender.length);
 	}
 
 	@Override
 	public int[] getListCountGender() {
 		// TODO Auto-generated method stub
-		return this.listCountGender;
+		return (this.listCountGender == null) ? null : Arrays.copyOf(this.listCountGender, this.listCountGender.length);
 	}
 
 	@Override
 	public float[] getTrace() {
 		// TODO Auto-generated method stub
-		return this.listTrace;
+		return (this.listTrace == null) ? null : Arrays.copyOf(this.listTrace, this.listTrace.length);
 	}
 
 

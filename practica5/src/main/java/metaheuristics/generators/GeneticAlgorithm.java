@@ -37,20 +37,20 @@ public class GeneticAlgorithm extends Generator {
 	private IFFactoryMutation iffactorymutation;
 	private IFFactoryReplace iffreplace;
 	
-	public static MutationType mutationType;
-	public static CrossoverType crossoverType;
-	public static ReplaceType replaceType;
-	public static SelectionType selectionType;
 	
 //	private SelectionType selectionType;
 //	private CrossoverType crossoverType;
 //	private MutationType mutationType;
 //	private ReplaceType replaceType;
 	private GeneratorType generatorType;
-	public static double PC;
-	public static double PM;
-	public static int countRef = 0;
-	public static int truncation;
+	public static final MutationType mutationType = MutationType.OnePointMutation;
+	public static final CrossoverType crossoverType = CrossoverType.UniformCrossover;
+	public static final ReplaceType replaceType = ReplaceType.GenerationalReplace;
+	public static final SelectionType selectionType = SelectionType.TruncationSelection;
+	public static final double PC = 0.6;
+	public static final double PM = 0.01;
+	public static final int countRef = 0;
+	public static final int truncation = 0;
 	private float weight;
 	
 	//problemas dinamicos

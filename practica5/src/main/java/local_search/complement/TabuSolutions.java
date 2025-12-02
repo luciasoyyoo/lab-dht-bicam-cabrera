@@ -10,7 +10,7 @@ public class TabuSolutions {
 	
 	public static final List<State> listTabu = Collections.synchronizedList(new ArrayList<State>());
 
-	public static int maxelements; 
+	public static final int maxelements = 0; 
 
 	public List<State> filterNeighborhood(List<State> listNeighborhood) throws Exception {
 		List<State> listFiltrate = new ArrayList<State>();
