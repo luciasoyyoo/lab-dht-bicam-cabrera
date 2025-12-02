@@ -1,10 +1,10 @@
-Proyecto BiCIAM — instrucciones de compilación y notas
+# Proyecto BiCIAM 
+## Instrucciones de compilación y notas
 
-Resumen
-
+Resumen: 
 Este repositorio contiene la versión del proyecto BiCIAM organizada para compilarse con Maven.
 
-Compilar y empaquetar
+### Compilar y empaquetar
 
 Abre un terminal en la carpeta del módulo `practica5` (el POM está en `practica5/pom.xml`) y ejecuta:
 
@@ -19,7 +19,7 @@ Para sólo compilar (sin empaquetar):
 mvn -DskipTests compile
 ```
 
-Codificación de fuentes
+### Codificación de fuentes
 
 Las fuentes Java originales contienen caracteres acentuados con codificación ISO-8859-1. Por compatibilidad el `pom.xml` actualmente usa:
 
@@ -78,7 +78,7 @@ mvn spotbugs:check
   - `target/spotbugs.html` o `target/spotbugs.html` (si está habilitado en tu configuración) — informe HTML (si el plugin genera HTML en tu configuración)
   - `target/spotbugs.xml` — otro formato posible según versión/configuración
 
-- Abrir la GUI de SpotBugs para explorar los resultados interactuamente (útil para depurar y navegar las advertencias):
+- Abrir la GUI de SpotBugs para explorar los resultados interactivamente (útil para depurar y navegar las advertencias):
 
 ```bash
 cd practica5
@@ -93,4 +93,45 @@ Notas y buenas prácticas
 Si quieres, puedo:
 - Generar un informe HTML consolidado y añadir un enlace al README.
 - Crear un filtro SpotBugs para silenciar falsos positivos conocidos.
+
+
+## Comandos Maven útiles
+
+Estos son los comandos Maven más usados en este proyecto. Ejecuta desde la raíz del módulo `practica5` (o añade `-f practica5/pom.xml` si ejecutas desde la raíz del repo).
+
+```bash
+# situarse en el módulo
+cd practica5
+
+# compilar y empaquetar (salta tests)
+mvn -DskipTests package
+
+# ejecutar los tests unitarios
+mvn test
+
+# ejecutar la fase de verificación (incluye pruebas y otros checks configurados)
+mvn verify
+
+# instalar el artefacto localmente en el repositorio Maven (~/.m2/repository)
+mvn install
+
+# limpiar el directorio target
+mvn clean
+
+# compilar sólo
+mvn compile
+
+# ejecutar SpotBugs (análisis estático)
+mvn spotbugs:spotbugs
+
+# abrir la GUI de SpotBugs (explorar resultados interactivamente)
+mvn spotbugs:gui
+
+# si ejecutas desde la raíz del repo sin cambiar de carpeta
+mvn -f practica5/pom.xml test
+```
+
+### Consejos rápidos:
+- Para builds CI/automatizados suele usarse `mvn -B verify` (modo batch para evitar prompts).
+- Añade `-DskipTests` si necesitas compilar/empquetar rápido y los tests no son necesarios en ese momento.
 
