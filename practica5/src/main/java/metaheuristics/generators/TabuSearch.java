@@ -34,9 +34,7 @@ public class TabuSearch extends Generator {
     private List<State> listStateReference = new ArrayList<State>();
     private float weight;
 	
-	//problemas dinamicos
-    public static int countGender = 0;
-    public static int countBetterGender = 0;
+	//problemas dinamicos: use instance fields from Generator (countGender, countBetterGender)
     private int[] listCountBetterGender = new int[10];
     private int[] listCountGender = new int[10];
     private float[] listTrace = new float[1200000];

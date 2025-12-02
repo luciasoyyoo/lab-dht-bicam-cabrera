@@ -24,68 +24,69 @@ public class MultiCaseSimulatedAnnealing extends Generator {
 	private CandidateType typeCandidate;
 	private State stateReferenceSA;
     private IFFactoryAcceptCandidate ifacceptCandidate;
-    public static Double alpha;
-    public static Double tinitial;
-    public static Double tfinal;
-    public static int countIterationsT;
+	// Cooling factor: fixed constant for update rule. Set a conservative default.
+	public static final double alpha = 0.93;
+	public static Double tinitial;
+<span class="nc" id="L30">	public static final Double tfinal = 41.66;</span>
+	static int countIterationsT;
     private int countRept;
     private GeneratorType typeGenerator;
-<span class="nc" id="L33">    private List&lt;State&gt; listStateReference = new ArrayList&lt;State&gt;();</span>
+<span class="nc" id="L34">    private List&lt;State&gt; listStateReference = new ArrayList&lt;State&gt;();</span>
     private float weight;
-<span class="nc" id="L35">	private List&lt;Float&gt; listTrace = new ArrayList&lt;Float&gt;();</span>
+<span class="nc" id="L36">	private List&lt;Float&gt; listTrace = new ArrayList&lt;Float&gt;();</span>
 
     public GeneratorType getTypeGenerator() {
-<span class="nc" id="L38">		return typeGenerator;</span>
+<span class="nc" id="L39">		return typeGenerator;</span>
 	}
 
 	public void setTypeGenerator(GeneratorType typeGenerator) {
-<span class="nc" id="L42">		this.typeGenerator = typeGenerator;</span>
-<span class="nc" id="L43">	}</span>
+<span class="nc" id="L43">		this.typeGenerator = typeGenerator;</span>
+<span class="nc" id="L44">	}</span>
 
 	public MultiCaseSimulatedAnnealing(){
-<span class="nc" id="L46">    	super();</span>
-<span class="nc" id="L47">    	this.typeAcceptation = AcceptType.AcceptMulticase;</span>
-<span class="nc" id="L48">		this.strategy = StrategyType.NORMAL;</span>
-<span class="nc" id="L49">		this.typeCandidate = CandidateType.RandomCandidate;</span>
-<span class="nc" id="L50">		this.candidatevalue = new CandidateValue();</span>
-<span class="nc" id="L51">		this.typeGenerator = GeneratorType.MultiCaseSimulatedAnnealing;</span>
-<span class="nc" id="L52">		this.weight = 50;</span>
-<span class="nc" id="L53">		listTrace.add(weight);</span>
-<span class="nc" id="L54">    }</span>
+<span class="nc" id="L47">    	super();</span>
+<span class="nc" id="L48">    	this.typeAcceptation = AcceptType.AcceptMulticase;</span>
+<span class="nc" id="L49">		this.strategy = StrategyType.NORMAL;</span>
+<span class="nc" id="L50">		this.typeCandidate = CandidateType.RandomCandidate;</span>
+<span class="nc" id="L51">		this.candidatevalue = new CandidateValue();</span>
+<span class="nc" id="L52">		this.typeGenerator = GeneratorType.MultiCaseSimulatedAnnealing;</span>
+<span class="nc" id="L53">		this.weight = 50;</span>
+<span class="nc" id="L54">		listTrace.add(weight);</span>
+<span class="nc" id="L55">    }</span>
 
 	@Override
 	public State generate(Integer operatornumber) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
-<span class="nc" id="L58">		List&lt;State&gt; neighborhood = new ArrayList&lt;State&gt;();</span>
-<span class="nc" id="L59">		Problem problem = Strategy.getStrategy().getProblem();</span>
-<span class="nc" id="L60">		neighborhood = problem.getOperator().generatedNewState(stateReferenceSA, operatornumber);</span>
-<span class="nc" id="L61">	    State statecandidate = candidatevalue.stateCandidate(stateReferenceSA, typeCandidate, strategy, operatornumber, neighborhood);</span>
-<span class="nc" id="L62">	    return statecandidate;</span>
+<span class="nc" id="L59">		List&lt;State&gt; neighborhood = new ArrayList&lt;State&gt;();</span>
+<span class="nc" id="L60">		Problem problem = Strategy.getStrategy().getProblem();</span>
+<span class="nc" id="L61">		neighborhood = problem.getOperator().generatedNewState(stateReferenceSA, operatornumber);</span>
+<span class="nc" id="L62">	    State statecandidate = candidatevalue.stateCandidate(stateReferenceSA, typeCandidate, strategy, operatornumber, neighborhood);</span>
+<span class="nc" id="L63">	    return statecandidate;</span>
 	}
 
 	@Override
 	public State getReference() {
-<span class="nc" id="L67">		return stateReferenceSA;</span>
+<span class="nc" id="L68">		return stateReferenceSA;</span>
 	}
 
 	public void setStateRef(State stateRef) {
-<span class="nc" id="L71">		this.stateReferenceSA = stateRef;</span>
-<span class="nc" id="L72">	}</span>
+<span class="nc" id="L72">		this.stateReferenceSA = stateRef;</span>
+<span class="nc" id="L73">	}</span>
 
 	@Override
 	public void setInitialReference(State stateInitialRef) {
-<span class="nc" id="L76">		this.stateReferenceSA = stateInitialRef;</span>
-<span class="nc" id="L77">	}</span>
+<span class="nc" id="L77">		this.stateReferenceSA = stateInitialRef;</span>
+<span class="nc" id="L78">	}</span>
 
 	@Override
 	public void updateReference(State stateCandidate, Integer countIterationsCurrent)throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
-<span class="nc" id="L81">		countRept = countIterationsT;</span>
-<span class="nc" id="L82">		ifacceptCandidate = new FactoryAcceptCandidate();</span>
-<span class="nc" id="L83">		AcceptableCandidate candidate = ifacceptCandidate.createAcceptCandidate(typeAcceptation);</span>
-<span class="nc" id="L84">		Boolean accept = candidate.acceptCandidate(stateReferenceSA, stateCandidate);</span>
-<span class="nc bnc" id="L85" title="All 2 branches missed.">		if(accept.equals(true))</span>
-<span class="nc" id="L86">		  stateReferenceSA = stateCandidate.clone();</span>
-<span class="nc bnc" id="L87" title="All 2 branches missed.">		if(countIterationsCurrent.equals(countIterationsT)){</span>
-<span class="nc" id="L88">			tinitial = tinitial * alpha;</span>
+<span class="nc" id="L82">		countRept = countIterationsT;</span>
+<span class="nc" id="L83">		ifacceptCandidate = new FactoryAcceptCandidate();</span>
+<span class="nc" id="L84">		AcceptableCandidate candidate = ifacceptCandidate.createAcceptCandidate(typeAcceptation);</span>
+<span class="nc" id="L85">		Boolean accept = candidate.acceptCandidate(stateReferenceSA, stateCandidate);</span>
+<span class="nc bnc" id="L86" title="All 2 branches missed.">		if(accept.equals(true))</span>
+<span class="nc" id="L87">		  stateReferenceSA = stateCandidate.clone();</span>
+<span class="nc bnc" id="L88" title="All 2 branches missed.">		if(countIterationsCurrent.equals(countIterationsT)){</span>
+<span class="nc" id="L89">			tinitial = tinitial * alpha;</span>
 			//Variante Fast MOSA
 			//tinitial = tinitial/(1 + countIterationsCurrent);
 			
@@ -96,65 +97,65 @@ public class MultiCaseSimulatedAnnealing extends Generator {
 			else{
 				tinitial = tinitial/(1 + countIterationsCurrent);
 			}*/
-<span class="nc" id="L99">			System.out.println(&quot;La T:&quot; + tinitial);</span>
-<span class="nc" id="L100">			countIterationsT = countIterationsT + countRept;</span>
-<span class="nc" id="L101">			System.out.println(&quot;La Cant es: &quot; + countIterationsT);</span>
+<span class="nc" id="L100">			System.out.println(&quot;La T:&quot; + tinitial);</span>
+<span class="nc" id="L101">			countIterationsT = countIterationsT + countRept;</span>
+<span class="nc" id="L102">			System.out.println(&quot;La Cant es: &quot; + countIterationsT);</span>
 		}
-<span class="nc" id="L103">		getReferenceList();</span>
-<span class="nc" id="L104">	}</span>
+<span class="nc" id="L104">		getReferenceList();</span>
+<span class="nc" id="L105">	}</span>
 
 	@Override
 	public GeneratorType getType() {
-<span class="nc" id="L108">		return this.typeGenerator;</span>
+<span class="nc" id="L109">		return this.typeGenerator;</span>
 	}
 
 	@Override
 	public List&lt;State&gt; getReferenceList() {
-<span class="nc" id="L113">		listStateReference.add(stateReferenceSA.clone());</span>
-<span class="nc" id="L114">		return listStateReference;</span>
+<span class="nc" id="L114">		listStateReference.add(stateReferenceSA.clone());</span>
+<span class="nc" id="L115">		return listStateReference;</span>
 	}
 
 	@Override
 	public List&lt;State&gt; getSonList() {
 		// TODO Auto-generated method stub
-<span class="nc" id="L120">		return null;</span>
+<span class="nc" id="L121">		return null;</span>
 	}
 
 	@Override
 	public boolean awardUpdateREF(State stateCandidate) {
 		// TODO Auto-generated method stub
-<span class="nc" id="L126">		return false;</span>
+<span class="nc" id="L127">		return false;</span>
 	}
 
 
 	@Override
 	public float getWeight() {
 		// TODO Auto-generated method stub
-<span class="nc" id="L133">		return 0;</span>
+<span class="nc" id="L134">		return 0;</span>
 	}
 
 	@Override
 	public void setWeight(float weight) {
 		// TODO Auto-generated method stub
 		
-<span class="nc" id="L140">	}</span>
+<span class="nc" id="L141">	}</span>
 
 	@Override
 	public int[] getListCountBetterGender() {
 		// TODO Auto-generated method stub
-<span class="nc" id="L145">		return null;</span>
+<span class="nc" id="L146">		return null;</span>
 	}
 
 	@Override
 	public int[] getListCountGender() {
 		// TODO Auto-generated method stub
-<span class="nc" id="L151">		return null;</span>
+<span class="nc" id="L152">		return null;</span>
 	}
 
 	@Override
 	public float[] getTrace() {
 		// TODO Auto-generated method stub
-<span class="nc" id="L157">		return null;</span>
+<span class="nc" id="L158">		return null;</span>
 	}
 	
 }

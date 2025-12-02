@@ -19,8 +19,8 @@ import problem.definition.Problem.ProblemType;
 
 public class HillClimbingRestart extends Generator{
 
-	public static int count;
-	public static int countCurrent;
+	static int count;
+	static int countCurrent;
 <span class="nc" id="L24">	private List&lt;State&gt; listRef = new ArrayList&lt;State&gt;();</span>
 	protected CandidateValue candidatevalue;
 	protected AcceptType typeAcceptation;
@@ -33,49 +33,48 @@ public class HillClimbingRestart extends Generator{
 	protected float weight;
 	
 	//problemas dinamicos
-<span class="nc" id="L36">	public static int countGender = 0;</span>
-<span class="nc" id="L37">	public static int countBetterGender = 0;</span>
-<span class="nc" id="L38">	private int[] listCountBetterGender = new int[10];</span>
-<span class="nc" id="L39">	private int[] listCountGender = new int[10];</span>
-<span class="nc" id="L40">	private float[] listTrace = new float[1200000];</span>
+	//problemas dinamicos: use instance fields from Generator (countGender, countBetterGender)
+<span class="nc" id="L37">	private int[] listCountBetterGender = new int[10];</span>
+<span class="nc" id="L38">	private int[] listCountGender = new int[10];</span>
+<span class="nc" id="L39">	private float[] listTrace = new float[1200000];</span>
 
 	public HillClimbingRestart() {
-<span class="nc" id="L43">		super();</span>
+<span class="nc" id="L42">		super();</span>
 //		countIterations = Strategy.getStrategy().getCountCurrent();
 //		countSame = 1;
-<span class="nc" id="L46">		countCurrent = count;</span>
-<span class="nc" id="L47">		this.typeAcceptation = AcceptType.AcceptBest;</span>
-<span class="nc" id="L48">		this.strategy = StrategyType.NORMAL;</span>
-<span class="nc bnc" id="L49" title="All 2 branches missed.">		if(Strategy.getStrategy().getProblem().getTypeProblem().equals(ProblemType.Maximizar)) {</span>
-<span class="nc" id="L50">			this.typeCandidate = CandidateType.GreaterCandidate;</span>
+<span class="nc" id="L45">		countCurrent = count;</span>
+<span class="nc" id="L46">		this.typeAcceptation = AcceptType.AcceptBest;</span>
+<span class="nc" id="L47">		this.strategy = StrategyType.NORMAL;</span>
+<span class="nc bnc" id="L48" title="All 2 branches missed.">		if(Strategy.getStrategy().getProblem().getTypeProblem().equals(ProblemType.Maximizar)) {</span>
+<span class="nc" id="L49">			this.typeCandidate = CandidateType.GreaterCandidate;</span>
 		}
 		else{
-<span class="nc" id="L53">			this.typeCandidate = CandidateType.SmallerCandidate;</span>
+<span class="nc" id="L52">			this.typeCandidate = CandidateType.SmallerCandidate;</span>
 		}
-<span class="nc" id="L55">		this.candidatevalue = new CandidateValue();</span>
-<span class="nc" id="L56">		this.Generatortype = GeneratorType.HillClimbing;</span>
-<span class="nc" id="L57">		this.weight = 50;</span>
-<span class="nc" id="L58">		listTrace[0] = this.weight;</span>
-<span class="nc" id="L59">		listCountBetterGender[0] = 0;</span>
-<span class="nc" id="L60">		listCountGender[0] = 0;</span>
-<span class="nc" id="L61">	}</span>
+<span class="nc" id="L54">		this.candidatevalue = new CandidateValue();</span>
+<span class="nc" id="L55">		this.Generatortype = GeneratorType.HillClimbing;</span>
+<span class="nc" id="L56">		this.weight = 50;</span>
+<span class="nc" id="L57">		listTrace[0] = this.weight;</span>
+<span class="nc" id="L58">		listCountBetterGender[0] = 0;</span>
+<span class="nc" id="L59">		listCountGender[0] = 0;</span>
+<span class="nc" id="L60">	}</span>
 
 
 
 	public State generate (Integer operatornumber) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
 		//ArrayList&lt;State&gt;list=new ArrayList&lt;State&gt;();
-<span class="nc" id="L67">		State statecandidate = new State();</span>
-<span class="nc bnc" id="L68" title="All 2 branches missed.">		if(count == Strategy.getStrategy().getCountCurrent()){</span>
-<span class="nc" id="L69">			State stateR = new State(stateReferenceHC);</span>
-<span class="nc" id="L70">			listRef.add(stateR);</span>
-<span class="nc" id="L71">			stateReferenceHC = Strategy.getStrategy().getProblem().getOperator().generateRandomState(1).get(0);</span>
-<span class="nc" id="L72">			Strategy.getStrategy().getProblem().Evaluate(stateReferenceHC);</span>
-<span class="nc" id="L73">			count = count + countCurrent;</span>
+<span class="nc" id="L66">		State statecandidate = new State();</span>
+<span class="nc bnc" id="L67" title="All 2 branches missed.">		if(count == Strategy.getStrategy().getCountCurrent()){</span>
+<span class="nc" id="L68">			State stateR = new State(stateReferenceHC);</span>
+<span class="nc" id="L69">			listRef.add(stateR);</span>
+<span class="nc" id="L70">			stateReferenceHC = Strategy.getStrategy().getProblem().getOperator().generateRandomState(1).get(0);</span>
+<span class="nc" id="L71">			Strategy.getStrategy().getProblem().Evaluate(stateReferenceHC);</span>
+<span class="nc" id="L72">			count = count + countCurrent;</span>
 		}
-<span class="nc" id="L75">		List&lt;State&gt; neighborhood = Strategy.getStrategy().getProblem().getOperator().generatedNewState(stateReferenceHC, operatornumber);</span>
-<span class="nc" id="L76">		statecandidate = candidatevalue.stateCandidate(stateReferenceHC, typeCandidate, strategy, operatornumber, neighborhood);</span>
+<span class="nc" id="L74">		List&lt;State&gt; neighborhood = Strategy.getStrategy().getProblem().getOperator().generatedNewState(stateReferenceHC, operatornumber);</span>
+<span class="nc" id="L75">		statecandidate = candidatevalue.stateCandidate(stateReferenceHC, typeCandidate, strategy, operatornumber, neighborhood);</span>
 		//list.add(statecandidate);
-<span class="nc" id="L78">		return statecandidate;</span>
+<span class="nc" id="L77">		return statecandidate;</span>
 	}
 
 	@Override
@@ -85,81 +84,81 @@ public class HillClimbingRestart extends Generator{
 			IllegalAccessException, InvocationTargetException,
 			NoSuchMethodException {
 		// TODO Auto-generated method stub
-<span class="nc" id="L88">		ifacceptCandidate = new FactoryAcceptCandidate();</span>
-<span class="nc" id="L89">		AcceptableCandidate candidate = ifacceptCandidate.createAcceptCandidate(typeAcceptation);</span>
-<span class="nc" id="L90">		Boolean accept = candidate.acceptCandidate(stateReferenceHC, stateCandidate);</span>
-<span class="nc bnc" id="L91" title="All 2 branches missed.">		if(accept.equals(true))</span>
-<span class="nc" id="L92">		  stateReferenceHC = stateCandidate;</span>
+<span class="nc" id="L87">		ifacceptCandidate = new FactoryAcceptCandidate();</span>
+<span class="nc" id="L88">		AcceptableCandidate candidate = ifacceptCandidate.createAcceptCandidate(typeAcceptation);</span>
+<span class="nc" id="L89">		Boolean accept = candidate.acceptCandidate(stateReferenceHC, stateCandidate);</span>
+<span class="nc bnc" id="L90" title="All 2 branches missed.">		if(accept.equals(true))</span>
+<span class="nc" id="L91">		  stateReferenceHC = stateCandidate;</span>
 //		getReferenceList();
-<span class="nc" id="L94">	}</span>
+<span class="nc" id="L93">	}</span>
 
 
 
 	@Override
 	public List&lt;State&gt; getReferenceList() {
-<span class="nc bnc" id="L100" title="All 2 branches missed.">		if (stateReferenceHC != null) {</span>
-<span class="nc bnc" id="L101" title="All 4 branches missed.">			if (listStateReference.isEmpty() || listStateReference.get(listStateReference.size() - 1) != stateReferenceHC) {</span>
-<span class="nc" id="L102">				listStateReference.add(stateReferenceHC);</span>
+<span class="nc bnc" id="L99" title="All 2 branches missed.">		if (stateReferenceHC != null) {</span>
+<span class="nc bnc" id="L100" title="All 4 branches missed.">			if (listStateReference.isEmpty() || listStateReference.get(listStateReference.size() - 1) != stateReferenceHC) {</span>
+<span class="nc" id="L101">				listStateReference.add(stateReferenceHC);</span>
 			}
 		}
-<span class="nc" id="L105">		return new ArrayList&lt;State&gt;(listStateReference);</span>
+<span class="nc" id="L104">		return new ArrayList&lt;State&gt;(listStateReference);</span>
 	}
 
 	@Override
 	public State getReference() {
-<span class="nc bnc" id="L110" title="All 2 branches missed.">		return (stateReferenceHC == null) ? null : new State(stateReferenceHC);</span>
+<span class="nc bnc" id="L109" title="All 2 branches missed.">		return (stateReferenceHC == null) ? null : new State(stateReferenceHC);</span>
 	}
 
 	public void setStateRef(State stateRef) {
-<span class="nc bnc" id="L114" title="All 2 branches missed.">		this.stateReferenceHC = (stateRef == null) ? null : new State(stateRef);</span>
-<span class="nc" id="L115">	}</span>
+<span class="nc bnc" id="L113" title="All 2 branches missed.">		this.stateReferenceHC = (stateRef == null) ? null : new State(stateRef);</span>
+<span class="nc" id="L114">	}</span>
 
 	@Override
 	public void setInitialReference(State stateInitialRef) {
-<span class="nc bnc" id="L119" title="All 2 branches missed.">		this.stateReferenceHC = (stateInitialRef == null) ? null : new State(stateInitialRef);</span>
-<span class="nc" id="L120">	}</span>
+<span class="nc bnc" id="L118" title="All 2 branches missed.">		this.stateReferenceHC = (stateInitialRef == null) ? null : new State(stateInitialRef);</span>
+<span class="nc" id="L119">	}</span>
 
 	public GeneratorType getGeneratorType() {
-<span class="nc" id="L123">		return Generatortype;</span>
+<span class="nc" id="L122">		return Generatortype;</span>
 	}
 
 	public void setGeneratorType(GeneratorType Generatortype) {
-<span class="nc" id="L127">		this.Generatortype = Generatortype;</span>
-<span class="nc" id="L128">	}</span>
+<span class="nc" id="L126">		this.Generatortype = Generatortype;</span>
+<span class="nc" id="L127">	}</span>
 
 	@Override
 	public GeneratorType getType() {
-<span class="nc" id="L132">		return this.Generatortype;</span>
+<span class="nc" id="L131">		return this.Generatortype;</span>
 	}
 
 	@Override
 	public List&lt;State&gt; getSonList() {
 		// TODO Auto-generated method stub
-<span class="nc" id="L138">		return null;</span>
+<span class="nc" id="L137">		return null;</span>
 	}
 
 	public void setTypeCandidate(CandidateType typeCandidate){
-<span class="nc" id="L142">		this.typeCandidate = typeCandidate;</span>
-<span class="nc" id="L143">	}</span>
+<span class="nc" id="L141">		this.typeCandidate = typeCandidate;</span>
+<span class="nc" id="L142">	}</span>
 
 	@Override
 	public boolean awardUpdateREF(State stateCandidate) {
 		// TODO Auto-generated method stub
-<span class="nc" id="L148">		return false;</span>
+<span class="nc" id="L147">		return false;</span>
 	}
 
 
 	@Override
 	public float getWeight() {
 		// TODO Auto-generated method stub
-<span class="nc" id="L155">		return 0;</span>
+<span class="nc" id="L154">		return 0;</span>
 	}
 
 	@Override
 	public void setWeight(float weight) {
 		// TODO Auto-generated method stub
 		
-<span class="nc" id="L162">	}</span>
+<span class="nc" id="L161">	}</span>
 
 	
 	/*public State generate2(Integer operatornumber) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
@@ -186,19 +185,19 @@ public class HillClimbingRestart extends Generator{
 	@Override
 	public int[] getListCountBetterGender() {
 		// TODO Auto-generated method stub
-<span class="nc bnc" id="L189" title="All 2 branches missed.">		return (this.listCountBetterGender == null) ? new int[0] : java.util.Arrays.copyOf(this.listCountBetterGender, this.listCountBetterGender.length);</span>
+<span class="nc bnc" id="L188" title="All 2 branches missed.">		return (this.listCountBetterGender == null) ? new int[0] : java.util.Arrays.copyOf(this.listCountBetterGender, this.listCountBetterGender.length);</span>
 	}
 
 	@Override
 	public int[] getListCountGender() {
 		// TODO Auto-generated method stub
-<span class="nc bnc" id="L195" title="All 2 branches missed.">		return (this.listCountGender == null) ? new int[0] : java.util.Arrays.copyOf(this.listCountGender, this.listCountGender.length);</span>
+<span class="nc bnc" id="L194" title="All 2 branches missed.">		return (this.listCountGender == null) ? new int[0] : java.util.Arrays.copyOf(this.listCountGender, this.listCountGender.length);</span>
 	}
 
 	@Override
 	public float[] getTrace() {
 		// TODO Auto-generated method stub
-<span class="nc bnc" id="L201" title="All 2 branches missed.">		return (this.listTrace == null) ? new float[0] : java.util.Arrays.copyOf(this.listTrace, this.listTrace.length);</span>
+<span class="nc bnc" id="L200" title="All 2 branches missed.">		return (this.listTrace == null) ? new float[0] : java.util.Arrays.copyOf(this.listTrace, this.listTrace.length);</span>
 	}
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

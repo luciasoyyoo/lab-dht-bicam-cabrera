@@ -19,8 +19,8 @@ import problem.definition.Problem.ProblemType;
 
 public class HillClimbingRestart extends Generator{
 
-	public static int count;
-	public static int countCurrent;
+	static int count;
+	static int countCurrent;
 	private List<State> listRef = new ArrayList<State>();
 	protected CandidateValue candidatevalue;
 	protected AcceptType typeAcceptation;
@@ -33,8 +33,7 @@ public class HillClimbingRestart extends Generator{
 	protected float weight;
 	
 	//problemas dinamicos
-	public static int countGender = 0;
-	public static int countBetterGender = 0;
+	//problemas dinamicos: use instance fields from Generator (countGender, countBetterGender)
 	private int[] listCountBetterGender = new int[10];
 	private int[] listCountGender = new int[10];
 	private float[] listTrace = new float[1200000];

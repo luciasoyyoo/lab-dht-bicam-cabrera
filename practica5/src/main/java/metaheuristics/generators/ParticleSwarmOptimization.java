@@ -26,14 +26,13 @@ public class ParticleSwarmOptimization extends Generator {
 	public static final double wmax = 0.9;
 	public static final double wmin = 0.2;
 	public static final int learning1 = 2, learning2 = 2;
-	public static double constriction;
+	static double constriction;
 	public static final boolean binary = false;
-	public static State[] lBest; 
-	public static State gBest;
-	public static int countCurrentIterPSO;
+	static State[] lBest; 
+	static State gBest;
+	static int countCurrentIterPSO;
 	//problemas dinamicos
-    public static int countGender = 0;
-    public static int countBetterGender = 0;
+	//problemas dinamicos: use instance fields from Generator (countGender, countBetterGender)
     private int[] listCountBetterGender = new int[10];
     private int[] listCountGender = new int[10];
     private float[] listTrace = new float[1200000];

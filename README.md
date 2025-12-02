@@ -1,0 +1,96 @@
+Proyecto BiCIAM — instrucciones de compilación y notas
+
+Resumen
+
+Este repositorio contiene la versión del proyecto BiCIAM organizada para compilarse con Maven.
+
+Compilar y empaquetar
+
+Abre un terminal en la carpeta del módulo `practica5` (el POM está en `practica5/pom.xml`) y ejecuta:
+
+```bash
+cd practica5
+mvn -DskipTests package
+```
+
+Para sólo compilar (sin empaquetar):
+
+```bash
+mvn -DskipTests compile
+```
+
+Codificación de fuentes
+
+Las fuentes Java originales contienen caracteres acentuados con codificación ISO-8859-1. Por compatibilidad el `pom.xml` actualmente usa:
+
+  <project.build.sourceEncoding>ISO-8859-1</project.build.sourceEncoding>
+
+Recomendaciones:
+- Si quieres normalizar el proyecto a UTF-8 (recomendado a largo plazo), reencodifica los `.java` a UTF-8 y luego cambia la propiedad en el POM a `UTF-8`.
+- Si prefieres no tocar los archivos, mantener `ISO-8859-1` en el POM es válido y compila correctamente.
+
+Cómo reencodificar (ejemplo, haz backup o usa git):
+
+```bash
+# desde la raíz del repo, reencodificar todos los .java (prueba primero en un par de ficheros)
+find . -name "*.java" -print0 | xargs -0 -n1 -I{} bash -c 'iconv -f ISO-8859-1 -t UTF-8 "{}" -o "{}".utf8 && mv "{}".utf8 "{}"'
+# luego actualiza el POM a UTF-8
+# git add -A && git commit -m "Reencodificar fuentes a UTF-8"
+```
+
+Dependencias importantes
+
+- Se añadió `net.sourceforge.jexcelapi:jxl` para que las clases que usan `jxl.read.biff.BiffException` compilen.
+
+Siguientes pasos sugeridos
+
+- Considerar actualizar `maven.compiler.source`/`target` a una versión más nueva si tu JDK lo permite (por ejemplo `1.8` o superior).
+- Habilitar `-Xlint` en el plugin del compilador para ver avisos sobre APIs obsoletas.
+- Confirmar que el proyecto se ejecuta correctamente (tests, usos manuales).
+
+Contacto
+
+Si quieres, puedo:
+- Reencodificar automáticamente todas las fuentes a UTF-8 y actualizar el POM.
+- Crear un commit con estos cambios.
+- Añadir un script de comprobación/CI para compilar en cada push.
+
+## Usar SpotBugs (análisis estático)
+
+SpotBugs es una herramienta de análisis estático que detecta bugs, problemas de rendimiento y malas prácticas en código Java. Este proyecto ya tiene configurado el plugin de SpotBugs en el `pom.xml`, por lo que puedes ejecutarlo con Maven.
+
+- Ejecutar SpotBugs (genera informes en `target/`):
+
+```bash
+cd practica5
+mvn spotbugs:spotbugs
+```
+
+- Ejecutar la comprobación que puede fallar la build si hay bugs (usa la misma configuración que el `pom`):
+
+```bash
+cd practica5
+mvn spotbugs:check
+```
+
+- Ver informes generados:
+  - `target/spotbugsXml.xml` — informe XML
+  - `target/spotbugs.html` o `target/spotbugs.html` (si está habilitado en tu configuración) — informe HTML (si el plugin genera HTML en tu configuración)
+  - `target/spotbugs.xml` — otro formato posible según versión/configuración
+
+- Abrir la GUI de SpotBugs para explorar los resultados interactuamente (útil para depurar y navegar las advertencias):
+
+```bash
+cd practica5
+mvn spotbugs:gui
+```
+
+Notas y buenas prácticas
+- El análisis puede producir muchas advertencias (naming, style, performance, etc.). Clasifica los hallazgos en: bugs reales (fix urgente), falsos positivos, y code-style (mejorables pero no bloqueantes).
+- Para ignorar problemas conocidos puedes usar un filtro XML de SpotBugs (ver plugin docs) o suprimir con anotaciones/comentarios cuando corresponda.
+- Recomendable: ejecutar `mvn -DskipTests verify` localmente y luego `mvn spotbugs:check` antes de crear un PR para reducir ruido.
+
+Si quieres, puedo:
+- Generar un informe HTML consolidado y añadir un enlace al README.
+- Crear un filtro SpotBugs para silenciar falsos positivos conocidos.
+

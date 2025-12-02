@@ -32,119 +32,117 @@ public class RandomSearch extends Generator {
 	//para acceder desde los algoritmos basados en poblaciones de puntos
 <span class="nc" id="L33">	public static final List&lt;State&gt; listStateReference = Collections.synchronizedList(new ArrayList&lt;State&gt;());</span>
 	
-	//problemas dinamicos
-<span class="nc" id="L36">    public static int countGender = 0;</span>
-<span class="nc" id="L37">    public static int countBetterGender = 0;</span>
-<span class="nc" id="L38">    private int[] listCountBetterGender = new int[10];</span>
-<span class="nc" id="L39">    private int[] listCountGender = new int[10];</span>
-<span class="nc" id="L40">    private float[] listTrace = new float[1200000];</span>
+	//problemas dinamicos: use instance fields from Generator (countGender, countBetterGender)
+<span class="nc" id="L36">    private int[] listCountBetterGender = new int[10];</span>
+<span class="nc" id="L37">    private int[] listCountGender = new int[10];</span>
+<span class="nc" id="L38">    private float[] listTrace = new float[1200000];</span>
 	
 	public RandomSearch() {
-<span class="nc" id="L43">		super();</span>
-<span class="nc" id="L44">		this.typeAcceptation = AcceptType.AcceptBest;</span>
-<span class="nc" id="L45">		this.strategy = StrategyType.NORMAL;</span>
-<span class="nc" id="L46">		this.typeCandidate = CandidateType.RandomCandidate;</span>
-<span class="nc" id="L47">		this.candidatevalue = new CandidateValue();</span>
-<span class="nc" id="L48">		this.typeGenerator = GeneratorType.RandomSearch;</span>
-<span class="nc" id="L49">		this.weight = 50;</span>
-<span class="nc" id="L50">	listTrace[0] = this.weight;</span>
-<span class="nc" id="L51">	listCountBetterGender[0] = 0;</span>
-<span class="nc" id="L52">	listCountGender[0] = 0;</span>
-<span class="nc" id="L53">	listStateReference.clear();</span>
-<span class="nc" id="L54">	}</span>
+<span class="nc" id="L41">		super();</span>
+<span class="nc" id="L42">		this.typeAcceptation = AcceptType.AcceptBest;</span>
+<span class="nc" id="L43">		this.strategy = StrategyType.NORMAL;</span>
+<span class="nc" id="L44">		this.typeCandidate = CandidateType.RandomCandidate;</span>
+<span class="nc" id="L45">		this.candidatevalue = new CandidateValue();</span>
+<span class="nc" id="L46">		this.typeGenerator = GeneratorType.RandomSearch;</span>
+<span class="nc" id="L47">		this.weight = 50;</span>
+<span class="nc" id="L48">	listTrace[0] = this.weight;</span>
+<span class="nc" id="L49">	listCountBetterGender[0] = 0;</span>
+<span class="nc" id="L50">	listCountGender[0] = 0;</span>
+<span class="nc" id="L51">	listStateReference.clear();</span>
+<span class="nc" id="L52">	}</span>
 	
 	@Override
 	public State generate(Integer operatornumber) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
 		//ArrayList&lt;State&gt;list =new ArrayList&lt;State&gt;();
-<span class="nc" id="L59">		List&lt;State&gt; neighborhood = new ArrayList&lt;State&gt;();</span>
-<span class="nc" id="L60">		neighborhood = Strategy.getStrategy().getProblem().getOperator().generateRandomState(operatornumber);</span>
-<span class="nc" id="L61">	    State statecandidate = candidatevalue.stateCandidate(stateReferenceRS, typeCandidate, strategy, operatornumber, neighborhood);</span>
-<span class="nc bnc" id="L62" title="All 2 branches missed.">	    if(GeneticAlgorithm.countRef != 0 || EvolutionStrategies.countRef != 0 || DistributionEstimationAlgorithm.countRef != 0 || ParticleSwarmOptimization.countRef != 0)</span>
-<span class="nc" id="L63">	    	listStateReference.add(statecandidate);</span>
-<span class="nc" id="L64">	    return statecandidate;</span>
+<span class="nc" id="L57">		List&lt;State&gt; neighborhood = new ArrayList&lt;State&gt;();</span>
+<span class="nc" id="L58">		neighborhood = Strategy.getStrategy().getProblem().getOperator().generateRandomState(operatornumber);</span>
+<span class="nc" id="L59">	    State statecandidate = candidatevalue.stateCandidate(stateReferenceRS, typeCandidate, strategy, operatornumber, neighborhood);</span>
+<span class="nc bnc" id="L60" title="All 2 branches missed.">	    if(GeneticAlgorithm.countRef != 0 || EvolutionStrategies.countRef != 0 || DistributionEstimationAlgorithm.countRef != 0 || ParticleSwarmOptimization.countRef != 0)</span>
+<span class="nc" id="L61">	    	listStateReference.add(statecandidate);</span>
+<span class="nc" id="L62">	    return statecandidate;</span>
 	}
 
 	@Override
 	public State getReference() {
-<span class="nc" id="L69">		return stateReferenceRS;</span>
+<span class="nc" id="L67">		return stateReferenceRS;</span>
 	}
 
 	@Override
 	public void setInitialReference(State stateInitialRef) {
-<span class="nc" id="L74">	  this.stateReferenceRS = stateInitialRef;</span>
-<span class="nc" id="L75">	}</span>
+<span class="nc" id="L72">	  this.stateReferenceRS = stateInitialRef;</span>
+<span class="nc" id="L73">	}</span>
 
 	@Override
 	public void updateReference(State stateCandidate, Integer countIterationsCurrent) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException,	IllegalAccessException, InvocationTargetException, NoSuchMethodException {
-<span class="nc" id="L79">		ifacceptCandidate = new FactoryAcceptCandidate();</span>
-<span class="nc" id="L80">		AcceptableCandidate candidate = ifacceptCandidate.createAcceptCandidate(typeAcceptation);</span>
-<span class="nc" id="L81">		Boolean accept = candidate.acceptCandidate(stateReferenceRS, stateCandidate);</span>
-<span class="nc bnc" id="L82" title="All 2 branches missed.">		if(accept.equals(true))</span>
-<span class="nc" id="L83">		  stateReferenceRS = stateCandidate;</span>
+<span class="nc" id="L77">		ifacceptCandidate = new FactoryAcceptCandidate();</span>
+<span class="nc" id="L78">		AcceptableCandidate candidate = ifacceptCandidate.createAcceptCandidate(typeAcceptation);</span>
+<span class="nc" id="L79">		Boolean accept = candidate.acceptCandidate(stateReferenceRS, stateCandidate);</span>
+<span class="nc bnc" id="L80" title="All 2 branches missed.">		if(accept.equals(true))</span>
+<span class="nc" id="L81">		  stateReferenceRS = stateCandidate;</span>
 //		getReferenceList();
-<span class="nc" id="L85">	}</span>
+<span class="nc" id="L83">	}</span>
 
 
 	@Override
 	public GeneratorType getType() {
-<span class="nc" id="L90">		return this.typeGenerator;</span>
+<span class="nc" id="L88">		return this.typeGenerator;</span>
 	}
 	
 	public GeneratorType getTypeGenerator() {
-<span class="nc" id="L94">		return typeGenerator;</span>
+<span class="nc" id="L92">		return typeGenerator;</span>
 	}
 
 	public void setTypeGenerator(GeneratorType typeGenerator) {
-<span class="nc" id="L98">		this.typeGenerator = typeGenerator;</span>
-<span class="nc" id="L99">	}</span>
+<span class="nc" id="L96">		this.typeGenerator = typeGenerator;</span>
+<span class="nc" id="L97">	}</span>
 
 	@Override
 	public List&lt;State&gt; getReferenceList() {
-<span class="nc" id="L103">		listStateReference.add(stateReferenceRS);</span>
-<span class="nc" id="L104">		return listStateReference;</span>
+<span class="nc" id="L101">		listStateReference.add(stateReferenceRS);</span>
+<span class="nc" id="L102">		return listStateReference;</span>
 	}
 
 	@Override
 	public List&lt;State&gt; getSonList() {
 		// TODO Auto-generated method stub
-<span class="nc" id="L110">		return null;</span>
+<span class="nc" id="L108">		return null;</span>
 	}
 
 	@Override
 	public boolean awardUpdateREF(State stateCandidate) {
 		// TODO Auto-generated method stub
-<span class="nc" id="L116">		return false;</span>
+<span class="nc" id="L114">		return false;</span>
 	}
 
 
 	@Override
 	public float getWeight() {
 		// TODO Auto-generated method stub
-<span class="nc" id="L123">		return this.weight;</span>
+<span class="nc" id="L121">		return this.weight;</span>
 	}
 
 	@Override
 	public void setWeight(float weight) {
 		// TODO Auto-generated method stub
-<span class="nc" id="L129">		this.weight = weight;</span>
-<span class="nc" id="L130">	}</span>
+<span class="nc" id="L127">		this.weight = weight;</span>
+<span class="nc" id="L128">	}</span>
 
 	@Override
 	public int[] getListCountBetterGender() {
 		// TODO Auto-generated method stub
-<span class="nc bnc" id="L135" title="All 2 branches missed.">		return (this.listCountBetterGender == null) ? null : Arrays.copyOf(this.listCountBetterGender, this.listCountBetterGender.length);</span>
+<span class="nc bnc" id="L133" title="All 2 branches missed.">		return (this.listCountBetterGender == null) ? null : Arrays.copyOf(this.listCountBetterGender, this.listCountBetterGender.length);</span>
 	}
 
 	@Override
 	public int[] getListCountGender() {
 		// TODO Auto-generated method stub
-<span class="nc bnc" id="L141" title="All 2 branches missed.">		return (this.listCountGender == null) ? null : Arrays.copyOf(this.listCountGender, this.listCountGender.length);</span>
+<span class="nc bnc" id="L139" title="All 2 branches missed.">		return (this.listCountGender == null) ? null : Arrays.copyOf(this.listCountGender, this.listCountGender.length);</span>
 	}
 
 	@Override
 	public float[] getTrace() {
 		// TODO Auto-generated method stub
-<span class="nc bnc" id="L147" title="All 2 branches missed.">		return (this.listTrace == null) ? null : Arrays.copyOf(this.listTrace, this.listTrace.length);</span>
+<span class="nc bnc" id="L145" title="All 2 branches missed.">		return (this.listTrace == null) ? null : Arrays.copyOf(this.listTrace, this.listTrace.length);</span>
 	}
 
 }

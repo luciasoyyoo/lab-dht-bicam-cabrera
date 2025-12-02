@@ -45,9 +45,7 @@ public class DistributionEstimationAlgorithm extends Generator {
 	public static final int countRef = 0;
 	private float weight;
 	
-	//problemas dinamicos
-	public static int countGender = 0;
-	public static int countBetterGender = 0;
+	//problemas dinamicos: use counters declared in superclass `Generator`
 	private int[] listCountBetterGender = new int[10];
 	private int[] listCountGender = new int[10];
 	private float[] listTrace = new float[1200000];

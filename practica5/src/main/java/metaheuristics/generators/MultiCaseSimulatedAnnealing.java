@@ -24,10 +24,11 @@ public class MultiCaseSimulatedAnnealing extends Generator {
 	private CandidateType typeCandidate;
 	private State stateReferenceSA;
     private IFFactoryAcceptCandidate ifacceptCandidate;
-    public static Double alpha;
-    public static Double tinitial;
-    public static Double tfinal;
-    public static int countIterationsT;
+	// Cooling factor: fixed constant for update rule. Set a conservative default.
+	public static final double alpha = 0.93;
+	public static Double tinitial;
+	public static final Double tfinal = 41.66;
+	static int countIterationsT;
     private int countRept;
     private GeneratorType typeGenerator;
     private List<State> listStateReference = new ArrayList<State>();

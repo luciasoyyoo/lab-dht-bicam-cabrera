@@ -2,6 +2,7 @@ package metaheuristics.generators;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -142,11 +143,13 @@ public class MultiGenerator extends Generator {
 	}
 
 	public static Generator[] getListGenerators() {
-		return listGenerators;
+		// return a defensive copy to avoid exposing internal static array
+		return (listGenerators == null) ? null : Arrays.copyOf(listGenerators, listGenerators.length);
 	}
 
 	public static void setListGenerators(Generator[] listGenerators) {
-		MultiGenerator.listGenerators = listGenerators;
+		// store a defensive copy to avoid keeping a reference to caller's mutable array
+		MultiGenerator.listGenerators = (listGenerators == null) ? null : Arrays.copyOf(listGenerators, listGenerators.length);
 	}
 
 	public static Generator getActiveGenerator() {

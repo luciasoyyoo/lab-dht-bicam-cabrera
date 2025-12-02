@@ -31,7 +31,7 @@ public class MultiobjectiveHillClimbingDistance extends Generator{
 	private List<State> visitedState = new ArrayList<State>();
 	public static int sizeNeighbors;
 	//Lista que contiene las distancias de cada soluci�n del frente de Pareto estimado
-	public static List<Double> distanceSolution = new ArrayList<Double>();
+	static List<Double> distanceSolution = new ArrayList<Double>();
 
 
 	public MultiobjectiveHillClimbingDistance() {

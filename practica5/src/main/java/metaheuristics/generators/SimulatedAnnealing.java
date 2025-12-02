@@ -25,18 +25,19 @@ public class SimulatedAnnealing extends Generator {
 	private CandidateType typeCandidate;
 	private State stateReferenceSA;
     private IFFactoryAcceptCandidate ifacceptCandidate;
-    public static Double alpha;
-    public static Double tinitial;
-    public static Double tfinal;
-    public static int countIterationsT;
+	// cooling factor - fixed constant
+	public static final double alpha = 0.93;
+	// default temperature parameters (can be adjusted per run)
+	public static Double tinitial = 250.0;
+	public static final Double tfinal = 41.66;
+	static int countIterationsT = 50;
     private int countRept;
     private GeneratorType typeGenerator;
     private List<State> listStateReference = new ArrayList<State>();
     private float weight;
 
 	//problemas dinamicos
-    public static int countGender = 0;
-    public static int countBetterGender = 0;
+	//problemas dinamicos: use instance fields from Generator (countGender, countBetterGender)
     private int[] listCountBetterGender = new int[10];
     private int[] listCountGender = new int[10];
     private float[] listTrace = new float[1200000];

@@ -32,9 +32,7 @@ public class RandomSearch extends Generator {
 	//para acceder desde los algoritmos basados en poblaciones de puntos
 	public static final List<State> listStateReference = Collections.synchronizedList(new ArrayList<State>());
 	
-	//problemas dinamicos
-    public static int countGender = 0;
-    public static int countBetterGender = 0;
+	//problemas dinamicos: use instance fields from Generator (countGender, countBetterGender)
     private int[] listCountBetterGender = new int[10];
     private int[] listCountGender = new int[10];
     private float[] listTrace = new float[1200000];
