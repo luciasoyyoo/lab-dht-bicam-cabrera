@@ -33,7 +33,14 @@ public class MultiobjectiveHillClimbingRestart extends Generator{
 	protected float weight;
 	protected List<Float> listTrace = new ArrayList<Float>();
 	private List<State> visitedState = new ArrayList<State>();
-	public static int sizeNeighbors;
+	private static final int sizeNeighbors = 10;
+
+	/**
+	 * Accessor for sizeNeighbors.
+	 */
+	public static int getSizeNeighbors() {
+		return sizeNeighbors;
+	}
 
 
 	public MultiobjectiveHillClimbingRestart() {
@@ -58,7 +65,7 @@ public class MultiobjectiveHillClimbingRestart extends Generator{
 
 	@Override
 	public void updateReference(State stateCandidate, Integer countIterationsCurrent) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
-		//Agregando la primera solución a la lista de soluciones no dominadas
+		//Agregando la primera soluciï¿½n a la lista de soluciones no dominadas
 
 		if(Strategy.getStrategy().listRefPoblacFinal.size() == 0){
 			Strategy.getStrategy().listRefPoblacFinal.add(stateReferenceHC.clone());
@@ -68,7 +75,7 @@ public class MultiobjectiveHillClimbingRestart extends Generator{
 		AcceptableCandidate candidate = ifacceptCandidate.createAcceptCandidate(typeAcceptation);
 		State lastState = Strategy.getStrategy().listRefPoblacFinal.get(Strategy.getStrategy().listRefPoblacFinal.size()-1);
 		List<State> neighborhood = new ArrayList<State>();
-		neighborhood = Strategy.getStrategy().getProblem().getOperator().generatedNewState(stateReferenceHC, sizeNeighbors);
+	neighborhood = Strategy.getStrategy().getProblem().getOperator().generatedNewState(stateReferenceHC, getSizeNeighbors());
 		int i= 0;
 
 		Boolean accept = candidate.acceptCandidate(lastState, stateCandidate.clone());

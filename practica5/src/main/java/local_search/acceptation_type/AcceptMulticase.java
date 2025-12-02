@@ -19,7 +19,7 @@ public class AcceptMulticase extends AcceptableCandidate {
 		if(list.size() == 0){
 			list.add(stateCurrent.clone());
 		}
-		Double T = MultiCaseSimulatedAnnealing.tinitial;
+	Double T = MultiCaseSimulatedAnnealing.getTinitial();
 		double pAccept = 0;
 	// use ThreadLocalRandom to avoid creating a new Random instance on each call
 		Dominance dominance= new Dominance();

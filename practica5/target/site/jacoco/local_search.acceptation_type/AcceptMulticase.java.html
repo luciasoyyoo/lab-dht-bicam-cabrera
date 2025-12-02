@@ -19,7 +19,7 @@ import problem.definition.State;
 <span class="nc bnc" id="L19" title="All 2 branches missed.">		if(list.size() == 0){</span>
 <span class="nc" id="L20">			list.add(stateCurrent.clone());</span>
 		}
-<span class="nc" id="L22">		Double T = MultiCaseSimulatedAnnealing.tinitial;</span>
+<span class="nc" id="L22">	Double T = MultiCaseSimulatedAnnealing.getTinitial();</span>
 <span class="nc" id="L23">		double pAccept = 0;</span>
 	// use ThreadLocalRandom to avoid creating a new Random instance on each call
 <span class="nc" id="L25">		Dominance dominance= new Dominance();</span>

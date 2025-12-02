@@ -19,7 +19,7 @@ import problem.definition.Problem.ProblemType;
 <span class="nc" id="L19">		Boolean accept = null;</span>
 <span class="nc" id="L20">		Problem problem = Strategy.getStrategy().getProblem();</span>
 <span class="nc bnc" id="L21" title="All 2 branches missed.">		if (problem.getTypeProblem().equals(ProblemType.Maximizar)) {</span>
-<span class="nc" id="L22">			double result = (stateCandidate.getEvaluation().get(0) - stateCurrent.getEvaluation().get(0)) / SimulatedAnnealing.tinitial;</span>
+<span class="nc" id="L22">			double result = (stateCandidate.getEvaluation().get(0) - stateCurrent.getEvaluation().get(0)) / SimulatedAnnealing.getTinitial();</span>
 <span class="nc" id="L23">			double probaleatory = Math.random();</span>
 <span class="nc" id="L24">			double exp = Math.exp(result);</span>
 <span class="nc bnc" id="L25" title="All 4 branches missed.">			if ((stateCandidate.getEvaluation().get(0) &gt;= stateCurrent.getEvaluation().get(0))</span>
@@ -28,7 +28,7 @@ import problem.definition.Problem.ProblemType;
 			else
 <span class="nc" id="L29">				accept = false;</span>
 <span class="nc" id="L30">		} else {</span>
-<span class="nc" id="L31">			double result_min = (stateCandidate.getEvaluation().get(0) - stateCurrent.getEvaluation().get(0)) / SimulatedAnnealing.tinitial;</span>
+<span class="nc" id="L31">			double result_min = (stateCandidate.getEvaluation().get(0) - stateCurrent.getEvaluation().get(0)) / SimulatedAnnealing.getTinitial();</span>
 <span class="nc bnc" id="L32" title="All 2 branches missed.">			if ((stateCandidate.getEvaluation().get(0) &lt;= stateCurrent.getEvaluation().get(0))</span>
 <span class="nc bnc" id="L33" title="All 2 branches missed.">					|| (Math.random() &lt; Math.exp(result_min)))</span>
 <span class="nc" id="L34">				accept = true;</span>

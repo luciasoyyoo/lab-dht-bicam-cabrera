@@ -18,10 +18,10 @@ public class ParticleSwarmOptimization extends Generator {
 	private List<State> listStateReference = new ArrayList<State>(); 
 	private List<Particle> listParticle =  new ArrayList<Particle> ();
 	private GeneratorType generatorType;
-	public static int countRef = 0;            // CANTIDAD DE PARTICULAS TOTAL = coutSwarm * countParticleSwarm
-	public static int countParticle = 0;       // CANTIDAD DE PARTICULAS QUE SE HAN MOVIDO EN CADA CUMULO
-	public static int coutSwarm = 0;           //CANTIDAD DE CUMULOS
-	public static int countParticleBySwarm = 0; //CANTIDAD DE PARTICULAS POR CUMULO
+	private static int countRef = 0;            // CANTIDAD DE PARTICULAS TOTAL = coutSwarm * countParticleSwarm
+	static int countParticle = 0;       // CANTIDAD DE PARTICULAS QUE SE HAN MOVIDO EN CADA CUMULO
+	public static final int coutSwarm = 0;           //CANTIDAD DE CUMULOS
+	public static final int countParticleBySwarm = 0; //CANTIDAD DE PARTICULAS POR CUMULO
 	private float weight = 50;
 	public static final double wmax = 0.9;
 	public static final double wmin = 0.2;

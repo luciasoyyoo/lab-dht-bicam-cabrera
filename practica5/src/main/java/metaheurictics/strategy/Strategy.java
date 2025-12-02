@@ -1,6 +1,8 @@
 package metaheurictics.strategy;
 
 import java.lang.reflect.InvocationTargetException;
+import java.security.AccessController;
+import java.security.PrivilegedAction;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.SortedMap;
@@ -115,8 +117,14 @@ public class Strategy {
 			MultiGenerator.listGeneratedPP.clear();
 			// create a clone of the MultiGenerator using reflection to access protected clone()
 			try {
-				java.lang.reflect.Method cloneMethod = generator.getClass().getDeclaredMethod("clone");
-				cloneMethod.setAccessible(true);
+				final java.lang.reflect.Method cloneMethod = generator.getClass().getDeclaredMethod("clone");
+				// Grant privileged permission for reflective access to non-public clone()
+				AccessController.doPrivileged(new PrivilegedAction<Void>() {
+					public Void run() {
+						cloneMethod.setAccessible(true);
+						return null;
+					}
+				});
 				multiGenerator = (MultiGenerator) cloneMethod.invoke(generator);
 			} catch (Exception e) {
 				throw new RuntimeException("Failed to clone MultiGenerator", e);
@@ -290,7 +298,7 @@ public class Strategy {
 			ifFactoryGenerator = new FactoryGenerator();
 			Strategy.getStrategy().generator = ifFactoryGenerator.createGenerator(GeneratorType.DistributionEstimationAlgorithm);
 		}
-		if(countIterationsCurrent.equals(ParticleSwarmOptimization.countRef - 1)){
+		if(countIterationsCurrent.equals(ParticleSwarmOptimization.getCountRef() - 1)){
 			ifFactoryGenerator = new FactoryGenerator();
 			Strategy.getStrategy().generator = ifFactoryGenerator.createGenerator(GeneratorType.ParticleSwarmOptimization);
 		}

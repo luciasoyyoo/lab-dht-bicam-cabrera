@@ -29,7 +29,14 @@ public class MultiobjectiveHillClimbingDistance extends Generator{
 	protected float weight;
 	protected List<Float> listTrace = new ArrayList<Float>();
 	private List<State> visitedState = new ArrayList<State>();
-	public static int sizeNeighbors;
+	private static final int sizeNeighbors = 10;
+
+	/**
+	 * Accessor for sizeNeighbors.
+	 */
+	public static int getSizeNeighbors() {
+		return sizeNeighbors;
+	}
 	//Lista que contiene las distancias de cada soluci�n del frente de Pareto estimado
 	static List<Double> distanceSolution = new ArrayList<Double>();
 
@@ -65,7 +72,7 @@ public class MultiobjectiveHillClimbingDistance extends Generator{
 		AcceptableCandidate candidate = ifacceptCandidate.createAcceptCandidate(typeAcceptation);
 		State lastState = Strategy.getStrategy().listRefPoblacFinal.get(Strategy.getStrategy().listRefPoblacFinal.size()-1);
 		List<State> neighborhood = new ArrayList<State>();
-		neighborhood = Strategy.getStrategy().getProblem().getOperator().generatedNewState(stateReferenceHC, sizeNeighbors);
+	neighborhood = Strategy.getStrategy().getProblem().getOperator().generatedNewState(stateReferenceHC, getSizeNeighbors());
 		int i= 0;
 //		Boolean restart= true;
 
@@ -92,7 +99,7 @@ public class MultiobjectiveHillClimbingDistance extends Generator{
 					i++;
 				}
 				int coutrestart=0;
-				while (stop == false && coutrestart < sizeNeighbors && accept==false) {
+				while (stop == false && coutrestart < getSizeNeighbors() && accept==false) {
 					stateCandidate = Strategy.getStrategy().getProblem().getOperator().generateRandomState(1).get(0);
 					if (Contain(stateCandidate)==false) {
 						Strategy.getStrategy().getProblem().Evaluate(stateCandidate);  

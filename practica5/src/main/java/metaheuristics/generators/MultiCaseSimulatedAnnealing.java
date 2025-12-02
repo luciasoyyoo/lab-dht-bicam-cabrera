@@ -26,7 +26,8 @@ public class MultiCaseSimulatedAnnealing extends Generator {
     private IFFactoryAcceptCandidate ifacceptCandidate;
 	// Cooling factor: fixed constant for update rule. Set a conservative default.
 	public static final double alpha = 0.93;
-	public static Double tinitial;
+	// Make initial temperature private and provide accessors so it can be protected/validated.
+	private static Double tinitial = 250.0;
 	public static final Double tfinal = 41.66;
 	static int countIterationsT;
     private int countRept;
@@ -41,6 +42,15 @@ public class MultiCaseSimulatedAnnealing extends Generator {
 
 	public void setTypeGenerator(GeneratorType typeGenerator) {
 		this.typeGenerator = typeGenerator;
+	}
+
+	// Accessors for tinitial to avoid exposing a mutable static field directly.
+	public static Double getTinitial() {
+		return tinitial;
+	}
+
+	public static void setTinitial(Double t) {
+		tinitial = t;
 	}
 
 	public MultiCaseSimulatedAnnealing(){

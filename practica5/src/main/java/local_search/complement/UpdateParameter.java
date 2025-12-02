@@ -33,7 +33,7 @@ public class UpdateParameter {
 				ifFactoryGenerator = new FactoryGenerator();
 				Strategy.getStrategy().generator = ifFactoryGenerator.createGenerator(GeneratorType.DistributionEstimationAlgorithm);
 			}
-			if(countIterationsCurrent.equals(ParticleSwarmOptimization.countRef - 1)){
+			if(countIterationsCurrent.equals(ParticleSwarmOptimization.getCountRef() - 1)){
 				ifFactoryGenerator = new FactoryGenerator();
 				Strategy.getStrategy().generator = ifFactoryGenerator.createGenerator(GeneratorType.ParticleSwarmOptimization);
 			}

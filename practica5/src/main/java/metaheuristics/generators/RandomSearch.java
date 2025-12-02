@@ -57,7 +57,7 @@ public class RandomSearch extends Generator {
 		List<State> neighborhood = new ArrayList<State>();
 		neighborhood = Strategy.getStrategy().getProblem().getOperator().generateRandomState(operatornumber);
 	    State statecandidate = candidatevalue.stateCandidate(stateReferenceRS, typeCandidate, strategy, operatornumber, neighborhood);
-	    if(GeneticAlgorithm.countRef != 0 || EvolutionStrategies.countRef != 0 || DistributionEstimationAlgorithm.countRef != 0 || ParticleSwarmOptimization.countRef != 0)
+		if(GeneticAlgorithm.countRef != 0 || EvolutionStrategies.countRef != 0 || DistributionEstimationAlgorithm.countRef != 0 || ParticleSwarmOptimization.getCountRef() != 0)
 	    	listStateReference.add(statecandidate);
 	    return statecandidate;
 	}

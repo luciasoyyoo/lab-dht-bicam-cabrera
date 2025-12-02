@@ -28,7 +28,7 @@ public class SimulatedAnnealing extends Generator {
 	// cooling factor - fixed constant
 	public static final double alpha = 0.93;
 	// default temperature parameters (can be adjusted per run)
-	public static Double tinitial = 250.0;
+	private static Double tinitial = 250.0;
 	public static final Double tfinal = 41.66;
 	static int countIterationsT = 50;
     private int countRept;
@@ -49,6 +49,20 @@ public class SimulatedAnnealing extends Generator {
 
 	public void setTypeGenerator(GeneratorType typeGenerator) {
 		this.typeGenerator = typeGenerator;
+	}
+
+	/**
+	 * Getter for initial temperature.
+	 */
+	public static Double getTinitial() {
+		return tinitial;
+	}
+
+	/**
+	 * Setter for initial temperature.
+	 */
+	public static void setTinitial(Double t) {
+		tinitial = t;
 	}
 
 	public SimulatedAnnealing(){

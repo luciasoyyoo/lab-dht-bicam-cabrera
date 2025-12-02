@@ -57,7 +57,7 @@ public class RandomSearch extends Generator {
 <span class="nc" id="L57">		List&lt;State&gt; neighborhood = new ArrayList&lt;State&gt;();</span>
 <span class="nc" id="L58">		neighborhood = Strategy.getStrategy().getProblem().getOperator().generateRandomState(operatornumber);</span>
 <span class="nc" id="L59">	    State statecandidate = candidatevalue.stateCandidate(stateReferenceRS, typeCandidate, strategy, operatornumber, neighborhood);</span>
-<span class="nc bnc" id="L60" title="All 2 branches missed.">	    if(GeneticAlgorithm.countRef != 0 || EvolutionStrategies.countRef != 0 || DistributionEstimationAlgorithm.countRef != 0 || ParticleSwarmOptimization.countRef != 0)</span>
+<span class="nc bnc" id="L60" title="All 2 branches missed.">		if(GeneticAlgorithm.countRef != 0 || EvolutionStrategies.countRef != 0 || DistributionEstimationAlgorithm.countRef != 0 || ParticleSwarmOptimization.getCountRef() != 0)</span>
 <span class="nc" id="L61">	    	listStateReference.add(statecandidate);</span>
 <span class="nc" id="L62">	    return statecandidate;</span>
 	}
