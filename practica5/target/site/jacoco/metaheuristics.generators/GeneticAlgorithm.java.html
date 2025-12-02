@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>GeneticAlgorithm.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">practica5</a> &gt; <a href="index.source.html" class="el_package">metaheuristics.generators</a> &gt; <span class="el_source">GeneticAlgorithm.java</span></div><h1>GeneticAlgorithm.java</h1><pre class="source lang-java linenums">package metaheuristics.generators;
+
+import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
+import java.util.List;
+
+import metaheurictics.strategy.Strategy;
+import java.util.concurrent.ThreadLocalRandom;
+import java.util.Arrays;
+
+import problem.definition.State;
+import problem.definition.Problem.ProblemType;
+
+import evolutionary_algorithms.complement.Crossover;
+import evolutionary_algorithms.complement.CrossoverType;
+import evolutionary_algorithms.complement.FatherSelection;
+import evolutionary_algorithms.complement.Mutation;
+import evolutionary_algorithms.complement.MutationType;
+import evolutionary_algorithms.complement.Replace;
+import evolutionary_algorithms.complement.ReplaceType;
+import evolutionary_algorithms.complement.SelectionType;
+import factory_interface.IFFactoryCrossover;
+import factory_interface.IFFactoryFatherSelection;
+import factory_interface.IFFactoryMutation;
+import factory_interface.IFFactoryReplace;
+import factory_method.FactoryCrossover;
+import factory_method.FactoryFatherSelection;
+import factory_method.FactoryMutation;
+import factory_method.FactoryReplace;
+
+public class GeneticAlgorithm extends Generator {
+
+	private State stateReferenceGA;
+<span class="nc" id="L34">	private List&lt;State&gt; listState = new ArrayList&lt;State&gt;(); </span>
+	private IFFactoryFatherSelection iffatherselection;
+	private IFFactoryCrossover iffactorycrossover;
+	private IFFactoryMutation iffactorymutation;
+	private IFFactoryReplace iffreplace;
+	
+	
+//	private SelectionType selectionType;
+//	private CrossoverType crossoverType;
+//	private MutationType mutationType;
+//	private ReplaceType replaceType;
+	private GeneratorType generatorType;
+<span class="nc" id="L46">	public static final MutationType mutationType = MutationType.OnePointMutation;</span>
+<span class="nc" id="L47">	public static final CrossoverType crossoverType = CrossoverType.UniformCrossover;</span>
+<span class="nc" id="L48">	public static final ReplaceType replaceType = ReplaceType.GenerationalReplace;</span>
+<span class="nc" id="L49">	public static final SelectionType selectionType = SelectionType.TruncationSelection;</span>
+	public static final double PC = 0.6;
+	public static final double PM = 0.01;
+	public static final int countRef = 0;
+	public static final int truncation = 0;
+	private float weight;
+	
+	//problemas dinamicos
+	//problemas dinamicos: use instance fields from Generator (countGender, countBetterGender)
+<span class="nc" id="L58">	private int[] listCountBetterGender = new int[10];</span>
+<span class="nc" id="L59">	private int[] listCountGender = new int[10];</span>
+<span class="nc" id="L60">	private float[] listTrace = new float[1200000];</span>
+	
+    public GeneticAlgorithm() {
+<span class="nc" id="L63">		super();</span>
+<span class="nc" id="L64">		this.listState = getListStateRef(); // llamada al mï¿½todo que devuelve la lista. </span>
+//		this.selectionType = SelectionType.Truncation;
+//		this.crossoverType = CrossoverType.UniformCrossover;
+//		this.mutationType = MutationType.UniformMutation;
+//		this.replaceType = ReplaceType.Smallest;
+<span class="nc" id="L69">		this.generatorType = GeneratorType.GeneticAlgorithm;</span>
+<span class="nc" id="L70">		this.weight = 50;</span>
+<span class="nc" id="L71">		listTrace[0] = this.weight;</span>
+<span class="nc" id="L72">		listCountBetterGender[0] = 0;</span>
+<span class="nc" id="L73">		listCountGender[0] = 0;</span>
+<span class="nc" id="L74">	}</span>
+    
+	@Override
+	public State generate(Integer operatornumber) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
+    	
+		//******************selection*******************************
+		//ArrayList&lt;State&gt;list=new ArrayList&lt;State&gt;();
+<span class="nc" id="L81">		List&lt;State&gt; refList = new ArrayList&lt;State&gt;(this.listState); </span>
+<span class="nc" id="L82">    	iffatherselection = new FactoryFatherSelection();</span>
+<span class="nc" id="L83">    	FatherSelection selection = iffatherselection.createSelectFather(selectionType);</span>
+<span class="nc" id="L84">    	List&lt;State&gt; fathers = selection.selection(refList, truncation);</span>
+<span class="nc bnc" id="L85" title="All 2 branches missed.">    	int pos1 = (fathers.size() &gt; 0) ? ThreadLocalRandom.current().nextInt(fathers.size()) : 0;</span>
+<span class="nc bnc" id="L86" title="All 2 branches missed.">    	int pos2 = (fathers.size() &gt; 0) ? ThreadLocalRandom.current().nextInt(fathers.size()) : 0;</span>
+    	
+<span class="nc" id="L88">    	State auxState1 = (State) Strategy.getStrategy().getProblem().getState().getCopy();</span>
+<span class="nc" id="L89">    	auxState1.setCode(new ArrayList&lt;Object&gt;(fathers.get(pos1).getCode()));</span>
+<span class="nc" id="L90">    	auxState1.setEvaluation(fathers.get(pos1).getEvaluation());</span>
+<span class="nc" id="L91">    	auxState1.setNumber(fathers.get(pos1).getNumber());</span>
+<span class="nc" id="L92">    	auxState1.setTypeGenerator(fathers.get(pos1).getTypeGenerator());</span>
+    	
+<span class="nc" id="L94">    	State auxState2 = (State) Strategy.getStrategy().getProblem().getState().getCopy();</span>
+<span class="nc" id="L95">    	auxState2.setCode(new ArrayList&lt;Object&gt;(fathers.get(pos2).getCode()));</span>
+<span class="nc" id="L96">    	auxState2.setEvaluation(fathers.get(pos2).getEvaluation());</span>
+<span class="nc" id="L97">    	auxState2.setNumber(fathers.get(pos2).getNumber());</span>
+<span class="nc" id="L98">    	auxState2.setTypeGenerator(fathers.get(pos2).getTypeGenerator());</span>
+    	
+	    //**********cruzamiento*************************************
+<span class="nc" id="L101">	    iffactorycrossover = new FactoryCrossover();</span>
+<span class="nc" id="L102">    	Crossover crossover = iffactorycrossover.createCrossover(crossoverType);</span>
+<span class="nc" id="L103">    	auxState1 = crossover.crossover(auxState1, auxState2, PC);</span>
+	    
+    	//**********mutacion******************************************** 	
+<span class="nc" id="L106">    	iffactorymutation = new FactoryMutation();</span>
+<span class="nc" id="L107">    	Mutation mutation =iffactorymutation.createMutation(mutationType);</span>
+<span class="nc" id="L108">    	auxState1 = mutation.mutation(auxState1, PM);</span>
+    	//list.add(auxState1);
+    	
+<span class="nc" id="L111">    	return auxState1;</span>
+	}
+    
+	@Override
+	public State getReference() {
+<span class="nc bnc" id="L116" title="All 4 branches missed.">		if (listState == null || listState.isEmpty()) {</span>
+<span class="nc" id="L117">			return null;</span>
+		}
+<span class="nc" id="L119">		stateReferenceGA = listState.get(0);</span>
+<span class="nc bnc" id="L120" title="All 2 branches missed.">		if(Strategy.getStrategy().getProblem().getTypeProblem().equals(ProblemType.Maximizar)){</span>
+<span class="nc bnc" id="L121" title="All 2 branches missed.">			for (int i = 1; i &lt; listState.size(); i++) {</span>
+<span class="nc bnc" id="L122" title="All 2 branches missed.">				if(stateReferenceGA.getEvaluation().get(0) &lt; listState.get(i).getEvaluation().get(0))</span>
+<span class="nc" id="L123">					stateReferenceGA = listState.get(i);</span>
+			}
+		}
+		else{
+<span class="nc bnc" id="L127" title="All 2 branches missed.">			for (int i = 1; i &lt; listState.size(); i++) {</span>
+<span class="nc bnc" id="L128" title="All 2 branches missed.">				if(stateReferenceGA.getEvaluation().get(0) &gt; listState.get(i).getEvaluation().get(0))</span>
+<span class="nc" id="L129">					stateReferenceGA = listState.get(i);</span>
+			}
+		}
+<span class="nc bnc" id="L132" title="All 2 branches missed.">		return (stateReferenceGA == null) ? null : new State(stateReferenceGA);</span>
+	}
+
+	public void setStateRef(State stateRef) {
+<span class="nc bnc" id="L136" title="All 2 branches missed.">		this.stateReferenceGA = (stateRef == null) ? null : new State(stateRef);</span>
+<span class="nc" id="L137">	}</span>
+	@Override
+	public void setInitialReference(State stateInitialRef) {
+<span class="nc bnc" id="L140" title="All 2 branches missed.">		this.stateReferenceGA = (stateInitialRef == null) ? null : new State(stateInitialRef);</span>
+<span class="nc" id="L141">	}</span>
+
+	@Override
+	public void updateReference(State stateCandidate, Integer countIterationsCurrent) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException,	NoSuchMethodException {
+<span class="nc" id="L145">		iffreplace = new FactoryReplace();</span>
+<span class="nc" id="L146">		Replace replace = iffreplace.createReplace(replaceType);</span>
+<span class="nc" id="L147">		listState = replace.replace(stateCandidate, listState);</span>
+<span class="nc" id="L148">	}</span>
+	
+	public List&lt;State&gt; getListState() {
+<span class="nc bnc" id="L151" title="All 2 branches missed.">		return (listState == null) ? new ArrayList&lt;State&gt;() : new ArrayList&lt;State&gt;(listState);</span>
+	}
+
+	public void setListState(List&lt;State&gt; listState) {
+<span class="nc bnc" id="L155" title="All 2 branches missed.">		this.listState = (listState == null) ? new ArrayList&lt;State&gt;() : new ArrayList&lt;State&gt;(listState);</span>
+<span class="nc" id="L156">	}</span>
+	
+	public List&lt;State&gt; getListStateRef(){
+<span class="nc" id="L159">		Boolean found = false;</span>
+<span class="nc" id="L160">		List&lt;String&gt; key = Strategy.getStrategy().getListKey();</span>
+<span class="nc" id="L161">		int count = 0;</span>
+		//if(Strategy.getStrategy().Statistics.getAllStates().size() == 0){
+		/*if(RandomSearch.listStateReference.size() == 0){
+			return this.listState = new ArrayList&lt;State&gt;();
+		}*/
+<span class="nc bnc" id="L166" title="All 4 branches missed.">		while((found.equals(false)) &amp;&amp; (Strategy.getStrategy().mapGenerators.size() &gt; count)){</span>
+<span class="nc bnc" id="L167" title="All 2 branches missed.">			if(key.get(count).equals(GeneratorType.GeneticAlgorithm.toString())){</span>
+<span class="nc" id="L168">				GeneratorType keyGenerator = GeneratorType.valueOf(String.valueOf(key.get(count)));</span>
+<span class="nc" id="L169">				GeneticAlgorithm generator = (GeneticAlgorithm) Strategy.getStrategy().mapGenerators.get(keyGenerator);</span>
+<span class="nc bnc" id="L170" title="All 2 branches missed.">				if(generator.getListState().isEmpty()){</span>
+<span class="nc" id="L171">					listState.addAll(RandomSearch.listStateReference);</span>
+					//for (int j = 1; j &lt; Strategy.getStrategy().Statistics.getAllStates().size(); j++) {
+//					for (int j = 1; j &lt; RandomSearch.listStateReference.size(); j++) {
+						//if(Strategy.getStrategy().Statistics.getAllStates().get(j).getTypeGenerator().equals(GeneratorType.RandomSearch) &amp;&amp; (listState.size()!= countRef)){
+//						if(listState.size() != countRef){
+							//listState.add(Strategy.getStrategy().Statistics.getAllStates().get(j));
+//							listState.add(RandomSearch.listStateReference.get(j));
+//						}
+//					}  
+				}
+				else{
+<span class="nc" id="L182">					listState = generator.getListState();</span>
+				}
+<span class="nc" id="L184">			        found = true;</span>
+			}
+<span class="nc" id="L186">			count++;</span>
+		}
+<span class="nc bnc" id="L188" title="All 2 branches missed.">		return (listState == null) ? new ArrayList&lt;State&gt;() : new ArrayList&lt;State&gt;(listState);</span>
+	}
+
+	public GeneratorType getGeneratorType() {
+<span class="nc" id="L192">		return generatorType;</span>
+	}
+
+	public void setGeneratorType(GeneratorType generatorType) {
+<span class="nc" id="L196">		this.generatorType = generatorType;</span>
+<span class="nc" id="L197">	}</span>
+
+	@Override
+	public GeneratorType getType() {
+<span class="nc" id="L201">		return this.generatorType;</span>
+	}
+
+	@Override
+	public List&lt;State&gt; getReferenceList() {
+<span class="nc" id="L206">		List&lt;State&gt; ReferenceList = new ArrayList&lt;State&gt;();</span>
+<span class="nc bnc" id="L207" title="All 2 branches missed.">		for (int i = 0; i &lt; listState.size(); i++) {</span>
+<span class="nc" id="L208">			State value = listState.get(i);</span>
+<span class="nc" id="L209">			ReferenceList.add(value);</span>
+		}
+<span class="nc" id="L211">		return new ArrayList&lt;State&gt;(ReferenceList);</span>
+	}
+
+	@Override
+	public List&lt;State&gt; getSonList() {
+		// TODO Auto-generated method stub
+<span class="nc" id="L217">		return null;</span>
+	}
+
+	@Override
+	public boolean awardUpdateREF(State stateCandidate) {
+		// TODO Auto-generated method stub
+<span class="nc" id="L223">		return false;</span>
+	}
+
+
+	@Override
+	public float getWeight() {
+		// TODO Auto-generated method stub
+<span class="nc" id="L230">		return this.weight;</span>
+	}
+
+	@Override
+	public void setWeight(float weight) {
+		// TODO Auto-generated method stub
+<span class="nc" id="L236">		this.weight = weight;</span>
+<span class="nc" id="L237">	}</span>
+	@Override
+	public int[] getListCountBetterGender() {
+		// TODO Auto-generated method stub
+<span class="nc bnc" id="L241" title="All 2 branches missed.">		return (this.listCountBetterGender == null) ? new int[0] : Arrays.copyOf(this.listCountBetterGender, this.listCountBetterGender.length);</span>
+	}
+
+	@Override
+	public int[] getListCountGender() {
+		// TODO Auto-generated method stub
+<span class="nc bnc" id="L247" title="All 2 branches missed.">		return (this.listCountGender == null) ? new int[0] : Arrays.copyOf(this.listCountGender, this.listCountGender.length);</span>
+	}
+
+	@Override
+	public float[] getTrace() {
+		// TODO Auto-generated method stub
+<span class="nc bnc" id="L253" title="All 2 branches missed.">		return (this.listTrace == null) ? new float[0] : Arrays.copyOf(this.listTrace, this.listTrace.length);</span>
+	}
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

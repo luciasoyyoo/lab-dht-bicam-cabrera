@@ -1,7 +1,5 @@
 package problem.definition;
 
-
-
 import java.util.ArrayList;
 
 import metaheuristics.generators.GeneratorType;

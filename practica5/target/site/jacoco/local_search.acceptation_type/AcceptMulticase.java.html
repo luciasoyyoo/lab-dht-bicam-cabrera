@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>AcceptMulticase.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">practica5</a> &gt; <a href="index.source.html" class="el_package">local_search.acceptation_type</a> &gt; <span class="el_source">AcceptMulticase.java</span></div><h1>AcceptMulticase.java</h1><pre class="source lang-java linenums">package local_search.acceptation_type;
+
+import metaheuristics.generators.*;
+import metaheurictics.strategy.*;
+
+import java.util.List;
+import java.util.concurrent.ThreadLocalRandom;
+
+import problem.definition.State;
+
+<span class="nc" id="L11">public class AcceptMulticase extends AcceptableCandidate {</span>
+
+	@Override
+	public Boolean acceptCandidate(State stateCurrent, State stateCandidate) {
+		// TODO Auto-generated method stub
+<span class="nc" id="L16">		Boolean accept = false;</span>
+<span class="nc" id="L17">		List&lt;State&gt; list = Strategy.getStrategy().listRefPoblacFinal;</span>
+		
+<span class="nc bnc" id="L19" title="All 2 branches missed.">		if(list.size() == 0){</span>
+<span class="nc" id="L20">			list.add(stateCurrent.clone());</span>
+		}
+<span class="nc" id="L22">	Double T = MultiCaseSimulatedAnnealing.getTinitial();</span>
+<span class="nc" id="L23">		double pAccept = 0;</span>
+	// use ThreadLocalRandom to avoid creating a new Random instance on each call
+<span class="nc" id="L25">		Dominance dominance= new Dominance();</span>
+		//Verificando si la soluciï¿½n candidata domina a la soluciï¿½n actual
+		//Si la soluciï¿½n candidata domina a la soluciï¿½n actual
+<span class="nc bnc" id="L28" title="All 2 branches missed.">		if(dominance.dominance(stateCandidate, stateCurrent) == true){</span>
+			//Se asigna como soluciï¿½n actual la soluciï¿½n candidata con probabilidad 1
+<span class="nc" id="L30">			pAccept = 1; </span>
+		}
+<span class="nc bnc" id="L32" title="All 2 branches missed.">		else if(dominance.dominance(stateCandidate, stateCurrent)== false){	</span>
+<span class="nc bnc" id="L33" title="All 2 branches missed.">			if(dominanceCounter(stateCandidate, list) &gt; 0){</span>
+<span class="nc" id="L34">				pAccept = 1;</span>
+			}
+<span class="nc bnc" id="L36" title="All 2 branches missed.">			else if(dominanceRank(stateCandidate, list) == 0){</span>
+<span class="nc" id="L37">				pAccept = 1;</span>
+			}
+<span class="nc bnc" id="L39" title="All 2 branches missed.">			else if(dominanceRank(stateCandidate, list) &lt; dominanceRank(stateCurrent, list)){</span>
+<span class="nc" id="L40">				pAccept = 1;</span>
+			}
+<span class="nc bnc" id="L42" title="All 2 branches missed.">			else if(dominanceRank(stateCandidate, list) == dominanceRank(stateCurrent, list)){</span>
+				//Calculando la probabilidad de aceptaciï¿½n
+<span class="nc" id="L44">				List&lt;Double&gt; evaluations = stateCurrent.getEvaluation();</span>
+<span class="nc" id="L45">				double total = 0;</span>
+<span class="nc bnc" id="L46" title="All 2 branches missed.">				for (int i = 0; i &lt; evaluations.size()-1; i++) {</span>
+<span class="nc" id="L47">					Double evalA = evaluations.get(i);</span>
+<span class="nc" id="L48">					Double evalB = stateCandidate.getEvaluation().get(i);</span>
+<span class="nc bnc" id="L49" title="All 4 branches missed.">					if (evalA != 0 &amp;&amp; evalB != 0) {</span>
+<span class="nc" id="L50">						total += (evalA - evalB)/((evalA + evalB)/2);</span>
+					}
+				}	
+<span class="nc" id="L53">				pAccept = Math.exp(-(1-total)/T);</span>
+<span class="nc" id="L54">			}</span>
+<span class="nc bnc" id="L55" title="All 4 branches missed.">			else if (dominanceRank(stateCandidate, list) &gt; dominanceRank(stateCurrent, list) &amp;&amp; dominanceRank(stateCurrent, list)!= 0){</span>
+				// avoid integer division -&gt; compute ranks once and use floating point division
+<span class="nc" id="L57">				int rankCandidate = dominanceRank(stateCandidate, list);</span>
+<span class="nc" id="L58">				int rankCurrent = dominanceRank(stateCurrent, list);</span>
+<span class="nc bnc" id="L59" title="All 2 branches missed.">				float value = (rankCurrent == 0) ? 0f : ((float) rankCandidate) / ((float) rankCurrent);</span>
+<span class="nc" id="L60">				pAccept = Math.exp(-((double)value+1.0)/T);</span>
+<span class="nc" id="L61">			}</span>
+			else{
+				//Calculando la probabilidad de aceptaciï¿½n
+<span class="nc" id="L64">				List&lt;Double&gt; evaluations = stateCurrent.getEvaluation();</span>
+<span class="nc" id="L65">				double total = 0;</span>
+<span class="nc bnc" id="L66" title="All 2 branches missed.">				for (int i = 0; i &lt; evaluations.size()-1; i++) {</span>
+<span class="nc" id="L67">					Double evalA = evaluations.get(i);</span>
+<span class="nc" id="L68">					Double evalB = stateCandidate.getEvaluation().get(i);</span>
+<span class="nc bnc" id="L69" title="All 4 branches missed.">					if (evalA != 0 &amp;&amp; evalB != 0) {</span>
+<span class="nc" id="L70">						total += (evalA - evalB)/((evalA + evalB)/2);</span>
+					}
+				}
+<span class="nc" id="L73">				pAccept = Math.exp(-(1-total)/T);</span>
+			}
+		}
+		//Generar un nï¿½mero aleatorio
+<span class="nc bnc" id="L77" title="All 2 branches missed.">			if((ThreadLocalRandom.current().nextFloat()) &lt; pAccept){</span>
+			// Don't assign to the parameter reference (dead store). The caller should handle state updates.
+			// Verificando que la soluciï¿½n candidata domina a alguna de las soluciones
+<span class="nc" id="L80">				accept = dominance.listDominance(stateCandidate, list);</span>
+		}
+<span class="nc" id="L82">		return accept;</span>
+	}
+
+
+	private int dominanceCounter(State stateCandidate, List&lt;State&gt; list) { //chequea el nï¿½mero de soluciones de Pareto que son dominados por la nueva soluciï¿½n
+<span class="nc" id="L87">		int counter = 0;</span>
+<span class="nc bnc" id="L88" title="All 2 branches missed.">		for (int i = 0; i &lt; list.size(); i++) {</span>
+<span class="nc" id="L89">			State solution = list.get(i);</span>
+<span class="nc" id="L90">			Dominance dominance = new Dominance();</span>
+<span class="nc bnc" id="L91" title="All 2 branches missed.">			if(dominance.dominance(stateCandidate, solution) == true)</span>
+<span class="nc" id="L92">				counter++;</span>
+		}
+<span class="nc" id="L94">		return counter;</span>
+	}
+
+	private int dominanceRank(State stateCandidate, List&lt;State&gt; list) { //calculando el nï¿½mero de soluciones en el conjunto de Pareto que dominan a la soluciï¿½n
+<span class="nc" id="L98">		int rank = 0;</span>
+<span class="nc bnc" id="L99" title="All 2 branches missed.">		for (int i = 0; i &lt; list.size(); i++) {</span>
+<span class="nc" id="L100">			State solution = list.get(i);</span>
+<span class="nc" id="L101">			Dominance dominance = new Dominance();</span>
+<span class="nc bnc" id="L102" title="All 2 branches missed.">			if(dominance.dominance(solution, stateCandidate) == true){</span>
+<span class="nc" id="L103">				rank++;</span>
+			}
+		}
+		
+<span class="nc" id="L107">		return rank;</span>
+	}
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>
