@@ -71,7 +71,7 @@ public class Particle extends Generator {
 	
 	
 	private ArrayList&lt;Object&gt; UpdateVelocity(){ // actualizar velocidad
-<span class="nc" id="L74">    	double w = ParticleSwarmOptimization.wmax - ((ParticleSwarmOptimization.wmax - ParticleSwarmOptimization.wmin) / Strategy.getStrategy().getCountMax()) * ParticleSwarmOptimization.countCurrentIterPSO;  //CALCULO DE LA INERCIA</span>
+<span class="nc" id="L74">    	double w = ParticleSwarmOptimization.wmax - ((ParticleSwarmOptimization.wmax - ParticleSwarmOptimization.wmin) / Strategy.getStrategy().getCountMax()) * ParticleSwarmOptimization.getCountCurrentIterPSO();  //CALCULO DE LA INERCIA</span>
 <span class="nc" id="L75">    	double rand1 = (double)(Math.random() * (double)(1));</span>
 <span class="nc" id="L76">    	double rand2 = (double)(Math.random() * (double)(1));</span>
     	double inertia, cognitive, social;
@@ -86,7 +86,7 @@ public class Particle extends Generator {
     	// recorre el vector velocidad y lo actualiza
 <span class="nc bnc" id="L87" title="All 2 branches missed.">    	for (int i = 0; i &lt; Strategy.getStrategy().getProblem().getState().getCode().size(); i++) {  </span>
     		// cumulo donde se encuentra la particula
-<span class="nc" id="L89">    		int swarm = ParticleSwarmOptimization.countParticle / ParticleSwarmOptimization.countParticleBySwarm; </span>
+<span class="nc" id="L89">            	int swarm = ParticleSwarmOptimization.getCountParticle() / ParticleSwarmOptimization.countParticleBySwarm; </span>
 <span class="nc" id="L90">           	inertia = w * (Double)velocity.get(i);  </span>
            	if(ParticleSwarmOptimization.binary == true){
            		cognitive = (Double)(ParticleSwarmOptimization.learning1 * rand1 * ((Integer)(this.statePBest.getCode().get(i)) - (Integer)(stateActual.getCode().get(i))));
@@ -213,19 +213,19 @@ public class Particle extends Generator {
 	@Override
 	public float[] getTrace() {
 		// TODO Auto-generated method stub
-<span class="nc" id="L216">		return null;</span>
+<span class="nc" id="L216">		return new float[0];</span>
 	}
 
 	@Override
 	public int[] getListCountBetterGender() {
 		// TODO Auto-generated method stub
-<span class="nc" id="L222">		return null;</span>
+<span class="nc" id="L222">		return new int[0];</span>
 	}
 
 	@Override
 	public int[] getListCountGender() {
 		// TODO Auto-generated method stub
-<span class="nc" id="L228">		return null;</span>
+<span class="nc" id="L228">		return new int[0];</span>
 	}
 
 

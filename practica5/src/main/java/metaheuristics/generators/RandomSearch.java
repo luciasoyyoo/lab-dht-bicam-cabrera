@@ -129,19 +129,19 @@ public class RandomSearch extends Generator {
 	@Override
 	public int[] getListCountBetterGender() {
 		// TODO Auto-generated method stub
-		return (this.listCountBetterGender == null) ? null : Arrays.copyOf(this.listCountBetterGender, this.listCountBetterGender.length);
+		return (this.listCountBetterGender == null) ? new int[0] : Arrays.copyOf(this.listCountBetterGender, this.listCountBetterGender.length);
 	}
 
 	@Override
 	public int[] getListCountGender() {
 		// TODO Auto-generated method stub
-		return (this.listCountGender == null) ? null : Arrays.copyOf(this.listCountGender, this.listCountGender.length);
+		return (this.listCountGender == null) ? new int[0] : Arrays.copyOf(this.listCountGender, this.listCountGender.length);
 	}
 
 	@Override
 	public float[] getTrace() {
 		// TODO Auto-generated method stub
-		return (this.listTrace == null) ? null : Arrays.copyOf(this.listTrace, this.listTrace.length);
+		return (this.listTrace == null) ? new float[0] : Arrays.copyOf(this.listTrace, this.listTrace.length);
 	}
 
 }

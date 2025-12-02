@@ -116,18 +116,18 @@ public class MultiobjectiveStochasticHillClimbing extends Generator{
 	@Override
 	public float[] getTrace() {
 		// TODO Auto-generated method stub
-		return null;
+		return new float[0];
 	}
 
 	@Override
 	public int[] getListCountBetterGender() {
 		// TODO Auto-generated method stub
-		return null;
+		return new int[0];
 	}
 
 	@Override
 	public int[] getListCountGender() {
 		// TODO Auto-generated method stub
-		return null;
+		return new int[0];
 	}
 }

@@ -31,6 +31,15 @@ public class SimulatedAnnealing extends Generator {
 	private static Double tinitial = 250.0;
 	public static final Double tfinal = 41.66;
 	static int countIterationsT = 50;
+
+	// Accessors for countIterationsT so instance methods don't write the static field directly
+	public static int getCountIterationsT() {
+		return countIterationsT;
+	}
+
+	public static void setCountIterationsT(int c) {
+		countIterationsT = c;
+	}
     private int countRept;
     private GeneratorType typeGenerator;
     private List<State> listStateReference = new ArrayList<State>();
@@ -115,9 +124,10 @@ public class SimulatedAnnealing extends Generator {
 		Boolean accept = candidate.acceptCandidate(stateReferenceSA, stateCandidate);
 		if(accept.equals(true))
 		  stateReferenceSA = stateCandidate;
-		if(countIterationsCurrent.equals(countIterationsT)){
-			tinitial = tinitial * alpha;
-			countIterationsT = countIterationsT + countRept;
+		if(countIterationsCurrent.equals(getCountIterationsT())){
+			// use static setters to avoid writing the static field from an instance method
+			SimulatedAnnealing.setTinitial(SimulatedAnnealing.getTinitial() * alpha);
+			SimulatedAnnealing.setCountIterationsT(SimulatedAnnealing.getCountIterationsT() + countRept);
 		}
 //		getReferenceList();
 	}
@@ -161,19 +171,19 @@ public class SimulatedAnnealing extends Generator {
 	@Override
 	public int[] getListCountBetterGender() {
 		// TODO Auto-generated method stub
-		return (this.listCountBetterGender == null) ? null : Arrays.copyOf(this.listCountBetterGender, this.listCountBetterGender.length);
+		return (this.listCountBetterGender == null) ? new int[0] : Arrays.copyOf(this.listCountBetterGender, this.listCountBetterGender.length);
 	}
 
 	@Override
 	public int[] getListCountGender() {
 		// TODO Auto-generated method stub
-		return (this.listCountGender == null) ? null : Arrays.copyOf(this.listCountGender, this.listCountGender.length);
+		return (this.listCountGender == null) ? new int[0] : Arrays.copyOf(this.listCountGender, this.listCountGender.length);
 	}
 
 	@Override
 	public float[] getTrace() {
 		// TODO Auto-generated method stub
-		return (this.listTrace == null) ? null : Arrays.copyOf(this.listTrace, this.listTrace.length);
+		return (this.listTrace == null) ? new float[0] : Arrays.copyOf(this.listTrace, this.listTrace.length);
 	}
 
 }

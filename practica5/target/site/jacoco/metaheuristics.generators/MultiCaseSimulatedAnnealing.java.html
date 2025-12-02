@@ -88,83 +88,90 @@ public class MultiCaseSimulatedAnnealing extends Generator {
 
 	@Override
 	public void updateReference(State stateCandidate, Integer countIterationsCurrent)throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
-<span class="nc" id="L91">		countRept = countIterationsT;</span>
+<span class="nc" id="L91">		countRept = MultiCaseSimulatedAnnealing.getCountIterationsT();</span>
 <span class="nc" id="L92">		ifacceptCandidate = new FactoryAcceptCandidate();</span>
 <span class="nc" id="L93">		AcceptableCandidate candidate = ifacceptCandidate.createAcceptCandidate(typeAcceptation);</span>
 <span class="nc" id="L94">		Boolean accept = candidate.acceptCandidate(stateReferenceSA, stateCandidate);</span>
 <span class="nc bnc" id="L95" title="All 2 branches missed.">		if(accept.equals(true))</span>
 <span class="nc" id="L96">		  stateReferenceSA = stateCandidate.clone();</span>
-<span class="nc bnc" id="L97" title="All 2 branches missed.">		if(countIterationsCurrent.equals(countIterationsT)){</span>
-<span class="nc" id="L98">			tinitial = tinitial * alpha;</span>
+<span class="nc bnc" id="L97" title="All 2 branches missed.">		if(countIterationsCurrent.equals(MultiCaseSimulatedAnnealing.getCountIterationsT())){</span>
+			// update via accessors to avoid writing static fields inside an instance method
+<span class="nc" id="L99">			MultiCaseSimulatedAnnealing.setTinitial(MultiCaseSimulatedAnnealing.getTinitial() * alpha);</span>
 			//Variante Fast MOSA
-			//tinitial = tinitial/(1 + countIterationsCurrent);
-			
-			//Variante Two-Stage Annealing MC-MOSA
-			/*if(countIterationsCurrent/2 &lt; countIterationsT){
-				tinitial = tinitial * alpha;
-			}
-			else{
-				tinitial = tinitial/(1 + countIterationsCurrent);
-			}*/
-<span class="nc" id="L109">			System.out.println(&quot;La T:&quot; + tinitial);</span>
-<span class="nc" id="L110">			countIterationsT = countIterationsT + countRept;</span>
-<span class="nc" id="L111">			System.out.println(&quot;La Cant es: &quot; + countIterationsT);</span>
+			//MultiCaseSimulatedAnnealing.setTinitial(MultiCaseSimulatedAnnealing.getTinitial()/(1 + countIterationsCurrent));
+<span class="nc" id="L102">			System.out.println(&quot;La T:&quot; + MultiCaseSimulatedAnnealing.getTinitial());</span>
+<span class="nc" id="L103">			MultiCaseSimulatedAnnealing.setCountIterationsT(MultiCaseSimulatedAnnealing.getCountIterationsT() + countRept);</span>
+<span class="nc" id="L104">			System.out.println(&quot;La Cant es: &quot; + MultiCaseSimulatedAnnealing.getCountIterationsT());</span>
 		}
-<span class="nc" id="L113">		getReferenceList();</span>
-<span class="nc" id="L114">	}</span>
+<span class="nc" id="L106">		getReferenceList();</span>
+<span class="nc" id="L107">	}</span>
+
+	public static int getCountIterationsT() {
+<span class="nc" id="L110">		return countIterationsT;</span>
+	}
+
+	public static void setCountIterationsT(int c) {
+<span class="nc" id="L114">		countIterationsT = c;</span>
+<span class="nc" id="L115">	}</span>
 
 	@Override
 	public GeneratorType getType() {
-<span class="nc" id="L118">		return this.typeGenerator;</span>
+<span class="nc" id="L119">		return this.typeGenerator;</span>
 	}
 
 	@Override
 	public List&lt;State&gt; getReferenceList() {
-<span class="nc" id="L123">		listStateReference.add(stateReferenceSA.clone());</span>
-<span class="nc" id="L124">		return listStateReference;</span>
+<span class="nc" id="L124">		listStateReference.add(stateReferenceSA.clone());</span>
+<span class="nc" id="L125">		return listStateReference;</span>
 	}
 
 	@Override
 	public List&lt;State&gt; getSonList() {
 		// TODO Auto-generated method stub
-<span class="nc" id="L130">		return null;</span>
+<span class="nc" id="L131">		return null;</span>
 	}
 
 	@Override
 	public boolean awardUpdateREF(State stateCandidate) {
 		// TODO Auto-generated method stub
-<span class="nc" id="L136">		return false;</span>
+<span class="nc" id="L137">		return false;</span>
 	}
 
 
 	@Override
 	public float getWeight() {
 		// TODO Auto-generated method stub
-<span class="nc" id="L143">		return 0;</span>
+<span class="nc" id="L144">		return 0;</span>
 	}
 
 	@Override
 	public void setWeight(float weight) {
 		// TODO Auto-generated method stub
 		
-<span class="nc" id="L150">	}</span>
+<span class="nc" id="L151">	}</span>
 
 	@Override
 	public int[] getListCountBetterGender() {
 		// TODO Auto-generated method stub
-<span class="nc" id="L155">		return null;</span>
+<span class="nc" id="L156">		return new int[0];</span>
 	}
 
 	@Override
 	public int[] getListCountGender() {
 		// TODO Auto-generated method stub
-<span class="nc" id="L161">		return null;</span>
+<span class="nc" id="L162">		return new int[0];</span>
 	}
 
 	@Override
 	public float[] getTrace() {
 		// TODO Auto-generated method stub
-<span class="nc" id="L167">		return null;</span>
+<span class="nc bnc" id="L168" title="All 2 branches missed.">		if (this.listTrace == null) return new float[0];</span>
+<span class="nc" id="L169">		float[] arr = new float[this.listTrace.size()];</span>
+<span class="nc bnc" id="L170" title="All 2 branches missed.">		for (int i = 0; i &lt; this.listTrace.size(); i++) {</span>
+<span class="nc" id="L171">			Float v = this.listTrace.get(i);</span>
+<span class="nc bnc" id="L172" title="All 2 branches missed.">			arr[i] = (v == null) ? 0f : v.floatValue();</span>
+		}
+<span class="nc" id="L174">		return arr;</span>
 	}
 	
 }

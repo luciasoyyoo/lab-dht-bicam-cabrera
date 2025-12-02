@@ -238,20 +238,26 @@ public class MultiobjectiveHillClimbingDistance extends Generator{
 
 	@Override
 	public int[] getListCountBetterGender() {
-		// TODO Auto-generated method stub
-<span class="nc" id="L242">		return null;</span>
+		// This generator doesn't maintain listCount arrays; return empty array to avoid nulls
+<span class="nc" id="L242">		return new int[0];</span>
 	}
 
 	@Override
 	public int[] getListCountGender() {
-		// TODO Auto-generated method stub
-<span class="nc" id="L248">		return null;</span>
+		// This generator doesn't maintain listCount arrays; return empty array to avoid nulls
+<span class="nc" id="L248">		return new int[0];</span>
 	}
 
 	@Override
 	public float[] getTrace() {
 		// TODO Auto-generated method stub
-<span class="nc" id="L254">		return null;</span>
+<span class="nc bnc" id="L254" title="All 2 branches missed.">		if (this.listTrace == null) return new float[0];</span>
+<span class="nc" id="L255">		float[] arr = new float[this.listTrace.size()];</span>
+<span class="nc bnc" id="L256" title="All 2 branches missed.">		for (int i = 0; i &lt; this.listTrace.size(); i++) {</span>
+<span class="nc" id="L257">			Float v = this.listTrace.get(i);</span>
+<span class="nc bnc" id="L258" title="All 2 branches missed.">			arr[i] = (v == null) ? 0f : v.floatValue();</span>
+		}
+<span class="nc" id="L260">		return arr;</span>
 	}
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

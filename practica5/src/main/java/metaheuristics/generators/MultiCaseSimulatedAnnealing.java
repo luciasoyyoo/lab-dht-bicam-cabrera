@@ -88,29 +88,30 @@ public class MultiCaseSimulatedAnnealing extends Generator {
 
 	@Override
 	public void updateReference(State stateCandidate, Integer countIterationsCurrent)throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
-		countRept = countIterationsT;
+		countRept = MultiCaseSimulatedAnnealing.getCountIterationsT();
 		ifacceptCandidate = new FactoryAcceptCandidate();
 		AcceptableCandidate candidate = ifacceptCandidate.createAcceptCandidate(typeAcceptation);
 		Boolean accept = candidate.acceptCandidate(stateReferenceSA, stateCandidate);
 		if(accept.equals(true))
 		  stateReferenceSA = stateCandidate.clone();
-		if(countIterationsCurrent.equals(countIterationsT)){
-			tinitial = tinitial * alpha;
+		if(countIterationsCurrent.equals(MultiCaseSimulatedAnnealing.getCountIterationsT())){
+			// update via accessors to avoid writing static fields inside an instance method
+			MultiCaseSimulatedAnnealing.setTinitial(MultiCaseSimulatedAnnealing.getTinitial() * alpha);
 			//Variante Fast MOSA
-			//tinitial = tinitial/(1 + countIterationsCurrent);
-			
-			//Variante Two-Stage Annealing MC-MOSA
-			/*if(countIterationsCurrent/2 < countIterationsT){
-				tinitial = tinitial * alpha;
-			}
-			else{
-				tinitial = tinitial/(1 + countIterationsCurrent);
-			}*/
-			System.out.println("La T:" + tinitial);
-			countIterationsT = countIterationsT + countRept;
-			System.out.println("La Cant es: " + countIterationsT);
+			//MultiCaseSimulatedAnnealing.setTinitial(MultiCaseSimulatedAnnealing.getTinitial()/(1 + countIterationsCurrent));
+			System.out.println("La T:" + MultiCaseSimulatedAnnealing.getTinitial());
+			MultiCaseSimulatedAnnealing.setCountIterationsT(MultiCaseSimulatedAnnealing.getCountIterationsT() + countRept);
+			System.out.println("La Cant es: " + MultiCaseSimulatedAnnealing.getCountIterationsT());
 		}
 		getReferenceList();
+	}
+
+	public static int getCountIterationsT() {
+		return countIterationsT;
+	}
+
+	public static void setCountIterationsT(int c) {
+		countIterationsT = c;
 	}
 
 	@Override
@@ -152,19 +153,25 @@ public class MultiCaseSimulatedAnnealing extends Generator {
 	@Override
 	public int[] getListCountBetterGender() {
 		// TODO Auto-generated method stub
-		return null;
+		return new int[0];
 	}
 
 	@Override
 	public int[] getListCountGender() {
 		// TODO Auto-generated method stub
-		return null;
+		return new int[0];
 	}
 
 	@Override
 	public float[] getTrace() {
 		// TODO Auto-generated method stub
-		return null;
+		if (this.listTrace == null) return new float[0];
+		float[] arr = new float[this.listTrace.size()];
+		for (int i = 0; i < this.listTrace.size(); i++) {
+			Float v = this.listTrace.get(i);
+			arr[i] = (v == null) ? 0f : v.floatValue();
+		}
+		return arr;
 	}
 	
 }

@@ -238,19 +238,25 @@ public class MultiobjectiveHillClimbingDistance extends Generator{
 
 	@Override
 	public int[] getListCountBetterGender() {
-		// TODO Auto-generated method stub
-		return null;
+		// This generator doesn't maintain listCount arrays; return empty array to avoid nulls
+		return new int[0];
 	}
 
 	@Override
 	public int[] getListCountGender() {
-		// TODO Auto-generated method stub
-		return null;
+		// This generator doesn't maintain listCount arrays; return empty array to avoid nulls
+		return new int[0];
 	}
 
 	@Override
 	public float[] getTrace() {
 		// TODO Auto-generated method stub
-		return null;
+		if (this.listTrace == null) return new float[0];
+		float[] arr = new float[this.listTrace.size()];
+		for (int i = 0; i < this.listTrace.size(); i++) {
+			Float v = this.listTrace.get(i);
+			arr[i] = (v == null) ? 0f : v.floatValue();
+		}
+		return arr;
 	}
 }

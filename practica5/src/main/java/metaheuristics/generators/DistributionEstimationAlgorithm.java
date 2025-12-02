@@ -63,11 +63,11 @@ public class DistributionEstimationAlgorithm extends Generator {
 		listCountGender[0] = 0;
 	}
 	
-	public State MaxValue (List<State> listInd){
+	public State maxValue(List<State> listInd) {
 		State state = new State(listInd.get(0));
 		double max = state.getEvaluation().get(0);
 		for (int i = 1; i < listInd.size(); i++) {
-			if(listInd.get(i).getEvaluation().get(0) > max){
+			if (listInd.get(i).getEvaluation().get(0) > max) {
 				max = listInd.get(i).getEvaluation().get(0);
 				state = new State(listInd.get(i));
 			}
@@ -92,7 +92,7 @@ public class DistributionEstimationAlgorithm extends Generator {
     	Sampling samplingG = iffsampling.createSampling(Samplingtype);
     	List<State> ind = samplingG.sampling(probability, referenceList.size());
     	sonList = ind;
-    	candidate = MaxValue(ind);
+            	candidate = maxValue(ind);
        // this.candidate = candidate;
     	return candidate;*/	
     	
@@ -111,7 +111,7 @@ public class DistributionEstimationAlgorithm extends Generator {
     			listEval.add(evaluation);
     			ind.get(0).setEvaluation(listEval);
     		}
-    		candidate = MaxValue(ind);
+        	candidate = maxValue(ind);
     	}
     	else{
     		candidate = ind.get(0);
@@ -265,19 +265,19 @@ public class DistributionEstimationAlgorithm extends Generator {
 	@Override
 	public int[] getListCountBetterGender() {
 		// TODO Auto-generated method stub
-		return (this.listCountBetterGender == null) ? null : Arrays.copyOf(this.listCountBetterGender, this.listCountBetterGender.length);
+		return (this.listCountBetterGender == null) ? new int[0] : Arrays.copyOf(this.listCountBetterGender, this.listCountBetterGender.length);
 	}
 
 	@Override
 	public int[] getListCountGender() {
 		// TODO Auto-generated method stub
-		return (this.listCountGender == null) ? null : Arrays.copyOf(this.listCountGender, this.listCountGender.length);
+		return (this.listCountGender == null) ? new int[0] : Arrays.copyOf(this.listCountGender, this.listCountGender.length);
 	}
 
 	@Override
 	public float[] getTrace() {
 		// TODO Auto-generated method stub
-		return (this.listTrace == null) ? null : Arrays.copyOf(this.listTrace, this.listTrace.length);
+		return (this.listTrace == null) ? new float[0] : Arrays.copyOf(this.listTrace, this.listTrace.length);
 	}
 
 

@@ -19,8 +19,8 @@ import problem.definition.Problem.ProblemType;
 
 public class HillClimbingRestart extends Generator{
 
-	static int count;
-	static int countCurrent;
+	int count;
+	int countCurrent;
 	private List<State> listRef = new ArrayList<State>();
 	protected CandidateValue candidatevalue;
 	protected AcceptType typeAcceptation;

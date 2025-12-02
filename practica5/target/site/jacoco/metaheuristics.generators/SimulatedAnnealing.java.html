@@ -31,149 +31,159 @@ public class SimulatedAnnealing extends Generator {
 <span class="nc" id="L31">	private static Double tinitial = 250.0;</span>
 <span class="nc" id="L32">	public static final Double tfinal = 41.66;</span>
 <span class="nc" id="L33">	static int countIterationsT = 50;</span>
+
+	// Accessors for countIterationsT so instance methods don't write the static field directly
+	public static int getCountIterationsT() {
+<span class="nc" id="L37">		return countIterationsT;</span>
+	}
+
+	public static void setCountIterationsT(int c) {
+<span class="nc" id="L41">		countIterationsT = c;</span>
+<span class="nc" id="L42">	}</span>
     private int countRept;
     private GeneratorType typeGenerator;
-<span class="nc" id="L36">    private List&lt;State&gt; listStateReference = new ArrayList&lt;State&gt;();</span>
+<span class="nc" id="L45">    private List&lt;State&gt; listStateReference = new ArrayList&lt;State&gt;();</span>
     private float weight;
 
 	//problemas dinamicos
 	//problemas dinamicos: use instance fields from Generator (countGender, countBetterGender)
-<span class="nc" id="L41">    private int[] listCountBetterGender = new int[10];</span>
-<span class="nc" id="L42">    private int[] listCountGender = new int[10];</span>
-<span class="nc" id="L43">    private float[] listTrace = new float[1200000];</span>
+<span class="nc" id="L50">    private int[] listCountBetterGender = new int[10];</span>
+<span class="nc" id="L51">    private int[] listCountGender = new int[10];</span>
+<span class="nc" id="L52">    private float[] listTrace = new float[1200000];</span>
 
 
     public GeneratorType getTypeGenerator() {
-<span class="nc" id="L47">		return typeGenerator;</span>
+<span class="nc" id="L56">		return typeGenerator;</span>
 	}
 
 	public void setTypeGenerator(GeneratorType typeGenerator) {
-<span class="nc" id="L51">		this.typeGenerator = typeGenerator;</span>
-<span class="nc" id="L52">	}</span>
+<span class="nc" id="L60">		this.typeGenerator = typeGenerator;</span>
+<span class="nc" id="L61">	}</span>
 
 	/**
 	 * Getter for initial temperature.
 	 */
 	public static Double getTinitial() {
-<span class="nc" id="L58">		return tinitial;</span>
+<span class="nc" id="L67">		return tinitial;</span>
 	}
 
 	/**
 	 * Setter for initial temperature.
 	 */
 	public static void setTinitial(Double t) {
-<span class="nc" id="L65">		tinitial = t;</span>
-<span class="nc" id="L66">	}</span>
+<span class="nc" id="L74">		tinitial = t;</span>
+<span class="nc" id="L75">	}</span>
 
 	public SimulatedAnnealing(){
 
-<span class="nc" id="L70">    	super();</span>
+<span class="nc" id="L79">    	super();</span>
     	/*SimulatedAnnealing.alpha = 0.93;
     	SimulatedAnnealing.tinitial = 250.0;
     	SimulatedAnnealing.tfinal = 41.66;
     	SimulatedAnnealing.countIterationsT = 50;*/
 
-<span class="nc" id="L76">    	this.typeAcceptation = AcceptType.AcceptNotBadT;</span>
-<span class="nc" id="L77">		this.strategy = StrategyType.NORMAL;</span>
-<span class="nc" id="L78">		this.typeCandidate = CandidateType.RandomCandidate;</span>
-<span class="nc" id="L79">		this.candidatevalue = new CandidateValue();</span>
-<span class="nc" id="L80">		this.typeGenerator = GeneratorType.SimulatedAnnealing;</span>
-<span class="nc" id="L81">		this.weight = 50;</span>
-<span class="nc" id="L82">		listTrace[0] = this.weight;</span>
-<span class="nc" id="L83">		listCountBetterGender[0] = 0;</span>
-<span class="nc" id="L84">		listCountGender[0] = 0;</span>
-<span class="nc" id="L85">    }</span>
+<span class="nc" id="L85">    	this.typeAcceptation = AcceptType.AcceptNotBadT;</span>
+<span class="nc" id="L86">		this.strategy = StrategyType.NORMAL;</span>
+<span class="nc" id="L87">		this.typeCandidate = CandidateType.RandomCandidate;</span>
+<span class="nc" id="L88">		this.candidatevalue = new CandidateValue();</span>
+<span class="nc" id="L89">		this.typeGenerator = GeneratorType.SimulatedAnnealing;</span>
+<span class="nc" id="L90">		this.weight = 50;</span>
+<span class="nc" id="L91">		listTrace[0] = this.weight;</span>
+<span class="nc" id="L92">		listCountBetterGender[0] = 0;</span>
+<span class="nc" id="L93">		listCountGender[0] = 0;</span>
+<span class="nc" id="L94">    }</span>
 
 	@Override
 	public State generate(Integer operatornumber) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
 		//&lt;State&gt;list=new ArrayList&lt;State&gt;();
-<span class="nc" id="L90">		List&lt;State&gt; neighborhood = Strategy.getStrategy().getProblem().getOperator().generatedNewState(stateReferenceSA, operatornumber);</span>
-<span class="nc" id="L91">	    State statecandidate = candidatevalue.stateCandidate(stateReferenceSA, typeCandidate, strategy, operatornumber, neighborhood);</span>
+<span class="nc" id="L99">		List&lt;State&gt; neighborhood = Strategy.getStrategy().getProblem().getOperator().generatedNewState(stateReferenceSA, operatornumber);</span>
+<span class="nc" id="L100">	    State statecandidate = candidatevalue.stateCandidate(stateReferenceSA, typeCandidate, strategy, operatornumber, neighborhood);</span>
 	   // list.add(statecandidate);
-<span class="nc" id="L93">	    return statecandidate;</span>
+<span class="nc" id="L102">	    return statecandidate;</span>
 	}
 
 	@Override
 	public State getReference() {
-<span class="nc" id="L98">		return stateReferenceSA;</span>
+<span class="nc" id="L107">		return stateReferenceSA;</span>
 	}
 
 	public void setStateRef(State stateRef) {
-<span class="nc" id="L102">		this.stateReferenceSA = stateRef;</span>
-<span class="nc" id="L103">	}</span>
+<span class="nc" id="L111">		this.stateReferenceSA = stateRef;</span>
+<span class="nc" id="L112">	}</span>
 
 	@Override
 	public void setInitialReference(State stateInitialRef) {
-<span class="nc" id="L107">		this.stateReferenceSA = stateInitialRef;</span>
-<span class="nc" id="L108">	}</span>
+<span class="nc" id="L116">		this.stateReferenceSA = stateInitialRef;</span>
+<span class="nc" id="L117">	}</span>
 
 	@Override
 	public void updateReference(State stateCandidate, Integer countIterationsCurrent)throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
-<span class="nc" id="L112">		countRept = countIterationsT;</span>
-<span class="nc" id="L113">		ifacceptCandidate = new FactoryAcceptCandidate();</span>
-<span class="nc" id="L114">		AcceptableCandidate candidate = ifacceptCandidate.createAcceptCandidate(typeAcceptation);</span>
-<span class="nc" id="L115">		Boolean accept = candidate.acceptCandidate(stateReferenceSA, stateCandidate);</span>
-<span class="nc bnc" id="L116" title="All 2 branches missed.">		if(accept.equals(true))</span>
-<span class="nc" id="L117">		  stateReferenceSA = stateCandidate;</span>
-<span class="nc bnc" id="L118" title="All 2 branches missed.">		if(countIterationsCurrent.equals(countIterationsT)){</span>
-<span class="nc" id="L119">			tinitial = tinitial * alpha;</span>
-<span class="nc" id="L120">			countIterationsT = countIterationsT + countRept;</span>
+<span class="nc" id="L121">		countRept = countIterationsT;</span>
+<span class="nc" id="L122">		ifacceptCandidate = new FactoryAcceptCandidate();</span>
+<span class="nc" id="L123">		AcceptableCandidate candidate = ifacceptCandidate.createAcceptCandidate(typeAcceptation);</span>
+<span class="nc" id="L124">		Boolean accept = candidate.acceptCandidate(stateReferenceSA, stateCandidate);</span>
+<span class="nc bnc" id="L125" title="All 2 branches missed.">		if(accept.equals(true))</span>
+<span class="nc" id="L126">		  stateReferenceSA = stateCandidate;</span>
+<span class="nc bnc" id="L127" title="All 2 branches missed.">		if(countIterationsCurrent.equals(getCountIterationsT())){</span>
+			// use static setters to avoid writing the static field from an instance method
+<span class="nc" id="L129">			SimulatedAnnealing.setTinitial(SimulatedAnnealing.getTinitial() * alpha);</span>
+<span class="nc" id="L130">			SimulatedAnnealing.setCountIterationsT(SimulatedAnnealing.getCountIterationsT() + countRept);</span>
 		}
 //		getReferenceList();
-<span class="nc" id="L123">	}</span>
+<span class="nc" id="L133">	}</span>
 
 	@Override
 	public GeneratorType getType() {
-<span class="nc" id="L127">		return this.typeGenerator;</span>
+<span class="nc" id="L137">		return this.typeGenerator;</span>
 	}
 
 	@Override
 	public List&lt;State&gt; getReferenceList() {
-<span class="nc" id="L132">		listStateReference.add(stateReferenceSA);</span>
-<span class="nc" id="L133">		return new ArrayList&lt;State&gt;(listStateReference);</span>
+<span class="nc" id="L142">		listStateReference.add(stateReferenceSA);</span>
+<span class="nc" id="L143">		return new ArrayList&lt;State&gt;(listStateReference);</span>
 	}
 
 	@Override
 	public List&lt;State&gt; getSonList() {
 		// TODO Auto-generated method stub
-<span class="nc" id="L139">		return null;</span>
+<span class="nc" id="L149">		return null;</span>
 	}
 
 	@Override
 	public boolean awardUpdateREF(State stateCandidate) {
 		// TODO Auto-generated method stub
-<span class="nc" id="L145">		return false;</span>
+<span class="nc" id="L155">		return false;</span>
 	}
 
 
 	@Override
 	public float getWeight() {
 		// TODO Auto-generated method stub
-<span class="nc" id="L152">		return this.weight;</span>
+<span class="nc" id="L162">		return this.weight;</span>
 	}
 
 	@Override
 	public void setWeight(float weight) {
 		// TODO Auto-generated method stub
-<span class="nc" id="L158">		this.weight = weight;</span>
-<span class="nc" id="L159">	}</span>
+<span class="nc" id="L168">		this.weight = weight;</span>
+<span class="nc" id="L169">	}</span>
 
 	@Override
 	public int[] getListCountBetterGender() {
 		// TODO Auto-generated method stub
-<span class="nc bnc" id="L164" title="All 2 branches missed.">		return (this.listCountBetterGender == null) ? null : Arrays.copyOf(this.listCountBetterGender, this.listCountBetterGender.length);</span>
+<span class="nc bnc" id="L174" title="All 2 branches missed.">		return (this.listCountBetterGender == null) ? new int[0] : Arrays.copyOf(this.listCountBetterGender, this.listCountBetterGender.length);</span>
 	}
 
 	@Override
 	public int[] getListCountGender() {
 		// TODO Auto-generated method stub
-<span class="nc bnc" id="L170" title="All 2 branches missed.">		return (this.listCountGender == null) ? null : Arrays.copyOf(this.listCountGender, this.listCountGender.length);</span>
+<span class="nc bnc" id="L180" title="All 2 branches missed.">		return (this.listCountGender == null) ? new int[0] : Arrays.copyOf(this.listCountGender, this.listCountGender.length);</span>
 	}
 
 	@Override
 	public float[] getTrace() {
 		// TODO Auto-generated method stub
-<span class="nc bnc" id="L176" title="All 2 branches missed.">		return (this.listTrace == null) ? null : Arrays.copyOf(this.listTrace, this.listTrace.length);</span>
+<span class="nc bnc" id="L186" title="All 2 branches missed.">		return (this.listTrace == null) ? new float[0] : Arrays.copyOf(this.listTrace, this.listTrace.length);</span>
 	}
 
 }

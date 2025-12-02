@@ -71,7 +71,7 @@ public class Particle extends Generator {
 	
 	
 	private ArrayList<Object> UpdateVelocity(){ // actualizar velocidad
-    	double w = ParticleSwarmOptimization.wmax - ((ParticleSwarmOptimization.wmax - ParticleSwarmOptimization.wmin) / Strategy.getStrategy().getCountMax()) * ParticleSwarmOptimization.countCurrentIterPSO;  //CALCULO DE LA INERCIA
+    	double w = ParticleSwarmOptimization.wmax - ((ParticleSwarmOptimization.wmax - ParticleSwarmOptimization.wmin) / Strategy.getStrategy().getCountMax()) * ParticleSwarmOptimization.getCountCurrentIterPSO();  //CALCULO DE LA INERCIA
     	double rand1 = (double)(Math.random() * (double)(1));
     	double rand2 = (double)(Math.random() * (double)(1));
     	double inertia, cognitive, social;
@@ -86,7 +86,7 @@ public class Particle extends Generator {
     	// recorre el vector velocidad y lo actualiza
     	for (int i = 0; i < Strategy.getStrategy().getProblem().getState().getCode().size(); i++) {  
     		// cumulo donde se encuentra la particula
-    		int swarm = ParticleSwarmOptimization.countParticle / ParticleSwarmOptimization.countParticleBySwarm; 
+            	int swarm = ParticleSwarmOptimization.getCountParticle() / ParticleSwarmOptimization.countParticleBySwarm; 
            	inertia = w * (Double)velocity.get(i);  
            	if(ParticleSwarmOptimization.binary == true){
            		cognitive = (Double)(ParticleSwarmOptimization.learning1 * rand1 * ((Integer)(this.statePBest.getCode().get(i)) - (Integer)(stateActual.getCode().get(i))));
@@ -213,19 +213,19 @@ public class Particle extends Generator {
 	@Override
 	public float[] getTrace() {
 		// TODO Auto-generated method stub
-		return null;
+		return new float[0];
 	}
 
 	@Override
 	public int[] getListCountBetterGender() {
 		// TODO Auto-generated method stub
-		return null;
+		return new int[0];
 	}
 
 	@Override
 	public int[] getListCountGender() {
 		// TODO Auto-generated method stub
-		return null;
+		return new int[0];
 	}
 
 

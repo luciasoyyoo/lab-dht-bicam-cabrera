@@ -63,11 +63,11 @@ public class DistributionEstimationAlgorithm extends Generator {
 <span class="nc" id="L63">		listCountGender[0] = 0;</span>
 <span class="nc" id="L64">	}</span>
 	
-	public State MaxValue (List&lt;State&gt; listInd){
+	public State maxValue(List&lt;State&gt; listInd) {
 <span class="nc" id="L67">		State state = new State(listInd.get(0));</span>
 <span class="nc" id="L68">		double max = state.getEvaluation().get(0);</span>
 <span class="nc bnc" id="L69" title="All 2 branches missed.">		for (int i = 1; i &lt; listInd.size(); i++) {</span>
-<span class="nc bnc" id="L70" title="All 2 branches missed.">			if(listInd.get(i).getEvaluation().get(0) &gt; max){</span>
+<span class="nc bnc" id="L70" title="All 2 branches missed.">			if (listInd.get(i).getEvaluation().get(0) &gt; max) {</span>
 <span class="nc" id="L71">				max = listInd.get(i).getEvaluation().get(0);</span>
 <span class="nc" id="L72">				state = new State(listInd.get(i));</span>
 			}
@@ -92,7 +92,7 @@ public class DistributionEstimationAlgorithm extends Generator {
     	Sampling samplingG = iffsampling.createSampling(Samplingtype);
     	List&lt;State&gt; ind = samplingG.sampling(probability, referenceList.size());
     	sonList = ind;
-    	candidate = MaxValue(ind);
+            	candidate = maxValue(ind);
        // this.candidate = candidate;
     	return candidate;*/	
     	
@@ -111,7 +111,7 @@ public class DistributionEstimationAlgorithm extends Generator {
 <span class="nc" id="L111">    			listEval.add(evaluation);</span>
 <span class="nc" id="L112">    			ind.get(0).setEvaluation(listEval);</span>
     		}
-<span class="nc" id="L114">    		candidate = MaxValue(ind);</span>
+<span class="nc" id="L114">        	candidate = maxValue(ind);</span>
     	}
     	else{
 <span class="nc" id="L117">    		candidate = ind.get(0);</span>
@@ -265,19 +265,19 @@ public class DistributionEstimationAlgorithm extends Generator {
 	@Override
 	public int[] getListCountBetterGender() {
 		// TODO Auto-generated method stub
-<span class="nc bnc" id="L268" title="All 2 branches missed.">		return (this.listCountBetterGender == null) ? null : Arrays.copyOf(this.listCountBetterGender, this.listCountBetterGender.length);</span>
+<span class="nc bnc" id="L268" title="All 2 branches missed.">		return (this.listCountBetterGender == null) ? new int[0] : Arrays.copyOf(this.listCountBetterGender, this.listCountBetterGender.length);</span>
 	}
 
 	@Override
 	public int[] getListCountGender() {
 		// TODO Auto-generated method stub
-<span class="nc bnc" id="L274" title="All 2 branches missed.">		return (this.listCountGender == null) ? null : Arrays.copyOf(this.listCountGender, this.listCountGender.length);</span>
+<span class="nc bnc" id="L274" title="All 2 branches missed.">		return (this.listCountGender == null) ? new int[0] : Arrays.copyOf(this.listCountGender, this.listCountGender.length);</span>
 	}
 
 	@Override
 	public float[] getTrace() {
 		// TODO Auto-generated method stub
-<span class="nc bnc" id="L280" title="All 2 branches missed.">		return (this.listTrace == null) ? null : Arrays.copyOf(this.listTrace, this.listTrace.length);</span>
+<span class="nc bnc" id="L280" title="All 2 branches missed.">		return (this.listTrace == null) ? new float[0] : Arrays.copyOf(this.listTrace, this.listTrace.length);</span>
 	}
 
 

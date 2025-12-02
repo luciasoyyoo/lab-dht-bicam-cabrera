@@ -55,7 +55,7 @@ public class Strategy {
 	//calculo del Tiempo inicial y final
 	long initialTime;
 	long finalTime;
-	static long timeExecute;
+	long timeExecute;
 	
 	public float[] listOfflineError = new float[100]; // para almacenar la metrica offlinePerformance
 	public int countPeriodChange = 0; // cantidad de iteeraciones antes de un cambio

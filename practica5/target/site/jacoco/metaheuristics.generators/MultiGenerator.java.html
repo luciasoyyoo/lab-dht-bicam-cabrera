@@ -175,9 +175,9 @@ public class MultiGenerator extends Generator {
 			ClassNotFoundException, InstantiationException,
 			IllegalAccessException, InvocationTargetException,
 			NoSuchMethodException {
-		// TODO Auto-generated method stub
-<span class="nc" id="L179">		Strategy.getStrategy().generator = roulette();</span>
-<span class="nc" id="L180">		activeGenerator = Strategy.getStrategy().generator;</span>
+	// TODO Auto-generated method stub
+<span class="nc" id="L179">	Strategy.getStrategy().generator = roulette();</span>
+<span class="nc" id="L180">	MultiGenerator.setActiveGenerator(Strategy.getStrategy().generator);</span>
 <span class="nc" id="L181">		activeGenerator.countGender++;</span>
 <span class="nc" id="L182">		State state = Strategy.getStrategy().generator.generate(1);</span>
 <span class="nc" id="L183">		return state;</span>
@@ -358,32 +358,35 @@ public class MultiGenerator extends Generator {
 	@Override
 	public float[] getTrace() {
 		// TODO Auto-generated method stub
-<span class="nc" id="L361">		return null;</span>
+		// MultiGenerator does not maintain a single trace array; return empty array to avoid nulls
+<span class="nc" id="L362">		return new float[0];</span>
 	}
 	
 	@SuppressWarnings(&quot;static-access&quot;)
 	public void tournament(State stateCandidate,Integer countIterationsCurrent) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
-<span class="nc" id="L366">		State stateTem = new State(stateCandidate);</span>
-<span class="nc bnc" id="L367" title="All 2 branches missed.">		for (int i = 0; i &lt; MultiGenerator.getListGenerators().length; i++) {</span>
-<span class="nc bnc" id="L368" title="All 2 branches missed.">			if(!listGenerators[i].getType().equals(Generatortype.MultiGenerator))</span>
-<span class="nc" id="L369">				MultiGenerator.getListGenerators()[i].updateReference(stateTem, countIterationsCurrent);</span>
+<span class="nc" id="L367">		State stateTem = new State(stateCandidate);</span>
+<span class="nc bnc" id="L368" title="All 2 branches missed.">		for (int i = 0; i &lt; MultiGenerator.getListGenerators().length; i++) {</span>
+<span class="nc bnc" id="L369" title="All 2 branches missed.">			if(!listGenerators[i].getType().equals(Generatortype.MultiGenerator))</span>
+<span class="nc" id="L370">				MultiGenerator.getListGenerators()[i].updateReference(stateTem, countIterationsCurrent);</span>
 		}
-<span class="nc" id="L371">	}</span>
+<span class="nc" id="L372">	}</span>
 	
 	public Object clone(){
-<span class="nc" id="L374">		return this;</span>
+<span class="nc" id="L375">		return this;</span>
 	}
 
 	@Override
 	public int[] getListCountBetterGender() {
 		// TODO Auto-generated method stub
-<span class="nc" id="L380">		return null;</span>
+		// MultiGenerator does not maintain these arrays itself; return empty array to avoid nulls
+<span class="nc" id="L382">		return new int[0];</span>
 	}
 
 	@Override
 	public int[] getListCountGender() {
 		// TODO Auto-generated method stub
-<span class="nc" id="L386">		return null;</span>
+		// MultiGenerator does not maintain these arrays itself; return empty array to avoid nulls
+<span class="nc" id="L389">		return new int[0];</span>
 	}
 
 }

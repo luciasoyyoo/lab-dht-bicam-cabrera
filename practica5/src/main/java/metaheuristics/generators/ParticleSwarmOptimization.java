@@ -18,10 +18,10 @@ public class ParticleSwarmOptimization extends Generator {
 	private List<State> listStateReference = new ArrayList<State>(); 
 	private List<Particle> listParticle =  new ArrayList<Particle> ();
 	private GeneratorType generatorType;
-	private static int countRef = 0;            // CANTIDAD DE PARTICULAS TOTAL = coutSwarm * countParticleSwarm
 	static int countParticle = 0;       // CANTIDAD DE PARTICULAS QUE SE HAN MOVIDO EN CADA CUMULO
 	public static final int coutSwarm = 0;           //CANTIDAD DE CUMULOS
 	public static final int countParticleBySwarm = 0; //CANTIDAD DE PARTICULAS POR CUMULO
+	private static int countRef = coutSwarm * countParticleBySwarm;            // CANTIDAD DE PARTICULAS TOTAL = coutSwarm * countParticleSwarm
 	private float weight = 50;
 	public static final double wmax = 0.9;
 	public static final double wmin = 0.2;
@@ -31,6 +31,40 @@ public class ParticleSwarmOptimization extends Generator {
 	static State[] lBest; 
 	static State gBest;
 	static int countCurrentIterPSO;
+
+	// Accessors to avoid direct writes to static fields from instance methods.
+	// Defensive copies are used to avoid exposing internal mutable state.
+	public static State[] getLBest() {
+		if (lBest == null) return null;
+		State[] copy = new State[lBest.length];
+		for (int i = 0; i < lBest.length; i++) {
+			copy[i] = (lBest[i] == null) ? null : lBest[i].clone();
+		}
+		return copy;
+	}
+
+	public static void setLBest(State[] arr) {
+		if (arr == null) {
+			lBest = null;
+			return;
+		}
+		lBest = new State[arr.length];
+		for (int i = 0; i < arr.length; i++) {
+			lBest[i] = (arr[i] == null) ? null : arr[i].clone();
+		}
+	}
+
+	public static void setLBestAt(int idx, State s) {
+		if (lBest == null) return;
+		if (idx < 0 || idx >= lBest.length) return;
+		lBest[idx] = (s == null) ? null : s.clone();
+	}
+	public static State getGBest() { return gBest; }
+	public static void setGBest(State s) { gBest = s; }
+	public static int getCountCurrentIterPSO() { return countCurrentIterPSO; }
+	public static void setCountCurrentIterPSO(int v) { countCurrentIterPSO = v; }
+	public static int getCountParticle() { return countParticle; }
+	public static void setCountParticle(int v) { countParticle = v; }
 	//problemas dinamicos
 	//problemas dinamicos: use instance fields from Generator (countGender, countBetterGender)
     private int[] listCountBetterGender = new int[10];
@@ -39,18 +73,17 @@ public class ParticleSwarmOptimization extends Generator {
 			
 	public ParticleSwarmOptimization(){
 		super();
-		countRef = coutSwarm * countParticleBySwarm;
-		this.setListParticle(getListStateRef()); 
+	this.setListParticle(getListStateRef()); 
 //		listStateReference = new ArrayList<State>(Strategy.getStrategy().listBest);
 		this.generatorType = GeneratorType.ParticleSwarmOptimization;
 		this.weight = 50;
-		lBest = new State[coutSwarm];
+		setLBest(new State[coutSwarm]);
 		if(!listParticle.isEmpty()){
-			countCurrentIterPSO = 1;
+			setCountCurrentIterPSO(1);
 			inicialiceLBest();
-			gBest = gBestInicial();	
+			setGBest(gBestInicial());
 		}
-		countParticle = 0;
+		setCountParticle(0);
 		listTrace[0] = this.weight;
 		listCountBetterGender[0] = 0;
 		listCountGender[0] = 0;
@@ -58,30 +91,30 @@ public class ParticleSwarmOptimization extends Generator {
 
 	@Override
 	public State generate(Integer operatornumber) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException{ //PSO
-		if (countParticle >= countRef)
-			countParticle = 0;
-//		System.out.println("Contador de particulas: " + countParticle + " Contador de iteraciones " + Strategy.getStrategy().getCountCurrent());
-		listParticle.get(countParticle).generate(1);
-	    return listParticle.get(countParticle).getStateActual();
+	if (getCountParticle() >= countRef)
+	    setCountParticle(0);
+//		System.out.println("Contador de particulas: " + getCountParticle() + " Contador de iteraciones " + Strategy.getStrategy().getCountCurrent());
+	listParticle.get(getCountParticle()).generate(1);
+	return listParticle.get(getCountParticle()).getStateActual();
 	}
    	
 	public void inicialiceLBest (){
 		for (int j = 0; j < coutSwarm; j++) {
 			State reference = new State();
-			reference = listParticle.get(countParticle).getStatePBest();
-			int iterator = countParticleBySwarm + countParticle;
+			reference = listParticle.get(getCountParticle()).getStatePBest();
+			int iterator = countParticleBySwarm + getCountParticle();
 			if(Strategy.getStrategy().getProblem().getTypeProblem().equals(ProblemType.Maximizar)){
 				for (int i = countParticle; i < iterator; i++) {
 					if (listParticle.get(i).getStatePBest().getEvaluation().get(0) > reference.getEvaluation().get(0))
 						reference = listParticle.get(i).getStatePBest();
-					countParticle++;
+					setCountParticle(getCountParticle() + 1);
 				}
 			}
 			else{
 				for (int i = countParticle; i < iterator; i++) {
 					if (listParticle.get(i).getStatePBest().getEvaluation().get(0) < reference.getEvaluation().get(0))
 						reference = listParticle.get(i).getStatePBest();
-					countParticle++;
+					setCountParticle(getCountParticle() + 1);
 				}
 			}
 			
@@ -186,31 +219,33 @@ public class ParticleSwarmOptimization extends Generator {
 		Particle particle = listParticle.get(countParticle);
 		int swarm = countParticle/countParticleBySwarm;
 		if(Strategy.getStrategy().getProblem().getTypeProblem().equals(ProblemType.Maximizar)){
-			if ((lBest[swarm]).getEvaluation().get(0) < particle.getStatePBest().getEvaluation().get(0)){
-				lBest[swarm] = particle.getStatePBest();
+				if ((lBest[swarm]).getEvaluation().get(0) < particle.getStatePBest().getEvaluation().get(0)){
+					setLBestAt(swarm, particle.getStatePBest());
 				if(lBest[swarm].getEvaluation().get(0) > getReferenceList().get(getReferenceList().size() - 1).getEvaluation().get(0)){
-					gBest = new State();
-					gBest.setCode(new ArrayList<Object>(lBest[swarm].getCode()));
-					gBest.setEvaluation(lBest[swarm].getEvaluation());
-					gBest.setTypeGenerator(lBest[swarm].getTypeGenerator());
+						State tmp = new State();
+						tmp.setCode(new ArrayList<Object>(lBest[swarm].getCode()));
+						tmp.setEvaluation(lBest[swarm].getEvaluation());
+						tmp.setTypeGenerator(lBest[swarm].getTypeGenerator());
+						setGBest(tmp);
 				}
 			}
 		}
 		else {
 			particle.updateReference(stateCandidate, countIterationsCurrent);
-			if ((lBest[swarm]).getEvaluation().get(0) > particle.getStatePBest().getEvaluation().get(0)){
-				lBest[swarm] = particle.getStatePBest();
+				if ((lBest[swarm]).getEvaluation().get(0) > particle.getStatePBest().getEvaluation().get(0)){
+					setLBestAt(swarm, particle.getStatePBest());
 				if(lBest[swarm].getEvaluation().get(0) < getReferenceList().get(getReferenceList().size() - 1).getEvaluation().get(0)){
-					gBest = new State();
-					gBest.setCode(new ArrayList<Object>(lBest[swarm].getCode()));
-					gBest.setEvaluation(lBest[swarm].getEvaluation());
-					gBest.setTypeGenerator(lBest[swarm].getTypeGenerator());
+						State tmp = new State();
+						tmp.setCode(new ArrayList<Object>(lBest[swarm].getCode()));
+						tmp.setEvaluation(lBest[swarm].getEvaluation());
+						tmp.setTypeGenerator(lBest[swarm].getTypeGenerator());
+						setGBest(tmp);
 				}
 			}
 		}
-		listStateReference.add(gBest);
-		countParticle++;
-		countCurrentIterPSO++;
+	listStateReference.add(getGBest());
+	setCountParticle(getCountParticle() + 1);
+	setCountCurrentIterPSO(getCountCurrentIterPSO() + 1);
 	}
 	
 	public State gBestInicial (){
@@ -275,19 +310,19 @@ public class ParticleSwarmOptimization extends Generator {
 	@Override
 	public int[] getListCountBetterGender() {
 		// TODO Auto-generated method stub
-		return (this.listCountBetterGender == null) ? null : Arrays.copyOf(this.listCountBetterGender, this.listCountBetterGender.length);
+		return (this.listCountBetterGender == null) ? new int[0] : Arrays.copyOf(this.listCountBetterGender, this.listCountBetterGender.length);
 	}
 
 	@Override
 	public int[] getListCountGender() {
 		// TODO Auto-generated method stub
-		return (this.listCountGender == null) ? null : Arrays.copyOf(this.listCountGender, this.listCountGender.length);
+		return (this.listCountGender == null) ? new int[0] : Arrays.copyOf(this.listCountGender, this.listCountGender.length);
 	}
 
 	@Override
 	public float[] getTrace() {
 		// TODO Auto-generated method stub
-		return (this.listTrace == null) ? null : Arrays.copyOf(this.listTrace, this.listTrace.length);
+		return (this.listTrace == null) ? new float[0] : Arrays.copyOf(this.listTrace, this.listTrace.length);
 	}
 
 

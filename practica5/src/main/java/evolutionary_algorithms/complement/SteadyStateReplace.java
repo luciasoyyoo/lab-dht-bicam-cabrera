@@ -13,7 +13,7 @@ public class SteadyStateReplace extends Replace {
 	public List<State> replace(State stateCandidate, List<State> listState) {
 		State stateREP = null;
 		if (Strategy.getStrategy().getProblem().getTypeProblem().equals(ProblemType.Maximizar)) {
-			stateREP = MinValue(listState);
+			stateREP = minValue(listState);
 			if(stateCandidate.getEvaluation().get(0) >= stateREP.getEvaluation().get(0)){
 				Boolean find = false;
 		        int count = 0;
@@ -28,8 +28,8 @@ public class SteadyStateReplace extends Replace {
 			}
 		}
 		else {
-			if(Strategy.getStrategy().getProblem().getTypeProblem().equals(ProblemType.Minimizar)){
-				stateREP = MaxValue(listState);
+				if(Strategy.getStrategy().getProblem().getTypeProblem().equals(ProblemType.Minimizar)){
+				stateREP = maxValue(listState);
 				if(stateCandidate.getEvaluation().get(0) <= stateREP.getEvaluation().get(0)){
 					Boolean find = false;
 			        int count = 0;
@@ -47,23 +47,23 @@ public class SteadyStateReplace extends Replace {
 		return listState;
 	}
 	
-	public State MinValue (List<State> listState){
+	public State minValue(List<State> listState) {
 		State value = listState.get(0);
 		double min = listState.get(0).getEvaluation().get(0);
 		for (int i = 1; i < listState.size(); i++) {
-			if(listState.get(i).getEvaluation().get(0) < min){
+			if (listState.get(i).getEvaluation().get(0) < min) {
 				min = listState.get(i).getEvaluation().get(0);
 				value = listState.get(i);
 			}
 		}
 		return value;
 	}
-	
-	public State MaxValue (List<State> listState){
+
+	public State maxValue(List<State> listState) {
 		State value = listState.get(0);
 		double max = listState.get(0).getEvaluation().get(0);
 		for (int i = 1; i < listState.size(); i++) {
-			if(listState.get(i).getEvaluation().get(0) > max){
+			if (listState.get(i).getEvaluation().get(0) > max) {
 				max = listState.get(i).getEvaluation().get(0);
 				value = listState.get(i);
 			}

@@ -175,9 +175,9 @@ public class MultiGenerator extends Generator {
 			ClassNotFoundException, InstantiationException,
 			IllegalAccessException, InvocationTargetException,
 			NoSuchMethodException {
-		// TODO Auto-generated method stub
-		Strategy.getStrategy().generator = roulette();
-		activeGenerator = Strategy.getStrategy().generator;
+	// TODO Auto-generated method stub
+	Strategy.getStrategy().generator = roulette();
+	MultiGenerator.setActiveGenerator(Strategy.getStrategy().generator);
 		activeGenerator.countGender++;
 		State state = Strategy.getStrategy().generator.generate(1);
 		return state;
@@ -358,7 +358,8 @@ public class MultiGenerator extends Generator {
 	@Override
 	public float[] getTrace() {
 		// TODO Auto-generated method stub
-		return null;
+		// MultiGenerator does not maintain a single trace array; return empty array to avoid nulls
+		return new float[0];
 	}
 	
 	@SuppressWarnings("static-access")
@@ -377,13 +378,15 @@ public class MultiGenerator extends Generator {
 	@Override
 	public int[] getListCountBetterGender() {
 		// TODO Auto-generated method stub
-		return null;
+		// MultiGenerator does not maintain these arrays itself; return empty array to avoid nulls
+		return new int[0];
 	}
 
 	@Override
 	public int[] getListCountGender() {
 		// TODO Auto-generated method stub
-		return null;
+		// MultiGenerator does not maintain these arrays itself; return empty array to avoid nulls
+		return new int[0];
 	}
 
 }
