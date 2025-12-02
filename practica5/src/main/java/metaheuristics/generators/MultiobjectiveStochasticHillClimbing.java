@@ -23,7 +23,7 @@ public class MultiobjectiveStochasticHillClimbing extends Generator{
 	protected CandidateType typeCandidate;
 	protected State stateReferenceHC;
 	protected IFFactoryAcceptCandidate ifacceptCandidate;
-	protected GeneratorType Generatortype;
+	protected GeneratorType generatortype;
 	protected List<State> listStateReference = new ArrayList<State>(); 
 	protected float weight;
 	protected List<Float> listTrace = new ArrayList<Float>();
@@ -34,7 +34,8 @@ public class MultiobjectiveStochasticHillClimbing extends Generator{
 		this.strategy = StrategyType.NORMAL;
 		this.typeCandidate = CandidateType.NotDominatedCandidate;
 		this.candidatevalue = new CandidateValue();
-		this.Generatortype = GeneratorType.MultiobjectiveStochasticHillClimbing;
+		this.generatortype = GeneratorType.MultiobjectiveStochasticHillClimbing;
+		this.stateReferenceHC = new State();
 		this.weight = 50;
 		listTrace.add(weight);
 	}
@@ -77,16 +78,16 @@ public class MultiobjectiveStochasticHillClimbing extends Generator{
 	}
 
 	public GeneratorType getGeneratorType() {
-		return Generatortype;
+		return generatortype;
 	}
 
-	public void setGeneratorType(GeneratorType Generatortype) {
-		this.Generatortype = Generatortype;
+	public void setGeneratorType(GeneratorType generatortype) {
+		this.generatortype = generatortype;
 	}
 
 	@Override
 	public GeneratorType getType() {
-		return this.Generatortype;
+		return this.generatortype;
 	}
 
 	@Override

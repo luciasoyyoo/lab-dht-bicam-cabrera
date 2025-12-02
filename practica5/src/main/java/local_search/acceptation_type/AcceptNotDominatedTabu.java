@@ -16,11 +16,11 @@ public class AcceptNotDominatedTabu extends AcceptableCandidate {
 		if(list.size() == 0){
 			list.add(stateCurrent.clone());
 		}
-		//Verificando si la solución candidata domina a alguna de las soluciones de la lista de soluciones no dominadas
-		//De ser así se eliminan de la lista y se adiciona la nueva solución en la lista
-		//De lo contrario no se adiciona la solución candidata a la lista
+		//Verificando si la soluciï¿½n candidata domina a alguna de las soluciones de la lista de soluciones no dominadas
+		//De ser asï¿½ se eliminan de la lista y se adiciona la nueva soluciï¿½n en la lista
+		//De lo contrario no se adiciona la soluciï¿½n candidata a la lista
 		//Si fue insertada en la lista entonces la solucion candidata se convierte en solucion actual
-		dominance.ListDominance(stateCandidate, list);
+		dominance.listDominance(stateCandidate, list);
 		return true;
 	}
 }

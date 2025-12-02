@@ -28,7 +28,7 @@ public class MultiobjectiveHillClimbingRestart extends Generator{
 	protected CandidateType typeCandidate;
 	protected State stateReferenceHC;
 	protected IFFactoryAcceptCandidate ifacceptCandidate;
-	protected GeneratorType Generatortype;
+	protected GeneratorType generatortype;
 	protected List<State> listStateReference = new ArrayList<State>(); 
 	protected float weight;
 	protected List<Float> listTrace = new ArrayList<Float>();
@@ -50,7 +50,8 @@ public class MultiobjectiveHillClimbingRestart extends Generator{
 		//Problem problem = Strategy.getStrategy().getProblem();
 		this.typeCandidate = CandidateType.NotDominatedCandidate;
 		this.candidatevalue = new CandidateValue();
-		this.Generatortype = GeneratorType.MultiobjectiveHillClimbingRestart;
+		this.generatortype = GeneratorType.MultiobjectiveHillClimbingRestart;
+		this.stateReferenceHC = new State();
 		this.weight = 50;
 		listTrace.add(weight);
 	}
@@ -86,7 +87,7 @@ public class MultiobjectiveHillClimbingRestart extends Generator{
 		else{
 			boolean stop = false;
 			while (i < neighborhood.size()&& stop==false) {
-				if (Contain(neighborhood.get(i))==false) {
+				if (contain(neighborhood.get(i))==false) {
 					stateCandidate = neighborhood.get(i);
 					Strategy.getStrategy().getProblem().Evaluate(stateCandidate);  
 					visitedState.add(stateCandidate);
@@ -97,7 +98,7 @@ public class MultiobjectiveHillClimbingRestart extends Generator{
 			}
 			while (stop == false) {
 				stateCandidate = Strategy.getStrategy().getProblem().getOperator().generateRandomState(1).get(0);
-				if (Contain(stateCandidate)==false) {
+				if (contain(stateCandidate)==false) {
 					Strategy.getStrategy().getProblem().Evaluate(stateCandidate);  
 					stop=true;
 					accept = candidate.acceptCandidate(lastState, stateCandidate.clone());
@@ -136,16 +137,16 @@ public class MultiobjectiveHillClimbingRestart extends Generator{
 	}
 
 	public GeneratorType getGeneratorType() {
-		return Generatortype;
+		return generatortype;
 	}
 
-	public void setGeneratorType(GeneratorType Generatortype) {
-		this.Generatortype = Generatortype;
+	public void setGeneratorType(GeneratorType generatortype) {
+		this.generatortype = generatortype;
 	}
 
 	@Override
 	public GeneratorType getType() {
-		return this.Generatortype;
+		return this.generatortype;
 	}
 
 	@Override
@@ -154,7 +155,7 @@ public class MultiobjectiveHillClimbingRestart extends Generator{
 		return null;
 	}
 
-	private boolean Contain(State state){
+	private boolean contain(State state){
 		boolean found = false;
 		for (Iterator<State> iter = visitedState.iterator(); iter.hasNext();) {
 			State element = (State) iter.next();

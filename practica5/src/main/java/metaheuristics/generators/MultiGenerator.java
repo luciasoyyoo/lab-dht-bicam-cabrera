@@ -13,21 +13,21 @@ import metaheurictics.strategy.Strategy;
 import problem.definition.Problem.ProblemType;
 import problem.definition.State;
 
-public class MultiGenerator extends Generator {
+public class MultiGenerator extends Generator implements Cloneable {
 
-	private GeneratorType Generatortype;
+	private GeneratorType generatortype;
 	private static Generator[] listGenerators = new Generator[GeneratorType.values().length];
 	public static final List<State> listGeneratedPP = Collections.synchronizedList(new ArrayList<State>());
 	public static volatile Generator activeGenerator;
 	public static final List<State> listStateReference = Collections.synchronizedList(new ArrayList<State>());
 	
-	public void setGeneratortype(GeneratorType generatortype) {
-		Generatortype = generatortype;
+	public void setGeneratorType(GeneratorType generatortype) {
+		this.generatortype = generatortype;
 	}
 
 	public MultiGenerator(){
 		super();
-		this.Generatortype = GeneratorType.MultiGenerator;
+	this.generatortype = GeneratorType.MultiGenerator;
 	}
 	
 
@@ -203,7 +203,7 @@ public class MultiGenerator extends Generator {
 
 	@Override
 	public GeneratorType getType() {
-		return this.Generatortype;
+		return this.generatortype;
 	}
 
 	@Override
@@ -324,7 +324,7 @@ public class MultiGenerator extends Generator {
 			if(listGenerators[i].equals(activeGenerator))
 				activeGenerator.getTrace()[Strategy.getStrategy().getCountCurrent()] = weightUpdate;
 			else{
-				if(!listGenerators[i].getType().equals(Generatortype.MultiGenerator)){
+				if(!listGenerators[i].getType().equals(GeneratorType.MultiGenerator)){
 					float trace = listGenerators[i].getWeight();
 					listGenerators[i].getTrace() [Strategy.getStrategy().getCountCurrent()] = trace;
 				}
@@ -342,7 +342,7 @@ public class MultiGenerator extends Generator {
 			if(listGenerators[i].equals(activeGenerator))
 				activeGenerator.getTrace()[Strategy.getStrategy().getCountCurrent()] = weightUpdate;
 			else{
-				if(!listGenerators[i].getType().equals(Generatortype.MultiGenerator)){
+				if(!listGenerators[i].getType().equals(GeneratorType.MultiGenerator)){
 					float trace = listGenerators[i].getWeight();
 					listGenerators[i].getTrace() [Strategy.getStrategy().getCountCurrent()] = trace;
 				}
@@ -366,13 +366,18 @@ public class MultiGenerator extends Generator {
 	public void tournament(State stateCandidate,Integer countIterationsCurrent) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
 		State stateTem = new State(stateCandidate);
 		for (int i = 0; i < MultiGenerator.getListGenerators().length; i++) {
-			if(!listGenerators[i].getType().equals(Generatortype.MultiGenerator))
-				MultiGenerator.getListGenerators()[i].updateReference(stateTem, countIterationsCurrent);
+				if(!listGenerators[i].getType().equals(GeneratorType.MultiGenerator))
+					MultiGenerator.getListGenerators()[i].updateReference(stateTem, countIterationsCurrent);
 		}
 	}
 	
+	@Override
 	public Object clone(){
-		return this;
+		try{
+			return super.clone();
+		} catch (CloneNotSupportedException e) {
+			return new MultiGenerator();
+		}
 	}
 
 	@Override

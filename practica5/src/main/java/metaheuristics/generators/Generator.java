@@ -35,7 +35,6 @@ public abstract class Generator {
 	public int countBetterGender;
 	public abstract int[] getListCountBetterGender();
 	public abstract int[] getListCountGender();
-	public int[] listCountBetterGender; // arreglo con las mejoras de cada generador en un periodo de 10, acumulativo
-	
+
 
 }

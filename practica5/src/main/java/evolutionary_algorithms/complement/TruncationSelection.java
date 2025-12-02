@@ -11,7 +11,7 @@ import problem.definition.Problem.ProblemType;
 
 public class TruncationSelection extends FatherSelection {
 	
-	public List<State> OrderBetter (List<State> listState){
+	public List<State> orderBetter (List<State> listState){
 		State var = null;
 		for (int i = 0; i < listState.size()- 1; i++) {
 			for (int j = i+1; j < listState.size(); j++) {
@@ -43,7 +43,7 @@ public class TruncationSelection extends FatherSelection {
 	public List<State> selection(List<State> listState, int truncation) {
 		List<State> AuxList = new ArrayList<State>();
 		if (Strategy.getStrategy().getProblem().getTypeProblem().equals(ProblemType.Maximizar)) {
-			listState = OrderBetter(listState);
+			listState = orderBetter(listState);
 		} else {
 			if(Strategy.getStrategy().getProblem().getTypeProblem().equals(ProblemType.Minimizar))
 				listState = ascOrderBetter(listState);

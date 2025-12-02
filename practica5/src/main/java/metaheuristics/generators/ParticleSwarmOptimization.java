@@ -35,7 +35,7 @@ public class ParticleSwarmOptimization extends Generator {
 	// Accessors to avoid direct writes to static fields from instance methods.
 	// Defensive copies are used to avoid exposing internal mutable state.
 	public static State[] getLBest() {
-		if (lBest == null) return null;
+		if (lBest == null) return new State[0];
 		State[] copy = new State[lBest.length];
 		for (int i = 0; i < lBest.length; i++) {
 			copy[i] = (lBest[i] == null) ? null : lBest[i].clone();
@@ -100,8 +100,8 @@ public class ParticleSwarmOptimization extends Generator {
    	
 	public void inicialiceLBest (){
 		for (int j = 0; j < coutSwarm; j++) {
-			State reference = new State();
-			reference = listParticle.get(getCountParticle()).getStatePBest();
+			// pick initial reference from the particle's personal best
+			State reference = listParticle.get(getCountParticle()).getStatePBest();
 			int iterator = countParticleBySwarm + getCountParticle();
 			if(Strategy.getStrategy().getProblem().getTypeProblem().equals(ProblemType.Maximizar)){
 				for (int i = countParticle; i < iterator; i++) {

@@ -68,8 +68,19 @@ public class State implements Cloneable {
 	public void setNumber(int number) {
 		this.number = number;
 	}
+	@Override
 	public State clone(){
-		return new State(this);
+		try {
+			State s = (State) super.clone();
+			// deep-copy mutable collections
+			s.code = (this.code == null) ? new ArrayList<Object>() : new ArrayList<Object>(this.code);
+			s.evaluation = (this.evaluation == null) ? null : new ArrayList<Double>(this.evaluation);
+			// primitive and enum-like fields are safe to copy by assignment
+			return s;
+		} catch (CloneNotSupportedException e) {
+			// fallback to copy constructor
+			return new State(this);
+		}
 	}
 	
 	public Object getCopy(){

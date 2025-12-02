@@ -97,8 +97,8 @@ public class Strategy {
 			listBest = new ArrayList<State>(); // list de mejores estados encontrados
 			listBest.add(initialState);
 		}
-		if(saveFreneParetoMonoObjetivo == true){
-			notDominated = new Dominance();
+				if(saveFreneParetoMonoObjetivo == true){
+				notDominated = new Dominance();
 		}
 		// crear el generador a ejecutar
 		generator = newGenerator(generatorType);
@@ -222,7 +222,7 @@ public class Strategy {
 						listStates.add(stateCandidate);
 					}
 					if(saveFreneParetoMonoObjetivo == true){
-						notDominated.ListDominance(stateCandidate, listRefPoblacFinal);
+						notDominated.listDominance(stateCandidate, listRefPoblacFinal);
 					}
 				}
 				countCurrent = UpdateParameter.updateParameter(countCurrent);

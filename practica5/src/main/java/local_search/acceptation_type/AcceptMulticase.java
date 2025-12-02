@@ -30,16 +30,16 @@ public class AcceptMulticase extends AcceptableCandidate {
 			pAccept = 1; 
 		}
 		else if(dominance.dominance(stateCandidate, stateCurrent)== false){	
-			if(DominanceCounter(stateCandidate, list) > 0){
+			if(dominanceCounter(stateCandidate, list) > 0){
 				pAccept = 1;
 			}
-			else if(DominanceRank(stateCandidate, list) == 0){
+			else if(dominanceRank(stateCandidate, list) == 0){
 				pAccept = 1;
 			}
-			else if(DominanceRank(stateCandidate, list) < DominanceRank(stateCurrent, list)){
+			else if(dominanceRank(stateCandidate, list) < dominanceRank(stateCurrent, list)){
 				pAccept = 1;
 			}
-			else if(DominanceRank(stateCandidate, list) == DominanceRank(stateCurrent, list)){
+			else if(dominanceRank(stateCandidate, list) == dominanceRank(stateCurrent, list)){
 				//Calculando la probabilidad de aceptaci�n
 				List<Double> evaluations = stateCurrent.getEvaluation();
 				double total = 0;
@@ -52,9 +52,12 @@ public class AcceptMulticase extends AcceptableCandidate {
 				}	
 				pAccept = Math.exp(-(1-total)/T);
 			}
-			else if (DominanceRank(stateCandidate, list) > DominanceRank(stateCurrent, list) && DominanceRank(stateCurrent, list)!= 0){
-				float value = DominanceRank(stateCandidate, list)/DominanceRank(stateCurrent, list);
-				pAccept = Math.exp(-(value+1)/T);
+			else if (dominanceRank(stateCandidate, list) > dominanceRank(stateCurrent, list) && dominanceRank(stateCurrent, list)!= 0){
+				// avoid integer division -> compute ranks once and use floating point division
+				int rankCandidate = dominanceRank(stateCandidate, list);
+				int rankCurrent = dominanceRank(stateCurrent, list);
+				float value = (rankCurrent == 0) ? 0f : ((float) rankCandidate) / ((float) rankCurrent);
+				pAccept = Math.exp(-((double)value+1.0)/T);
 			}
 			else{
 				//Calculando la probabilidad de aceptaci�n
@@ -71,16 +74,16 @@ public class AcceptMulticase extends AcceptableCandidate {
 			}
 		}
 		//Generar un n�mero aleatorio
-		if((ThreadLocalRandom.current().nextFloat()) < pAccept){
+			if((ThreadLocalRandom.current().nextFloat()) < pAccept){
 			// Don't assign to the parameter reference (dead store). The caller should handle state updates.
 			// Verificando que la soluci�n candidata domina a alguna de las soluciones
-			accept = dominance.ListDominance(stateCandidate, list);
+				accept = dominance.listDominance(stateCandidate, list);
 		}
 		return accept;
 	}
 
 
-	private int DominanceCounter(State stateCandidate, List<State> list) { //chequea el n�mero de soluciones de Pareto que son dominados por la nueva soluci�n
+	private int dominanceCounter(State stateCandidate, List<State> list) { //chequea el n�mero de soluciones de Pareto que son dominados por la nueva soluci�n
 		int counter = 0;
 		for (int i = 0; i < list.size(); i++) {
 			State solution = list.get(i);
@@ -91,7 +94,7 @@ public class AcceptMulticase extends AcceptableCandidate {
 		return counter;
 	}
 
-	private int DominanceRank(State stateCandidate, List<State> list) { //calculando el n�mero de soluciones en el conjunto de Pareto que dominan a la soluci�n
+	private int dominanceRank(State stateCandidate, List<State> list) { //calculando el n�mero de soluciones en el conjunto de Pareto que dominan a la soluci�n
 		int rank = 0;
 		for (int i = 0; i < list.size(); i++) {
 			State solution = list.get(i);

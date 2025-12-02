@@ -24,7 +24,7 @@ public class MultiobjectiveHillClimbingDistance extends Generator{
 	protected CandidateType typeCandidate;
 	protected State stateReferenceHC;
 	protected IFFactoryAcceptCandidate ifacceptCandidate;
-	protected GeneratorType Generatortype;
+	protected GeneratorType generatortype;
 	protected List<State> listStateReference = new ArrayList<State>(); 
 	protected float weight;
 	protected List<Float> listTrace = new ArrayList<Float>();
@@ -47,7 +47,8 @@ public class MultiobjectiveHillClimbingDistance extends Generator{
 		this.strategy = StrategyType.NORMAL;
 		this.typeCandidate = CandidateType.NotDominatedCandidate;
 		this.candidatevalue = new CandidateValue();
-		this.Generatortype = GeneratorType.MultiobjectiveHillClimbingDistance;
+	this.generatortype = GeneratorType.MultiobjectiveHillClimbingDistance;
+	this.stateReferenceHC = new State();
 		this.weight = 50;
 		listTrace.add(weight);
 	}
@@ -86,8 +87,8 @@ public class MultiobjectiveHillClimbingDistance extends Generator{
 
 				boolean stop = false;
 				while (i < neighborhood.size()&& stop==false) {
-					if (Contain(neighborhood.get(i))==false) {
-						stateReferenceHC = SolutionMoreDistance(Strategy.getStrategy().listRefPoblacFinal, distanceSolution);
+			if (contain(neighborhood.get(i))==false) {
+				stateReferenceHC = solutionMoreDistance(Strategy.getStrategy().listRefPoblacFinal, distanceSolution);
 						visitedState.add(stateReferenceHC);
 						stop=true;
 						lastState=stateReferenceHC.clone();
@@ -98,7 +99,7 @@ public class MultiobjectiveHillClimbingDistance extends Generator{
 				int coutrestart=0;
 				while (stop == false && coutrestart < getSizeNeighbors() && accept==false) {
 					stateCandidate = Strategy.getStrategy().getProblem().getOperator().generateRandomState(1).get(0);
-					if (Contain(stateCandidate)==false) {
+			if (contain(stateCandidate)==false) {
 						Strategy.getStrategy().getProblem().Evaluate(stateCandidate);  
 						visitedState.add(stateCandidate);
 						stop=true;
@@ -116,7 +117,7 @@ public class MultiobjectiveHillClimbingDistance extends Generator{
 		getReferenceList();
 	}
 
-	private State SolutionMoreDistance(List<State> state, List<Double> distanceSolution) {
+	private State solutionMoreDistance(List<State> state, List<Double> distanceSolution) {
 		Double max = (double) -1;
 		int pos = -1;
 		Double[] distance = distanceSolution.toArray(new Double[distanceSolution.size()]);
@@ -155,16 +156,16 @@ public class MultiobjectiveHillClimbingDistance extends Generator{
 	}
 
 	public GeneratorType getGeneratorType() {
-		return Generatortype;
+		return generatortype;
 	}
 
-	public void setGeneratorType(GeneratorType Generatortype) {
-		this.Generatortype = Generatortype;
+	public void setGeneratorType(GeneratorType generatortype) {
+		this.generatortype = generatortype;
 	}
 
 	@Override
 	public GeneratorType getType() {
-		return this.Generatortype;
+		return this.generatortype;
 	}
 
 	@Override
@@ -173,7 +174,7 @@ public class MultiobjectiveHillClimbingDistance extends Generator{
 		return null;
 	}
 
-	public static List<Double> DistanceCalculateAdd(List<State> solution) {
+	public static List<Double> distanceCalculateAdd(List<State> solution) {
 		State[] solutions = solution.toArray(new State[solution.size()]);
 		Double distance = 0.0;
 		List<Double>listDist=new ArrayList<Double>();
@@ -206,7 +207,7 @@ public class MultiobjectiveHillClimbingDistance extends Generator{
 	}
 
 
-	private boolean Contain(State state){
+	private boolean contain(State state){
 		boolean found = false;
 		for (Iterator<State> iter = visitedState.iterator(); iter.hasNext();) {
 			State element = (State) iter.next();

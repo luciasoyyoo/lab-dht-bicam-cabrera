@@ -20,13 +20,10 @@ import factory_method.FactoryCandidate;
 
 public class CandidateValue {
 
-	@SuppressWarnings("unused")
-	private StrategyType strategy;
 
 	private IFFactoryCandidate ifFactory;
 
-	@SuppressWarnings("unused")
-	private CandidateType typecand;
+	// strategy and typecand fields were unused; removed to avoid SpotBugs unread-field warnings.
 
 	private TabuSolutions tabusolution;
 
@@ -34,15 +31,7 @@ public class CandidateValue {
 
 	public CandidateValue(){}
 
-	public CandidateValue(StrategyType strategy, IFFactoryCandidate ifFactory, CandidateType typecand, 
-			TabuSolutions tabusolution, SearchCandidate searchcandidate) { //, Strategy executegenerator
-		super();
-		this.strategy = strategy;
-		this.ifFactory = ifFactory;
-		this.typecand = typecand;
-		this.tabusolution = tabusolution;
-		this.searchcandidate = searchcandidate;
-	}
+	// Keep a no-arg constructor; parameterized constructor was removed because its fields were unused.
 
 	public SearchCandidate newSearchCandidate(CandidateType typecandidate) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
 		ifFactory = new FactoryCandidate();
