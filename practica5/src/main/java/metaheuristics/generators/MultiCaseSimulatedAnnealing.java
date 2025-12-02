@@ -66,9 +66,8 @@ public class MultiCaseSimulatedAnnealing extends Generator {
 
 	@Override
 	public State generate(Integer operatornumber) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
-		List<State> neighborhood = new ArrayList<State>();
 		Problem problem = Strategy.getStrategy().getProblem();
-		neighborhood = problem.getOperator().generatedNewState(stateReferenceSA, operatornumber);
+		List<State> neighborhood = problem.getOperator().generatedNewState(stateReferenceSA, operatornumber);
 	    State statecandidate = candidatevalue.stateCandidate(stateReferenceSA, typeCandidate, strategy, operatornumber, neighborhood);
 	    return statecandidate;
 	}

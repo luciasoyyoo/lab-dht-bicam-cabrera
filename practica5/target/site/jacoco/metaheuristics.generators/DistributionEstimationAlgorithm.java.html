@@ -99,90 +99,89 @@ public class DistributionEstimationAlgorithm extends Generator {
     	//***************************version 1.0
     	//ArrayList&lt;State&gt; listcandidate = new ArrayList&lt;State&gt;();//(State) Strategy.getStrategy().getProblem().getState().clone()
 		
-<span class="nc" id="L102">    	List&lt;State&gt; fathers = new ArrayList&lt;State&gt;();</span>
-<span class="nc" id="L103">		fathers = getfathersList();</span>
-<span class="nc" id="L104">		iffsampling = new FactorySampling();</span>
-<span class="nc" id="L105">    	Sampling samplingG = iffsampling.createSampling(Samplingtype);</span>
-<span class="nc" id="L106">    	List&lt;State&gt; ind = samplingG.sampling(fathers, operatornumber);</span>
-<span class="nc" id="L107">    	State candidate = null;</span>
-<span class="nc bnc" id="L108" title="All 2 branches missed.">    	if(ind.size() &gt; 1){</span>
-<span class="nc bnc" id="L109" title="All 2 branches missed.">    		for (int i = 0; i &lt; ind.size(); i++) {</span>
-<span class="nc" id="L110">    			double evaluation = Strategy.getStrategy().getProblem().getFunction().get(0).Evaluation(ind.get(i));</span>
-<span class="nc" id="L111">    			ArrayList&lt;Double&gt; listEval = new ArrayList&lt;Double&gt;();</span>
-<span class="nc" id="L112">    			listEval.add(evaluation);</span>
-<span class="nc" id="L113">    			ind.get(0).setEvaluation(listEval);</span>
+<span class="nc" id="L102">    	List&lt;State&gt; fathers = getfathersList();</span>
+<span class="nc" id="L103">		iffsampling = new FactorySampling();</span>
+<span class="nc" id="L104">    	Sampling samplingG = iffsampling.createSampling(Samplingtype);</span>
+<span class="nc" id="L105">    	List&lt;State&gt; ind = samplingG.sampling(fathers, operatornumber);</span>
+<span class="nc" id="L106">    	State candidate = null;</span>
+<span class="nc bnc" id="L107" title="All 2 branches missed.">    	if(ind.size() &gt; 1){</span>
+<span class="nc bnc" id="L108" title="All 2 branches missed.">    		for (int i = 0; i &lt; ind.size(); i++) {</span>
+<span class="nc" id="L109">    			double evaluation = Strategy.getStrategy().getProblem().getFunction().get(0).Evaluation(ind.get(i));</span>
+<span class="nc" id="L110">    			ArrayList&lt;Double&gt; listEval = new ArrayList&lt;Double&gt;();</span>
+<span class="nc" id="L111">    			listEval.add(evaluation);</span>
+<span class="nc" id="L112">    			ind.get(0).setEvaluation(listEval);</span>
     		}
-<span class="nc" id="L115">    		candidate = MaxValue(ind);</span>
+<span class="nc" id="L114">    		candidate = MaxValue(ind);</span>
     	}
     	else{
-<span class="nc" id="L118">    		candidate = ind.get(0);</span>
+<span class="nc" id="L117">    		candidate = ind.get(0);</span>
     	}
 //    	sonList = ind;
     	//listcandidate.add(candidate);
        // this.candidate = candidate;
-<span class="nc" id="L123">    	return candidate;</span>
+<span class="nc" id="L122">    	return candidate;</span>
     	
     }
     		
 	@Override
 	public State getReference() {
-<span class="nc" id="L129">		stateReferenceDA = referenceList.get(0);</span>
-<span class="nc bnc" id="L130" title="All 2 branches missed.">		if(Strategy.getStrategy().getProblem().getTypeProblem().equals(ProblemType.Maximizar)){</span>
-<span class="nc bnc" id="L131" title="All 2 branches missed.">			for (int i = 1; i &lt; referenceList.size(); i++) {</span>
-<span class="nc bnc" id="L132" title="All 2 branches missed.">				if(stateReferenceDA.getEvaluation().get(0) &lt; referenceList.get(i).getEvaluation().get(0))</span>
-<span class="nc" id="L133">					stateReferenceDA = referenceList.get(i);</span>
+<span class="nc" id="L128">		stateReferenceDA = referenceList.get(0);</span>
+<span class="nc bnc" id="L129" title="All 2 branches missed.">		if(Strategy.getStrategy().getProblem().getTypeProblem().equals(ProblemType.Maximizar)){</span>
+<span class="nc bnc" id="L130" title="All 2 branches missed.">			for (int i = 1; i &lt; referenceList.size(); i++) {</span>
+<span class="nc bnc" id="L131" title="All 2 branches missed.">				if(stateReferenceDA.getEvaluation().get(0) &lt; referenceList.get(i).getEvaluation().get(0))</span>
+<span class="nc" id="L132">					stateReferenceDA = referenceList.get(i);</span>
 			}
 		}
 		else{
-<span class="nc bnc" id="L137" title="All 2 branches missed.">			for (int i = 1; i &lt; referenceList.size(); i++) {</span>
-<span class="nc bnc" id="L138" title="All 2 branches missed.">				if(stateReferenceDA.getEvaluation().get(0) &gt; referenceList.get(i).getEvaluation().get(0))</span>
-<span class="nc" id="L139">					stateReferenceDA = referenceList.get(i);</span>
+<span class="nc bnc" id="L136" title="All 2 branches missed.">			for (int i = 1; i &lt; referenceList.size(); i++) {</span>
+<span class="nc bnc" id="L137" title="All 2 branches missed.">				if(stateReferenceDA.getEvaluation().get(0) &gt; referenceList.get(i).getEvaluation().get(0))</span>
+<span class="nc" id="L138">					stateReferenceDA = referenceList.get(i);</span>
 			}
 		}
-<span class="nc" id="L142">		return stateReferenceDA;</span>
+<span class="nc" id="L141">		return stateReferenceDA;</span>
 	}
 
 	@Override
 	public List&lt;State&gt; getReferenceList() {
-<span class="nc" id="L147">		List&lt;State&gt; ReferenceList = new ArrayList&lt;State&gt;();</span>
-<span class="nc bnc" id="L148" title="All 2 branches missed.">		for (int i = 0; i &lt; referenceList.size(); i++) {</span>
-<span class="nc" id="L149">			State value = referenceList.get(i);</span>
-<span class="nc" id="L150">			ReferenceList.add( value);</span>
+<span class="nc" id="L146">		List&lt;State&gt; ReferenceList = new ArrayList&lt;State&gt;();</span>
+<span class="nc bnc" id="L147" title="All 2 branches missed.">		for (int i = 0; i &lt; referenceList.size(); i++) {</span>
+<span class="nc" id="L148">			State value = referenceList.get(i);</span>
+<span class="nc" id="L149">			ReferenceList.add( value);</span>
 		}
-<span class="nc" id="L152">		return ReferenceList;</span>
+<span class="nc" id="L151">		return ReferenceList;</span>
 	}
 
 	@Override
 	public GeneratorType getType() {
-<span class="nc" id="L157">		return this.generatorType;</span>
+<span class="nc" id="L156">		return this.generatorType;</span>
 	}
 
 	@Override
 	public void setInitialReference(State stateInitialRef) {
-<span class="nc" id="L162">		this.stateReferenceDA = stateInitialRef;</span>
-<span class="nc" id="L163">	}</span>
+<span class="nc" id="L161">		this.stateReferenceDA = stateInitialRef;</span>
+<span class="nc" id="L162">	}</span>
 
 	@Override
 	public void updateReference(State stateCandidate, Integer countIterationsCurrent) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException,	NoSuchMethodException {
-<span class="nc" id="L167">		iffreplace = new FactoryReplace();</span>
-<span class="nc" id="L168">		Replace replace = iffreplace.createReplace(replaceType);</span>
-<span class="nc" id="L169">		referenceList = replace.replace(stateCandidate, referenceList);</span>
-<span class="nc" id="L170">	}</span>
+<span class="nc" id="L166">		iffreplace = new FactoryReplace();</span>
+<span class="nc" id="L167">		Replace replace = iffreplace.createReplace(replaceType);</span>
+<span class="nc" id="L168">		referenceList = replace.replace(stateCandidate, referenceList);</span>
+<span class="nc" id="L169">	}</span>
 	
 	public List&lt;State&gt; getListStateRef(){
-<span class="nc" id="L173">		Boolean found = false;</span>
-<span class="nc" id="L174">		List&lt;String&gt; key = Strategy.getStrategy().getListKey();</span>
-<span class="nc" id="L175">		int count = 0;</span>
+<span class="nc" id="L172">		Boolean found = false;</span>
+<span class="nc" id="L173">		List&lt;String&gt; key = Strategy.getStrategy().getListKey();</span>
+<span class="nc" id="L174">		int count = 0;</span>
 		//if(Strategy.getStrategy().Statistics.getAllStates().size() == 0){
 		/*if(RandomSearch.listStateReference.size() == 0){
 			return this.referenceList = new ArrayList&lt;State&gt;();
 		}*/
-<span class="nc bnc" id="L180" title="All 4 branches missed.">		while((found.equals(false)) &amp;&amp; (Strategy.getStrategy().mapGenerators.size() &gt; count)){</span>
-<span class="nc bnc" id="L181" title="All 2 branches missed.">			if(key.get(count).equals(GeneratorType.DistributionEstimationAlgorithm.toString())){</span>
-<span class="nc" id="L182">				GeneratorType keyGenerator = GeneratorType.valueOf(String.valueOf(key.get(count)));</span>
-<span class="nc" id="L183">				DistributionEstimationAlgorithm generator = (DistributionEstimationAlgorithm)Strategy.getStrategy().mapGenerators.get(keyGenerator);</span>
-<span class="nc bnc" id="L184" title="All 2 branches missed.">				if(generator.getListReference().isEmpty()){</span>
-<span class="nc" id="L185">					referenceList.addAll(RandomSearch.listStateReference);</span>
+<span class="nc bnc" id="L179" title="All 4 branches missed.">		while((found.equals(false)) &amp;&amp; (Strategy.getStrategy().mapGenerators.size() &gt; count)){</span>
+<span class="nc bnc" id="L180" title="All 2 branches missed.">			if(key.get(count).equals(GeneratorType.DistributionEstimationAlgorithm.toString())){</span>
+<span class="nc" id="L181">				GeneratorType keyGenerator = GeneratorType.valueOf(String.valueOf(key.get(count)));</span>
+<span class="nc" id="L182">				DistributionEstimationAlgorithm generator = (DistributionEstimationAlgorithm)Strategy.getStrategy().mapGenerators.get(keyGenerator);</span>
+<span class="nc bnc" id="L183" title="All 2 branches missed.">				if(generator.getListReference().isEmpty()){</span>
+<span class="nc" id="L184">					referenceList.addAll(RandomSearch.listStateReference);</span>
 					//for (int j = 1; j &lt; Strategy.getStrategy().Statistics.getAllStates().size(); j++) {
 //					for (int j = 1; j &lt; RandomSearch.listStateReference.size(); j++) {
 //						//if((Strategy.getStrategy().Statistics.getAllStates().get(j).getTypeGenerator().equals(GeneratorType.RandomSearch)) &amp;&amp; (referenceList.size()!= countRef)){
@@ -193,92 +192,92 @@ public class DistributionEstimationAlgorithm extends Generator {
 //					}  
 				}
 				else{
-<span class="nc" id="L196">					referenceList = generator.getListReference();</span>
+<span class="nc" id="L195">					referenceList = generator.getListReference();</span>
 				}
-<span class="nc" id="L198">			    found = true;</span>
+<span class="nc" id="L197">			    found = true;</span>
 			}
-<span class="nc" id="L200">			count++;</span>
+<span class="nc" id="L199">			count++;</span>
 		}
-<span class="nc" id="L202">		return referenceList;</span>
+<span class="nc" id="L201">		return referenceList;</span>
 	}
 
 	public List&lt;State&gt; getListReference() {
-<span class="nc" id="L206">		return referenceList;</span>
+<span class="nc" id="L205">		return referenceList;</span>
 	}
 
 	public void setListReference(List&lt;State&gt; listReference) {
-<span class="nc" id="L210">		referenceList = listReference;</span>
-<span class="nc" id="L211">	}</span>
+<span class="nc" id="L209">		referenceList = listReference;</span>
+<span class="nc" id="L210">	}</span>
 
 	public GeneratorType getGeneratorType() {
-<span class="nc" id="L214">		return generatorType;</span>
+<span class="nc" id="L213">		return generatorType;</span>
 	}
 
 	public void setGeneratorType(GeneratorType generatorType) {
-<span class="nc" id="L218">		this.generatorType = generatorType;</span>
-<span class="nc" id="L219">	}</span>
+<span class="nc" id="L217">		this.generatorType = generatorType;</span>
+<span class="nc" id="L218">	}</span>
 
 	public List&lt;State&gt; getfathersList() throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
-<span class="nc" id="L222">		List&lt;State&gt; refList = new ArrayList&lt;State&gt;(this.referenceList); </span>
-<span class="nc" id="L223">    	iffatherselection = new FactoryFatherSelection();</span>
-<span class="nc" id="L224">    	FatherSelection selection = iffatherselection.createSelectFather(selectionType);</span>
-<span class="nc" id="L225">    	List&lt;State&gt; fathers = selection.selection(refList, truncation);</span>
-<span class="nc" id="L226">    	return fathers;</span>
+<span class="nc" id="L221">		List&lt;State&gt; refList = new ArrayList&lt;State&gt;(this.referenceList); </span>
+<span class="nc" id="L222">    	iffatherselection = new FactoryFatherSelection();</span>
+<span class="nc" id="L223">    	FatherSelection selection = iffatherselection.createSelectFather(selectionType);</span>
+<span class="nc" id="L224">    	List&lt;State&gt; fathers = selection.selection(refList, truncation);</span>
+<span class="nc" id="L225">    	return fathers;</span>
 	}
 
 	@Override
 	public List&lt;State&gt; getSonList() {
 		// return a defensive copy to avoid exposing internal mutable list
-<span class="nc" id="L232">		return new ArrayList&lt;State&gt;(sonList);</span>
+<span class="nc" id="L231">		return new ArrayList&lt;State&gt;(sonList);</span>
 	}
 
 	public boolean awardUpdateREF(State stateCandidate) {
-<span class="nc" id="L236">		boolean find = false;</span>
-<span class="nc" id="L237">		int i = 0;</span>
-<span class="nc bnc" id="L238" title="All 4 branches missed.">		while (find == false &amp;&amp; i &lt; this.referenceList.size()) {</span>
-<span class="nc bnc" id="L239" title="All 2 branches missed.">			if(stateCandidate.equals(this.referenceList.get(i)))</span>
-<span class="nc" id="L240">				find = true;</span>
-<span class="nc" id="L241">			else i++;</span>
+<span class="nc" id="L235">		boolean find = false;</span>
+<span class="nc" id="L236">		int i = 0;</span>
+<span class="nc bnc" id="L237" title="All 4 branches missed.">		while (find == false &amp;&amp; i &lt; this.referenceList.size()) {</span>
+<span class="nc bnc" id="L238" title="All 2 branches missed.">			if(stateCandidate.equals(this.referenceList.get(i)))</span>
+<span class="nc" id="L239">				find = true;</span>
+<span class="nc" id="L240">			else i++;</span>
 		}
-<span class="nc" id="L243">		return find;</span>
+<span class="nc" id="L242">		return find;</span>
 	}
 
 	@Override
 	public float getWeight() {
 		// TODO Auto-generated method stub
-<span class="nc" id="L249">		return 0;</span>
+<span class="nc" id="L248">		return 0;</span>
 	}
 
 	@Override
 	public void setWeight(float weight) {
 		// TODO Auto-generated method stub
 		
-<span class="nc" id="L256">	}</span>
+<span class="nc" id="L255">	}</span>
 
 	public DistributionType getDistributionType() {
-<span class="nc" id="L259">		return distributionType;</span>
+<span class="nc" id="L258">		return distributionType;</span>
 	}
 
 	public void setDistributionType(DistributionType distributionType) {
-<span class="nc" id="L263">		this.distributionType = distributionType;</span>
-<span class="nc" id="L264">	}</span>
+<span class="nc" id="L262">		this.distributionType = distributionType;</span>
+<span class="nc" id="L263">	}</span>
 
 	@Override
 	public int[] getListCountBetterGender() {
 		// TODO Auto-generated method stub
-<span class="nc bnc" id="L269" title="All 2 branches missed.">		return (this.listCountBetterGender == null) ? null : Arrays.copyOf(this.listCountBetterGender, this.listCountBetterGender.length);</span>
+<span class="nc bnc" id="L268" title="All 2 branches missed.">		return (this.listCountBetterGender == null) ? null : Arrays.copyOf(this.listCountBetterGender, this.listCountBetterGender.length);</span>
 	}
 
 	@Override
 	public int[] getListCountGender() {
 		// TODO Auto-generated method stub
-<span class="nc bnc" id="L275" title="All 2 branches missed.">		return (this.listCountGender == null) ? null : Arrays.copyOf(this.listCountGender, this.listCountGender.length);</span>
+<span class="nc bnc" id="L274" title="All 2 branches missed.">		return (this.listCountGender == null) ? null : Arrays.copyOf(this.listCountGender, this.listCountGender.length);</span>
 	}
 
 	@Override
 	public float[] getTrace() {
 		// TODO Auto-generated method stub
-<span class="nc bnc" id="L281" title="All 2 branches missed.">		return (this.listTrace == null) ? null : Arrays.copyOf(this.listTrace, this.listTrace.length);</span>
+<span class="nc bnc" id="L280" title="All 2 branches missed.">		return (this.listTrace == null) ? null : Arrays.copyOf(this.listTrace, this.listTrace.length);</span>
 	}
 
 

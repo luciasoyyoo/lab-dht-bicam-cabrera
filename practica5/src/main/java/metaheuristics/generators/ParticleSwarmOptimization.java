@@ -183,8 +183,7 @@ public class ParticleSwarmOptimization extends Generator {
 	//*****************************************
 	@Override
 	public void updateReference(State stateCandidate,Integer countIterationsCurrent) throws IllegalArgumentException,SecurityException, ClassNotFoundException, InstantiationException,IllegalAccessException, InvocationTargetException,NoSuchMethodException {
-		Particle particle = new Particle();
-		particle = listParticle.get(countParticle);
+		Particle particle = listParticle.get(countParticle);
 		int swarm = countParticle/countParticleBySwarm;
 		if(Strategy.getStrategy().getProblem().getTypeProblem().equals(ProblemType.Maximizar)){
 			if ((lBest[swarm]).getEvaluation().get(0) < particle.getStatePBest().getEvaluation().get(0)){

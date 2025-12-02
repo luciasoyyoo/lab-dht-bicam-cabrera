@@ -183,112 +183,111 @@ public class ParticleSwarmOptimization extends Generator {
 	//*****************************************
 	@Override
 	public void updateReference(State stateCandidate,Integer countIterationsCurrent) throws IllegalArgumentException,SecurityException, ClassNotFoundException, InstantiationException,IllegalAccessException, InvocationTargetException,NoSuchMethodException {
-<span class="nc" id="L186">		Particle particle = new Particle();</span>
-<span class="nc" id="L187">		particle = listParticle.get(countParticle);</span>
-<span class="nc" id="L188">		int swarm = countParticle/countParticleBySwarm;</span>
-<span class="nc bnc" id="L189" title="All 2 branches missed.">		if(Strategy.getStrategy().getProblem().getTypeProblem().equals(ProblemType.Maximizar)){</span>
-<span class="nc bnc" id="L190" title="All 2 branches missed.">			if ((lBest[swarm]).getEvaluation().get(0) &lt; particle.getStatePBest().getEvaluation().get(0)){</span>
-<span class="nc" id="L191">				lBest[swarm] = particle.getStatePBest();</span>
-<span class="nc bnc" id="L192" title="All 2 branches missed.">				if(lBest[swarm].getEvaluation().get(0) &gt; getReferenceList().get(getReferenceList().size() - 1).getEvaluation().get(0)){</span>
-<span class="nc" id="L193">					gBest = new State();</span>
-<span class="nc" id="L194">					gBest.setCode(new ArrayList&lt;Object&gt;(lBest[swarm].getCode()));</span>
-<span class="nc" id="L195">					gBest.setEvaluation(lBest[swarm].getEvaluation());</span>
-<span class="nc" id="L196">					gBest.setTypeGenerator(lBest[swarm].getTypeGenerator());</span>
+<span class="nc" id="L186">		Particle particle = listParticle.get(countParticle);</span>
+<span class="nc" id="L187">		int swarm = countParticle/countParticleBySwarm;</span>
+<span class="nc bnc" id="L188" title="All 2 branches missed.">		if(Strategy.getStrategy().getProblem().getTypeProblem().equals(ProblemType.Maximizar)){</span>
+<span class="nc bnc" id="L189" title="All 2 branches missed.">			if ((lBest[swarm]).getEvaluation().get(0) &lt; particle.getStatePBest().getEvaluation().get(0)){</span>
+<span class="nc" id="L190">				lBest[swarm] = particle.getStatePBest();</span>
+<span class="nc bnc" id="L191" title="All 2 branches missed.">				if(lBest[swarm].getEvaluation().get(0) &gt; getReferenceList().get(getReferenceList().size() - 1).getEvaluation().get(0)){</span>
+<span class="nc" id="L192">					gBest = new State();</span>
+<span class="nc" id="L193">					gBest.setCode(new ArrayList&lt;Object&gt;(lBest[swarm].getCode()));</span>
+<span class="nc" id="L194">					gBest.setEvaluation(lBest[swarm].getEvaluation());</span>
+<span class="nc" id="L195">					gBest.setTypeGenerator(lBest[swarm].getTypeGenerator());</span>
 				}
 			}
 		}
 		else {
-<span class="nc" id="L201">			particle.updateReference(stateCandidate, countIterationsCurrent);</span>
-<span class="nc bnc" id="L202" title="All 2 branches missed.">			if ((lBest[swarm]).getEvaluation().get(0) &gt; particle.getStatePBest().getEvaluation().get(0)){</span>
-<span class="nc" id="L203">				lBest[swarm] = particle.getStatePBest();</span>
-<span class="nc bnc" id="L204" title="All 2 branches missed.">				if(lBest[swarm].getEvaluation().get(0) &lt; getReferenceList().get(getReferenceList().size() - 1).getEvaluation().get(0)){</span>
-<span class="nc" id="L205">					gBest = new State();</span>
-<span class="nc" id="L206">					gBest.setCode(new ArrayList&lt;Object&gt;(lBest[swarm].getCode()));</span>
-<span class="nc" id="L207">					gBest.setEvaluation(lBest[swarm].getEvaluation());</span>
-<span class="nc" id="L208">					gBest.setTypeGenerator(lBest[swarm].getTypeGenerator());</span>
+<span class="nc" id="L200">			particle.updateReference(stateCandidate, countIterationsCurrent);</span>
+<span class="nc bnc" id="L201" title="All 2 branches missed.">			if ((lBest[swarm]).getEvaluation().get(0) &gt; particle.getStatePBest().getEvaluation().get(0)){</span>
+<span class="nc" id="L202">				lBest[swarm] = particle.getStatePBest();</span>
+<span class="nc bnc" id="L203" title="All 2 branches missed.">				if(lBest[swarm].getEvaluation().get(0) &lt; getReferenceList().get(getReferenceList().size() - 1).getEvaluation().get(0)){</span>
+<span class="nc" id="L204">					gBest = new State();</span>
+<span class="nc" id="L205">					gBest.setCode(new ArrayList&lt;Object&gt;(lBest[swarm].getCode()));</span>
+<span class="nc" id="L206">					gBest.setEvaluation(lBest[swarm].getEvaluation());</span>
+<span class="nc" id="L207">					gBest.setTypeGenerator(lBest[swarm].getTypeGenerator());</span>
 				}
 			}
 		}
-<span class="nc" id="L212">		listStateReference.add(gBest);</span>
-<span class="nc" id="L213">		countParticle++;</span>
-<span class="nc" id="L214">		countCurrentIterPSO++;</span>
-<span class="nc" id="L215">	}</span>
+<span class="nc" id="L211">		listStateReference.add(gBest);</span>
+<span class="nc" id="L212">		countParticle++;</span>
+<span class="nc" id="L213">		countCurrentIterPSO++;</span>
+<span class="nc" id="L214">	}</span>
 	
 	public State gBestInicial (){
-<span class="nc" id="L218">		State stateBest = lBest[0];</span>
-<span class="nc bnc" id="L219" title="All 2 branches missed.">		for (int i = 1; i &lt; lBest.length; i++) {</span>
-<span class="nc bnc" id="L220" title="All 2 branches missed.">			if(Strategy.getStrategy().getProblem().getTypeProblem().equals(ProblemType.Maximizar)){</span>
-<span class="nc bnc" id="L221" title="All 2 branches missed.">				if (lBest[i].getEvaluation().get(0) &gt; stateBest.getEvaluation().get(0)){</span>
-<span class="nc" id="L222">					stateBest = lBest[i];</span>
+<span class="nc" id="L217">		State stateBest = lBest[0];</span>
+<span class="nc bnc" id="L218" title="All 2 branches missed.">		for (int i = 1; i &lt; lBest.length; i++) {</span>
+<span class="nc bnc" id="L219" title="All 2 branches missed.">			if(Strategy.getStrategy().getProblem().getTypeProblem().equals(ProblemType.Maximizar)){</span>
+<span class="nc bnc" id="L220" title="All 2 branches missed.">				if (lBest[i].getEvaluation().get(0) &gt; stateBest.getEvaluation().get(0)){</span>
+<span class="nc" id="L221">					stateBest = lBest[i];</span>
 				}
 			}
 			else{
-<span class="nc bnc" id="L226" title="All 2 branches missed.">				if (lBest[i].getEvaluation().get(0) &lt; stateBest.getEvaluation().get(0)){</span>
-<span class="nc" id="L227">					stateBest = lBest[i];</span>
+<span class="nc bnc" id="L225" title="All 2 branches missed.">				if (lBest[i].getEvaluation().get(0) &lt; stateBest.getEvaluation().get(0)){</span>
+<span class="nc" id="L226">					stateBest = lBest[i];</span>
 				}
 			}
 		}
-<span class="nc" id="L231">		return stateBest;</span>
+<span class="nc" id="L230">		return stateBest;</span>
 	}
 
 	@Override
 	public void setInitialReference(State stateInitialRef) {
 		// TODO Auto-generated method stub
 
-<span class="nc" id="L238">	}</span>
+<span class="nc" id="L237">	}</span>
 
 	@Override
 	public GeneratorType getType() {
 		// TODO Auto-generated method stub
-<span class="nc" id="L243">		return this.generatorType;</span>
+<span class="nc" id="L242">		return this.generatorType;</span>
 	}
 
 	@Override
 	public List&lt;State&gt; getReferenceList() {
 		// TODO Auto-generated method stub
-<span class="nc" id="L249">		return new ArrayList&lt;State&gt;(this.listStateReference);</span>
+<span class="nc" id="L248">		return new ArrayList&lt;State&gt;(this.listStateReference);</span>
 	}
 
 	@Override
 	public List&lt;State&gt; getSonList() {
 		// TODO Auto-generated method stub
-<span class="nc" id="L255">		return null;</span>
+<span class="nc" id="L254">		return null;</span>
 	}
 
 	@Override
 	public boolean awardUpdateREF(State stateCandidate) {
 		// TODO Auto-generated method stub
-<span class="nc" id="L261">		return false;</span>
+<span class="nc" id="L260">		return false;</span>
 	}
 
 	@Override
 	public void setWeight(float weight) {
 		// TODO Auto-generated method stub
 
-<span class="nc" id="L268">	}</span>
+<span class="nc" id="L267">	}</span>
 
 	@Override
 	public float getWeight() {
 		// TODO Auto-generated method stub
-<span class="nc" id="L273">		return 0;</span>
+<span class="nc" id="L272">		return 0;</span>
 	}
 
 	@Override
 	public int[] getListCountBetterGender() {
 		// TODO Auto-generated method stub
-<span class="nc bnc" id="L279" title="All 2 branches missed.">		return (this.listCountBetterGender == null) ? null : Arrays.copyOf(this.listCountBetterGender, this.listCountBetterGender.length);</span>
+<span class="nc bnc" id="L278" title="All 2 branches missed.">		return (this.listCountBetterGender == null) ? null : Arrays.copyOf(this.listCountBetterGender, this.listCountBetterGender.length);</span>
 	}
 
 	@Override
 	public int[] getListCountGender() {
 		// TODO Auto-generated method stub
-<span class="nc bnc" id="L285" title="All 2 branches missed.">		return (this.listCountGender == null) ? null : Arrays.copyOf(this.listCountGender, this.listCountGender.length);</span>
+<span class="nc bnc" id="L284" title="All 2 branches missed.">		return (this.listCountGender == null) ? null : Arrays.copyOf(this.listCountGender, this.listCountGender.length);</span>
 	}
 
 	@Override
 	public float[] getTrace() {
 		// TODO Auto-generated method stub
-<span class="nc bnc" id="L291" title="All 2 branches missed.">		return (this.listTrace == null) ? null : Arrays.copyOf(this.listTrace, this.listTrace.length);</span>
+<span class="nc bnc" id="L290" title="All 2 branches missed.">		return (this.listTrace == null) ? null : Arrays.copyOf(this.listTrace, this.listTrace.length);</span>
 	}
 
 

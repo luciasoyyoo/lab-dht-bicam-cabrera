@@ -62,8 +62,8 @@ public class HillClimbingRestart extends Generator{
 
 
 	public State generate (Integer operatornumber) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
-		//ArrayList&lt;State&gt;list=new ArrayList&lt;State&gt;();
-<span class="nc" id="L66">		State statecandidate = new State();</span>
+	//ArrayList&lt;State&gt;list=new ArrayList&lt;State&gt;();
+	State statecandidate;
 <span class="nc bnc" id="L67" title="All 2 branches missed.">		if(count == Strategy.getStrategy().getCountCurrent()){</span>
 <span class="nc" id="L68">			State stateR = new State(stateReferenceHC);</span>
 <span class="nc" id="L69">			listRef.add(stateR);</span>
@@ -71,8 +71,8 @@ public class HillClimbingRestart extends Generator{
 <span class="nc" id="L71">			Strategy.getStrategy().getProblem().Evaluate(stateReferenceHC);</span>
 <span class="nc" id="L72">			count = count + countCurrent;</span>
 		}
-<span class="nc" id="L74">		List&lt;State&gt; neighborhood = Strategy.getStrategy().getProblem().getOperator().generatedNewState(stateReferenceHC, operatornumber);</span>
-<span class="nc" id="L75">		statecandidate = candidatevalue.stateCandidate(stateReferenceHC, typeCandidate, strategy, operatornumber, neighborhood);</span>
+<span class="nc" id="L74">	List&lt;State&gt; neighborhood = Strategy.getStrategy().getProblem().getOperator().generatedNewState(stateReferenceHC, operatornumber);</span>
+<span class="nc" id="L75">	statecandidate = candidatevalue.stateCandidate(stateReferenceHC, typeCandidate, strategy, operatornumber, neighborhood);</span>
 		//list.add(statecandidate);
 <span class="nc" id="L77">		return statecandidate;</span>
 	}

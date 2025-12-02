@@ -19,7 +19,7 @@ import problem.definition.State;
     
 	@Override
 	public State crossover(State father1, State father2, double PC) {
-<span class="nc" id="L22">		Object value = new Object();</span>
+		Object value;
 <span class="nc" id="L23">		State state = (State) father1.getCopy();</span>
 <span class="nc" id="L24">		int[] mascara = mascara(father1.getCode().size());</span>
 <span class="nc bnc" id="L25" title="All 2 branches missed.">   		for (int k = 0; k &lt; mascara.length; k++) {</span>

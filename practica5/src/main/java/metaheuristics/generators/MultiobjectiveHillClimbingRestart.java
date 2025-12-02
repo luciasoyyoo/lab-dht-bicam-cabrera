@@ -57,8 +57,7 @@ public class MultiobjectiveHillClimbingRestart extends Generator{
 
 	@Override
 	public State generate(Integer operatornumber) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
-		List<State> neighborhood = new ArrayList<State>();
-		neighborhood = Strategy.getStrategy().getProblem().getOperator().generatedNewState(stateReferenceHC, operatornumber);
+		List<State> neighborhood = Strategy.getStrategy().getProblem().getOperator().generatedNewState(stateReferenceHC, operatornumber);
 		State statecandidate = candidatevalue.stateCandidate(stateReferenceHC, typeCandidate, strategy, operatornumber, neighborhood);
 		return statecandidate;
 	}
@@ -74,8 +73,7 @@ public class MultiobjectiveHillClimbingRestart extends Generator{
 		ifacceptCandidate = new FactoryAcceptCandidate();
 		AcceptableCandidate candidate = ifacceptCandidate.createAcceptCandidate(typeAcceptation);
 		State lastState = Strategy.getStrategy().listRefPoblacFinal.get(Strategy.getStrategy().listRefPoblacFinal.size()-1);
-		List<State> neighborhood = new ArrayList<State>();
-	neighborhood = Strategy.getStrategy().getProblem().getOperator().generatedNewState(stateReferenceHC, getSizeNeighbors());
+		List<State> neighborhood = Strategy.getStrategy().getProblem().getOperator().generatedNewState(stateReferenceHC, getSizeNeighbors());
 		int i= 0;
 
 		Boolean accept = candidate.acceptCandidate(lastState, stateCandidate.clone());
@@ -83,7 +81,6 @@ public class MultiobjectiveHillClimbingRestart extends Generator{
 		if(accept.equals(true)){
 			stateReferenceHC = stateCandidate.clone();
 			visitedState = new ArrayList<State>();
-			lastState = stateCandidate.clone();
 			//tomar xc q pertenesca a la vecindad de xa
 		}
 		else{
@@ -110,7 +107,6 @@ public class MultiobjectiveHillClimbingRestart extends Generator{
 			if(accept.equals(true)){
 				stateReferenceHC = stateCandidate.clone();
 				visitedState = new ArrayList<State>();
-				lastState = stateCandidate.clone();
 				//tomar xc q pertenesca a la vecindad de xa
 			}
 		}

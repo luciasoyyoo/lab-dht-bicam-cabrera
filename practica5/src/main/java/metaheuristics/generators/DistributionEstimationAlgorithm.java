@@ -99,8 +99,7 @@ public class DistributionEstimationAlgorithm extends Generator {
     	//***************************version 1.0
     	//ArrayList<State> listcandidate = new ArrayList<State>();//(State) Strategy.getStrategy().getProblem().getState().clone()
 		
-    	List<State> fathers = new ArrayList<State>();
-		fathers = getfathersList();
+    	List<State> fathers = getfathersList();
 		iffsampling = new FactorySampling();
     	Sampling samplingG = iffsampling.createSampling(Samplingtype);
     	List<State> ind = samplingG.sampling(fathers, operatornumber);

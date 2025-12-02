@@ -54,8 +54,7 @@ public class RandomSearch extends Generator {
 	@Override
 	public State generate(Integer operatornumber) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
 		//ArrayList<State>list =new ArrayList<State>();
-		List<State> neighborhood = new ArrayList<State>();
-		neighborhood = Strategy.getStrategy().getProblem().getOperator().generateRandomState(operatornumber);
+		List<State> neighborhood = Strategy.getStrategy().getProblem().getOperator().generateRandomState(operatornumber);
 	    State statecandidate = candidatevalue.stateCandidate(stateReferenceRS, typeCandidate, strategy, operatornumber, neighborhood);
 		if(GeneticAlgorithm.countRef != 0 || EvolutionStrategies.countRef != 0 || DistributionEstimationAlgorithm.countRef != 0 || ParticleSwarmOptimization.getCountRef() != 0)
 	    	listStateReference.add(statecandidate);

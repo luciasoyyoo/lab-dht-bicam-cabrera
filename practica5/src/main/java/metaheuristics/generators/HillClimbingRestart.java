@@ -62,8 +62,8 @@ public class HillClimbingRestart extends Generator{
 
 
 	public State generate (Integer operatornumber) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
-		//ArrayList<State>list=new ArrayList<State>();
-		State statecandidate = new State();
+	//ArrayList<State>list=new ArrayList<State>();
+	State statecandidate;
 		if(count == Strategy.getStrategy().getCountCurrent()){
 			State stateR = new State(stateReferenceHC);
 			listRef.add(stateR);
@@ -71,8 +71,8 @@ public class HillClimbingRestart extends Generator{
 			Strategy.getStrategy().getProblem().Evaluate(stateReferenceHC);
 			count = count + countCurrent;
 		}
-		List<State> neighborhood = Strategy.getStrategy().getProblem().getOperator().generatedNewState(stateReferenceHC, operatornumber);
-		statecandidate = candidatevalue.stateCandidate(stateReferenceHC, typeCandidate, strategy, operatornumber, neighborhood);
+	List<State> neighborhood = Strategy.getStrategy().getProblem().getOperator().generatedNewState(stateReferenceHC, operatornumber);
+	statecandidate = candidatevalue.stateCandidate(stateReferenceHC, typeCandidate, strategy, operatornumber, neighborhood);
 		//list.add(statecandidate);
 		return statecandidate;
 	}

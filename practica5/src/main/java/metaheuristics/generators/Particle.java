@@ -108,8 +108,7 @@ public class Particle extends Generator {
     }
 	
 	private ArrayList<Object> UpdateCode(ArrayList<Object> actualVelocity) {  // CALCULO DE LA NUEA POSICION DE LA PARTICULA
-		ArrayList<Object> newCode = new ArrayList<Object>();
-		ArrayList<Object> binaryCode = new ArrayList<Object>();
+    	ArrayList<Object> newCode = new ArrayList<Object>();
 		//poner la condicion de si se esta trabajando con valores continuos o binarios
 		if(ParticleSwarmOptimization.binary == false){	
 			for (int i = 0; i < stateActual.getCode().size(); i++) {
@@ -117,19 +116,20 @@ public class Particle extends Generator {
 		    }
 			return newCode;
 	    }
-		 else{                                                  //cálculo de la posicion para codificacion binaria
-			  for (int i = 0; i < stateActual.getCode().size(); i++){
-				  double rand = (double)(Math.random() * (double)(1));
-				  double s = 1/(1 + 1.72 * (Double)(actualVelocity.get(i))); // 
-				  if (rand < s){
-				     binaryCode.add(1);
-				  }
-				   else{
-				    	binaryCode.add(0);
-				    	}
+		 else{                                                  //cï¿½lculo de la posicion para codificacion binaria
+			ArrayList<Object> binaryCode = new ArrayList<Object>();
+			for (int i = 0; i < stateActual.getCode().size(); i++){
+			  double rand = (double)(Math.random() * (double)(1));
+			  double s = 1/(1 + 1.72 * (Double)(actualVelocity.get(i))); // 
+			  if (rand < s){
+			     binaryCode.add(1);
+			  }
+			   else{
+			     	binaryCode.add(0);
+			     	}
 			  }
 	          return binaryCode;
-    }
+	}
 			/*	if(ParticleSwarmOptimization.binary == true){//wendy
 					for (int i = 0; i < newCode.size(); i++) {
 						binaryCode.add(4 + ((Integer)newCode.get(i))%2);     //FORMULA DE LA POSICION PARA CODIFICACION BINARIA  

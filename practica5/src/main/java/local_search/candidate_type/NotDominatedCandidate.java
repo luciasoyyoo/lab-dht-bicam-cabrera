@@ -21,7 +21,7 @@ public class NotDominatedCandidate extends SearchCandidate {
 		}
 		else {
 			Strategy.getStrategy().getProblem().Evaluate(stateA);
-			State stateB = new State();
+			State stateB;
 			Dominance dominance = new Dominance();
 			for (int i = 1; i < listNeighborhood.size(); i++) {
 				while(stop == false){

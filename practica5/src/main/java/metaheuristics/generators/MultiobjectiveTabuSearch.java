@@ -52,8 +52,7 @@ public class MultiobjectiveTabuSearch extends Generator {
     	super();
 		this.typeAcceptation = AcceptType.AcceptNotDominatedTabu;
 		this.strategy = StrategyType.TABU;
-		@SuppressWarnings("unused")
-		Problem problem = Strategy.getStrategy().getProblem();
+	// Use problem API directly when needed; avoid unused local variable
 		this.typeCandidate = CandidateType.RandomCandidate;
 		this.candidatevalue = new CandidateValue();
 		this.typeGenerator = GeneratorType.MultiobjectiveTabuSearch;
@@ -63,14 +62,11 @@ public class MultiobjectiveTabuSearch extends Generator {
 
 	@Override
 	public State generate(Integer operatornumber) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
-		List<State> neighborhood = new ArrayList<State>();
-		Problem problem = Strategy.getStrategy().getProblem();
-		//List<State> list = new ArrayList<State>();
 		//Devuelve la lista de soluciones no dominadas de todos los vecinos posibles de stateReferenceTS que no se encuentran en la lista Tabu
-		neighborhood = problem.getOperator().generatedNewState(stateReferenceTS, operatornumber);
+		List<State> neighborhood = Strategy.getStrategy().getProblem().getOperator().generatedNewState(stateReferenceTS, operatornumber);
 		//Se escoge uno aleatoriamente como vecino con RandomCandidate
 		State statecandidate = candidatevalue.stateCandidate(stateReferenceTS, typeCandidate, strategy, operatornumber, neighborhood);
-	    return statecandidate;
+		return statecandidate;
 	}
 
 	@Override

@@ -13,7 +13,7 @@ public class TabuSolutions {
 	public static final int maxelements = 0; 
 
 	public List<State> filterNeighborhood(List<State> listNeighborhood) throws Exception {
-		List<State> listFiltrate = new ArrayList<State>();
+	List<State> listFiltrate;
 		//List<ProblemState> auxList = new ArrayList<ProblemState>();
 		//auxList = listNeighborhood;
 		//Problem problem = new Problem();

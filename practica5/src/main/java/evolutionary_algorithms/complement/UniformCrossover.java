@@ -19,7 +19,7 @@ public class UniformCrossover extends Crossover {
     
 	@Override
 	public State crossover(State father1, State father2, double PC) {
-		Object value = new Object();
+		Object value;
 		State state = (State) father1.getCopy();
 		int[] mascara = mascara(father1.getCode().size());
    		for (int k = 0; k < mascara.length; k++) {

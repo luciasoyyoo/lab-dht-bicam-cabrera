@@ -87,94 +87,93 @@ public class SimulatedAnnealing extends Generator {
 	@Override
 	public State generate(Integer operatornumber) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
 		//&lt;State&gt;list=new ArrayList&lt;State&gt;();
-<span class="nc" id="L90">		List&lt;State&gt; neighborhood = new ArrayList&lt;State&gt;();</span>
-<span class="nc" id="L91">		neighborhood = Strategy.getStrategy().getProblem().getOperator().generatedNewState(stateReferenceSA, operatornumber);</span>
-<span class="nc" id="L92">	    State statecandidate = candidatevalue.stateCandidate(stateReferenceSA, typeCandidate, strategy, operatornumber, neighborhood);</span>
+<span class="nc" id="L90">		List&lt;State&gt; neighborhood = Strategy.getStrategy().getProblem().getOperator().generatedNewState(stateReferenceSA, operatornumber);</span>
+<span class="nc" id="L91">	    State statecandidate = candidatevalue.stateCandidate(stateReferenceSA, typeCandidate, strategy, operatornumber, neighborhood);</span>
 	   // list.add(statecandidate);
-<span class="nc" id="L94">	    return statecandidate;</span>
+<span class="nc" id="L93">	    return statecandidate;</span>
 	}
 
 	@Override
 	public State getReference() {
-<span class="nc" id="L99">		return stateReferenceSA;</span>
+<span class="nc" id="L98">		return stateReferenceSA;</span>
 	}
 
 	public void setStateRef(State stateRef) {
-<span class="nc" id="L103">		this.stateReferenceSA = stateRef;</span>
-<span class="nc" id="L104">	}</span>
+<span class="nc" id="L102">		this.stateReferenceSA = stateRef;</span>
+<span class="nc" id="L103">	}</span>
 
 	@Override
 	public void setInitialReference(State stateInitialRef) {
-<span class="nc" id="L108">		this.stateReferenceSA = stateInitialRef;</span>
-<span class="nc" id="L109">	}</span>
+<span class="nc" id="L107">		this.stateReferenceSA = stateInitialRef;</span>
+<span class="nc" id="L108">	}</span>
 
 	@Override
 	public void updateReference(State stateCandidate, Integer countIterationsCurrent)throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
-<span class="nc" id="L113">		countRept = countIterationsT;</span>
-<span class="nc" id="L114">		ifacceptCandidate = new FactoryAcceptCandidate();</span>
-<span class="nc" id="L115">		AcceptableCandidate candidate = ifacceptCandidate.createAcceptCandidate(typeAcceptation);</span>
-<span class="nc" id="L116">		Boolean accept = candidate.acceptCandidate(stateReferenceSA, stateCandidate);</span>
-<span class="nc bnc" id="L117" title="All 2 branches missed.">		if(accept.equals(true))</span>
-<span class="nc" id="L118">		  stateReferenceSA = stateCandidate;</span>
-<span class="nc bnc" id="L119" title="All 2 branches missed.">		if(countIterationsCurrent.equals(countIterationsT)){</span>
-<span class="nc" id="L120">			tinitial = tinitial * alpha;</span>
-<span class="nc" id="L121">			countIterationsT = countIterationsT + countRept;</span>
+<span class="nc" id="L112">		countRept = countIterationsT;</span>
+<span class="nc" id="L113">		ifacceptCandidate = new FactoryAcceptCandidate();</span>
+<span class="nc" id="L114">		AcceptableCandidate candidate = ifacceptCandidate.createAcceptCandidate(typeAcceptation);</span>
+<span class="nc" id="L115">		Boolean accept = candidate.acceptCandidate(stateReferenceSA, stateCandidate);</span>
+<span class="nc bnc" id="L116" title="All 2 branches missed.">		if(accept.equals(true))</span>
+<span class="nc" id="L117">		  stateReferenceSA = stateCandidate;</span>
+<span class="nc bnc" id="L118" title="All 2 branches missed.">		if(countIterationsCurrent.equals(countIterationsT)){</span>
+<span class="nc" id="L119">			tinitial = tinitial * alpha;</span>
+<span class="nc" id="L120">			countIterationsT = countIterationsT + countRept;</span>
 		}
 //		getReferenceList();
-<span class="nc" id="L124">	}</span>
+<span class="nc" id="L123">	}</span>
 
 	@Override
 	public GeneratorType getType() {
-<span class="nc" id="L128">		return this.typeGenerator;</span>
+<span class="nc" id="L127">		return this.typeGenerator;</span>
 	}
 
 	@Override
 	public List&lt;State&gt; getReferenceList() {
-<span class="nc" id="L133">		listStateReference.add(stateReferenceSA);</span>
-<span class="nc" id="L134">		return new ArrayList&lt;State&gt;(listStateReference);</span>
+<span class="nc" id="L132">		listStateReference.add(stateReferenceSA);</span>
+<span class="nc" id="L133">		return new ArrayList&lt;State&gt;(listStateReference);</span>
 	}
 
 	@Override
 	public List&lt;State&gt; getSonList() {
 		// TODO Auto-generated method stub
-<span class="nc" id="L140">		return null;</span>
+<span class="nc" id="L139">		return null;</span>
 	}
 
 	@Override
 	public boolean awardUpdateREF(State stateCandidate) {
 		// TODO Auto-generated method stub
-<span class="nc" id="L146">		return false;</span>
+<span class="nc" id="L145">		return false;</span>
 	}
 
 
 	@Override
 	public float getWeight() {
 		// TODO Auto-generated method stub
-<span class="nc" id="L153">		return this.weight;</span>
+<span class="nc" id="L152">		return this.weight;</span>
 	}
 
 	@Override
 	public void setWeight(float weight) {
 		// TODO Auto-generated method stub
-<span class="nc" id="L159">		this.weight = weight;</span>
-<span class="nc" id="L160">	}</span>
+<span class="nc" id="L158">		this.weight = weight;</span>
+<span class="nc" id="L159">	}</span>
 
 	@Override
 	public int[] getListCountBetterGender() {
 		// TODO Auto-generated method stub
-<span class="nc bnc" id="L165" title="All 2 branches missed.">		return (this.listCountBetterGender == null) ? null : Arrays.copyOf(this.listCountBetterGender, this.listCountBetterGender.length);</span>
+<span class="nc bnc" id="L164" title="All 2 branches missed.">		return (this.listCountBetterGender == null) ? null : Arrays.copyOf(this.listCountBetterGender, this.listCountBetterGender.length);</span>
 	}
 
 	@Override
 	public int[] getListCountGender() {
 		// TODO Auto-generated method stub
-<span class="nc bnc" id="L171" title="All 2 branches missed.">		return (this.listCountGender == null) ? null : Arrays.copyOf(this.listCountGender, this.listCountGender.length);</span>
+<span class="nc bnc" id="L170" title="All 2 branches missed.">		return (this.listCountGender == null) ? null : Arrays.copyOf(this.listCountGender, this.listCountGender.length);</span>
 	}
 
 	@Override
 	public float[] getTrace() {
 		// TODO Auto-generated method stub
-<span class="nc bnc" id="L177" title="All 2 branches missed.">		return (this.listTrace == null) ? null : Arrays.copyOf(this.listTrace, this.listTrace.length);</span>
+<span class="nc bnc" id="L176" title="All 2 branches missed.">		return (this.listTrace == null) ? null : Arrays.copyOf(this.listTrace, this.listTrace.length);</span>
 	}
 
 }

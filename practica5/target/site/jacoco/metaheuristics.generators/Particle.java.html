@@ -108,28 +108,28 @@ public class Particle extends Generator {
     }
 	
 	private ArrayList&lt;Object&gt; UpdateCode(ArrayList&lt;Object&gt; actualVelocity) {  // CALCULO DE LA NUEA POSICION DE LA PARTICULA
-<span class="nc" id="L111">		ArrayList&lt;Object&gt; newCode = new ArrayList&lt;Object&gt;();</span>
-<span class="nc" id="L112">		ArrayList&lt;Object&gt; binaryCode = new ArrayList&lt;Object&gt;();</span>
+<span class="nc" id="L111">    	ArrayList&lt;Object&gt; newCode = new ArrayList&lt;Object&gt;();</span>
 		//poner la condicion de si se esta trabajando con valores continuos o binarios
 		if(ParticleSwarmOptimization.binary == false){	
-<span class="nc bnc" id="L115" title="All 2 branches missed.">			for (int i = 0; i &lt; stateActual.getCode().size(); i++) {</span>
-<span class="nc" id="L116">					newCode.add( (Double)(stateActual.getCode().get(i)) + (Double)(actualVelocity.get(i)) );</span>
+<span class="nc bnc" id="L114" title="All 2 branches missed.">			for (int i = 0; i &lt; stateActual.getCode().size(); i++) {</span>
+<span class="nc" id="L115">					newCode.add( (Double)(stateActual.getCode().get(i)) + (Double)(actualVelocity.get(i)) );</span>
 		    }
-<span class="nc" id="L118">			return newCode;</span>
+<span class="nc" id="L117">			return newCode;</span>
 	    }
-		 else{                                                  //cálculo de la posicion para codificacion binaria
-			  for (int i = 0; i &lt; stateActual.getCode().size(); i++){
-				  double rand = (double)(Math.random() * (double)(1));
-				  double s = 1/(1 + 1.72 * (Double)(actualVelocity.get(i))); // 
-				  if (rand &lt; s){
-				     binaryCode.add(1);
-				  }
-				   else{
-				    	binaryCode.add(0);
-				    	}
+		 else{                                                  //cï¿½lculo de la posicion para codificacion binaria
+			ArrayList&lt;Object&gt; binaryCode = new ArrayList&lt;Object&gt;();
+			for (int i = 0; i &lt; stateActual.getCode().size(); i++){
+			  double rand = (double)(Math.random() * (double)(1));
+			  double s = 1/(1 + 1.72 * (Double)(actualVelocity.get(i))); // 
+			  if (rand &lt; s){
+			     binaryCode.add(1);
+			  }
+			   else{
+			     	binaryCode.add(0);
+			     	}
 			  }
 	          return binaryCode;
-    }
+	}
 			/*	if(ParticleSwarmOptimization.binary == true){//wendy
 					for (int i = 0; i &lt; newCode.size(); i++) {
 						binaryCode.add(4 + ((Integer)newCode.get(i))%2);     //FORMULA DE LA POSICION PARA CODIFICACION BINARIA  
