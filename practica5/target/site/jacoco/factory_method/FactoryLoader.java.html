@@ -7,10 +7,10 @@ import java.lang.reflect.InvocationTargetException;
 	public static Object getInstance(String className) throws ClassNotFoundException, IllegalArgumentException, SecurityException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException{
 		// Let exceptions propagate to caller instead of swallowing them (prevents null dereference)
 		@SuppressWarnings(&quot;rawtypes&quot;)
-<span class="nc" id="L10">		Class c = Class.forName(className);</span>
+<span class="fc" id="L10">		Class c = Class.forName(className);</span>
 		// use getDeclaredConstructor().newInstance() to avoid deprecated Class.newInstance()
-<span class="nc" id="L12">		Object o = c.getDeclaredConstructor().newInstance();</span>
-<span class="nc" id="L13">		return o;</span>
+<span class="fc" id="L12">		Object o = c.getDeclaredConstructor().newInstance();</span>
+<span class="fc" id="L13">		return o;</span>
 	}
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

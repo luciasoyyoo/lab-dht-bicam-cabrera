@@ -11,70 +11,70 @@ public class State implements Cloneable {
 	protected int number;
 	protected ArrayList&lt;Object&gt; code;
 	
-<span class="nc" id="L14">	public State(State ps) {</span>
-<span class="nc bnc" id="L15" title="All 2 branches missed.">		if (ps == null) {</span>
+<span class="fc" id="L14">	public State(State ps) {</span>
+<span class="pc bpc" id="L15" title="1 of 2 branches missed.">		if (ps == null) {</span>
 <span class="nc" id="L16">			this.code = new ArrayList&lt;Object&gt;();</span>
 <span class="nc" id="L17">			this.evaluation = null;</span>
 <span class="nc" id="L18">			this.number = 0;</span>
 <span class="nc" id="L19">			this.typeGenerator = null;</span>
 <span class="nc" id="L20">			return;</span>
 		}
-<span class="nc" id="L22">		typeGenerator = ps.getTypeGenerator();</span>
-<span class="nc" id="L23">		ArrayList&lt;Double&gt; eval = ps.getEvaluation();</span>
-<span class="nc bnc" id="L24" title="All 2 branches missed.">		this.evaluation = (eval == null) ? null : new ArrayList&lt;Double&gt;(eval);</span>
-<span class="nc" id="L25">		number = ps.getNumber();</span>
-<span class="nc" id="L26">		ArrayList&lt;Object&gt; c = ps.getCode();</span>
-<span class="nc bnc" id="L27" title="All 2 branches missed.">		this.code = (c == null) ? new ArrayList&lt;Object&gt;() : new ArrayList&lt;Object&gt;(c);</span>
-<span class="nc" id="L28">	}</span>
+<span class="fc" id="L22">		typeGenerator = ps.getTypeGenerator();</span>
+<span class="fc" id="L23">		ArrayList&lt;Double&gt; eval = ps.getEvaluation();</span>
+<span class="pc bpc" id="L24" title="1 of 2 branches missed.">		this.evaluation = (eval == null) ? null : new ArrayList&lt;Double&gt;(eval);</span>
+<span class="fc" id="L25">		number = ps.getNumber();</span>
+<span class="fc" id="L26">		ArrayList&lt;Object&gt; c = ps.getCode();</span>
+<span class="pc bpc" id="L27" title="1 of 2 branches missed.">		this.code = (c == null) ? new ArrayList&lt;Object&gt;() : new ArrayList&lt;Object&gt;(c);</span>
+<span class="fc" id="L28">	}</span>
 	
 	public State(ArrayList&lt;Object&gt; code) {
-<span class="nc" id="L31">		super();</span>
-<span class="nc bnc" id="L32" title="All 2 branches missed.">		this.code = (code == null) ? new ArrayList&lt;Object&gt;() : new ArrayList&lt;Object&gt;(code);</span>
-<span class="nc" id="L33">	}</span>
+<span class="fc" id="L31">		super();</span>
+<span class="pc bpc" id="L32" title="1 of 2 branches missed.">		this.code = (code == null) ? new ArrayList&lt;Object&gt;() : new ArrayList&lt;Object&gt;(code);</span>
+<span class="fc" id="L33">	}</span>
 	
-<span class="nc" id="L35">	public State() {</span>
-<span class="nc" id="L36">		code=new ArrayList&lt;Object&gt;();</span>
-<span class="nc" id="L37">	}	</span>
+<span class="fc" id="L35">	public State() {</span>
+<span class="fc" id="L36">		code=new ArrayList&lt;Object&gt;();</span>
+<span class="fc" id="L37">	}	</span>
 	
 	public ArrayList&lt;Object&gt; getCode() {
-<span class="nc bnc" id="L40" title="All 2 branches missed.">		return (code == null) ? new ArrayList&lt;Object&gt;() : new ArrayList&lt;Object&gt;(code);</span>
+<span class="pc bpc" id="L40" title="1 of 2 branches missed.">		return (code == null) ? new ArrayList&lt;Object&gt;() : new ArrayList&lt;Object&gt;(code);</span>
 	}
 
 	public void setCode(ArrayList&lt;Object&gt; listCode) {
-<span class="nc bnc" id="L44" title="All 2 branches missed.">		this.code = (listCode == null) ? new ArrayList&lt;Object&gt;() : new ArrayList&lt;Object&gt;(listCode);</span>
-<span class="nc" id="L45">	}</span>
+<span class="fc bfc" id="L44" title="All 2 branches covered.">		this.code = (listCode == null) ? new ArrayList&lt;Object&gt;() : new ArrayList&lt;Object&gt;(listCode);</span>
+<span class="fc" id="L45">	}</span>
 
 	public GeneratorType getTypeGenerator() {
-<span class="nc" id="L48">		return typeGenerator;</span>
+<span class="fc" id="L48">		return typeGenerator;</span>
 	}
 	public void setTypeGenerator(GeneratorType typeGenerator) {
-<span class="nc" id="L51">		this.typeGenerator = typeGenerator;</span>
-<span class="nc" id="L52">	}</span>
+<span class="fc" id="L51">		this.typeGenerator = typeGenerator;</span>
+<span class="fc" id="L52">	}</span>
 
 	
 	public ArrayList&lt;Double&gt; getEvaluation() {
-<span class="nc bnc" id="L56" title="All 2 branches missed.">		return (evaluation == null) ? null : new ArrayList&lt;Double&gt;(evaluation);</span>
+<span class="fc bfc" id="L56" title="All 2 branches covered.">		return (evaluation == null) ? null : new ArrayList&lt;Double&gt;(evaluation);</span>
 	}
 
 	public void setEvaluation(ArrayList&lt;Double&gt; evaluation) {
-<span class="nc bnc" id="L60" title="All 2 branches missed.">		this.evaluation = (evaluation == null) ? null : new ArrayList&lt;Double&gt;(evaluation);</span>
-<span class="nc" id="L61">	}</span>
+<span class="fc bfc" id="L60" title="All 2 branches covered.">		this.evaluation = (evaluation == null) ? null : new ArrayList&lt;Double&gt;(evaluation);</span>
+<span class="fc" id="L61">	}</span>
 
 	public int getNumber() {
-<span class="nc" id="L64">		return number;</span>
+<span class="fc" id="L64">		return number;</span>
 	}
 	public void setNumber(int number) {
-<span class="nc" id="L67">		this.number = number;</span>
-<span class="nc" id="L68">	}</span>
+<span class="fc" id="L67">		this.number = number;</span>
+<span class="fc" id="L68">	}</span>
 	@Override
 	public State clone(){
 		try {
-<span class="nc" id="L72">			State s = (State) super.clone();</span>
+<span class="fc" id="L72">			State s = (State) super.clone();</span>
 			// deep-copy mutable collections
-<span class="nc bnc" id="L74" title="All 2 branches missed.">			s.code = (this.code == null) ? new ArrayList&lt;Object&gt;() : new ArrayList&lt;Object&gt;(this.code);</span>
-<span class="nc bnc" id="L75" title="All 2 branches missed.">			s.evaluation = (this.evaluation == null) ? null : new ArrayList&lt;Double&gt;(this.evaluation);</span>
+<span class="pc bpc" id="L74" title="1 of 2 branches missed.">			s.code = (this.code == null) ? new ArrayList&lt;Object&gt;() : new ArrayList&lt;Object&gt;(this.code);</span>
+<span class="fc bfc" id="L75" title="All 2 branches covered.">			s.evaluation = (this.evaluation == null) ? null : new ArrayList&lt;Double&gt;(this.evaluation);</span>
 			// primitive and enum-like fields are safe to copy by assignment
-<span class="nc" id="L77">			return s;</span>
+<span class="fc" id="L77">			return s;</span>
 <span class="nc" id="L78">		} catch (CloneNotSupportedException e) {</span>
 			// fallback to copy constructor
 <span class="nc" id="L80">			return new State(this);</span>
@@ -82,25 +82,25 @@ public class State implements Cloneable {
 	}
 	
 	public Object getCopy(){
-<span class="nc" id="L85">		return new State(this);</span>
+<span class="fc" id="L85">		return new State(this);</span>
 	}
 	
 	public boolean Comparator(State state){
 
-<span class="nc" id="L90">		boolean result=false;</span>
-<span class="nc bnc" id="L91" title="All 2 branches missed.">		if(state.getCode().equals(getCode())){</span>
-<span class="nc" id="L92">			result=true;</span>
+<span class="fc" id="L90">		boolean result=false;</span>
+<span class="fc bfc" id="L91" title="All 2 branches covered.">		if(state.getCode().equals(getCode())){</span>
+<span class="fc" id="L92">			result=true;</span>
 		}
-<span class="nc" id="L94">		return result;</span>
+<span class="fc" id="L94">		return result;</span>
 	}
 	public double Distance(State state){
-<span class="nc" id="L97">		double distancia = 0;</span>
-<span class="nc bnc" id="L98" title="All 2 branches missed.">		for (int i = 0; i &lt; state.getCode().size(); i++) {</span>
-<span class="nc bnc" id="L99" title="All 2 branches missed.">			if (!(state.getCode().get(i).equals(this.getCode().get(i)))) {</span>
-<span class="nc" id="L100">				distancia++;</span>
+<span class="fc" id="L97">		double distancia = 0;</span>
+<span class="fc bfc" id="L98" title="All 2 branches covered.">		for (int i = 0; i &lt; state.getCode().size(); i++) {</span>
+<span class="fc bfc" id="L99" title="All 2 branches covered.">			if (!(state.getCode().get(i).equals(this.getCode().get(i)))) {</span>
+<span class="fc" id="L100">				distancia++;</span>
 			}
 		}
-<span class="nc" id="L103">	return distancia;</span>
+<span class="fc" id="L103">	return distancia;</span>
 	}
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>
