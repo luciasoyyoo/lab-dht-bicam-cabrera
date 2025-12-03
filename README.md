@@ -135,3 +135,42 @@ mvn -f practica5/pom.xml test
 - Para builds CI/automatizados suele usarse `mvn -B verify` (modo batch para evitar prompts).
 - Añade `-DskipTests` si necesitas compilar/empquetar rápido y los tests no son necesarios en ese momento.
 
+
+## Análisis con SonarCloud
+
+Para enviar el análisis a SonarCloud necesitas:
+
+- Tener el informe de cobertura JaCoCo en `target/site/jacoco/jacoco.xml` (genera con JaCoCo).
+- Un token de usuario/organización en SonarCloud (no lo incluyas en el repositorio).
+
+Ejemplo de flujo (desde `practica5`):
+
+1. Generar los tests y el informe JaCoCo:
+
+```bash
+cd practica5
+# genera tests y el informe XML de JaCoCo (ajusta según tu configuración de JaCoCo en el POM)
+mvn clean test jacoco:report
+```
+
+2. Exportar el token como variable de entorno (no lo metas en ficheros del repo):
+
+```bash
+export SONAR_TOKEN=tu_token_aqui
+```
+
+3. Ejecutar el análisis en SonarCloud (uso de variable para el token):
+
+```bash
+mvn sonar:sonar \
+  -Dsonar.host.url=https://sonarcloud.io \
+  -Dsonar.login="$SONAR_TOKEN" \
+  -Dsonar.organization=luciasoyyoo \
+  -Dsonar.projectKey=luciasoyyoo_lab-dht-bicam-cabrera \
+  -Dsonar.coverage.jacoco.xmlReportPaths=target/site/jacoco/jacoco.xml
+```
+
+Nota de seguridad: nunca comitees el token en el repositorio. En CI/servicios remotos (GitHub Actions, GitLab CI, etc.) guarda el token en el gestor de secretos y pásalo como variable de entorno.
+
+Si prefieres, puedes usar `-Dsonar.token=$SONAR_TOKEN` en lugar de `-Dsonar.login` (ambas opciones funcionan, pero `sonar.login` es la más común en ejemplos).
+
