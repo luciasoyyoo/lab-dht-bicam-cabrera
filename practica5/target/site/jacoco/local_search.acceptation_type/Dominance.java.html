@@ -8,26 +8,26 @@ import metaheuristics.generators.MultiobjectiveHillClimbingDistance;
 import problem.definition.Problem.ProblemType;
 import problem.definition.State;
 
-<span class="nc" id="L11">public class Dominance {</span>
+<span class="fc" id="L11">public class Dominance {</span>
 
 	//---------------------------------Mï¿½todos que se utilizan en los algoritmos multiobjetivo-------------------------------------------------------//
 	//Funciï¿½n que determina si la soluciï¿½n X domina a alguna de las soluciones no dominadas de una lista
 	//Devuelve la lista actualizada y true si fue adicionada a la lista o false de lo contrario
 	public boolean listDominance(State solutionX, List&lt;State&gt; list){
-<span class="nc" id="L17">		boolean domain = false;</span>
-<span class="nc bnc" id="L18" title="All 4 branches missed.">		for (int i = 0; i &lt; list.size() &amp;&amp; domain == false; i++) {</span>
+<span class="fc" id="L17">		boolean domain = false;</span>
+<span class="pc bpc" id="L18" title="1 of 4 branches missed.">		for (int i = 0; i &lt; list.size() &amp;&amp; domain == false; i++) {</span>
 			//Si la soluciï¿½n X domina a la soluciï¿½n de la lista
-<span class="nc bnc" id="L20" title="All 2 branches missed.">			if(dominance(solutionX, list.get(i)) == true){</span>
+<span class="pc bpc" id="L20" title="1 of 2 branches missed.">			if(dominance(solutionX, list.get(i)) == true){</span>
 				//Se elimina el elemento de la lista
-<span class="nc" id="L22">				list.remove(i);</span>
-<span class="nc bnc" id="L23" title="All 2 branches missed.">				if (i!=0) {</span>
+<span class="fc" id="L22">				list.remove(i);</span>
+<span class="pc bpc" id="L23" title="1 of 2 branches missed.">				if (i!=0) {</span>
 <span class="nc" id="L24">					i--;	</span>
 				}
-<span class="nc bnc" id="L26" title="All 4 branches missed.">					if (Strategy.getStrategy().generator.getType().equals(GeneratorType.MultiobjectiveHillClimbingDistance)&amp;&amp;list.size()!=0) {</span>
+<span class="pc bpc" id="L26" title="3 of 4 branches missed.">					if (Strategy.getStrategy().generator.getType().equals(GeneratorType.MultiobjectiveHillClimbingDistance)&amp;&amp;list.size()!=0) {</span>
 <span class="nc" id="L27">						MultiobjectiveHillClimbingDistance.distanceCalculateAdd(list);</span>
 				}
 			}
-<span class="nc bnc" id="L30" title="All 2 branches missed.">			if (list.size()&gt;0) {</span>
+<span class="pc bpc" id="L30" title="1 of 2 branches missed.">			if (list.size()&gt;0) {</span>
 <span class="nc bnc" id="L31" title="All 2 branches missed.">				if(dominance(list.get(i), solutionX) == true){</span>
 <span class="nc" id="L32">					domain = true;</span>
 				}
@@ -35,21 +35,21 @@ import problem.definition.State;
 
 		}
 		//Si la soluciï¿½n X no fue dominada
-<span class="nc bnc" id="L38" title="All 2 branches missed.">		if(domain == false){</span>
+<span class="pc bpc" id="L38" title="1 of 2 branches missed.">		if(domain == false){</span>
 			//Comprobando que la soluciï¿½n no exista
-<span class="nc" id="L40">			boolean found = false;</span>
-<span class="nc bnc" id="L41" title="All 4 branches missed.">			for (int k = 0; k &lt; list.size() &amp;&amp; found == false; k++) {</span>
+<span class="fc" id="L40">			boolean found = false;</span>
+<span class="pc bpc" id="L41" title="3 of 4 branches missed.">			for (int k = 0; k &lt; list.size() &amp;&amp; found == false; k++) {</span>
 <span class="nc" id="L42">				State element = list.get(k);</span>
 <span class="nc" id="L43">				found = solutionX.Comparator(element);</span>
 			}
 			//Si la soluciï¿½n no existe
-<span class="nc bnc" id="L46" title="All 2 branches missed.">			if(found == false){</span>
+<span class="pc bpc" id="L46" title="1 of 2 branches missed.">			if(found == false){</span>
 				//Se guarda la soluciï¿½n candidata en la lista de soluciones ï¿½ptimas de Pareto
-<span class="nc" id="L48">				list.add(solutionX.clone());</span>
-<span class="nc bnc" id="L49" title="All 2 branches missed.">				if (Strategy.getStrategy().generator.getType().equals(GeneratorType.MultiobjectiveHillClimbingDistance)) {</span>
+<span class="fc" id="L48">				list.add(solutionX.clone());</span>
+<span class="pc bpc" id="L49" title="1 of 2 branches missed.">				if (Strategy.getStrategy().generator.getType().equals(GeneratorType.MultiobjectiveHillClimbingDistance)) {</span>
 <span class="nc" id="L50">					MultiobjectiveHillClimbingDistance.distanceCalculateAdd(list);</span>
 				}
-<span class="nc" id="L52">				return true;</span>
+<span class="fc" id="L52">				return true;</span>
 			}
 		}
 <span class="nc" id="L55">		return false;</span>
@@ -95,36 +95,36 @@ import problem.definition.State;
 
 	//Funciï¿½n que devuelve true si solutionX domina a solutionY
 	public boolean dominance(State solutionX,  State solutionY)	{
-<span class="nc" id="L98">		boolean dominance = false;</span>
-<span class="nc" id="L99">		int countBest = 0;</span>
-<span class="nc" id="L100">		int countEquals = 0;</span>
+<span class="fc" id="L98">		boolean dominance = false;</span>
+<span class="fc" id="L99">		int countBest = 0;</span>
+<span class="fc" id="L100">		int countEquals = 0;</span>
 		//Si solutionX domina a solutionY
-<span class="nc bnc" id="L102" title="All 2 branches missed.">		if(Strategy.getStrategy().getProblem().getTypeProblem().equals(ProblemType.Maximizar)) {</span>
+<span class="fc bfc" id="L102" title="All 2 branches covered.">		if(Strategy.getStrategy().getProblem().getTypeProblem().equals(ProblemType.Maximizar)) {</span>
 			//Recorriendo las evaluaciones de las funciones objetivo
-<span class="nc bnc" id="L104" title="All 2 branches missed.">			for (int i = 0; i &lt; solutionX.getEvaluation().size(); i++) {</span>
-<span class="nc bnc" id="L105" title="All 2 branches missed.">				if(solutionX.getEvaluation().get(i).floatValue() &gt; solutionY.getEvaluation().get(i).floatValue()){</span>
-<span class="nc" id="L106">					countBest++;</span>
+<span class="fc bfc" id="L104" title="All 2 branches covered.">			for (int i = 0; i &lt; solutionX.getEvaluation().size(); i++) {</span>
+<span class="fc bfc" id="L105" title="All 2 branches covered.">				if(solutionX.getEvaluation().get(i).floatValue() &gt; solutionY.getEvaluation().get(i).floatValue()){</span>
+<span class="fc" id="L106">					countBest++;</span>
 				}
-<span class="nc bnc" id="L108" title="All 2 branches missed.">				if(solutionX.getEvaluation().get(i).floatValue() == solutionY.getEvaluation().get(i).floatValue()){</span>
+<span class="pc bpc" id="L108" title="1 of 2 branches missed.">				if(solutionX.getEvaluation().get(i).floatValue() == solutionY.getEvaluation().get(i).floatValue()){</span>
 <span class="nc" id="L109">					countEquals++;</span>
 				}	
 			}
 		}
 		else{
 			//Recorriendo las evaluaciones de las funciones objetivo
-<span class="nc bnc" id="L115" title="All 2 branches missed.">			for (int i = 0; i &lt; solutionX.getEvaluation().size(); i++) {</span>
-<span class="nc bnc" id="L116" title="All 2 branches missed.">				if(solutionX.getEvaluation().get(i).floatValue() &lt; solutionY.getEvaluation().get(i).floatValue()){</span>
-<span class="nc" id="L117">					countBest++;</span>
+<span class="fc bfc" id="L115" title="All 2 branches covered.">			for (int i = 0; i &lt; solutionX.getEvaluation().size(); i++) {</span>
+<span class="fc bfc" id="L116" title="All 2 branches covered.">				if(solutionX.getEvaluation().get(i).floatValue() &lt; solutionY.getEvaluation().get(i).floatValue()){</span>
+<span class="fc" id="L117">					countBest++;</span>
 				}
-<span class="nc bnc" id="L119" title="All 2 branches missed.">				if(solutionX.getEvaluation().get(i).floatValue() == solutionY.getEvaluation().get(i).floatValue()){</span>
+<span class="pc bpc" id="L119" title="1 of 2 branches missed.">				if(solutionX.getEvaluation().get(i).floatValue() == solutionY.getEvaluation().get(i).floatValue()){</span>
 <span class="nc" id="L120">					countEquals++;</span>
 				}	
 			}
 		}
-<span class="nc bnc" id="L124" title="All 4 branches missed.">		if((countBest &gt;= 1) &amp;&amp; (countEquals + countBest == solutionX.getEvaluation().size())) {</span>
-<span class="nc" id="L125">			dominance = true;</span>
+<span class="pc bpc" id="L124" title="1 of 4 branches missed.">		if((countBest &gt;= 1) &amp;&amp; (countEquals + countBest == solutionX.getEvaluation().size())) {</span>
+<span class="fc" id="L125">			dominance = true;</span>
 		}
-<span class="nc" id="L127">		return dominance;</span>
+<span class="fc" id="L127">		return dominance;</span>
 	} 
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

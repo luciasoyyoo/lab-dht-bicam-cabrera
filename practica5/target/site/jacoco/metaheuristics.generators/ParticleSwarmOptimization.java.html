@@ -44,13 +44,13 @@ public class ParticleSwarmOptimization extends Generator {
 	}
 
 	public static void setLBest(State[] arr) {
-<span class="pc bpc" id="L47" title="1 of 2 branches missed.">		if (arr == null) {</span>
-<span class="nc" id="L48">			lBest = null;</span>
-<span class="nc" id="L49">			return;</span>
+<span class="fc bfc" id="L47" title="All 2 branches covered.">		if (arr == null) {</span>
+<span class="fc" id="L48">			lBest = null;</span>
+<span class="fc" id="L49">			return;</span>
 		}
 <span class="fc" id="L51">		lBest = new State[arr.length];</span>
 <span class="fc bfc" id="L52" title="All 2 branches covered.">		for (int i = 0; i &lt; arr.length; i++) {</span>
-<span class="pc bpc" id="L53" title="1 of 2 branches missed.">			lBest[i] = (arr[i] == null) ? null : arr[i].clone();</span>
+<span class="fc bfc" id="L53" title="All 2 branches covered.">			lBest[i] = (arr[i] == null) ? null : arr[i].clone();</span>
 		}
 <span class="fc" id="L55">	}</span>
 
@@ -62,7 +62,7 @@ public class ParticleSwarmOptimization extends Generator {
 <span class="fc" id="L62">	public static State getGBest() { return gBest; }</span>
 <span class="fc" id="L63">	public static void setGBest(State s) { gBest = s; }</span>
 <span class="fc" id="L64">	public static int getCountCurrentIterPSO() { return countCurrentIterPSO; }</span>
-<span class="nc" id="L65">	public static void setCountCurrentIterPSO(int v) { countCurrentIterPSO = v; }</span>
+<span class="fc" id="L65">	public static void setCountCurrentIterPSO(int v) { countCurrentIterPSO = v; }</span>
 <span class="fc" id="L66">	public static int getCountParticle() { return countParticle; }</span>
 <span class="fc" id="L67">	public static void setCountParticle(int v) { countParticle = v; }</span>
 	//problemas dinamicos
@@ -94,8 +94,8 @@ public class ParticleSwarmOptimization extends Generator {
 <span class="pc bpc" id="L94" title="1 of 2 branches missed.">	if (getCountParticle() &gt;= countRef)</span>
 <span class="nc" id="L95">	    setCountParticle(0);</span>
 //		System.out.println(&quot;Contador de particulas: &quot; + getCountParticle() + &quot; Contador de iteraciones &quot; + Strategy.getStrategy().getCountCurrent());
-<span class="nc" id="L97">	listParticle.get(getCountParticle()).generate(1);</span>
-<span class="nc" id="L98">	return listParticle.get(getCountParticle()).getStateActual();</span>
+<span class="fc" id="L97">	listParticle.get(getCountParticle()).generate(1);</span>
+<span class="fc" id="L98">	return listParticle.get(getCountParticle()).getStateActual();</span>
 	}
    	
 	public void inicialiceLBest (){
@@ -205,7 +205,7 @@ public class ParticleSwarmOptimization extends Generator {
 <span class="nc" id="L205">	}</span>
 
 	public static int getCountRef() {
-<span class="nc" id="L208">		return countRef;</span>
+<span class="fc" id="L208">		return countRef;</span>
 	}
 
 	public static void setCountRef(int countRef) {
@@ -274,7 +274,7 @@ public class ParticleSwarmOptimization extends Generator {
 	@Override
 	public GeneratorType getType() {
 		// TODO Auto-generated method stub
-<span class="nc" id="L277">		return this.generatorType;</span>
+<span class="fc" id="L277">		return this.generatorType;</span>
 	}
 
 	@Override
@@ -310,19 +310,19 @@ public class ParticleSwarmOptimization extends Generator {
 	@Override
 	public int[] getListCountBetterGender() {
 		// TODO Auto-generated method stub
-<span class="nc bnc" id="L313" title="All 2 branches missed.">		return (this.listCountBetterGender == null) ? new int[0] : Arrays.copyOf(this.listCountBetterGender, this.listCountBetterGender.length);</span>
+<span class="pc bpc" id="L313" title="1 of 2 branches missed.">		return (this.listCountBetterGender == null) ? new int[0] : Arrays.copyOf(this.listCountBetterGender, this.listCountBetterGender.length);</span>
 	}
 
 	@Override
 	public int[] getListCountGender() {
 		// TODO Auto-generated method stub
-<span class="nc bnc" id="L319" title="All 2 branches missed.">		return (this.listCountGender == null) ? new int[0] : Arrays.copyOf(this.listCountGender, this.listCountGender.length);</span>
+<span class="pc bpc" id="L319" title="1 of 2 branches missed.">		return (this.listCountGender == null) ? new int[0] : Arrays.copyOf(this.listCountGender, this.listCountGender.length);</span>
 	}
 
 	@Override
 	public float[] getTrace() {
 		// TODO Auto-generated method stub
-<span class="nc bnc" id="L325" title="All 2 branches missed.">		return (this.listTrace == null) ? new float[0] : Arrays.copyOf(this.listTrace, this.listTrace.length);</span>
+<span class="pc bpc" id="L325" title="1 of 2 branches missed.">		return (this.listTrace == null) ? new float[0] : Arrays.copyOf(this.listTrace, this.listTrace.length);</span>
 	}
 
 

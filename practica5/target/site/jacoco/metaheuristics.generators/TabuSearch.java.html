@@ -31,13 +31,13 @@ public class TabuSearch extends Generator {
 	private State stateReferenceTS;
     private IFFactoryAcceptCandidate ifacceptCandidate;
     private GeneratorType typeGenerator;
-<span class="nc" id="L34">    private List&lt;State&gt; listStateReference = new ArrayList&lt;State&gt;();</span>
+<span class="fc" id="L34">    private List&lt;State&gt; listStateReference = new ArrayList&lt;State&gt;();</span>
     private float weight;
 	
 	//problemas dinamicos: use instance fields from Generator (countGender, countBetterGender)
-<span class="nc" id="L38">    private int[] listCountBetterGender = new int[10];</span>
-<span class="nc" id="L39">    private int[] listCountGender = new int[10];</span>
-<span class="nc" id="L40">    private float[] listTrace = new float[1200000];</span>
+<span class="fc" id="L38">    private int[] listCountBetterGender = new int[10];</span>
+<span class="fc" id="L39">    private int[] listCountGender = new int[10];</span>
+<span class="fc" id="L40">    private float[] listTrace = new float[1200000];</span>
 
 
     public GeneratorType getTypeGenerator() {
@@ -49,28 +49,28 @@ public class TabuSearch extends Generator {
 <span class="nc" id="L49">	}</span>
 
 	public TabuSearch() {
-<span class="nc" id="L52">    	super();</span>
-<span class="nc" id="L53">		this.typeAcceptation = AcceptType.AcceptAnyone;</span>
-<span class="nc" id="L54">		this.strategy = StrategyType.TABU;</span>
+<span class="fc" id="L52">    	super();</span>
+<span class="fc" id="L53">		this.typeAcceptation = AcceptType.AcceptAnyone;</span>
+<span class="fc" id="L54">		this.strategy = StrategyType.TABU;</span>
 		
 		
-<span class="nc" id="L57">		Problem problem = Strategy.getStrategy().getProblem();</span>
+<span class="fc" id="L57">		Problem problem = Strategy.getStrategy().getProblem();</span>
 
-<span class="nc bnc" id="L59" title="All 2 branches missed.">		if(problem.getTypeProblem().equals(ProblemType.Maximizar)) {</span>
-<span class="nc" id="L60">			this.typeCandidate = CandidateType.GreaterCandidate;</span>
+<span class="pc bpc" id="L59" title="1 of 2 branches missed.">		if(problem.getTypeProblem().equals(ProblemType.Maximizar)) {</span>
+<span class="fc" id="L60">			this.typeCandidate = CandidateType.GreaterCandidate;</span>
 		}
 		else{
 <span class="nc" id="L63">			this.typeCandidate = CandidateType.SmallerCandidate;</span>
 		}
 
-<span class="nc" id="L66">		this.candidatevalue = new CandidateValue();</span>
-<span class="nc" id="L67">		this.typeGenerator = GeneratorType.TabuSearch;</span>
-<span class="nc" id="L68">		this.weight = 50;</span>
-<span class="nc" id="L69">		listTrace[0] = this.weight;</span>
-<span class="nc" id="L70">		listCountBetterGender[0] = 0;</span>
-<span class="nc" id="L71">		listCountGender[0] = 0;</span>
+<span class="fc" id="L66">		this.candidatevalue = new CandidateValue();</span>
+<span class="fc" id="L67">		this.typeGenerator = GeneratorType.TabuSearch;</span>
+<span class="fc" id="L68">		this.weight = 50;</span>
+<span class="fc" id="L69">		listTrace[0] = this.weight;</span>
+<span class="fc" id="L70">		listCountBetterGender[0] = 0;</span>
+<span class="fc" id="L71">		listCountGender[0] = 0;</span>
 		
-<span class="nc" id="L73">	}</span>
+<span class="fc" id="L73">	}</span>
 
 	@Override
 	public State generate(Integer operatornumber) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
@@ -136,7 +136,7 @@ public class TabuSearch extends Generator {
 
 	@Override
 	public GeneratorType getType() {
-<span class="nc" id="L139">		return this.typeGenerator;</span>
+<span class="fc" id="L139">		return this.typeGenerator;</span>
 	}
 
 	@Override
@@ -175,13 +175,13 @@ public class TabuSearch extends Generator {
 	@Override
 	public int[] getListCountBetterGender() {
 		// TODO Auto-generated method stub
-<span class="nc bnc" id="L178" title="All 2 branches missed.">		return (this.listCountBetterGender == null) ? new int[0] : Arrays.copyOf(this.listCountBetterGender, this.listCountBetterGender.length);</span>
+<span class="pc bpc" id="L178" title="1 of 2 branches missed.">		return (this.listCountBetterGender == null) ? new int[0] : Arrays.copyOf(this.listCountBetterGender, this.listCountBetterGender.length);</span>
 	}
 
 	@Override
 	public int[] getListCountGender() {
 		// TODO Auto-generated method stub
-<span class="nc bnc" id="L184" title="All 2 branches missed.">		return (this.listCountGender == null) ? new int[0] : Arrays.copyOf(this.listCountGender, this.listCountGender.length);</span>
+<span class="pc bpc" id="L184" title="1 of 2 branches missed.">		return (this.listCountGender == null) ? new int[0] : Arrays.copyOf(this.listCountGender, this.listCountGender.length);</span>
 	}
 
 	@Override

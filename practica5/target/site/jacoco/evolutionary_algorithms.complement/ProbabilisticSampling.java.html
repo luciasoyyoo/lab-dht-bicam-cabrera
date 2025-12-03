@@ -11,55 +11,55 @@ import metaheuristics.generators.GeneratorType;
 import problem.definition.State;
 
 
-<span class="nc" id="L14">public class ProbabilisticSampling extends Sampling {</span>
+<span class="fc" id="L14">public class ProbabilisticSampling extends Sampling {</span>
 
 	@Override
 	public List&lt;State&gt; sampling(List&lt;State&gt; fathers, int countInd) {
 		// TODO Auto-generated method stub
-<span class="nc" id="L19">		int cantV = fathers.get(0).getCode().size();</span>
-<span class="nc" id="L20">		List&lt;State&gt; staList = listState(countInd);</span>
-<span class="nc bnc" id="L21" title="All 2 branches missed.">		for (int i = 0; i &lt; cantV; i++) {</span>
-<span class="nc" id="L22">			Object[] values = new Object[fathers.size()]; // arreglo de valores de una variable</span>
-<span class="nc" id="L23">			Object[] arrtemp = new Object[Strategy.getStrategy().getProblem().getPossibleValue()];</span>
+<span class="fc" id="L19">		int cantV = fathers.get(0).getCode().size();</span>
+<span class="fc" id="L20">		List&lt;State&gt; staList = listState(countInd);</span>
+<span class="fc bfc" id="L21" title="All 2 branches covered.">		for (int i = 0; i &lt; cantV; i++) {</span>
+<span class="fc" id="L22">			Object[] values = new Object[fathers.size()]; // arreglo de valores de una variable</span>
+<span class="fc" id="L23">			Object[] arrtemp = new Object[Strategy.getStrategy().getProblem().getPossibleValue()];</span>
 			//llenar el arreglo con todos los valores posibles
-<span class="nc bnc" id="L25" title="All 2 branches missed.">			for (int j = 0; j &lt; arrtemp.length; j++) {</span>
-<span class="nc" id="L26">				arrtemp[j] = j;</span>
+<span class="fc bfc" id="L25" title="All 2 branches covered.">			for (int j = 0; j &lt; arrtemp.length; j++) {</span>
+<span class="fc" id="L26">				arrtemp[j] = j;</span>
 			}
-<span class="nc bnc" id="L28" title="All 2 branches missed.">			for (int j = 0; j &lt; values.length; j++) {</span>
-<span class="nc" id="L29">				values[j] = fathers.get(j).getCode().get(i);</span>
+<span class="fc bfc" id="L28" title="All 2 branches covered.">			for (int j = 0; j &lt; values.length; j++) {</span>
+<span class="fc" id="L29">				values[j] = fathers.get(j).getCode().get(i);</span>
 			}
-<span class="nc" id="L31">			int k = 0;</span>
-<span class="nc" id="L32">			int sum = 0; // suma acumulativa por cada valor posible</span>
-<span class="nc" id="L33">			int arrOcc[] = new int[arrtemp.length]; // arreglo paralelo para contar la cantidad de ocurrencias de un valor posible</span>
+<span class="fc" id="L31">			int k = 0;</span>
+<span class="fc" id="L32">			int sum = 0; // suma acumulativa por cada valor posible</span>
+<span class="fc" id="L33">			int arrOcc[] = new int[arrtemp.length]; // arreglo paralelo para contar la cantidad de ocurrencias de un valor posible</span>
 			//llenar el arreglo con la cantidad de ocurrencias de cada valor posible, para cada variable
 			//recorrer el arreglo de valores de una variable
-<span class="nc bnc" id="L36" title="All 2 branches missed.">			while (k &lt; arrtemp.length) {</span>
-<span class="nc" id="L37">				int count = 0;</span>
-<span class="nc bnc" id="L38" title="All 2 branches missed.">				for (int j = 0; j &lt; values.length; j++) {</span>
-<span class="nc bnc" id="L39" title="All 4 branches missed.">					if((Integer)values[j] != -1 &amp;&amp; values[j] == arrtemp[k]){ //</span>
-<span class="nc" id="L40">						count++;</span>
-<span class="nc" id="L41">						values[j] = -1;</span>
+<span class="fc bfc" id="L36" title="All 2 branches covered.">			while (k &lt; arrtemp.length) {</span>
+<span class="fc" id="L37">				int count = 0;</span>
+<span class="fc bfc" id="L38" title="All 2 branches covered.">				for (int j = 0; j &lt; values.length; j++) {</span>
+<span class="fc bfc" id="L39" title="All 4 branches covered.">					if((Integer)values[j] != -1 &amp;&amp; values[j] == arrtemp[k]){ //</span>
+<span class="fc" id="L40">						count++;</span>
+<span class="fc" id="L41">						values[j] = -1;</span>
 					}
 				}
-<span class="nc" id="L44">				arrOcc[k] = count;</span>
-<span class="nc" id="L45">				sum = sum + count;</span>
-<span class="nc" id="L46">				k++;</span>
-<span class="nc" id="L47">			}</span>
-<span class="nc bnc" id="L48" title="All 2 branches missed.">			for (int l = 0; l &lt; countInd; l++) {</span>
-<span class="nc" id="L49">				boolean find = false;</span>
-<span class="nc" id="L50">				int p = 0;</span>
+<span class="fc" id="L44">				arrOcc[k] = count;</span>
+<span class="fc" id="L45">				sum = sum + count;</span>
+<span class="fc" id="L46">				k++;</span>
+<span class="fc" id="L47">			}</span>
+<span class="fc bfc" id="L48" title="All 2 branches covered.">			for (int l = 0; l &lt; countInd; l++) {</span>
+<span class="fc" id="L49">				boolean find = false;</span>
+<span class="fc" id="L50">				int p = 0;</span>
 				int random;
-<span class="nc bnc" id="L52" title="All 2 branches missed.">				if (sum &gt; 0) random = ThreadLocalRandom.current().nextInt(sum) + 1;</span>
+<span class="pc bpc" id="L52" title="1 of 2 branches missed.">				if (sum &gt; 0) random = ThreadLocalRandom.current().nextInt(sum) + 1;</span>
 <span class="nc" id="L53">				else random = 1;</span>
-<span class="nc bnc" id="L54" title="All 4 branches missed.">				while (p &lt; arrOcc.length &amp;&amp; find == false) {</span>
-<span class="nc" id="L55">					random = random - arrOcc[p];</span>
-<span class="nc bnc" id="L56" title="All 2 branches missed.">					if(random &lt;= 0){</span>
-<span class="nc" id="L57">						staList.get(l).getCode().add(arrtemp[p]);</span>
-<span class="nc" id="L58">						find = true;</span>
+<span class="pc bpc" id="L54" title="1 of 4 branches missed.">				while (p &lt; arrOcc.length &amp;&amp; find == false) {</span>
+<span class="fc" id="L55">					random = random - arrOcc[p];</span>
+<span class="fc bfc" id="L56" title="All 2 branches covered.">					if(random &lt;= 0){</span>
+<span class="fc" id="L57">						staList.get(l).getCode().add(arrtemp[p]);</span>
+<span class="fc" id="L58">						find = true;</span>
 					}
-<span class="nc" id="L60">					else p++;</span>
+<span class="fc" id="L60">					else p++;</span>
 				}
-<span class="nc bnc" id="L62" title="All 2 branches missed.">				if(find == false){</span>
+<span class="pc bpc" id="L62" title="1 of 2 branches missed.">				if(find == false){</span>
 <span class="nc" id="L63">					int bound = Strategy.getStrategy().getProblem().getCodification().getVariableCount() * 10;</span>
 <span class="nc bnc" id="L64" title="All 2 branches missed.">					int value = (bound &gt; 0) ? ThreadLocalRandom.current().nextInt(bound) : 0;</span>
 <span class="nc" id="L65">					staList.get(l).getCode().add(Integer.valueOf(value));</span>
@@ -67,20 +67,20 @@ import problem.definition.State;
 				
 			}
 		}
-<span class="nc" id="L70">		return staList;</span>
+<span class="fc" id="L70">		return staList;</span>
 	}
 	
 	// inicializa la lista de individuos
 		public List&lt;State&gt; listState(int countInd) {
-<span class="nc" id="L75">			List&lt;State&gt; staList = new ArrayList&lt;State&gt;(countInd);</span>
-<span class="nc bnc" id="L76" title="All 2 branches missed.">			for (int i = 0; i &lt; countInd; i++) {</span>
-<span class="nc" id="L77">				State state = new State();</span>
-<span class="nc" id="L78">				state.setCode(new ArrayList&lt;Object&gt;());</span>
-<span class="nc" id="L79">				state.setNumber(Strategy.getStrategy().getCountCurrent());</span>
-<span class="nc" id="L80">				state.setTypeGenerator(GeneratorType.DistributionEstimationAlgorithm);</span>
-<span class="nc" id="L81">				staList.add(state);</span>
+<span class="fc" id="L75">			List&lt;State&gt; staList = new ArrayList&lt;State&gt;(countInd);</span>
+<span class="fc bfc" id="L76" title="All 2 branches covered.">			for (int i = 0; i &lt; countInd; i++) {</span>
+<span class="fc" id="L77">				State state = new State();</span>
+<span class="fc" id="L78">				state.setCode(new ArrayList&lt;Object&gt;());</span>
+<span class="fc" id="L79">				state.setNumber(Strategy.getStrategy().getCountCurrent());</span>
+<span class="fc" id="L80">				state.setTypeGenerator(GeneratorType.DistributionEstimationAlgorithm);</span>
+<span class="fc" id="L81">				staList.add(state);</span>
 			}
-<span class="nc" id="L83">			return staList;</span>
+<span class="fc" id="L83">			return staList;</span>
 		}
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

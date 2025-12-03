@@ -10,14 +10,14 @@ import metaheuristics.generators.GeneratorType;
 
 
 
-<span class="nc" id="L13">public class FactoryGenerator implements IFFactoryGenerator {</span>
+<span class="fc" id="L13">public class FactoryGenerator implements IFFactoryGenerator {</span>
 
 	private Generator generator;
 	
 	public Generator createGenerator(GeneratorType generatorType) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
-<span class="nc" id="L18">		String className = &quot;metaheuristics.generators.&quot; + generatorType.toString();</span>
-<span class="nc" id="L19">		generator = (Generator) FactoryLoader.getInstance(className);</span>
-<span class="nc" id="L20">		return generator;</span>
+<span class="fc" id="L18">		String className = &quot;metaheuristics.generators.&quot; + generatorType.toString();</span>
+<span class="fc" id="L19">		generator = (Generator) FactoryLoader.getInstance(className);</span>
+<span class="fc" id="L20">		return generator;</span>
 	}
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

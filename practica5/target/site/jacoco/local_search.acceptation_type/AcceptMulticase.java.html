@@ -8,26 +8,26 @@ import java.util.concurrent.ThreadLocalRandom;
 
 import problem.definition.State;
 
-<span class="nc" id="L11">public class AcceptMulticase extends AcceptableCandidate {</span>
+<span class="fc" id="L11">public class AcceptMulticase extends AcceptableCandidate {</span>
 
 	@Override
 	public Boolean acceptCandidate(State stateCurrent, State stateCandidate) {
 		// TODO Auto-generated method stub
-<span class="nc" id="L16">		Boolean accept = false;</span>
-<span class="nc" id="L17">		List&lt;State&gt; list = Strategy.getStrategy().listRefPoblacFinal;</span>
+<span class="fc" id="L16">		Boolean accept = false;</span>
+<span class="fc" id="L17">		List&lt;State&gt; list = Strategy.getStrategy().listRefPoblacFinal;</span>
 		
-<span class="nc bnc" id="L19" title="All 2 branches missed.">		if(list.size() == 0){</span>
-<span class="nc" id="L20">			list.add(stateCurrent.clone());</span>
+<span class="pc bpc" id="L19" title="1 of 2 branches missed.">		if(list.size() == 0){</span>
+<span class="fc" id="L20">			list.add(stateCurrent.clone());</span>
 		}
-<span class="nc" id="L22">	Double T = MultiCaseSimulatedAnnealing.getTinitial();</span>
-<span class="nc" id="L23">		double pAccept = 0;</span>
+<span class="fc" id="L22">	Double T = MultiCaseSimulatedAnnealing.getTinitial();</span>
+<span class="fc" id="L23">		double pAccept = 0;</span>
 	// use ThreadLocalRandom to avoid creating a new Random instance on each call
-<span class="nc" id="L25">		Dominance dominance= new Dominance();</span>
+<span class="fc" id="L25">		Dominance dominance= new Dominance();</span>
 		//Verificando si la soluciï¿½n candidata domina a la soluciï¿½n actual
 		//Si la soluciï¿½n candidata domina a la soluciï¿½n actual
-<span class="nc bnc" id="L28" title="All 2 branches missed.">		if(dominance.dominance(stateCandidate, stateCurrent) == true){</span>
+<span class="pc bpc" id="L28" title="1 of 2 branches missed.">		if(dominance.dominance(stateCandidate, stateCurrent) == true){</span>
 			//Se asigna como soluciï¿½n actual la soluciï¿½n candidata con probabilidad 1
-<span class="nc" id="L30">			pAccept = 1; </span>
+<span class="fc" id="L30">			pAccept = 1; </span>
 		}
 <span class="nc bnc" id="L32" title="All 2 branches missed.">		else if(dominance.dominance(stateCandidate, stateCurrent)== false){	</span>
 <span class="nc bnc" id="L33" title="All 2 branches missed.">			if(dominanceCounter(stateCandidate, list) &gt; 0){</span>
@@ -74,12 +74,12 @@ import problem.definition.State;
 			}
 		}
 		//Generar un nï¿½mero aleatorio
-<span class="nc bnc" id="L77" title="All 2 branches missed.">			if((ThreadLocalRandom.current().nextFloat()) &lt; pAccept){</span>
+<span class="pc bpc" id="L77" title="1 of 2 branches missed.">			if((ThreadLocalRandom.current().nextFloat()) &lt; pAccept){</span>
 			// Don't assign to the parameter reference (dead store). The caller should handle state updates.
 			// Verificando que la soluciï¿½n candidata domina a alguna de las soluciones
-<span class="nc" id="L80">				accept = dominance.listDominance(stateCandidate, list);</span>
+<span class="fc" id="L80">				accept = dominance.listDominance(stateCandidate, list);</span>
 		}
-<span class="nc" id="L82">		return accept;</span>
+<span class="fc" id="L82">		return accept;</span>
 	}
 
 

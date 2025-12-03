@@ -27,14 +27,14 @@ public class MultiCaseSimulatedAnnealing extends Generator {
 	// Cooling factor: fixed constant for update rule. Set a conservative default.
 	public static final double alpha = 0.93;
 	// Make initial temperature private and provide accessors so it can be protected/validated.
-<span class="nc" id="L30">	private static Double tinitial = 250.0;</span>
-<span class="nc" id="L31">	public static final Double tfinal = 41.66;</span>
+<span class="fc" id="L30">	private static Double tinitial = 250.0;</span>
+<span class="fc" id="L31">	public static final Double tfinal = 41.66;</span>
 	static int countIterationsT;
     private int countRept;
     private GeneratorType typeGenerator;
-<span class="nc" id="L35">    private List&lt;State&gt; listStateReference = new ArrayList&lt;State&gt;();</span>
+<span class="fc" id="L35">    private List&lt;State&gt; listStateReference = new ArrayList&lt;State&gt;();</span>
     private float weight;
-<span class="nc" id="L37">	private List&lt;Float&gt; listTrace = new ArrayList&lt;Float&gt;();</span>
+<span class="fc" id="L37">	private List&lt;Float&gt; listTrace = new ArrayList&lt;Float&gt;();</span>
 
     public GeneratorType getTypeGenerator() {
 <span class="nc" id="L40">		return typeGenerator;</span>
@@ -46,7 +46,7 @@ public class MultiCaseSimulatedAnnealing extends Generator {
 
 	// Accessors for tinitial to avoid exposing a mutable static field directly.
 	public static Double getTinitial() {
-<span class="nc" id="L49">		return tinitial;</span>
+<span class="fc" id="L49">		return tinitial;</span>
 	}
 
 	public static void setTinitial(Double t) {
@@ -54,15 +54,15 @@ public class MultiCaseSimulatedAnnealing extends Generator {
 <span class="nc" id="L54">	}</span>
 
 	public MultiCaseSimulatedAnnealing(){
-<span class="nc" id="L57">    	super();</span>
-<span class="nc" id="L58">    	this.typeAcceptation = AcceptType.AcceptMulticase;</span>
-<span class="nc" id="L59">		this.strategy = StrategyType.NORMAL;</span>
-<span class="nc" id="L60">		this.typeCandidate = CandidateType.RandomCandidate;</span>
-<span class="nc" id="L61">		this.candidatevalue = new CandidateValue();</span>
-<span class="nc" id="L62">		this.typeGenerator = GeneratorType.MultiCaseSimulatedAnnealing;</span>
-<span class="nc" id="L63">		this.weight = 50;</span>
-<span class="nc" id="L64">		listTrace.add(weight);</span>
-<span class="nc" id="L65">    }</span>
+<span class="fc" id="L57">    	super();</span>
+<span class="fc" id="L58">    	this.typeAcceptation = AcceptType.AcceptMulticase;</span>
+<span class="fc" id="L59">		this.strategy = StrategyType.NORMAL;</span>
+<span class="fc" id="L60">		this.typeCandidate = CandidateType.RandomCandidate;</span>
+<span class="fc" id="L61">		this.candidatevalue = new CandidateValue();</span>
+<span class="fc" id="L62">		this.typeGenerator = GeneratorType.MultiCaseSimulatedAnnealing;</span>
+<span class="fc" id="L63">		this.weight = 50;</span>
+<span class="fc" id="L64">		listTrace.add(weight);</span>
+<span class="fc" id="L65">    }</span>
 
 	@Override
 	public State generate(Integer operatornumber) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {

@@ -28,9 +28,9 @@ public class MultiobjectiveTabuSearch extends Generator {
 	private State stateReferenceTS;
     private IFFactoryAcceptCandidate ifacceptCandidate;
     private GeneratorType typeGenerator;
-<span class="nc" id="L31">    private List&lt;State&gt; listStateReference = new ArrayList&lt;State&gt;();</span>
+<span class="fc" id="L31">    private List&lt;State&gt; listStateReference = new ArrayList&lt;State&gt;();</span>
     private float weight;
-<span class="nc" id="L33">	private List&lt;Float&gt; listTrace = new ArrayList&lt;Float&gt;();</span>
+<span class="fc" id="L33">	private List&lt;Float&gt; listTrace = new ArrayList&lt;Float&gt;();</span>
 
     public State getStateReferenceTS() {
 <span class="nc" id="L36">		return stateReferenceTS;</span>
@@ -49,16 +49,16 @@ public class MultiobjectiveTabuSearch extends Generator {
 <span class="nc" id="L49">	}</span>
 
 	public MultiobjectiveTabuSearch() {
-<span class="nc" id="L52">    	super();</span>
-<span class="nc" id="L53">		this.typeAcceptation = AcceptType.AcceptNotDominatedTabu;</span>
-<span class="nc" id="L54">		this.strategy = StrategyType.TABU;</span>
+<span class="fc" id="L52">    	super();</span>
+<span class="fc" id="L53">		this.typeAcceptation = AcceptType.AcceptNotDominatedTabu;</span>
+<span class="fc" id="L54">		this.strategy = StrategyType.TABU;</span>
 	// Use problem API directly when needed; avoid unused local variable
-<span class="nc" id="L56">		this.typeCandidate = CandidateType.RandomCandidate;</span>
-<span class="nc" id="L57">		this.candidatevalue = new CandidateValue();</span>
-<span class="nc" id="L58">		this.typeGenerator = GeneratorType.MultiobjectiveTabuSearch;</span>
-<span class="nc" id="L59">		this.weight = 50;</span>
-<span class="nc" id="L60">		listTrace.add(weight);</span>
-<span class="nc" id="L61">	}</span>
+<span class="fc" id="L56">		this.typeCandidate = CandidateType.RandomCandidate;</span>
+<span class="fc" id="L57">		this.candidatevalue = new CandidateValue();</span>
+<span class="fc" id="L58">		this.typeGenerator = GeneratorType.MultiobjectiveTabuSearch;</span>
+<span class="fc" id="L59">		this.weight = 50;</span>
+<span class="fc" id="L60">		listTrace.add(weight);</span>
+<span class="fc" id="L61">	}</span>
 
 	@Override
 	public State generate(Integer operatornumber) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
@@ -110,7 +110,7 @@ public class MultiobjectiveTabuSearch extends Generator {
 	
 	@Override
 	public GeneratorType getType() {
-<span class="nc" id="L113">		return this.typeGenerator;</span>
+<span class="fc" id="L113">		return this.typeGenerator;</span>
 	}
 
 	@Override
@@ -172,7 +172,7 @@ public class MultiobjectiveTabuSearch extends Generator {
 	public int[] getListCountGender() {
 		// TODO Auto-generated method stub
 		// This generator doesn't maintain listCount arrays; return empty array to avoid nulls
-<span class="nc" id="L175">		return new int[0];</span>
+<span class="fc" id="L175">		return new int[0];</span>
 	}
 
 	@Override

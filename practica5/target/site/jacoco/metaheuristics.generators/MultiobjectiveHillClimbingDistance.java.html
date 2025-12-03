@@ -25,10 +25,10 @@ public class MultiobjectiveHillClimbingDistance extends Generator{
 	protected State stateReferenceHC;
 	protected IFFactoryAcceptCandidate ifacceptCandidate;
 	protected GeneratorType generatortype;
-<span class="nc" id="L28">	protected List&lt;State&gt; listStateReference = new ArrayList&lt;State&gt;(); </span>
+<span class="fc" id="L28">	protected List&lt;State&gt; listStateReference = new ArrayList&lt;State&gt;(); </span>
 	protected float weight;
-<span class="nc" id="L30">	protected List&lt;Float&gt; listTrace = new ArrayList&lt;Float&gt;();</span>
-<span class="nc" id="L31">	private List&lt;State&gt; visitedState = new ArrayList&lt;State&gt;();</span>
+<span class="fc" id="L30">	protected List&lt;Float&gt; listTrace = new ArrayList&lt;Float&gt;();</span>
+<span class="fc" id="L31">	private List&lt;State&gt; visitedState = new ArrayList&lt;State&gt;();</span>
 	private static final int sizeNeighbors = 10;
 
 	/**
@@ -38,20 +38,20 @@ public class MultiobjectiveHillClimbingDistance extends Generator{
 <span class="nc" id="L38">		return sizeNeighbors;</span>
 	}
 	//Lista que contiene las distancias de cada soluciï¿½n del frente de Pareto estimado
-<span class="nc" id="L41">	static List&lt;Double&gt; distanceSolution = new ArrayList&lt;Double&gt;();</span>
+<span class="fc" id="L41">	static List&lt;Double&gt; distanceSolution = new ArrayList&lt;Double&gt;();</span>
 
 
 	public MultiobjectiveHillClimbingDistance() {
-<span class="nc" id="L45">		super();</span>
-<span class="nc" id="L46">		this.typeAcceptation = AcceptType.AcceptNotDominated;</span>
-<span class="nc" id="L47">		this.strategy = StrategyType.NORMAL;</span>
-<span class="nc" id="L48">		this.typeCandidate = CandidateType.NotDominatedCandidate;</span>
-<span class="nc" id="L49">		this.candidatevalue = new CandidateValue();</span>
-<span class="nc" id="L50">	this.generatortype = GeneratorType.MultiobjectiveHillClimbingDistance;</span>
-<span class="nc" id="L51">	this.stateReferenceHC = new State();</span>
-<span class="nc" id="L52">		this.weight = 50;</span>
-<span class="nc" id="L53">		listTrace.add(weight);</span>
-<span class="nc" id="L54">	}</span>
+<span class="fc" id="L45">		super();</span>
+<span class="fc" id="L46">		this.typeAcceptation = AcceptType.AcceptNotDominated;</span>
+<span class="fc" id="L47">		this.strategy = StrategyType.NORMAL;</span>
+<span class="fc" id="L48">		this.typeCandidate = CandidateType.NotDominatedCandidate;</span>
+<span class="fc" id="L49">		this.candidatevalue = new CandidateValue();</span>
+<span class="fc" id="L50">	this.generatortype = GeneratorType.MultiobjectiveHillClimbingDistance;</span>
+<span class="fc" id="L51">	this.stateReferenceHC = new State();</span>
+<span class="fc" id="L52">		this.weight = 50;</span>
+<span class="fc" id="L53">		listTrace.add(weight);</span>
+<span class="fc" id="L54">	}</span>
 
 	@Override
 	public State generate(Integer operatornumber) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {

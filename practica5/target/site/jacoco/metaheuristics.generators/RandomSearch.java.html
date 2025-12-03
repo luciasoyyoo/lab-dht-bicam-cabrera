@@ -54,11 +54,11 @@ public class RandomSearch extends Generator {
 	@Override
 	public State generate(Integer operatornumber) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
 		//ArrayList&lt;State&gt;list =new ArrayList&lt;State&gt;();
-<span class="nc" id="L57">		List&lt;State&gt; neighborhood = Strategy.getStrategy().getProblem().getOperator().generateRandomState(operatornumber);</span>
-<span class="nc" id="L58">	    State statecandidate = candidatevalue.stateCandidate(stateReferenceRS, typeCandidate, strategy, operatornumber, neighborhood);</span>
-<span class="nc bnc" id="L59" title="All 2 branches missed.">		if(GeneticAlgorithm.countRef != 0 || EvolutionStrategies.countRef != 0 || DistributionEstimationAlgorithm.countRef != 0 || ParticleSwarmOptimization.getCountRef() != 0)</span>
-<span class="nc" id="L60">	    	listStateReference.add(statecandidate);</span>
-<span class="nc" id="L61">	    return statecandidate;</span>
+<span class="fc" id="L57">		List&lt;State&gt; neighborhood = Strategy.getStrategy().getProblem().getOperator().generateRandomState(operatornumber);</span>
+<span class="fc" id="L58">	    State statecandidate = candidatevalue.stateCandidate(stateReferenceRS, typeCandidate, strategy, operatornumber, neighborhood);</span>
+<span class="fc bfc" id="L59" title="All 2 branches covered.">		if(GeneticAlgorithm.countRef != 0 || EvolutionStrategies.countRef != 0 || DistributionEstimationAlgorithm.countRef != 0 || ParticleSwarmOptimization.getCountRef() != 0)</span>
+<span class="fc" id="L60">	    	listStateReference.add(statecandidate);</span>
+<span class="fc" id="L61">	    return statecandidate;</span>
 	}
 
 	@Override
@@ -135,7 +135,7 @@ public class RandomSearch extends Generator {
 	@Override
 	public int[] getListCountGender() {
 		// TODO Auto-generated method stub
-<span class="nc bnc" id="L138" title="All 2 branches missed.">		return (this.listCountGender == null) ? new int[0] : Arrays.copyOf(this.listCountGender, this.listCountGender.length);</span>
+<span class="pc bpc" id="L138" title="1 of 2 branches missed.">		return (this.listCountGender == null) ? new int[0] : Arrays.copyOf(this.listCountGender, this.listCountGender.length);</span>
 	}
 
 	@Override

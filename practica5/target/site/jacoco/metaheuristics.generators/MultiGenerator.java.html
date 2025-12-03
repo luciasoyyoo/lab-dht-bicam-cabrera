@@ -40,16 +40,16 @@ public class MultiGenerator extends Generator implements Cloneable {
 <span class="nc" id="L40">	}</span>
 	
 	public static void initializeListGenerator()throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
-<span class="nc" id="L43">		listGenerators = new Generator[4];</span>
-<span class="nc" id="L44">		Generator generator1 = new HillClimbing();</span>
-<span class="nc" id="L45">		Generator generator2 = new EvolutionStrategies();</span>
-<span class="nc" id="L46">		Generator generator3 = new LimitThreshold();</span>
-<span class="nc" id="L47">		Generator generator4 = new GeneticAlgorithm();</span>
-<span class="nc" id="L48">		listGenerators[0] = generator1;</span>
-<span class="nc" id="L49">		listGenerators[1] = generator2;</span>
-<span class="nc" id="L50">		listGenerators[2] = generator3;</span>
-<span class="nc" id="L51">		listGenerators[3] = generator4;</span>
-<span class="nc" id="L52">	}</span>
+<span class="fc" id="L43">		listGenerators = new Generator[4];</span>
+<span class="fc" id="L44">		Generator generator1 = new HillClimbing();</span>
+<span class="fc" id="L45">		Generator generator2 = new EvolutionStrategies();</span>
+<span class="fc" id="L46">		Generator generator3 = new LimitThreshold();</span>
+<span class="fc" id="L47">		Generator generator4 = new GeneticAlgorithm();</span>
+<span class="fc" id="L48">		listGenerators[0] = generator1;</span>
+<span class="fc" id="L49">		listGenerators[1] = generator2;</span>
+<span class="fc" id="L50">		listGenerators[2] = generator3;</span>
+<span class="fc" id="L51">		listGenerators[3] = generator4;</span>
+<span class="fc" id="L52">	}</span>
 	
 	public static void initializeGenerators() throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
 //		Strategy.getStrategy().initializeGenerators();
@@ -149,11 +149,11 @@ public class MultiGenerator extends Generator implements Cloneable {
 
 	public static void setListGenerators(Generator[] listGenerators) {
 		// store a defensive copy to avoid keeping a reference to caller's mutable array
-<span class="pc bpc" id="L152" title="1 of 2 branches missed.">		MultiGenerator.listGenerators = (listGenerators == null) ? null : Arrays.copyOf(listGenerators, listGenerators.length);</span>
+<span class="fc bfc" id="L152" title="All 2 branches covered.">		MultiGenerator.listGenerators = (listGenerators == null) ? null : Arrays.copyOf(listGenerators, listGenerators.length);</span>
 <span class="fc" id="L153">	}</span>
 
 	public static Generator getActiveGenerator() {
-<span class="nc" id="L156">		return activeGenerator;</span>
+<span class="fc" id="L156">		return activeGenerator;</span>
 	}
 
 	public static void setActiveGenerator(Generator activeGenerator) {
@@ -176,11 +176,11 @@ public class MultiGenerator extends Generator implements Cloneable {
 			IllegalAccessException, InvocationTargetException,
 			NoSuchMethodException {
 	// TODO Auto-generated method stub
-<span class="nc" id="L179">	Strategy.getStrategy().generator = roulette();</span>
-<span class="nc" id="L180">	MultiGenerator.setActiveGenerator(Strategy.getStrategy().generator);</span>
-<span class="nc" id="L181">		activeGenerator.countGender++;</span>
-<span class="nc" id="L182">		State state = Strategy.getStrategy().generator.generate(1);</span>
-<span class="nc" id="L183">		return state;</span>
+<span class="fc" id="L179">	Strategy.getStrategy().generator = roulette();</span>
+<span class="fc" id="L180">	MultiGenerator.setActiveGenerator(Strategy.getStrategy().generator);</span>
+<span class="fc" id="L181">		activeGenerator.countGender++;</span>
+<span class="fc" id="L182">		State state = Strategy.getStrategy().generator.generate(1);</span>
+<span class="fc" id="L183">		return state;</span>
 	}
 
 	@Override
@@ -203,7 +203,7 @@ public class MultiGenerator extends Generator implements Cloneable {
 
 	@Override
 	public GeneratorType getType() {
-<span class="nc" id="L206">		return this.generatortype;</span>
+<span class="fc" id="L206">		return this.generatortype;</span>
 	}
 
 	@Override

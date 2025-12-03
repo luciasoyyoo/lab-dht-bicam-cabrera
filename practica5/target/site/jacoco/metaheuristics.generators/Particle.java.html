@@ -31,7 +31,7 @@ public class Particle extends Generator {
 <span class="fc" id="L31">	}</span>
 
 	public ArrayList&lt;Object&gt; getVelocity() {
-<span class="nc" id="L34">		return velocity;</span>
+<span class="fc" id="L34">		return velocity;</span>
 	}
 
 	public void setVelocity(ArrayList&lt;Object&gt; velocity) {
@@ -47,7 +47,7 @@ public class Particle extends Generator {
 <span class="nc" id="L47">	}</span>
 
 	public State getStateActual() {
-<span class="nc" id="L50">		return stateActual;</span>
+<span class="fc" id="L50">		return stateActual;</span>
 	}
 
 	public void setStateActual(State stateActual) {
@@ -62,11 +62,11 @@ public class Particle extends Generator {
 			NoSuchMethodException {
 		// TODO Auto-generated method stub
 		
-<span class="nc" id="L65">		ArrayList&lt;Object&gt; actualVelocity = UpdateVelocity();</span>
-<span class="nc" id="L66">		ArrayList&lt;Object&gt; newCode = UpdateCode(actualVelocity);</span>
-<span class="nc" id="L67">		this.velocity = actualVelocity;</span>
-<span class="nc" id="L68">		this.stateActual.setCode(newCode);</span>
-<span class="nc" id="L69">		return null;</span>
+<span class="fc" id="L65">		ArrayList&lt;Object&gt; actualVelocity = UpdateVelocity();</span>
+<span class="fc" id="L66">		ArrayList&lt;Object&gt; newCode = UpdateCode(actualVelocity);</span>
+<span class="fc" id="L67">		this.velocity = actualVelocity;</span>
+<span class="fc" id="L68">		this.stateActual.setCode(newCode);</span>
+<span class="fc" id="L69">		return null;</span>
 	}
 	
 	
@@ -78,13 +78,13 @@ public class Particle extends Generator {
 <span class="fc" id="L78">    	int learning = ParticleSwarmOptimization.learning1 + ParticleSwarmOptimization.learning2; // ratios de aprendizaje cognitivo y social</span>
 <span class="fc" id="L79">    	ParticleSwarmOptimization.constriction = 2/(Math.abs(2 - learning-Math.sqrt((learning * learning)- 4 * learning)));   // Factor de costriccion</span>
 <span class="fc" id="L80">    	ArrayList&lt;Object&gt; actualVelocity = new ArrayList&lt;Object&gt;();</span>
-<span class="pc bpc" id="L81" title="1 of 2 branches missed.">    	if(velocity.isEmpty()){</span>
-<span class="nc bnc" id="L82" title="All 2 branches missed.">    		for (int i = 0; i &lt; Strategy.getStrategy().getProblem().getState().getCode().size(); i++){</span>
-<span class="nc" id="L83">    			velocity.add(0.0);</span>
+<span class="fc bfc" id="L81" title="All 2 branches covered.">    	if(velocity.isEmpty()){</span>
+<span class="fc bfc" id="L82" title="All 2 branches covered.">    		for (int i = 0; i &lt; Strategy.getStrategy().getProblem().getState().getCode().size(); i++){</span>
+<span class="fc" id="L83">    			velocity.add(0.0);</span>
     		}
     	}
     	// recorre el vector velocidad y lo actualiza
-<span class="pc bpc" id="L87" title="1 of 2 branches missed.">    	for (int i = 0; i &lt; Strategy.getStrategy().getProblem().getState().getCode().size(); i++) {  </span>
+<span class="pc bfc" id="L87" title="All 2 branches covered.">    	for (int i = 0; i &lt; Strategy.getStrategy().getProblem().getState().getCode().size(); i++) {  </span>
     		// cumulo donde se encuentra la particula
 <span class="nc" id="L89">            	int swarm = ParticleSwarmOptimization.getCountParticle() / ParticleSwarmOptimization.countParticleBySwarm; </span>
 <span class="nc" id="L90">           	inertia = w * (Double)velocity.get(i);  </span>
@@ -104,17 +104,17 @@ public class Particle extends Generator {
 			}
     		return binaryVelocity;
     	}*/
-<span class="nc" id="L107">        return actualVelocity;</span>
+<span class="fc" id="L107">        return actualVelocity;</span>
     }
 	
 	private ArrayList&lt;Object&gt; UpdateCode(ArrayList&lt;Object&gt; actualVelocity) {  // CALCULO DE LA NUEA POSICION DE LA PARTICULA
-<span class="nc" id="L111">    	ArrayList&lt;Object&gt; newCode = new ArrayList&lt;Object&gt;();</span>
+<span class="fc" id="L111">    	ArrayList&lt;Object&gt; newCode = new ArrayList&lt;Object&gt;();</span>
 		//poner la condicion de si se esta trabajando con valores continuos o binarios
 		if(ParticleSwarmOptimization.binary == false){	
-<span class="nc bnc" id="L114" title="All 2 branches missed.">			for (int i = 0; i &lt; stateActual.getCode().size(); i++) {</span>
+<span class="pc bpc" id="L114" title="1 of 2 branches missed.">			for (int i = 0; i &lt; stateActual.getCode().size(); i++) {</span>
 <span class="nc" id="L115">					newCode.add( (Double)(stateActual.getCode().get(i)) + (Double)(actualVelocity.get(i)) );</span>
 		    }
-<span class="nc" id="L117">			return newCode;</span>
+<span class="fc" id="L117">			return newCode;</span>
 	    }
 		 else{                                                  //cï¿½lculo de la posicion para codificacion binaria
 			ArrayList&lt;Object&gt; binaryCode = new ArrayList&lt;Object&gt;();

@@ -99,27 +99,27 @@ public class DistributionEstimationAlgorithm extends Generator {
     	//***************************version 1.0
     	//ArrayList&lt;State&gt; listcandidate = new ArrayList&lt;State&gt;();//(State) Strategy.getStrategy().getProblem().getState().clone()
 		
-<span class="nc" id="L102">    	List&lt;State&gt; fathers = getfathersList();</span>
-<span class="nc" id="L103">		iffsampling = new FactorySampling();</span>
-<span class="nc" id="L104">    	Sampling samplingG = iffsampling.createSampling(Samplingtype);</span>
-<span class="nc" id="L105">    	List&lt;State&gt; ind = samplingG.sampling(fathers, operatornumber);</span>
-<span class="nc" id="L106">    	State candidate = null;</span>
-<span class="nc bnc" id="L107" title="All 2 branches missed.">    	if(ind.size() &gt; 1){</span>
-<span class="nc bnc" id="L108" title="All 2 branches missed.">    		for (int i = 0; i &lt; ind.size(); i++) {</span>
-<span class="nc" id="L109">    			double evaluation = Strategy.getStrategy().getProblem().getFunction().get(0).Evaluation(ind.get(i));</span>
-<span class="nc" id="L110">    			ArrayList&lt;Double&gt; listEval = new ArrayList&lt;Double&gt;();</span>
-<span class="nc" id="L111">    			listEval.add(evaluation);</span>
-<span class="nc" id="L112">    			ind.get(0).setEvaluation(listEval);</span>
+<span class="fc" id="L102">    	List&lt;State&gt; fathers = getfathersList();</span>
+<span class="fc" id="L103">		iffsampling = new FactorySampling();</span>
+<span class="fc" id="L104">    	Sampling samplingG = iffsampling.createSampling(Samplingtype);</span>
+<span class="fc" id="L105">    	List&lt;State&gt; ind = samplingG.sampling(fathers, operatornumber);</span>
+<span class="fc" id="L106">    	State candidate = null;</span>
+<span class="fc bfc" id="L107" title="All 2 branches covered.">    	if(ind.size() &gt; 1){</span>
+<span class="pc bpc" id="L108" title="1 of 2 branches missed.">    		for (int i = 0; i &lt; ind.size(); i++) {</span>
+<span class="fc" id="L109">    			double evaluation = Strategy.getStrategy().getProblem().getFunction().get(0).Evaluation(ind.get(i));</span>
+<span class="fc" id="L110">    			ArrayList&lt;Double&gt; listEval = new ArrayList&lt;Double&gt;();</span>
+<span class="fc" id="L111">    			listEval.add(evaluation);</span>
+<span class="fc" id="L112">    			ind.get(0).setEvaluation(listEval);</span>
     		}
 <span class="nc" id="L114">        	candidate = maxValue(ind);</span>
     	}
     	else{
-<span class="nc" id="L117">    		candidate = ind.get(0);</span>
+<span class="fc" id="L117">    		candidate = ind.get(0);</span>
     	}
 //    	sonList = ind;
     	//listcandidate.add(candidate);
        // this.candidate = candidate;
-<span class="nc" id="L122">    	return candidate;</span>
+<span class="fc" id="L122">    	return candidate;</span>
     	
     }
     		
@@ -176,8 +176,8 @@ public class DistributionEstimationAlgorithm extends Generator {
 		/*if(RandomSearch.listStateReference.size() == 0){
 			return this.referenceList = new ArrayList&lt;State&gt;();
 		}*/
-<span class="pc bpc" id="L179" title="2 of 4 branches missed.">		while((found.equals(false)) &amp;&amp; (Strategy.getStrategy().mapGenerators.size() &gt; count)){</span>
-<span class="nc bnc" id="L180" title="All 2 branches missed.">			if(key.get(count).equals(GeneratorType.DistributionEstimationAlgorithm.toString())){</span>
+<span class="pc bpc" id="L179" title="1 of 4 branches missed.">		while((found.equals(false)) &amp;&amp; (Strategy.getStrategy().mapGenerators.size() &gt; count)){</span>
+<span class="pc bpc" id="L180" title="1 of 2 branches missed.">			if(key.get(count).equals(GeneratorType.DistributionEstimationAlgorithm.toString())){</span>
 <span class="nc" id="L181">				GeneratorType keyGenerator = GeneratorType.valueOf(String.valueOf(key.get(count)));</span>
 <span class="nc" id="L182">				DistributionEstimationAlgorithm generator = (DistributionEstimationAlgorithm)Strategy.getStrategy().mapGenerators.get(keyGenerator);</span>
 <span class="nc bnc" id="L183" title="All 2 branches missed.">				if(generator.getListReference().isEmpty()){</span>
@@ -196,7 +196,7 @@ public class DistributionEstimationAlgorithm extends Generator {
 				}
 <span class="nc" id="L197">			    found = true;</span>
 			}
-<span class="nc" id="L199">			count++;</span>
+<span class="fc" id="L199">			count++;</span>
 		}
 <span class="fc" id="L201">		return referenceList;</span>
 	}
@@ -218,11 +218,11 @@ public class DistributionEstimationAlgorithm extends Generator {
 <span class="nc" id="L218">	}</span>
 
 	public List&lt;State&gt; getfathersList() throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
-<span class="nc" id="L221">		List&lt;State&gt; refList = new ArrayList&lt;State&gt;(this.referenceList); </span>
-<span class="nc" id="L222">    	iffatherselection = new FactoryFatherSelection();</span>
-<span class="nc" id="L223">    	FatherSelection selection = iffatherselection.createSelectFather(selectionType);</span>
-<span class="nc" id="L224">    	List&lt;State&gt; fathers = selection.selection(refList, truncation);</span>
-<span class="nc" id="L225">    	return fathers;</span>
+<span class="fc" id="L221">		List&lt;State&gt; refList = new ArrayList&lt;State&gt;(this.referenceList); </span>
+<span class="fc" id="L222">    	iffatherselection = new FactoryFatherSelection();</span>
+<span class="fc" id="L223">    	FatherSelection selection = iffatherselection.createSelectFather(selectionType);</span>
+<span class="fc" id="L224">    	List&lt;State&gt; fathers = selection.selection(refList, truncation);</span>
+<span class="fc" id="L225">    	return fathers;</span>
 	}
 
 	@Override

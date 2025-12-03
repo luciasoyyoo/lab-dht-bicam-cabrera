@@ -14,7 +14,7 @@ import problem.definition.State;
 	@Override
 	public State stateSearch(List&lt;State&gt; listNeighborhood) {
 <span class="fc" id="L16">		int size = listNeighborhood.size();</span>
-<span class="pc bpc" id="L17" title="1 of 2 branches missed.">		int pos = (size &gt; 0) ? ThreadLocalRandom.current().nextInt(size) : 0;</span>
+<span class="fc bfc" id="L17" title="All 2 branches covered.">		int pos = (size &gt; 0) ? ThreadLocalRandom.current().nextInt(size) : 0;</span>
 <span class="fc" id="L18">		State stateAleatory = listNeighborhood.get(pos);</span>
 <span class="fc" id="L19">		return stateAleatory;</span>
 	}
