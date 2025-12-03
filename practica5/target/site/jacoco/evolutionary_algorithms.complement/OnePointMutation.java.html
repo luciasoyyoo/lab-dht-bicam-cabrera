@@ -4,18 +4,18 @@
 import metaheurictics.strategy.Strategy;
 import problem.definition.State;
 
-<span class="nc" id="L7">public class OnePointMutation extends Mutation {</span>
+<span class="fc" id="L7">public class OnePointMutation extends Mutation {</span>
 
 	@Override
 	public State mutation(State state, double PM) {
-<span class="nc" id="L11">		double probM = (double)(Math.random() * (double)(1));</span>
-<span class="nc bnc" id="L12" title="All 2 branches missed.">		if(PM &gt;= probM)</span>
+<span class="fc" id="L11">		double probM = (double)(Math.random() * (double)(1));</span>
+<span class="pc bpc" id="L12" title="1 of 2 branches missed.">		if(PM &gt;= probM)</span>
 		{
 <span class="nc" id="L14">			Object key = Strategy.getStrategy().getProblem().getCodification().getAleatoryKey();</span>
 <span class="nc" id="L15">			Object value = Strategy.getStrategy().getProblem().getCodification().getVariableAleatoryValue((Integer)key);</span>
 <span class="nc" id="L16">			state.getCode().set((Integer) key, value);</span>
 		}
-<span class="nc" id="L18">		return state;</span>
+<span class="fc" id="L18">		return state;</span>
 	}
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

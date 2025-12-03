@@ -11,13 +11,13 @@ import problem.definition.Problem;
 import problem.definition.State;
 import problem.definition.Problem.ProblemType;
 
-<span class="nc" id="L14">public class AcceptBest extends AcceptableCandidate {</span>
+<span class="fc" id="L14">public class AcceptBest extends AcceptableCandidate {</span>
 
 	@Override
 	public Boolean acceptCandidate(State stateCurrent, State stateCandidate) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
-<span class="nc" id="L18">		Boolean accept = null;</span>
-<span class="nc" id="L19">		Problem problem = Strategy.getStrategy().getProblem();</span>
-<span class="nc bnc" id="L20" title="All 2 branches missed.">		if(problem.getTypeProblem().equals(ProblemType.Maximizar)) {</span>
+<span class="fc" id="L18">		Boolean accept = null;</span>
+<span class="fc" id="L19">		Problem problem = Strategy.getStrategy().getProblem();</span>
+<span class="pc bpc" id="L20" title="1 of 2 branches missed.">		if(problem.getTypeProblem().equals(ProblemType.Maximizar)) {</span>
 <span class="nc bnc" id="L21" title="All 2 branches missed.">			if (stateCandidate.getEvaluation().get(0) &gt;= stateCurrent.getEvaluation().get(0)) {</span>
 <span class="nc" id="L22">				accept = true;</span>
 			} else {

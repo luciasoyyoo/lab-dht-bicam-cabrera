@@ -36,9 +36,9 @@ public class LimitThreshold extends Generator{
 	
 	//problemas dinamicos
 	//problemas dinamicos: use instance fields from Generator (countGender, countBetterGender)
-<span class="nc" id="L39">	private int[] listCountBetterGender = new int[10];</span>
-<span class="nc" id="L40">	private int[] listCountGender = new int[10];</span>
-<span class="nc" id="L41">	private float[] listTrace = new float[1200000];</span>
+<span class="fc" id="L39">	private int[] listCountBetterGender = new int[10];</span>
+<span class="fc" id="L40">	private int[] listCountGender = new int[10];</span>
+<span class="fc" id="L41">	private float[] listTrace = new float[1200000];</span>
 	
 	public GeneratorType getTypeGenerator() {
 <span class="nc" id="L44">		return typeGenerator;</span>
@@ -49,28 +49,28 @@ public class LimitThreshold extends Generator{
 <span class="nc" id="L49">	}</span>
 
 	public LimitThreshold() {
-<span class="nc" id="L52">		super();</span>
-<span class="nc" id="L53">		this.typeAcceptation = AcceptType.AcceptNotBadU;</span>
-<span class="nc" id="L54">		this.strategy = StrategyType.NORMAL;</span>
+<span class="fc" id="L52">		super();</span>
+<span class="fc" id="L53">		this.typeAcceptation = AcceptType.AcceptNotBadU;</span>
+<span class="fc" id="L54">		this.strategy = StrategyType.NORMAL;</span>
 
 
-<span class="nc" id="L57">		Problem problem = Strategy.getStrategy().getProblem();</span>
+<span class="fc" id="L57">		Problem problem = Strategy.getStrategy().getProblem();</span>
 
-<span class="nc bnc" id="L59" title="All 2 branches missed.">		if(problem.getTypeProblem().equals(ProblemType.Maximizar)) {</span>
-<span class="nc" id="L60">			this.typeCandidate = CandidateType.GreaterCandidate;</span>
+<span class="pc bpc" id="L59" title="1 of 2 branches missed.">		if(problem.getTypeProblem().equals(ProblemType.Maximizar)) {</span>
+<span class="fc" id="L60">			this.typeCandidate = CandidateType.GreaterCandidate;</span>
 		}
 		else{
 <span class="nc" id="L63">			this.typeCandidate = CandidateType.SmallerCandidate;</span>
 		}
 
-<span class="nc" id="L66">		this.candidatevalue = new CandidateValue();</span>
-<span class="nc" id="L67">		this.typeGenerator = GeneratorType.LimitThreshold;</span>
-<span class="nc" id="L68">		this.weight = (float) 50.0;</span>
-<span class="nc" id="L69">		listTrace[0] = weight;</span>
-<span class="nc" id="L70">		listCountBetterGender[0] = 0;</span>
-<span class="nc" id="L71">		listCountGender[0] = 0;</span>
+<span class="fc" id="L66">		this.candidatevalue = new CandidateValue();</span>
+<span class="fc" id="L67">		this.typeGenerator = GeneratorType.LimitThreshold;</span>
+<span class="fc" id="L68">		this.weight = (float) 50.0;</span>
+<span class="fc" id="L69">		listTrace[0] = weight;</span>
+<span class="fc" id="L70">		listCountBetterGender[0] = 0;</span>
+<span class="fc" id="L71">		listCountGender[0] = 0;</span>
 
-<span class="nc" id="L73">	}</span>
+<span class="fc" id="L73">	}</span>
 	@Override
 	public State generate(Integer operatornumber) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
 <span class="nc" id="L76">		List&lt;State&gt; neighborhood = Strategy.getStrategy().getProblem().getOperator().generatedNewState(stateReferenceLT, operatornumber);</span>
@@ -108,7 +108,7 @@ public class LimitThreshold extends Generator{
 
 	@Override
 	public GeneratorType getType() {
-<span class="nc" id="L111">		return this.typeGenerator;</span>
+<span class="fc" id="L111">		return this.typeGenerator;</span>
 	}
 
 	@Override
@@ -134,7 +134,7 @@ public class LimitThreshold extends Generator{
 
 	public float getWeight() {
 		// TODO Auto-generated method stub
-<span class="nc" id="L137">		return this.weight;</span>
+<span class="fc" id="L137">		return this.weight;</span>
 	}
 
 	@Override
@@ -159,7 +159,7 @@ public class LimitThreshold extends Generator{
 	@Override
 	public float[] getTrace() {
 		// TODO Auto-generated method stub
-<span class="nc bnc" id="L162" title="All 2 branches missed.">		return (this.listTrace == null) ? new float[0] : Arrays.copyOf(this.listTrace, this.listTrace.length);</span>
+<span class="pc bpc" id="L162" title="1 of 2 branches missed.">		return (this.listTrace == null) ? new float[0] : Arrays.copyOf(this.listTrace, this.listTrace.length);</span>
 	}
 
 }

@@ -27,8 +27,8 @@ import factory_method.FactorySampling;
 public class DistributionEstimationAlgorithm extends Generator {
 
 	private State stateReferenceDA;
-<span class="nc" id="L30">	private List&lt;State&gt; referenceList = new ArrayList&lt;State&gt;(); </span>
-<span class="nc" id="L31">	private static final List&lt;State&gt; sonList = new ArrayList&lt;State&gt;(); </span>
+<span class="fc" id="L30">	private List&lt;State&gt; referenceList = new ArrayList&lt;State&gt;(); </span>
+<span class="fc" id="L31">	private static final List&lt;State&gt; sonList = new ArrayList&lt;State&gt;(); </span>
 	private IFFactoryFatherSelection iffatherselection;
 	private IFFSampling iffsampling;
 	private IFFactoryReplace iffreplace;
@@ -36,8 +36,8 @@ public class DistributionEstimationAlgorithm extends Generator {
 	private SamplingType Samplingtype;
 	
 //	private ReplaceType replaceType;
-<span class="nc" id="L39">	public static final ReplaceType replaceType = ReplaceType.GenerationalReplace;</span>
-<span class="nc" id="L40">	public static final SelectionType selectionType = SelectionType.TruncationSelection;</span>
+<span class="fc" id="L39">	public static final ReplaceType replaceType = ReplaceType.GenerationalReplace;</span>
+<span class="fc" id="L40">	public static final SelectionType selectionType = SelectionType.TruncationSelection;</span>
 	
 	private GeneratorType generatorType;
 	//private ProblemState candidate;
@@ -46,33 +46,33 @@ public class DistributionEstimationAlgorithm extends Generator {
 	private float weight;
 	
 	//problemas dinamicos: use counters declared in superclass `Generator`
-<span class="nc" id="L49">	private int[] listCountBetterGender = new int[10];</span>
-<span class="nc" id="L50">	private int[] listCountGender = new int[10];</span>
-<span class="nc" id="L51">	private float[] listTrace = new float[1200000];</span>
+<span class="fc" id="L49">	private int[] listCountBetterGender = new int[10];</span>
+<span class="fc" id="L50">	private int[] listCountGender = new int[10];</span>
+<span class="fc" id="L51">	private float[] listTrace = new float[1200000];</span>
 	
 	
 	public DistributionEstimationAlgorithm() {
-<span class="nc" id="L55">		super();</span>
-<span class="nc" id="L56">		this.referenceList = getListStateRef(); // llamada al mï¿½todo que devuelve la lista. </span>
-<span class="nc" id="L57">		this.generatorType = GeneratorType.DistributionEstimationAlgorithm;</span>
-<span class="nc" id="L58">		this.distributionType = DistributionType.Univariate;</span>
-<span class="nc" id="L59">		this.Samplingtype = SamplingType.ProbabilisticSampling;</span>
-<span class="nc" id="L60">		this.weight = 50;</span>
-<span class="nc" id="L61">		listTrace[0] = weight;</span>
-<span class="nc" id="L62">		listCountBetterGender[0] = 0;</span>
-<span class="nc" id="L63">		listCountGender[0] = 0;</span>
-<span class="nc" id="L64">	}</span>
+<span class="fc" id="L55">		super();</span>
+<span class="fc" id="L56">		this.referenceList = getListStateRef(); // llamada al mï¿½todo que devuelve la lista. </span>
+<span class="fc" id="L57">		this.generatorType = GeneratorType.DistributionEstimationAlgorithm;</span>
+<span class="fc" id="L58">		this.distributionType = DistributionType.Univariate;</span>
+<span class="fc" id="L59">		this.Samplingtype = SamplingType.ProbabilisticSampling;</span>
+<span class="fc" id="L60">		this.weight = 50;</span>
+<span class="fc" id="L61">		listTrace[0] = weight;</span>
+<span class="fc" id="L62">		listCountBetterGender[0] = 0;</span>
+<span class="fc" id="L63">		listCountGender[0] = 0;</span>
+<span class="fc" id="L64">	}</span>
 	
 	public State maxValue(List&lt;State&gt; listInd) {
-<span class="nc" id="L67">		State state = new State(listInd.get(0));</span>
-<span class="nc" id="L68">		double max = state.getEvaluation().get(0);</span>
-<span class="nc bnc" id="L69" title="All 2 branches missed.">		for (int i = 1; i &lt; listInd.size(); i++) {</span>
-<span class="nc bnc" id="L70" title="All 2 branches missed.">			if (listInd.get(i).getEvaluation().get(0) &gt; max) {</span>
-<span class="nc" id="L71">				max = listInd.get(i).getEvaluation().get(0);</span>
-<span class="nc" id="L72">				state = new State(listInd.get(i));</span>
+<span class="fc" id="L67">		State state = new State(listInd.get(0));</span>
+<span class="fc" id="L68">		double max = state.getEvaluation().get(0);</span>
+<span class="fc bfc" id="L69" title="All 2 branches covered.">		for (int i = 1; i &lt; listInd.size(); i++) {</span>
+<span class="fc bfc" id="L70" title="All 2 branches covered.">			if (listInd.get(i).getEvaluation().get(0) &gt; max) {</span>
+<span class="fc" id="L71">				max = listInd.get(i).getEvaluation().get(0);</span>
+<span class="fc" id="L72">				state = new State(listInd.get(i));</span>
 			}
 		}
-<span class="nc" id="L75">		return state;</span>
+<span class="fc" id="L75">		return state;</span>
 	}
 	
 	@Override
@@ -125,20 +125,20 @@ public class DistributionEstimationAlgorithm extends Generator {
     		
 	@Override
 	public State getReference() {
-<span class="nc" id="L128">		stateReferenceDA = referenceList.get(0);</span>
-<span class="nc bnc" id="L129" title="All 2 branches missed.">		if(Strategy.getStrategy().getProblem().getTypeProblem().equals(ProblemType.Maximizar)){</span>
-<span class="nc bnc" id="L130" title="All 2 branches missed.">			for (int i = 1; i &lt; referenceList.size(); i++) {</span>
-<span class="nc bnc" id="L131" title="All 2 branches missed.">				if(stateReferenceDA.getEvaluation().get(0) &lt; referenceList.get(i).getEvaluation().get(0))</span>
-<span class="nc" id="L132">					stateReferenceDA = referenceList.get(i);</span>
+<span class="fc" id="L128">		stateReferenceDA = referenceList.get(0);</span>
+<span class="fc bfc" id="L129" title="All 2 branches covered.">		if(Strategy.getStrategy().getProblem().getTypeProblem().equals(ProblemType.Maximizar)){</span>
+<span class="fc bfc" id="L130" title="All 2 branches covered.">			for (int i = 1; i &lt; referenceList.size(); i++) {</span>
+<span class="pc bpc" id="L131" title="1 of 2 branches missed.">				if(stateReferenceDA.getEvaluation().get(0) &lt; referenceList.get(i).getEvaluation().get(0))</span>
+<span class="fc" id="L132">					stateReferenceDA = referenceList.get(i);</span>
 			}
 		}
 		else{
-<span class="nc bnc" id="L136" title="All 2 branches missed.">			for (int i = 1; i &lt; referenceList.size(); i++) {</span>
-<span class="nc bnc" id="L137" title="All 2 branches missed.">				if(stateReferenceDA.getEvaluation().get(0) &gt; referenceList.get(i).getEvaluation().get(0))</span>
+<span class="fc bfc" id="L136" title="All 2 branches covered.">			for (int i = 1; i &lt; referenceList.size(); i++) {</span>
+<span class="pc bpc" id="L137" title="1 of 2 branches missed.">				if(stateReferenceDA.getEvaluation().get(0) &gt; referenceList.get(i).getEvaluation().get(0))</span>
 <span class="nc" id="L138">					stateReferenceDA = referenceList.get(i);</span>
 			}
 		}
-<span class="nc" id="L141">		return stateReferenceDA;</span>
+<span class="fc" id="L141">		return stateReferenceDA;</span>
 	}
 
 	@Override
@@ -153,7 +153,7 @@ public class DistributionEstimationAlgorithm extends Generator {
 
 	@Override
 	public GeneratorType getType() {
-<span class="nc" id="L156">		return this.generatorType;</span>
+<span class="fc" id="L156">		return this.generatorType;</span>
 	}
 
 	@Override
@@ -169,14 +169,14 @@ public class DistributionEstimationAlgorithm extends Generator {
 <span class="nc" id="L169">	}</span>
 	
 	public List&lt;State&gt; getListStateRef(){
-<span class="nc" id="L172">		Boolean found = false;</span>
-<span class="nc" id="L173">		List&lt;String&gt; key = Strategy.getStrategy().getListKey();</span>
-<span class="nc" id="L174">		int count = 0;</span>
+<span class="fc" id="L172">		Boolean found = false;</span>
+<span class="fc" id="L173">		List&lt;String&gt; key = Strategy.getStrategy().getListKey();</span>
+<span class="fc" id="L174">		int count = 0;</span>
 		//if(Strategy.getStrategy().Statistics.getAllStates().size() == 0){
 		/*if(RandomSearch.listStateReference.size() == 0){
 			return this.referenceList = new ArrayList&lt;State&gt;();
 		}*/
-<span class="nc bnc" id="L179" title="All 4 branches missed.">		while((found.equals(false)) &amp;&amp; (Strategy.getStrategy().mapGenerators.size() &gt; count)){</span>
+<span class="pc bpc" id="L179" title="2 of 4 branches missed.">		while((found.equals(false)) &amp;&amp; (Strategy.getStrategy().mapGenerators.size() &gt; count)){</span>
 <span class="nc bnc" id="L180" title="All 2 branches missed.">			if(key.get(count).equals(GeneratorType.DistributionEstimationAlgorithm.toString())){</span>
 <span class="nc" id="L181">				GeneratorType keyGenerator = GeneratorType.valueOf(String.valueOf(key.get(count)));</span>
 <span class="nc" id="L182">				DistributionEstimationAlgorithm generator = (DistributionEstimationAlgorithm)Strategy.getStrategy().mapGenerators.get(keyGenerator);</span>
@@ -198,16 +198,16 @@ public class DistributionEstimationAlgorithm extends Generator {
 			}
 <span class="nc" id="L199">			count++;</span>
 		}
-<span class="nc" id="L201">		return referenceList;</span>
+<span class="fc" id="L201">		return referenceList;</span>
 	}
 
 	public List&lt;State&gt; getListReference() {
-<span class="nc" id="L205">		return referenceList;</span>
+<span class="fc" id="L205">		return referenceList;</span>
 	}
 
 	public void setListReference(List&lt;State&gt; listReference) {
-<span class="nc" id="L209">		referenceList = listReference;</span>
-<span class="nc" id="L210">	}</span>
+<span class="fc" id="L209">		referenceList = listReference;</span>
+<span class="fc" id="L210">	}</span>
 
 	public GeneratorType getGeneratorType() {
 <span class="nc" id="L213">		return generatorType;</span>
@@ -232,14 +232,14 @@ public class DistributionEstimationAlgorithm extends Generator {
 	}
 
 	public boolean awardUpdateREF(State stateCandidate) {
-<span class="nc" id="L235">		boolean find = false;</span>
-<span class="nc" id="L236">		int i = 0;</span>
-<span class="nc bnc" id="L237" title="All 4 branches missed.">		while (find == false &amp;&amp; i &lt; this.referenceList.size()) {</span>
-<span class="nc bnc" id="L238" title="All 2 branches missed.">			if(stateCandidate.equals(this.referenceList.get(i)))</span>
-<span class="nc" id="L239">				find = true;</span>
-<span class="nc" id="L240">			else i++;</span>
+<span class="fc" id="L235">		boolean find = false;</span>
+<span class="fc" id="L236">		int i = 0;</span>
+<span class="fc bfc" id="L237" title="All 4 branches covered.">		while (find == false &amp;&amp; i &lt; this.referenceList.size()) {</span>
+<span class="fc bfc" id="L238" title="All 2 branches covered.">			if(stateCandidate.equals(this.referenceList.get(i)))</span>
+<span class="fc" id="L239">				find = true;</span>
+<span class="fc" id="L240">			else i++;</span>
 		}
-<span class="nc" id="L242">		return find;</span>
+<span class="fc" id="L242">		return find;</span>
 	}
 
 	@Override
@@ -255,7 +255,7 @@ public class DistributionEstimationAlgorithm extends Generator {
 <span class="nc" id="L255">	}</span>
 
 	public DistributionType getDistributionType() {
-<span class="nc" id="L258">		return distributionType;</span>
+<span class="fc" id="L258">		return distributionType;</span>
 	}
 
 	public void setDistributionType(DistributionType distributionType) {
@@ -265,19 +265,19 @@ public class DistributionEstimationAlgorithm extends Generator {
 	@Override
 	public int[] getListCountBetterGender() {
 		// TODO Auto-generated method stub
-<span class="nc bnc" id="L268" title="All 2 branches missed.">		return (this.listCountBetterGender == null) ? new int[0] : Arrays.copyOf(this.listCountBetterGender, this.listCountBetterGender.length);</span>
+<span class="pc bpc" id="L268" title="1 of 2 branches missed.">		return (this.listCountBetterGender == null) ? new int[0] : Arrays.copyOf(this.listCountBetterGender, this.listCountBetterGender.length);</span>
 	}
 
 	@Override
 	public int[] getListCountGender() {
 		// TODO Auto-generated method stub
-<span class="nc bnc" id="L274" title="All 2 branches missed.">		return (this.listCountGender == null) ? new int[0] : Arrays.copyOf(this.listCountGender, this.listCountGender.length);</span>
+<span class="pc bpc" id="L274" title="1 of 2 branches missed.">		return (this.listCountGender == null) ? new int[0] : Arrays.copyOf(this.listCountGender, this.listCountGender.length);</span>
 	}
 
 	@Override
 	public float[] getTrace() {
 		// TODO Auto-generated method stub
-<span class="nc bnc" id="L280" title="All 2 branches missed.">		return (this.listTrace == null) ? new float[0] : Arrays.copyOf(this.listTrace, this.listTrace.length);</span>
+<span class="pc bpc" id="L280" title="1 of 2 branches missed.">		return (this.listTrace == null) ? new float[0] : Arrays.copyOf(this.listTrace, this.listTrace.length);</span>
 	}
 
 

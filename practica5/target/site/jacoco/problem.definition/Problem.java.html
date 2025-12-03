@@ -12,7 +12,7 @@ import factory_method.FactorySolutionMethod;
 
 public class Problem {
 
-<span class="nc" id="L15">	public enum ProblemType {Maximizar,Minimizar;}</span>
+<span class="fc" id="L15">	public enum ProblemType {Maximizar,Minimizar;}</span>
 
 	private ArrayList&lt;ObjetiveFunction&gt; function;
 	private State state;
@@ -24,46 +24,46 @@ public class Problem {
 	private IFFactorySolutionMethod factorySolutionMethod;
 	
 	public Problem() {
-<span class="nc" id="L27">		super();</span>
-<span class="nc" id="L28">	}</span>
+<span class="fc" id="L27">		super();</span>
+<span class="fc" id="L28">	}</span>
 
 	public ArrayList&lt;ObjetiveFunction&gt; getFunction() {
 <span class="nc bnc" id="L31" title="All 2 branches missed.">		return (function == null) ? new ArrayList&lt;ObjetiveFunction&gt;() : new ArrayList&lt;ObjetiveFunction&gt;(function);</span>
 	}
 
 	public void setFunction(ArrayList&lt;ObjetiveFunction&gt; function) {
-<span class="nc bnc" id="L35" title="All 2 branches missed.">		this.function = (function == null) ? new ArrayList&lt;ObjetiveFunction&gt;() : new ArrayList&lt;ObjetiveFunction&gt;(function);</span>
-<span class="nc" id="L36">	}</span>
+<span class="pc bpc" id="L35" title="1 of 2 branches missed.">		this.function = (function == null) ? new ArrayList&lt;ObjetiveFunction&gt;() : new ArrayList&lt;ObjetiveFunction&gt;(function);</span>
+<span class="fc" id="L36">	}</span>
 
 	public State getState() {
-<span class="nc bnc" id="L39" title="All 2 branches missed.">		return (state == null) ? null : new State(state);</span>
+<span class="pc bpc" id="L39" title="1 of 2 branches missed.">		return (state == null) ? null : new State(state);</span>
 	}
 
 	public void setState(State state) {
-<span class="nc bnc" id="L43" title="All 2 branches missed.">		this.state = (state == null) ? null : new State(state);</span>
-<span class="nc" id="L44">	}</span>
+<span class="pc bpc" id="L43" title="1 of 2 branches missed.">		this.state = (state == null) ? null : new State(state);</span>
+<span class="fc" id="L44">	}</span>
 
 	public ProblemType getTypeProblem() {
-<span class="nc" id="L47">		return typeProblem;</span>
+<span class="fc" id="L47">		return typeProblem;</span>
 	}
 	public void setTypeProblem(ProblemType typeProblem) {
-<span class="nc" id="L50">		this.typeProblem = typeProblem;</span>
-<span class="nc" id="L51">	}</span>
+<span class="fc" id="L50">		this.typeProblem = typeProblem;</span>
+<span class="fc" id="L51">	}</span>
 
 	public Codification getCodification() {
-<span class="nc" id="L54">		return codification;</span>
+<span class="fc" id="L54">		return codification;</span>
 	}
 	public void setCodification(Codification codification) {
-<span class="nc" id="L57">		this.codification = codification;</span>
-<span class="nc" id="L58">	}</span>
+<span class="fc" id="L57">		this.codification = codification;</span>
+<span class="fc" id="L58">	}</span>
 
 	public Operator getOperator() {
-<span class="nc" id="L61">		return operator;</span>
+<span class="fc" id="L61">		return operator;</span>
 	}
 
 	public void setOperator(Operator operator) {
-<span class="nc" id="L65">		this.operator = operator;</span>
-<span class="nc" id="L66">	}</span>
+<span class="fc" id="L65">		this.operator = operator;</span>
+<span class="fc" id="L66">	}</span>
 
 	public int getPossibleValue() {
 <span class="nc" id="L69">		return possibleValue;</span>

@@ -34,20 +34,20 @@ public class CandidateValue {
 	// Keep a no-arg constructor; parameterized constructor was removed because its fields were unused.
 
 	public SearchCandidate newSearchCandidate(CandidateType typecandidate) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
-<span class="nc" id="L37">		ifFactory = new FactoryCandidate();</span>
-<span class="nc" id="L38">		searchcandidate = ifFactory.createSearchCandidate(typecandidate);</span>
-<span class="nc" id="L39">		return searchcandidate;</span>
+<span class="fc" id="L37">		ifFactory = new FactoryCandidate();</span>
+<span class="fc" id="L38">		searchcandidate = ifFactory.createSearchCandidate(typecandidate);</span>
+<span class="fc" id="L39">		return searchcandidate;</span>
 	}
 
 	public State stateCandidate(State stateCurrent, CandidateType typeCandidate, StrategyType strategy, Integer operatornumber, List&lt;State&gt; neighborhood) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException{
 		//Problem problem = ExecuteGenerator.getExecuteGenerator().getProblem();
 		State stateCandidate;
-<span class="nc" id="L45">		List&lt;State&gt; auxList = new ArrayList&lt;State&gt;();</span>
-<span class="nc bnc" id="L46" title="All 2 branches missed.">		for (int i = 0; i &lt; neighborhood.size(); i++) {</span>
-<span class="nc" id="L47">			auxList.add(neighborhood.get(i));</span>
+<span class="fc" id="L45">		List&lt;State&gt; auxList = new ArrayList&lt;State&gt;();</span>
+<span class="fc bfc" id="L46" title="All 2 branches covered.">		for (int i = 0; i &lt; neighborhood.size(); i++) {</span>
+<span class="fc" id="L47">			auxList.add(neighborhood.get(i));</span>
 		}
-<span class="nc" id="L49">		this.tabusolution = new TabuSolutions();</span>
-<span class="nc bnc" id="L50" title="All 2 branches missed.">		if (strategy.equals(StrategyType.TABU)) {</span>
+<span class="fc" id="L49">		this.tabusolution = new TabuSolutions();</span>
+<span class="pc bpc" id="L50" title="1 of 2 branches missed.">		if (strategy.equals(StrategyType.TABU)) {</span>
 			try {
 <span class="nc" id="L52">				auxList = this.tabusolution.filterNeighborhood(auxList);</span>
 			}
@@ -59,9 +59,9 @@ public class CandidateValue {
 <span class="nc" id="L59">				return stateCandidate(stateCurrent, typeCandidate, strategy, operatornumber, neighborhood);</span>
 <span class="nc" id="L60">			}</span>
 		}
-<span class="nc" id="L62">		SearchCandidate searchCand = newSearchCandidate(typeCandidate);</span>
-<span class="nc" id="L63">		stateCandidate = searchCand.stateSearch(auxList);</span>
-<span class="nc" id="L64">		return stateCandidate;</span>
+<span class="fc" id="L62">		SearchCandidate searchCand = newSearchCandidate(typeCandidate);</span>
+<span class="fc" id="L63">		stateCandidate = searchCand.stateSearch(auxList);</span>
+<span class="fc" id="L64">		return stateCandidate;</span>
 	}
 
 	public TabuSolutions getTabusolution() {

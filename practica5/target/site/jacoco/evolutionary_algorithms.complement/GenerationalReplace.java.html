@@ -6,17 +6,17 @@ import java.util.List;
 
 import problem.definition.State;
 
-<span class="nc" id="L9">public class GenerationalReplace extends Replace {</span>
+<span class="fc" id="L9">public class GenerationalReplace extends Replace {</span>
 
 	@Override
 	public List&lt;State&gt; replace(State stateCandidate, List&lt;State&gt; listState) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
-<span class="nc" id="L13">		listState.remove(0);</span>
-<span class="nc" id="L14">		listState.add(stateCandidate);</span>
+<span class="fc" id="L13">		listState.remove(0);</span>
+<span class="fc" id="L14">		listState.add(stateCandidate);</span>
 		/*List&lt;State&gt; sonList = Strategy.getStrategy().generator.getSonList();
 		for (int i = 0; i &lt; listState.size(); i++) {
 			listState.set(i, sonList.get(i));
 		}*/
-<span class="nc" id="L19">		return listState;</span>
+<span class="fc" id="L19">		return listState;</span>
 	}
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

@@ -10,13 +10,13 @@ import factory_interface.IFFactoryFatherSelection;
 
 
 
-<span class="nc" id="L13">public class FactoryFatherSelection implements IFFactoryFatherSelection{</span>
+<span class="fc" id="L13">public class FactoryFatherSelection implements IFFactoryFatherSelection{</span>
     private FatherSelection selection;
 	
     public FatherSelection createSelectFather(SelectionType selectionType) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
-<span class="nc" id="L17">    	String className = &quot;evolutionary_algorithms.complement.&quot; + selectionType.toString();</span>
-<span class="nc" id="L18">		selection = (FatherSelection) FactoryLoader.getInstance(className);</span>
-<span class="nc" id="L19">		return selection;</span>
+<span class="fc" id="L17">    	String className = &quot;evolutionary_algorithms.complement.&quot; + selectionType.toString();</span>
+<span class="fc" id="L18">		selection = (FatherSelection) FactoryLoader.getInstance(className);</span>
+<span class="fc" id="L19">		return selection;</span>
 	}
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

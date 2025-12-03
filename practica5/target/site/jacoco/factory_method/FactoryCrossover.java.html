@@ -10,14 +10,14 @@ import factory_interface.IFFactoryCrossover;
 
 
 
-<span class="nc" id="L13">public class FactoryCrossover implements IFFactoryCrossover {</span>
+<span class="fc" id="L13">public class FactoryCrossover implements IFFactoryCrossover {</span>
 	private Crossover crossing;
 
 	public Crossover createCrossover(CrossoverType Crossovertype) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
 		
-<span class="nc" id="L18">		String className = &quot;evolutionary_algorithms.complement.&quot; + Crossovertype.toString();</span>
-<span class="nc" id="L19">		crossing = (Crossover) FactoryLoader.getInstance(className);</span>
-<span class="nc" id="L20">		return crossing;</span>
+<span class="fc" id="L18">		String className = &quot;evolutionary_algorithms.complement.&quot; + Crossovertype.toString();</span>
+<span class="fc" id="L19">		crossing = (Crossover) FactoryLoader.getInstance(className);</span>
+<span class="fc" id="L20">		return crossing;</span>
 	}
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

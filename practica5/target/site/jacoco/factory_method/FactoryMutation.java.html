@@ -10,14 +10,14 @@ import factory_interface.IFFactoryMutation;
 
 
 
-<span class="nc" id="L13">public class FactoryMutation implements IFFactoryMutation {</span>
+<span class="fc" id="L13">public class FactoryMutation implements IFFactoryMutation {</span>
 	private Mutation mutation;
 
 	public Mutation createMutation(MutationType typeMutation) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
 		
-<span class="nc" id="L18">		String className = &quot;evolutionary_algorithms.complement.&quot; + typeMutation.toString();</span>
-<span class="nc" id="L19">		mutation = (Mutation) FactoryLoader.getInstance(className);</span>
-<span class="nc" id="L20">		return mutation;</span>
+<span class="fc" id="L18">		String className = &quot;evolutionary_algorithms.complement.&quot; + typeMutation.toString();</span>
+<span class="fc" id="L19">		mutation = (Mutation) FactoryLoader.getInstance(className);</span>
+<span class="fc" id="L20">		return mutation;</span>
 	}
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

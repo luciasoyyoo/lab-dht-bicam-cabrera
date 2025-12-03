@@ -12,13 +12,13 @@ import factory_interface.IFFactoryCandidate;
 
 
 
-<span class="nc" id="L15">public class FactoryCandidate implements IFFactoryCandidate{</span>
+<span class="fc" id="L15">public class FactoryCandidate implements IFFactoryCandidate{</span>
 	private SearchCandidate searchcandidate;
 	
 	public SearchCandidate createSearchCandidate(CandidateType typeCandidate) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
-<span class="nc" id="L19">		String className = &quot;local_search.candidate_type.&quot; + typeCandidate.toString();</span>
-<span class="nc" id="L20">		searchcandidate = (SearchCandidate) FactoryLoader.getInstance(className);</span>
-<span class="nc" id="L21">		return searchcandidate;</span>
+<span class="fc" id="L19">		String className = &quot;local_search.candidate_type.&quot; + typeCandidate.toString();</span>
+<span class="fc" id="L20">		searchcandidate = (SearchCandidate) FactoryLoader.getInstance(className);</span>
+<span class="fc" id="L21">		return searchcandidate;</span>
 	}
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

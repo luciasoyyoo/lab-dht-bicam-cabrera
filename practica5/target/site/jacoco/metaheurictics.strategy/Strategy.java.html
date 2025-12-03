@@ -29,7 +29,7 @@ import metaheuristics.generators.RandomSearch;
 
 public class Strategy {
 
-<span class="nc" id="L32">	private static Strategy strategy = null;</span>
+<span class="fc" id="L32">	private static Strategy strategy = null;</span>
 	private State bestState;
 	private Problem problem;
 	public SortedMap&lt;GeneratorType, Generator&gt; mapGenerators;
@@ -43,7 +43,7 @@ public class Strategy {
 
 	public List&lt;State&gt; listStates; //lista de todos los estados generados en cada iteracion
 	public List&lt;State&gt; listBest; //lista de la mejor solucion en cada iteracion
-<span class="nc" id="L46">	public List&lt;State&gt; listRefPoblacFinal = new ArrayList&lt;State&gt; (); //lista de soluciones no dominadas</span>
+<span class="fc" id="L46">	public List&lt;State&gt; listRefPoblacFinal = new ArrayList&lt;State&gt; (); //lista de soluciones no dominadas</span>
 	public Dominance notDominated; 
 
 	
@@ -57,22 +57,22 @@ public class Strategy {
 	long finalTime;
 	long timeExecute;
 	
-<span class="nc" id="L60">	public float[] listOfflineError = new float[100]; // para almacenar la metrica offlinePerformance</span>
-<span class="nc" id="L61">	public int countPeriodChange = 0; // cantidad de iteeraciones antes de un cambio</span>
-<span class="nc" id="L62">	public int countChange = 0;</span>
+<span class="fc" id="L60">	public float[] listOfflineError = new float[100]; // para almacenar la metrica offlinePerformance</span>
+<span class="fc" id="L61">	public int countPeriodChange = 0; // cantidad de iteeraciones antes de un cambio</span>
+<span class="fc" id="L62">	public int countChange = 0;</span>
 	private int countPeriodo; // contador para saber cada cuantas iteraciones tiene que guardar en la lista listCountBetterGender de cada generador
 	private int periodo; //contador para controlar el periodo que esta guardando
 
 
 	private Strategy(){
-<span class="nc" id="L68">		super();</span>
-<span class="nc" id="L69">	}</span>
+<span class="fc" id="L68">		super();</span>
+<span class="fc" id="L69">	}</span>
 
 	public static Strategy getStrategy() {
-<span class="nc bnc" id="L72" title="All 2 branches missed.">		if (strategy == null) {</span>
-<span class="nc" id="L73">			strategy = new Strategy();</span>
+<span class="fc bfc" id="L72" title="All 2 branches covered.">		if (strategy == null) {</span>
+<span class="fc" id="L73">			strategy = new Strategy();</span>
 		}
-<span class="nc" id="L75">		return strategy;</span>
+<span class="fc" id="L75">		return strategy;</span>
 	}
 
 	public void executeStrategy (int countmaxIterations, int countIterationsChange, int operatornumber, GeneratorType generatorType) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException{
@@ -311,18 +311,18 @@ public class Strategy {
 	}
 
 	public State getBestState() {
-<span class="nc" id="L314">		return bestState;</span>
+<span class="fc" id="L314">		return bestState;</span>
 	}
 
 	public void setBestState(State besState) {
-<span class="nc" id="L318">		this.bestState = besState;</span>
-<span class="nc" id="L319">	}</span>
+<span class="fc" id="L318">		this.bestState = besState;</span>
+<span class="fc" id="L319">	}</span>
 	public StopExecute getStopexecute() {
 <span class="nc" id="L321">		return stopexecute;</span>
 	}
 
 	public int getCountMax() {
-<span class="nc" id="L325">		return countMax;</span>
+<span class="fc" id="L325">		return countMax;</span>
 	}
 
 	public void setCountMax(int countMax) {
@@ -342,25 +342,25 @@ public class Strategy {
 <span class="nc" id="L342">	}</span>
 
 	public Problem getProblem() {
-<span class="nc" id="L345">		return problem;</span>
+<span class="fc" id="L345">		return problem;</span>
 	}
 
 	public void setProblem(Problem problem) {
-<span class="nc" id="L349">		this.problem = problem;</span>
-<span class="nc" id="L350">	}</span>
+<span class="fc" id="L349">		this.problem = problem;</span>
+<span class="fc" id="L350">	}</span>
 
 	public ArrayList&lt;String&gt; getListKey(){
-<span class="nc" id="L353">		ArrayList&lt;String&gt; listKeys = new ArrayList&lt;String&gt;();</span>
-<span class="nc" id="L354">		String key = mapGenerators.keySet().toString();</span>
-<span class="nc" id="L355">		String returnString = key.substring(1, key.length() - 1);</span>
-<span class="nc" id="L356">		returnString = returnString + &quot;, &quot;;</span>
-<span class="nc" id="L357">		int countKey = mapGenerators.size();</span>
-<span class="nc bnc" id="L358" title="All 2 branches missed.">		for (int i = 0; i &lt; countKey; i++) {</span>
+<span class="fc" id="L353">		ArrayList&lt;String&gt; listKeys = new ArrayList&lt;String&gt;();</span>
+<span class="fc" id="L354">		String key = mapGenerators.keySet().toString();</span>
+<span class="fc" id="L355">		String returnString = key.substring(1, key.length() - 1);</span>
+<span class="fc" id="L356">		returnString = returnString + &quot;, &quot;;</span>
+<span class="fc" id="L357">		int countKey = mapGenerators.size();</span>
+<span class="pc bpc" id="L358" title="1 of 2 branches missed.">		for (int i = 0; i &lt; countKey; i++) {</span>
 <span class="nc" id="L359">			String r = returnString.substring(0, returnString.indexOf(','));</span>
 <span class="nc" id="L360">			returnString = returnString.substring(returnString.indexOf(',') + 2);</span>
 <span class="nc" id="L361">			listKeys.add(r);</span>
 		}
-<span class="nc" id="L363">		return listKeys;</span>
+<span class="fc" id="L363">		return listKeys;</span>
 	}
 
 	public void initializeGenerators()throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
@@ -392,12 +392,12 @@ public class Strategy {
 <span class="nc" id="L392">	}</span>
 
 	public int getCountCurrent() {
-<span class="nc" id="L395">		return countCurrent;</span>
+<span class="fc" id="L395">		return countCurrent;</span>
 	}
 
 	public void setCountCurrent(int countCurrent) {
-<span class="nc" id="L399">		this.countCurrent = countCurrent;</span>
-<span class="nc" id="L400">	}</span>
+<span class="fc" id="L399">		this.countCurrent = countCurrent;</span>
+<span class="fc" id="L400">	}</span>
 
 	public static void destroyExecute() {
 <span class="nc" id="L403">		strategy = null;</span>

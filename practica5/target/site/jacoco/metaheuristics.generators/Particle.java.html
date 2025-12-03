@@ -24,11 +24,11 @@ public class Particle extends Generator {
 <span class="nc" id="L24">	}</span>
 	
 	public Particle(State statePBest, State stateActual, ArrayList&lt;Object&gt; velocity) {
-<span class="nc" id="L27">		super();</span>
-<span class="nc" id="L28">		this.statePBest = statePBest;</span>
-<span class="nc" id="L29">		this.stateActual = stateActual;</span>
-<span class="nc" id="L30">		this.velocity = velocity;</span>
-<span class="nc" id="L31">	}</span>
+<span class="fc" id="L27">		super();</span>
+<span class="fc" id="L28">		this.statePBest = statePBest;</span>
+<span class="fc" id="L29">		this.stateActual = stateActual;</span>
+<span class="fc" id="L30">		this.velocity = velocity;</span>
+<span class="fc" id="L31">	}</span>
 
 	public ArrayList&lt;Object&gt; getVelocity() {
 <span class="nc" id="L34">		return velocity;</span>
@@ -71,20 +71,20 @@ public class Particle extends Generator {
 	
 	
 	private ArrayList&lt;Object&gt; UpdateVelocity(){ // actualizar velocidad
-<span class="nc" id="L74">    	double w = ParticleSwarmOptimization.wmax - ((ParticleSwarmOptimization.wmax - ParticleSwarmOptimization.wmin) / Strategy.getStrategy().getCountMax()) * ParticleSwarmOptimization.getCountCurrentIterPSO();  //CALCULO DE LA INERCIA</span>
-<span class="nc" id="L75">    	double rand1 = (double)(Math.random() * (double)(1));</span>
-<span class="nc" id="L76">    	double rand2 = (double)(Math.random() * (double)(1));</span>
+<span class="fc" id="L74">    	double w = ParticleSwarmOptimization.wmax - ((ParticleSwarmOptimization.wmax - ParticleSwarmOptimization.wmin) / Strategy.getStrategy().getCountMax()) * ParticleSwarmOptimization.getCountCurrentIterPSO();  //CALCULO DE LA INERCIA</span>
+<span class="fc" id="L75">    	double rand1 = (double)(Math.random() * (double)(1));</span>
+<span class="fc" id="L76">    	double rand2 = (double)(Math.random() * (double)(1));</span>
     	double inertia, cognitive, social;
-<span class="nc" id="L78">    	int learning = ParticleSwarmOptimization.learning1 + ParticleSwarmOptimization.learning2; // ratios de aprendizaje cognitivo y social</span>
-<span class="nc" id="L79">    	ParticleSwarmOptimization.constriction = 2/(Math.abs(2 - learning-Math.sqrt((learning * learning)- 4 * learning)));   // Factor de costriccion</span>
-<span class="nc" id="L80">    	ArrayList&lt;Object&gt; actualVelocity = new ArrayList&lt;Object&gt;();</span>
-<span class="nc bnc" id="L81" title="All 2 branches missed.">    	if(velocity.isEmpty()){</span>
+<span class="fc" id="L78">    	int learning = ParticleSwarmOptimization.learning1 + ParticleSwarmOptimization.learning2; // ratios de aprendizaje cognitivo y social</span>
+<span class="fc" id="L79">    	ParticleSwarmOptimization.constriction = 2/(Math.abs(2 - learning-Math.sqrt((learning * learning)- 4 * learning)));   // Factor de costriccion</span>
+<span class="fc" id="L80">    	ArrayList&lt;Object&gt; actualVelocity = new ArrayList&lt;Object&gt;();</span>
+<span class="pc bpc" id="L81" title="1 of 2 branches missed.">    	if(velocity.isEmpty()){</span>
 <span class="nc bnc" id="L82" title="All 2 branches missed.">    		for (int i = 0; i &lt; Strategy.getStrategy().getProblem().getState().getCode().size(); i++){</span>
 <span class="nc" id="L83">    			velocity.add(0.0);</span>
     		}
     	}
     	// recorre el vector velocidad y lo actualiza
-<span class="nc bnc" id="L87" title="All 2 branches missed.">    	for (int i = 0; i &lt; Strategy.getStrategy().getProblem().getState().getCode().size(); i++) {  </span>
+<span class="pc bpc" id="L87" title="1 of 2 branches missed.">    	for (int i = 0; i &lt; Strategy.getStrategy().getProblem().getState().getCode().size(); i++) {  </span>
     		// cumulo donde se encuentra la particula
 <span class="nc" id="L89">            	int swarm = ParticleSwarmOptimization.getCountParticle() / ParticleSwarmOptimization.countParticleBySwarm; </span>
 <span class="nc" id="L90">           	inertia = w * (Double)velocity.get(i);  </span>

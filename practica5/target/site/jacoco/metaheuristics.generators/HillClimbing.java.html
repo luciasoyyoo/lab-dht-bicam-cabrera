@@ -30,32 +30,32 @@ public class HillClimbing extends Generator{
 	protected State stateReferenceHC;
 	protected IFFactoryAcceptCandidate ifacceptCandidate;
 	protected GeneratorType generatortype;
-<span class="nc" id="L33">	protected List&lt;State&gt; listStateReference = new ArrayList&lt;State&gt;(); </span>
+<span class="fc" id="L33">	protected List&lt;State&gt; listStateReference = new ArrayList&lt;State&gt;(); </span>
 	protected float weight;
 	
 	//problemas dinamicos
 	//problemas dinamicos: use instance fields from Generator (countGender, countBetterGender)
-<span class="nc" id="L38">	private int[] listCountBetterGender = new int[10];</span>
-<span class="nc" id="L39">	private int[] listCountGender = new int[10];</span>
-<span class="nc" id="L40">	private float[] listTrace = new float[1200000];</span>
+<span class="fc" id="L38">	private int[] listCountBetterGender = new int[10];</span>
+<span class="fc" id="L39">	private int[] listCountGender = new int[10];</span>
+<span class="fc" id="L40">	private float[] listTrace = new float[1200000];</span>
 	
 	public HillClimbing() {
-<span class="nc" id="L43">		super();</span>
-<span class="nc" id="L44">		this.typeAcceptation = AcceptType.AcceptBest;</span>
-<span class="nc" id="L45">		this.strategy = StrategyType.NORMAL;</span>
-<span class="nc bnc" id="L46" title="All 2 branches missed.">		if(Strategy.getStrategy().getProblem().getTypeProblem().equals(ProblemType.Maximizar)) {</span>
-<span class="nc" id="L47">			this.typeCandidate = CandidateType.GreaterCandidate;</span>
+<span class="fc" id="L43">		super();</span>
+<span class="fc" id="L44">		this.typeAcceptation = AcceptType.AcceptBest;</span>
+<span class="fc" id="L45">		this.strategy = StrategyType.NORMAL;</span>
+<span class="pc bpc" id="L46" title="1 of 2 branches missed.">		if(Strategy.getStrategy().getProblem().getTypeProblem().equals(ProblemType.Maximizar)) {</span>
+<span class="fc" id="L47">			this.typeCandidate = CandidateType.GreaterCandidate;</span>
 		}
 		else{
 <span class="nc" id="L50">			this.typeCandidate = CandidateType.SmallerCandidate;</span>
 		}
-<span class="nc" id="L52">		this.candidatevalue = new CandidateValue();</span>
-<span class="nc" id="L53">	this.generatortype = GeneratorType.HillClimbing;</span>
-<span class="nc" id="L54">		this.weight = 50;</span>
-<span class="nc" id="L55">		listTrace[0] = this.weight;</span>
-<span class="nc" id="L56">		listCountBetterGender[0] = 0;</span>
-<span class="nc" id="L57">		listCountGender[0] = 0;</span>
-<span class="nc" id="L58">	}</span>
+<span class="fc" id="L52">		this.candidatevalue = new CandidateValue();</span>
+<span class="fc" id="L53">	this.generatortype = GeneratorType.HillClimbing;</span>
+<span class="fc" id="L54">		this.weight = 50;</span>
+<span class="fc" id="L55">		listTrace[0] = this.weight;</span>
+<span class="fc" id="L56">		listCountBetterGender[0] = 0;</span>
+<span class="fc" id="L57">		listCountGender[0] = 0;</span>
+<span class="fc" id="L58">	}</span>
 
 	@Override
 	public State generate(Integer operatornumber) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
@@ -67,8 +67,8 @@ public class HillClimbing extends Generator{
 
 	@Override
 	public void updateReference(State stateCandidate, Integer countIterationsCurrent) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
-<span class="nc" id="L70">		ifacceptCandidate = new FactoryAcceptCandidate();</span>
-<span class="nc" id="L71">		AcceptableCandidate candidate = ifacceptCandidate.createAcceptCandidate(typeAcceptation);</span>
+<span class="fc" id="L70">		ifacceptCandidate = new FactoryAcceptCandidate();</span>
+<span class="fc" id="L71">		AcceptableCandidate candidate = ifacceptCandidate.createAcceptCandidate(typeAcceptation);</span>
 <span class="nc" id="L72">		Boolean accept = candidate.acceptCandidate(stateReferenceHC, stateCandidate);</span>
 <span class="nc bnc" id="L73" title="All 2 branches missed.">		if(accept.equals(true))</span>
 <span class="nc" id="L74">		  stateReferenceHC = stateCandidate;</span>
@@ -110,7 +110,7 @@ public class HillClimbing extends Generator{
 
 	@Override
 	public GeneratorType getType() {
-<span class="nc" id="L113">		return this.generatortype;</span>
+<span class="fc" id="L113">		return this.generatortype;</span>
 	}
 
 	@Override
@@ -132,7 +132,7 @@ public class HillClimbing extends Generator{
 	@Override
 	public float getWeight() {
 		// TODO Auto-generated method stub
-<span class="nc" id="L135">		return 0;</span>
+<span class="fc" id="L135">		return 0;</span>
 	}
 
 	@Override
@@ -156,7 +156,7 @@ public class HillClimbing extends Generator{
 	@Override
 	public float[] getTrace() {
 		// TODO Auto-generated method stub
-<span class="nc bnc" id="L159" title="All 2 branches missed.">		return (this.listTrace == null) ? new float[0] : java.util.Arrays.copyOf(this.listTrace, this.listTrace.length);</span>
+<span class="pc bpc" id="L159" title="1 of 2 branches missed.">		return (this.listTrace == null) ? new float[0] : java.util.Arrays.copyOf(this.listTrace, this.listTrace.length);</span>
 	}
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>
