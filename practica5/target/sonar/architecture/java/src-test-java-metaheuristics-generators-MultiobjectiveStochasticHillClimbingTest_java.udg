@@ -1,0 +1,956 @@
+
+1.0!luciasoyyoo_lab-dht-bicam-cabreraJavaFrontend"1764880890703*java2.BÜ"
+Z
+Usrc/test/java/metaheuristics/generators/MultiobjectiveStochasticHillClimbingTest.java2
+	
+type3
+	
+TEST4
+
+
+module-key5
+&
+!luciasoyyoo_lab-dht-bicam-cabrera6
+
+package8
+@
+;luciasoyyoo_lab-dht-bicam-cabrera:metaheuristics.generators9
+H
+Bmetaheuristics.generators.MultiobjectiveStochasticHillClimbingTest11
+
+class12
+
+access13
+
+public14
+
+simple-name15
+.
+(MultiobjectiveStochasticHillClimbingTest16
+Q
+Kmetaheuristics.generators.MultiobjectiveStochasticHillClimbingTest.strategy18
+
+field19
+
+private20
+
+strategy21
+&
+ metaheurictics.strategy.Strategy23
+
+unknown24
+
+is type25
+
+
+uses26
+V
+Pmetaheuristics.generators.MultiobjectiveStochasticHillClimbingTest.backupProblem28
+
+backupProblem29
+ 
+problem.definition.Problem31
+Q
+Kmetaheuristics.generators.MultiobjectiveStochasticHillClimbingTest#setUp()V33
+
+method34
+
+setUp35
+&
+ org.junit.jupiter.api.BeforeEach37
+
+annotated by38
+
+
+references39
+
+returns40
+V
+Pmetaheurictics.strategy.Strategy#getStrategy()Lmetaheurictics/strategy/Strategy;42
+
+calls43
+O
+Imetaheurictics.strategy.Strategy#getProblem()Lproblem/definition/Problem;45
+Z
+Tproblem.definition.Problem#setTypeProblem(Lproblem/definition/Problem$ProblemType;)V47
+,
+&problem.definition.Problem$ProblemType49
+6
+0problem.definition.Problem$ProblemType.Maximizar51
+L
+Fproblem.definition.Problem#setOperator(Lproblem/definition/Operator;)V53
+!
+problem.definition.Operator55
+J
+Dmetaheuristics.generators.MultiobjectiveStochasticHillClimbingTest$157
+
+	protected58
+œ
+•metaheuristics.generators.MultiobjectiveStochasticHillClimbingTest$1#generatedNewState(Lproblem/definition/State;Ljava/lang/Integer;)Ljava/util/List;60
+
+generatedNewState61
+
+problem.definition.State63
+
+	has param64
+ƒ
+}metaheuristics.generators.MultiobjectiveStochasticHillClimbingTest$1#generateRandomState(Ljava/lang/Integer;)Ljava/util/List;66
+
+generateRandomState67
+>
+8problem.definition.State#setCode(Ljava/util/ArrayList;)V69
+P
+Jmetaheurictics.strategy.Strategy#setProblem(Lproblem/definition/Problem;)V71
+)
+#metaheuristics.generators.Generator73
+0
+*metaheurictics.strategy.Strategy.generator75
+D
+>metaheuristics.generators.MultiobjectiveStochasticHillClimbing77
+T
+Nmetaheuristics.generators.MultiobjectiveStochasticHillClimbingTest#tearDown()V79
+
+tearDown80
+%
+org.junit.jupiter.api.AfterEach82
+p
+jmetaheuristics.generators.MultiobjectiveStochasticHillClimbingTest#testGenerate_returnsOperatorNeighbor()V84
+*
+$testGenerate_returnsOperatorNeighbor85
+ 
+org.junit.jupiter.api.Test87
+D
+>problem.definition.State#setEvaluation(Ljava/util/ArrayList;)V89
+J
+Dmetaheuristics.generators.MultiobjectiveStochasticHillClimbingTest$291
+œ
+•metaheuristics.generators.MultiobjectiveStochasticHillClimbingTest$2#generatedNewState(Lproblem/definition/State;Ljava/lang/Integer;)Ljava/util/List;93
+ƒ
+}metaheuristics.generators.MultiobjectiveStochasticHillClimbingTest$2#generateRandomState(Ljava/lang/Integer;)Ljava/util/List;95
+u
+ometaheuristics.generators.MultiobjectiveStochasticHillClimbing#setInitialReference(Lproblem/definition/State;)V97
+|
+vmetaheuristics.generators.MultiobjectiveStochasticHillClimbing#generate(Ljava/lang/Integer;)Lproblem/definition/State;99
+'
+ org.junit.jupiter.api.Assertions101
+J
+Corg.junit.jupiter.api.Assertions#assertNotNull(Ljava/lang/Object;)V103
+[
+Torg.junit.jupiter.api.Assertions#assertEquals(Ljava/lang/Object;Ljava/lang/Object;)V105
+>
+7problem.definition.State#getCode()Ljava/util/ArrayList;107
+~
+wmetaheuristics.generators.MultiobjectiveStochasticHillClimbingTest#testUpdateReference_acceptsCandidateWhenDominates()V109
+8
+1testUpdateReference_acceptsCandidateWhenDominates110
+…
+~metaheuristics.generators.MultiobjectiveStochasticHillClimbing#updateReference(Lproblem/definition/State;Ljava/lang/Integer;)V112
+n
+gmetaheuristics.generators.MultiobjectiveStochasticHillClimbing#getReference()Lproblem/definition/State;114
+h
+ametaheuristics.generators.MultiobjectiveStochasticHillClimbing#getReferenceList()Ljava/util/List;116
+7
+0org.junit.jupiter.api.Assertions#assertFalse(Z)V118
+g
+`metaheuristics.generators.MultiobjectiveStochasticHillClimbingTest#testGetTrace_returnsWeight()V120
+!
+testGetTrace_returnsWeight121
+R
+Kmetaheuristics.generators.MultiobjectiveStochasticHillClimbing#getTrace()[F123
+9
+2org.junit.jupiter.api.Assertions#assertEquals(II)V125J#
+!
+1
+12
+
+3
+4
+
+5
+6Z
+
+7
+7982
+
+
+5
+6j®
+B
+59<
+596034 *
+1 (256:7B
+
+
+13
+14
+
+
+15
+61
+B
+78<
+787934 *
+1. .(210:7B
+
+
+13
+14
+
+
+15
+80
+
+36
+363724
+F
+108?
+10810934 *
+1K K(210:7B
+
+
+13
+14
+
+15
+110
+
+106
+10610724
+
+102
+10210324
+B
+83<
+838434 *
+13 3(210:7B
+
+
+13
+14
+
+
+15
+85
+B
+27<
+272819 *
+1 (210:7B
+
+
+13
+20
+
+
+15
+29
+B
+65<
+656634 *
+1" "(256:7B
+
+
+13
+14
+
+
+15
+67
+
+46
+464724
+
+122
+12212324
+
+50
+505124
+
+76
+767724
+B
+92<
+929334 *
+1; ;(290:7B
+
+
+13
+14
+
+
+15
+61
+
+72
+727324
+
+124
+12412524
+B
+17<
+171819 *
+1 (210:7B
+
+
+13
+20
+
+
+15
+21
+
+96
+969724
+B
+94<
+949534 *
+1@ @(290:7B
+
+
+13
+14
+
+
+15
+67
+>
+108
+101112 *
+1 (6:7B
+
+
+13
+14
+
+
+15
+16
+
+98
+989924
+
+41
+414224
+
+115
+11511624
+F
+119?
+11912034 *
+1^ ^(210:7B
+
+
+13
+14
+
+15
+121
+
+70
+707124
+
+117
+11711824
+B
+32<
+323334 *
+1 (210:7B
+
+
+13
+14
+
+
+15
+35
+
+30
+303124
+
+113
+11311424
+
+48
+484924
+
+62
+626324
+
+86
+868724
+
+88
+888924
+
+81
+818224
+
+104
+10410524
+
+22
+222324
+
+44
+444524
+
+111
+11111224
+6
+560
+565712 *
+1& ('232:7B
+
+
+13
+58
+
+100
+10010124
+
+74
+747524
+6
+900
+909112 *
+1:& :('283:7B
+
+
+13
+58
+
+52
+525324
+
+68
+686924
+
+54
+545524r%
+
+172225*
+1 (
+
+172226*
+1 (
+
+172226*
+1 (
+
+273025*
+1 (
+
+273026*
+1 (
+
+273026*
+1 ("
+
+323638*
+1 (
+
+323626*
+1 (
+
+322226*
+1	 (
+
+321739*
+1	 (
+
+322240*
+1 (
+
+322239*
+1 (
+
+324143*
+1 ((
+
+322226*
+1 (
+
+323026*
+1	 (
+
+322739*
+1	 (
+
+323040*
+1 (!
+
+322239*
+1 (!
+
+324443*
+1" (,
+
+321739*
+1 (!
+
+322226*
+1 (!
+
+321739*
+1 (!
+
+323025*
+1 (
+
+323026*
+1	 (
+
+323043*
+1 ( 
+
+323039*
+1	 (
+
+
+324643*
+1 (
+
+323026*
+1 (!
+
+324826*
+1" (-
+
+324839*
+1" (-
+
+324826*
+1. (7
+
+325039*
+1. (7
+
+323039*
+1	 (
+
+
+325243*
+1 (
+
+325443*
+1 (#
+
+596264*
+12 (7
+
+596226*
+1 (
+
+596225*
+18 (D
+
+596226*
+12 (7
+
+596226*
+1& (+
+
+656226*
+1# #(
+
+656226*
+1$ $(
+
+656226*
+1$/ $(4
+
+656225*
+1% %(
+
+656226*
+1% %(
+
+656243*
+1% %($
+
+656239*
+1%h %(i
+
+656843*
+1%j %(q
+
+322239*
+1)	 )(
+
+327043*
+1) )(
+
+321739*
+1)	 )(
+
+322226*
+1)	 )(
+
+321739*
+1)	 )(
+
+322226*
+1+	 +(
+
+321739*
+1+	 +(
+
+327226*
+1+ +(
+
+327439*
+1+ +(
+
+327643*
+1+" +(F
+
+788138*
+1. .(
+
+788126*
+1. .(
+
+782239*
+10	 0(
+
+787043*
+10 0(
+
+781739*
+10	 0(
+
+782226*
+10	 0(
+
+781739*
+10	 0(
+
+783026*
+10 0(*
+
+782739*
+10 0(*
+
+838638*
+13 3(
+
+
+838626*
+13 3(
+
+
+833025*
+15 5(
+
+833026*
+15	 5(
+
+833040*
+15 5(
+
+832239*
+15 5(
+
+834443*
+15 5((
+
+831739*
+15 5(
+
+832226*
+15 5(
+
+831739*
+15 5(
+
+836225*
+16 6(
+
+836226*
+16 6(
+
+836243*
+16$ 6()
+
+836239*
+17K 7(S
+
+836843*
+17T 7([
+
+836239*
+18J 8(R
+
+838843*
+18S 8(`
+
+833039*
+1:	 :(
+
+
+835243*
+1: :(
+
+835443*
+1: :(#
+
+926264*
+1<2 <(7
+
+926226*
+1< <(
+
+926225*
+1<8 <(D
+
+926226*
+1<2 <(7
+
+926226*
+1= =(
+
+926226*
+1=/ =(4
+
+946226*
+1A A(
+
+946226*
+1Ac A(h
+
+837625*
+1D. D(1
+
+837626*
+1D	 D(-
+
+837643*
+1D8 D(\
+
+836225*
+1E E(
+
+836226*
+1E	 E(
+
+836243*
+1E E(
+
+836239*
+1E_ E(b
+
+836843*
+1Ec E(j
+
+837639*
+1Ep E(s
+
+839643*
+1Et E(‡
+
+836225*
+1F F(
+
+836226*
+1F	 F(
+
+836240*
+1F F(
+
+837639*
+1F F(
+
+839843*
+1F F($
+
+8310039*
+1G	 G(
+
+8310243*
+1G	 G(
+
+8310039*
+1H	 H(
+
+8310443*
+1H	 H(
+
+836239*
+1H H(
+
+8310643*
+1H H(&
+
+836239*
+1H* H(0
+
+8310643*
+1H1 H(8
+
+1088638*
+1K K(
+
+
+1088626*
+1K K(
+
+
+1087625*
+1M. M(1
+
+1087626*
+1M	 M(-
+
+1087643*
+1M8 M(\
+
+1086225*
+1N N(
+
+1086226*
+1N	 N(
+
+1086243*
+1N N("
+
+1086239*
+1Nf N(m
+
+1086843*
+1Nn N(u
+
+1086239*
+1OF O(M
+
+1088843*
+1ON O([
+
+1087639*
+1P	 P(
+
+1089643*
+1P P( 
+
+1086225*
+1R R(
+
+1086226*
+1R	 R(
+
+1086243*
+1R R($
+
+1086239*
+1Rh R(q
+
+1086843*
+1Rr R(y
+
+1086239*
+1SF S(O
+
+1088843*
+1SP S(]
+
+1087639*
+1U	 U(
+
+10811143*
+1U U(
+
+10810039*
+1W	 W(
+
+10810443*
+1W	 W(
+
+1086239*
+1W W(
+
+10810643*
+1W  W('
+
+1086239*
+1W+ W(.
+
+10810643*
+1W> W(E
+
+1086240*
+1W+ W(.
+
+1087639*
+1W+ W(.
+
+10811343*
+1W/ W(;
+
+1086226*
+1Y Y(
+
+1087639*
+1Y Y(
+
+10811543*
+1Y  Y(0
+
+10810039*
+1Z	 Z(
+
+10811743*
+1Z	 Z(
+
+10810039*
+1[	 [(
+
+10810443*
+1[	 [(
+
+1086239*
+1[ [(
+
+10810643*
+1[  [('
+
+1086239*
+1[+ [(/
+
+10810643*
+1[C [(J
+
+1086240*
+1[+ [(/
+
+1198638*
+1^ ^(
+
+
+1198626*
+1^ ^(
+
+
+1197625*
+1`. `(1
+
+1197626*
+1`	 `(-
+
+1197643*
+1`8 `(\
+
+1197639*
+1a a(
+
+11912243*
+1a a(%
+
+11910039*
+1b	 b(
+
+11910243*
+1b	 b(
+
+11910039*
+1d	 d(
+
+11912443*
+1d	 d(

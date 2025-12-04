@@ -23,7 +23,7 @@ import problem.definition.State;
 <span class="pc bpc" id="L23" title="1 of 2 branches missed.">				if (i!=0) {</span>
 <span class="nc" id="L24">					i--;	</span>
 				}
-<span class="pc bpc" id="L26" title="3 of 4 branches missed.">					if (Strategy.getStrategy().generator.getType().equals(GeneratorType.MultiobjectiveHillClimbingDistance)&amp;&amp;list.size()!=0) {</span>
+<span class="pc bpc" id="L26" title="1 of 4 branches missed.">					if (Strategy.getStrategy().generator.getType().equals(GeneratorType.MultiobjectiveHillClimbingDistance)&amp;&amp;list.size()!=0) {</span>
 <span class="nc" id="L27">						MultiobjectiveHillClimbingDistance.distanceCalculateAdd(list);</span>
 				}
 			}
@@ -46,8 +46,8 @@ import problem.definition.State;
 <span class="fc bfc" id="L46" title="All 2 branches covered.">			if(found == false){</span>
 				//Se guarda la soluciï¿½n candidata en la lista de soluciones ï¿½ptimas de Pareto
 <span class="fc" id="L48">				list.add(solutionX.clone());</span>
-<span class="pc bpc" id="L49" title="1 of 2 branches missed.">				if (Strategy.getStrategy().generator.getType().equals(GeneratorType.MultiobjectiveHillClimbingDistance)) {</span>
-<span class="nc" id="L50">					MultiobjectiveHillClimbingDistance.distanceCalculateAdd(list);</span>
+<span class="fc bfc" id="L49" title="All 2 branches covered.">				if (Strategy.getStrategy().generator.getType().equals(GeneratorType.MultiobjectiveHillClimbingDistance)) {</span>
+<span class="fc" id="L50">					MultiobjectiveHillClimbingDistance.distanceCalculateAdd(list);</span>
 				}
 <span class="fc" id="L52">				return true;</span>
 			}

@@ -8,16 +8,16 @@ import metaheurictics.strategy.Strategy;
 
 import problem.definition.State;
 
-<span class="nc" id="L11">public class NotDominatedCandidate extends SearchCandidate {</span>
+<span class="fc" id="L11">public class NotDominatedCandidate extends SearchCandidate {</span>
 
 	@Override
 	public State stateSearch(List&lt;State&gt; listNeighborhood) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
-<span class="nc" id="L15">		State state = new State();</span>
-<span class="nc" id="L16">		State stateA = listNeighborhood.get(0);</span>
-<span class="nc" id="L17">		boolean stop = false;</span>
-<span class="nc bnc" id="L18" title="All 2 branches missed.">		if(listNeighborhood.size() == 1){</span>
-<span class="nc" id="L19">			stop = true;</span>
-<span class="nc" id="L20">			state = stateA;</span>
+<span class="fc" id="L15">		State state = new State();</span>
+<span class="fc" id="L16">		State stateA = listNeighborhood.get(0);</span>
+<span class="fc" id="L17">		boolean stop = false;</span>
+<span class="pc bpc" id="L18" title="1 of 2 branches missed.">		if(listNeighborhood.size() == 1){</span>
+<span class="fc" id="L19">			stop = true;</span>
+<span class="fc" id="L20">			state = stateA;</span>
 		}
 		else {
 <span class="nc" id="L23">			Strategy.getStrategy().getProblem().Evaluate(stateA);</span>
@@ -36,7 +36,7 @@ import problem.definition.State;
 				}
 			}
 		}
-<span class="nc" id="L39">		return state;</span>
+<span class="fc" id="L39">		return state;</span>
 	}
 
 }

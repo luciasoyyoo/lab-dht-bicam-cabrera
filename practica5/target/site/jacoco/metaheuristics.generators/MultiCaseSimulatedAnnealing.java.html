@@ -66,15 +66,15 @@ public class MultiCaseSimulatedAnnealing extends Generator {
 
 	@Override
 	public State generate(Integer operatornumber) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
-<span class="nc" id="L69">		Problem problem = Strategy.getStrategy().getProblem();</span>
-<span class="nc" id="L70">		List&lt;State&gt; neighborhood = problem.getOperator().generatedNewState(stateReferenceSA, operatornumber);</span>
-<span class="nc" id="L71">	    State statecandidate = candidatevalue.stateCandidate(stateReferenceSA, typeCandidate, strategy, operatornumber, neighborhood);</span>
-<span class="nc" id="L72">	    return statecandidate;</span>
+<span class="fc" id="L69">		Problem problem = Strategy.getStrategy().getProblem();</span>
+<span class="fc" id="L70">		List&lt;State&gt; neighborhood = problem.getOperator().generatedNewState(stateReferenceSA, operatornumber);</span>
+<span class="fc" id="L71">	    State statecandidate = candidatevalue.stateCandidate(stateReferenceSA, typeCandidate, strategy, operatornumber, neighborhood);</span>
+<span class="fc" id="L72">	    return statecandidate;</span>
 	}
 
 	@Override
 	public State getReference() {
-<span class="nc" id="L77">		return stateReferenceSA;</span>
+<span class="fc" id="L77">		return stateReferenceSA;</span>
 	}
 
 	public void setStateRef(State stateRef) {
@@ -83,46 +83,46 @@ public class MultiCaseSimulatedAnnealing extends Generator {
 
 	@Override
 	public void setInitialReference(State stateInitialRef) {
-<span class="nc" id="L86">		this.stateReferenceSA = stateInitialRef;</span>
-<span class="nc" id="L87">	}</span>
+<span class="fc" id="L86">		this.stateReferenceSA = stateInitialRef;</span>
+<span class="fc" id="L87">	}</span>
 
 	@Override
 	public void updateReference(State stateCandidate, Integer countIterationsCurrent)throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
-<span class="nc" id="L91">		countRept = MultiCaseSimulatedAnnealing.getCountIterationsT();</span>
-<span class="nc" id="L92">		ifacceptCandidate = new FactoryAcceptCandidate();</span>
-<span class="nc" id="L93">		AcceptableCandidate candidate = ifacceptCandidate.createAcceptCandidate(typeAcceptation);</span>
-<span class="nc" id="L94">		Boolean accept = candidate.acceptCandidate(stateReferenceSA, stateCandidate);</span>
-<span class="nc bnc" id="L95" title="All 2 branches missed.">		if(accept.equals(true))</span>
-<span class="nc" id="L96">		  stateReferenceSA = stateCandidate.clone();</span>
-<span class="nc bnc" id="L97" title="All 2 branches missed.">		if(countIterationsCurrent.equals(MultiCaseSimulatedAnnealing.getCountIterationsT())){</span>
+<span class="fc" id="L91">		countRept = MultiCaseSimulatedAnnealing.getCountIterationsT();</span>
+<span class="fc" id="L92">		ifacceptCandidate = new FactoryAcceptCandidate();</span>
+<span class="fc" id="L93">		AcceptableCandidate candidate = ifacceptCandidate.createAcceptCandidate(typeAcceptation);</span>
+<span class="fc" id="L94">		Boolean accept = candidate.acceptCandidate(stateReferenceSA, stateCandidate);</span>
+<span class="pc bpc" id="L95" title="1 of 2 branches missed.">		if(accept.equals(true))</span>
+<span class="fc" id="L96">		  stateReferenceSA = stateCandidate.clone();</span>
+<span class="pc bpc" id="L97" title="1 of 2 branches missed.">		if(countIterationsCurrent.equals(MultiCaseSimulatedAnnealing.getCountIterationsT())){</span>
 			// update via accessors to avoid writing static fields inside an instance method
-<span class="nc" id="L99">			MultiCaseSimulatedAnnealing.setTinitial(MultiCaseSimulatedAnnealing.getTinitial() * alpha);</span>
+<span class="fc" id="L99">			MultiCaseSimulatedAnnealing.setTinitial(MultiCaseSimulatedAnnealing.getTinitial() * alpha);</span>
 			//Variante Fast MOSA
 			//MultiCaseSimulatedAnnealing.setTinitial(MultiCaseSimulatedAnnealing.getTinitial()/(1 + countIterationsCurrent));
-<span class="nc" id="L102">			System.out.println(&quot;La T:&quot; + MultiCaseSimulatedAnnealing.getTinitial());</span>
-<span class="nc" id="L103">			MultiCaseSimulatedAnnealing.setCountIterationsT(MultiCaseSimulatedAnnealing.getCountIterationsT() + countRept);</span>
-<span class="nc" id="L104">			System.out.println(&quot;La Cant es: &quot; + MultiCaseSimulatedAnnealing.getCountIterationsT());</span>
+<span class="fc" id="L102">			System.out.println(&quot;La T:&quot; + MultiCaseSimulatedAnnealing.getTinitial());</span>
+<span class="fc" id="L103">			MultiCaseSimulatedAnnealing.setCountIterationsT(MultiCaseSimulatedAnnealing.getCountIterationsT() + countRept);</span>
+<span class="fc" id="L104">			System.out.println(&quot;La Cant es: &quot; + MultiCaseSimulatedAnnealing.getCountIterationsT());</span>
 		}
-<span class="nc" id="L106">		getReferenceList();</span>
-<span class="nc" id="L107">	}</span>
+<span class="fc" id="L106">		getReferenceList();</span>
+<span class="fc" id="L107">	}</span>
 
 	public static int getCountIterationsT() {
-<span class="nc" id="L110">		return countIterationsT;</span>
+<span class="fc" id="L110">		return countIterationsT;</span>
 	}
 
 	public static void setCountIterationsT(int c) {
-<span class="nc" id="L114">		countIterationsT = c;</span>
-<span class="nc" id="L115">	}</span>
+<span class="fc" id="L114">		countIterationsT = c;</span>
+<span class="fc" id="L115">	}</span>
 
 	@Override
 	public GeneratorType getType() {
-<span class="nc" id="L119">		return this.typeGenerator;</span>
+<span class="fc" id="L119">		return this.typeGenerator;</span>
 	}
 
 	@Override
 	public List&lt;State&gt; getReferenceList() {
-<span class="nc" id="L124">		listStateReference.add(stateReferenceSA.clone());</span>
-<span class="nc" id="L125">		return listStateReference;</span>
+<span class="fc" id="L124">		listStateReference.add(stateReferenceSA.clone());</span>
+<span class="fc" id="L125">		return listStateReference;</span>
 	}
 
 	@Override
@@ -165,13 +165,13 @@ public class MultiCaseSimulatedAnnealing extends Generator {
 	@Override
 	public float[] getTrace() {
 		// TODO Auto-generated method stub
-<span class="nc bnc" id="L168" title="All 2 branches missed.">		if (this.listTrace == null) return new float[0];</span>
-<span class="nc" id="L169">		float[] arr = new float[this.listTrace.size()];</span>
-<span class="nc bnc" id="L170" title="All 2 branches missed.">		for (int i = 0; i &lt; this.listTrace.size(); i++) {</span>
-<span class="nc" id="L171">			Float v = this.listTrace.get(i);</span>
-<span class="nc bnc" id="L172" title="All 2 branches missed.">			arr[i] = (v == null) ? 0f : v.floatValue();</span>
+<span class="pc bpc" id="L168" title="1 of 2 branches missed.">		if (this.listTrace == null) return new float[0];</span>
+<span class="fc" id="L169">		float[] arr = new float[this.listTrace.size()];</span>
+<span class="fc bfc" id="L170" title="All 2 branches covered.">		for (int i = 0; i &lt; this.listTrace.size(); i++) {</span>
+<span class="fc" id="L171">			Float v = this.listTrace.get(i);</span>
+<span class="pc bpc" id="L172" title="1 of 2 branches missed.">			arr[i] = (v == null) ? 0f : v.floatValue();</span>
 		}
-<span class="nc" id="L174">		return arr;</span>
+<span class="fc" id="L174">		return arr;</span>
 	}
 	
 }

@@ -15,19 +15,19 @@ import problem.definition.State;
 	@Override
 	public State stateSearch(List&lt;State&gt; listNeighborhood) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
 <span class="fc" id="L17">		State stateSmaller = null;</span>
-<span class="pc bpc" id="L18" title="1 of 2 branches missed.">		if(listNeighborhood.size() &gt; 1){</span>
+<span class="fc bfc" id="L18" title="All 2 branches covered.">		if(listNeighborhood.size() &gt; 1){</span>
 <span class="fc" id="L19">			double counter = 0;</span>
 <span class="fc" id="L20">			double currentCount = listNeighborhood.get(0).getEvaluation().get(0);</span>
 <span class="fc bfc" id="L21" title="All 2 branches covered.">			for (int i = 1; i &lt; listNeighborhood.size(); i++) {</span>
 <span class="fc" id="L22">				counter = listNeighborhood.get(i).getEvaluation().get(0);</span>
-<span class="pc bpc" id="L23" title="1 of 2 branches missed.">				if (counter &lt; currentCount) {</span>
+<span class="fc bfc" id="L23" title="All 2 branches covered.">				if (counter &lt; currentCount) {</span>
 <span class="fc" id="L24">					currentCount = counter;</span>
 <span class="fc" id="L25">					stateSmaller = listNeighborhood.get(i);</span>
 				}
 <span class="fc" id="L27">				counter = 0;</span>
 			}
 <span class="fc" id="L29">		}</span>
-<span class="nc" id="L30">		else stateSmaller = listNeighborhood.get(0);</span>
+<span class="fc" id="L30">		else stateSmaller = listNeighborhood.get(0);</span>
 <span class="fc" id="L31">		return stateSmaller;</span>
 	}
 }

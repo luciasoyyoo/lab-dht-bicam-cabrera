@@ -55,49 +55,49 @@ public class MultiobjectiveHillClimbingDistance extends Generator{
 
 	@Override
 	public State generate(Integer operatornumber) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
-<span class="nc" id="L58">		List&lt;State&gt; neighborhood = Strategy.getStrategy().getProblem().getOperator().generatedNewState(stateReferenceHC, operatornumber);</span>
-<span class="nc" id="L59">		State statecandidate = candidatevalue.stateCandidate(stateReferenceHC, typeCandidate, strategy, operatornumber, neighborhood);</span>
-<span class="nc" id="L60">		return statecandidate;</span>
+<span class="fc" id="L58">		List&lt;State&gt; neighborhood = Strategy.getStrategy().getProblem().getOperator().generatedNewState(stateReferenceHC, operatornumber);</span>
+<span class="fc" id="L59">		State statecandidate = candidatevalue.stateCandidate(stateReferenceHC, typeCandidate, strategy, operatornumber, neighborhood);</span>
+<span class="fc" id="L60">		return statecandidate;</span>
 	}
 
 	@Override
 	public void updateReference(State stateCandidate, Integer countIterationsCurrent) throws IllegalArgumentException, SecurityException, ClassNotFoundException, 
 	InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
 		//Agregando la primera soluciï¿½n a la lista de soluciones no dominadas
-<span class="nc bnc" id="L67" title="All 2 branches missed.">		if(Strategy.getStrategy().listRefPoblacFinal.size() == 0){</span>
-<span class="nc" id="L68">			Strategy.getStrategy().listRefPoblacFinal.add(stateReferenceHC.clone());</span>
-<span class="nc" id="L69">			distanceSolution.add(Double.valueOf(0.0));</span>
+<span class="fc bfc" id="L67" title="All 2 branches covered.">		if(Strategy.getStrategy().listRefPoblacFinal.size() == 0){</span>
+<span class="fc" id="L68">			Strategy.getStrategy().listRefPoblacFinal.add(stateReferenceHC.clone());</span>
+<span class="fc" id="L69">			distanceSolution.add(Double.valueOf(0.0));</span>
 		}
-<span class="nc" id="L71">		ifacceptCandidate = new FactoryAcceptCandidate();</span>
-<span class="nc" id="L72">		AcceptableCandidate candidate = ifacceptCandidate.createAcceptCandidate(typeAcceptation);</span>
-<span class="nc" id="L73">		State lastState = Strategy.getStrategy().listRefPoblacFinal.get(Strategy.getStrategy().listRefPoblacFinal.size()-1);</span>
-<span class="nc" id="L74">		List&lt;State&gt; neighborhood = Strategy.getStrategy().getProblem().getOperator().generatedNewState(stateReferenceHC, getSizeNeighbors());</span>
-<span class="nc" id="L75">		int i= 0;</span>
+<span class="fc" id="L71">		ifacceptCandidate = new FactoryAcceptCandidate();</span>
+<span class="fc" id="L72">		AcceptableCandidate candidate = ifacceptCandidate.createAcceptCandidate(typeAcceptation);</span>
+<span class="fc" id="L73">		State lastState = Strategy.getStrategy().listRefPoblacFinal.get(Strategy.getStrategy().listRefPoblacFinal.size()-1);</span>
+<span class="fc" id="L74">		List&lt;State&gt; neighborhood = Strategy.getStrategy().getProblem().getOperator().generatedNewState(stateReferenceHC, getSizeNeighbors());</span>
+<span class="fc" id="L75">		int i= 0;</span>
 //		Boolean restart= true;
 
 //		while (restart==true) {
-<span class="nc" id="L79">			Boolean accept = candidate.acceptCandidate(lastState, stateCandidate.clone());</span>
-<span class="nc bnc" id="L80" title="All 2 branches missed.">			if(accept.equals(true)){</span>
-<span class="nc" id="L81">				stateReferenceHC = stateCandidate.clone();</span>
-<span class="nc" id="L82">				visitedState = new ArrayList&lt;State&gt;();</span>
+<span class="fc" id="L79">			Boolean accept = candidate.acceptCandidate(lastState, stateCandidate.clone());</span>
+<span class="fc bfc" id="L80" title="All 2 branches covered.">			if(accept.equals(true)){</span>
+<span class="fc" id="L81">				stateReferenceHC = stateCandidate.clone();</span>
+<span class="fc" id="L82">				visitedState = new ArrayList&lt;State&gt;();</span>
 			//		restart=false;
 			}
 
 			else{
 
-<span class="nc" id="L88">				boolean stop = false;</span>
-<span class="nc bnc" id="L89" title="All 4 branches missed.">				while (i &lt; neighborhood.size()&amp;&amp; stop==false) {</span>
-<span class="nc bnc" id="L90" title="All 2 branches missed.">			if (contain(neighborhood.get(i))==false) {</span>
-<span class="nc" id="L91">				stateReferenceHC = solutionMoreDistance(Strategy.getStrategy().listRefPoblacFinal, distanceSolution);</span>
-<span class="nc" id="L92">						visitedState.add(stateReferenceHC);</span>
-<span class="nc" id="L93">						stop=true;</span>
-<span class="nc" id="L94">						lastState=stateReferenceHC.clone();</span>
+<span class="fc" id="L88">				boolean stop = false;</span>
+<span class="pc bpc" id="L89" title="1 of 4 branches missed.">				while (i &lt; neighborhood.size()&amp;&amp; stop==false) {</span>
+<span class="pc bpc" id="L90" title="1 of 2 branches missed.">			if (contain(neighborhood.get(i))==false) {</span>
+<span class="fc" id="L91">				stateReferenceHC = solutionMoreDistance(Strategy.getStrategy().listRefPoblacFinal, distanceSolution);</span>
+<span class="fc" id="L92">						visitedState.add(stateReferenceHC);</span>
+<span class="fc" id="L93">						stop=true;</span>
+<span class="fc" id="L94">						lastState=stateReferenceHC.clone();</span>
 //						restart=false;
 					}
-<span class="nc" id="L97">					i++;</span>
+<span class="fc" id="L97">					i++;</span>
 				}
-<span class="nc" id="L99">				int coutrestart=0;</span>
-<span class="nc bnc" id="L100" title="All 6 branches missed.">				while (stop == false &amp;&amp; coutrestart &lt; getSizeNeighbors() &amp;&amp; accept==false) {</span>
+<span class="fc" id="L99">				int coutrestart=0;</span>
+<span class="pc bpc" id="L100" title="5 of 6 branches missed.">				while (stop == false &amp;&amp; coutrestart &lt; getSizeNeighbors() &amp;&amp; accept==false) {</span>
 <span class="nc" id="L101">					stateCandidate = Strategy.getStrategy().getProblem().getOperator().generateRandomState(1).get(0);</span>
 <span class="nc bnc" id="L102" title="All 2 branches missed.">			if (contain(stateCandidate)==false) {</span>
 <span class="nc" id="L103">						Strategy.getStrategy().getProblem().Evaluate(stateCandidate);  </span>
@@ -107,30 +107,30 @@ public class MultiobjectiveHillClimbingDistance extends Generator{
 <span class="nc" id="L107">						accept = candidate.acceptCandidate(lastState, stateCandidate.clone());</span>
 					}
 				}
-<span class="nc bnc" id="L110" title="All 2 branches missed.">				if(accept.equals(true)){</span>
+<span class="pc bpc" id="L110" title="1 of 2 branches missed.">				if(accept.equals(true)){</span>
 <span class="nc" id="L111">					stateReferenceHC = stateCandidate.clone();</span>
 <span class="nc" id="L112">					visitedState = new ArrayList&lt;State&gt;();</span>
 					//tomar xc q pertenesca a la vecindad de xa
 				}
 			}
 
-<span class="nc" id="L117">		getReferenceList();</span>
-<span class="nc" id="L118">	}</span>
+<span class="fc" id="L117">		getReferenceList();</span>
+<span class="fc" id="L118">	}</span>
 
 	private State solutionMoreDistance(List&lt;State&gt; state, List&lt;Double&gt; distanceSolution) {
-<span class="nc" id="L121">		Double max = (double) -1;</span>
-<span class="nc" id="L122">		int pos = -1;</span>
-<span class="nc" id="L123">		Double[] distance = distanceSolution.toArray(new Double[distanceSolution.size()]);</span>
-<span class="nc" id="L124">		State[] solutions = state.toArray(new State[state.size()]);</span>
-<span class="nc bnc" id="L125" title="All 2 branches missed.">		for (int i = 0; i &lt; distance.length; i++) {</span>
-<span class="nc" id="L126">			Double dist = distance[i];</span>
-<span class="nc bnc" id="L127" title="All 2 branches missed.">			if(dist &gt; max){</span>
-<span class="nc" id="L128">				max = dist;</span>
-<span class="nc" id="L129">				pos = i;</span>
+<span class="fc" id="L121">		Double max = (double) -1;</span>
+<span class="fc" id="L122">		int pos = -1;</span>
+<span class="fc" id="L123">		Double[] distance = distanceSolution.toArray(new Double[distanceSolution.size()]);</span>
+<span class="fc" id="L124">		State[] solutions = state.toArray(new State[state.size()]);</span>
+<span class="fc bfc" id="L125" title="All 2 branches covered.">		for (int i = 0; i &lt; distance.length; i++) {</span>
+<span class="fc" id="L126">			Double dist = distance[i];</span>
+<span class="pc bpc" id="L127" title="1 of 2 branches missed.">			if(dist &gt; max){</span>
+<span class="fc" id="L128">				max = dist;</span>
+<span class="fc" id="L129">				pos = i;</span>
 			}
 		}
-<span class="nc bnc" id="L132" title="All 2 branches missed.">		if(pos != -1)</span>
-<span class="nc" id="L133">			return solutions[pos];</span>
+<span class="pc bpc" id="L132" title="1 of 2 branches missed.">		if(pos != -1)</span>
+<span class="fc" id="L133">			return solutions[pos];</span>
 		else
 <span class="nc" id="L135">			return null;</span>
 	}
@@ -147,8 +147,8 @@ public class MultiobjectiveHillClimbingDistance extends Generator{
 	}
 
 	public void setStateRef(State stateRef) {
-<span class="nc" id="L150">		this.stateReferenceHC = stateRef;</span>
-<span class="nc" id="L151">	}</span>
+<span class="fc" id="L150">		this.stateReferenceHC = stateRef;</span>
+<span class="fc" id="L151">	}</span>
 
 	@Override
 	public void setInitialReference(State stateInitialRef) {
@@ -165,7 +165,7 @@ public class MultiobjectiveHillClimbingDistance extends Generator{
 
 	@Override
 	public GeneratorType getType() {
-<span class="nc" id="L168">		return this.generatortype;</span>
+<span class="fc" id="L168">		return this.generatortype;</span>
 	}
 
 	@Override
@@ -208,14 +208,14 @@ public class MultiobjectiveHillClimbingDistance extends Generator{
 
 
 	private boolean contain(State state){
-<span class="nc" id="L211">		boolean found = false;</span>
-<span class="nc bnc" id="L212" title="All 2 branches missed.">		for (Iterator&lt;State&gt; iter = visitedState.iterator(); iter.hasNext();) {</span>
+<span class="fc" id="L211">		boolean found = false;</span>
+<span class="pc bpc" id="L212" title="1 of 2 branches missed.">		for (Iterator&lt;State&gt; iter = visitedState.iterator(); iter.hasNext();) {</span>
 <span class="nc" id="L213">			State element = (State) iter.next();</span>
 <span class="nc bnc" id="L214" title="All 2 branches missed.">			if(element.Comparator(state)){</span>
 <span class="nc" id="L215">				found = true;</span>
 			}
 <span class="nc" id="L217">		}</span>
-<span class="nc" id="L218">		return found;</span>
+<span class="fc" id="L218">		return found;</span>
 	}
 
 	@Override

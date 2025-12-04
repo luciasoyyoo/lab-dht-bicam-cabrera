@@ -18,10 +18,10 @@ import problem.definition.Problem.ProblemType;
 <span class="fc" id="L18">		Boolean accept = null;</span>
 <span class="fc" id="L19">		Problem problem = Strategy.getStrategy().getProblem();</span>
 <span class="pc bpc" id="L20" title="1 of 2 branches missed.">		if(problem.getTypeProblem().equals(ProblemType.Maximizar)) {</span>
-<span class="pc bpc" id="L21" title="1 of 2 branches missed.">			if (stateCandidate.getEvaluation().get(0) &gt;= stateCurrent.getEvaluation().get(0)) {</span>
+<span class="fc bfc" id="L21" title="All 2 branches covered.">			if (stateCandidate.getEvaluation().get(0) &gt;= stateCurrent.getEvaluation().get(0)) {</span>
 <span class="fc" id="L22">				accept = true;</span>
 			} else {
-<span class="nc" id="L24">				accept = false;</span>
+<span class="fc" id="L24">				accept = false;</span>
 			}
 		} else {
 <span class="nc bnc" id="L27" title="All 2 branches missed.">			if (stateCandidate.getEvaluation().get(0) &lt;= stateCurrent.getEvaluation().get(0)) {</span>

@@ -42,30 +42,30 @@ public class MultiobjectiveStochasticHillClimbing extends Generator{
 
 	@Override
 	public State generate(Integer operatornumber) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
-<span class="nc" id="L45">		List&lt;State&gt; neighborhood = Strategy.getStrategy().getProblem().getOperator().generatedNewState(stateReferenceHC, operatornumber);</span>
-<span class="nc" id="L46">	    State statecandidate = candidatevalue.stateCandidate(stateReferenceHC, typeCandidate, strategy, operatornumber, neighborhood);</span>
-<span class="nc" id="L47">	    return statecandidate;</span>
+<span class="fc" id="L45">		List&lt;State&gt; neighborhood = Strategy.getStrategy().getProblem().getOperator().generatedNewState(stateReferenceHC, operatornumber);</span>
+<span class="fc" id="L46">	    State statecandidate = candidatevalue.stateCandidate(stateReferenceHC, typeCandidate, strategy, operatornumber, neighborhood);</span>
+<span class="fc" id="L47">	    return statecandidate;</span>
 	}
 
 	@Override
 	public void updateReference(State stateCandidate, Integer countIterationsCurrent) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
-<span class="nc" id="L52">		ifacceptCandidate = new FactoryAcceptCandidate();</span>
-<span class="nc" id="L53">		AcceptableCandidate candidate = ifacceptCandidate.createAcceptCandidate(typeAcceptation);</span>
-<span class="nc" id="L54">		Boolean accept = candidate.acceptCandidate(stateReferenceHC, stateCandidate);</span>
-<span class="nc bnc" id="L55" title="All 2 branches missed.">		if(accept.equals(true))</span>
-<span class="nc" id="L56">		  stateReferenceHC = stateCandidate.clone();</span>
-<span class="nc" id="L57">		getReferenceList();</span>
-<span class="nc" id="L58">	}</span>
+<span class="fc" id="L52">		ifacceptCandidate = new FactoryAcceptCandidate();</span>
+<span class="fc" id="L53">		AcceptableCandidate candidate = ifacceptCandidate.createAcceptCandidate(typeAcceptation);</span>
+<span class="fc" id="L54">		Boolean accept = candidate.acceptCandidate(stateReferenceHC, stateCandidate);</span>
+<span class="pc bpc" id="L55" title="1 of 2 branches missed.">		if(accept.equals(true))</span>
+<span class="fc" id="L56">		  stateReferenceHC = stateCandidate.clone();</span>
+<span class="fc" id="L57">		getReferenceList();</span>
+<span class="fc" id="L58">	}</span>
 	
 	@Override
 	public List&lt;State&gt; getReferenceList() {
-<span class="nc" id="L62">		listStateReference.add( stateReferenceHC.clone());</span>
-<span class="nc" id="L63">		return listStateReference;</span>
+<span class="fc" id="L62">		listStateReference.add( stateReferenceHC.clone());</span>
+<span class="fc" id="L63">		return listStateReference;</span>
 	}
 
 	@Override
 	public State getReference() {
-<span class="nc" id="L68">		return stateReferenceHC;</span>
+<span class="fc" id="L68">		return stateReferenceHC;</span>
 	}
 
 	public void setStateRef(State stateRef) {
@@ -74,8 +74,8 @@ public class MultiobjectiveStochasticHillClimbing extends Generator{
 
 	@Override
 	public void setInitialReference(State stateInitialRef) {
-<span class="nc" id="L77">		this.stateReferenceHC = stateInitialRef;</span>
-<span class="nc" id="L78">	}</span>
+<span class="fc" id="L77">		this.stateReferenceHC = stateInitialRef;</span>
+<span class="fc" id="L78">	}</span>
 
 	public GeneratorType getGeneratorType() {
 <span class="nc" id="L81">		return generatortype;</span>
@@ -87,7 +87,7 @@ public class MultiobjectiveStochasticHillClimbing extends Generator{
 
 	@Override
 	public GeneratorType getType() {
-<span class="nc" id="L90">		return this.generatortype;</span>
+<span class="fc" id="L90">		return this.generatortype;</span>
 	}
 
 	@Override
@@ -117,7 +117,7 @@ public class MultiobjectiveStochasticHillClimbing extends Generator{
 	@Override
 	public float[] getTrace() {
 		// TODO Auto-generated method stub
-<span class="nc" id="L120">		return new float[0];</span>
+<span class="fc" id="L120">		return new float[0];</span>
 	}
 
 	@Override
