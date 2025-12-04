@@ -234,11 +234,11 @@ public class MultiGenerator extends Generator implements Cloneable {
 <span class="nc" id="L234">	}</span>
 	
 	public void updateWeight(State stateCandidate) { 
-<span class="nc" id="L237">		boolean search = searchState(stateCandidate);//premio por calidad. </span>
-<span class="nc bnc" id="L238" title="All 2 branches missed.">		if(search == false)</span>
+<span class="fc" id="L237">		boolean search = searchState(stateCandidate);//premio por calidad. </span>
+<span class="pc bpc" id="L238" title="1 of 2 branches missed.">		if(search == false)</span>
 <span class="nc" id="L239">			updateAwardImp();</span>
-<span class="nc" id="L240">		else updateAwardSC();</span>
-<span class="nc" id="L241">	}</span>
+<span class="fc" id="L240">		else updateAwardSC();</span>
+<span class="fc" id="L241">	}</span>
 	
 	public boolean searchState(State stateCandidate) {
 <span class="pc bpc" id="L244" title="1 of 2 branches missed.">		if(Strategy.getStrategy().getProblem().getTypeProblem().equals(ProblemType.Maximizar)){</span>

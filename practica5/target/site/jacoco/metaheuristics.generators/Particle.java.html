@@ -17,11 +17,11 @@ public class Particle extends Generator {
 	
 	
 	public Particle() {
-<span class="nc" id="L20">		super();</span>
-<span class="nc" id="L21">		this.stateActual = new State();</span>
-<span class="nc" id="L22">		this.statePBest = new State();</span>
-<span class="nc" id="L23">		this.velocity = new ArrayList&lt;Object&gt;();</span>
-<span class="nc" id="L24">	}</span>
+<span class="fc" id="L20">		super();</span>
+<span class="fc" id="L21">		this.stateActual = new State();</span>
+<span class="fc" id="L22">		this.statePBest = new State();</span>
+<span class="fc" id="L23">		this.velocity = new ArrayList&lt;Object&gt;();</span>
+<span class="fc" id="L24">	}</span>
 	
 	public Particle(State statePBest, State stateActual, ArrayList&lt;Object&gt; velocity) {
 <span class="fc" id="L27">		super();</span>
@@ -147,20 +147,20 @@ public class Particle extends Generator {
 			IllegalAccessException, InvocationTargetException,
 			NoSuchMethodException {
 		// TODO Auto-generated method stub
-<span class="nc bnc" id="L150" title="All 2 branches missed.">		if(Strategy.getStrategy().getProblem().getTypeProblem().equals(ProblemType.Maximizar)){</span>
-<span class="nc bnc" id="L151" title="All 2 branches missed.">			if(stateActual.getEvaluation().get(0) &gt; statePBest.getEvaluation().get(0)){</span>
-<span class="nc" id="L152">				statePBest.setCode(new ArrayList&lt;Object&gt;(stateActual.getCode()));</span>
-<span class="nc" id="L153">				statePBest.setEvaluation(stateActual.getEvaluation());</span>
+<span class="fc bfc" id="L150" title="All 2 branches covered.">		if(Strategy.getStrategy().getProblem().getTypeProblem().equals(ProblemType.Maximizar)){</span>
+<span class="pc bpc" id="L151" title="1 of 2 branches missed.">			if(stateActual.getEvaluation().get(0) &gt; statePBest.getEvaluation().get(0)){</span>
+<span class="fc" id="L152">				statePBest.setCode(new ArrayList&lt;Object&gt;(stateActual.getCode()));</span>
+<span class="fc" id="L153">				statePBest.setEvaluation(stateActual.getEvaluation());</span>
 			}
 		}
 		else{
-<span class="nc bnc" id="L157" title="All 2 branches missed.">			if(stateCandidate.getEvaluation().get(0) &lt; statePBest.getEvaluation().get(0)){</span>
-<span class="nc" id="L158">				statePBest.setCode(new ArrayList&lt;Object&gt;(stateCandidate.getCode()));</span>
-<span class="nc" id="L159">				statePBest.setEvaluation(stateCandidate.getEvaluation());</span>
+<span class="pc bpc" id="L157" title="1 of 2 branches missed.">			if(stateCandidate.getEvaluation().get(0) &lt; statePBest.getEvaluation().get(0)){</span>
+<span class="fc" id="L158">				statePBest.setCode(new ArrayList&lt;Object&gt;(stateCandidate.getCode()));</span>
+<span class="fc" id="L159">				statePBest.setEvaluation(stateCandidate.getEvaluation());</span>
 			}
 		}
 		
-<span class="nc" id="L163">	}</span>
+<span class="fc" id="L163">	}</span>
 
 	@Override
 	public State getReference() {

@@ -10,14 +10,14 @@ import factory_interface.IFFactoryDistribution;
 
 
 
-<span class="nc" id="L13">public class FactoryDistribution implements IFFactoryDistribution {</span>
+<span class="fc" id="L13">public class FactoryDistribution implements IFFactoryDistribution {</span>
 	private Distribution distribution;
 
 	public Distribution createDistribution(DistributionType distributiontype) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
 		
-<span class="nc" id="L18">		String className = &quot;evolutionary_algorithms.complement.&quot; + distributiontype.toString();</span>
-<span class="nc" id="L19">		distribution = (Distribution) FactoryLoader.getInstance(className);</span>
-<span class="nc" id="L20">		return distribution;</span>
+<span class="fc" id="L18">		String className = &quot;evolutionary_algorithms.complement.&quot; + distributiontype.toString();</span>
+<span class="fc" id="L19">		distribution = (Distribution) FactoryLoader.getInstance(className);</span>
+<span class="fc" id="L20">		return distribution;</span>
 	}
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

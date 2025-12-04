@@ -11,14 +11,14 @@ import factory_interface.IFFactoryReplace;
 
 
 
-<span class="nc" id="L14">public class FactoryReplace implements IFFactoryReplace {</span>
+<span class="fc" id="L14">public class FactoryReplace implements IFFactoryReplace {</span>
 
 private Replace replace;
 	
 	public Replace createReplace( ReplaceType typereplace ) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException{
-<span class="nc" id="L19">		String className = &quot;evolutionary_algorithms.complement.&quot; + typereplace.toString();</span>
-<span class="nc" id="L20">		replace = (Replace) FactoryLoader.getInstance(className);</span>
-<span class="nc" id="L21">		return replace;</span>
+<span class="fc" id="L19">		String className = &quot;evolutionary_algorithms.complement.&quot; + typereplace.toString();</span>
+<span class="fc" id="L20">		replace = (Replace) FactoryLoader.getInstance(className);</span>
+<span class="fc" id="L21">		return replace;</span>
 	}
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

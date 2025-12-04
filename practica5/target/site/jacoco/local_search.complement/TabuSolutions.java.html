@@ -17,14 +17,14 @@ import problem.definition.State;
 		//List&lt;ProblemState&gt; auxList = new ArrayList&lt;ProblemState&gt;();
 		//auxList = listNeighborhood;
 		//Problem problem = new Problem();
-<span class="nc bnc" id="L20" title="All 2 branches missed.">		if (!listTabu.isEmpty()) {</span>
-<span class="nc bnc" id="L21" title="All 2 branches missed.">			for (int i = listNeighborhood.size() - 1; i &gt;= 0 ; i--) {</span>
-<span class="nc" id="L22">				int count_tabu = 0; </span>
-<span class="nc bnc" id="L23" title="All 2 branches missed.">				while (listTabu.size() &gt; count_tabu) {</span>
-<span class="nc bnc" id="L24" title="All 2 branches missed.">					if (listNeighborhood.get(i).equals(listTabu.get(count_tabu))) {</span>
-<span class="nc" id="L25">						listNeighborhood.remove(i);</span>
+<span class="fc bfc" id="L20" title="All 2 branches covered.">		if (!listTabu.isEmpty()) {</span>
+<span class="pc bpc" id="L21" title="1 of 2 branches missed.">			for (int i = listNeighborhood.size() - 1; i &gt;= 0 ; i--) {</span>
+<span class="fc" id="L22">				int count_tabu = 0; </span>
+<span class="fc bfc" id="L23" title="All 2 branches covered.">				while (listTabu.size() &gt; count_tabu) {</span>
+<span class="fc bfc" id="L24" title="All 2 branches covered.">					if (listNeighborhood.get(i).equals(listTabu.get(count_tabu))) {</span>
+<span class="fc" id="L25">						listNeighborhood.remove(i);</span>
 					}
-<span class="nc" id="L27">					count_tabu++;</span>
+<span class="fc" id="L27">					count_tabu++;</span>
 				}
 			}
 <span class="nc" id="L30">			listFiltrate = listNeighborhood;</span>
@@ -32,9 +32,9 @@ import problem.definition.State;
 <span class="nc" id="L32">				throw new Exception();</span>
 			}
 		} else {
-<span class="nc" id="L35">			listFiltrate = listNeighborhood;</span>
+<span class="fc" id="L35">			listFiltrate = listNeighborhood;</span>
 		}
-<span class="nc" id="L37">		return listFiltrate;</span>
+<span class="fc" id="L37">		return listFiltrate;</span>
 	}
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

@@ -262,7 +262,7 @@ public class Strategy {
 <span class="nc" id="L262">	}</span>
 	
 	public void updateCountGender(){ // actualizar la cantidad de mejoras y cantidad de veces que se uso un generador en un periodo dado
-<span class="pc bpc" id="L265" title="1 of 2 branches missed.">		for (int i = 0; i &lt; MultiGenerator.getListGenerators().length; i++) {</span>
+<span class="fc bfc" id="L265" title="All 2 branches covered.">		for (int i = 0; i &lt; MultiGenerator.getListGenerators().length; i++) {</span>
 <span class="fc bfc" id="L266" title="All 2 branches covered.">			if(!MultiGenerator.getListGenerators()[i].getType().equals(GeneratorType.MultiGenerator) ){/*&amp;&amp; !MultiGenerator.getListGenerators()[i].getType().equals(GeneratorType.MultiCaseSimulatedAnnealing) &amp;&amp;</span>
 				!MultiGenerator.getListGenerators()[i].getType().equals(GeneratorType.MultiobjectiveHillClimbingDistance) &amp;&amp; !MultiGenerator.getListGenerators()[i].getType().equals(GeneratorType.MultiobjectiveHillClimbingRestart) &amp;&amp;
 				!MultiGenerator.getListGenerators()[i].getType().equals(GeneratorType.MultiobjectiveStochasticHillClimbing) &amp;&amp; !MultiGenerator.getListGenerators()[i].getType().equals(GeneratorType.MultiobjectiveTabuSearch) &amp;&amp; 
@@ -273,7 +273,7 @@ public class Strategy {
 <span class="fc" id="L273">				MultiGenerator.getListGenerators()[i].countBetterGender = 0;</span>
 			}
 		}
-<span class="nc" id="L276">	}</span>
+<span class="fc" id="L276">	}</span>
 	
 	public void updateWeight(){
 <span class="fc bfc" id="L279" title="All 2 branches covered.">		for (int i = 0; i &lt; MultiGenerator.getListGenerators().length; i++) {</span>
@@ -286,23 +286,23 @@ public class Strategy {
 	
 	public void update(Integer countIterationsCurrent) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {//HashMap&lt;String, Object&gt; map, 
 		//		Here update parameter for update and change generator.
-<span class="nc bnc" id="L289" title="All 2 branches missed.">		if(countIterationsCurrent.equals(GeneticAlgorithm.countRef - 1)){</span>
+<span class="pc bpc" id="L289" title="1 of 2 branches missed.">		if(countIterationsCurrent.equals(GeneticAlgorithm.countRef - 1)){</span>
 <span class="nc" id="L290">			ifFactoryGenerator = new FactoryGenerator();</span>
 <span class="nc" id="L291">			Strategy.getStrategy().generator = ifFactoryGenerator.createGenerator(GeneratorType.GeneticAlgorithm);</span>
 		}
-<span class="nc bnc" id="L293" title="All 2 branches missed.">		if(countIterationsCurrent.equals(EvolutionStrategies.countRef - 1)){</span>
+<span class="pc bpc" id="L293" title="1 of 2 branches missed.">		if(countIterationsCurrent.equals(EvolutionStrategies.countRef - 1)){</span>
 <span class="nc" id="L294">			ifFactoryGenerator = new FactoryGenerator();</span>
 <span class="nc" id="L295">			Strategy.getStrategy().generator = ifFactoryGenerator.createGenerator(GeneratorType.EvolutionStrategies);</span>
 		}			
-<span class="nc bnc" id="L297" title="All 2 branches missed.">		if(countIterationsCurrent.equals(DistributionEstimationAlgorithm.countRef - 1)){</span>
+<span class="pc bpc" id="L297" title="1 of 2 branches missed.">		if(countIterationsCurrent.equals(DistributionEstimationAlgorithm.countRef - 1)){</span>
 <span class="nc" id="L298">			ifFactoryGenerator = new FactoryGenerator();</span>
 <span class="nc" id="L299">			Strategy.getStrategy().generator = ifFactoryGenerator.createGenerator(GeneratorType.DistributionEstimationAlgorithm);</span>
 		}
-<span class="nc bnc" id="L301" title="All 2 branches missed.">		if(countIterationsCurrent.equals(ParticleSwarmOptimization.getCountRef() - 1)){</span>
-<span class="nc" id="L302">			ifFactoryGenerator = new FactoryGenerator();</span>
-<span class="nc" id="L303">			Strategy.getStrategy().generator = ifFactoryGenerator.createGenerator(GeneratorType.ParticleSwarmOptimization);</span>
+<span class="pc bpc" id="L301" title="1 of 2 branches missed.">		if(countIterationsCurrent.equals(ParticleSwarmOptimization.getCountRef() - 1)){</span>
+<span class="fc" id="L302">			ifFactoryGenerator = new FactoryGenerator();</span>
+<span class="fc" id="L303">			Strategy.getStrategy().generator = ifFactoryGenerator.createGenerator(GeneratorType.ParticleSwarmOptimization);</span>
 		}
-<span class="nc" id="L305">	}</span>
+<span class="fc" id="L305">	}</span>
 
 	public Generator newGenerator(GeneratorType Generatortype) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
 <span class="fc" id="L308">		ifFactoryGenerator = new FactoryGenerator();</span>
@@ -435,9 +435,9 @@ public class Strategy {
 		}
 <span class="nc" id="L436">	}</span>
 	public void updateRefGenerator(Generator generator) {
-<span class="nc bnc" id="L438" title="All 8 branches missed.">		if(generator.getType().equals(GeneratorType.HillClimbing) || generator.getType().equals(GeneratorType.TabuSearch) || generator.getType().equals(GeneratorType.RandomSearch) || generator.getType().equals(GeneratorType.SimulatedAnnealing)){</span>
-<span class="nc" id="L439">			double evaluation = getProblem().getFunction().get(0).Evaluation(generator.getReference());</span>
-<span class="nc" id="L440">			generator.getReference().getEvaluation().set(0, evaluation);</span>
+<span class="pc bpc" id="L438" title="3 of 8 branches missed.">		if(generator.getType().equals(GeneratorType.HillClimbing) || generator.getType().equals(GeneratorType.TabuSearch) || generator.getType().equals(GeneratorType.RandomSearch) || generator.getType().equals(GeneratorType.SimulatedAnnealing)){</span>
+<span class="fc" id="L439">			double evaluation = getProblem().getFunction().get(0).Evaluation(generator.getReference());</span>
+<span class="fc" id="L440">			generator.getReference().getEvaluation().set(0, evaluation);</span>
 //			State state = new State();
 //			state.setEvaluation(evaluation);
 //			state.setCode(new ArrayList&lt;Object&gt;(generator.getReference().getCode()));
@@ -447,13 +447,13 @@ public class Strategy {
 			generator.setInitialReference(state);
 			generator.getReferenceList().add(state);*/
 		}
-<span class="nc bnc" id="L450" title="All 6 branches missed.">		if(generator.getType().equals(GeneratorType.GeneticAlgorithm) || generator.getType().equals(GeneratorType.DistributionEstimationAlgorithm) || generator.getType().equals(GeneratorType.EvolutionStrategies)){</span>
-<span class="nc bnc" id="L451" title="All 2 branches missed.">			for (int j = 0; j &lt; generator.getReferenceList().size(); j++) {</span>
-<span class="nc" id="L452">				double evaluation = getProblem().getFunction().get(0).Evaluation(generator.getReferenceList().get(j));</span>
-<span class="nc" id="L453">				generator.getReferenceList().get(j).getEvaluation().set(0, evaluation);</span>
+<span class="pc bpc" id="L450" title="2 of 6 branches missed.">		if(generator.getType().equals(GeneratorType.GeneticAlgorithm) || generator.getType().equals(GeneratorType.DistributionEstimationAlgorithm) || generator.getType().equals(GeneratorType.EvolutionStrategies)){</span>
+<span class="fc bfc" id="L451" title="All 2 branches covered.">			for (int j = 0; j &lt; generator.getReferenceList().size(); j++) {</span>
+<span class="fc" id="L452">				double evaluation = getProblem().getFunction().get(0).Evaluation(generator.getReferenceList().get(j));</span>
+<span class="fc" id="L453">				generator.getReferenceList().get(j).getEvaluation().set(0, evaluation);</span>
 			}
 		}
-<span class="nc" id="L456">	}</span>
+<span class="fc" id="L456">	}</span>
 
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

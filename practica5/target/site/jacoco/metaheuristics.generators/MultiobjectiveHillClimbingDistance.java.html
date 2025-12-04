@@ -35,7 +35,7 @@ public class MultiobjectiveHillClimbingDistance extends Generator{
 	 * Accessor for sizeNeighbors.
 	 */
 	public static int getSizeNeighbors() {
-<span class="nc" id="L38">		return sizeNeighbors;</span>
+<span class="fc" id="L38">		return sizeNeighbors;</span>
 	}
 	//Lista que contiene las distancias de cada soluciï¿½n del frente de Pareto estimado
 <span class="fc" id="L41">	static List&lt;Double&gt; distanceSolution = new ArrayList&lt;Double&gt;();</span>
@@ -137,13 +137,13 @@ public class MultiobjectiveHillClimbingDistance extends Generator{
 
 	@Override
 	public List&lt;State&gt; getReferenceList() {
-<span class="nc" id="L140">		listStateReference.add(stateReferenceHC.clone());</span>
-<span class="nc" id="L141">		return listStateReference;</span>
+<span class="fc" id="L140">		listStateReference.add(stateReferenceHC.clone());</span>
+<span class="fc" id="L141">		return listStateReference;</span>
 	}
 
 	@Override
 	public State getReference() {
-<span class="nc" id="L146">		return stateReferenceHC;</span>
+<span class="fc" id="L146">		return stateReferenceHC;</span>
 	}
 
 	public void setStateRef(State stateRef) {
@@ -152,11 +152,11 @@ public class MultiobjectiveHillClimbingDistance extends Generator{
 
 	@Override
 	public void setInitialReference(State stateInitialRef) {
-<span class="nc" id="L155">		this.stateReferenceHC = stateInitialRef;</span>
-<span class="nc" id="L156">	}</span>
+<span class="fc" id="L155">		this.stateReferenceHC = stateInitialRef;</span>
+<span class="fc" id="L156">	}</span>
 
 	public GeneratorType getGeneratorType() {
-<span class="nc" id="L159">		return generatortype;</span>
+<span class="fc" id="L159">		return generatortype;</span>
 	}
 
 	public void setGeneratorType(GeneratorType generatortype) {
@@ -171,37 +171,37 @@ public class MultiobjectiveHillClimbingDistance extends Generator{
 	@Override
 	public List&lt;State&gt; getSonList() {
 		// TODO Auto-generated method stub
-<span class="nc" id="L174">		return null;</span>
+<span class="fc" id="L174">		return null;</span>
 	}
 
 	public static List&lt;Double&gt; distanceCalculateAdd(List&lt;State&gt; solution) {
-<span class="nc" id="L178">		State[] solutions = solution.toArray(new State[solution.size()]);</span>
-<span class="nc" id="L179">		Double distance = 0.0;</span>
-<span class="nc" id="L180">		List&lt;Double&gt;listDist=new ArrayList&lt;Double&gt;();</span>
-<span class="nc" id="L181">		State lastSolution = solution.get(solution.size()-1);</span>
+<span class="fc" id="L178">		State[] solutions = solution.toArray(new State[solution.size()]);</span>
+<span class="fc" id="L179">		Double distance = 0.0;</span>
+<span class="fc" id="L180">		List&lt;Double&gt;listDist=new ArrayList&lt;Double&gt;();</span>
+<span class="fc" id="L181">		State lastSolution = solution.get(solution.size()-1);</span>
 		//Actualizando las distancias de todos los elmentos excepto el nuevo insertando
-<span class="nc bnc" id="L183" title="All 2 branches missed.">		for (int k = 0; k &lt; solutions.length-1; k++) {</span>
-<span class="nc" id="L184">			State solA = solutions[k];</span>
-<span class="nc" id="L185">			distance = solA.Distance(lastSolution);</span>
-<span class="nc" id="L186">			listDist.add(distanceSolution.get(k)+distance);</span>
+<span class="fc bfc" id="L183" title="All 2 branches covered.">		for (int k = 0; k &lt; solutions.length-1; k++) {</span>
+<span class="fc" id="L184">			State solA = solutions[k];</span>
+<span class="fc" id="L185">			distance = solA.Distance(lastSolution);</span>
+<span class="fc" id="L186">			listDist.add(distanceSolution.get(k)+distance);</span>
 //			distanceSolution.set(k, distanceSolution.get(k) + distance);
 		}
-<span class="nc" id="L189">		distance = 0.0;</span>
+<span class="fc" id="L189">		distance = 0.0;</span>
 		//Calculando la distancia del ï¿½ltimo elemento (elemento insertado) respecto al resto de los elementos
-<span class="nc bnc" id="L191" title="All 2 branches missed.">		if (solutions.length==1) {</span>
-<span class="nc" id="L192">			return distanceSolution;</span>
+<span class="fc bfc" id="L191" title="All 2 branches covered.">		if (solutions.length==1) {</span>
+<span class="fc" id="L192">			return distanceSolution;</span>
 		
 		}else {
 		
-<span class="nc bnc" id="L196" title="All 2 branches missed.">			for (int l = 0; l &lt; solutions.length-1; l++) {</span>
-<span class="nc" id="L197">				State solB = solutions[l];</span>
-<span class="nc" id="L198">				distance += lastSolution.Distance(solB);</span>
+<span class="fc bfc" id="L196" title="All 2 branches covered.">			for (int l = 0; l &lt; solutions.length-1; l++) {</span>
+<span class="fc" id="L197">				State solB = solutions[l];</span>
+<span class="fc" id="L198">				distance += lastSolution.Distance(solB);</span>
 			}
-<span class="nc" id="L200">			listDist.add(distance);</span>
+<span class="fc" id="L200">			listDist.add(distance);</span>
 //			distanceSolution.add(distance);
-<span class="nc" id="L202">			distanceSolution=listDist;</span>
+<span class="fc" id="L202">			distanceSolution=listDist;</span>
 			
-<span class="nc" id="L204">			return distanceSolution;</span>
+<span class="fc" id="L204">			return distanceSolution;</span>
 		}
 
 	}
@@ -252,13 +252,13 @@ public class MultiobjectiveHillClimbingDistance extends Generator{
 	@Override
 	public float[] getTrace() {
 		// TODO Auto-generated method stub
-<span class="nc bnc" id="L255" title="All 2 branches missed.">		if (this.listTrace == null) return new float[0];</span>
-<span class="nc" id="L256">		float[] arr = new float[this.listTrace.size()];</span>
-<span class="nc bnc" id="L257" title="All 2 branches missed.">		for (int i = 0; i &lt; this.listTrace.size(); i++) {</span>
-<span class="nc" id="L258">			Float v = this.listTrace.get(i);</span>
-<span class="nc bnc" id="L259" title="All 2 branches missed.">			arr[i] = (v == null) ? 0f : v.floatValue();</span>
+<span class="pc bpc" id="L255" title="1 of 2 branches missed.">		if (this.listTrace == null) return new float[0];</span>
+<span class="fc" id="L256">		float[] arr = new float[this.listTrace.size()];</span>
+<span class="fc bfc" id="L257" title="All 2 branches covered.">		for (int i = 0; i &lt; this.listTrace.size(); i++) {</span>
+<span class="fc" id="L258">			Float v = this.listTrace.get(i);</span>
+<span class="pc bpc" id="L259" title="1 of 2 branches missed.">			arr[i] = (v == null) ? 0f : v.floatValue();</span>
 		}
-<span class="nc" id="L261">		return arr;</span>
+<span class="fc" id="L261">		return arr;</span>
 	}
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

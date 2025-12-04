@@ -8,39 +8,39 @@ import problem.definition.ObjetiveFunction;
 import problem.definition.State;
 import problem.definition.Problem.ProblemType;
 
-<span class="nc" id="L11">public class MultiObjetivoPuro extends SolutionMethod {</span>
+<span class="fc" id="L11">public class MultiObjetivoPuro extends SolutionMethod {</span>
 
 	@Override
 	public void evaluationState(State state) {
 		// TODO Auto-generated method stub
-<span class="nc" id="L16">		double tempEval = -1;</span>
-<span class="nc" id="L17">		ArrayList&lt;Double&gt; evaluation = new ArrayList&lt;Double&gt;(Strategy.getStrategy().getProblem().getFunction().size());</span>
-<span class="nc bnc" id="L18" title="All 2 branches missed.">		for (int i = 0; i &lt; Strategy.getStrategy().getProblem().getFunction().size(); i++)</span>
+<span class="fc" id="L16">		double tempEval = -1;</span>
+<span class="fc" id="L17">		ArrayList&lt;Double&gt; evaluation = new ArrayList&lt;Double&gt;(Strategy.getStrategy().getProblem().getFunction().size());</span>
+<span class="fc bfc" id="L18" title="All 2 branches covered.">		for (int i = 0; i &lt; Strategy.getStrategy().getProblem().getFunction().size(); i++)</span>
 		{
-<span class="nc" id="L20">			ObjetiveFunction objfunction = (ObjetiveFunction)Strategy.getStrategy().getProblem().getFunction().get(i);</span>
-<span class="nc bnc" id="L21" title="All 2 branches missed.">			if(Strategy.getStrategy().getProblem().getTypeProblem().equals(ProblemType.Maximizar)){</span>
-<span class="nc bnc" id="L22" title="All 2 branches missed.">				if(objfunction.getTypeProblem().equals(ProblemType.Maximizar))</span>
+<span class="fc" id="L20">			ObjetiveFunction objfunction = (ObjetiveFunction)Strategy.getStrategy().getProblem().getFunction().get(i);</span>
+<span class="fc bfc" id="L21" title="All 2 branches covered.">			if(Strategy.getStrategy().getProblem().getTypeProblem().equals(ProblemType.Maximizar)){</span>
+<span class="fc bfc" id="L22" title="All 2 branches covered.">				if(objfunction.getTypeProblem().equals(ProblemType.Maximizar))</span>
 				{
-<span class="nc" id="L24">					tempEval = objfunction.Evaluation(state);</span>
+<span class="fc" id="L24">					tempEval = objfunction.Evaluation(state);</span>
 				}
 				else{
-<span class="nc" id="L27">					tempEval = 1-objfunction.Evaluation(state);</span>
+<span class="fc" id="L27">					tempEval = 1-objfunction.Evaluation(state);</span>
 				}
 			}
 			else{
-<span class="nc bnc" id="L31" title="All 2 branches missed.">				if(objfunction.getTypeProblem().equals(ProblemType.Maximizar))</span>
+<span class="fc bfc" id="L31" title="All 2 branches covered.">				if(objfunction.getTypeProblem().equals(ProblemType.Maximizar))</span>
 				{
-<span class="nc" id="L33">					tempEval = 1-objfunction.Evaluation(state);</span>
+<span class="fc" id="L33">					tempEval = 1-objfunction.Evaluation(state);</span>
 				}
 				else{
-<span class="nc" id="L36">					tempEval = objfunction.Evaluation(state);</span>
+<span class="fc" id="L36">					tempEval = objfunction.Evaluation(state);</span>
 				}
 			}
-<span class="nc" id="L39">			evaluation.add(tempEval);</span>
+<span class="fc" id="L39">			evaluation.add(tempEval);</span>
 		}
 		//evaluation.add( (double) -1);
-<span class="nc" id="L42">		state.setEvaluation(evaluation);</span>
-<span class="nc" id="L43">	}</span>
+<span class="fc" id="L42">		state.setEvaluation(evaluation);</span>
+<span class="fc" id="L43">	}</span>
 
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

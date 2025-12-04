@@ -35,7 +35,7 @@ public class ParticleSwarmOptimization extends Generator {
 	// Accessors to avoid direct writes to static fields from instance methods.
 	// Defensive copies are used to avoid exposing internal mutable state.
 	public static State[] getLBest() {
-<span class="pc bpc" id="L38" title="1 of 2 branches missed.">		if (lBest == null) return new State[0];</span>
+<span class="fc bfc" id="L38" title="All 2 branches covered.">		if (lBest == null) return new State[0];</span>
 <span class="fc" id="L39">		State[] copy = new State[lBest.length];</span>
 <span class="fc bfc" id="L40" title="All 2 branches covered.">		for (int i = 0; i &lt; lBest.length; i++) {</span>
 <span class="pc bpc" id="L41" title="1 of 2 branches missed.">			copy[i] = (lBest[i] == null) ? null : lBest[i].clone();</span>
@@ -56,7 +56,7 @@ public class ParticleSwarmOptimization extends Generator {
 
 	public static void setLBestAt(int idx, State s) {
 <span class="pc bpc" id="L58" title="1 of 2 branches missed.">		if (lBest == null) return;</span>
-<span class="pc bpc" id="L59" title="2 of 4 branches missed.">		if (idx &lt; 0 || idx &gt;= lBest.length) return;</span>
+<span class="pc bpc" id="L59" title="1 of 4 branches missed.">		if (idx &lt; 0 || idx &gt;= lBest.length) return;</span>
 <span class="pc bpc" id="L60" title="1 of 2 branches missed.">		lBest[idx] = (s == null) ? null : s.clone();</span>
 <span class="fc" id="L61">	}</span>
 <span class="fc" id="L62">	public static State getGBest() { return gBest; }</span>
@@ -249,20 +249,20 @@ public class ParticleSwarmOptimization extends Generator {
 <span class="nc" id="L249">	}</span>
 	
 	public State gBestInicial (){
-<span class="nc" id="L252">		State stateBest = lBest[0];</span>
-<span class="nc bnc" id="L253" title="All 2 branches missed.">		for (int i = 1; i &lt; lBest.length; i++) {</span>
-<span class="nc bnc" id="L254" title="All 2 branches missed.">			if(Strategy.getStrategy().getProblem().getTypeProblem().equals(ProblemType.Maximizar)){</span>
-<span class="nc bnc" id="L255" title="All 2 branches missed.">				if (lBest[i].getEvaluation().get(0) &gt; stateBest.getEvaluation().get(0)){</span>
-<span class="nc" id="L256">					stateBest = lBest[i];</span>
+<span class="fc" id="L252">		State stateBest = lBest[0];</span>
+<span class="fc bfc" id="L253" title="All 2 branches covered.">		for (int i = 1; i &lt; lBest.length; i++) {</span>
+<span class="fc bfc" id="L254" title="All 2 branches covered.">			if(Strategy.getStrategy().getProblem().getTypeProblem().equals(ProblemType.Maximizar)){</span>
+<span class="pc bpc" id="L255" title="1 of 2 branches missed.">				if (lBest[i].getEvaluation().get(0) &gt; stateBest.getEvaluation().get(0)){</span>
+<span class="fc" id="L256">					stateBest = lBest[i];</span>
 				}
 			}
 			else{
-<span class="nc bnc" id="L260" title="All 2 branches missed.">				if (lBest[i].getEvaluation().get(0) &lt; stateBest.getEvaluation().get(0)){</span>
+<span class="pc bpc" id="L260" title="1 of 2 branches missed.">				if (lBest[i].getEvaluation().get(0) &lt; stateBest.getEvaluation().get(0)){</span>
 <span class="nc" id="L261">					stateBest = lBest[i];</span>
 				}
 			}
 		}
-<span class="nc" id="L265">		return stateBest;</span>
+<span class="fc" id="L265">		return stateBest;</span>
 	}
 
 	@Override

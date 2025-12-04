@@ -9,11 +9,11 @@ import problem.definition.State;
 	@Override
 	public State mutation(State state, double PM) {
 <span class="fc" id="L11">		double probM = (double)(Math.random() * (double)(1));</span>
-<span class="pc bpc" id="L12" title="1 of 2 branches missed.">		if(PM &gt;= probM)</span>
+<span class="fc bfc" id="L12" title="All 2 branches covered.">		if(PM &gt;= probM)</span>
 		{
-<span class="nc" id="L14">			Object key = Strategy.getStrategy().getProblem().getCodification().getAleatoryKey();</span>
-<span class="nc" id="L15">			Object value = Strategy.getStrategy().getProblem().getCodification().getVariableAleatoryValue((Integer)key);</span>
-<span class="nc" id="L16">			state.getCode().set((Integer) key, value);</span>
+<span class="fc" id="L14">			Object key = Strategy.getStrategy().getProblem().getCodification().getAleatoryKey();</span>
+<span class="fc" id="L15">			Object value = Strategy.getStrategy().getProblem().getCodification().getVariableAleatoryValue((Integer)key);</span>
+<span class="fc" id="L16">			state.getCode().set((Integer) key, value);</span>
 		}
 <span class="fc" id="L18">		return state;</span>
 	}
