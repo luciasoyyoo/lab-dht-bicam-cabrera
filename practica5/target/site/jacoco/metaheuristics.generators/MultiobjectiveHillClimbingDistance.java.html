@@ -152,11 +152,11 @@ public class MultiobjectiveHillClimbingDistance extends Generator{
 
 	@Override
 	public void setInitialReference(State stateInitialRef) {
-<span class="fc" id="L155">		this.stateReferenceHC = stateInitialRef;</span>
-<span class="fc" id="L156">	}</span>
+<span class="nc" id="L155">		this.stateReferenceHC = stateInitialRef;</span>
+<span class="nc" id="L156">	}</span>
 
 	public GeneratorType getGeneratorType() {
-<span class="fc" id="L159">		return generatortype;</span>
+<span class="nc" id="L159">		return generatortype;</span>
 	}
 
 	public void setGeneratorType(GeneratorType generatortype) {
@@ -171,7 +171,7 @@ public class MultiobjectiveHillClimbingDistance extends Generator{
 	@Override
 	public List&lt;State&gt; getSonList() {
 		// TODO Auto-generated method stub
-<span class="fc" id="L174">		return null;</span>
+<span class="nc" id="L174">		return null;</span>
 	}
 
 	public static List&lt;Double&gt; distanceCalculateAdd(List&lt;State&gt; solution) {
@@ -252,13 +252,13 @@ public class MultiobjectiveHillClimbingDistance extends Generator{
 	@Override
 	public float[] getTrace() {
 		// TODO Auto-generated method stub
-<span class="pc bpc" id="L255" title="1 of 2 branches missed.">		if (this.listTrace == null) return new float[0];</span>
-<span class="fc" id="L256">		float[] arr = new float[this.listTrace.size()];</span>
-<span class="fc bfc" id="L257" title="All 2 branches covered.">		for (int i = 0; i &lt; this.listTrace.size(); i++) {</span>
-<span class="fc" id="L258">			Float v = this.listTrace.get(i);</span>
-<span class="pc bpc" id="L259" title="1 of 2 branches missed.">			arr[i] = (v == null) ? 0f : v.floatValue();</span>
+<span class="nc bnc" id="L255" title="All 2 branches missed.">		if (this.listTrace == null) return new float[0];</span>
+<span class="nc" id="L256">		float[] arr = new float[this.listTrace.size()];</span>
+<span class="nc bnc" id="L257" title="All 2 branches missed.">		for (int i = 0; i &lt; this.listTrace.size(); i++) {</span>
+<span class="nc" id="L258">			Float v = this.listTrace.get(i);</span>
+<span class="nc bnc" id="L259" title="All 2 branches missed.">			arr[i] = (v == null) ? 0f : v.floatValue();</span>
 		}
-<span class="fc" id="L261">		return arr;</span>
+<span class="nc" id="L261">		return arr;</span>
 	}
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

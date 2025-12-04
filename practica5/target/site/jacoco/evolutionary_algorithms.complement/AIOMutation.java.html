@@ -11,65 +11,65 @@ import metaheurictics.strategy.Strategy;
 
 import problem.definition.State;
 
-<span class="nc" id="L14">public class AIOMutation extends Mutation {</span>
+<span class="fc" id="L14">public class AIOMutation extends Mutation {</span>
     
     
-<span class="nc" id="L17">	public static final List&lt;Object&gt; path = Collections.synchronizedList(new ArrayList&lt;Object&gt;());</span>
+<span class="fc" id="L17">	public static final List&lt;Object&gt; path = Collections.synchronizedList(new ArrayList&lt;Object&gt;());</span>
 
 	@Override
 	public State mutation(State state, double PM) {
 		// TODO Auto-generated method stub
-<span class="nc" id="L22">		int key = Strategy.getStrategy().getProblem().getCodification().getAleatoryKey(); //seleccionar aleatoriamente una ciudad</span>
-<span class="nc" id="L23">		int key1 = 0;</span>
-<span class="nc" id="L24">		boolean found = false;</span>
-<span class="nc bnc" id="L25" title="All 2 branches missed.">		while (found == false){</span>
-<span class="nc" id="L26">			key1 = Strategy.getStrategy().getProblem().getCodification().getAleatoryKey();</span>
-<span class="nc bnc" id="L27" title="All 2 branches missed.">			if(key1 != key)</span>
-<span class="nc" id="L28">				found = true;</span>
+<span class="fc" id="L22">		int key = Strategy.getStrategy().getProblem().getCodification().getAleatoryKey(); //seleccionar aleatoriamente una ciudad</span>
+<span class="fc" id="L23">		int key1 = 0;</span>
+<span class="fc" id="L24">		boolean found = false;</span>
+<span class="fc bfc" id="L25" title="All 2 branches covered.">		while (found == false){</span>
+<span class="fc" id="L26">			key1 = Strategy.getStrategy().getProblem().getCodification().getAleatoryKey();</span>
+<span class="pc bpc" id="L27" title="1 of 2 branches missed.">			if(key1 != key)</span>
+<span class="fc" id="L28">				found = true;</span>
 		}
-<span class="nc" id="L30">		sortedPathValue(state);</span>
-<span class="nc" id="L31">		int p1 = 0;</span>
-<span class="nc" id="L32">		int p2 = 0;</span>
-<span class="nc bnc" id="L33" title="All 2 branches missed.">		if(key &gt; key1){</span>
+<span class="fc" id="L30">		sortedPathValue(state);</span>
+<span class="fc" id="L31">		int p1 = 0;</span>
+<span class="fc" id="L32">		int p2 = 0;</span>
+<span class="pc bpc" id="L33" title="1 of 2 branches missed.">		if(key &gt; key1){</span>
 <span class="nc" id="L34">			p2 = key;</span>
 <span class="nc" id="L35">			p1 = key1;</span>
 		}
 		else{
-<span class="nc" id="L38">			p1 = key;</span>
-<span class="nc" id="L39">			p2 = key1;</span>
+<span class="fc" id="L38">			p1 = key;</span>
+<span class="fc" id="L39">			p2 = key1;</span>
 		}
-<span class="nc" id="L41">		int length = (p2 - p1) / 2;</span>
-<span class="nc bnc" id="L42" title="All 2 branches missed.">		for (int i = 1; i &lt;= length + 1; i++) {</span>
-<span class="nc" id="L43">			int tempC = ((TSPState) state.getCode().get(p1 + i - 1)).getIdCity();</span>
-<span class="nc" id="L44">			((TSPState)state.getCode().get(p1 + i - 1)).setIdCity(((TSPState)state.getCode().get(p2 - i + 1)).getIdCity());</span>
-<span class="nc" id="L45">			((TSPState)state.getCode().get(p2 - i + 1)).setIdCity(tempC);</span>
+<span class="fc" id="L41">		int length = (p2 - p1) / 2;</span>
+<span class="fc bfc" id="L42" title="All 2 branches covered.">		for (int i = 1; i &lt;= length + 1; i++) {</span>
+<span class="fc" id="L43">			int tempC = ((TSPState) state.getCode().get(p1 + i - 1)).getIdCity();</span>
+<span class="fc" id="L44">			((TSPState)state.getCode().get(p1 + i - 1)).setIdCity(((TSPState)state.getCode().get(p2 - i + 1)).getIdCity());</span>
+<span class="fc" id="L45">			((TSPState)state.getCode().get(p2 - i + 1)).setIdCity(tempC);</span>
 		}
-<span class="nc" id="L47">		path.clear();</span>
-<span class="nc" id="L48">		return state;</span>
+<span class="fc" id="L47">		path.clear();</span>
+<span class="fc" id="L48">		return state;</span>
 	}
 	
 	public void sortedPathValue(State state) {
-<span class="nc bnc" id="L52" title="All 2 branches missed.">		for(int k = 0; k &lt; state.getCode().size(); k++){</span>
-<span class="nc" id="L53">			path.add( state.getCode().get(k));</span>
+<span class="fc bfc" id="L52" title="All 2 branches covered.">		for(int k = 0; k &lt; state.getCode().size(); k++){</span>
+<span class="fc" id="L53">			path.add( state.getCode().get(k));</span>
 		}
-<span class="nc bnc" id="L55" title="All 2 branches missed.">		for(int i = 1; i &lt; path.size(); i++){</span>
-<span class="nc bnc" id="L56" title="All 2 branches missed.">			for(int j = 0; j &lt; i; j++){</span>
-<span class="nc" id="L57">				Integer data1 = ((TSPState)state.getCode().get(i)).getValue();</span>
-<span class="nc" id="L58">				Integer data2 = ((TSPState)state.getCode().get(j)).getValue();</span>
-<span class="nc bnc" id="L59" title="All 2 branches missed.">				if(data1 &lt; data2){</span>
-<span class="nc" id="L60">					state.getCode().add(j, state.getCode().remove(i));</span>
-<span class="nc" id="L61">					path.add(j, path.remove(i));</span>
+<span class="fc bfc" id="L55" title="All 2 branches covered.">		for(int i = 1; i &lt; path.size(); i++){</span>
+<span class="fc bfc" id="L56" title="All 2 branches covered.">			for(int j = 0; j &lt; i; j++){</span>
+<span class="fc" id="L57">				Integer data1 = ((TSPState)state.getCode().get(i)).getValue();</span>
+<span class="fc" id="L58">				Integer data2 = ((TSPState)state.getCode().get(j)).getValue();</span>
+<span class="pc bpc" id="L59" title="1 of 2 branches missed.">				if(data1 &lt; data2){</span>
+<span class="fc" id="L60">					state.getCode().add(j, state.getCode().remove(i));</span>
+<span class="fc" id="L61">					path.add(j, path.remove(i));</span>
 				}
 			}
 		}
 	
-<span class="nc" id="L66">	}</span>
+<span class="fc" id="L66">	}</span>
 
 	public static void fillPath() {
-<span class="nc bnc" id="L69" title="All 2 branches missed.">		for(int k = 0; k &lt; Strategy.getStrategy().getProblem().getCodification().getVariableCount(); k++){</span>
-<span class="nc" id="L70">			path.add(k);</span>
+<span class="fc bfc" id="L69" title="All 2 branches covered.">		for(int k = 0; k &lt; Strategy.getStrategy().getProblem().getCodification().getVariableCount(); k++){</span>
+<span class="fc" id="L70">			path.add(k);</span>
 		}
-<span class="nc" id="L72">	}</span>
+<span class="fc" id="L72">	}</span>
 
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>
