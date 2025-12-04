@@ -66,22 +66,22 @@ public class EvolutionStrategies extends Generator {
 
     	//ArrayList&lt;State&gt; list = new ArrayList&lt;State&gt;();
 //		List&lt;State&gt; refList = new ArrayList&lt;State&gt;(this.listStateReference); 
-<span class="nc" id="L69">    	iffatherselection = new FactoryFatherSelection();</span>
-<span class="nc" id="L70">    	FatherSelection selection = iffatherselection.createSelectFather(selectionType);</span>
-<span class="nc" id="L71">    	List&lt;State&gt; fathers = selection.selection(this.listStateReference, truncation);</span>
-<span class="nc bnc" id="L72" title="All 2 branches missed.">    	int pos1 = (fathers.size() &gt; 0) ? ThreadLocalRandom.current().nextInt(fathers.size()) : 0;</span>
-<span class="nc" id="L73">    	State candidate = (State) Strategy.getStrategy().getProblem().getState().getCopy();</span>
-<span class="nc" id="L74">    	candidate.setCode(new ArrayList&lt;Object&gt;(fathers.get(pos1).getCode()));</span>
-<span class="nc" id="L75">    	candidate.setEvaluation(fathers.get(pos1).getEvaluation());</span>
-<span class="nc" id="L76">    	candidate.setNumber(fathers.get(pos1).getNumber());</span>
-<span class="nc" id="L77">    	candidate.setTypeGenerator(fathers.get(pos1).getTypeGenerator());</span>
+<span class="fc" id="L69">    	iffatherselection = new FactoryFatherSelection();</span>
+<span class="fc" id="L70">    	FatherSelection selection = iffatherselection.createSelectFather(selectionType);</span>
+<span class="fc" id="L71">    	List&lt;State&gt; fathers = selection.selection(this.listStateReference, truncation);</span>
+<span class="pc bpc" id="L72" title="1 of 2 branches missed.">    	int pos1 = (fathers.size() &gt; 0) ? ThreadLocalRandom.current().nextInt(fathers.size()) : 0;</span>
+<span class="fc" id="L73">    	State candidate = (State) Strategy.getStrategy().getProblem().getState().getCopy();</span>
+<span class="fc" id="L74">    	candidate.setCode(new ArrayList&lt;Object&gt;(fathers.get(pos1).getCode()));</span>
+<span class="fc" id="L75">    	candidate.setEvaluation(fathers.get(pos1).getEvaluation());</span>
+<span class="fc" id="L76">    	candidate.setNumber(fathers.get(pos1).getNumber());</span>
+<span class="fc" id="L77">    	candidate.setTypeGenerator(fathers.get(pos1).getTypeGenerator());</span>
     	
     	//**********mutacion******************************************** 	
-<span class="nc" id="L80">    	iffactorymutation = new FactoryMutation();</span>
-<span class="nc" id="L81">    	Mutation mutation = iffactorymutation.createMutation(mutationType);</span>
-<span class="nc" id="L82">    	candidate = mutation.mutation(candidate, PM);</span>
+<span class="fc" id="L80">    	iffactorymutation = new FactoryMutation();</span>
+<span class="fc" id="L81">    	Mutation mutation = iffactorymutation.createMutation(mutationType);</span>
+<span class="fc" id="L82">    	candidate = mutation.mutation(candidate, PM);</span>
     	//list.add(candidate);    	
-<span class="nc" id="L84">    	return candidate;</span>
+<span class="fc" id="L84">    	return candidate;</span>
 	}
 
 	@Override
@@ -177,24 +177,24 @@ public class EvolutionStrategies extends Generator {
 
 	@Override
 	public List&lt;State&gt; getReferenceList() {
-<span class="nc" id="L180">		List&lt;State&gt; ReferenceList = new ArrayList&lt;State&gt;();</span>
-<span class="nc bnc" id="L181" title="All 2 branches missed.">		for (int i = 0; i &lt; listStateReference.size(); i++) {</span>
-<span class="nc" id="L182">			State value = listStateReference.get(i);</span>
-<span class="nc" id="L183">			ReferenceList.add(value);</span>
+<span class="fc" id="L180">		List&lt;State&gt; ReferenceList = new ArrayList&lt;State&gt;();</span>
+<span class="fc bfc" id="L181" title="All 2 branches covered.">		for (int i = 0; i &lt; listStateReference.size(); i++) {</span>
+<span class="fc" id="L182">			State value = listStateReference.get(i);</span>
+<span class="fc" id="L183">			ReferenceList.add(value);</span>
 		}
-<span class="nc" id="L185">		return new ArrayList&lt;State&gt;(ReferenceList);</span>
+<span class="fc" id="L185">		return new ArrayList&lt;State&gt;(ReferenceList);</span>
 	}
 
 	@Override
 	public List&lt;State&gt; getSonList() {
 		// TODO Auto-generated method stub
-<span class="nc" id="L191">		return null;</span>
+<span class="fc" id="L191">		return null;</span>
 	}
 
 	@Override
 	public boolean awardUpdateREF(State stateCandidate) {
 		// TODO Auto-generated method stub
-<span class="nc" id="L197">		return false;</span>
+<span class="fc" id="L197">		return false;</span>
 	}
 
 	@Override

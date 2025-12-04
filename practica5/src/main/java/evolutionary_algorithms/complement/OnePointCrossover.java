@@ -19,7 +19,7 @@ public class OnePointCrossover extends Crossover {
 	    List<Object> ind1 = new ArrayList<Object>();
 	    List<Object> ind2 = new ArrayList<Object>();
 	    
-	    double number = (double) Math.random() * (double)(1);	
+		double number = ThreadLocalRandom.current().nextDouble(); // thread-safe, [0.0, 1.0)
 		if(number <= PC){
 			//llenar los valores de cada hijo
 			int bound = Strategy.getStrategy().getProblem().getCodification().getVariableCount();

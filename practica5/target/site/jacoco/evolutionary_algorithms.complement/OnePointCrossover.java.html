@@ -19,7 +19,7 @@ import problem.definition.State;
 <span class="fc" id="L19">	    List&lt;Object&gt; ind1 = new ArrayList&lt;Object&gt;();</span>
 <span class="fc" id="L20">	    List&lt;Object&gt; ind2 = new ArrayList&lt;Object&gt;();</span>
 	    
-<span class="fc" id="L22">	    double number = (double) Math.random() * (double)(1);	</span>
+<span class="fc" id="L22">		double number = ThreadLocalRandom.current().nextDouble(); // thread-safe, [0.0, 1.0)</span>
 <span class="fc bfc" id="L23" title="All 2 branches covered.">		if(number &lt;= PC){</span>
 			//llenar los valores de cada hijo
 <span class="fc" id="L25">			int bound = Strategy.getStrategy().getProblem().getCodification().getVariableCount();</span>
