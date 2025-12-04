@@ -19,9 +19,36 @@ public class ParticleSwarmOptimization extends Generator {
 	private List<Particle> listParticle =  new ArrayList<Particle> ();
 	private GeneratorType generatorType;
 	static int countParticle = 0;       // CANTIDAD DE PARTICULAS QUE SE HAN MOVIDO EN CADA CUMULO
-	public static final int coutSwarm = 0;           //CANTIDAD DE CUMULOS
-	public static final int countParticleBySwarm = 0; //CANTIDAD DE PARTICULAS POR CUMULO
-	private static int countRef = coutSwarm * countParticleBySwarm;            // CANTIDAD DE PARTICULAS TOTAL = coutSwarm * countParticleSwarm
+	// Make these configurable (not final). Default to 0 (no swarms) to preserve existing test expectations.
+	// Declaring them non-final prevents static analysis from treating loops as dead code while keeping
+	// the runtime default behavior (0) the same as before.
+	// non-public backing field for number of swarms; use accessors to read/write
+	private static int coutSwarm = 0; // CANTIDAD DE CUMULOS
+
+	public static int getCoutSwarm() {
+		return coutSwarm;
+	}
+
+	public static void setCoutSwarm(int v) {
+		if (v < 0) throw new IllegalArgumentException("coutSwarm must be >= 0");
+		coutSwarm = v;
+		// keep dependent countRef in sync
+		setCountRef(coutSwarm * countParticleBySwarm);
+	}
+	// CANTIDAD DE PARTICULAS POR CUMULO - make non-public and provide accessors
+	private static int countParticleBySwarm = 0;
+
+	public static int getCountParticleBySwarm() {
+		return countParticleBySwarm;
+	}
+
+	public static void setCountParticleBySwarm(int v) {
+		if (v < 0) throw new IllegalArgumentException("countParticleBySwarm must be >= 0");
+		countParticleBySwarm = v;
+		// keep dependent countRef in sync
+		setCountRef(coutSwarm * countParticleBySwarm);
+	}
+	private static int countRef = coutSwarm * countParticleBySwarm;            // CANTIDAD DE PARTICULAS TOTAL = coutSwarm * countParticleBySwarm
 	private float weight = 50;
 	public static final double wmax = 0.9;
 	public static final double wmin = 0.2;

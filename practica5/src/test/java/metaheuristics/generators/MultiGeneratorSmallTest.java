@@ -35,5 +35,9 @@ public class MultiGeneratorSmallTest {
         // call both award update variations; they should run without exception
         mg.updateAwardImp();
         mg.updateAwardSC();
+
+        // basic assertions to ensure state remains consistent after updates
+        assertNotNull(MultiGenerator.getActiveGenerator());
+        assertSame(gens[0], MultiGenerator.getActiveGenerator());
     }
 }

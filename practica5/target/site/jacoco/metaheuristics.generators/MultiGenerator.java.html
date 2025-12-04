@@ -161,13 +161,13 @@ public class MultiGenerator extends Generator implements Cloneable {
 <span class="fc" id="L161">	}</span>
 
 	public static void setListGeneratedPP(List&lt;State&gt; newListGeneratedPP) {
-<span class="nc" id="L164">		synchronized (listGeneratedPP) {</span>
-<span class="nc" id="L165">			listGeneratedPP.clear();</span>
-<span class="nc bnc" id="L166" title="All 2 branches missed.">			if (newListGeneratedPP != null) {</span>
-<span class="nc" id="L167">				listGeneratedPP.addAll(newListGeneratedPP);</span>
+<span class="fc" id="L164">		synchronized (listGeneratedPP) {</span>
+<span class="fc" id="L165">			listGeneratedPP.clear();</span>
+<span class="pc bpc" id="L166" title="1 of 2 branches missed.">			if (newListGeneratedPP != null) {</span>
+<span class="fc" id="L167">				listGeneratedPP.addAll(newListGeneratedPP);</span>
 			}
-<span class="nc" id="L169">		}</span>
-<span class="nc" id="L170">	}</span>
+<span class="fc" id="L169">		}</span>
+<span class="fc" id="L170">	}</span>
 
 	@Override
 	public State generate(Integer operatornumber)
@@ -192,7 +192,7 @@ public class MultiGenerator extends Generator implements Cloneable {
 	@Override
 	public List&lt;State&gt; getReferenceList() {
 		// TODO Auto-generated method stub
-<span class="nc" id="L195">		return listStateReference;</span>
+<span class="fc" id="L195">		return listStateReference;</span>
 	}
 
 	@Override
@@ -359,17 +359,17 @@ public class MultiGenerator extends Generator implements Cloneable {
 	public float[] getTrace() {
 		// TODO Auto-generated method stub
 		// MultiGenerator does not maintain a single trace array; return empty array to avoid nulls
-<span class="nc" id="L362">		return new float[0];</span>
+<span class="fc" id="L362">		return new float[0];</span>
 	}
 	
 	@SuppressWarnings(&quot;static-access&quot;)
 	public void tournament(State stateCandidate,Integer countIterationsCurrent) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
-<span class="nc" id="L367">		State stateTem = new State(stateCandidate);</span>
-<span class="nc bnc" id="L368" title="All 2 branches missed.">		for (int i = 0; i &lt; MultiGenerator.getListGenerators().length; i++) {</span>
-<span class="nc bnc" id="L369" title="All 2 branches missed.">				if(!listGenerators[i].getType().equals(GeneratorType.MultiGenerator))</span>
-<span class="nc" id="L370">					MultiGenerator.getListGenerators()[i].updateReference(stateTem, countIterationsCurrent);</span>
+<span class="fc" id="L367">		State stateTem = new State(stateCandidate);</span>
+<span class="fc bfc" id="L368" title="All 2 branches covered.">		for (int i = 0; i &lt; MultiGenerator.getListGenerators().length; i++) {</span>
+<span class="pc bpc" id="L369" title="1 of 2 branches missed.">				if(!listGenerators[i].getType().equals(GeneratorType.MultiGenerator))</span>
+<span class="fc" id="L370">					MultiGenerator.getListGenerators()[i].updateReference(stateTem, countIterationsCurrent);</span>
 		}
-<span class="nc" id="L372">	}</span>
+<span class="fc" id="L372">	}</span>
 	
 	@Override
 	public Object clone(){
@@ -384,14 +384,14 @@ public class MultiGenerator extends Generator implements Cloneable {
 	public int[] getListCountBetterGender() {
 		// TODO Auto-generated method stub
 		// MultiGenerator does not maintain these arrays itself; return empty array to avoid nulls
-<span class="nc" id="L387">		return new int[0];</span>
+<span class="fc" id="L387">		return new int[0];</span>
 	}
 
 	@Override
 	public int[] getListCountGender() {
 		// TODO Auto-generated method stub
 		// MultiGenerator does not maintain these arrays itself; return empty array to avoid nulls
-<span class="nc" id="L394">		return new int[0];</span>
+<span class="fc" id="L394">		return new int[0];</span>
 	}
 
 }

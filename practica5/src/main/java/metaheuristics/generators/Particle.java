@@ -86,7 +86,7 @@ public class Particle extends Generator {
     	// recorre el vector velocidad y lo actualiza
     	for (int i = 0; i < Strategy.getStrategy().getProblem().getState().getCode().size(); i++) {  
     		// cumulo donde se encuentra la particula
-            	int swarm = ParticleSwarmOptimization.getCountParticle() / ParticleSwarmOptimization.countParticleBySwarm; 
+				int swarm = ParticleSwarmOptimization.getCountParticle() / ParticleSwarmOptimization.getCountParticleBySwarm(); 
            	inertia = w * (Double)velocity.get(i);  
            	if(ParticleSwarmOptimization.binary == true){
            		cognitive = (Double)(ParticleSwarmOptimization.learning1 * rand1 * ((Integer)(this.statePBest.getCode().get(i)) - (Integer)(stateActual.getCode().get(i))));

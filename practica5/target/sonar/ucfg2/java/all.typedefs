@@ -597,15 +597,17 @@ getTrace()3metaheuristics.generators.RandomSearch#getTrace()[Ff
 /setInitialReference(Lproblem/definition/State;)Wmetaheuristics.generators.RandomSearch#setInitialReference(Lproblem/definition/State;)V¢
 ;setTypeGenerator(Lmetaheuristics/generators/GeneratorType;)cmetaheuristics.generators.RandomSearch#setTypeGenerator(Lmetaheuristics/generators/GeneratorType;)VD
 setWeight(F)4metaheuristics.generators.RandomSearch#setWeight(F)V®
->updateReference(Lproblem/definition/State;Ljava/lang/Integer;)fmetaheuristics.generators.RandomSearch#updateReference(Lproblem/definition/State;Ljava/lang/Integer;)V∆!
+>updateReference(Lproblem/definition/State;Ljava/lang/Integer;)fmetaheuristics.generators.RandomSearch#updateReference(Lproblem/definition/State;Ljava/lang/Integer;)V“$
 3metaheuristics.generators.ParticleSwarmOptimization#metaheuristics.generators.GeneratorI
 <init>()=metaheuristics.generators.ParticleSwarmOptimization#<init>()Vç
 *awardUpdateREF(Lproblem/definition/State;)_metaheuristics.generators.ParticleSwarmOptimization#awardUpdateREF(Lproblem/definition/State;)Zn
 gBestInicial()\metaheuristics.generators.ParticleSwarmOptimization#gBestInicial()Lproblem/definition/State;å
 generate(Ljava/lang/Integer;)kmetaheuristics.generators.ParticleSwarmOptimization#generate(Ljava/lang/Integer;)Lproblem/definition/State;i
 getCountCurrentIterPSO()Mmetaheuristics.generators.ParticleSwarmOptimization#getCountCurrentIterPSO()I]
-getCountParticle()Gmetaheuristics.generators.ParticleSwarmOptimization#getCountParticle()IS
-getCountRef()Bmetaheuristics.generators.ParticleSwarmOptimization#getCountRef()If
+getCountParticle()Gmetaheuristics.generators.ParticleSwarmOptimization#getCountParticle()Ik
+getCountParticleBySwarm()Nmetaheuristics.generators.ParticleSwarmOptimization#getCountParticleBySwarm()IS
+getCountRef()Bmetaheuristics.generators.ParticleSwarmOptimization#getCountRef()IU
+getCoutSwarm()Cmetaheuristics.generators.ParticleSwarmOptimization#getCoutSwarm()If
 
 getGBest()Xmetaheuristics.generators.ParticleSwarmOptimization#getGBest()Lproblem/definition/State;Ö
 getGeneratorType()ometaheuristics.generators.ParticleSwarmOptimization#getGeneratorType()Lmetaheuristics/generators/GeneratorType;g
@@ -626,8 +628,10 @@ getTrace()@metaheuristics.generators.ParticleSwarmOptimization#getTrace()[Fs
 getWeight()@metaheuristics.generators.ParticleSwarmOptimization#getWeight()F[
 inicialiceLBest()Fmetaheuristics.generators.ParticleSwarmOptimization#inicialiceLBest()Vk
 setCountCurrentIterPSO(I)Nmetaheuristics.generators.ParticleSwarmOptimization#setCountCurrentIterPSO(I)V_
-setCountParticle(I)Hmetaheuristics.generators.ParticleSwarmOptimization#setCountParticle(I)VU
-setCountRef(I)Cmetaheuristics.generators.ParticleSwarmOptimization#setCountRef(I)VÅ
+setCountParticle(I)Hmetaheuristics.generators.ParticleSwarmOptimization#setCountParticle(I)Vm
+setCountParticleBySwarm(I)Ometaheuristics.generators.ParticleSwarmOptimization#setCountParticleBySwarm(I)VU
+setCountRef(I)Cmetaheuristics.generators.ParticleSwarmOptimization#setCountRef(I)VW
+setCoutSwarm(I)Dmetaheuristics.generators.ParticleSwarmOptimization#setCoutSwarm(I)VÅ
 $setGBest(Lproblem/definition/State;)Ymetaheuristics.generators.ParticleSwarmOptimization#setGBest(Lproblem/definition/State;)VØ
 ;setGeneratorType(Lmetaheuristics/generators/GeneratorType;)pmetaheuristics.generators.ParticleSwarmOptimization#setGeneratorType(Lmetaheuristics/generators/GeneratorType;)Vó
 /setInitialReference(Lproblem/definition/State;)dmetaheuristics.generators.ParticleSwarmOptimization#setInitialReference(Lproblem/definition/State;)VÉ
@@ -2435,7 +2439,12 @@ $successor(Ljava/util/TreeMap$Entry;)Ojava.util.TreeMap#successor(Ljava/util/Tr
 tailMap(Ljava/lang/Object;Z)Fjava.util.TreeMap#tailMap(Ljava/lang/Object;Z)Ljava/util/NavigableMap;u
 /valEquals(Ljava/lang/Object;Ljava/lang/Object;)Bjava.util.TreeMap#valEquals(Ljava/lang/Object;Ljava/lang/Object;)Z<
 values()0java.util.TreeMap#values()Ljava/util/Collection;i
-)writeObject(Ljava/io/ObjectOutputStream;)<java.util.TreeMap#writeObject(Ljava/io/ObjectOutputStream;)Vø
+)writeObject(Ljava/io/ObjectOutputStream;)<java.util.TreeMap#writeObject(Ljava/io/ObjectOutputStream;)V≈
+"java.lang.IllegalArgumentExceptionjava.lang.RuntimeException8
+<init>(),java.lang.IllegalArgumentException#<init>()V\
+<init>(Ljava/lang/String;)>java.lang.IllegalArgumentException#<init>(Ljava/lang/String;)VÜ
+/<init>(Ljava/lang/String;Ljava/lang/Throwable;)Sjava.lang.IllegalArgumentException#<init>(Ljava/lang/String;Ljava/lang/Throwable;)Vb
+<init>(Ljava/lang/Throwable;)Ajava.lang.IllegalArgumentException#<init>(Ljava/lang/Throwable;)Vø
 "problem_operators.MutationOperatorproblem.definition.Operator8
 <init>(),problem_operators.MutationOperator#<init>()Vá
 (generateRandomState(Ljava/lang/Integer;)[problem_operators.MutationOperator#generateRandomState(Ljava/lang/Integer;)Ljava/util/List;∑

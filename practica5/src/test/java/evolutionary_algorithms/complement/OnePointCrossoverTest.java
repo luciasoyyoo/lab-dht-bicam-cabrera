@@ -142,7 +142,17 @@ public class OnePointCrossoverTest {
 
     @Test public void t17_resultContainsNoNullsWhenParentsNonNull() { setSimpleCodification(3); State s1=makeState(1,2,3); State s2=makeState(4,5,6); OnePointCrossover c=new OnePointCrossover(); State out=c.crossover(s1,s2,1.0); for(Object o: out.getCode()) assertNotNull(o); }
 
-    @Test public void t18_repeatedCallsNotThrowing() { setSimpleCodification(3); State s1=makeState(1,2,3); State s2=makeState(4,5,6); OnePointCrossover c=new OnePointCrossover(); for(int i=0;i<100;i++) c.crossover(s1,s2,1.0); }
+    @Test public void t18_repeatedCallsNotThrowing() { 
+        setSimpleCodification(3); 
+        State s1=makeState(1,2,3); 
+        State s2=makeState(4,5,6); 
+        OnePointCrossover c=new OnePointCrossover(); 
+        for(int i=0;i<100;i++) {
+            State out = c.crossover(s1,s2,1.0);
+            assertNotNull(out);
+            assertEquals(3, out.getCode().size());
+        }
+    }
 
     @Test public void t19_variousPCs() { setSimpleCodification(3); State s1=makeState(1,2,3); State s2=makeState(4,5,6); OnePointCrossover c=new OnePointCrossover(); for(double pc: new double[]{0.0,0.25,0.5,0.75,1.0}) { State out=c.crossover(s1,s2,pc); assertEquals(3,out.getCode().size()); } }
 

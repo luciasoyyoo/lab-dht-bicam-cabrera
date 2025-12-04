@@ -37,7 +37,7 @@ public class UniformCrossoverTest {
     @Test public void t15_maskContainsOnly0or1MultipleRuns() { UniformCrossover u=new UniformCrossover(); for(int k=0;k<5;k++){ int[] m=u.mascara(5); for(int v:m) assertTrue(v==0||v==1); } }
     @Test public void t16_resultStableLengthWhenDifferentParentSizes() { UniformCrossover u=new UniformCrossover(); State a=makeState(1,2,3); State b=makeState(4,5,6); State out=u.crossover(a,b,1.0); assertEquals(a.getCode().size(), out.getCode().size()); }
     @Test public void t17_resultHasNoNullsIfParentsNoNulls() { UniformCrossover u=new UniformCrossover(); State a=makeState(1,2,3); State b=makeState(4,5,6); State out=u.crossover(a,b,1.0); for(Object o: out.getCode()) assertNotNull(o); }
-    @Test public void t18_manyIterationsNotThrow() { UniformCrossover u=new UniformCrossover(); State a=makeState(1,2,3); State b=makeState(4,5,6); for(int i=0;i<100;i++) u.crossover(a,b,1.0); }
+    @Test public void t18_manyIterationsNotThrow() { UniformCrossover u=new UniformCrossover(); State a=makeState(1,2,3); State b=makeState(4,5,6); State out=null; for(int i=0;i<100;i++) out=u.crossover(a,b,1.0); assertNotNull(out); assertEquals(3, out.getCode().size()); }
     @Test public void t19_mascaraDifferentLengths() { UniformCrossover u=new UniformCrossover(); assertEquals(0, u.mascara(0).length); assertEquals(1, u.mascara(1).length); assertEquals(10, u.mascara(10).length); }
     @Test public void t20_resultFromParentsOnly() { UniformCrossover u=new UniformCrossover(); State a=makeState(9,9); State b=makeState(8,8); State out=u.crossover(a,b,1.0); for(Object o: out.getCode()) assertTrue(o.equals(9)||o.equals(8)); }
 }

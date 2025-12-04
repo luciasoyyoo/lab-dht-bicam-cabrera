@@ -21,7 +21,15 @@ public class MutationTypeTest {
     @Test public void t13_toStringNotNull() { for(MutationType m: MutationType.values()) assertNotNull(m.toString()); }
     @Test public void t14_compareTo() { MutationType[] a = MutationType.values(); assertEquals(0, a[0].compareTo(a[0])); }
     @Test public void t15_package() { assertEquals("evolutionary_algorithms.complement", MutationType.class.getPackage().getName()); }
-    @Test public void t16_switchUse() { for(MutationType m: MutationType.values()) { switch(m) { default: break; } } }
+    @Test public void t16_switchUse() {
+        for(MutationType m: MutationType.values()) {
+            switch(m) {
+                default: break;
+            }
+            assertNotNull(m);
+            assertFalse(m.name().isEmpty());
+        }
+    }
     @Test public void t17_nameNotBlank() { for(MutationType m: MutationType.values()) assertFalse(m.name().trim().isEmpty()); }
     @Test public void t18_valueOfValid() { for(MutationType m: MutationType.values()) assertEquals(m, MutationType.valueOf(m.name())); }
     @Test public void t19_ordinalsDistinct() { MutationType[] a = MutationType.values(); for(int i=0;i<a.length;i++) for(int j=i+1;j<a.length;j++) assertNotEquals(a[i].ordinal(), a[j].ordinal()); }

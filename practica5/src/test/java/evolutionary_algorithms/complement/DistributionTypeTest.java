@@ -21,7 +21,12 @@ public class DistributionTypeTest {
     @Test public void t13_toStringNotNull() { for(DistributionType d: DistributionType.values()) assertNotNull(d.toString()); }
     @Test public void t14_compareTo() { DistributionType[] a = DistributionType.values(); assertEquals(0, a[0].compareTo(a[0])); }
     @Test public void t15_packageCorrect() { assertEquals("evolutionary_algorithms.complement", DistributionType.class.getPackage().getName()); }
-    @Test public void t16_switchUse() { for(DistributionType d: DistributionType.values()) { switch(d) { default: break; } } }
+    @Test public void t16_switchUse() {
+        for(DistributionType d: DistributionType.values()) {
+            switch(d) { default: break; }
+            assertNotNull(d);
+        }
+    }
     @Test public void t17_nameNotBlank() { for(DistributionType d: DistributionType.values()) assertFalse(d.name().trim().isEmpty()); }
     @Test public void t18_valueOfRoundtrip() { for(DistributionType d: DistributionType.values()) assertEquals(d, DistributionType.valueOf(d.name())); }
     @Test public void t19_ordinalsDistinct() { DistributionType[] a = DistributionType.values(); for(int i=0;i<a.length;i++) for(int j=i+1;j<a.length;j++) assertNotEquals(a[i].ordinal(), a[j].ordinal()); }

@@ -21,7 +21,7 @@ public class ReplaceTypeTest {
     @Test public void t13_toStringNotNull() { for(ReplaceType r: ReplaceType.values()) assertNotNull(r.toString()); }
     @Test public void t14_compareToWorks() { if(ReplaceType.values().length>1) assertTrue(ReplaceType.values()[0].compareTo(ReplaceType.values()[0])==0); }
     @Test public void t15_declaredPackage() { assertEquals("evolutionary_algorithms.complement", ReplaceType.class.getPackage().getName()); }
-    @Test public void t16_switchUse() { for(ReplaceType r: ReplaceType.values()) { switch(r) { default: break; } } }
+    @Test public void t16_switchUse() { for(ReplaceType r: ReplaceType.values()) { assertNotNull(r); assertNotNull(r.name()); switch(r) { default: assertTrue(r.ordinal()>=0); assertEquals(r.name(), r.toString()); break; } } }
     @Test public void t17_nameNotBlank() { for(ReplaceType r: ReplaceType.values()) assertFalse(r.name().trim().isEmpty()); }
     @Test public void t18_valueOfValid() { for(ReplaceType r: ReplaceType.values()) assertEquals(r, ReplaceType.valueOf(r.name())); }
     @Test public void t19_ordinalsDistinct() { ReplaceType[] a = ReplaceType.values(); for(int i=0;i<a.length;i++) for(int j=i+1;j<a.length;j++) assertNotEquals(a[i].ordinal(), a[j].ordinal()); }

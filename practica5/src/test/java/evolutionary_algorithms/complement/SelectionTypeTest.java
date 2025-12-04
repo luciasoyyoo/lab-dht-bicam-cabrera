@@ -21,7 +21,7 @@ public class SelectionTypeTest {
     @Test public void t13_toStringNotNull() { for(SelectionType s: SelectionType.values()) assertNotNull(s.toString()); }
     @Test public void t14_compareTo() { SelectionType[] a = SelectionType.values(); assertEquals(0, a[0].compareTo(a[0])); }
     @Test public void t15_packageName() { assertEquals("evolutionary_algorithms.complement", SelectionType.class.getPackage().getName()); }
-    @Test public void t16_switchWorks() { for(SelectionType s: SelectionType.values()) { switch(s) { default: break; } } }
+    @Test public void t16_switchWorks() { for(SelectionType s: SelectionType.values()) { assertNotNull(s); switch(s) { default: break; } } }
     @Test public void t17_nameNotBlank() { for(SelectionType s: SelectionType.values()) assertFalse(s.name().trim().isEmpty()); }
     @Test public void t18_valueOfValid() { for(SelectionType s: SelectionType.values()) assertEquals(s, SelectionType.valueOf(s.name())); }
     @Test public void t19_ordinalsDistinct() { SelectionType[] a = SelectionType.values(); for(int i=0;i<a.length;i++) for(int j=i+1;j<a.length;j++) assertNotEquals(a[i].ordinal(), a[j].ordinal()); }

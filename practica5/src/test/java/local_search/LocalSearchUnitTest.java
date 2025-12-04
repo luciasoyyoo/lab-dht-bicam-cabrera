@@ -122,14 +122,26 @@ public class LocalSearchUnitTest {
         // ensure generator is present to avoid NPE inside listDominance
         st.generator = new Generator(){
             @Override public State generate(Integer operatornumber) { return null; }
-            @Override public void updateReference(State stateCandidate, Integer countIterationsCurrent) {}
+            @Override public void updateReference(State stateCandidate, Integer countIterationsCurrent) {
+                /* no-op test stub: this anonymous Generator is only used to provide a
+                 * non-null `generator` instance for the unit test. The production
+                 * updateReference behavior is irrelevant to the test expectations,
+                 * so we intentionally leave this method empty. */
+            }
             @Override public State getReference() { return null; }
-            @Override public void setInitialReference(State stateInitialRef) {}
+            @Override public void setInitialReference(State stateInitialRef) {
+                /* intentionally empty: test stub providing a minimal Generator
+                 * implementation; initial reference management is not required
+                 * for the Dominance unit test. */
+            }
             @Override public GeneratorType getType() { return GeneratorType.RandomSearch; }
             @Override public List<State> getReferenceList() { return new ArrayList<>(); }
             @Override public List<State> getSonList() { return new ArrayList<>(); }
             @Override public boolean awardUpdateREF(State stateCandidate) { return false; }
-            @Override public void setWeight(float weight) {}
+            @Override public void setWeight(float weight) {
+                /* intentionally empty: weight adjustments are irrelevant for the
+                 * Dominance tests that only exercise dominance/listDominance. */
+            }
             @Override public float getWeight() { return 0; }
             @Override public float[] getTrace() { return new float[0]; }
             @Override public int[] getListCountBetterGender() { return new int[0]; }
@@ -154,13 +166,48 @@ public class LocalSearchUnitTest {
         // set a dummy generator so updateParameter won't NPE when trying to set generator
         st.generator = new Generator(){
             @Override public State generate(Integer operatornumber) { return null; }
-            @Override public void updateReference(State stateCandidate, Integer countIterationsCurrent) {}
+            @Override public void updateReference(State stateCandidate, Integer countIterationsCurrent) {
+                /* intentionally empty: this anonymous Generator is a minimal test stub.
+                   The UpdateParameter unit test only needs a non-null Generator instance;
+                   it does not exercise updateReference. Providing a no-op implementation
+                   avoids coupling the test to generator internals while preventing NPEs. */
+            }
             @Override public State getReference() { return null; }
+            /**
+             * Sets the initial reference state used by the local search test/unit.
+             *
+             * <p>Hook method intended for subclasses or test setups that need to establish
+             * an initial reference state before running local search operations. The
+             * default implementation performs no action.
+             *
+             * <!--
+             * This method is intentionally left empty (no-op) in this test class because
+             * the default test scenarios do not require an explicit initial reference.
+             * Subclasses or specific test cases can override this method to provide an
+             * initial state when necessary.
+             * -->
+             *
+             * @param stateInitialRef the initial reference State to be set (may be ignored)
+             */
             @Override public void setInitialReference(State stateInitialRef) {}
             @Override public GeneratorType getType() { return GeneratorType.RandomSearch; }
             @Override public List<State> getReferenceList() { return new ArrayList<>(); }
             @Override public List<State> getSonList() { return new ArrayList<>(); }
             @Override public boolean awardUpdateREF(State stateCandidate) { return false; }
+            /**
+             * No-op implementation of setWeight.
+             *
+             * This method is provided to satisfy the contract of the overridden method,
+             * but this concrete class does not maintain or use a weight value.
+             *
+             * @param weight the weight value to set; ignored by this implementation
+             *
+             * @implNote
+             * The method is intentionally empty to preserve compatibility with the
+             * superclass/interface while indicating that this implementation does not
+             * support or store a weight. Subclasses that require weight behavior should
+             * override this method and provide a concrete implementation.
+             */
             @Override public void setWeight(float weight) {}
             @Override public float getWeight() { return 0; }
             @Override public float[] getTrace() { return new float[0]; }
