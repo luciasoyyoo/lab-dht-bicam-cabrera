@@ -56,7 +56,7 @@ public class ParticleSwarmOptimization extends Generator {
 
 	public static void setLBestAt(int idx, State s) {
 <span class="pc bpc" id="L58" title="1 of 2 branches missed.">		if (lBest == null) return;</span>
-<span class="pc bpc" id="L59" title="1 of 4 branches missed.">		if (idx &lt; 0 || idx &gt;= lBest.length) return;</span>
+<span class="fc bfc" id="L59" title="All 4 branches covered.">		if (idx &lt; 0 || idx &gt;= lBest.length) return;</span>
 <span class="pc bpc" id="L60" title="1 of 2 branches missed.">		lBest[idx] = (s == null) ? null : s.clone();</span>
 <span class="fc" id="L61">	}</span>
 <span class="fc" id="L62">	public static State getGBest() { return gBest; }</span>
@@ -180,7 +180,7 @@ public class ParticleSwarmOptimization extends Generator {
 <span class="nc" id="L180">	}</span>
 
 	public List&lt;Particle&gt; getListStateReference() {
-<span class="nc" id="L183">		return this.getListParticle();</span>
+<span class="fc" id="L183">		return this.getListParticle();</span>
 	}
 
 	public void setListStateReference(List&lt;State&gt; listStateReference) {

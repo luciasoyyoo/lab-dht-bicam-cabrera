@@ -32,12 +32,12 @@ public class MultiGenerator extends Generator implements Cloneable {
 	
 
 	public static void destroyMultiGenerator(){
-<span class="nc" id="L35">		listGeneratedPP.clear();</span>
+<span class="fc" id="L35">		listGeneratedPP.clear();</span>
 		//listGenerators.clear();
-<span class="nc" id="L37">		listStateReference.clear();</span>
-<span class="nc" id="L38">		activeGenerator = null;</span>
-<span class="nc" id="L39">		listGenerators = null;</span>
-<span class="nc" id="L40">	}</span>
+<span class="fc" id="L37">		listStateReference.clear();</span>
+<span class="fc" id="L38">		activeGenerator = null;</span>
+<span class="fc" id="L39">		listGenerators = null;</span>
+<span class="fc" id="L40">	}</span>
 	
 	public static void initializeListGenerator()throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
 <span class="fc" id="L43">		listGenerators = new Generator[4];</span>
@@ -144,7 +144,7 @@ public class MultiGenerator extends Generator implements Cloneable {
 
 	public static Generator[] getListGenerators() {
 		// return a defensive copy to avoid exposing internal static array
-<span class="pc bpc" id="L147" title="1 of 2 branches missed.">		return (listGenerators == null) ? null : Arrays.copyOf(listGenerators, listGenerators.length);</span>
+<span class="fc bfc" id="L147" title="All 2 branches covered.">		return (listGenerators == null) ? null : Arrays.copyOf(listGenerators, listGenerators.length);</span>
 	}
 
 	public static void setListGenerators(Generator[] listGenerators) {

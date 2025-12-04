@@ -6,11 +6,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
 import problem.definition.Problem;
 import problem.definition.State;
 import testutils.TestHelper;
+import problem.definition.ObjetiveFunction;
+import metaheurictics.strategy.Strategy;
 
 public class ParticleSwarmOptimizationTest {
 
@@ -100,5 +103,103 @@ public class ParticleSwarmOptimizationTest {
         // set and get gBest
         ParticleSwarmOptimization.setGBest(pBest);
         assertNotNull(ParticleSwarmOptimization.getGBest());
+    }
+
+    @AfterEach
+    public void afterEach(){
+        Strategy.destroyExecute();
+        RandomSearch.listStateReference.clear();
+        // ensure mapGenerators exists to avoid NPEs if any code checks it
+        Strategy.getStrategy().mapGenerators = new java.util.TreeMap<GeneratorType, Generator>();
+    }
+
+    private Problem makeProblem(Problem.ProblemType type){
+        Problem p = new Problem();
+        p.setTypeProblem(type);
+        ArrayList<ObjetiveFunction> funcs = new ArrayList<>();
+        funcs.add(new ObjetiveFunction(){
+            @Override
+            public Double Evaluation(State state) { return 0.0; }
+        });
+        p.setFunction(funcs);
+        // add a base state
+        State base = new State(); base.setEvaluation(new ArrayList<Double>(){{ add(0.0); }});
+        p.setState(base);
+        return p;
+    }
+
+    @Test
+    public void testSetAndGetLBest_and_defensiveCopyBehavior(){
+        // prepare two states
+        State a = new State(); a.setEvaluation(new ArrayList<Double>(){{ add(1.0); }});
+        State b = new State(); b.setEvaluation(new ArrayList<Double>(){{ add(2.0); }});
+        State[] arr = new State[]{a, b};
+
+        ParticleSwarmOptimization.setLBest(arr);
+        State[] got = ParticleSwarmOptimization.getLBest();
+        assertEquals(2, got.length);
+        // modify returned copy and ensure original internal array not affected
+        got[0].getEvaluation().set(0, 99.0);
+        State[] got2 = ParticleSwarmOptimization.getLBest();
+        assertEquals(1.0, got2[0].getEvaluation().get(0), 0.0);
+
+        // set null array should set internal lBest to null and getter returns empty
+        ParticleSwarmOptimization.setLBest(null);
+        State[] empty = ParticleSwarmOptimization.getLBest();
+        assertEquals(0, empty.length);
+    }
+
+    @Test
+    public void testSetLBestAt_boundsAndNoException(){
+        State a = new State(); a.setEvaluation(new ArrayList<Double>(){{ add(1.0); }});
+        State[] arr = new State[]{a};
+        ParticleSwarmOptimization.setLBest(arr);
+        // valid index
+        State newS = new State(); newS.setEvaluation(new ArrayList<Double>(){{ add(5.0); }});
+        ParticleSwarmOptimization.setLBestAt(0, newS);
+        assertEquals(5.0, ParticleSwarmOptimization.getLBest()[0].getEvaluation().get(0), 0.0);
+
+        // out-of-bounds: should not throw
+        ParticleSwarmOptimization.setLBestAt(-1, newS);
+        ParticleSwarmOptimization.setLBestAt(10, newS);
+    }
+
+    @Test
+    public void testGBest_and_counts_setters_getters(){
+        State s = new State(); s.setEvaluation(new ArrayList<Double>(){{ add(7.0); }});
+        ParticleSwarmOptimization.setGBest(s);
+        assertEquals(7.0, ParticleSwarmOptimization.getGBest().getEvaluation().get(0), 0.0);
+
+        ParticleSwarmOptimization.setCountParticle(3);
+        assertEquals(3, ParticleSwarmOptimization.getCountParticle());
+        ParticleSwarmOptimization.setCountCurrentIterPSO(42);
+        assertEquals(42, ParticleSwarmOptimization.getCountCurrentIterPSO());
+    }
+
+    @Test
+    public void testConstructor_initializesEmptyParticleList_whenRandomSearchEmpty(){
+        // ensure RandomSearch.listStateReference is empty
+        RandomSearch.listStateReference.clear();
+        ParticleSwarmOptimization pso = new ParticleSwarmOptimization();
+        assertNotNull(pso.getListParticle());
+        assertEquals(0, pso.getListParticle().size());
+        // lBest length should be zero because coutSwarm is 0
+        assertEquals(0, ParticleSwarmOptimization.getLBest().length);
+    }
+
+    @Test
+    public void testSetAndGetListParticle_and_listStateReference_accessor(){
+        ParticleSwarmOptimization pso = new ParticleSwarmOptimization();
+        // create a simple Particle via constructor
+        Particle particle = new Particle();
+        State sb = new State(); sb.setEvaluation(new ArrayList<Double>(){{ add(3.0); }});
+        State sa = new State(); sa.setEvaluation(new ArrayList<Double>(){{ add(4.0); }});
+        particle.setStatePBest(sb);
+        particle.setStateActual(sa);
+        List<Particle> list = new ArrayList<>(); list.add(particle);
+        pso.setListParticle(list);
+        assertEquals(1, pso.getListParticle().size());
+        // listStateReference getter proxies to getListParticle
+        assertEquals(1, pso.getListStateReference().size());
     }
 }

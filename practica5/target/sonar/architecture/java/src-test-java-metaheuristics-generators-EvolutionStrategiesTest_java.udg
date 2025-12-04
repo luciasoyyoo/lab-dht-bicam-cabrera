@@ -1,5 +1,5 @@
 
-1.0!luciasoyyoo_lab-dht-bicam-cabreraJavaFrontend"1764881125214*java2.B
+1.0!luciasoyyoo_lab-dht-bicam-cabreraJavaFrontend"1764882622814*java2.B’+
 I
 Dsrc/test/java/metaheuristics/generators/EvolutionStrategiesTest.java2
 	
@@ -27,12 +27,13 @@ module-key5
 simple-name15
 
 EvolutionStrategiesTest16
-@
-:metaheuristics.generators.EvolutionStrategiesTest#setup()V18
+E
+?metaheuristics.generators.EvolutionStrategiesTest#beforeEach()V18
 
 method19
-
-setup20
+
+
+beforeEach20
 &
  org.junit.jupiter.api.BeforeEach22
 
@@ -44,71 +45,160 @@ module-key5
 uses25
 &
  metaheurictics.strategy.Strategy27
-
-returns28
 
 
-references29
-V
-Pmetaheurictics.strategy.Strategy#getStrategy()Lmetaheurictics/strategy/Strategy;31
+references28
+8
+2metaheurictics.strategy.Strategy#destroyExecute()V30
 
-calls32
-4
-.metaheurictics.strategy.Strategy.mapGenerators34
--
-'metaheuristics.generators.GeneratorType36
-)
-#metaheuristics.generators.Generator38
-c
-]metaheuristics.generators.EvolutionStrategiesTest#defaultValues_and_getReference_whenEmpty()V40
-.
-(defaultValues_and_getReference_whenEmpty41
- 
-org.junit.jupiter.api.Test43
-3
--metaheuristics.generators.EvolutionStrategies45
-
-is type46
-&
- org.junit.jupiter.api.Assertions48
-Z
-Torg.junit.jupiter.api.Assertions#assertEquals(Ljava/lang/Object;Ljava/lang/Object;)V50
-A
-;metaheuristics.generators.GeneratorType.EvolutionStrategies52
-f
-`metaheuristics.generators.EvolutionStrategies#getType()Lmetaheuristics/generators/GeneratorType;54
-9
-3org.junit.jupiter.api.Assertions#assertEquals(FFF)V56
-@
-:metaheuristics.generators.EvolutionStrategies#getWeight()F58
-\
-Vmetaheuristics.generators.EvolutionStrategies#setListStateReference(Ljava/util/List;)V60
-F
-@org.junit.jupiter.api.Assertions#assertNull(Ljava/lang/Object;)V62
-
-problem.definition.State64
-\
-Vmetaheuristics.generators.EvolutionStrategies#getReference()Lproblem/definition/State;66
-s
-mmetaheuristics.generators.EvolutionStrategiesTest#setAndGetListStateReference_and_getReference_returnsCopy()V68
->
-8setAndGetListStateReference_and_getReference_returnsCopy69
- 
-problem.definition.Problem71
-Z
-Tproblem.definition.Problem#setTypeProblem(Lproblem/definition/Problem$ProblemType;)V73
+calls31
 ,
-&problem.definition.Problem$ProblemType75
-6
-0problem.definition.Problem$ProblemType.Maximizar77
-P
-Jmetaheurictics.strategy.Strategy#setProblem(Lproblem/definition/Problem;)V79
->
-8problem.definition.State#setCode(Ljava/util/ArrayList;)V81
-I
-Corg.junit.jupiter.api.Assertions#assertNotNull(Ljava/lang/Object;)V83
-=
-7problem.definition.State#getCode()Ljava/util/ArrayList;85J#
+&metaheuristics.generators.RandomSearch33
+?
+9metaheuristics.generators.RandomSearch.listStateReference35
+
+returns36
+V
+Pmetaheurictics.strategy.Strategy#getStrategy()Lmetaheurictics/strategy/Strategy;38
+4
+.metaheurictics.strategy.Strategy.mapGenerators40
+-
+'metaheuristics.generators.GeneratorType42
+)
+#metaheuristics.generators.Generator44
+ß
+†metaheuristics.generators.EvolutionStrategiesTest#makeProblem(Lproblem/definition/Problem$ProblemType;Lproblem/definition/Operator;)Lproblem/definition/Problem;46
+
+private47
+
+makeProblem48
+ 
+problem.definition.Problem50
+,
+&problem.definition.Problem$ProblemType52
+
+	has param53
+!
+problem.definition.Operator55
+
+is type56
+Z
+Tproblem.definition.Problem#setTypeProblem(Lproblem/definition/Problem$ProblemType;)V58
+)
+#problem.definition.ObjetiveFunction60
+9
+3metaheuristics.generators.EvolutionStrategiesTest$162
+
+	protected63
+r
+lmetaheuristics.generators.EvolutionStrategiesTest$1#Evaluation(Lproblem/definition/State;)Ljava/lang/Double;65
+
+
+Evaluation66
+
+problem.definition.State68
+D
+>problem.definition.Problem#setFunction(Ljava/util/ArrayList;)V70
+L
+Fproblem.definition.Problem#setOperator(Lproblem/definition/Operator;)V72
+D
+>problem.definition.State#setEvaluation(Ljava/util/ArrayList;)V74
+9
+3metaheuristics.generators.EvolutionStrategiesTest$276
+F
+@problem.definition.Problem#setState(Lproblem/definition/State;)V78
+p
+jmetaheuristics.generators.EvolutionStrategiesTest#testGetReference_selectsBestOrWorstBasedOnProblemType()V80
+;
+5testGetReference_selectsBestOrWorstBasedOnProblemType81
+ 
+org.junit.jupiter.api.Test83
+9
+3metaheuristics.generators.EvolutionStrategiesTest$385
+ã
+Ñmetaheuristics.generators.EvolutionStrategiesTest$3#generatedNewState(Lproblem/definition/State;Ljava/lang/Integer;)Ljava/util/List;87
+
+generatedNewState88
+r
+lmetaheuristics.generators.EvolutionStrategiesTest$3#generateRandomState(Ljava/lang/Integer;)Ljava/util/List;90
+
+generateRandomState91
+3
+-metaheuristics.generators.EvolutionStrategies93
+9
+3metaheuristics.generators.EvolutionStrategiesTest$495
+9
+3metaheuristics.generators.EvolutionStrategiesTest$597
+9
+3metaheuristics.generators.EvolutionStrategiesTest$699
+]
+Vmetaheuristics.generators.EvolutionStrategies#setListStateReference(Ljava/util/List;)V101
+Q
+Jmetaheurictics.strategy.Strategy#setProblem(Lproblem/definition/Problem;)V103
+7
+0problem.definition.Problem$ProblemType.Maximizar105
+]
+Vmetaheuristics.generators.EvolutionStrategies#getReference()Lproblem/definition/State;107
+'
+ org.junit.jupiter.api.Assertions109
+:
+3org.junit.jupiter.api.Assertions#assertEquals(DDD)V111
+D
+=problem.definition.State#getEvaluation()Ljava/util/ArrayList;113
+7
+0problem.definition.Problem$ProblemType.Minimizar115
+|
+umetaheuristics.generators.EvolutionStrategiesTest#testGetListStateRef_usesRandomSearchStaticListWhenGeneratorEmpty()V117
+G
+@testGetListStateRef_usesRandomSearchStaticListWhenGeneratorEmpty118
+:
+3metaheuristics.generators.EvolutionStrategiesTest$7120
+B
+;metaheuristics.generators.GeneratorType.EvolutionStrategies122
+V
+Ometaheuristics.generators.EvolutionStrategies#getListStateRef()Ljava/util/List;124
+7
+0org.junit.jupiter.api.Assertions#assertFalse(Z)V126
+9
+2org.junit.jupiter.api.Assertions#assertEquals(II)V128
+Ä
+ymetaheuristics.generators.EvolutionStrategiesTest#testUpdateReference_generationalReplace_removesFirstAndAddsCandidate()V130
+K
+DtestUpdateReference_generationalReplace_removesFirstAndAddsCandidate131
+:
+3metaheuristics.generators.EvolutionStrategiesTest$8133
+å
+Ñmetaheuristics.generators.EvolutionStrategiesTest$8#generatedNewState(Lproblem/definition/State;Ljava/lang/Integer;)Ljava/util/List;135
+s
+lmetaheuristics.generators.EvolutionStrategiesTest$8#generateRandomState(Ljava/lang/Integer;)Ljava/util/List;137
+:
+3metaheuristics.generators.EvolutionStrategiesTest$9139
+;
+4metaheuristics.generators.EvolutionStrategiesTest$10141
+;
+4metaheuristics.generators.EvolutionStrategiesTest$11143
+t
+mmetaheuristics.generators.EvolutionStrategies#updateReference(Lproblem/definition/State;Ljava/lang/Integer;)V145
+\
+Umetaheuristics.generators.EvolutionStrategies#getListStateReference()Ljava/util/List;147
+d
+]metaheuristics.generators.EvolutionStrategiesTest#testGettersAndSetters_andDefensiveCopies()V149
+/
+(testGettersAndSetters_andDefensiveCopies150
+:
+3org.junit.jupiter.api.Assertions#assertEquals(FFF)V152
+A
+:metaheuristics.generators.EvolutionStrategies#getWeight()F154
+B
+;metaheuristics.generators.EvolutionStrategies#setWeight(F)V156
+;
+4metaheuristics.generators.EvolutionStrategiesTest$12158
+Q
+Jmetaheuristics.generators.EvolutionStrategies#getListCountBetterGender()[I160
+K
+Dmetaheuristics.generators.EvolutionStrategies#getListCountGender()[I162
+A
+:metaheuristics.generators.EvolutionStrategies#getTrace()[F164J#
 !
 1
 12
@@ -124,32 +214,45 @@ Corg.junit.jupiter.api.Assertions#assertNotNull(Ljava/lang/Object;)V83
 
 
 5
-6jî
+6jË
 
 21
 212223
-
-84
-848523
-
-44
-444523
-
-82
-828323
-
-61
-616223
-
-72
-727323
-
-76
-767723
+
+159
+15916023
+F
+134?
+13413519 *
+1] ](2132:7B
+
+
+13
+14
+
+
+15
+88
+6
+610
+616212 *
+1%) %(*245:7B
+
+
+13
+63
+6
+840
+848512 *
+13' 3((279:7B
+
+
+13
+63
 B
 17<
 171819 *
-1 (210:7B
+1 (210:7B
 
 
 13
@@ -158,10 +261,41 @@ B
 
 15
 20
+6
+750
+757612 *
+1,M ,(N245:7B
+
+
+13
+63
+
+43
+434423
+
+127
+12712823
+
+151
+15115223
+
+32
+323323
+
+121
+12112223
+:
+1403
+14014112 *
+1fI f(J2129:7B
+
+
+13
+63
 B
-67<
-676819 *
-1 (210:7B
+79<
+798019 *
+11 1(210:7B
 
 
 13
@@ -169,65 +303,227 @@ B
 
 
 15
-69
-
-53
-535423
+81
+:
+1423
+14214312 *
+1iW i(X2129:7B
+
+
+13
+63
+:
+1573
+15715812 *
+1yG y(H2148:7B
+
+
+13
+63
 
 37
 373823
+
+100
+10010123
+F
+136?
+13613719 *
+1_ _(2132:7B
+
+
+13
+14
+
+
+15
+91
+
+102
+10210323
+
+125
+12512623
 
-55
-555623
+41
+414223
+
+112
+11211323
+
+123
+12312423
 
 51
 515223
+
+153
+15315423
 
-30
-303123
-
-59
-596023
-
-78
-787923
-
-70
-707123
-
-35
-353623
-
-57
-575823
-
-63
-636423
-
-74
-747523
-
-42
-424323
-
-65
-656623
-
-33
-333423
-
-49
-495023
+82
+828323
+:
+1383
+13813912 *
+1eI e(J2129:7B
+
+
+13
+63
+:
+1323
+13213312 *
+1\' \((2129:7B
+
+
+13
+63
 
 26
 262723
+6
+960
+969712 *
+1<I <(J279:7B
+
+
+13
+63
+6
+940
+949512 *
+1;I ;(J279:7B
+
+
+13
+63
+
+110
+11011123
+:
+1193
+11912012 *
+1LI L(J2116:7B
+
+
+13
+63
+6
+980
+989912 *
+1=I =(J279:7B
+
+
+13
+63
 
-47
-474823
+34
+343523
+
+69
+697023
+
+29
+293023
+
+71
+717223
+
+161
+16116223
+
+59
+596023
+
+146
+14614723
+
+163
+16316423
+
+92
+929323
+F
+148?
+14814919 *
+1r r(210:7B
+
+
+13
+14
+
+15
+150
+
+57
+575823
+
+104
+10410523
+B
+45<
+454619 *
+1! !(210:7B
+
+
+13
+47
+
+
+15
+48
+B
+86<
+868719 *
+14 4(284:7B
+
+
+13
+14
+
+
+15
+88
+
+114
+11411523
+
+49
+495023
+
+144
+14414523
+
+67
+676823
+
+73
+737423
+
+106
+10610723
+
+39
+394023
+B
+89<
+899019 *
+16 6(284:7B
+
+
+13
+14
+
+
+15
+91
+
+108
+10810923
 >
 108
 101112 *
-1 (%:7B
+1 (%:7B
 
 
 13
@@ -236,10 +532,38 @@ B
 
 15
 16
+
+155
+15515623
+
+77
+777823
+F
+116?
+11611719 *
+1I I(210:7B
+
+
+13
+14
+
+15
+118
+F
+129?
+12913019 *
+1Z Z(210:7B
+
+
+13
+14
+
+15
+131
 B
-39<
-394019 *
-1 (210:7B
+64<
+646519 *
+1& &(261:7B
 
 
 13
@@ -247,238 +571,823 @@ B
 
 
 15
-41
+66
 
-80
-808123rÈ
+54
+545523rπ:
 
 172124*
-1 (
+1 (
 
 172125*
-1 (
+1 (
 
 172628*
-1	 (
+1	 (
 
-172629*
-1	 (
-
-173032*
-1* (5
+172931*
+1 ( 
 
 172625*
-1! ()
+1	 (
 
-173329*
-18 (E
+173225*
+1	 (
 
-173525*
-1^ (k
+173428*
+1 ((
 
-173725*
-1m (v
+172636*
+1	 (
 
-394224*
-1 (
+172628*
+1	 (
+
+173731*
+1 (
+
+172625*
+1	 (
+
+173928*
+1  (-
+
+174125*
+1F (S
+
+174325*
+1U (^
+
+454936*
+1! !(
+
+455153*
+1!! !(,
+
+455453*
+1!3 !(;
+
+454925*
+1! !(
+
+455156*
+1!- !(1
+
+455125*
+1!! !(,
+
+455128*
+1!! !(,
+
+455456*
+1!< !(>
+
+455425*
+1!3 !(;
+
+454956*
+1" "(
+
+454925*
+1"	 "(
+
+454931*
+1" "( 
+
+454928*
+1#	 #(
 
 
-394225*
-1 (
+455731*
+1# #(
+
+455925*
+1$ $(#
+
+455931*
+1% %('
+
+646753*
+1'& '(+
+
+646756*
+1', '(1
+
+646725*
+1'& '(+
+
+454928*
+1)	 )(
 
 
-394446*
-1 (
+456931*
+1) )(
 
-394425*
-1	 (
-
-394432*
-1& (9
-
-394729*
-1	 (
-
-394932*
-1	 (
-
-393525*
-1 (#
-
-393525*
-1$ (7
-
-395129*
-1$ (7
-
-393528*
-19 (;
-
-394429*
-19 (;
-
-395332*
-1< (C
-
-394729*
-1	 (
-
-395532*
-1	 (
-
-394429*
-1 (
-
-395732*
-1  ()
-
-394429*
-1	 (
-
-395932*
-1 (!
-
-394729*
-1	 (
-
-396132*
-1	 (
-
-396328*
-1 (
-
-394429*
-1 (
-
-396532*
-1 (#
-
-674224*
-1 (
+454928*
+1*	 *(
 
 
-674225*
-1 (
+457131*
+1* *(
+
+456756*
+1, ,(
+
+456725*
+1,	 ,(
+
+456731*
+1, ,(
+
+456728*
+1,# ,('
+
+457331*
+1,( ,(5
+
+454928*
+1-	 -(
 
 
-674446*
-1 (
+457731*
+1- -(
 
-674425*
-1	 (
-
-674432*
-1& (9
-
-677046*
-1!$ !(%
-
-677025*
-1! !(#
-
-677032*
-1!? !(F
-
-677029*
-1"	 "(
+798224*
+11 1(
 
 
-677232*
-1" "(
-
-677025*
-1"- "(4
-
-677425*
-1"5 "(@
-
-677429*
-1"5 "(@
-
-677425*
-1"A "(J
-
-677629*
-1"A "(J
-
-672629*
-1#	 #(
-
-677832*
-1#8 #(B
-
-672628*
-1#	 #(
-
-672629*
-1#	 #(
-
-673032*
-1#* #(5
-
-672625*
-1#! #()
-
-676346*
-1$ $(
-
-676325*
-1$	 $(
-
-676332*
-1$ $(
-
-676329*
-1&	 &(
+798225*
+11 1(
 
 
-678032*
-1& &(
+795456*
+13 3(
 
-676325*
-1' '(
+795425*
+13	 3(
 
-674429*
-1(	 ((
+795431*
+13 3(%
 
-675932*
-1( ((!
+866753*
+152 5(7
 
-676346*
-1) )(
+866725*
+15 5(
 
-676325*
-1)	 )(
+866756*
+158 5(D
 
-676328*
-1) )(
+866725*
+152 5(7
 
-674429*
-1) )(
+896725*
+17 7(
 
-676532*
-1) )($
+799256*
+19 9(
 
-674729*
-1*	 *(
+799225*
+19	 9(
 
-678232*
-1*	 *(
+799231*
+19& 9(9
 
-674729*
-1+	 +(
+796756*
+1; ;(
 
-674932*
-1+	 +(
+796725*
+1;	 ;(
 
-676329*
-1+ +(
+796731*
+1; ;(
 
-678432*
-1+ +(
+796728*
+1;! ;(#
 
-676329*
-1+# +(&
+797331*
+1;$ ;(1
 
-678432*
-1+' +(.
+796756*
+1< <(
+
+796725*
+1<	 <(
+
+796731*
+1< <(
+
+796728*
+1<! <(#
+
+797331*
+1<$ <(1
+
+796756*
+1= =(
+
+796725*
+1=	 =(
+
+796731*
+1= =(
+
+796728*
+1=! =(#
+
+797331*
+1=$ =(1
+
+799228*
+1>	 >(
+
+7910031*
+1> >(!
+
+792628*
+1@	 @(
+
+7910231*
+1@  @(*
+
+792636*
+1@	 @(
+
+792628*
+1@	 @(
+
+793731*
+1@ @(
+
+792625*
+1@	 @(
+
+794936*
+1@+ @(6
+
+791028*
+1@+ @(6
+
+794531*
+1@+ @(6
+
+795125*
+1@7 @(B
+
+795128*
+1@7 @(B
+
+795125*
+1@C @(L
+
+7910428*
+1@C @(L
+
+796756*
+1A A(
+
+796725*
+1A	 A(
+
+796736*
+1A A(
+
+799228*
+1A A(
+
+7910631*
+1A A(%
+
+7910828*
+1B	 B(
+
+7911031*
+1B	 B(
+
+796728*
+1B B(
+
+7911231*
+1B  B(-
+
+792628*
+1D	 D(
+
+7910231*
+1D  D(*
+
+792636*
+1D	 D(
+
+792628*
+1D	 D(
+
+793731*
+1D D(
+
+792625*
+1D	 D(
+
+794936*
+1D+ D(6
+
+791028*
+1D+ D(6
+
+794531*
+1D+ D(6
+
+795125*
+1D7 D(B
+
+795128*
+1D7 D(B
+
+795125*
+1DC D(L
+
+7911428*
+1DC D(L
+
+796756*
+1E E(
+
+796725*
+1E	 E(
+
+796736*
+1E E(
+
+799228*
+1E E(
+
+7910631*
+1E E(&
+
+7910828*
+1F	 F(
+
+7911031*
+1F	 F(
+
+796728*
+1F F( 
+
+7911231*
+1F! F(.
+
+1168224*
+1I I(
+
+
+1168225*
+1I I(
+
+
+1166756*
+1L L(
+
+1166725*
+1L	 L(
+
+1166731*
+1L L(
+
+1166728*
+1L! L(#
+
+1167331*
+1L$ L(1
+
+1163225*
+1M	 M(
+
+1163428*
+1M M((
+
+1169256*
+1O O(
+
+1169225*
+1O	 O(
+
+1169231*
+1O& O(9
+
+1162636*
+1Q	 Q(
+
+1162628*
+1Q	 Q(
+
+1163731*
+1Q Q(
+
+1162625*
+1Q	 Q(
+
+1163928*
+1Q  Q(-
+
+1164125*
+1QF Q(S
+
+1164325*
+1QU Q(^
+
+1164336*
+1R	 R(
+
+1162636*
+1R	 R(
+
+1162628*
+1R	 R(
+
+1163731*
+1R R(
+
+1162625*
+1R	 R(
+
+1163928*
+1R  R(-
+
+1164125*
+1R2 R(?
+
+1164125*
+1R@ R(S
+
+11612128*
+1R@ R(S
+
+1169231*
+1RY R(l
+
+1166725*
+1T T(
+
+1169228*
+1T T(
+
+11612331*
+1T T(.
+
+11610828*
+1U	 U(
+
+11612531*
+1U	 U(
+
+11610828*
+1V	 V(
+
+11612731*
+1V	 V(
+
+11610828*
+1W	 W(
+
+11611031*
+1W	 W(
+
+1166728*
+1W W(
+
+11611231*
+1W' W(4
+
+1166736*
+1W W(
+
+1298224*
+1Z Z(
+
+
+1298225*
+1Z Z(
+
+
+1295456*
+1\ \(
+
+1295425*
+1\	 \(
+
+1295431*
+1\ \(%
+
+1346753*
+1^2 ^(7
+
+1346725*
+1^ ^(
+
+1346756*
+1^8 ^(D
+
+1346725*
+1^2 ^(7
+
+1366725*
+1` `(
+
+1292628*
+1b	 b(
+
+12910231*
+1b  b(*
+
+1292636*
+1b	 b(
+
+1292628*
+1b	 b(
+
+1293731*
+1b b(
+
+1292625*
+1b	 b(
+
+1294936*
+1b+ b(6
+
+1291028*
+1b+ b(6
+
+1294531*
+1b+ b(6
+
+1295125*
+1b7 b(B
+
+1295128*
+1b7 b(B
+
+1295125*
+1bC b(L
+
+12910428*
+1bC b(L
+
+1299256*
+1d d(
+
+1299225*
+1d	 d(
+
+1299231*
+1d& d(9
+
+1296756*
+1e e(
+
+1296725*
+1e	 e(
+
+1296731*
+1e e(
+
+1296728*
+1e! e(#
+
+1297331*
+1e$ e(1
+
+1296756*
+1f f(
+
+1296725*
+1f	 f(
+
+1296731*
+1f f(
+
+1296728*
+1f! f(#
+
+1297331*
+1f$ f(1
+
+1299228*
+1g	 g(
+
+12910031*
+1g g(!
+
+1296725*
+1g0 g(5
+
+1296756*
+1i i(
+
+1296725*
+1i	 i(
+
+1296731*
+1i i($
+
+1296728*
+1i( i(1
+
+1297331*
+1i2 i(?
+
+1299228*
+1j	 j(
+
+12914431*
+1j j(
+
+1296725*
+1k k(
+
+1299228*
+1k k(
+
+12914631*
+1k  k(5
+
+12910828*
+1m	 m(
+
+12912731*
+1m	 m(
+
+12910828*
+1n	 n(
+
+12911031*
+1n	 n(
+
+1296728*
+1n n( 
+
+12911231*
+1n( n(5
+
+1296736*
+1n n( 
+
+12910828*
+1o	 o(
+
+12911031*
+1o	 o(
+
+1296728*
+1o o( 
+
+12911231*
+1o( o(5
+
+1296736*
+1o o( 
+
+1488224*
+1r r(
+
+
+1488225*
+1r r(
+
+
+1489256*
+1t t(
+
+1489225*
+1t	 t(
+
+1489231*
+1t& t(9
+
+14810828*
+1u	 u(
+
+14815131*
+1u	 u(
+
+1489228*
+1u u(
+
+14815331*
+1u  u()
+
+1489228*
+1v	 v(
+
+14815531*
+1v v(
+
+14810828*
+1w	 w(
+
+14815131*
+1w	 w(
+
+1489228*
+1w w(
+
+14815331*
+1w  w()
+
+1486756*
+1y y(
+
+1486725*
+1y	 y(
+
+1486731*
+1y y(
+
+1486728*
+1y  y(!
+
+1487331*
+1y" y(/
+
+1489228*
+1z	 z(
+
+14810031*
+1z z(!
+
+1486725*
+1{ {(
+
+1489228*
+1{ {(
+
+14814631*
+1{ {(2
+
+1486725*
+1} }(
+
+1489228*
+1} }(
+
+14814631*
+1} }(2
+
+14810828*
+1~	 ~(
+
+14812731*
+1~	 ~(
+
+1489228*
+1Ä Ä(
+
+14815931*
+1Ä Ä(/
+
+14810828*
+1Å	 Å(
+
+14812731*
+1Å	 Å(
+
+1489228*
+1Å Å(
+
+14815931*
+1Å Å(4
+
+1489228*
+1Ç Ç(
+
+14816131*
+1Ç Ç((
+
+14810828*
+1É	 É(
+
+14812731*
+1É	 É(
+
+1489228*
+1É É(
+
+14816131*
+1É É(.
+
+1489228*
+1Ñ Ñ(
+
+14816331*
+1Ñ Ñ( 
+
+14810828*
+1Ö	 Ö(
+
+14815131*
+1Ö	 Ö(
+
+1489228*
+1Ö Ö(
+
+14816331*
+1Ö  Ö((

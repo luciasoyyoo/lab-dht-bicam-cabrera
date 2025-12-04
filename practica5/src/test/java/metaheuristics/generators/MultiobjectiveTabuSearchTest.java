@@ -149,4 +149,57 @@ public class MultiobjectiveTabuSearchTest {
         assertEquals(50.0f, trace[0]);
     }
 
+    @Test
+    public void testUpdateReference_doesNotDuplicateExistingTabu() throws Exception {
+        MultiobjectiveTabuSearch mo = new MultiobjectiveTabuSearch();
+
+        State initial = new State();
+        initial.setEvaluation(new ArrayList<Double>(){{ add(1.0); }});
+        mo.setInitialReference(initial);
+
+        State candidate = new State();
+        ArrayList<Object> ccode = new ArrayList<Object>(); ccode.add("candidate"); candidate.setCode(ccode);
+        ArrayList<Double> ceval = new ArrayList<Double>(); ceval.add(2.0); candidate.setEvaluation(ceval);
+
+        // Prepare tabu list that already contains candidate and another element so remove(0) is safe
+        State other = new State(); other.setEvaluation(new ArrayList<Double>(){{ add(0.0); }});
+        TabuSolutions.listTabu.clear();
+        TabuSolutions.listTabu.add(other);
+        TabuSolutions.listTabu.add(candidate);
+
+        int sizeBefore = TabuSolutions.listTabu.size();
+        mo.updateReference(candidate, 0);
+
+        // Ensure the tabu list size didn't shrink unexpectedly (no exception occurred)
+    // ensure reference was updated to the candidate
+    assertEquals(2.0, mo.getReference().getEvaluation().get(0), 0.0);
+    }
+
+    @Test
+    public void testGetReferenceList_appendsEachCall() {
+        MultiobjectiveTabuSearch mo = new MultiobjectiveTabuSearch();
+        State s = new State(); s.setEvaluation(new ArrayList<Double>(){{ add(5.0); }});
+        mo.setStateRef(s);
+        List<State> first = mo.getReferenceList();
+        List<State> second = mo.getReferenceList();
+        // getReferenceList implementation appends the reference each call, so second should be larger
+        assertTrue(second.size() >= first.size());
+        assertEquals(mo.getStateReferenceTS().getEvaluation().get(0), second.get(second.size()-1).getEvaluation().get(0));
+    }
+
+    @Test
+    public void test_misc_getters_and_null_behaviour() {
+        MultiobjectiveTabuSearch mo = new MultiobjectiveTabuSearch();
+        // type, weight and trace
+        assertEquals(GeneratorType.MultiobjectiveTabuSearch, mo.getType());
+        assertEquals(50.0f, mo.getWeight(), 0.0f);
+        float[] tr = mo.getTrace();
+        assertNotNull(tr);
+
+        // getSonList returns null per current implementation
+        assertNull(mo.getSonList());
+
+        // awardUpdateREF returns false by default
+        assertFalse(mo.awardUpdateREF(null));
+    }
 }

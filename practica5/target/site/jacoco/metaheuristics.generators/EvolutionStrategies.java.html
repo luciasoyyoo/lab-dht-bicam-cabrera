@@ -90,15 +90,15 @@ public class EvolutionStrategies extends Generator {
 <span class="fc" id="L90">			return null;</span>
 		}
 <span class="fc" id="L92">		stateReferenceES = listStateReference.get(0);</span>
-<span class="pc bpc" id="L93" title="1 of 2 branches missed.">		if(Strategy.getStrategy().getProblem().getTypeProblem().equals(ProblemType.Maximizar)){</span>
-<span class="pc bpc" id="L94" title="1 of 2 branches missed.">			for (int i = 1; i &lt; listStateReference.size(); i++) {</span>
-<span class="nc bnc" id="L95" title="All 2 branches missed.">				if(stateReferenceES.getEvaluation().get(0) &lt; listStateReference.get(i).getEvaluation().get(0))</span>
-<span class="nc" id="L96">					stateReferenceES = listStateReference.get(i);</span>
+<span class="fc bfc" id="L93" title="All 2 branches covered.">		if(Strategy.getStrategy().getProblem().getTypeProblem().equals(ProblemType.Maximizar)){</span>
+<span class="fc bfc" id="L94" title="All 2 branches covered.">			for (int i = 1; i &lt; listStateReference.size(); i++) {</span>
+<span class="fc bfc" id="L95" title="All 2 branches covered.">				if(stateReferenceES.getEvaluation().get(0) &lt; listStateReference.get(i).getEvaluation().get(0))</span>
+<span class="fc" id="L96">					stateReferenceES = listStateReference.get(i);</span>
 			}
 		}
 		else{
-<span class="nc bnc" id="L100" title="All 2 branches missed.">			for (int i = 1; i &lt; listStateReference.size(); i++) {</span>
-<span class="nc bnc" id="L101" title="All 2 branches missed.">				if(stateReferenceES.getEvaluation().get(0) &gt; listStateReference.get(i).getEvaluation().get(0))</span>
+<span class="fc bfc" id="L100" title="All 2 branches covered.">			for (int i = 1; i &lt; listStateReference.size(); i++) {</span>
+<span class="pc bpc" id="L101" title="1 of 2 branches missed.">				if(stateReferenceES.getEvaluation().get(0) &gt; listStateReference.get(i).getEvaluation().get(0))</span>
 <span class="nc" id="L102">					stateReferenceES = listStateReference.get(i);</span>
 			}
 		}
@@ -121,11 +121,11 @@ public class EvolutionStrategies extends Generator {
 
 	@Override
 	public void updateReference(State stateCandidate, Integer countIterationsCurrent) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
-<span class="nc" id="L124">		iffreplace = new FactoryReplace();</span>
-<span class="nc" id="L125">		Replace replace = iffreplace.createReplace(replaceType);</span>
-<span class="nc" id="L126">		listStateReference = replace.replace(stateCandidate, listStateReference);</span>
+<span class="fc" id="L124">		iffreplace = new FactoryReplace();</span>
+<span class="fc" id="L125">		Replace replace = iffreplace.createReplace(replaceType);</span>
+<span class="fc" id="L126">		listStateReference = replace.replace(stateCandidate, listStateReference);</span>
 
-<span class="nc" id="L128">	}</span>
+<span class="fc" id="L128">	}</span>
 	
 	public List&lt;State&gt; getListStateRef(){
 <span class="fc" id="L131">		Boolean found = false;</span>
@@ -212,13 +212,13 @@ public class EvolutionStrategies extends Generator {
 	@Override
 	public int[] getListCountBetterGender() {
 		// TODO Auto-generated method stub
-<span class="nc bnc" id="L215" title="All 2 branches missed.">		return (this.listCountBetterGender == null) ? new int[0] : Arrays.copyOf(this.listCountBetterGender, this.listCountBetterGender.length);</span>
+<span class="pc bpc" id="L215" title="1 of 2 branches missed.">		return (this.listCountBetterGender == null) ? new int[0] : Arrays.copyOf(this.listCountBetterGender, this.listCountBetterGender.length);</span>
 	}
 
 	@Override
 	public int[] getListCountGender() {
 		// TODO Auto-generated method stub
-<span class="nc bnc" id="L221" title="All 2 branches missed.">		return (this.listCountGender == null) ? new int[0] : Arrays.copyOf(this.listCountGender, this.listCountGender.length);</span>
+<span class="pc bpc" id="L221" title="1 of 2 branches missed.">		return (this.listCountGender == null) ? new int[0] : Arrays.copyOf(this.listCountGender, this.listCountGender.length);</span>
 	}
 
 	@Override
