@@ -15,23 +15,23 @@ import problem.definition.State;
 <span class="fc" id="L15">		State state = new State();</span>
 <span class="fc" id="L16">		State stateA = listNeighborhood.get(0);</span>
 <span class="fc" id="L17">		boolean stop = false;</span>
-<span class="pc bpc" id="L18" title="1 of 2 branches missed.">		if(listNeighborhood.size() == 1){</span>
+<span class="fc bfc" id="L18" title="All 2 branches covered.">		if(listNeighborhood.size() == 1){</span>
 <span class="fc" id="L19">			stop = true;</span>
 <span class="fc" id="L20">			state = stateA;</span>
 		}
 		else {
-<span class="nc" id="L23">			Strategy.getStrategy().getProblem().Evaluate(stateA);</span>
+<span class="fc" id="L23">			Strategy.getStrategy().getProblem().Evaluate(stateA);</span>
 			State stateB;
-<span class="nc" id="L25">			Dominance dominance = new Dominance();</span>
-<span class="nc bnc" id="L26" title="All 2 branches missed.">			for (int i = 1; i &lt; listNeighborhood.size(); i++) {</span>
-<span class="nc bnc" id="L27" title="All 2 branches missed.">				while(stop == false){</span>
-<span class="nc" id="L28">					stateB = listNeighborhood.get(i);</span>
-<span class="nc" id="L29">					Strategy.getStrategy().getProblem().Evaluate(stateB);</span>
-<span class="nc bnc" id="L30" title="All 2 branches missed.">					if(dominance.dominance(stateB, stateA) == true){</span>
-<span class="nc" id="L31">						stateA = stateB;</span>
+<span class="fc" id="L25">			Dominance dominance = new Dominance();</span>
+<span class="fc bfc" id="L26" title="All 2 branches covered.">			for (int i = 1; i &lt; listNeighborhood.size(); i++) {</span>
+<span class="fc bfc" id="L27" title="All 2 branches covered.">				while(stop == false){</span>
+<span class="fc" id="L28">					stateB = listNeighborhood.get(i);</span>
+<span class="fc" id="L29">					Strategy.getStrategy().getProblem().Evaluate(stateB);</span>
+<span class="fc bfc" id="L30" title="All 2 branches covered.">					if(dominance.dominance(stateB, stateA) == true){</span>
+<span class="fc" id="L31">						stateA = stateB;</span>
 					}else{
-<span class="nc" id="L33">						stop = true;</span>
-<span class="nc" id="L34">						state = stateA;</span>
+<span class="fc" id="L33">						stop = true;</span>
+<span class="fc" id="L34">						state = stateA;</span>
 					}
 				}
 			}
