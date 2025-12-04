@@ -9,27 +9,27 @@ import problem.definition.Problem;
 import problem.definition.State;
 import problem.definition.Problem.ProblemType;
 
-<span class="nc" id="L12">public class AcceptNotBad extends AcceptableCandidate{</span>
+<span class="fc" id="L12">public class AcceptNotBad extends AcceptableCandidate{</span>
 
 	@Override
 	public Boolean acceptCandidate(State stateCurrent, State stateCandidate) {
-<span class="nc" id="L16">		Boolean accept = null;</span>
-<span class="nc" id="L17">		Problem problem = Strategy.getStrategy().getProblem();</span>
-<span class="nc bnc" id="L18" title="All 2 branches missed.">		for (int i = 0; i &lt; problem.getFunction().size(); i++) {</span>
-<span class="nc bnc" id="L19" title="All 2 branches missed.">		if (problem.getTypeProblem().equals(ProblemType.Maximizar)) {</span>
-<span class="nc bnc" id="L20" title="All 2 branches missed.">			if (stateCandidate.getEvaluation().get(0) &gt;= stateCurrent.getEvaluation().get(0)) {</span>
-<span class="nc" id="L21">				accept = true;</span>
+<span class="fc" id="L16">		Boolean accept = null;</span>
+<span class="fc" id="L17">		Problem problem = Strategy.getStrategy().getProblem();</span>
+<span class="fc bfc" id="L18" title="All 2 branches covered.">		for (int i = 0; i &lt; problem.getFunction().size(); i++) {</span>
+<span class="fc bfc" id="L19" title="All 2 branches covered.">		if (problem.getTypeProblem().equals(ProblemType.Maximizar)) {</span>
+<span class="fc bfc" id="L20" title="All 2 branches covered.">			if (stateCandidate.getEvaluation().get(0) &gt;= stateCurrent.getEvaluation().get(0)) {</span>
+<span class="fc" id="L21">				accept = true;</span>
 			} else {
-<span class="nc" id="L23">				accept = false;</span>
+<span class="fc" id="L23">				accept = false;</span>
 			}
 		} else {
-<span class="nc bnc" id="L26" title="All 2 branches missed.">			if (stateCandidate.getEvaluation().get(0) &lt;= stateCurrent.getEvaluation().get(0)) {</span>
-<span class="nc" id="L27">				accept = true;</span>
+<span class="fc bfc" id="L26" title="All 2 branches covered.">			if (stateCandidate.getEvaluation().get(0) &lt;= stateCurrent.getEvaluation().get(0)) {</span>
+<span class="fc" id="L27">				accept = true;</span>
 			} else {
-<span class="nc" id="L29">				accept = false;</span>
+<span class="fc" id="L29">				accept = false;</span>
 			}
 		}}
-<span class="nc" id="L32">		return accept;</span>
+<span class="fc" id="L32">		return accept;</span>
 	}
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

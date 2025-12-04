@@ -2,38 +2,38 @@
 
 import factory_method.FactoryGenerator;
 
-<span class="nc" id="L5">public class InstanceEE implements Runnable {</span>
+<span class="fc" id="L5">public class InstanceEE implements Runnable {</span>
 
-<span class="nc" id="L7">	private boolean terminate = false;</span>
+<span class="fc" id="L7">	private boolean terminate = false;</span>
 	
 	public void run() {
-<span class="nc" id="L10">		FactoryGenerator ifFactoryGenerator = new FactoryGenerator();</span>
-<span class="nc" id="L11">		Generator generatorEE = null;</span>
+<span class="fc" id="L10">		FactoryGenerator ifFactoryGenerator = new FactoryGenerator();</span>
+<span class="fc" id="L11">		Generator generatorEE = null;</span>
 		try {
-<span class="nc" id="L13">			generatorEE = ifFactoryGenerator.createGenerator(GeneratorType.EvolutionStrategies);</span>
+<span class="fc" id="L13">			generatorEE = ifFactoryGenerator.createGenerator(GeneratorType.EvolutionStrategies);</span>
 <span class="nc" id="L14">		} catch (Exception e) {</span>
 			// TODO Auto-generated catch block
 <span class="nc" id="L16">			e.printStackTrace();</span>
-<span class="nc" id="L17">		}</span>
-<span class="nc" id="L18">		boolean find = false;</span>
-<span class="nc" id="L19">		int i = 0;</span>
-<span class="nc bnc" id="L20" title="All 2 branches missed.">		while (find == false) {</span>
-<span class="nc bnc" id="L21" title="All 2 branches missed.">			if(MultiGenerator.getListGenerators()[i].getType().equals(GeneratorType.EvolutionStrategies)){</span>
-<span class="nc" id="L22">				MultiGenerator.getListGenerators()[i] = generatorEE;</span>
-<span class="nc" id="L23">				find = true;</span>
+<span class="fc" id="L17">		}</span>
+<span class="fc" id="L18">		boolean find = false;</span>
+<span class="fc" id="L19">		int i = 0;</span>
+<span class="fc bfc" id="L20" title="All 2 branches covered.">		while (find == false) {</span>
+<span class="pc bpc" id="L21" title="1 of 2 branches missed.">			if(MultiGenerator.getListGenerators()[i].getType().equals(GeneratorType.EvolutionStrategies)){</span>
+<span class="fc" id="L22">				MultiGenerator.getListGenerators()[i] = generatorEE;</span>
+<span class="fc" id="L23">				find = true;</span>
 			}
 <span class="nc" id="L25">			else i++;	</span>
 		}
-<span class="nc" id="L27">		terminate = true;</span>
-<span class="nc" id="L28">	}</span>
+<span class="fc" id="L27">		terminate = true;</span>
+<span class="fc" id="L28">	}</span>
 
 	public boolean isTerminate() {
-<span class="nc" id="L31">		return terminate;</span>
+<span class="fc" id="L31">		return terminate;</span>
 	}
 
 	public void setTerminate(boolean terminate) {
-<span class="nc" id="L35">		this.terminate = terminate;</span>
-<span class="nc" id="L36">	}</span>
+<span class="fc" id="L35">		this.terminate = terminate;</span>
+<span class="fc" id="L36">	}</span>
 
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

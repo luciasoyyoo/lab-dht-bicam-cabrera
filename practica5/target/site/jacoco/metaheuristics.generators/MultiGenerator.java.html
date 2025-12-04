@@ -203,7 +203,7 @@ public class MultiGenerator extends Generator implements Cloneable {
 
 	@Override
 	public GeneratorType getType() {
-<span class="fc" id="L206">		return this.generatortype;</span>
+<span class="nc" id="L206">		return this.generatortype;</span>
 	}
 
 	@Override
@@ -364,9 +364,9 @@ public class MultiGenerator extends Generator implements Cloneable {
 	
 	@SuppressWarnings(&quot;static-access&quot;)
 	public void tournament(State stateCandidate,Integer countIterationsCurrent) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
-<span class="fc" id="L367">		State stateTem = new State(stateCandidate);</span>
-<span class="pc bpc" id="L368" title="1 of 2 branches missed.">		for (int i = 0; i &lt; MultiGenerator.getListGenerators().length; i++) {</span>
-<span class="pc bpc" id="L369" title="1 of 2 branches missed.">				if(!listGenerators[i].getType().equals(GeneratorType.MultiGenerator))</span>
+<span class="nc" id="L367">		State stateTem = new State(stateCandidate);</span>
+<span class="nc bnc" id="L368" title="All 2 branches missed.">		for (int i = 0; i &lt; MultiGenerator.getListGenerators().length; i++) {</span>
+<span class="nc bnc" id="L369" title="All 2 branches missed.">				if(!listGenerators[i].getType().equals(GeneratorType.MultiGenerator))</span>
 <span class="nc" id="L370">					MultiGenerator.getListGenerators()[i].updateReference(stateTem, countIterationsCurrent);</span>
 		}
 <span class="nc" id="L372">	}</span>

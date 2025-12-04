@@ -82,8 +82,8 @@ public class GeneticAlgorithm extends Generator {
 <span class="fc" id="L82">    	iffatherselection = new FactoryFatherSelection();</span>
 <span class="fc" id="L83">    	FatherSelection selection = iffatherselection.createSelectFather(selectionType);</span>
 <span class="fc" id="L84">    	List&lt;State&gt; fathers = selection.selection(refList, truncation);</span>
-<span class="fc bfc" id="L85" title="All 2 branches covered.">    	int pos1 = (fathers.size() &gt; 0) ? ThreadLocalRandom.current().nextInt(fathers.size()) : 0;</span>
-<span class="fc bfc" id="L86" title="All 2 branches covered.">    	int pos2 = (fathers.size() &gt; 0) ? ThreadLocalRandom.current().nextInt(fathers.size()) : 0;</span>
+<span class="pc bpc" id="L85" title="1 of 2 branches missed.">    	int pos1 = (fathers.size() &gt; 0) ? ThreadLocalRandom.current().nextInt(fathers.size()) : 0;</span>
+<span class="pc bpc" id="L86" title="1 of 2 branches missed.">    	int pos2 = (fathers.size() &gt; 0) ? ThreadLocalRandom.current().nextInt(fathers.size()) : 0;</span>
     	
 <span class="fc" id="L88">    	State auxState1 = (State) Strategy.getStrategy().getProblem().getState().getCopy();</span>
 <span class="fc" id="L89">    	auxState1.setCode(new ArrayList&lt;Object&gt;(fathers.get(pos1).getCode()));</span>

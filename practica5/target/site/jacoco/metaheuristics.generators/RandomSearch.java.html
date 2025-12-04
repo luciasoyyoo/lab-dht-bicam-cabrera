@@ -56,8 +56,8 @@ public class RandomSearch extends Generator {
 		//ArrayList&lt;State&gt;list =new ArrayList&lt;State&gt;();
 <span class="fc" id="L57">		List&lt;State&gt; neighborhood = Strategy.getStrategy().getProblem().getOperator().generateRandomState(operatornumber);</span>
 <span class="fc" id="L58">	    State statecandidate = candidatevalue.stateCandidate(stateReferenceRS, typeCandidate, strategy, operatornumber, neighborhood);</span>
-<span class="fc bfc" id="L59" title="All 2 branches covered.">		if(GeneticAlgorithm.countRef != 0 || EvolutionStrategies.countRef != 0 || DistributionEstimationAlgorithm.countRef != 0 || ParticleSwarmOptimization.getCountRef() != 0)</span>
-<span class="fc" id="L60">	    	listStateReference.add(statecandidate);</span>
+<span class="pc bpc" id="L59" title="1 of 2 branches missed.">		if(GeneticAlgorithm.countRef != 0 || EvolutionStrategies.countRef != 0 || DistributionEstimationAlgorithm.countRef != 0 || ParticleSwarmOptimization.getCountRef() != 0)</span>
+<span class="nc" id="L60">	    	listStateReference.add(statecandidate);</span>
 <span class="fc" id="L61">	    return statecandidate;</span>
 	}
 
@@ -73,13 +73,13 @@ public class RandomSearch extends Generator {
 
 	@Override
 	public void updateReference(State stateCandidate, Integer countIterationsCurrent) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException,	IllegalAccessException, InvocationTargetException, NoSuchMethodException {
-<span class="nc" id="L76">		ifacceptCandidate = new FactoryAcceptCandidate();</span>
-<span class="nc" id="L77">		AcceptableCandidate candidate = ifacceptCandidate.createAcceptCandidate(typeAcceptation);</span>
-<span class="nc" id="L78">		Boolean accept = candidate.acceptCandidate(stateReferenceRS, stateCandidate);</span>
-<span class="nc bnc" id="L79" title="All 2 branches missed.">		if(accept.equals(true))</span>
-<span class="nc" id="L80">		  stateReferenceRS = stateCandidate;</span>
+<span class="fc" id="L76">		ifacceptCandidate = new FactoryAcceptCandidate();</span>
+<span class="fc" id="L77">		AcceptableCandidate candidate = ifacceptCandidate.createAcceptCandidate(typeAcceptation);</span>
+<span class="fc" id="L78">		Boolean accept = candidate.acceptCandidate(stateReferenceRS, stateCandidate);</span>
+<span class="pc bpc" id="L79" title="1 of 2 branches missed.">		if(accept.equals(true))</span>
+<span class="fc" id="L80">		  stateReferenceRS = stateCandidate;</span>
 //		getReferenceList();
-<span class="nc" id="L82">	}</span>
+<span class="fc" id="L82">	}</span>
 
 
 	@Override

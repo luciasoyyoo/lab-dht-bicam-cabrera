@@ -66,11 +66,11 @@ public class EvolutionStrategies extends Generator {
 
     	//ArrayList&lt;State&gt; list = new ArrayList&lt;State&gt;();
 //		List&lt;State&gt; refList = new ArrayList&lt;State&gt;(this.listStateReference); 
-<span class="fc" id="L69">    	iffatherselection = new FactoryFatherSelection();</span>
-<span class="fc" id="L70">    	FatherSelection selection = iffatherselection.createSelectFather(selectionType);</span>
-<span class="fc" id="L71">    	List&lt;State&gt; fathers = selection.selection(this.listStateReference, truncation);</span>
-<span class="pc bpc" id="L72" title="1 of 2 branches missed.">    	int pos1 = (fathers.size() &gt; 0) ? ThreadLocalRandom.current().nextInt(fathers.size()) : 0;</span>
-<span class="fc" id="L73">    	State candidate = (State) Strategy.getStrategy().getProblem().getState().getCopy();</span>
+<span class="nc" id="L69">    	iffatherselection = new FactoryFatherSelection();</span>
+<span class="nc" id="L70">    	FatherSelection selection = iffatherselection.createSelectFather(selectionType);</span>
+<span class="nc" id="L71">    	List&lt;State&gt; fathers = selection.selection(this.listStateReference, truncation);</span>
+<span class="nc bnc" id="L72" title="All 2 branches missed.">    	int pos1 = (fathers.size() &gt; 0) ? ThreadLocalRandom.current().nextInt(fathers.size()) : 0;</span>
+<span class="nc" id="L73">    	State candidate = (State) Strategy.getStrategy().getProblem().getState().getCopy();</span>
 <span class="nc" id="L74">    	candidate.setCode(new ArrayList&lt;Object&gt;(fathers.get(pos1).getCode()));</span>
 <span class="nc" id="L75">    	candidate.setEvaluation(fathers.get(pos1).getEvaluation());</span>
 <span class="nc" id="L76">    	candidate.setNumber(fathers.get(pos1).getNumber());</span>
@@ -212,13 +212,13 @@ public class EvolutionStrategies extends Generator {
 	@Override
 	public int[] getListCountBetterGender() {
 		// TODO Auto-generated method stub
-<span class="pc bpc" id="L215" title="1 of 2 branches missed.">		return (this.listCountBetterGender == null) ? new int[0] : Arrays.copyOf(this.listCountBetterGender, this.listCountBetterGender.length);</span>
+<span class="nc bnc" id="L215" title="All 2 branches missed.">		return (this.listCountBetterGender == null) ? new int[0] : Arrays.copyOf(this.listCountBetterGender, this.listCountBetterGender.length);</span>
 	}
 
 	@Override
 	public int[] getListCountGender() {
 		// TODO Auto-generated method stub
-<span class="pc bpc" id="L221" title="1 of 2 branches missed.">		return (this.listCountGender == null) ? new int[0] : Arrays.copyOf(this.listCountGender, this.listCountGender.length);</span>
+<span class="nc bnc" id="L221" title="All 2 branches missed.">		return (this.listCountGender == null) ? new int[0] : Arrays.copyOf(this.listCountGender, this.listCountGender.length);</span>
 	}
 
 	@Override

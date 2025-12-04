@@ -20,7 +20,7 @@ import problem.definition.State;
 <span class="fc" id="L20">			double currentCount = listNeighborhood.get(0).getEvaluation().get(0);</span>
 <span class="fc bfc" id="L21" title="All 2 branches covered.">			for (int i = 1; i &lt; listNeighborhood.size(); i++) {</span>
 <span class="fc" id="L22">				counter = listNeighborhood.get(i).getEvaluation().get(0);</span>
-<span class="fc bfc" id="L23" title="All 2 branches covered.">				if (counter &lt; currentCount) {</span>
+<span class="pc bpc" id="L23" title="1 of 2 branches missed.">				if (counter &lt; currentCount) {</span>
 <span class="fc" id="L24">					currentCount = counter;</span>
 <span class="fc" id="L25">					stateSmaller = listNeighborhood.get(i);</span>
 				}

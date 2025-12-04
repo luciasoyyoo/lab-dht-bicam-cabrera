@@ -47,9 +47,9 @@ public class CandidateValue {
 <span class="fc" id="L47">			auxList.add(neighborhood.get(i));</span>
 		}
 <span class="fc" id="L49">		this.tabusolution = new TabuSolutions();</span>
-<span class="pc bpc" id="L50" title="1 of 2 branches missed.">		if (strategy.equals(StrategyType.TABU)) {</span>
+<span class="fc bfc" id="L50" title="All 2 branches covered.">		if (strategy.equals(StrategyType.TABU)) {</span>
 			try {
-<span class="nc" id="L52">				auxList = this.tabusolution.filterNeighborhood(auxList);</span>
+<span class="fc" id="L52">				auxList = this.tabusolution.filterNeighborhood(auxList);</span>
 			}
 <span class="nc" id="L54">			catch (Exception e) {</span>
 <span class="nc" id="L55">				Strategy strategys = Strategy.getStrategy();</span>
@@ -57,7 +57,7 @@ public class CandidateValue {
 <span class="nc" id="L57">					neighborhood = strategys.getProblem().getOperator().generatedNewState(neighborhood.get(0), operatornumber);</span>
 				}
 <span class="nc" id="L59">				return stateCandidate(stateCurrent, typeCandidate, strategy, operatornumber, neighborhood);</span>
-<span class="nc" id="L60">			}</span>
+<span class="fc" id="L60">			}</span>
 		}
 <span class="fc" id="L62">		SearchCandidate searchCand = newSearchCandidate(typeCandidate);</span>
 <span class="fc" id="L63">		stateCandidate = searchCand.stateSearch(auxList);</span>

@@ -104,12 +104,12 @@ public class DistributionEstimationAlgorithm extends Generator {
 <span class="fc" id="L104">    	Sampling samplingG = iffsampling.createSampling(Samplingtype);</span>
 <span class="fc" id="L105">    	List&lt;State&gt; ind = samplingG.sampling(fathers, operatornumber);</span>
 <span class="fc" id="L106">    	State candidate = null;</span>
-<span class="fc bfc" id="L107" title="All 2 branches covered.">    	if(ind.size() &gt; 1){</span>
-<span class="pc bpc" id="L108" title="1 of 2 branches missed.">    		for (int i = 0; i &lt; ind.size(); i++) {</span>
-<span class="fc" id="L109">    			double evaluation = Strategy.getStrategy().getProblem().getFunction().get(0).Evaluation(ind.get(i));</span>
-<span class="fc" id="L110">    			ArrayList&lt;Double&gt; listEval = new ArrayList&lt;Double&gt;();</span>
-<span class="fc" id="L111">    			listEval.add(evaluation);</span>
-<span class="fc" id="L112">    			ind.get(0).setEvaluation(listEval);</span>
+<span class="pc bpc" id="L107" title="1 of 2 branches missed.">    	if(ind.size() &gt; 1){</span>
+<span class="nc bnc" id="L108" title="All 2 branches missed.">    		for (int i = 0; i &lt; ind.size(); i++) {</span>
+<span class="nc" id="L109">    			double evaluation = Strategy.getStrategy().getProblem().getFunction().get(0).Evaluation(ind.get(i));</span>
+<span class="nc" id="L110">    			ArrayList&lt;Double&gt; listEval = new ArrayList&lt;Double&gt;();</span>
+<span class="nc" id="L111">    			listEval.add(evaluation);</span>
+<span class="nc" id="L112">    			ind.get(0).setEvaluation(listEval);</span>
     		}
 <span class="nc" id="L114">        	candidate = maxValue(ind);</span>
     	}
@@ -176,12 +176,12 @@ public class DistributionEstimationAlgorithm extends Generator {
 		/*if(RandomSearch.listStateReference.size() == 0){
 			return this.referenceList = new ArrayList&lt;State&gt;();
 		}*/
-<span class="pc bpc" id="L179" title="1 of 4 branches missed.">		while((found.equals(false)) &amp;&amp; (Strategy.getStrategy().mapGenerators.size() &gt; count)){</span>
-<span class="pc bpc" id="L180" title="1 of 2 branches missed.">			if(key.get(count).equals(GeneratorType.DistributionEstimationAlgorithm.toString())){</span>
-<span class="nc" id="L181">				GeneratorType keyGenerator = GeneratorType.valueOf(String.valueOf(key.get(count)));</span>
-<span class="nc" id="L182">				DistributionEstimationAlgorithm generator = (DistributionEstimationAlgorithm)Strategy.getStrategy().mapGenerators.get(keyGenerator);</span>
-<span class="nc bnc" id="L183" title="All 2 branches missed.">				if(generator.getListReference().isEmpty()){</span>
-<span class="nc" id="L184">					referenceList.addAll(RandomSearch.listStateReference);</span>
+<span class="fc bfc" id="L179" title="All 4 branches covered.">		while((found.equals(false)) &amp;&amp; (Strategy.getStrategy().mapGenerators.size() &gt; count)){</span>
+<span class="fc bfc" id="L180" title="All 2 branches covered.">			if(key.get(count).equals(GeneratorType.DistributionEstimationAlgorithm.toString())){</span>
+<span class="fc" id="L181">				GeneratorType keyGenerator = GeneratorType.valueOf(String.valueOf(key.get(count)));</span>
+<span class="fc" id="L182">				DistributionEstimationAlgorithm generator = (DistributionEstimationAlgorithm)Strategy.getStrategy().mapGenerators.get(keyGenerator);</span>
+<span class="pc bpc" id="L183" title="1 of 2 branches missed.">				if(generator.getListReference().isEmpty()){</span>
+<span class="fc" id="L184">					referenceList.addAll(RandomSearch.listStateReference);</span>
 					//for (int j = 1; j &lt; Strategy.getStrategy().Statistics.getAllStates().size(); j++) {
 //					for (int j = 1; j &lt; RandomSearch.listStateReference.size(); j++) {
 //						//if((Strategy.getStrategy().Statistics.getAllStates().get(j).getTypeGenerator().equals(GeneratorType.RandomSearch)) &amp;&amp; (referenceList.size()!= countRef)){
@@ -194,7 +194,7 @@ public class DistributionEstimationAlgorithm extends Generator {
 				else{
 <span class="nc" id="L195">					referenceList = generator.getListReference();</span>
 				}
-<span class="nc" id="L197">			    found = true;</span>
+<span class="fc" id="L197">			    found = true;</span>
 			}
 <span class="fc" id="L199">			count++;</span>
 		}
@@ -234,10 +234,10 @@ public class DistributionEstimationAlgorithm extends Generator {
 	public boolean awardUpdateREF(State stateCandidate) {
 <span class="fc" id="L235">		boolean find = false;</span>
 <span class="fc" id="L236">		int i = 0;</span>
-<span class="fc bfc" id="L237" title="All 4 branches covered.">		while (find == false &amp;&amp; i &lt; this.referenceList.size()) {</span>
-<span class="fc bfc" id="L238" title="All 2 branches covered.">			if(stateCandidate.equals(this.referenceList.get(i)))</span>
+<span class="pc bpc" id="L237" title="1 of 4 branches missed.">		while (find == false &amp;&amp; i &lt; this.referenceList.size()) {</span>
+<span class="pc bpc" id="L238" title="1 of 2 branches missed.">			if(stateCandidate.equals(this.referenceList.get(i)))</span>
 <span class="fc" id="L239">				find = true;</span>
-<span class="fc" id="L240">			else i++;</span>
+<span class="nc" id="L240">			else i++;</span>
 		}
 <span class="fc" id="L242">		return find;</span>
 	}

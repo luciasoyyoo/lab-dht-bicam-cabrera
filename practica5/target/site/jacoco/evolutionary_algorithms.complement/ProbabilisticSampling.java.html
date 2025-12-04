@@ -53,11 +53,11 @@ import problem.definition.State;
 <span class="nc" id="L53">				else random = 1;</span>
 <span class="pc bpc" id="L54" title="1 of 4 branches missed.">				while (p &lt; arrOcc.length &amp;&amp; find == false) {</span>
 <span class="fc" id="L55">					random = random - arrOcc[p];</span>
-<span class="fc bfc" id="L56" title="All 2 branches covered.">					if(random &lt;= 0){</span>
+<span class="pc bpc" id="L56" title="1 of 2 branches missed.">					if(random &lt;= 0){</span>
 <span class="fc" id="L57">						staList.get(l).getCode().add(arrtemp[p]);</span>
 <span class="fc" id="L58">						find = true;</span>
 					}
-<span class="fc" id="L60">					else p++;</span>
+<span class="nc" id="L60">					else p++;</span>
 				}
 <span class="pc bpc" id="L62" title="1 of 2 branches missed.">				if(find == false){</span>
 <span class="nc" id="L63">					int bound = Strategy.getStrategy().getProblem().getCodification().getVariableCount() * 10;</span>

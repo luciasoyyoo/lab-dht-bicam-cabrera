@@ -6,22 +6,22 @@ import metaheurictics.strategy.Strategy;
 
 import problem.definition.State;
 
-<span class="nc" id="L9">public class AcceptNotDominatedTabu extends AcceptableCandidate {</span>
+<span class="fc" id="L9">public class AcceptNotDominatedTabu extends AcceptableCandidate {</span>
 
 	@Override
 	public Boolean acceptCandidate(State stateCurrent, State stateCandidate) {
-<span class="nc" id="L13">		List&lt;State&gt; list = Strategy.getStrategy().listRefPoblacFinal;</span>
+<span class="fc" id="L13">		List&lt;State&gt; list = Strategy.getStrategy().listRefPoblacFinal;</span>
 		
-<span class="nc" id="L15">		Dominance dominance = new Dominance();</span>
-<span class="nc bnc" id="L16" title="All 2 branches missed.">		if(list.size() == 0){</span>
-<span class="nc" id="L17">			list.add(stateCurrent.clone());</span>
+<span class="fc" id="L15">		Dominance dominance = new Dominance();</span>
+<span class="pc bpc" id="L16" title="1 of 2 branches missed.">		if(list.size() == 0){</span>
+<span class="fc" id="L17">			list.add(stateCurrent.clone());</span>
 		}
 		//Verificando si la soluciï¿½n candidata domina a alguna de las soluciones de la lista de soluciones no dominadas
 		//De ser asï¿½ se eliminan de la lista y se adiciona la nueva soluciï¿½n en la lista
 		//De lo contrario no se adiciona la soluciï¿½n candidata a la lista
 		//Si fue insertada en la lista entonces la solucion candidata se convierte en solucion actual
-<span class="nc" id="L23">		dominance.listDominance(stateCandidate, list);</span>
-<span class="nc" id="L24">		return true;</span>
+<span class="fc" id="L23">		dominance.listDominance(stateCandidate, list);</span>
+<span class="fc" id="L24">		return true;</span>
 	}
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>
