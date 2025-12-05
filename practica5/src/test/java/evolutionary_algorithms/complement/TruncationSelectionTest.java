@@ -93,4 +93,36 @@ public class TruncationSelectionTest {
         assertEquals(1.0, res.get(0).getEvaluation().get(0), 0.0);
         assertEquals(3.0, res.get(1).getEvaluation().get(0), 0.0);
     }
+
+    @Test
+    public void testSelection_truncation_zero_returnsAll() {
+        Strategy.getStrategy().getProblem().setTypeProblem(Problem.ProblemType.Maximizar);
+        TruncationSelection sel = new TruncationSelection();
+        List<State> list = new ArrayList<>();
+        State s1 = new State(); s1.setEvaluation(new ArrayList<Double>(){{ add(1.0); }});
+        State s2 = new State(); s2.setEvaluation(new ArrayList<Double>(){{ add(2.0); }});
+        list.add(s1); list.add(s2);
+
+        List<State> res = sel.selection(list, 0);
+        assertEquals(2, res.size());
+    }
+
+    @Test
+    public void testOrderBetter_handlesSingleAndEqualElements() {
+        TruncationSelection sel = new TruncationSelection();
+        List<State> single = new ArrayList<>();
+        State s = new State(); s.setEvaluation(new ArrayList<Double>(){{ add(1.0); }});
+        single.add(s);
+        List<State> outSingle = sel.orderBetter(single);
+        assertEquals(1, outSingle.size());
+
+        List<State> equal = new ArrayList<>();
+        State a = new State(); a.setEvaluation(new ArrayList<Double>(){{ add(2.0); }});
+        State b = new State(); b.setEvaluation(new ArrayList<Double>(){{ add(2.0); }});
+        equal.add(a); equal.add(b);
+        List<State> outEqual = sel.orderBetter(equal);
+        // order should be stable or unchanged when values equal
+        assertEquals(2.0, outEqual.get(0).getEvaluation().get(0), 0.0);
+        assertEquals(2.0, outEqual.get(1).getEvaluation().get(0), 0.0);
+    }
 }
