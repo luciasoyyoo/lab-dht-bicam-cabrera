@@ -8,9 +8,17 @@ import problem.definition.State;
 
 
 
+/**
+ * Univariate - applies univariate distribution strategy.
+ */
 public class Univariate extends Distribution {
 
 	@Override
+	/**
+	 * distribution - applies univariate distribution strategy.
+	 * @param fathers 
+	 * @return returns the list of probabilities for each variable value.
+	 */
 	public List<Probability> distribution(List<State> fathers) {
 
 		List<Probability> ListProbability = new ArrayList<Probability>();
@@ -48,6 +56,12 @@ public class Univariate extends Distribution {
 		return ListProbability;
 	}
 
+	/**
+	 * getListKey - applies univariate distribution strategy.
+	 * @param SortedMap<String 
+	 * @param map 
+	 * @return returns the list of keys from the given map.
+	 */
 	public List<String> getListKey(SortedMap<String, Object> map){
 		List<String> listKey = new ArrayList<String>();
 		String key = map.keySet().toString();

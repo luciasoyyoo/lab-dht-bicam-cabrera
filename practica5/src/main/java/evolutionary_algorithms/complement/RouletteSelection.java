@@ -8,9 +8,18 @@ import metaheuristics.generators.LimitRoulette;
 
 import problem.definition.State;
 
+/**
+ * RouletteSelection - applies roulette selection to choose parents.
+ */
 public class RouletteSelection extends FatherSelection {
 
 	@Override
+	/**
+	 * selection - applies roulette selection to choose parents.
+	 * @param listState 
+	 * @param truncation 
+	 * @return 
+	 */
 	public List<State> selection(List<State> listState, int truncation) {
 		float totalWeight = 0;
 		for (int i = 0; i < listState.size(); i++) {

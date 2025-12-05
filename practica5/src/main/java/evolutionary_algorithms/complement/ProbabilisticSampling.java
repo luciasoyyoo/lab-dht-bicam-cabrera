@@ -11,6 +11,9 @@ import metaheuristics.generators.GeneratorType;
 import problem.definition.State;
 
 
+/**
+ * ProbabilisticSampling - applies probabilistic sampling to select individuals.
+ */
 public class ProbabilisticSampling extends Sampling {
 
 	/**
@@ -21,6 +24,12 @@ public class ProbabilisticSampling extends Sampling {
 	 */
 	@SuppressWarnings("squid:S2245")
 	@Override
+	/**
+	 * sampling - applies probabilistic sampling to select individuals.
+	 * @param fathers 
+	 * @param countInd 
+	 * @return returns a list of sampled individuals
+	 */
 	public List<State> sampling(List<State> fathers, int countInd) {
 		// TODO Auto-generated method stub
 		int cantV = fathers.get(0).getCode().size();
@@ -78,6 +87,11 @@ public class ProbabilisticSampling extends Sampling {
 	}
 	
 	// inicializa la lista de individuos
+		/**
+		 * listState - initializes the list of individuals.
+		 * @param countInd 
+		 * @return 
+		 */
 		public List<State> listState(int countInd) {
 			List<State> staList = new ArrayList<State>(countInd);
 			for (int i = 0; i < countInd; i++) {

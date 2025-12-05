@@ -9,6 +9,9 @@ import metaheurictics.strategy.Strategy;
 import problem.definition.State;
 
 
+/**
+ * OnePointCrossover - applies the one-point crossover operator.
+ */
 public class OnePointCrossover extends Crossover {
 
 	/**
@@ -19,6 +22,13 @@ public class OnePointCrossover extends Crossover {
 	 */
 	@SuppressWarnings("squid:S2245")
 	@Override
+	/**
+	 * crossover - applies the crossover operation to two parent states.
+	 * @param father1 
+	 * @param father2 
+	 * @param PC 
+	 * @return returns the offspring resulting from the crossover between father1 and father2
+	 */
 	public State crossover(State father1, State father2, double PC) {
 				
 		State newInd = (State) father1.getCopy();
@@ -41,14 +51,7 @@ public class OnePointCrossover extends Crossover {
 					ind2.add(father1.getCode().get(i));
 				}
 			}
-			/*
-			for (int j = pos; j < ind1.size(); j++) {
-		       for (int k = pos; k < ind2.size(); k++) {
-				  Integer value1 = (Integer) ind1.get(j);
-		    	  ind1.set(j, ind2.get(k));
-				  ind2.set(k,value1);
-			   }				  
-		    }*/
+			
 			//generar un numero aleatorio 0 o 1, si es 0 me quedo con ind1 si es 1 con ind2.
 			int random = ThreadLocalRandom.current().nextInt(2);
 			if(random == 0)

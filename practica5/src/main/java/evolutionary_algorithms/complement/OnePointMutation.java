@@ -5,6 +5,9 @@ import java.util.concurrent.ThreadLocalRandom;
 import metaheurictics.strategy.Strategy;
 import problem.definition.State;
 
+/**
+ * OnePointMutation - applies the one-point mutation operator.
+ */
 public class OnePointMutation extends Mutation {
 
 
@@ -16,6 +19,12 @@ public class OnePointMutation extends Mutation {
      */
     @SuppressWarnings("squid:S2245")
     @Override
+    /**
+     * mutation - applies the mutation to the state.
+     * @param state
+     * @param PM
+     * @return returns the mutated state
+     */
     public State mutation(State state, double PM) {
         double probM = ThreadLocalRandom.current().nextDouble();
 		if(PM >= probM)

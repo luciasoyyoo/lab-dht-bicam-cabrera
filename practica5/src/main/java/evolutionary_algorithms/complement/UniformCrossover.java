@@ -5,6 +5,9 @@ import java.util.concurrent.ThreadLocalRandom;
 
 import problem.definition.State;
 
+/**
+ * UniformCrossover - complements uniform crossover strategy.
+ */
 public class UniformCrossover extends Crossover {
 	
 	/**
@@ -14,6 +17,11 @@ public class UniformCrossover extends Crossover {
 	 * purposes. Therefore we suppress the Sonar security hotspot S2245 here.
 	 */
 	@SuppressWarnings("squid:S2245")
+	/**
+	 * mascara - applies uniform crossover strategy.
+	 * @param length 
+	 * @return returns the generated mask for crossover.
+	 */
 	public int[] mascara(int length){
 		int[] mascara = new int[length];
 		for (int i = 0; i < mascara.length; i++) {
@@ -24,6 +32,13 @@ public class UniformCrossover extends Crossover {
 	}	
     
 	@Override
+	/**
+	 * crossover - applies uniform crossover strategy.
+	 * @param father1 
+	 * @param father2 
+	 * @param PC 
+	 * @return returns the offspring state after crossover.
+	 */
 	public State crossover(State father1, State father2, double PC) {
 		Object value;
 		State state = (State) father1.getCopy();

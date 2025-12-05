@@ -11,12 +11,23 @@ import metaheurictics.strategy.Strategy;
 
 import problem.definition.State;
 
+/**
+ * AIOMutation - applies the AIOMutation to the state.
+ */
 public class AIOMutation extends Mutation {
-    
-    
+
+	/**
+	 * path - stores the path of the TSP problem.
+	 */
 	public static final List<Object> path = Collections.synchronizedList(new ArrayList<Object>());
 
 	@Override
+	/**
+	 * mutation - applies the mutation to the state.
+	 * @param state 
+	 * @param PM 
+	 * @return 
+	 */
 	public State mutation(State state, double PM) {
 		// TODO Auto-generated method stub
 		int key = Strategy.getStrategy().getProblem().getCodification().getAleatoryKey(); //seleccionar aleatoriamente una ciudad
@@ -48,6 +59,10 @@ public class AIOMutation extends Mutation {
 		return state;
 	}
 	
+	/**
+	 * sortedPathValue - sorts the path values based on the state.
+	 * @param state 
+	 */
 	public void sortedPathValue(State state) {
 		for(int k = 0; k < state.getCode().size(); k++){
 			path.add( state.getCode().get(k));
@@ -64,7 +79,9 @@ public class AIOMutation extends Mutation {
 		}
 	
 	}
-
+	/**
+	 * fillPath - fills the path with the variable indices.
+	 */
 	public static void fillPath() {
 		for(int k = 0; k < Strategy.getStrategy().getProblem().getCodification().getVariableCount(); k++){
 			path.add(k);

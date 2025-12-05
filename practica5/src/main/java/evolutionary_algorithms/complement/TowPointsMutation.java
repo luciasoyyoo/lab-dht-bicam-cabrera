@@ -3,23 +3,20 @@ package evolutionary_algorithms.complement;
 
 import metaheurictics.strategy.Strategy;
 import problem.definition.State;
+/**
+ * TowPointsMutation - applies two-points mutation.
+ */
 public class TowPointsMutation extends Mutation {
 
-	/*@Override
-	public ProblemState mutation(SortedMap<Object, Object> newind, double PM) {
-		
-		int pos1 = (int) (Math.random() * (int)Problem.countvariable);
-		int pos2 = (int) (Math.random() * (int)Problem.countvariable);
-		
-		Object value1 = (Integer)(newind.get("x" + pos1));
-		Object value2 = (Integer)(newind.get("x" + pos2));
-		newind.put("x" + pos1, value2);
-		newind.put("x" + pos2, value1);
-	
-		return newind;
-	}*/
+	// legacy ProblemState-based mutation removed: use State-based mutation below
 
 	@Override
+	/**
+	 * mutation - applies two-points mutation.
+	 * @param newind 
+	 * @param PM 
+	 * @return returns the mutated state
+	 */
 	public State mutation(State newind, double PM) {
 		Object key1 = Strategy.getStrategy().getProblem().getCodification().getAleatoryKey();
 		Object key2 = Strategy.getStrategy().getProblem().getCodification().getAleatoryKey();
