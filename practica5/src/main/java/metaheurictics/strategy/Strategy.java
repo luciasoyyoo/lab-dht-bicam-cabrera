@@ -27,6 +27,9 @@ import metaheuristics.generators.MultiGenerator;
 import metaheuristics.generators.ParticleSwarmOptimization;
 import metaheuristics.generators.RandomSearch;
 
+/**
+ * Strategy - 
+ */
 public class Strategy {
 
 	private static Strategy strategy = null;
@@ -64,10 +67,16 @@ public class Strategy {
 	private int periodo; //contador para controlar el periodo que esta guardando
 
 
+	/**
+	 * Strategy - method constructor of Strategy singleton
+	 */
 	private Strategy(){
 		super();
 	}
-
+	/**
+	 * getStrategy - getter of Strategy singleton instance
+	 * @return Strategy instance
+	 */
 	public static Strategy getStrategy() {
 		if (strategy == null) {
 			strategy = new Strategy();
@@ -75,6 +84,13 @@ public class Strategy {
 		return strategy;
 	}
 
+	/**
+	 * executeStrategy - method to execute the strategy.
+	 * @param countmaxIterations 
+	 * @param countIterationsChange 
+	 * @param operatornumber 
+	 * @param generatorType 
+	 */
 	public void executeStrategy (int countmaxIterations, int countIterationsChange, int operatornumber, GeneratorType generatorType) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException{
 		// si se quiere calcular el tiempo de ejecucion del un algoritmo
 		if(calculateTime == true){
@@ -120,6 +136,10 @@ public class Strategy {
 				final java.lang.reflect.Method cloneMethod = generator.getClass().getDeclaredMethod("clone");
 				// Grant privileged permission for reflective access to non-public clone()
 				AccessController.doPrivileged(new PrivilegedAction<Void>() {
+					/**
+					 * run - method to grant privileged permission for reflective access to non-public clone()
+					 * @return 
+					 */
 					public Void run() {
 						cloneMethod.setAccessible(true);
 						return null;
@@ -263,10 +283,7 @@ public class Strategy {
 	
 	public void updateCountGender(){ // actualizar la cantidad de mejoras y cantidad de veces que se uso un generador en un periodo dado
 		for (int i = 0; i < MultiGenerator.getListGenerators().length; i++) {
-			if(!MultiGenerator.getListGenerators()[i].getType().equals(GeneratorType.MultiGenerator) ){/*&& !MultiGenerator.getListGenerators()[i].getType().equals(GeneratorType.MultiCaseSimulatedAnnealing) &&
-				!MultiGenerator.getListGenerators()[i].getType().equals(GeneratorType.MultiobjectiveHillClimbingDistance) && !MultiGenerator.getListGenerators()[i].getType().equals(GeneratorType.MultiobjectiveHillClimbingRestart) &&
-				!MultiGenerator.getListGenerators()[i].getType().equals(GeneratorType.MultiobjectiveStochasticHillClimbing) && !MultiGenerator.getListGenerators()[i].getType().equals(GeneratorType.MultiobjectiveTabuSearch) && 
-				!MultiGenerator.getListGenerators()[i].getType().equals(GeneratorType.ParticleSwarmOptimization)*/
+			if(!MultiGenerator.getListGenerators()[i].getType().equals(GeneratorType.MultiGenerator) ){
 				MultiGenerator.getListGenerators()[i].getListCountGender()[periodo] = MultiGenerator.getListGenerators()[i].countGender + MultiGenerator.getListGenerators()[i].getListCountGender()[periodo];
 				MultiGenerator.getListGenerators()[i].getListCountBetterGender()[periodo] = MultiGenerator.getListGenerators()[i].countBetterGender + MultiGenerator.getListGenerators()[i].getListCountBetterGender()[periodo];
 				MultiGenerator.getListGenerators()[i].countGender = 0;
@@ -275,6 +292,9 @@ public class Strategy {
 		}
 	}
 	
+	/**
+	 * updateWeight - method to update the weight of the generators.
+	 */
 	public void updateWeight(){
 		for (int i = 0; i < MultiGenerator.getListGenerators().length; i++) {
 			if(!MultiGenerator.getListGenerators()[i].getType().equals(GeneratorType.MultiGenerator)){
@@ -304,51 +324,100 @@ public class Strategy {
 		}
 	}
 
+	/**
+	 * newGenerator - method to create a new generator.
+	 * @param Generatortype 
+	 * @return return a Generator
+	 */
 	public Generator newGenerator(GeneratorType Generatortype) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
 		ifFactoryGenerator = new FactoryGenerator();
 		Generator generator = ifFactoryGenerator.createGenerator(Generatortype);
 		return generator;
 	}
 
+	/**
+	 * getBestState - method to get the best state.
+	 * @return return the best state
+	 */
 	public State getBestState() {
 		return bestState;
 	}
 
+	/**
+	 * setBestState - method to set the best state.
+	 * @param besState 
+	 */
 	public void setBestState(State besState) {
 		this.bestState = besState;
 	}
+	/**
+	 * getStopexecute - method to get the stop execute.
+	 * @return return the stop execute
+	 */
 	public StopExecute getStopexecute() {
 		return stopexecute;
 	}
 
+	/**
+	 * getCountMax - method to get the maximum count.
+	 * @return return the maximum count
+	 */
 	public int getCountMax() {
 		return countMax;
 	}
 
+	/**
+	 * setCountMax - method to set the maximum count.
+	 * @param countMax 
+	 */
 	public void setCountMax(int countMax) {
 		this.countMax = countMax;
 	}
 
+	/**
+	 * setStopexecute - method to set the stop execute.
+	 * @param stopexecute 
+	 */
 	public void setStopexecute(StopExecute stopexecute) {
 		this.stopexecute = stopexecute;
 	}
 
+	/**
+	 * getUpdateparameter - method to get the update parameter.
+	 * @return return the update parameter
+	 */
 	public UpdateParameter getUpdateparameter() {
 		return updateparameter;
 	}
 
+	/**
+	 * setUpdateparameter - method to set the update parameter.
+	 * @param updateparameter 
+	 */
 	public void setUpdateparameter(UpdateParameter updateparameter) {
 		this.updateparameter = updateparameter;
 	}
 
+	/**
+	 * getProblem - method to get the problem.
+	 * @return return the problem
+	 */
 	public Problem getProblem() {
 		return problem;
 	}
 
+	/**
+	 * setProblem - method to set the problem.
+	 * @param problem 
+	 */
 	public void setProblem(Problem problem) {
 		this.problem = problem;
 	}
 
+	/**
+	 * getListKey - method to get the list of keys.
+	 * @return return the list of keys
+	 */
 	public ArrayList<String> getListKey(){
 		ArrayList<String> listKeys = new ArrayList<String>();
 		String key = mapGenerators.keySet().toString();
@@ -363,6 +432,9 @@ public class Strategy {
 		return listKeys;
 	}
 
+	/**
+	 * initializeGenerators - method to initialize the generators.
+	 */
 	public void initializeGenerators()throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
 		List<GeneratorType>	listType = new ArrayList<GeneratorType>();
 		this.mapGenerators = new TreeMap<GeneratorType, Generator>();
@@ -373,11 +445,12 @@ public class Strategy {
 		for (int i = 0; i < listType.size(); i++) {
 			Generator generator = newGenerator(listType.get(i));
 			mapGenerators.put(listType.get(i), generator);
-			//ExecuteGeneratorParall.getExecuteGeneratorParall().listGenerators.add(generator);
-//			MultiGenerator.getListGenerators()[i] = generator;
 		}
 	}
 
+	/**
+	 * initialize - method to initialize the generators.
+	 */
 	public void initialize()throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
 		List<GeneratorType>	listType = new ArrayList<GeneratorType>();
 		this.mapGenerators = new TreeMap<GeneratorType, Generator>();
@@ -391,10 +464,18 @@ public class Strategy {
 		}
 	}
 
+	/**
+	 * getCountCurrent - method to get the current count.
+	 * @return return the current count
+	 */
 	public int getCountCurrent() {
 		return countCurrent;
 	}
 
+	/**
+	 * setCountCurrent - method to set the current count.
+	 * @param countCurrent 
+	 */
 	public void setCountCurrent(int countCurrent) {
 		this.countCurrent = countCurrent;
 	}
@@ -404,22 +485,37 @@ public class Strategy {
 		RandomSearch.listStateReference.clear();
 	}
 	
+	/**
+	 * getThreshold - method to get the threshold.
+	 * @return return the threshold
+	 */
 	public double getThreshold() {
 		return threshold;
 	}
 
+	/**
+	 * setThreshold - method to set the threshold.
+	 * @param threshold 
+	 */
 	public void setThreshold(double threshold) {
 		this.threshold = threshold;
 	}
 	
+	/**
+	 * calculateOffLinePerformance - method to calculate the offline performance.
+	 * @param sumMax 
+	 * @param countOff 
+	 */
 	public void calculateOffLinePerformance(float sumMax, int countOff){
 		float off = sumMax / countPeriodChange;
 		listOfflineError[countOff] = off;
 	}
 	
+	/**
+	 * updateRef - method to update the reference.
+	 * @param generatorType 
+	 */
 	public void updateRef(GeneratorType generatorType){
-//		State ref = problem.getOperator().newRef(problem.getRef());
-//		problem.setRef(ref);
 		if(generatorType.equals(GeneratorType.MultiGenerator)){
 			updateRefMultiG();
 			bestState = MultiGenerator.listStateReference.get( MultiGenerator.listStateReference.size() - 1);
@@ -429,23 +525,22 @@ public class Strategy {
 			bestState = generator.getReference();
 		}
 	}
+	/**
+	 * updateRefMultiG - method to update the reference for multi-generators.
+	 */
 	public void updateRefMultiG() {
 		for (int i = 0; i < MultiGenerator.getListGenerators().length; i++) {
 			updateRefGenerator(MultiGenerator.getListGenerators()[i]);
 		}
 	}
+	/**
+	 * updateRefGenerator - method to update the reference for generators.
+	 * @param generator 
+	 */
 	public void updateRefGenerator(Generator generator) {
 		if(generator.getType().equals(GeneratorType.HillClimbing) || generator.getType().equals(GeneratorType.TabuSearch) || generator.getType().equals(GeneratorType.RandomSearch) || generator.getType().equals(GeneratorType.SimulatedAnnealing)){
 			double evaluation = getProblem().getFunction().get(0).Evaluation(generator.getReference());
 			generator.getReference().getEvaluation().set(0, evaluation);
-//			State state = new State();
-//			state.setEvaluation(evaluation);
-//			state.setCode(new ArrayList<Object>(generator.getReference().getCode()));
-//			state.setTypeGenerator(generator.getType());
-//			generator.setInitialReference(state);
-			/*generator.getReferenceList().remove(generator.getReferenceList().size() - 1);
-			generator.setInitialReference(state);
-			generator.getReferenceList().add(state);*/
 		}
 		if(generator.getType().equals(GeneratorType.GeneticAlgorithm) || generator.getType().equals(GeneratorType.DistributionEstimationAlgorithm) || generator.getType().equals(GeneratorType.EvolutionStrategies)){
 			for (int j = 0; j < generator.getReferenceList().size(); j++) {
