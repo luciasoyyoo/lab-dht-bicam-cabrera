@@ -9,6 +9,12 @@ import java.util.concurrent.ThreadLocalRandom;
 
 import problem.definition.State;
 
+/**
+ * RandomCandidate - select a neighbor at random.
+ *
+ * @brief Returns a uniformly random neighbor from the provided list. Uses
+ *        ThreadLocalRandom for thread-safe, efficient random number generation.
+ */
 public class RandomCandidate extends SearchCandidate {
 	/**
      * Uses ThreadLocalRandom for algorithmic (non-cryptographic) randomness.
@@ -18,6 +24,12 @@ public class RandomCandidate extends SearchCandidate {
      */
     @SuppressWarnings("squid:S2245")
 	@Override
+	/**
+	 * Choose a random neighbor from the list.
+	 *
+	 * @param listNeighborhood list of neighbor states
+	 * @return a randomly selected State from the list
+	 */
 	public State stateSearch(List<State> listNeighborhood) {
 		int size = listNeighborhood.size();
 		int pos = (size > 0) ? ThreadLocalRandom.current().nextInt(size) : 0;

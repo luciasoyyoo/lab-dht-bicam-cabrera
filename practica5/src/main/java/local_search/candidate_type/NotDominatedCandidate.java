@@ -8,9 +8,22 @@ import metaheurictics.strategy.Strategy;
 
 import problem.definition.State;
 
+/**
+ * NotDominatedCandidate - select a non-dominated neighbor for multi-objective.
+ *
+ * @brief Chooses a neighbor that is not dominated by others in the neighborhood
+ *        using the Domination comparator. Intended for multi-objective problems.
+ */
 public class NotDominatedCandidate extends SearchCandidate {
 
 	@Override
+	/**
+	 * Select a non-dominated state from the neighborhood.
+	 *
+	 * @param listNeighborhood list of neighbor states
+	 * @return a non-dominated State chosen from the list (or the first if only one)
+	 * @throws ReflectiveOperationException when evaluation or reflective calls fail
+	 */
 	public State stateSearch(List<State> listNeighborhood) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
 		State state = new State();
 		State stateA = listNeighborhood.get(0);

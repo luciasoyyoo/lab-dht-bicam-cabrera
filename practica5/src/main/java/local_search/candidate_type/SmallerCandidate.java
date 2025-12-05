@@ -10,9 +10,22 @@ import java.util.List;
 
 import problem.definition.State;
 
+/**
+ * SmallerCandidate - choose the neighbor with the smallest evaluation.
+ *
+ * @brief Scans the provided neighborhood and returns the state with the
+ *        smallest primary objective value.
+ */
 public class SmallerCandidate extends SearchCandidate {
 
 	@Override
+	/**
+	 * Select the smallest neighbor from the list.
+	 *
+	 * @param listNeighborhood list of neighbor states
+	 * @return the neighbor with the smallest evaluation (primary objective)
+	 * @throws ReflectiveOperationException propagated from potential evaluations
+	 */
 	public State stateSearch(List<State> listNeighborhood) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
 		State stateSmaller = null;
 		if(listNeighborhood.size() > 1){

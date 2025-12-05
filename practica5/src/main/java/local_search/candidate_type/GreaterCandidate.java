@@ -11,6 +11,13 @@ import java.util.concurrent.ThreadLocalRandom;
 
 import problem.definition.State;
 
+/**
+ * GreaterCandidate - choose the neighbor with the greatest evaluation.
+ *
+ * @brief Scans the provided neighborhood and returns the state with the
+ *        highest primary objective value. If multiple candidates tie, a
+ *        random choice among them is returned.
+ */
 public class GreaterCandidate extends SearchCandidate {
     
 	/**
@@ -20,6 +27,13 @@ public class GreaterCandidate extends SearchCandidate {
 	 */
 	@SuppressWarnings("squid:S2245")
 	@Override
+	/**
+	 * Select the greatest neighbor from the list.
+	 *
+	 * @param listNeighborhood list of neighbor states
+	 * @return the neighbor with the greatest evaluation (primary objective)
+	 * @throws ReflectiveOperationException propagated from potential evaluations
+	 */
 	public State stateSearch(List<State> listNeighborhood) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
 		State stateGreater = null;
 		if(listNeighborhood.size() > 1){
