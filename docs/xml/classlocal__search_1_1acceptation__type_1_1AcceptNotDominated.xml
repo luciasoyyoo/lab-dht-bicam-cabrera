@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="es">
+  <compounddef id="classlocal__search_1_1acceptation__type_1_1AcceptNotDominated" kind="class" language="Java" prot="public">
+    <compoundname>local_search::acceptation_type::AcceptNotDominated</compoundname>
+    <basecompoundref refid="classlocal__search_1_1acceptation__type_1_1AcceptableCandidate" prot="public" virt="non-virtual">local_search.acceptation_type.AcceptableCandidate</basecompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classlocal__search_1_1acceptation__type_1_1AcceptNotDominated_1a05fe7b0385dfafe7701f6a4e9b2b80d2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Boolean</type>
+        <definition>Boolean local_search.acceptation_type.AcceptNotDominated.acceptCandidate</definition>
+        <argsstring>(State stateCurrent, State stateCandidate)</argsstring>
+        <name>acceptCandidate</name>
+        <qualifiedname>local_search.acceptation_type.AcceptNotDominated.acceptCandidate</qualifiedname>
+        <reimplements refid="classlocal__search_1_1acceptation__type_1_1AcceptableCandidate_1aa9e62e1d2d213c3828d2491b506d0592">acceptCandidate</reimplements>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>stateCurrent</declname>
+        </param>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>stateCandidate</declname>
+        </param>
+        <briefdescription>
+<para>Evaluate and accept a candidate based on Pareto dominance against the stored set of non-dominated solutions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stateCurrent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the current state </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stateCandidate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the candidate state </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if candidate should be accepted (becomes part of Pareto set), false otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/local_search/acceptation_type/AcceptNotDominated.java" line="28" column="16" bodyfile="practica5/src/main/java/local_search/acceptation_type/AcceptNotDominated.java" bodystart="28" bodyend="50"/>
+        <references refid="classproblem_1_1definition_1_1State_1a113f6883a1f6bd20eea2da09a0adc5c3" compoundref="State_8java" startline="142" endline="154">problem.definition.State.clone</references>
+        <references refid="classlocal__search_1_1acceptation__type_1_1Dominance_1a0dafd58be8365a22956f59417841a2d8" compoundref="Dominance_8java" startline="87" endline="118">local_search.acceptation_type.Dominance.dominance</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1ad2641e12c52292930364de6655333aa8" compoundref="Strategy_8java" startline="80" endline="85">metaheurictics.strategy.Strategy.getStrategy</references>
+        <references refid="classlocal__search_1_1acceptation__type_1_1Dominance_1ad61c0e3cb6cc4036419cb36758cf3814" compoundref="Dominance_8java" startline="33" endline="75">local_search.acceptation_type.Dominance.listDominance</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1aa572e7d90e24bae70ea47a31fee298f4" compoundref="Strategy_8java" startline="49">metaheurictics.strategy.Strategy.listRefPoblacFinal</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="classlocal__search_1_1acceptation__type_1_1AcceptNotDominated" kindref="compound">AcceptNotDominated</ref> - Accept candidate if it is not dominated by current non-dominated set. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Multi-objective acceptation strategy that updates and consults a Pareto front (listRefPoblacFinal) to decide acceptance. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>local_search.acceptation_type.AcceptNotDominated</label>
+        <link refid="classlocal__search_1_1acceptation__type_1_1AcceptNotDominated"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>local_search.acceptation_type.AcceptableCandidate</label>
+        <link refid="classlocal__search_1_1acceptation__type_1_1AcceptableCandidate"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>local_search.acceptation_type.AcceptNotDominated</label>
+        <link refid="classlocal__search_1_1acceptation__type_1_1AcceptNotDominated"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>local_search.acceptation_type.AcceptableCandidate</label>
+        <link refid="classlocal__search_1_1acceptation__type_1_1AcceptableCandidate"/>
+      </node>
+    </collaborationgraph>
+    <location file="practica5/src/main/java/local_search/acceptation_type/AcceptNotDominated.java" line="16" column="7" bodyfile="practica5/src/main/java/local_search/acceptation_type/AcceptNotDominated.java" bodystart="16" bodyend="52"/>
+    <listofallmembers>
+      <member refid="classlocal__search_1_1acceptation__type_1_1AcceptNotDominated_1a05fe7b0385dfafe7701f6a4e9b2b80d2" prot="public" virt="non-virtual"><scope>local_search::acceptation_type::AcceptNotDominated</scope><name>acceptCandidate</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

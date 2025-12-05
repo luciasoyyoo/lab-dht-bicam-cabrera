@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="es">
+  <compounddef id="classevolutionary__algorithms_1_1complement_1_1OnePointMutation" kind="class" language="Java" prot="public">
+    <compoundname>evolutionary_algorithms::complement::OnePointMutation</compoundname>
+    <basecompoundref refid="classevolutionary__algorithms_1_1complement_1_1Mutation" prot="public" virt="non-virtual">evolutionary_algorithms.complement.Mutation</basecompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classevolutionary__algorithms_1_1complement_1_1OnePointMutation_1a58178e28b21fd4559c38db00003e1bb0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+        <definition>State evolutionary_algorithms.complement.OnePointMutation.mutation</definition>
+        <argsstring>(State state, double PM)</argsstring>
+        <name>mutation</name>
+        <qualifiedname>evolutionary_algorithms.complement.OnePointMutation.mutation</qualifiedname>
+        <reimplements refid="classevolutionary__algorithms_1_1complement_1_1Mutation_1a027da26e5a49d8ca908b03acffebb226">mutation</reimplements>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>PM</declname>
+        </param>
+        <briefdescription>
+<para>Uses ThreadLocalRandom for algorithmic (non-cryptographic) randomness. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This RNG is used to decide whether a mutation occurs in the evolutionary algorithm and is not used for security-sensitive purposes. Suppress Sonar security hotspot S2245 for this usage. mutation - applies the mutation to the state. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>PM</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns the mutated state </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/evolutionary_algorithms/complement/OnePointMutation.java" line="28" column="18" bodyfile="practica5/src/main/java/evolutionary_algorithms/complement/OnePointMutation.java" bodystart="28" bodyend="37"/>
+        <references refid="classproblem_1_1definition_1_1Codification_1a01a0c8247d76d4c4c32c7f3e51c2d5f8">problem.definition.Codification.getAleatoryKey</references>
+        <references refid="classproblem_1_1definition_1_1State_1a2e75b6f2bedb2107478ecd1e8e681418" compoundref="State_8java" startline="68" endline="70">problem.definition.State.getCode</references>
+        <references refid="classproblem_1_1definition_1_1Problem_1a7da2aa6b2a6f00f6f3993e6fdc43e34b" compoundref="Problem_8java" startline="114" endline="116">problem.definition.Problem.getCodification</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1a4bc6bd95db71e14b1f48c1bfc85f1305" compoundref="Strategy_8java" startline="405" endline="407">metaheurictics.strategy.Strategy.getProblem</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1ad2641e12c52292930364de6655333aa8" compoundref="Strategy_8java" startline="80" endline="85">metaheurictics.strategy.Strategy.getStrategy</references>
+        <references refid="classproblem_1_1definition_1_1Codification_1ad5875a47b3e863653ede3bb7feae524f">problem.definition.Codification.getVariableAleatoryValue</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="classevolutionary__algorithms_1_1complement_1_1OnePointMutation" kindref="compound">OnePointMutation</ref> - applies the one-point mutation operator. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>evolutionary_algorithms.complement.OnePointMutation</label>
+        <link refid="classevolutionary__algorithms_1_1complement_1_1OnePointMutation"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>evolutionary_algorithms.complement.Mutation</label>
+        <link refid="classevolutionary__algorithms_1_1complement_1_1Mutation"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>evolutionary_algorithms.complement.OnePointMutation</label>
+        <link refid="classevolutionary__algorithms_1_1complement_1_1OnePointMutation"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>evolutionary_algorithms.complement.Mutation</label>
+        <link refid="classevolutionary__algorithms_1_1complement_1_1Mutation"/>
+      </node>
+    </collaborationgraph>
+    <location file="practica5/src/main/java/evolutionary_algorithms/complement/OnePointMutation.java" line="11" column="7" bodyfile="practica5/src/main/java/evolutionary_algorithms/complement/OnePointMutation.java" bodystart="11" bodyend="38"/>
+    <listofallmembers>
+      <member refid="classevolutionary__algorithms_1_1complement_1_1OnePointMutation_1a58178e28b21fd4559c38db00003e1bb0" prot="public" virt="non-virtual"><scope>evolutionary_algorithms::complement::OnePointMutation</scope><name>mutation</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

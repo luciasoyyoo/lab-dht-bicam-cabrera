@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="es">
+  <compounddef id="classproblem_1_1definition_1_1Operator" kind="class" language="Java" prot="public" abstract="yes">
+    <compoundname>problem::definition::Operator</compoundname>
+    <derivedcompoundref refid="classproblem__operators_1_1MutationOperator" prot="public" virt="non-virtual">problem_operators.MutationOperator</derivedcompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classproblem_1_1definition_1_1Operator_1a5b6625843e73d938f9235985bf966b34" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>abstract List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+        <definition>abstract List&lt; State &gt; problem.definition.Operator.generatedNewState</definition>
+        <argsstring>(State stateCurrent, Integer operatornumber)</argsstring>
+        <name>generatedNewState</name>
+        <qualifiedname>problem.definition.Operator.generatedNewState</qualifiedname>
+        <reimplementedby refid="classproblem__operators_1_1MutationOperator_1adc581cf1337e53458e6695aec007028b">generatedNewState</reimplementedby>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>stateCurrent</declname>
+        </param>
+        <param>
+          <type>Integer</type>
+          <declname>operatornumber</declname>
+        </param>
+        <briefdescription>
+<para>Generar nuevos estados a partir de un estado dado. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stateCurrent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>estado base </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>operatornumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>índice de operador (uso dependiente de la implementación) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>lista de estados generados </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/problem/definition/Operator.java" line="20" column="22"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1HillClimbing_1abcb16309481537b632ff4ece07534f97" compoundref="HillClimbing_8java" startline="72" endline="77">metaheuristics.generators.HillClimbing.generate</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a03effb92915e2642b7d87763987a43ae" compoundref="HillClimbingRestart_8java" startline="73" endline="85">metaheuristics.generators.HillClimbingRestart.generate</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1af2ac27e167ad69093379e30a9dcf1955" compoundref="LimitThreshold_8java" startline="93" endline="97">metaheuristics.generators.LimitThreshold.generate</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_1a79d89f831f827fff6db6e9757c88f9a0" compoundref="MultiCaseSimulatedAnnealing_8java" startline="90" endline="95">metaheuristics.generators.MultiCaseSimulatedAnnealing.generate</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a10e8509749f9e10954b1ca7174e00103" compoundref="MultiobjectiveHillClimbingDistance_8java" startline="68" endline="72">metaheuristics.generators.MultiobjectiveHillClimbingDistance.generate</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingRestart_1aab0d9cf35c21f476056c9167679b565f" compoundref="MultiobjectiveHillClimbingRestart_8java" startline="71" endline="75">metaheuristics.generators.MultiobjectiveHillClimbingRestart.generate</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiobjectiveStochasticHillClimbing_1a4bdaba8339058a9132146ca79d88d19d" compoundref="MultiobjectiveStochasticHillClimbing_8java" startline="55" endline="59">metaheuristics.generators.MultiobjectiveStochasticHillClimbing.generate</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a719352455b19c8fc2244a4d7387db236" compoundref="MultiobjectiveTabuSearch_8java" startline="91" endline="97">metaheuristics.generators.MultiobjectiveTabuSearch.generate</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a42465a5f9da3ff282afbd8cae9603274" compoundref="SimulatedAnnealing_8java" startline="118" endline="122">metaheuristics.generators.SimulatedAnnealing.generate</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1TabuSearch_1a960394b27d55ada10842a94184aa39b4" compoundref="TabuSearch_8java" startline="95" endline="99">metaheuristics.generators.TabuSearch.generate</referencedby>
+        <referencedby refid="classlocal__search_1_1candidate__type_1_1CandidateValue_1a77505d8ed443552afa435f51d0222d75" compoundref="CandidateValue_8java" startline="74" endline="97">local_search.candidate_type.CandidateValue.stateCandidate</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a35ed16f3af3c7fdcbff8165d9674cc9a" compoundref="MultiobjectiveHillClimbingDistance_8java" startline="87" endline="137">metaheuristics.generators.MultiobjectiveHillClimbingDistance.updateReference</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingRestart_1ab3716a950049b1d77c4374efd355aa14" compoundref="MultiobjectiveHillClimbingRestart_8java" startline="83" endline="133">metaheuristics.generators.MultiobjectiveHillClimbingRestart.updateReference</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classproblem_1_1definition_1_1Operator_1a08c63f0d681ef130fccdb04d24ddf181" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>abstract List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+        <definition>abstract List&lt; State &gt; problem.definition.Operator.generateRandomState</definition>
+        <argsstring>(Integer operatornumber)</argsstring>
+        <name>generateRandomState</name>
+        <qualifiedname>problem.definition.Operator.generateRandomState</qualifiedname>
+        <reimplementedby refid="classproblem__operators_1_1MutationOperator_1a0f6271c1365408220a1749db18e335d9">generateRandomState</reimplementedby>
+        <param>
+          <type>Integer</type>
+          <declname>operatornumber</declname>
+        </param>
+        <briefdescription>
+<para>Generar un conjunto de estados aleatorios. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>operatornumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>índice/semilla opcional para la generación </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>lista de estados aleatorios </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/problem/definition/Operator.java" line="28" column="22"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a03effb92915e2642b7d87763987a43ae" compoundref="HillClimbingRestart_8java" startline="73" endline="85">metaheuristics.generators.HillClimbingRestart.generate</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1RandomSearch_1ad7023836b94dd23bffd78ab7b9915551" compoundref="RandomSearch_8java" startline="66" endline="72">metaheuristics.generators.RandomSearch.generate</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a35ed16f3af3c7fdcbff8165d9674cc9a" compoundref="MultiobjectiveHillClimbingDistance_8java" startline="87" endline="137">metaheuristics.generators.MultiobjectiveHillClimbingDistance.updateReference</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingRestart_1ab3716a950049b1d77c4374efd355aa14" compoundref="MultiobjectiveHillClimbingRestart_8java" startline="83" endline="133">metaheuristics.generators.MultiobjectiveHillClimbingRestart.updateReference</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="classproblem_1_1definition_1_1Operator" kindref="compound">Operator</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Interfaz abstracta para operadores que generan nuevos estados a partir de un estado actual o que producen estados aleatorios. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>problem.definition.Operator</label>
+        <link refid="classproblem_1_1definition_1_1Operator"/>
+      </node>
+      <node id="2">
+        <label>problem_operators.MutationOperator</label>
+        <link refid="classproblem__operators_1_1MutationOperator"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>problem.definition.Operator</label>
+        <link refid="classproblem_1_1definition_1_1Operator"/>
+      </node>
+    </collaborationgraph>
+    <location file="practica5/src/main/java/problem/definition/Operator.java" line="11" column="17" bodyfile="practica5/src/main/java/problem/definition/Operator.java" bodystart="11" bodyend="30"/>
+    <listofallmembers>
+      <member refid="classproblem_1_1definition_1_1Operator_1a5b6625843e73d938f9235985bf966b34" prot="public" virt="non-virtual"><scope>problem::definition::Operator</scope><name>generatedNewState</name></member>
+      <member refid="classproblem_1_1definition_1_1Operator_1a08c63f0d681ef130fccdb04d24ddf181" prot="public" virt="non-virtual"><scope>problem::definition::Operator</scope><name>generateRandomState</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

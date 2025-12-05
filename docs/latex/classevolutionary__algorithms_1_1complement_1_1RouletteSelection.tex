@@ -1,0 +1,134 @@
+\doxysection{Referencia de la clase evolutionary\+\_\+algorithms.\+complement.\+Roulette\+Selection}
+\hypertarget{classevolutionary__algorithms_1_1complement_1_1RouletteSelection}{}\label{classevolutionary__algorithms_1_1complement_1_1RouletteSelection}\index{evolutionary\_algorithms.complement.RouletteSelection@{evolutionary\_algorithms.complement.RouletteSelection}}
+
+
+\doxylink{classevolutionary__algorithms_1_1complement_1_1RouletteSelection}{Roulette\+Selection} -\/ applies roulette selection to choose parents.  
+
+
+
+
+Diagrama de herencia de evolutionary\+\_\+algorithms.\+complement.\+Roulette\+Selection
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=277pt]{classevolutionary__algorithms_1_1complement_1_1RouletteSelection__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagrama de colaboración de evolutionary\+\_\+algorithms.\+complement.\+Roulette\+Selection\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=277pt]{classevolutionary__algorithms_1_1complement_1_1RouletteSelection__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1RouletteSelection_ace4f2faee78f128d104fedb0cf3963fd}{selection}} (List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ list\+State, int truncation)
+\begin{DoxyCompactList}\small\item\em selection -\/ applies roulette selection to choose parents. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+\doxylink{classevolutionary__algorithms_1_1complement_1_1RouletteSelection}{Roulette\+Selection} -\/ applies roulette selection to choose parents. 
+
+Definición en la línea \mbox{\hyperlink{RouletteSelection_8java_source_l00014}{14}} del archivo \mbox{\hyperlink{RouletteSelection_8java_source}{Roulette\+Selection.\+java}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{classevolutionary__algorithms_1_1complement_1_1RouletteSelection_doc-func-members}
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{classevolutionary__algorithms_1_1complement_1_1RouletteSelection_ace4f2faee78f128d104fedb0cf3963fd}\index{evolutionary\_algorithms.complement.RouletteSelection@{evolutionary\_algorithms.complement.RouletteSelection}!selection@{selection}}
+\index{selection@{selection}!evolutionary\_algorithms.complement.RouletteSelection@{evolutionary\_algorithms.complement.RouletteSelection}}
+\doxysubsubsection{\texorpdfstring{selection()}{selection()}}
+{\footnotesize\ttfamily \label{classevolutionary__algorithms_1_1complement_1_1RouletteSelection_ace4f2faee78f128d104fedb0cf3963fd} 
+List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ evolutionary\+\_\+algorithms.\+complement.\+Roulette\+Selection.\+selection (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$}]{list\+State}{, }\item[{int}]{truncation}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+selection -\/ applies roulette selection to choose parents. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em list\+State} & \\
+\hline
+{\em truncation} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1FatherSelection_aa6e6bd01ac639141a67815fb65f7c831}{evolutionary\+\_\+algorithms.\+complement.\+Father\+Selection}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{RouletteSelection_8java_source_l00023}{23}} del archivo \mbox{\hyperlink{RouletteSelection_8java_source}{Roulette\+Selection.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ totalWeight\ =\ 0;}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ listState.size();\ i++)\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ totalWeight\ =\ (float)\ (listState.get(i).getEvaluation().get(0)\ +\ totalWeight);}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ List<Float>\ listProb\ =\ \textcolor{keyword}{new}\ ArrayList<Float>();}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ listState.size();\ i++)\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ probF\ =\ (float)\ (listState.get(i).getEvaluation().get(0)\ /\ totalWeight);}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ listProb.add(probF);}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ List<LimitRoulette>\ listLimit\ =\ \textcolor{keyword}{new}\ ArrayList<LimitRoulette>();}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ limitHigh\ =\ 0;}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ limitLow\ =\ 0;}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ listProb.size();\ i++)\ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ LimitRoulette\ limitRoulette\ =\ \textcolor{keyword}{new}\ LimitRoulette();}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ limitHigh\ =\ listProb.get(i)\ +\ limitHigh;}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ limitRoulette.setLimitHigh(limitHigh);}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ limitRoulette.setLimitLow(limitLow);}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ limitLow\ =\ limitHigh;}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ limitRoulette.setGenerator(listGenerators.get(i));}}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ listLimit.add(limitRoulette);}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ List<State>\ fatherList\ =\ \textcolor{keyword}{new}\ ArrayList<State>();}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ listState.size();\ j++)\ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Uses\ ThreadLocalRandom\ for\ algorithmic\ (non-\/cryptographic)\ randomness.}}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ This\ RNG\ decides\ selection\ in\ the\ evolutionary\ algorithm\ and\ is\ not}}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ used\ for\ security-\/sensitive\ purposes.\ Suppress\ Sonar\ hotspot\ S2245.}}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ @SuppressWarnings(\textcolor{stringliteral}{"{}squid:S2245"{}})}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ float\ numbAleatory\ =\ (\textcolor{keywordtype}{float})\ ThreadLocalRandom.current().nextDouble();}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{boolean}\ find\ =\ false;}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ i\ =\ 0;}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ while\ ((find\ ==\ false)\ \&\&\ (i\ <\ listLimit.size()))\{}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}((listLimit.get(i).getLimitLow()\ <=\ numbAleatory)\ \&\&\ (numbAleatory\ <=\ listLimit.get(i).getLimitHigh()))\{}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ find\ =\ true;}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ fatherList.add(listState.get(i));}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ i++;}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ fatherList;}
+\DoxyCodeLine{00063\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{LimitRoulette_8java_source_l00037}{metaheuristics.\+generators.\+Limit\+Roulette.\+set\+Limit\+High()}} y \mbox{\hyperlink{LimitRoulette_8java_source_l00051}{metaheuristics.\+generators.\+Limit\+Roulette.\+set\+Limit\+Low()}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classevolutionary__algorithms_1_1complement_1_1RouletteSelection_ace4f2faee78f128d104fedb0cf3963fd_cgraph}
+\end{center}
+\end{figure}
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{RouletteSelection_8java}{Roulette\+Selection.\+java}}\end{DoxyCompactItemize}

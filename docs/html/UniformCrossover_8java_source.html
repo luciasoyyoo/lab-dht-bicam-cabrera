@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>practica5: Archivo de código fuente UniformCrossover.java</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">practica5
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('UniformCrossover_8java_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">UniformCrossover.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="UniformCrossover_8java.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">package </span>evolutionary_algorithms.complement;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">import</span> metaheurictics.strategy.Strategy;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">import</span> java.util.concurrent.ThreadLocalRandom;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">import</span> problem.definition.State;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span></div>
+<div class="foldopen" id="foldopen00011" data-start="{" data-end="};">
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="classevolutionary__algorithms_1_1complement_1_1UniformCrossover.html">   11</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classevolutionary__algorithms_1_1complement_1_1UniformCrossover.html">UniformCrossover</a> <span class="keyword">extends</span> <a class="code hl_class" href="classevolutionary__algorithms_1_1complement_1_1Crossover.html">Crossover</a> {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    @SuppressWarnings(<span class="stringliteral">&quot;squid:S2245&quot;</span>)</div>
+<div class="foldopen" id="foldopen00025" data-start="{" data-end="}">
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classevolutionary__algorithms_1_1complement_1_1UniformCrossover.html#aa99dc616ac6ca6cd4ee926b275736cb0">   25</a></span>    public <span class="keywordtype">int</span>[] <a class="code hl_function" href="classevolutionary__algorithms_1_1complement_1_1UniformCrossover.html#aa99dc616ac6ca6cd4ee926b275736cb0">mascara</a>(<span class="keywordtype">int</span> length){</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keywordtype">int</span>[] <a class="code hl_function" href="classevolutionary__algorithms_1_1complement_1_1UniformCrossover.html#aa99dc616ac6ca6cd4ee926b275736cb0">mascara</a> = <span class="keyword">new</span> <span class="keywordtype">int</span>[length];</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_function" href="classevolutionary__algorithms_1_1complement_1_1UniformCrossover.html#aa99dc616ac6ca6cd4ee926b275736cb0">mascara</a>.length; i++) {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            <span class="keywordtype">int</span> value = ThreadLocalRandom.current().nextInt(2);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            <a class="code hl_function" href="classevolutionary__algorithms_1_1complement_1_1UniformCrossover.html#aa99dc616ac6ca6cd4ee926b275736cb0">mascara</a>[i] = value;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        }</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classevolutionary__algorithms_1_1complement_1_1UniformCrossover.html#aa99dc616ac6ca6cd4ee926b275736cb0">mascara</a>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    }   </div>
+</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    @Override</div>
+<div class="foldopen" id="foldopen00042" data-start="{" data-end="}">
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="classevolutionary__algorithms_1_1complement_1_1UniformCrossover.html#a54eb36b06a9e409253360eb9cd76f774">   42</a></span>    <span class="keyword">public</span> <a class="code hl_class" href="classproblem_1_1definition_1_1State.html">State</a> <a class="code hl_function" href="classevolutionary__algorithms_1_1complement_1_1UniformCrossover.html#a54eb36b06a9e409253360eb9cd76f774">crossover</a>(<a class="code hl_class" href="classproblem_1_1definition_1_1State.html">State</a> father1, <a class="code hl_class" href="classproblem_1_1definition_1_1State.html">State</a> father2, <span class="keywordtype">double</span> PC) {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        Object value;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <a class="code hl_class" href="classproblem_1_1definition_1_1State.html">State</a> state = (<a class="code hl_class" href="classproblem_1_1definition_1_1State.html">State</a>) father1.<a class="code hl_function" href="classproblem_1_1definition_1_1State.html#aaf14fa8466c945ff5e134028c6c259f8">getCopy</a>();</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keywordtype">int</span>[] <a class="code hl_function" href="classevolutionary__algorithms_1_1complement_1_1UniformCrossover.html#aa99dc616ac6ca6cd4ee926b275736cb0">mascara</a> = <a class="code hl_function" href="classevolutionary__algorithms_1_1complement_1_1UniformCrossover.html#aa99dc616ac6ca6cd4ee926b275736cb0">mascara</a>(father1.<a class="code hl_function" href="classproblem_1_1definition_1_1State.html#a2e75b6f2bedb2107478ecd1e8e681418">getCode</a>().size());</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; <a class="code hl_function" href="classevolutionary__algorithms_1_1complement_1_1UniformCrossover.html#aa99dc616ac6ca6cd4ee926b275736cb0">mascara</a>.length; k++) {</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            <span class="keywordflow">if</span>(<a class="code hl_function" href="classevolutionary__algorithms_1_1complement_1_1UniformCrossover.html#aa99dc616ac6ca6cd4ee926b275736cb0">mascara</a>[k] == 1){</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                value = father1.<a class="code hl_function" href="classproblem_1_1definition_1_1State.html#a2e75b6f2bedb2107478ecd1e8e681418">getCode</a>().get(k);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                state.<a class="code hl_function" href="classproblem_1_1definition_1_1State.html#a2e75b6f2bedb2107478ecd1e8e681418">getCode</a>().set(k, value);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            }</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            <span class="keywordflow">else</span>{</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                <span class="keywordflow">if</span>(<a class="code hl_function" href="classevolutionary__algorithms_1_1complement_1_1UniformCrossover.html#aa99dc616ac6ca6cd4ee926b275736cb0">mascara</a>[k] == 0){</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                    value = father2.<a class="code hl_function" href="classproblem_1_1definition_1_1State.html#a2e75b6f2bedb2107478ecd1e8e681418">getCode</a>().get(k);  </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                    state.<a class="code hl_function" href="classproblem_1_1definition_1_1State.html#a2e75b6f2bedb2107478ecd1e8e681418">getCode</a>().set(k, value);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                }</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            }</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        }</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="keywordflow">return</span> state;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    }</div>
+</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>}</div>
+</div>
+<div class="ttc" id="aclassevolutionary__algorithms_1_1complement_1_1Crossover_html"><div class="ttname"><a href="classevolutionary__algorithms_1_1complement_1_1Crossover.html">evolutionary_algorithms.complement.Crossover</a></div><div class="ttdoc">Crossover - applies the crossover operation to two parent states.</div><div class="ttdef"><b>Definition</b> <a href="Crossover_8java_source.html#l00009">Crossover.java:9</a></div></div>
+<div class="ttc" id="aclassevolutionary__algorithms_1_1complement_1_1UniformCrossover_html"><div class="ttname"><a href="classevolutionary__algorithms_1_1complement_1_1UniformCrossover.html">evolutionary_algorithms.complement.UniformCrossover</a></div><div class="ttdoc">UniformCrossover - complements uniform crossover strategy.</div><div class="ttdef"><b>Definition</b> <a href="#l00011">UniformCrossover.java:11</a></div></div>
+<div class="ttc" id="aclassevolutionary__algorithms_1_1complement_1_1UniformCrossover_html_a54eb36b06a9e409253360eb9cd76f774"><div class="ttname"><a href="classevolutionary__algorithms_1_1complement_1_1UniformCrossover.html#a54eb36b06a9e409253360eb9cd76f774">evolutionary_algorithms.complement.UniformCrossover.crossover</a></div><div class="ttdeci">State crossover(State father1, State father2, double PC)</div><div class="ttdoc">crossover - applies uniform crossover strategy.</div><div class="ttdef"><b>Definition</b> <a href="#l00042">UniformCrossover.java:42</a></div></div>
+<div class="ttc" id="aclassevolutionary__algorithms_1_1complement_1_1UniformCrossover_html_aa99dc616ac6ca6cd4ee926b275736cb0"><div class="ttname"><a href="classevolutionary__algorithms_1_1complement_1_1UniformCrossover.html#aa99dc616ac6ca6cd4ee926b275736cb0">evolutionary_algorithms.complement.UniformCrossover.mascara</a></div><div class="ttdeci">int[] mascara(int length)</div><div class="ttdoc">Uses ThreadLocalRandom for algorithmic (non-cryptographic) randomness.</div><div class="ttdef"><b>Definition</b> <a href="#l00025">UniformCrossover.java:25</a></div></div>
+<div class="ttc" id="aclassproblem_1_1definition_1_1State_html"><div class="ttname"><a href="classproblem_1_1definition_1_1State.html">problem.definition.State</a></div><div class="ttdoc">State.</div><div class="ttdef"><b>Definition</b> <a href="State_8java_source.html#l00016">State.java:16</a></div></div>
+<div class="ttc" id="aclassproblem_1_1definition_1_1State_html_a2e75b6f2bedb2107478ecd1e8e681418"><div class="ttname"><a href="classproblem_1_1definition_1_1State.html#a2e75b6f2bedb2107478ecd1e8e681418">problem.definition.State.getCode</a></div><div class="ttdeci">ArrayList&lt; Object &gt; getCode()</div><div class="ttdoc">Obtener la codificación del estado (copia defensiva).</div><div class="ttdef"><b>Definition</b> <a href="State_8java_source.html#l00068">State.java:68</a></div></div>
+<div class="ttc" id="aclassproblem_1_1definition_1_1State_html_aaf14fa8466c945ff5e134028c6c259f8"><div class="ttname"><a href="classproblem_1_1definition_1_1State.html#aaf14fa8466c945ff5e134028c6c259f8">problem.definition.State.getCopy</a></div><div class="ttdeci">Object getCopy()</div><div class="ttdoc">Obtener una copia por valor del estado (implementado con copy-constructor).</div><div class="ttdef"><b>Definition</b> <a href="State_8java_source.html#l00161">State.java:161</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_35e5e1a6dfa5adce22aec671c4d5c0d1.html">practica5</a></li><li class="navelem"><a href="dir_d2e984a8ddfea0cacd32e4238c7e9dd9.html">src</a></li><li class="navelem"><a href="dir_4a158cb6d41a1065711987d4dec8e14e.html">main</a></li><li class="navelem"><a href="dir_67084513cc423c424b0c8f4661d8bd90.html">java</a></li><li class="navelem"><a href="dir_ad78f9a8eeae7de63d23929bdb4bd70f.html">evolutionary_algorithms</a></li><li class="navelem"><a href="dir_d00fad21fcf036c29a4bc24d5ad0d64c.html">complement</a></li><li class="navelem"><a href="UniformCrossover_8java.html">UniformCrossover.java</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

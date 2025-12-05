@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="es">
+  <compounddef id="InstanceDE_8java" kind="file" language="Java">
+    <compoundname>InstanceDE.java</compoundname>
+    <includes local="no">factory_method.FactoryGenerator</includes>
+    <includes local="no">java.util.logging.Level</includes>
+    <includes local="no">java.util.logging.Logger</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>InstanceDE.java</label>
+        <link refid="InstanceDE_8java"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>factory_method.FactoryGenerator</label>
+      </node>
+      <node id="3">
+        <label>java.util.logging.Level</label>
+      </node>
+      <node id="4">
+        <label>java.util.logging.Logger</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classmetaheuristics_1_1generators_1_1InstanceDE" prot="public">metaheuristics::generators::InstanceDE</innerclass>
+    <innernamespace refid="namespacemetaheuristics_1_1generators">metaheuristics::generators</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">package<sp/></highlight><highlight class="normal">metaheuristics.generators;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>factory_method.FactoryGenerator;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>java.util.logging.Level;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>java.util.logging.Logger;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="classmetaheuristics_1_1generators_1_1InstanceDE" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classmetaheuristics_1_1generators_1_1InstanceDE" kindref="compound">InstanceDE</ref><sp/></highlight><highlight class="keyword">implements</highlight><highlight class="normal"><sp/>Runnable<sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="classmetaheuristics_1_1generators_1_1InstanceDE_1a133f04a6b8ec86f20dbf6c2abac5a61d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">final</highlight><highlight class="normal"><sp/>Logger<sp/><ref refid="classmetaheuristics_1_1generators_1_1InstanceDE_1a133f04a6b8ec86f20dbf6c2abac5a61d" kindref="member">LOGGER</ref><sp/>=<sp/>Logger.getLogger(<ref refid="classmetaheuristics_1_1generators_1_1InstanceDE" kindref="compound">InstanceDE</ref>.class.getName());</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="classmetaheuristics_1_1generators_1_1InstanceDE_1aa025bce5c645eeffbbd6e4eb507a16f1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/><ref refid="classmetaheuristics_1_1generators_1_1InstanceDE_1aa025bce5c645eeffbbd6e4eb507a16f1" kindref="member">terminate</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="21" refid="classmetaheuristics_1_1generators_1_1InstanceDE_1a670666f9e178336ab435f4c3f9f8b60e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classmetaheuristics_1_1generators_1_1InstanceDE_1a670666f9e178336ab435f4c3f9f8b60e" kindref="member">run</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfactory__method_1_1FactoryGenerator" kindref="compound">FactoryGenerator</ref><sp/>ifFactoryGenerator<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classfactory__method_1_1FactoryGenerator" kindref="compound">FactoryGenerator</ref>();</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmetaheuristics_1_1generators_1_1Generator" kindref="compound">Generator</ref><sp/>generatorDE<sp/>=<sp/></highlight><highlight class="keyword">null</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>generatorDE<sp/>=<sp/>ifFactoryGenerator.<ref refid="classfactory__method_1_1FactoryGenerator_1a76c269b114cbf643e92a7467b7cf21f7" kindref="member">createGenerator</ref>(<ref refid="enummetaheuristics_1_1generators_1_1GeneratorType" kindref="compound">GeneratorType</ref>.<ref refid="enummetaheuristics_1_1generators_1_1GeneratorType_1aad36814ee53c9a9c502a5fbe48e1d018" kindref="member">DistributionEstimationAlgorithm</ref>);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal"><sp/>(Exception<sp/>e)<sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Log<sp/>exception<sp/>instead<sp/>of<sp/>printing<sp/>stack<sp/>trace<sp/>so<sp/>debug<sp/>info<sp/>is<sp/>available</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>but<sp/>the<sp/>code<sp/>is<sp/>safe<sp/>for<sp/>production.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmetaheuristics_1_1generators_1_1InstanceDE_1a133f04a6b8ec86f20dbf6c2abac5a61d" kindref="member">LOGGER</ref>.log(Level.SEVERE,<sp/></highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>create<sp/>DistributionEstimationAlgorithm<sp/>generator&quot;</highlight><highlight class="normal">,<sp/>e);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/>find<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(find<sp/>==<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="classmetaheuristics_1_1generators_1_1MultiGenerator" kindref="compound">MultiGenerator</ref>.<ref refid="classmetaheuristics_1_1generators_1_1MultiGenerator_1ab331905baebb433340e05d19e174340b" kindref="member">getListGenerators</ref>()[i].<ref refid="classmetaheuristics_1_1generators_1_1Generator_1a5a123306b43c42d28cd1d6e17f8067a5" kindref="member">getType</ref>().equals(<ref refid="enummetaheuristics_1_1generators_1_1GeneratorType" kindref="compound">GeneratorType</ref>.<ref refid="enummetaheuristics_1_1generators_1_1GeneratorType_1aad36814ee53c9a9c502a5fbe48e1d018" kindref="member">DistributionEstimationAlgorithm</ref>)){</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmetaheuristics_1_1generators_1_1MultiGenerator" kindref="compound">MultiGenerator</ref>.<ref refid="classmetaheuristics_1_1generators_1_1MultiGenerator_1ab331905baebb433340e05d19e174340b" kindref="member">getListGenerators</ref>()[i]<sp/>=<sp/>generatorDE;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>find<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>i++;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmetaheuristics_1_1generators_1_1InstanceDE_1aa025bce5c645eeffbbd6e4eb507a16f1" kindref="member">terminate</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="classmetaheuristics_1_1generators_1_1InstanceDE_1a1da514370250dac706d4d441080b68da" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/><ref refid="classmetaheuristics_1_1generators_1_1InstanceDE_1a1da514370250dac706d4d441080b68da" kindref="member">isTerminate</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classmetaheuristics_1_1generators_1_1InstanceDE_1aa025bce5c645eeffbbd6e4eb507a16f1" kindref="member">terminate</ref>;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="classmetaheuristics_1_1generators_1_1InstanceDE_1ade700027e8d1498e7480c9e1cff25a27" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classmetaheuristics_1_1generators_1_1InstanceDE_1ade700027e8d1498e7480c9e1cff25a27" kindref="member">setTerminate</ref>(</highlight><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/><ref refid="classmetaheuristics_1_1generators_1_1InstanceDE_1aa025bce5c645eeffbbd6e4eb507a16f1" kindref="member">terminate</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.terminate<sp/>=<sp/><ref refid="classmetaheuristics_1_1generators_1_1InstanceDE_1aa025bce5c645eeffbbd6e4eb507a16f1" kindref="member">terminate</ref>;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="practica5/src/main/java/metaheuristics/generators/InstanceDE.java"/>
+  </compounddef>
+</doxygen>

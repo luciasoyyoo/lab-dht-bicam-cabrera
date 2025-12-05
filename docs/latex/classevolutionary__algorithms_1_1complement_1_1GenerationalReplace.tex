@@ -1,0 +1,86 @@
+\doxysection{Referencia de la clase evolutionary\+\_\+algorithms.\+complement.\+Generational\+Replace}
+\hypertarget{classevolutionary__algorithms_1_1complement_1_1GenerationalReplace}{}\label{classevolutionary__algorithms_1_1complement_1_1GenerationalReplace}\index{evolutionary\_algorithms.complement.GenerationalReplace@{evolutionary\_algorithms.complement.GenerationalReplace}}
+
+
+\doxylink{classevolutionary__algorithms_1_1complement_1_1GenerationalReplace}{Generational\+Replace} -\/ replaces the worst individual in the population.  
+
+
+
+
+Diagrama de herencia de evolutionary\+\_\+algorithms.\+complement.\+Generational\+Replace
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=277pt]{classevolutionary__algorithms_1_1complement_1_1GenerationalReplace__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagrama de colaboración de evolutionary\+\_\+algorithms.\+complement.\+Generational\+Replace\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=277pt]{classevolutionary__algorithms_1_1complement_1_1GenerationalReplace__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1GenerationalReplace_aad6c6c29ab27a71b56b077977875b9f8}{replace}} (\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} state\+Candidate, List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ list\+State)  throws Illegal\+Argument\+Exception, Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception, Illegal\+Access\+Exception, Invocation\+Target\+Exception, No\+Such\+Method\+Exception 
+\begin{DoxyCompactList}\small\item\em replace -\/ replaces the worst individual in the population. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+\doxylink{classevolutionary__algorithms_1_1complement_1_1GenerationalReplace}{Generational\+Replace} -\/ replaces the worst individual in the population. 
+
+Definición en la línea \mbox{\hyperlink{GenerationalReplace_8java_source_l00012}{12}} del archivo \mbox{\hyperlink{GenerationalReplace_8java_source}{Generational\+Replace.\+java}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{classevolutionary__algorithms_1_1complement_1_1GenerationalReplace_doc-func-members}
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{classevolutionary__algorithms_1_1complement_1_1GenerationalReplace_aad6c6c29ab27a71b56b077977875b9f8}\index{evolutionary\_algorithms.complement.GenerationalReplace@{evolutionary\_algorithms.complement.GenerationalReplace}!replace@{replace}}
+\index{replace@{replace}!evolutionary\_algorithms.complement.GenerationalReplace@{evolutionary\_algorithms.complement.GenerationalReplace}}
+\doxysubsubsection{\texorpdfstring{replace()}{replace()}}
+{\footnotesize\ttfamily \label{classevolutionary__algorithms_1_1complement_1_1GenerationalReplace_aad6c6c29ab27a71b56b077977875b9f8} 
+List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ evolutionary\+\_\+algorithms.\+complement.\+Generational\+Replace.\+replace (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}}]{state\+Candidate}{, }\item[{List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$}]{list\+State}{}\end{DoxyParamCaption}) throws Illegal\+Argument\+Exception, Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception, Illegal\+Access\+Exception, Invocation\+Target\+Exception, No\+Such\+Method\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+replace -\/ replaces the worst individual in the population. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em state\+Candidate} & \\
+\hline
+{\em list\+State} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+returns the new population after replacing the worst individual with the state\+Candidate 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1Replace_aac9402083a696d23ca0d97540d3951e5}{evolutionary\+\_\+algorithms.\+complement.\+Replace}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{GenerationalReplace_8java_source_l00021}{21}} del archivo \mbox{\hyperlink{GenerationalReplace_8java_source}{Generational\+Replace.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ listState.remove(0);}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ listState.add(stateCandidate);}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ listState;}
+\DoxyCodeLine{00025\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{GenerationalReplace_8java}{Generational\+Replace.\+java}}\end{DoxyCompactItemize}

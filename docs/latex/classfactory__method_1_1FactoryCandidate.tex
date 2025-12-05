@@ -1,0 +1,120 @@
+\doxysection{Referencia de la clase factory\+\_\+method.\+Factory\+Candidate}
+\hypertarget{classfactory__method_1_1FactoryCandidate}{}\label{classfactory__method_1_1FactoryCandidate}\index{factory\_method.FactoryCandidate@{factory\_method.FactoryCandidate}}
+
+
+\doxylink{classfactory__method_1_1FactoryCandidate}{Factory\+Candidate} -\/ Interface for creating search candidates.  
+
+
+
+
+Diagrama de herencia de factory\+\_\+method.\+Factory\+Candidate
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{classfactory__method_1_1FactoryCandidate__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagrama de colaboración de factory\+\_\+method.\+Factory\+Candidate\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classfactory__method_1_1FactoryCandidate__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1SearchCandidate}{Search\+Candidate}} \mbox{\hyperlink{classfactory__method_1_1FactoryCandidate_a3c5bfd0ecfce2f42109c9d7e1c106ff9}{create\+Search\+Candidate}} (\mbox{\hyperlink{enumlocal__search_1_1candidate__type_1_1CandidateType}{Candidate\+Type}} type\+Candidate)  throws Illegal\+Argument\+Exception, Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception, Illegal\+Access\+Exception, Invocation\+Target\+Exception, No\+Such\+Method\+Exception 
+\begin{DoxyCompactList}\small\item\em create\+Search\+Candidate -\/ descripcion (añade detalles). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1SearchCandidate}{Search\+Candidate}} \mbox{\hyperlink{classfactory__method_1_1FactoryCandidate_aa55240f507ac33ee956368db67a4a490}{searchcandidate}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+\doxylink{classfactory__method_1_1FactoryCandidate}{Factory\+Candidate} -\/ Interface for creating search candidates. 
+
+Definición en la línea \mbox{\hyperlink{FactoryCandidate_8java_source_l00018}{18}} del archivo \mbox{\hyperlink{FactoryCandidate_8java_source}{Factory\+Candidate.\+java}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{classfactory__method_1_1FactoryCandidate_doc-func-members}
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{classfactory__method_1_1FactoryCandidate_a3c5bfd0ecfce2f42109c9d7e1c106ff9}\index{factory\_method.FactoryCandidate@{factory\_method.FactoryCandidate}!createSearchCandidate@{createSearchCandidate}}
+\index{createSearchCandidate@{createSearchCandidate}!factory\_method.FactoryCandidate@{factory\_method.FactoryCandidate}}
+\doxysubsubsection{\texorpdfstring{createSearchCandidate()}{createSearchCandidate()}}
+{\footnotesize\ttfamily \label{classfactory__method_1_1FactoryCandidate_a3c5bfd0ecfce2f42109c9d7e1c106ff9} 
+\mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1SearchCandidate}{Search\+Candidate}} factory\+\_\+method.\+Factory\+Candidate.\+create\+Search\+Candidate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{enumlocal__search_1_1candidate__type_1_1CandidateType}{Candidate\+Type}}}]{type\+Candidate}{}\end{DoxyParamCaption}) throws Illegal\+Argument\+Exception, Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception, Illegal\+Access\+Exception, Invocation\+Target\+Exception, No\+Such\+Method\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+create\+Search\+Candidate -\/ descripcion (añade detalles). 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em type\+Candidate} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+
+\end{DoxyReturn}
+
+
+Implementa \mbox{\hyperlink{interfacefactory__interface_1_1IFFactoryCandidate_ac8a55075129af2382fe7370a788b1279}{factory\+\_\+interface.\+IFFactory\+Candidate}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{FactoryCandidate_8java_source_l00026}{26}} del archivo \mbox{\hyperlink{FactoryCandidate_8java_source}{Factory\+Candidate.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ String\ className\ =\ \textcolor{stringliteral}{"{}local\_search.candidate\_type."{}}\ +\ typeCandidate.toString();}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ searchcandidate\ =\ (SearchCandidate)\ FactoryLoader.getInstance(className);}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ searchcandidate;}
+\DoxyCodeLine{00030\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{FactoryLoader_8java_source_l00021}{factory\+\_\+method.\+Factory\+Loader.\+get\+Instance()}} y \mbox{\hyperlink{FactoryCandidate_8java_source_l00019}{searchcandidate}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classfactory__method_1_1FactoryCandidate_a3c5bfd0ecfce2f42109c9d7e1c106ff9_cgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-variable-members}
+\Hypertarget{classfactory__method_1_1FactoryCandidate_doc-variable-members}
+\doxysubsection{Documentación de datos miembro}
+\Hypertarget{classfactory__method_1_1FactoryCandidate_aa55240f507ac33ee956368db67a4a490}\index{factory\_method.FactoryCandidate@{factory\_method.FactoryCandidate}!searchcandidate@{searchcandidate}}
+\index{searchcandidate@{searchcandidate}!factory\_method.FactoryCandidate@{factory\_method.FactoryCandidate}}
+\doxysubsubsection{\texorpdfstring{searchcandidate}{searchcandidate}}
+{\footnotesize\ttfamily \label{classfactory__method_1_1FactoryCandidate_aa55240f507ac33ee956368db67a4a490} 
+\mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1SearchCandidate}{Search\+Candidate}} factory\+\_\+method.\+Factory\+Candidate.\+searchcandidate\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{FactoryCandidate_8java_source_l00019}{19}} del archivo \mbox{\hyperlink{FactoryCandidate_8java_source}{Factory\+Candidate.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{FactoryCandidate_8java_source_l00026}{create\+Search\+Candidate()}}.
+
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{FactoryCandidate_8java}{Factory\+Candidate.\+java}}\end{DoxyCompactItemize}

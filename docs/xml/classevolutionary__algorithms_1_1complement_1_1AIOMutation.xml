@@ -1,0 +1,168 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="es">
+  <compounddef id="classevolutionary__algorithms_1_1complement_1_1AIOMutation" kind="class" language="Java" prot="public">
+    <compoundname>evolutionary_algorithms::complement::AIOMutation</compoundname>
+    <basecompoundref refid="classevolutionary__algorithms_1_1complement_1_1Mutation" prot="public" virt="non-virtual">evolutionary_algorithms.complement.Mutation</basecompoundref>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classevolutionary__algorithms_1_1complement_1_1AIOMutation_1a9a96b76b0765c424bbd13232667ca22a" prot="public" static="yes" mutable="no">
+        <type>final List&lt; Object &gt;</type>
+        <definition>final List&lt;Object&gt; evolutionary_algorithms.complement.AIOMutation.path</definition>
+        <argsstring></argsstring>
+        <name>path</name>
+        <qualifiedname>evolutionary_algorithms.complement.AIOMutation.path</qualifiedname>
+        <initializer>= Collections.synchronizedList(new ArrayList&lt;Object&gt;())</initializer>
+        <briefdescription>
+<para>path - stores the path of the TSP problem. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/evolutionary_algorithms/complement/AIOMutation.java" line="22" column="26" bodyfile="practica5/src/main/java/evolutionary_algorithms/complement/AIOMutation.java" bodystart="22" bodyend="-1"/>
+        <referencedby refid="classevolutionary__algorithms_1_1complement_1_1AIOMutation_1a3c9193b63cc517d48761bfddc3c0374b" compoundref="AIOMutation_8java" startline="85" endline="89">evolutionary_algorithms.complement.AIOMutation.fillPath</referencedby>
+        <referencedby refid="classevolutionary__algorithms_1_1complement_1_1AIOMutation_1a182dacf4bb3046d61563d6bd5f31e156" compoundref="AIOMutation_8java" startline="31" endline="60">evolutionary_algorithms.complement.AIOMutation.mutation</referencedby>
+        <referencedby refid="classevolutionary__algorithms_1_1complement_1_1AIOMutation_1aa07dddb2b2b0291e997a7ea1608529df" compoundref="AIOMutation_8java" startline="66" endline="81">evolutionary_algorithms.complement.AIOMutation.sortedPathValue</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classevolutionary__algorithms_1_1complement_1_1AIOMutation_1a182dacf4bb3046d61563d6bd5f31e156" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+        <definition>State evolutionary_algorithms.complement.AIOMutation.mutation</definition>
+        <argsstring>(State state, double PM)</argsstring>
+        <name>mutation</name>
+        <qualifiedname>evolutionary_algorithms.complement.AIOMutation.mutation</qualifiedname>
+        <reimplements refid="classevolutionary__algorithms_1_1complement_1_1Mutation_1a027da26e5a49d8ca908b03acffebb226">mutation</reimplements>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>PM</declname>
+        </param>
+        <briefdescription>
+<para>mutation - applies the mutation to the state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>PM</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/evolutionary_algorithms/complement/AIOMutation.java" line="31" column="14" bodyfile="practica5/src/main/java/evolutionary_algorithms/complement/AIOMutation.java" bodystart="31" bodyend="60"/>
+        <references refid="classproblem_1_1definition_1_1Codification_1a01a0c8247d76d4c4c32c7f3e51c2d5f8">problem.definition.Codification.getAleatoryKey</references>
+        <references refid="classproblem_1_1definition_1_1State_1a2e75b6f2bedb2107478ecd1e8e681418" compoundref="State_8java" startline="68" endline="70">problem.definition.State.getCode</references>
+        <references refid="classproblem_1_1definition_1_1Problem_1a7da2aa6b2a6f00f6f3993e6fdc43e34b" compoundref="Problem_8java" startline="114" endline="116">problem.definition.Problem.getCodification</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1a4bc6bd95db71e14b1f48c1bfc85f1305" compoundref="Strategy_8java" startline="405" endline="407">metaheurictics.strategy.Strategy.getProblem</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1ad2641e12c52292930364de6655333aa8" compoundref="Strategy_8java" startline="80" endline="85">metaheurictics.strategy.Strategy.getStrategy</references>
+        <references refid="classevolutionary__algorithms_1_1complement_1_1AIOMutation_1a9a96b76b0765c424bbd13232667ca22a" compoundref="AIOMutation_8java" startline="22">evolutionary_algorithms.complement.AIOMutation.path</references>
+        <references refid="classevolutionary__algorithms_1_1complement_1_1AIOMutation_1aa07dddb2b2b0291e997a7ea1608529df" compoundref="AIOMutation_8java" startline="66" endline="81">evolutionary_algorithms.complement.AIOMutation.sortedPathValue</references>
+      </memberdef>
+      <memberdef kind="function" id="classevolutionary__algorithms_1_1complement_1_1AIOMutation_1aa07dddb2b2b0291e997a7ea1608529df" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void evolutionary_algorithms.complement.AIOMutation.sortedPathValue</definition>
+        <argsstring>(State state)</argsstring>
+        <name>sortedPathValue</name>
+        <qualifiedname>evolutionary_algorithms.complement.AIOMutation.sortedPathValue</qualifiedname>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>sortedPathValue - sorts the path values based on the state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/evolutionary_algorithms/complement/AIOMutation.java" line="66" column="13" bodyfile="practica5/src/main/java/evolutionary_algorithms/complement/AIOMutation.java" bodystart="66" bodyend="81"/>
+        <references refid="classproblem_1_1definition_1_1State_1a2e75b6f2bedb2107478ecd1e8e681418" compoundref="State_8java" startline="68" endline="70">problem.definition.State.getCode</references>
+        <references refid="classevolutionary__algorithms_1_1complement_1_1AIOMutation_1a9a96b76b0765c424bbd13232667ca22a" compoundref="AIOMutation_8java" startline="22">evolutionary_algorithms.complement.AIOMutation.path</references>
+        <referencedby refid="classevolutionary__algorithms_1_1complement_1_1AIOMutation_1a182dacf4bb3046d61563d6bd5f31e156" compoundref="AIOMutation_8java" startline="31" endline="60">evolutionary_algorithms.complement.AIOMutation.mutation</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classevolutionary__algorithms_1_1complement_1_1AIOMutation_1a3c9193b63cc517d48761bfddc3c0374b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void evolutionary_algorithms.complement.AIOMutation.fillPath</definition>
+        <argsstring>()</argsstring>
+        <name>fillPath</name>
+        <qualifiedname>evolutionary_algorithms.complement.AIOMutation.fillPath</qualifiedname>
+        <briefdescription>
+<para>fillPath - fills the path with the variable indices. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/evolutionary_algorithms/complement/AIOMutation.java" line="85" column="20" bodyfile="practica5/src/main/java/evolutionary_algorithms/complement/AIOMutation.java" bodystart="85" bodyend="89"/>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1ad2641e12c52292930364de6655333aa8" compoundref="Strategy_8java" startline="80" endline="85">metaheurictics.strategy.Strategy.getStrategy</references>
+        <references refid="classevolutionary__algorithms_1_1complement_1_1AIOMutation_1a9a96b76b0765c424bbd13232667ca22a" compoundref="AIOMutation_8java" startline="22">evolutionary_algorithms.complement.AIOMutation.path</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="classevolutionary__algorithms_1_1complement_1_1AIOMutation" kindref="compound">AIOMutation</ref> - applies the <ref refid="classevolutionary__algorithms_1_1complement_1_1AIOMutation" kindref="compound">AIOMutation</ref> to the state. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>evolutionary_algorithms.complement.AIOMutation</label>
+        <link refid="classevolutionary__algorithms_1_1complement_1_1AIOMutation"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>evolutionary_algorithms.complement.Mutation</label>
+        <link refid="classevolutionary__algorithms_1_1complement_1_1Mutation"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>evolutionary_algorithms.complement.AIOMutation</label>
+        <link refid="classevolutionary__algorithms_1_1complement_1_1AIOMutation"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>evolutionary_algorithms.complement.Mutation</label>
+        <link refid="classevolutionary__algorithms_1_1complement_1_1Mutation"/>
+      </node>
+    </collaborationgraph>
+    <location file="practica5/src/main/java/evolutionary_algorithms/complement/AIOMutation.java" line="17" column="7" bodyfile="practica5/src/main/java/evolutionary_algorithms/complement/AIOMutation.java" bodystart="17" bodyend="91"/>
+    <listofallmembers>
+      <member refid="classevolutionary__algorithms_1_1complement_1_1AIOMutation_1a3c9193b63cc517d48761bfddc3c0374b" prot="public" virt="non-virtual"><scope>evolutionary_algorithms::complement::AIOMutation</scope><name>fillPath</name></member>
+      <member refid="classevolutionary__algorithms_1_1complement_1_1AIOMutation_1a182dacf4bb3046d61563d6bd5f31e156" prot="public" virt="non-virtual"><scope>evolutionary_algorithms::complement::AIOMutation</scope><name>mutation</name></member>
+      <member refid="classevolutionary__algorithms_1_1complement_1_1AIOMutation_1a9a96b76b0765c424bbd13232667ca22a" prot="public" virt="non-virtual"><scope>evolutionary_algorithms::complement::AIOMutation</scope><name>path</name></member>
+      <member refid="classevolutionary__algorithms_1_1complement_1_1AIOMutation_1aa07dddb2b2b0291e997a7ea1608529df" prot="public" virt="non-virtual"><scope>evolutionary_algorithms::complement::AIOMutation</scope><name>sortedPathValue</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

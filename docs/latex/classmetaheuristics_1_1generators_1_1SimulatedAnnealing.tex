@@ -1,0 +1,1080 @@
+\doxysection{Referencia de la clase metaheuristics.\+generators.\+Simulated\+Annealing}
+\hypertarget{classmetaheuristics_1_1generators_1_1SimulatedAnnealing}{}\label{classmetaheuristics_1_1generators_1_1SimulatedAnnealing}\index{metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}}
+
+
+\doxylink{classmetaheuristics_1_1generators_1_1SimulatedAnnealing}{Simulated\+Annealing} -\/ class that implements the Simulated Annealing metaheuristic.  
+
+
+
+
+Diagrama de herencia de metaheuristics.\+generators.\+Simulated\+Annealing
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classmetaheuristics_1_1generators_1_1SimulatedAnnealing__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagrama de colaboración de metaheuristics.\+generators.\+Simulated\+Annealing\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1SimulatedAnnealing__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{Generator\+Type}} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_afd5b39c160dde18e329cb2c1e6f78c7e}{get\+Type\+Generator}} ()
+\begin{DoxyCompactList}\small\item\em get\+Type\+Generator -\/ get the type of the generator. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_ad60a310eb9f0cd4887dc348ed3a8237b}{set\+Type\+Generator}} (\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{Generator\+Type}} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_acfe4c36fcd2481896e4aa50d97ffb1d8}{type\+Generator}})
+\begin{DoxyCompactList}\small\item\em set\+Type\+Generator -\/ set the type of the generator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_ab3cd175e54b2e49c7712d0949a69a9e1}{Simulated\+Annealing}} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{classmetaheuristics_1_1generators_1_1SimulatedAnnealing}{Simulated\+Annealing} -\/ descripcion (añade detalles). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a42465a5f9da3ff282afbd8cae9603274}{generate}} (Integer operatornumber)  throws Illegal\+Argument\+Exception, Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception, Illegal\+Access\+Exception, Invocation\+Target\+Exception, No\+Such\+Method\+Exception 
+\begin{DoxyCompactList}\small\item\em generate -\/ method to generate a new state. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_aadbaa9f82c1d336b0007493ae74d6b07}{get\+Reference}} ()
+\begin{DoxyCompactList}\small\item\em get\+Reference -\/ get the reference state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a98382f5ece5062c48988d2642bf6cd60}{set\+State\+Ref}} (\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} state\+Ref)
+\begin{DoxyCompactList}\small\item\em set\+State\+Ref -\/ set the reference state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_ae2a08a4f7183db472485cdf70fed53a1}{set\+Initial\+Reference}} (\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} state\+Initial\+Ref)
+\begin{DoxyCompactList}\small\item\em set\+Initial\+Reference -\/ set the initial reference state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_af6e00b21dc4f621cbee1a9ed85b9770e}{update\+Reference}} (\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} state\+Candidate, Integer count\+Iterations\+Current)  throws Illegal\+Argument\+Exception, Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception, Illegal\+Access\+Exception, Invocation\+Target\+Exception, No\+Such\+Method\+Exception 
+\begin{DoxyCompactList}\small\item\em update\+Reference -\/ update the reference state. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{Generator\+Type}} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a98d43a4efb241b43981dbecc5b6f3b1d}{get\+Type}} ()
+\begin{DoxyCompactList}\small\item\em get\+Type -\/ get the type of the generator. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a0228e9c2ac6f1bb8dd4e452e3b7791ca}{get\+Reference\+List}} ()
+\begin{DoxyCompactList}\small\item\em get\+Reference\+List -\/ get the list of reference states. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_aefc4df55a0b09417f9b4a098f2c29d31}{get\+Son\+List}} ()
+\begin{DoxyCompactList}\small\item\em get\+Son\+List -\/ get the list of child states. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a9c5aedc7476522393077fdf35a5d24d1}{award\+Update\+REF}} (\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} state\+Candidate)
+\begin{DoxyCompactList}\small\item\em award\+Update\+REF -\/ award the update of the reference state. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_aa8743c43beb6426cde3ec0c4e26540e1}{get\+Weight}} ()
+\begin{DoxyCompactList}\small\item\em get\+Weight -\/ get the weight of the generator. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a19bda7a83cc317fca0853b72d333c7e9}{set\+Weight}} (float \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a6700e17003775441ab84b9b7e1b9b81c}{weight}})
+\begin{DoxyCompactList}\small\item\em set\+Weight -\/ set the weight of the generator. \end{DoxyCompactList}\item 
+int\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_aae733e716b463e946d832b33c1b9653b}{get\+List\+Count\+Better\+Gender}} ()
+\begin{DoxyCompactList}\small\item\em get\+List\+Count\+Better\+Gender -\/ get the list of better gender counts. \end{DoxyCompactList}\item 
+int\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a561cb467405e63cb9355b2d638463d13}{get\+List\+Count\+Gender}} ()
+\begin{DoxyCompactList}\small\item\em get\+List\+Count\+Gender -\/ get the list of gender counts. \end{DoxyCompactList}\item 
+float\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a6af67fc9994b85087052b858e02976f6}{get\+Trace}} ()
+\begin{DoxyCompactList}\small\item\em get\+Trace -\/get the trace of the generator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Métodos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a0e8d77d251d9fda0655a995f6e086615}{get\+Count\+IterationsT}} ()
+\begin{DoxyCompactList}\small\item\em get\+Count\+IterationsT -\/ get the count of iterations for temperature update. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a4c993ab96484d3f07910164682808ffb}{set\+Count\+IterationsT}} (int c)
+\begin{DoxyCompactList}\small\item\em set\+Count\+IterationsT -\/ set the count of iterations for temperature update. \end{DoxyCompactList}\item 
+static Double \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a54de458e42332b9c5c0146f1e5b29626}{get\+Tinitial}} ()
+\begin{DoxyCompactList}\small\item\em Getter for initial temperature. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a430cd43c882d314ec6014c3bccb6e7b9}{set\+Tinitial}} (Double t)
+\begin{DoxyCompactList}\small\item\em Setter for initial temperature. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static final double \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a46f42ec0ae3460344e7a177dc8932f41}{alpha}} = 0.\+93
+\item 
+static final Double \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a1fff787e98b3cdfc46d01ba0e80fe6b1}{tfinal}} = 41.\+66
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1CandidateValue}{Candidate\+Value}} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_aba2f66057a6dd21cd1e6b3995ded996c}{candidatevalue}}
+\item 
+\mbox{\hyperlink{enumlocal__search_1_1acceptation__type_1_1AcceptType}{Accept\+Type}} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a14b22498bb70cc309d0c1bf66627959b}{type\+Acceptation}}
+\item 
+\mbox{\hyperlink{enumlocal__search_1_1complement_1_1StrategyType}{Strategy\+Type}} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a78d443dc318f9a1537f45e4241691eb6}{strategy}}
+\item 
+\mbox{\hyperlink{enumlocal__search_1_1candidate__type_1_1CandidateType}{Candidate\+Type}} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_adc272255c564b496520029696f3d6665}{type\+Candidate}}
+\item 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a53133e9907cee763a9dc5d807d52e965}{state\+Reference\+SA}}
+\item 
+\mbox{\hyperlink{interfacefactory__interface_1_1IFFactoryAcceptCandidate}{IFFactory\+Accept\+Candidate}} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_aa4e1bfb8d9af657714728b5b2a5cb322}{ifaccept\+Candidate}}
+\item 
+int \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_aab3934a05e37f41f57f1bd449b015c92}{count\+Rept}}
+\item 
+\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{Generator\+Type}} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_acfe4c36fcd2481896e4aa50d97ffb1d8}{type\+Generator}}
+\item 
+List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a3d7097840ef5c91150b33454b901a001}{list\+State\+Reference}} = new Array\+List$<$\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}$>$()
+\item 
+float \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a6700e17003775441ab84b9b7e1b9b81c}{weight}}
+\item 
+int\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a4f9e1d30acbde47e4be0b7084c8bd5d3}{list\+Count\+Better\+Gender}} = new int\mbox{[}10\mbox{]}
+\item 
+int\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_aded9e3d89cd38bfaad676e3536287d1f}{list\+Count\+Gender}} = new int\mbox{[}10\mbox{]}
+\item 
+float\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a16307a8fa45d9e1e5979de2b91fb1cda}{list\+Trace}} = new float\mbox{[}1200000\mbox{]}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos estáticos privados}
+\begin{DoxyCompactItemize}
+\item 
+static Double \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a7a5ade37358362ab5729dca3cca702a2}{tinitial}} = 250.\+0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Otros miembros heredados}
+\doxysubsection*{Atributos públicos heredados de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator}{metaheuristics.\+generators.\+Generator}}}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a3c0145210385b6257c8fc20cac1f830a}{count\+Gender}}
+\item 
+int \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a43815f3944c514ba3156b0e68482befa}{count\+Better\+Gender}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+\doxylink{classmetaheuristics_1_1generators_1_1SimulatedAnnealing}{Simulated\+Annealing} -\/ class that implements the Simulated Annealing metaheuristic. 
+
+Definición en la línea \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00023}{23}} del archivo \mbox{\hyperlink{SimulatedAnnealing_8java_source}{Simulated\+Annealing.\+java}}.
+
+
+
+\label{doc-constructors}
+\Hypertarget{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_doc-constructors}
+\doxysubsection{Documentación de constructores y destructores}
+\Hypertarget{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_ab3cd175e54b2e49c7712d0949a69a9e1}\index{metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}!SimulatedAnnealing@{SimulatedAnnealing}}
+\index{SimulatedAnnealing@{SimulatedAnnealing}!metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{SimulatedAnnealing()}{SimulatedAnnealing()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_ab3cd175e54b2e49c7712d0949a69a9e1} 
+metaheuristics.\+generators.\+Simulated\+Annealing.\+Simulated\+Annealing (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxylink{classmetaheuristics_1_1generators_1_1SimulatedAnnealing}{Simulated\+Annealing} -\/ descripcion (añade detalles). 
+
+
+
+Definición en la línea \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00098}{98}} del archivo \mbox{\hyperlink{SimulatedAnnealing_8java_source}{Simulated\+Annealing.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ super();}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ this.typeAcceptation\ =\ AcceptType.AcceptNotBadT;}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ this.strategy\ =\ StrategyType.NORMAL;}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ this.typeCandidate\ =\ CandidateType.RandomCandidate;}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ this.candidatevalue\ =\ \textcolor{keyword}{new}\ CandidateValue();}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ this.typeGenerator\ =\ GeneratorType.SimulatedAnnealing;}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ this.weight\ =\ 50;}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ listTrace[0]\ =\ this.weight;}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ listCountBetterGender[0]\ =\ 0;}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ listCountGender[0]\ =\ 0;}
+\DoxyCodeLine{00110\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{AcceptType_8java_source_l00015}{local\+\_\+search.\+acceptation\+\_\+type.\+Accept\+Type.\+Accept\+Not\+BadT}}, \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00060}{list\+Count\+Better\+Gender}}, \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00061}{list\+Count\+Gender}}, \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00062}{list\+Trace}}, \mbox{\hyperlink{StrategyType_8java_source_l00018}{local\+\_\+search.\+complement.\+Strategy\+Type.\+NORMAL}}, \mbox{\hyperlink{CandidateType_8java_source_l00020}{local\+\_\+search.\+candidate\+\_\+type.\+Candidate\+Type.\+Random\+Candidate}}, \mbox{\hyperlink{GeneratorType_8java_source_l00007}{metaheuristics.\+generators.\+Generator\+Type.\+Simulated\+Annealing}} y \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00056}{weight}}.
+
+
+
+Referenciado por \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00156}{update\+Reference()}}.
+
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_ab3cd175e54b2e49c7712d0949a69a9e1_icgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-func-members}
+\Hypertarget{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_doc-func-members}
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a9c5aedc7476522393077fdf35a5d24d1}\index{metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}!awardUpdateREF@{awardUpdateREF}}
+\index{awardUpdateREF@{awardUpdateREF}!metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{awardUpdateREF()}{awardUpdateREF()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a9c5aedc7476522393077fdf35a5d24d1} 
+boolean metaheuristics.\+generators.\+Simulated\+Annealing.\+award\+Update\+REF (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}}]{state\+Candidate}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+award\+Update\+REF -\/ award the update of the reference state. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em state\+Candidate} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+return true if the update is awarded, false otherwise 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a3513d3953ecc97683f38bcb662b74b9b}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00205}{205}} del archivo \mbox{\hyperlink{SimulatedAnnealing_8java_source}{Simulated\+Annealing.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00208\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a42465a5f9da3ff282afbd8cae9603274}\index{metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}!generate@{generate}}
+\index{generate@{generate}!metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{generate()}{generate()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a42465a5f9da3ff282afbd8cae9603274} 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} metaheuristics.\+generators.\+Simulated\+Annealing.\+generate (\begin{DoxyParamCaption}\item[{Integer}]{operatornumber}{}\end{DoxyParamCaption}) throws Illegal\+Argument\+Exception, Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception, Illegal\+Access\+Exception, Invocation\+Target\+Exception, No\+Such\+Method\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+generate -\/ method to generate a new state. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em operatornumber} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+return the generated state 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a06f6f7622b9ce32590eadbdf6bf962b5}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00118}{118}} del archivo \mbox{\hyperlink{SimulatedAnnealing_8java_source}{Simulated\+Annealing.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ List<State>\ neighborhood\ =\ Strategy.getStrategy().getProblem().getOperator().generatedNewState(stateReferenceSA,\ operatornumber);}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ State\ statecandidate\ =\ candidatevalue.stateCandidate(stateReferenceSA,\ typeCandidate,\ strategy,\ operatornumber,\ neighborhood);}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ statecandidate;}
+\DoxyCodeLine{00122\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00025}{candidatevalue}}, \mbox{\hyperlink{classproblem_1_1definition_1_1Operator_a5b6625843e73d938f9235985bf966b34}{problem.\+definition.\+Operator.\+generated\+New\+State()}}, \mbox{\hyperlink{Problem_8java_source_l00131}{problem.\+definition.\+Problem.\+get\+Operator()}}, \mbox{\hyperlink{Strategy_8java_source_l00405}{metaheurictics.\+strategy.\+Strategy.\+get\+Problem()}}, \mbox{\hyperlink{Strategy_8java_source_l00080}{metaheurictics.\+strategy.\+Strategy.\+get\+Strategy()}}, \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00029}{state\+Reference\+SA}}, \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00027}{strategy}} y \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00028}{type\+Candidate}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a42465a5f9da3ff282afbd8cae9603274_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a0e8d77d251d9fda0655a995f6e086615}\index{metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}!getCountIterationsT@{getCountIterationsT}}
+\index{getCountIterationsT@{getCountIterationsT}!metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{getCountIterationsT()}{getCountIterationsT()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a0e8d77d251d9fda0655a995f6e086615} 
+int metaheuristics.\+generators.\+Simulated\+Annealing.\+get\+Count\+IterationsT (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+get\+Count\+IterationsT -\/ get the count of iterations for temperature update. 
+
+\begin{DoxyReturn}{Devuelve}
+the count of iterations for temperature update 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00042}{42}} del archivo \mbox{\hyperlink{SimulatedAnnealing_8java_source}{Simulated\+Annealing.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ countIterationsT;}
+\DoxyCodeLine{00044\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referenciado por \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00156}{update\+Reference()}}.
+
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a0e8d77d251d9fda0655a995f6e086615_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_aae733e716b463e946d832b33c1b9653b}\index{metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}!getListCountBetterGender@{getListCountBetterGender}}
+\index{getListCountBetterGender@{getListCountBetterGender}!metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{getListCountBetterGender()}{getListCountBetterGender()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_aae733e716b463e946d832b33c1b9653b} 
+int\mbox{[}$\,$\mbox{]} metaheuristics.\+generators.\+Simulated\+Annealing.\+get\+List\+Count\+Better\+Gender (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+List\+Count\+Better\+Gender -\/ get the list of better gender counts. 
+
+\begin{DoxyReturn}{Devuelve}
+the list of better gender counts 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_ac5bace71f51c16b611ede3ed53263473}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00236}{236}} del archivo \mbox{\hyperlink{SimulatedAnnealing_8java_source}{Simulated\+Annealing.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (this.listCountBetterGender\ ==\ \textcolor{keyword}{null})\ ?\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[0]\ :\ Arrays.copyOf(this.listCountBetterGender,\ this.listCountBetterGender.length);}
+\DoxyCodeLine{00239\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00060}{list\+Count\+Better\+Gender}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a561cb467405e63cb9355b2d638463d13}\index{metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}!getListCountGender@{getListCountGender}}
+\index{getListCountGender@{getListCountGender}!metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{getListCountGender()}{getListCountGender()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a561cb467405e63cb9355b2d638463d13} 
+int\mbox{[}$\,$\mbox{]} metaheuristics.\+generators.\+Simulated\+Annealing.\+get\+List\+Count\+Gender (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+List\+Count\+Gender -\/ get the list of gender counts. 
+
+\begin{DoxyReturn}{Devuelve}
+the list of gender counts 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_ac5d6d45ee8017fb87d80aa952edfc34e}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00246}{246}} del archivo \mbox{\hyperlink{SimulatedAnnealing_8java_source}{Simulated\+Annealing.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (this.listCountGender\ ==\ \textcolor{keyword}{null})\ ?\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[0]\ :\ Arrays.copyOf(this.listCountGender,\ this.listCountGender.length);}
+\DoxyCodeLine{00249\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00061}{list\+Count\+Gender}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_aadbaa9f82c1d336b0007493ae74d6b07}\index{metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}!getReference@{getReference}}
+\index{getReference@{getReference}!metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{getReference()}{getReference()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_aadbaa9f82c1d336b0007493ae74d6b07} 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} metaheuristics.\+generators.\+Simulated\+Annealing.\+get\+Reference (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Reference -\/ get the reference state. 
+
+\begin{DoxyReturn}{Devuelve}
+the reference state 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_aa56dd45a45776f6023b9f74179cc6384}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00129}{129}} del archivo \mbox{\hyperlink{SimulatedAnnealing_8java_source}{Simulated\+Annealing.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ stateReferenceSA;}
+\DoxyCodeLine{00131\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00029}{state\+Reference\+SA}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a0228e9c2ac6f1bb8dd4e452e3b7791ca}\index{metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}!getReferenceList@{getReferenceList}}
+\index{getReferenceList@{getReferenceList}!metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{getReferenceList()}{getReferenceList()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a0228e9c2ac6f1bb8dd4e452e3b7791ca} 
+List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ metaheuristics.\+generators.\+Simulated\+Annealing.\+get\+Reference\+List (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Reference\+List -\/ get the list of reference states. 
+
+\begin{DoxyReturn}{Devuelve}
+the list of reference states 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_ae168237b306de55fe4d6dfda75c7cd13}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00184}{184}} del archivo \mbox{\hyperlink{SimulatedAnnealing_8java_source}{Simulated\+Annealing.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ listStateReference.add(stateReferenceSA);}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ ArrayList<State>(listStateReference);}
+\DoxyCodeLine{00187\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00055}{list\+State\+Reference}} y \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00029}{state\+Reference\+SA}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_aefc4df55a0b09417f9b4a098f2c29d31}\index{metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}!getSonList@{getSonList}}
+\index{getSonList@{getSonList}!metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{getSonList()}{getSonList()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_aefc4df55a0b09417f9b4a098f2c29d31} 
+List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ metaheuristics.\+generators.\+Simulated\+Annealing.\+get\+Son\+List (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Son\+List -\/ get the list of child states. 
+
+\begin{DoxyReturn}{Devuelve}
+the list of child states 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_aee09d724c1b3040e7a7ad0b64e341c96}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00194}{194}} del archivo \mbox{\hyperlink{SimulatedAnnealing_8java_source}{Simulated\+Annealing.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00197\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a54de458e42332b9c5c0146f1e5b29626}\index{metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}!getTinitial@{getTinitial}}
+\index{getTinitial@{getTinitial}!metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{getTinitial()}{getTinitial()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a54de458e42332b9c5c0146f1e5b29626} 
+Double metaheuristics.\+generators.\+Simulated\+Annealing.\+get\+Tinitial (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Getter for initial temperature. 
+
+
+
+Definición en la línea \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00084}{84}} del archivo \mbox{\hyperlink{SimulatedAnnealing_8java_source}{Simulated\+Annealing.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ tinitial;}
+\DoxyCodeLine{00086\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00034}{tinitial}}.
+
+
+
+Referenciado por \mbox{\hyperlink{AcceptNotBadT_8java_source_l00045}{local\+\_\+search.\+acceptation\+\_\+type.\+Accept\+Not\+Bad\+T.\+accept\+Candidate()}}.
+
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a54de458e42332b9c5c0146f1e5b29626_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a6af67fc9994b85087052b858e02976f6}\index{metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}!getTrace@{getTrace}}
+\index{getTrace@{getTrace}!metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{getTrace()}{getTrace()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a6af67fc9994b85087052b858e02976f6} 
+float\mbox{[}$\,$\mbox{]} metaheuristics.\+generators.\+Simulated\+Annealing.\+get\+Trace (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Trace -\/get the trace of the generator. 
+
+\begin{DoxyReturn}{Devuelve}
+the trace of the generator 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a75d7f30dd2cb3f92475db8525ac7c6e7}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00256}{256}} del archivo \mbox{\hyperlink{SimulatedAnnealing_8java_source}{Simulated\+Annealing.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{00258\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (this.listTrace\ ==\ \textcolor{keyword}{null})\ ?\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{float}[0]\ :\ Arrays.copyOf(this.listTrace,\ this.listTrace.length);}
+\DoxyCodeLine{00259\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00062}{list\+Trace}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a98d43a4efb241b43981dbecc5b6f3b1d}\index{metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}!getType@{getType}}
+\index{getType@{getType}!metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a98d43a4efb241b43981dbecc5b6f3b1d} 
+\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{Generator\+Type}} metaheuristics.\+generators.\+Simulated\+Annealing.\+get\+Type (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Type -\/ get the type of the generator. 
+
+\begin{DoxyReturn}{Devuelve}
+the type of the generator 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a5a123306b43c42d28cd1d6e17f8067a5}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00175}{175}} del archivo \mbox{\hyperlink{SimulatedAnnealing_8java_source}{Simulated\+Annealing.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this.typeGenerator;}
+\DoxyCodeLine{00177\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_afd5b39c160dde18e329cb2c1e6f78c7e}\index{metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}!getTypeGenerator@{getTypeGenerator}}
+\index{getTypeGenerator@{getTypeGenerator}!metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{getTypeGenerator()}{getTypeGenerator()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_afd5b39c160dde18e329cb2c1e6f78c7e} 
+\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{Generator\+Type}} metaheuristics.\+generators.\+Simulated\+Annealing.\+get\+Type\+Generator (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Type\+Generator -\/ get the type of the generator. 
+
+\begin{DoxyReturn}{Devuelve}
+the type of the generator 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00069}{69}} del archivo \mbox{\hyperlink{SimulatedAnnealing_8java_source}{Simulated\+Annealing.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ typeGenerator;}
+\DoxyCodeLine{00071\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00054}{type\+Generator}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_aa8743c43beb6426cde3ec0c4e26540e1}\index{metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}!getWeight@{getWeight}}
+\index{getWeight@{getWeight}!metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{getWeight()}{getWeight()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_aa8743c43beb6426cde3ec0c4e26540e1} 
+float metaheuristics.\+generators.\+Simulated\+Annealing.\+get\+Weight (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Weight -\/ get the weight of the generator. 
+
+\begin{DoxyReturn}{Devuelve}
+the weight of the generator 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a64f2b824081c7af593bf9aa8eabf2c9e}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00216}{216}} del archivo \mbox{\hyperlink{SimulatedAnnealing_8java_source}{Simulated\+Annealing.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this.weight;}
+\DoxyCodeLine{00219\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00056}{weight}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a4c993ab96484d3f07910164682808ffb}\index{metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}!setCountIterationsT@{setCountIterationsT}}
+\index{setCountIterationsT@{setCountIterationsT}!metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{setCountIterationsT()}{setCountIterationsT()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a4c993ab96484d3f07910164682808ffb} 
+void metaheuristics.\+generators.\+Simulated\+Annealing.\+set\+Count\+IterationsT (\begin{DoxyParamCaption}\item[{int}]{c}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+set\+Count\+IterationsT -\/ set the count of iterations for temperature update. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em c} & the count of iterations to set \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00050}{50}} del archivo \mbox{\hyperlink{SimulatedAnnealing_8java_source}{Simulated\+Annealing.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ countIterationsT\ =\ c;}
+\DoxyCodeLine{00052\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_ae2a08a4f7183db472485cdf70fed53a1}\index{metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}!setInitialReference@{setInitialReference}}
+\index{setInitialReference@{setInitialReference}!metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{setInitialReference()}{setInitialReference()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_ae2a08a4f7183db472485cdf70fed53a1} 
+void metaheuristics.\+generators.\+Simulated\+Annealing.\+set\+Initial\+Reference (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}}]{state\+Initial\+Ref}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+set\+Initial\+Reference -\/ set the initial reference state. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em state\+Initial\+Ref} & the initial reference state to set \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_aa9f7c4c983705f843b8fcc81e4aa8ba4}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00146}{146}} del archivo \mbox{\hyperlink{SimulatedAnnealing_8java_source}{Simulated\+Annealing.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ this.stateReferenceSA\ =\ stateInitialRef;}
+\DoxyCodeLine{00148\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a98382f5ece5062c48988d2642bf6cd60}\index{metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}!setStateRef@{setStateRef}}
+\index{setStateRef@{setStateRef}!metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{setStateRef()}{setStateRef()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a98382f5ece5062c48988d2642bf6cd60} 
+void metaheuristics.\+generators.\+Simulated\+Annealing.\+set\+State\+Ref (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}}]{state\+Ref}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+set\+State\+Ref -\/ set the reference state. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em state\+Ref} & the reference state to set \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00137}{137}} del archivo \mbox{\hyperlink{SimulatedAnnealing_8java_source}{Simulated\+Annealing.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ this.stateReferenceSA\ =\ stateRef;}
+\DoxyCodeLine{00139\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a430cd43c882d314ec6014c3bccb6e7b9}\index{metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}!setTinitial@{setTinitial}}
+\index{setTinitial@{setTinitial}!metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{setTinitial()}{setTinitial()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a430cd43c882d314ec6014c3bccb6e7b9} 
+void metaheuristics.\+generators.\+Simulated\+Annealing.\+set\+Tinitial (\begin{DoxyParamCaption}\item[{Double}]{t}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Setter for initial temperature. 
+
+
+
+Definición en la línea \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00091}{91}} del archivo \mbox{\hyperlink{SimulatedAnnealing_8java_source}{Simulated\+Annealing.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ tinitial\ =\ t;}
+\DoxyCodeLine{00093\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00034}{tinitial}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_ad60a310eb9f0cd4887dc348ed3a8237b}\index{metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}!setTypeGenerator@{setTypeGenerator}}
+\index{setTypeGenerator@{setTypeGenerator}!metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{setTypeGenerator()}{setTypeGenerator()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_ad60a310eb9f0cd4887dc348ed3a8237b} 
+void metaheuristics.\+generators.\+Simulated\+Annealing.\+set\+Type\+Generator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{Generator\+Type}}}]{type\+Generator}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+set\+Type\+Generator -\/ set the type of the generator. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em type\+Generator} & \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00077}{77}} del archivo \mbox{\hyperlink{SimulatedAnnealing_8java_source}{Simulated\+Annealing.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ this.typeGenerator\ =\ typeGenerator;}
+\DoxyCodeLine{00079\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00054}{type\+Generator}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a19bda7a83cc317fca0853b72d333c7e9}\index{metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}!setWeight@{setWeight}}
+\index{setWeight@{setWeight}!metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{setWeight()}{setWeight()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a19bda7a83cc317fca0853b72d333c7e9} 
+void metaheuristics.\+generators.\+Simulated\+Annealing.\+set\+Weight (\begin{DoxyParamCaption}\item[{float}]{weight}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+set\+Weight -\/ set the weight of the generator. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em weight} & the weight to set \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a8b3c66b57b4c739666989fbce667eb40}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00226}{226}} del archivo \mbox{\hyperlink{SimulatedAnnealing_8java_source}{Simulated\+Annealing.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ this.weight\ =\ weight;}
+\DoxyCodeLine{00229\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00056}{weight}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_af6e00b21dc4f621cbee1a9ed85b9770e}\index{metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}!updateReference@{updateReference}}
+\index{updateReference@{updateReference}!metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{updateReference()}{updateReference()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_af6e00b21dc4f621cbee1a9ed85b9770e} 
+void metaheuristics.\+generators.\+Simulated\+Annealing.\+update\+Reference (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}}]{state\+Candidate}{, }\item[{Integer}]{count\+Iterations\+Current}{}\end{DoxyParamCaption}) throws Illegal\+Argument\+Exception, Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception, Illegal\+Access\+Exception, Invocation\+Target\+Exception, No\+Such\+Method\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+update\+Reference -\/ update the reference state. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em state\+Candidate} & \\
+\hline
+{\em count\+Iterations\+Current} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_aa1c5878953f2111221b21cb9b1e6cc9f}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00156}{156}} del archivo \mbox{\hyperlink{SimulatedAnnealing_8java_source}{Simulated\+Annealing.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ countRept\ =\ countIterationsT;}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ ifacceptCandidate\ =\ \textcolor{keyword}{new}\ FactoryAcceptCandidate();}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ AcceptableCandidate\ candidate\ =\ ifacceptCandidate.createAcceptCandidate(typeAcceptation);}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ Boolean\ accept\ =\ candidate.acceptCandidate(stateReferenceSA,\ stateCandidate);}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(accept.equals(\textcolor{keyword}{true}))}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ stateReferenceSA\ =\ stateCandidate;}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(countIterationsCurrent.equals(getCountIterationsT()))\{}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ use\ static\ setters\ to\ avoid\ writing\ the\ static\ field\ from\ an\ instance\ method}}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ SimulatedAnnealing.setTinitial(SimulatedAnnealing.getTinitial()\ *\ alpha);}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \ \ \ \ SimulatedAnnealing.setCountIterationsT(SimulatedAnnealing.getCountIterationsT()\ +\ countRept);}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00168\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1AcceptableCandidate_aa9e62e1d2d213c3828d2491b506d0592}{local\+\_\+search.\+acceptation\+\_\+type.\+Acceptable\+Candidate.\+accept\+Candidate()}}, \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00032}{alpha}}, \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00053}{count\+Rept}}, \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00042}{get\+Count\+Iterations\+T()}}, \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00030}{ifaccept\+Candidate}}, \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00098}{Simulated\+Annealing()}}, \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00029}{state\+Reference\+SA}} y \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00026}{type\+Acceptation}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_af6e00b21dc4f621cbee1a9ed85b9770e_cgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-variable-members}
+\Hypertarget{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_doc-variable-members}
+\doxysubsection{Documentación de datos miembro}
+\Hypertarget{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a46f42ec0ae3460344e7a177dc8932f41}\index{metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}!alpha@{alpha}}
+\index{alpha@{alpha}!metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{alpha}{alpha}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a46f42ec0ae3460344e7a177dc8932f41} 
+final double metaheuristics.\+generators.\+Simulated\+Annealing.\+alpha = 0.\+93\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00032}{32}} del archivo \mbox{\hyperlink{SimulatedAnnealing_8java_source}{Simulated\+Annealing.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00156}{update\+Reference()}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_aba2f66057a6dd21cd1e6b3995ded996c}\index{metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}!candidatevalue@{candidatevalue}}
+\index{candidatevalue@{candidatevalue}!metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{candidatevalue}{candidatevalue}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_aba2f66057a6dd21cd1e6b3995ded996c} 
+\mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1CandidateValue}{Candidate\+Value}} metaheuristics.\+generators.\+Simulated\+Annealing.\+candidatevalue\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00025}{25}} del archivo \mbox{\hyperlink{SimulatedAnnealing_8java_source}{Simulated\+Annealing.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00118}{generate()}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_aab3934a05e37f41f57f1bd449b015c92}\index{metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}!countRept@{countRept}}
+\index{countRept@{countRept}!metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{countRept}{countRept}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_aab3934a05e37f41f57f1bd449b015c92} 
+int metaheuristics.\+generators.\+Simulated\+Annealing.\+count\+Rept\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00053}{53}} del archivo \mbox{\hyperlink{SimulatedAnnealing_8java_source}{Simulated\+Annealing.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00156}{update\+Reference()}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_aa4e1bfb8d9af657714728b5b2a5cb322}\index{metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}!ifacceptCandidate@{ifacceptCandidate}}
+\index{ifacceptCandidate@{ifacceptCandidate}!metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{ifacceptCandidate}{ifacceptCandidate}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_aa4e1bfb8d9af657714728b5b2a5cb322} 
+\mbox{\hyperlink{interfacefactory__interface_1_1IFFactoryAcceptCandidate}{IFFactory\+Accept\+Candidate}} metaheuristics.\+generators.\+Simulated\+Annealing.\+ifaccept\+Candidate\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00030}{30}} del archivo \mbox{\hyperlink{SimulatedAnnealing_8java_source}{Simulated\+Annealing.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00156}{update\+Reference()}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a4f9e1d30acbde47e4be0b7084c8bd5d3}\index{metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}!listCountBetterGender@{listCountBetterGender}}
+\index{listCountBetterGender@{listCountBetterGender}!metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{listCountBetterGender}{listCountBetterGender}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a4f9e1d30acbde47e4be0b7084c8bd5d3} 
+int \mbox{[}$\,$\mbox{]} metaheuristics.\+generators.\+Simulated\+Annealing.\+list\+Count\+Better\+Gender = new int\mbox{[}10\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00060}{60}} del archivo \mbox{\hyperlink{SimulatedAnnealing_8java_source}{Simulated\+Annealing.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00236}{get\+List\+Count\+Better\+Gender()}} y \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00098}{Simulated\+Annealing()}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_aded9e3d89cd38bfaad676e3536287d1f}\index{metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}!listCountGender@{listCountGender}}
+\index{listCountGender@{listCountGender}!metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{listCountGender}{listCountGender}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_aded9e3d89cd38bfaad676e3536287d1f} 
+int \mbox{[}$\,$\mbox{]} metaheuristics.\+generators.\+Simulated\+Annealing.\+list\+Count\+Gender = new int\mbox{[}10\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00061}{61}} del archivo \mbox{\hyperlink{SimulatedAnnealing_8java_source}{Simulated\+Annealing.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00246}{get\+List\+Count\+Gender()}} y \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00098}{Simulated\+Annealing()}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a3d7097840ef5c91150b33454b901a001}\index{metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}!listStateReference@{listStateReference}}
+\index{listStateReference@{listStateReference}!metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{listStateReference}{listStateReference}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a3d7097840ef5c91150b33454b901a001} 
+List$<$\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}$>$ metaheuristics.\+generators.\+Simulated\+Annealing.\+list\+State\+Reference = new Array\+List$<$\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}$>$()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00055}{55}} del archivo \mbox{\hyperlink{SimulatedAnnealing_8java_source}{Simulated\+Annealing.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00184}{get\+Reference\+List()}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a16307a8fa45d9e1e5979de2b91fb1cda}\index{metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}!listTrace@{listTrace}}
+\index{listTrace@{listTrace}!metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{listTrace}{listTrace}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a16307a8fa45d9e1e5979de2b91fb1cda} 
+float \mbox{[}$\,$\mbox{]} metaheuristics.\+generators.\+Simulated\+Annealing.\+list\+Trace = new float\mbox{[}1200000\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00062}{62}} del archivo \mbox{\hyperlink{SimulatedAnnealing_8java_source}{Simulated\+Annealing.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00256}{get\+Trace()}} y \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00098}{Simulated\+Annealing()}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a53133e9907cee763a9dc5d807d52e965}\index{metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}!stateReferenceSA@{stateReferenceSA}}
+\index{stateReferenceSA@{stateReferenceSA}!metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{stateReferenceSA}{stateReferenceSA}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a53133e9907cee763a9dc5d807d52e965} 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} metaheuristics.\+generators.\+Simulated\+Annealing.\+state\+Reference\+SA\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00029}{29}} del archivo \mbox{\hyperlink{SimulatedAnnealing_8java_source}{Simulated\+Annealing.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00118}{generate()}}, \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00129}{get\+Reference()}}, \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00184}{get\+Reference\+List()}} y \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00156}{update\+Reference()}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a78d443dc318f9a1537f45e4241691eb6}\index{metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}!strategy@{strategy}}
+\index{strategy@{strategy}!metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{strategy}{strategy}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a78d443dc318f9a1537f45e4241691eb6} 
+\mbox{\hyperlink{enumlocal__search_1_1complement_1_1StrategyType}{Strategy\+Type}} metaheuristics.\+generators.\+Simulated\+Annealing.\+strategy\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00027}{27}} del archivo \mbox{\hyperlink{SimulatedAnnealing_8java_source}{Simulated\+Annealing.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00118}{generate()}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a1fff787e98b3cdfc46d01ba0e80fe6b1}\index{metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}!tfinal@{tfinal}}
+\index{tfinal@{tfinal}!metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{tfinal}{tfinal}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a1fff787e98b3cdfc46d01ba0e80fe6b1} 
+final Double metaheuristics.\+generators.\+Simulated\+Annealing.\+tfinal = 41.\+66\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00035}{35}} del archivo \mbox{\hyperlink{SimulatedAnnealing_8java_source}{Simulated\+Annealing.\+java}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a7a5ade37358362ab5729dca3cca702a2}\index{metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}!tinitial@{tinitial}}
+\index{tinitial@{tinitial}!metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{tinitial}{tinitial}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a7a5ade37358362ab5729dca3cca702a2} 
+Double metaheuristics.\+generators.\+Simulated\+Annealing.\+tinitial = 250.\+0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00034}{34}} del archivo \mbox{\hyperlink{SimulatedAnnealing_8java_source}{Simulated\+Annealing.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00084}{get\+Tinitial()}} y \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00091}{set\+Tinitial()}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a14b22498bb70cc309d0c1bf66627959b}\index{metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}!typeAcceptation@{typeAcceptation}}
+\index{typeAcceptation@{typeAcceptation}!metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{typeAcceptation}{typeAcceptation}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a14b22498bb70cc309d0c1bf66627959b} 
+\mbox{\hyperlink{enumlocal__search_1_1acceptation__type_1_1AcceptType}{Accept\+Type}} metaheuristics.\+generators.\+Simulated\+Annealing.\+type\+Acceptation\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00026}{26}} del archivo \mbox{\hyperlink{SimulatedAnnealing_8java_source}{Simulated\+Annealing.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00156}{update\+Reference()}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_adc272255c564b496520029696f3d6665}\index{metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}!typeCandidate@{typeCandidate}}
+\index{typeCandidate@{typeCandidate}!metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{typeCandidate}{typeCandidate}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_adc272255c564b496520029696f3d6665} 
+\mbox{\hyperlink{enumlocal__search_1_1candidate__type_1_1CandidateType}{Candidate\+Type}} metaheuristics.\+generators.\+Simulated\+Annealing.\+type\+Candidate\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00028}{28}} del archivo \mbox{\hyperlink{SimulatedAnnealing_8java_source}{Simulated\+Annealing.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00118}{generate()}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_acfe4c36fcd2481896e4aa50d97ffb1d8}\index{metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}!typeGenerator@{typeGenerator}}
+\index{typeGenerator@{typeGenerator}!metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{typeGenerator}{typeGenerator}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_acfe4c36fcd2481896e4aa50d97ffb1d8} 
+\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{Generator\+Type}} metaheuristics.\+generators.\+Simulated\+Annealing.\+type\+Generator\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00054}{54}} del archivo \mbox{\hyperlink{SimulatedAnnealing_8java_source}{Simulated\+Annealing.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00069}{get\+Type\+Generator()}} y \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00077}{set\+Type\+Generator()}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a6700e17003775441ab84b9b7e1b9b81c}\index{metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}!weight@{weight}}
+\index{weight@{weight}!metaheuristics.generators.SimulatedAnnealing@{metaheuristics.generators.SimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{weight}{weight}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a6700e17003775441ab84b9b7e1b9b81c} 
+float metaheuristics.\+generators.\+Simulated\+Annealing.\+weight\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00056}{56}} del archivo \mbox{\hyperlink{SimulatedAnnealing_8java_source}{Simulated\+Annealing.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00216}{get\+Weight()}}, \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00226}{set\+Weight()}} y \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00098}{Simulated\+Annealing()}}.
+
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{SimulatedAnnealing_8java}{Simulated\+Annealing.\+java}}\end{DoxyCompactItemize}

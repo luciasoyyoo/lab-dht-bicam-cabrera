@@ -1,0 +1,993 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="es">
+  <compounddef id="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance" kind="class" language="Java" prot="public">
+    <compoundname>metaheuristics::generators::MultiobjectiveHillClimbingDistance</compoundname>
+    <basecompoundref refid="classmetaheuristics_1_1generators_1_1Generator" prot="public" virt="non-virtual">metaheuristics.generators.Generator</basecompoundref>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a2debac8a98c397a38075cf884c40e64c" prot="protected" static="no" mutable="no">
+        <type><ref refid="classlocal__search_1_1candidate__type_1_1CandidateValue" kindref="compound">CandidateValue</ref></type>
+        <definition>CandidateValue metaheuristics.generators.MultiobjectiveHillClimbingDistance.candidatevalue</definition>
+        <argsstring></argsstring>
+        <name>candidatevalue</name>
+        <qualifiedname>metaheuristics.generators.MultiobjectiveHillClimbingDistance.candidatevalue</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/MultiobjectiveHillClimbingDistance.java" line="24" column="26" bodyfile="practica5/src/main/java/metaheuristics/generators/MultiobjectiveHillClimbingDistance.java" bodystart="24" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a10e8509749f9e10954b1ca7174e00103" compoundref="MultiobjectiveHillClimbingDistance_8java" startline="68" endline="72">metaheuristics.generators.MultiobjectiveHillClimbingDistance.generate</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a1386ef8198d329017efcc8c3f5bfb8d7" prot="protected" static="no" mutable="no">
+        <type><ref refid="enumlocal__search_1_1acceptation__type_1_1AcceptType" kindref="compound">AcceptType</ref></type>
+        <definition>AcceptType metaheuristics.generators.MultiobjectiveHillClimbingDistance.typeAcceptation</definition>
+        <argsstring></argsstring>
+        <name>typeAcceptation</name>
+        <qualifiedname>metaheuristics.generators.MultiobjectiveHillClimbingDistance.typeAcceptation</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/MultiobjectiveHillClimbingDistance.java" line="25" column="22" bodyfile="practica5/src/main/java/metaheuristics/generators/MultiobjectiveHillClimbingDistance.java" bodystart="25" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a35ed16f3af3c7fdcbff8165d9674cc9a" compoundref="MultiobjectiveHillClimbingDistance_8java" startline="87" endline="137">metaheuristics.generators.MultiobjectiveHillClimbingDistance.updateReference</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1ac2e4de5263cd3bfc836f02c094fa7568" prot="protected" static="no" mutable="no">
+        <type><ref refid="enumlocal__search_1_1complement_1_1StrategyType" kindref="compound">StrategyType</ref></type>
+        <definition>StrategyType metaheuristics.generators.MultiobjectiveHillClimbingDistance.strategy</definition>
+        <argsstring></argsstring>
+        <name>strategy</name>
+        <qualifiedname>metaheuristics.generators.MultiobjectiveHillClimbingDistance.strategy</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/MultiobjectiveHillClimbingDistance.java" line="26" column="24" bodyfile="practica5/src/main/java/metaheuristics/generators/MultiobjectiveHillClimbingDistance.java" bodystart="26" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a10e8509749f9e10954b1ca7174e00103" compoundref="MultiobjectiveHillClimbingDistance_8java" startline="68" endline="72">metaheuristics.generators.MultiobjectiveHillClimbingDistance.generate</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1ae6cb9243a915a01bd386b192dd0f21a8" prot="protected" static="no" mutable="no">
+        <type><ref refid="enumlocal__search_1_1candidate__type_1_1CandidateType" kindref="compound">CandidateType</ref></type>
+        <definition>CandidateType metaheuristics.generators.MultiobjectiveHillClimbingDistance.typeCandidate</definition>
+        <argsstring></argsstring>
+        <name>typeCandidate</name>
+        <qualifiedname>metaheuristics.generators.MultiobjectiveHillClimbingDistance.typeCandidate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/MultiobjectiveHillClimbingDistance.java" line="27" column="25" bodyfile="practica5/src/main/java/metaheuristics/generators/MultiobjectiveHillClimbingDistance.java" bodystart="27" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a10e8509749f9e10954b1ca7174e00103" compoundref="MultiobjectiveHillClimbingDistance_8java" startline="68" endline="72">metaheuristics.generators.MultiobjectiveHillClimbingDistance.generate</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1ac39189d3dae148f7bc0ec99f46920857" prot="protected" static="no" mutable="no">
+        <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+        <definition>State metaheuristics.generators.MultiobjectiveHillClimbingDistance.stateReferenceHC</definition>
+        <argsstring></argsstring>
+        <name>stateReferenceHC</name>
+        <qualifiedname>metaheuristics.generators.MultiobjectiveHillClimbingDistance.stateReferenceHC</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/MultiobjectiveHillClimbingDistance.java" line="28" column="17" bodyfile="practica5/src/main/java/metaheuristics/generators/MultiobjectiveHillClimbingDistance.java" bodystart="28" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a10e8509749f9e10954b1ca7174e00103" compoundref="MultiobjectiveHillClimbingDistance_8java" startline="68" endline="72">metaheuristics.generators.MultiobjectiveHillClimbingDistance.generate</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a219a98e382eb43c702733aa3cd3c9911" compoundref="MultiobjectiveHillClimbingDistance_8java" startline="178" endline="180">metaheuristics.generators.MultiobjectiveHillClimbingDistance.getReference</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1ab42dff866b566cdebbaff1cf525f1cc6" compoundref="MultiobjectiveHillClimbingDistance_8java" startline="168" endline="171">metaheuristics.generators.MultiobjectiveHillClimbingDistance.getReferenceList</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a35ed16f3af3c7fdcbff8165d9674cc9a" compoundref="MultiobjectiveHillClimbingDistance_8java" startline="87" endline="137">metaheuristics.generators.MultiobjectiveHillClimbingDistance.updateReference</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a951d109b82b78815b6ef66ebc63a081e" prot="protected" static="no" mutable="no">
+        <type><ref refid="interfacefactory__interface_1_1IFFactoryAcceptCandidate" kindref="compound">IFFactoryAcceptCandidate</ref></type>
+        <definition>IFFactoryAcceptCandidate metaheuristics.generators.MultiobjectiveHillClimbingDistance.ifacceptCandidate</definition>
+        <argsstring></argsstring>
+        <name>ifacceptCandidate</name>
+        <qualifiedname>metaheuristics.generators.MultiobjectiveHillClimbingDistance.ifacceptCandidate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/MultiobjectiveHillClimbingDistance.java" line="29" column="36" bodyfile="practica5/src/main/java/metaheuristics/generators/MultiobjectiveHillClimbingDistance.java" bodystart="29" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a35ed16f3af3c7fdcbff8165d9674cc9a" compoundref="MultiobjectiveHillClimbingDistance_8java" startline="87" endline="137">metaheuristics.generators.MultiobjectiveHillClimbingDistance.updateReference</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a46e54bc428d758c1c5905cae573c1cf4" prot="protected" static="no" mutable="no">
+        <type><ref refid="enummetaheuristics_1_1generators_1_1GeneratorType" kindref="compound">GeneratorType</ref></type>
+        <definition>GeneratorType metaheuristics.generators.MultiobjectiveHillClimbingDistance.generatortype</definition>
+        <argsstring></argsstring>
+        <name>generatortype</name>
+        <qualifiedname>metaheuristics.generators.MultiobjectiveHillClimbingDistance.generatortype</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/MultiobjectiveHillClimbingDistance.java" line="30" column="25" bodyfile="practica5/src/main/java/metaheuristics/generators/MultiobjectiveHillClimbingDistance.java" bodystart="30" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1ac98991295145587cd6f514f3f97c8037" compoundref="MultiobjectiveHillClimbingDistance_8java" startline="203" endline="205">metaheuristics.generators.MultiobjectiveHillClimbingDistance.getGeneratorType</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1abf2593f91d8b9f80960a4b73205b8e92" compoundref="MultiobjectiveHillClimbingDistance_8java" startline="211" endline="213">metaheuristics.generators.MultiobjectiveHillClimbingDistance.setGeneratorType</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a783b28f8f12ec4038acadd2f65da32b8" prot="protected" static="no" mutable="no">
+        <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+        <definition>List&lt;State&gt; metaheuristics.generators.MultiobjectiveHillClimbingDistance.listStateReference</definition>
+        <argsstring></argsstring>
+        <name>listStateReference</name>
+        <qualifiedname>metaheuristics.generators.MultiobjectiveHillClimbingDistance.listStateReference</qualifiedname>
+        <initializer>= new ArrayList&lt;<ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref>&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/MultiobjectiveHillClimbingDistance.java" line="31" column="16" bodyfile="practica5/src/main/java/metaheuristics/generators/MultiobjectiveHillClimbingDistance.java" bodystart="31" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1ab42dff866b566cdebbaff1cf525f1cc6" compoundref="MultiobjectiveHillClimbingDistance_8java" startline="168" endline="171">metaheuristics.generators.MultiobjectiveHillClimbingDistance.getReferenceList</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a11f07097b43f6c1b6effebe39a417e80" prot="protected" static="no" mutable="no">
+        <type>float</type>
+        <definition>float metaheuristics.generators.MultiobjectiveHillClimbingDistance.weight</definition>
+        <argsstring></argsstring>
+        <name>weight</name>
+        <qualifiedname>metaheuristics.generators.MultiobjectiveHillClimbingDistance.weight</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/MultiobjectiveHillClimbingDistance.java" line="32" column="17" bodyfile="practica5/src/main/java/metaheuristics/generators/MultiobjectiveHillClimbingDistance.java" bodystart="32" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a0746a26ac2d1d9704d6fe70a8b388eaf" compoundref="MultiobjectiveHillClimbingDistance_8java" startline="50" endline="60">metaheuristics.generators.MultiobjectiveHillClimbingDistance.MultiobjectiveHillClimbingDistance</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a5648b368f9668f65f8da3752f8989802" compoundref="MultiobjectiveHillClimbingDistance_8java" startline="310" endline="313">metaheuristics.generators.MultiobjectiveHillClimbingDistance.setWeight</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1aacc979cdd75b9a163ee31b2c64b6ada8" prot="protected" static="no" mutable="no">
+        <type>List&lt; Float &gt;</type>
+        <definition>List&lt;Float&gt; metaheuristics.generators.MultiobjectiveHillClimbingDistance.listTrace</definition>
+        <argsstring></argsstring>
+        <name>listTrace</name>
+        <qualifiedname>metaheuristics.generators.MultiobjectiveHillClimbingDistance.listTrace</qualifiedname>
+        <initializer>= new ArrayList&lt;Float&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/MultiobjectiveHillClimbingDistance.java" line="33" column="16" bodyfile="practica5/src/main/java/metaheuristics/generators/MultiobjectiveHillClimbingDistance.java" bodystart="33" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a0746a26ac2d1d9704d6fe70a8b388eaf" compoundref="MultiobjectiveHillClimbingDistance_8java" startline="50" endline="60">metaheuristics.generators.MultiobjectiveHillClimbingDistance.MultiobjectiveHillClimbingDistance</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1aa4989ed7210d391970644b534f382d18" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+        <definition>List&lt;State&gt; metaheuristics.generators.MultiobjectiveHillClimbingDistance.visitedState</definition>
+        <argsstring></argsstring>
+        <name>visitedState</name>
+        <qualifiedname>metaheuristics.generators.MultiobjectiveHillClimbingDistance.visitedState</qualifiedname>
+        <initializer>= new ArrayList&lt;<ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref>&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/MultiobjectiveHillClimbingDistance.java" line="34" column="14" bodyfile="practica5/src/main/java/metaheuristics/generators/MultiobjectiveHillClimbingDistance.java" bodystart="34" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1aba3a228cf9acc949e7f9b74ca88ed9f7" compoundref="MultiobjectiveHillClimbingDistance_8java" startline="272" endline="281">metaheuristics.generators.MultiobjectiveHillClimbingDistance.contain</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a35ed16f3af3c7fdcbff8165d9674cc9a" compoundref="MultiobjectiveHillClimbingDistance_8java" startline="87" endline="137">metaheuristics.generators.MultiobjectiveHillClimbingDistance.updateReference</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a9850acb72822604a69bbd959dedb4577" prot="private" static="yes" mutable="no">
+        <type>final int</type>
+        <definition>final int metaheuristics.generators.MultiobjectiveHillClimbingDistance.sizeNeighbors</definition>
+        <argsstring></argsstring>
+        <name>sizeNeighbors</name>
+        <qualifiedname>metaheuristics.generators.MultiobjectiveHillClimbingDistance.sizeNeighbors</qualifiedname>
+        <initializer>= 10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/MultiobjectiveHillClimbingDistance.java" line="35" column="26" bodyfile="practica5/src/main/java/metaheuristics/generators/MultiobjectiveHillClimbingDistance.java" bodystart="35" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1ab0de4c056a6eb043cc62116113db97cc" compoundref="MultiobjectiveHillClimbingDistance_8java" startline="40" endline="42">metaheuristics.generators.MultiobjectiveHillClimbingDistance.getSizeNeighbors</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="package-static-attrib">
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1acd296c73426b9c5585e21351d6f6f423" prot="package" static="yes" mutable="no">
+        <type>List&lt; Double &gt;</type>
+        <definition>List&lt;Double&gt; metaheuristics.generators.MultiobjectiveHillClimbingDistance.distanceSolution</definition>
+        <argsstring></argsstring>
+        <name>distanceSolution</name>
+        <qualifiedname>metaheuristics.generators.MultiobjectiveHillClimbingDistance.distanceSolution</qualifiedname>
+        <initializer>= new ArrayList&lt;Double&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/MultiobjectiveHillClimbingDistance.java" line="44" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/MultiobjectiveHillClimbingDistance.java" bodystart="44" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1ab0de4c056a6eb043cc62116113db97cc" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int metaheuristics.generators.MultiobjectiveHillClimbingDistance.getSizeNeighbors</definition>
+        <argsstring>()</argsstring>
+        <name>getSizeNeighbors</name>
+        <qualifiedname>metaheuristics.generators.MultiobjectiveHillClimbingDistance.getSizeNeighbors</qualifiedname>
+        <briefdescription>
+<para>Accessor for sizeNeighbors. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/MultiobjectiveHillClimbingDistance.java" line="40" column="19" bodyfile="practica5/src/main/java/metaheuristics/generators/MultiobjectiveHillClimbingDistance.java" bodystart="40" bodyend="42"/>
+        <references refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a9850acb72822604a69bbd959dedb4577" compoundref="MultiobjectiveHillClimbingDistance_8java" startline="35">metaheuristics.generators.MultiobjectiveHillClimbingDistance.sizeNeighbors</references>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a35ed16f3af3c7fdcbff8165d9674cc9a" compoundref="MultiobjectiveHillClimbingDistance_8java" startline="87" endline="137">metaheuristics.generators.MultiobjectiveHillClimbingDistance.updateReference</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a03f73587a843776e7601b966f6faa01e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; Double &gt;</type>
+        <definition>static List&lt; Double &gt; metaheuristics.generators.MultiobjectiveHillClimbingDistance.distanceCalculateAdd</definition>
+        <argsstring>(List&lt; State &gt; solution)</argsstring>
+        <name>distanceCalculateAdd</name>
+        <qualifiedname>metaheuristics.generators.MultiobjectiveHillClimbingDistance.distanceCalculateAdd</qualifiedname>
+        <param>
+          <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+          <declname>solution</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/MultiobjectiveHillClimbingDistance.java" line="234" column="20" bodyfile="practica5/src/main/java/metaheuristics/generators/MultiobjectiveHillClimbingDistance.java" bodystart="234" bodyend="264"/>
+        <references refid="classproblem_1_1definition_1_1State_1aac773d24ebabc0a6e1dc041c5039fe47" compoundref="State_8java" startline="185" endline="193">problem.definition.State.Distance</references>
+        <referencedby refid="classlocal__search_1_1acceptation__type_1_1Dominance_1ad61c0e3cb6cc4036419cb36758cf3814" compoundref="Dominance_8java" startline="33" endline="75">local_search.acceptation_type.Dominance.listDominance</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a0746a26ac2d1d9704d6fe70a8b388eaf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>metaheuristics.generators.MultiobjectiveHillClimbingDistance.MultiobjectiveHillClimbingDistance</definition>
+        <argsstring>()</argsstring>
+        <name>MultiobjectiveHillClimbingDistance</name>
+        <qualifiedname>metaheuristics.generators.MultiobjectiveHillClimbingDistance.MultiobjectiveHillClimbingDistance</qualifiedname>
+        <briefdescription>
+<para><ref refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance" kindref="compound">MultiobjectiveHillClimbingDistance</ref> - class that implements the Multiobjective Hill Climbing Distance metaheuristic. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/MultiobjectiveHillClimbingDistance.java" line="50" column="8" bodyfile="practica5/src/main/java/metaheuristics/generators/MultiobjectiveHillClimbingDistance.java" bodystart="50" bodyend="60"/>
+        <references refid="enumlocal__search_1_1acceptation__type_1_1AcceptType_1a1039246733f5d82a07f68318d94f4238" compoundref="AcceptType_8java" startline="15">local_search.acceptation_type.AcceptType.AcceptNotDominated</references>
+        <references refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1aacc979cdd75b9a163ee31b2c64b6ada8" compoundref="MultiobjectiveHillClimbingDistance_8java" startline="33">metaheuristics.generators.MultiobjectiveHillClimbingDistance.listTrace</references>
+        <references refid="enummetaheuristics_1_1generators_1_1GeneratorType_1a18cd5a5c6e13c6481bed1304884cc72f" compoundref="GeneratorType_8java" startline="10">metaheuristics.generators.GeneratorType.MultiobjectiveHillClimbingDistance</references>
+        <references refid="enumlocal__search_1_1complement_1_1StrategyType_1a6319a2518e93ad757c398fb858df8c9e" compoundref="StrategyType_8java" startline="18">local_search.complement.StrategyType.NORMAL</references>
+        <references refid="enumlocal__search_1_1candidate__type_1_1CandidateType_1a326c3971663f1b04171b82871d942319" compoundref="CandidateType_8java" startline="22">local_search.candidate_type.CandidateType.NotDominatedCandidate</references>
+        <references refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a11f07097b43f6c1b6effebe39a417e80" compoundref="MultiobjectiveHillClimbingDistance_8java" startline="32">metaheuristics.generators.MultiobjectiveHillClimbingDistance.weight</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a10e8509749f9e10954b1ca7174e00103" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+        <definition>State metaheuristics.generators.MultiobjectiveHillClimbingDistance.generate</definition>
+        <argsstring>(Integer operatornumber)</argsstring>
+        <name>generate</name>
+        <qualifiedname>metaheuristics.generators.MultiobjectiveHillClimbingDistance.generate</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1a06f6f7622b9ce32590eadbdf6bf962b5">generate</reimplements>
+        <param>
+          <type>Integer</type>
+          <declname>operatornumber</declname>
+        </param>
+        <exceptions> throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException </exceptions>
+        <briefdescription>
+<para>generate - generate a new state based on the operator number. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>operatornumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the operator number to use for generating the state </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the generated state </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/MultiobjectiveHillClimbingDistance.java" line="68" column="14" bodyfile="practica5/src/main/java/metaheuristics/generators/MultiobjectiveHillClimbingDistance.java" bodystart="68" bodyend="72"/>
+        <references refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a2debac8a98c397a38075cf884c40e64c" compoundref="MultiobjectiveHillClimbingDistance_8java" startline="24">metaheuristics.generators.MultiobjectiveHillClimbingDistance.candidatevalue</references>
+        <references refid="classproblem_1_1definition_1_1Operator_1a5b6625843e73d938f9235985bf966b34">problem.definition.Operator.generatedNewState</references>
+        <references refid="classproblem_1_1definition_1_1Problem_1a4cd649edb8862f21af171491cb9b9386" compoundref="Problem_8java" startline="131" endline="133">problem.definition.Problem.getOperator</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1a4bc6bd95db71e14b1f48c1bfc85f1305" compoundref="Strategy_8java" startline="405" endline="407">metaheurictics.strategy.Strategy.getProblem</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1ad2641e12c52292930364de6655333aa8" compoundref="Strategy_8java" startline="80" endline="85">metaheurictics.strategy.Strategy.getStrategy</references>
+        <references refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1ac39189d3dae148f7bc0ec99f46920857" compoundref="MultiobjectiveHillClimbingDistance_8java" startline="28">metaheuristics.generators.MultiobjectiveHillClimbingDistance.stateReferenceHC</references>
+        <references refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1ac2e4de5263cd3bfc836f02c094fa7568" compoundref="MultiobjectiveHillClimbingDistance_8java" startline="26">metaheuristics.generators.MultiobjectiveHillClimbingDistance.strategy</references>
+        <references refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1ae6cb9243a915a01bd386b192dd0f21a8" compoundref="MultiobjectiveHillClimbingDistance_8java" startline="27">metaheuristics.generators.MultiobjectiveHillClimbingDistance.typeCandidate</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a35ed16f3af3c7fdcbff8165d9674cc9a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheuristics.generators.MultiobjectiveHillClimbingDistance.updateReference</definition>
+        <argsstring>(State stateCandidate, Integer countIterationsCurrent)</argsstring>
+        <name>updateReference</name>
+        <qualifiedname>metaheuristics.generators.MultiobjectiveHillClimbingDistance.updateReference</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1aa1c5878953f2111221b21cb9b1e6cc9f">updateReference</reimplements>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>stateCandidate</declname>
+        </param>
+        <param>
+          <type>Integer</type>
+          <declname>countIterationsCurrent</declname>
+        </param>
+        <exceptions> throws IllegalArgumentException, SecurityException, ClassNotFoundException,  	InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException </exceptions>
+        <briefdescription>
+<para>updateReference - update the reference state and the list of visited states. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stateCandidate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>countIterationsCurrent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>IllegalArgumentException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>SecurityException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ClassNotFoundException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>InstantiationException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>IllegalAccessException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>InvocationTargetException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>NoSuchMethodException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/MultiobjectiveHillClimbingDistance.java" line="87" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/MultiobjectiveHillClimbingDistance.java" bodystart="87" bodyend="137"/>
+        <references refid="classlocal__search_1_1acceptation__type_1_1AcceptableCandidate_1aa9e62e1d2d213c3828d2491b506d0592">local_search.acceptation_type.AcceptableCandidate.acceptCandidate</references>
+        <references refid="classproblem_1_1definition_1_1State_1a113f6883a1f6bd20eea2da09a0adc5c3" compoundref="State_8java" startline="142" endline="154">problem.definition.State.clone</references>
+        <references refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1aba3a228cf9acc949e7f9b74ca88ed9f7" compoundref="MultiobjectiveHillClimbingDistance_8java" startline="272" endline="281">metaheuristics.generators.MultiobjectiveHillClimbingDistance.contain</references>
+        <references refid="classproblem_1_1definition_1_1Problem_1a74d56127a8524b4a20f6ab831744f164" compoundref="Problem_8java" startline="171" endline="183">problem.definition.Problem.Evaluate</references>
+        <references refid="classproblem_1_1definition_1_1Operator_1a5b6625843e73d938f9235985bf966b34">problem.definition.Operator.generatedNewState</references>
+        <references refid="classproblem_1_1definition_1_1Operator_1a08c63f0d681ef130fccdb04d24ddf181">problem.definition.Operator.generateRandomState</references>
+        <references refid="classproblem_1_1definition_1_1Problem_1a4cd649edb8862f21af171491cb9b9386" compoundref="Problem_8java" startline="131" endline="133">problem.definition.Problem.getOperator</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1a4bc6bd95db71e14b1f48c1bfc85f1305" compoundref="Strategy_8java" startline="405" endline="407">metaheurictics.strategy.Strategy.getProblem</references>
+        <references refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1ab42dff866b566cdebbaff1cf525f1cc6" compoundref="MultiobjectiveHillClimbingDistance_8java" startline="168" endline="171">metaheuristics.generators.MultiobjectiveHillClimbingDistance.getReferenceList</references>
+        <references refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1ab0de4c056a6eb043cc62116113db97cc" compoundref="MultiobjectiveHillClimbingDistance_8java" startline="40" endline="42">metaheuristics.generators.MultiobjectiveHillClimbingDistance.getSizeNeighbors</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1ad2641e12c52292930364de6655333aa8" compoundref="Strategy_8java" startline="80" endline="85">metaheurictics.strategy.Strategy.getStrategy</references>
+        <references refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a951d109b82b78815b6ef66ebc63a081e" compoundref="MultiobjectiveHillClimbingDistance_8java" startline="29">metaheuristics.generators.MultiobjectiveHillClimbingDistance.ifacceptCandidate</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1aa572e7d90e24bae70ea47a31fee298f4" compoundref="Strategy_8java" startline="49">metaheurictics.strategy.Strategy.listRefPoblacFinal</references>
+        <references refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1ae8f88d2accea4910c8b8be5c6f9794e7" compoundref="MultiobjectiveHillClimbingDistance_8java" startline="145" endline="161">metaheuristics.generators.MultiobjectiveHillClimbingDistance.solutionMoreDistance</references>
+        <references refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1ac39189d3dae148f7bc0ec99f46920857" compoundref="MultiobjectiveHillClimbingDistance_8java" startline="28">metaheuristics.generators.MultiobjectiveHillClimbingDistance.stateReferenceHC</references>
+        <references refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a1386ef8198d329017efcc8c3f5bfb8d7" compoundref="MultiobjectiveHillClimbingDistance_8java" startline="25">metaheuristics.generators.MultiobjectiveHillClimbingDistance.typeAcceptation</references>
+        <references refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1aa4989ed7210d391970644b534f382d18" compoundref="MultiobjectiveHillClimbingDistance_8java" startline="34">metaheuristics.generators.MultiobjectiveHillClimbingDistance.visitedState</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1ab42dff866b566cdebbaff1cf525f1cc6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+        <definition>List&lt; State &gt; metaheuristics.generators.MultiobjectiveHillClimbingDistance.getReferenceList</definition>
+        <argsstring>()</argsstring>
+        <name>getReferenceList</name>
+        <qualifiedname>metaheuristics.generators.MultiobjectiveHillClimbingDistance.getReferenceList</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1ae168237b306de55fe4d6dfda75c7cd13">getReferenceList</reimplements>
+        <briefdescription>
+<para>getReferenceList - get the list of reference states. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the list of reference states </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/MultiobjectiveHillClimbingDistance.java" line="168" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/MultiobjectiveHillClimbingDistance.java" bodystart="168" bodyend="171"/>
+        <references refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a783b28f8f12ec4038acadd2f65da32b8" compoundref="MultiobjectiveHillClimbingDistance_8java" startline="31">metaheuristics.generators.MultiobjectiveHillClimbingDistance.listStateReference</references>
+        <references refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1ac39189d3dae148f7bc0ec99f46920857" compoundref="MultiobjectiveHillClimbingDistance_8java" startline="28">metaheuristics.generators.MultiobjectiveHillClimbingDistance.stateReferenceHC</references>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a35ed16f3af3c7fdcbff8165d9674cc9a" compoundref="MultiobjectiveHillClimbingDistance_8java" startline="87" endline="137">metaheuristics.generators.MultiobjectiveHillClimbingDistance.updateReference</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a219a98e382eb43c702733aa3cd3c9911" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+        <definition>State metaheuristics.generators.MultiobjectiveHillClimbingDistance.getReference</definition>
+        <argsstring>()</argsstring>
+        <name>getReference</name>
+        <qualifiedname>metaheuristics.generators.MultiobjectiveHillClimbingDistance.getReference</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1aa56dd45a45776f6023b9f74179cc6384">getReference</reimplements>
+        <briefdescription>
+<para>getReference - get the reference state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the reference state </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/MultiobjectiveHillClimbingDistance.java" line="178" column="14" bodyfile="practica5/src/main/java/metaheuristics/generators/MultiobjectiveHillClimbingDistance.java" bodystart="178" bodyend="180"/>
+        <references refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1ac39189d3dae148f7bc0ec99f46920857" compoundref="MultiobjectiveHillClimbingDistance_8java" startline="28">metaheuristics.generators.MultiobjectiveHillClimbingDistance.stateReferenceHC</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a739de66fc8d95d6e37225d832db0806d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheuristics.generators.MultiobjectiveHillClimbingDistance.setStateRef</definition>
+        <argsstring>(State stateRef)</argsstring>
+        <name>setStateRef</name>
+        <qualifiedname>metaheuristics.generators.MultiobjectiveHillClimbingDistance.setStateRef</qualifiedname>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>stateRef</declname>
+        </param>
+        <briefdescription>
+<para>setStateRef - set the reference state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stateRef</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the reference state to set </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/MultiobjectiveHillClimbingDistance.java" line="186" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/MultiobjectiveHillClimbingDistance.java" bodystart="186" bodyend="188"/>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a8f99370175ae108cbc9bbd4013217b7d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheuristics.generators.MultiobjectiveHillClimbingDistance.setInitialReference</definition>
+        <argsstring>(State stateInitialRef)</argsstring>
+        <name>setInitialReference</name>
+        <qualifiedname>metaheuristics.generators.MultiobjectiveHillClimbingDistance.setInitialReference</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1aa9f7c4c983705f843b8fcc81e4aa8ba4">setInitialReference</reimplements>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>stateInitialRef</declname>
+        </param>
+        <briefdescription>
+<para>setInitialReference - set the initial reference state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stateInitialRef</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the initial reference state to set </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/MultiobjectiveHillClimbingDistance.java" line="195" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/MultiobjectiveHillClimbingDistance.java" bodystart="195" bodyend="197"/>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1ac98991295145587cd6f514f3f97c8037" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="enummetaheuristics_1_1generators_1_1GeneratorType" kindref="compound">GeneratorType</ref></type>
+        <definition>GeneratorType metaheuristics.generators.MultiobjectiveHillClimbingDistance.getGeneratorType</definition>
+        <argsstring>()</argsstring>
+        <name>getGeneratorType</name>
+        <qualifiedname>metaheuristics.generators.MultiobjectiveHillClimbingDistance.getGeneratorType</qualifiedname>
+        <briefdescription>
+<para>getGeneratorType - get the generator type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the generator type </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/MultiobjectiveHillClimbingDistance.java" line="203" column="22" bodyfile="practica5/src/main/java/metaheuristics/generators/MultiobjectiveHillClimbingDistance.java" bodystart="203" bodyend="205"/>
+        <references refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a46e54bc428d758c1c5905cae573c1cf4" compoundref="MultiobjectiveHillClimbingDistance_8java" startline="30">metaheuristics.generators.MultiobjectiveHillClimbingDistance.generatortype</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1abf2593f91d8b9f80960a4b73205b8e92" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheuristics.generators.MultiobjectiveHillClimbingDistance.setGeneratorType</definition>
+        <argsstring>(GeneratorType generatortype)</argsstring>
+        <name>setGeneratorType</name>
+        <qualifiedname>metaheuristics.generators.MultiobjectiveHillClimbingDistance.setGeneratorType</qualifiedname>
+        <param>
+          <type><ref refid="enummetaheuristics_1_1generators_1_1GeneratorType" kindref="compound">GeneratorType</ref></type>
+          <declname>generatortype</declname>
+        </param>
+        <briefdescription>
+<para>setGeneratorType - set the generator type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>generatortype</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the generator type to set </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/MultiobjectiveHillClimbingDistance.java" line="211" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/MultiobjectiveHillClimbingDistance.java" bodystart="211" bodyend="213"/>
+        <references refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a46e54bc428d758c1c5905cae573c1cf4" compoundref="MultiobjectiveHillClimbingDistance_8java" startline="30">metaheuristics.generators.MultiobjectiveHillClimbingDistance.generatortype</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a11b7751fc6ecab7b94656603397d7bcf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="enummetaheuristics_1_1generators_1_1GeneratorType" kindref="compound">GeneratorType</ref></type>
+        <definition>GeneratorType metaheuristics.generators.MultiobjectiveHillClimbingDistance.getType</definition>
+        <argsstring>()</argsstring>
+        <name>getType</name>
+        <qualifiedname>metaheuristics.generators.MultiobjectiveHillClimbingDistance.getType</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1a5a123306b43c42d28cd1d6e17f8067a5">getType</reimplements>
+        <briefdescription>
+<para>getType - get the generator type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the generator type </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/MultiobjectiveHillClimbingDistance.java" line="220" column="22" bodyfile="practica5/src/main/java/metaheuristics/generators/MultiobjectiveHillClimbingDistance.java" bodystart="220" bodyend="222"/>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1ac6bf6c632f2f4bf2a9bc019da91bed65" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+        <definition>List&lt; State &gt; metaheuristics.generators.MultiobjectiveHillClimbingDistance.getSonList</definition>
+        <argsstring>()</argsstring>
+        <name>getSonList</name>
+        <qualifiedname>metaheuristics.generators.MultiobjectiveHillClimbingDistance.getSonList</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1aee09d724c1b3040e7a7ad0b64e341c96">getSonList</reimplements>
+        <briefdescription>
+<para>getSonList - get the list of child states. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the list of child states </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/MultiobjectiveHillClimbingDistance.java" line="229" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/MultiobjectiveHillClimbingDistance.java" bodystart="229" bodyend="232"/>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1ac57d070cfee49a910d0deb18cfabb12d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean metaheuristics.generators.MultiobjectiveHillClimbingDistance.awardUpdateREF</definition>
+        <argsstring>(State stateCandidate)</argsstring>
+        <name>awardUpdateREF</name>
+        <qualifiedname>metaheuristics.generators.MultiobjectiveHillClimbingDistance.awardUpdateREF</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1a3513d3953ecc97683f38bcb662b74b9b">awardUpdateREF</reimplements>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>stateCandidate</declname>
+        </param>
+        <briefdescription>
+<para>awardUpdateREF - check if the candidate state should update the reference state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stateCandidate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>return true if the reference state should be updated, false otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/MultiobjectiveHillClimbingDistance.java" line="289" column="16" bodyfile="practica5/src/main/java/metaheuristics/generators/MultiobjectiveHillClimbingDistance.java" bodystart="289" bodyend="292"/>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1ad7a218ada739e664148fa6b7a142e230" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float metaheuristics.generators.MultiobjectiveHillClimbingDistance.getWeight</definition>
+        <argsstring>()</argsstring>
+        <name>getWeight</name>
+        <qualifiedname>metaheuristics.generators.MultiobjectiveHillClimbingDistance.getWeight</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1a64f2b824081c7af593bf9aa8eabf2c9e">getWeight</reimplements>
+        <briefdescription>
+<para>getWeight - get the weight of the generator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the weight of the generator </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/MultiobjectiveHillClimbingDistance.java" line="300" column="14" bodyfile="practica5/src/main/java/metaheuristics/generators/MultiobjectiveHillClimbingDistance.java" bodystart="300" bodyend="303"/>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a5648b368f9668f65f8da3752f8989802" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheuristics.generators.MultiobjectiveHillClimbingDistance.setWeight</definition>
+        <argsstring>(float weight)</argsstring>
+        <name>setWeight</name>
+        <qualifiedname>metaheuristics.generators.MultiobjectiveHillClimbingDistance.setWeight</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1a8b3c66b57b4c739666989fbce667eb40">setWeight</reimplements>
+        <param>
+          <type>float</type>
+          <declname>weight</declname>
+        </param>
+        <briefdescription>
+<para>setWeight - set the weight of the generator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>weight</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/MultiobjectiveHillClimbingDistance.java" line="310" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/MultiobjectiveHillClimbingDistance.java" bodystart="310" bodyend="313"/>
+        <references refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a11f07097b43f6c1b6effebe39a417e80" compoundref="MultiobjectiveHillClimbingDistance_8java" startline="32">metaheuristics.generators.MultiobjectiveHillClimbingDistance.weight</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a70b722069fa76ff7807a3e25e4dc715f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int[]</type>
+        <definition>int[] metaheuristics.generators.MultiobjectiveHillClimbingDistance.getListCountBetterGender</definition>
+        <argsstring>()</argsstring>
+        <name>getListCountBetterGender</name>
+        <qualifiedname>metaheuristics.generators.MultiobjectiveHillClimbingDistance.getListCountBetterGender</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1ac5bace71f51c16b611ede3ed53263473">getListCountBetterGender</reimplements>
+        <briefdescription>
+<para>getListCountBetterGender - get the list of counts for better gender. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the list of counts for better gender </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/MultiobjectiveHillClimbingDistance.java" line="320" column="12" bodyfile="practica5/src/main/java/metaheuristics/generators/MultiobjectiveHillClimbingDistance.java" bodystart="320" bodyend="323"/>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a942df58263105b943667198ce31010de" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int[]</type>
+        <definition>int[] metaheuristics.generators.MultiobjectiveHillClimbingDistance.getListCountGender</definition>
+        <argsstring>()</argsstring>
+        <name>getListCountGender</name>
+        <qualifiedname>metaheuristics.generators.MultiobjectiveHillClimbingDistance.getListCountGender</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1ac5d6d45ee8017fb87d80aa952edfc34e">getListCountGender</reimplements>
+        <briefdescription>
+<para>getListCountGender - get the list of counts for gender. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the list of counts for gender </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/MultiobjectiveHillClimbingDistance.java" line="330" column="12" bodyfile="practica5/src/main/java/metaheuristics/generators/MultiobjectiveHillClimbingDistance.java" bodystart="330" bodyend="333"/>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a55f2c227b5ae08a1348abc86b8f7bde0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float[]</type>
+        <definition>float[] metaheuristics.generators.MultiobjectiveHillClimbingDistance.getTrace</definition>
+        <argsstring>()</argsstring>
+        <name>getTrace</name>
+        <qualifiedname>metaheuristics.generators.MultiobjectiveHillClimbingDistance.getTrace</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1a75d7f30dd2cb3f92475db8525ac7c6e7">getTrace</reimplements>
+        <briefdescription>
+<para>getTrace - get the trace of the generator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the trace of the generator </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/MultiobjectiveHillClimbingDistance.java" line="340" column="14" bodyfile="practica5/src/main/java/metaheuristics/generators/MultiobjectiveHillClimbingDistance.java" bodystart="340" bodyend="349"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1ae8f88d2accea4910c8b8be5c6f9794e7" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+        <definition>State metaheuristics.generators.MultiobjectiveHillClimbingDistance.solutionMoreDistance</definition>
+        <argsstring>(List&lt; State &gt; state, List&lt; Double &gt; distanceSolution)</argsstring>
+        <name>solutionMoreDistance</name>
+        <qualifiedname>metaheuristics.generators.MultiobjectiveHillClimbingDistance.solutionMoreDistance</qualifiedname>
+        <param>
+          <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type>List&lt; Double &gt;</type>
+          <declname>distanceSolution</declname>
+        </param>
+        <briefdescription>
+<para>solutionMoreDistance - find the solution with the maximum distance. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the list of states </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>distanceSolution</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the list of distances corresponding to the states </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the state with the maximum distance </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/MultiobjectiveHillClimbingDistance.java" line="145" column="15" bodyfile="practica5/src/main/java/metaheuristics/generators/MultiobjectiveHillClimbingDistance.java" bodystart="145" bodyend="161"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a35ed16f3af3c7fdcbff8165d9674cc9a" compoundref="MultiobjectiveHillClimbingDistance_8java" startline="87" endline="137">metaheuristics.generators.MultiobjectiveHillClimbingDistance.updateReference</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1aba3a228cf9acc949e7f9b74ca88ed9f7" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean metaheuristics.generators.MultiobjectiveHillClimbingDistance.contain</definition>
+        <argsstring>(State state)</argsstring>
+        <name>contain</name>
+        <qualifiedname>metaheuristics.generators.MultiobjectiveHillClimbingDistance.contain</qualifiedname>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>contain - check if the state is contained in the visited states. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>return true if the state is contained, false otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/MultiobjectiveHillClimbingDistance.java" line="272" column="17" bodyfile="practica5/src/main/java/metaheuristics/generators/MultiobjectiveHillClimbingDistance.java" bodystart="272" bodyend="281"/>
+        <references refid="classproblem_1_1definition_1_1State_1aea3cb9557745c174837425d06135f980" compoundref="State_8java" startline="171" endline="178">problem.definition.State.Comparator</references>
+        <references refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1aa4989ed7210d391970644b534f382d18" compoundref="MultiobjectiveHillClimbingDistance_8java" startline="34">metaheuristics.generators.MultiobjectiveHillClimbingDistance.visitedState</references>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a35ed16f3af3c7fdcbff8165d9674cc9a" compoundref="MultiobjectiveHillClimbingDistance_8java" startline="87" endline="137">metaheuristics.generators.MultiobjectiveHillClimbingDistance.updateReference</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance" kindref="compound">MultiobjectiveHillClimbingDistance</ref> - class that implements the Multiobjective Hill Climbing Distance metaheuristic. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>metaheuristics.generators.MultiobjectiveHillClimbingDistance</label>
+        <link refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>metaheuristics.generators.Generator</label>
+        <link refid="classmetaheuristics_1_1generators_1_1Generator"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="11">
+        <label>Cloneable</label>
+      </node>
+      <node id="13">
+        <label>factory_interface.IFFactoryAcceptCandidate</label>
+        <link refid="interfacefactory__interface_1_1IFFactoryAcceptCandidate"/>
+      </node>
+      <node id="4">
+        <label>factory_interface.IFFactoryCandidate</label>
+        <link refid="interfacefactory__interface_1_1IFFactoryCandidate"/>
+      </node>
+      <node id="7">
+        <label>local_search.acceptation_type.AcceptType</label>
+        <link refid="enumlocal__search_1_1acceptation__type_1_1AcceptType"/>
+      </node>
+      <node id="9">
+        <label>local_search.candidate_type.CandidateType</label>
+        <link refid="enumlocal__search_1_1candidate__type_1_1CandidateType"/>
+      </node>
+      <node id="3">
+        <label>local_search.candidate_type.CandidateValue</label>
+        <link refid="classlocal__search_1_1candidate__type_1_1CandidateValue"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-ifFactory</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>-tabusolution</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>-searchcandidate</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>local_search.candidate_type.SearchCandidate</label>
+        <link refid="classlocal__search_1_1candidate__type_1_1SearchCandidate"/>
+      </node>
+      <node id="8">
+        <label>local_search.complement.StrategyType</label>
+        <link refid="enumlocal__search_1_1complement_1_1StrategyType"/>
+      </node>
+      <node id="5">
+        <label>local_search.complement.TabuSolutions</label>
+        <link refid="classlocal__search_1_1complement_1_1TabuSolutions"/>
+      </node>
+      <node id="1">
+        <label>metaheuristics.generators.MultiobjectiveHillClimbingDistance</label>
+        <link refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>#candidatevalue</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>#typeAcceptation</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>#strategy</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>#typeCandidate</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>#stateReferenceHC</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>#ifacceptCandidate</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>#generatortype</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>metaheuristics.generators.Generator</label>
+        <link refid="classmetaheuristics_1_1generators_1_1Generator"/>
+      </node>
+      <node id="12">
+        <label>metaheuristics.generators.GeneratorType</label>
+        <link refid="enummetaheuristics_1_1generators_1_1GeneratorType"/>
+      </node>
+      <node id="10">
+        <label>problem.definition.State</label>
+        <link refid="classproblem_1_1definition_1_1State"/>
+        <childnode refid="11" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>#typeGenerator</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="practica5/src/main/java/metaheuristics/generators/MultiobjectiveHillClimbingDistance.java" line="22" column="7" bodyfile="practica5/src/main/java/metaheuristics/generators/MultiobjectiveHillClimbingDistance.java" bodystart="22" bodyend="350"/>
+    <listofallmembers>
+      <member refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1ac57d070cfee49a910d0deb18cfabb12d" prot="public" virt="non-virtual"><scope>metaheuristics::generators::MultiobjectiveHillClimbingDistance</scope><name>awardUpdateREF</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a2debac8a98c397a38075cf884c40e64c" prot="protected" virt="non-virtual"><scope>metaheuristics::generators::MultiobjectiveHillClimbingDistance</scope><name>candidatevalue</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1aba3a228cf9acc949e7f9b74ca88ed9f7" prot="private" virt="non-virtual"><scope>metaheuristics::generators::MultiobjectiveHillClimbingDistance</scope><name>contain</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1Generator_1a43815f3944c514ba3156b0e68482befa" prot="public" virt="non-virtual"><scope>metaheuristics::generators::MultiobjectiveHillClimbingDistance</scope><name>countBetterGender</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1Generator_1a3c0145210385b6257c8fc20cac1f830a" prot="public" virt="non-virtual"><scope>metaheuristics::generators::MultiobjectiveHillClimbingDistance</scope><name>countGender</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a03f73587a843776e7601b966f6faa01e" prot="public" virt="non-virtual"><scope>metaheuristics::generators::MultiobjectiveHillClimbingDistance</scope><name>distanceCalculateAdd</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1acd296c73426b9c5585e21351d6f6f423" prot="package" virt="non-virtual"><scope>metaheuristics::generators::MultiobjectiveHillClimbingDistance</scope><name>distanceSolution</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a10e8509749f9e10954b1ca7174e00103" prot="public" virt="non-virtual"><scope>metaheuristics::generators::MultiobjectiveHillClimbingDistance</scope><name>generate</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a46e54bc428d758c1c5905cae573c1cf4" prot="protected" virt="non-virtual"><scope>metaheuristics::generators::MultiobjectiveHillClimbingDistance</scope><name>generatortype</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1ac98991295145587cd6f514f3f97c8037" prot="public" virt="non-virtual"><scope>metaheuristics::generators::MultiobjectiveHillClimbingDistance</scope><name>getGeneratorType</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a70b722069fa76ff7807a3e25e4dc715f" prot="public" virt="non-virtual"><scope>metaheuristics::generators::MultiobjectiveHillClimbingDistance</scope><name>getListCountBetterGender</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a942df58263105b943667198ce31010de" prot="public" virt="non-virtual"><scope>metaheuristics::generators::MultiobjectiveHillClimbingDistance</scope><name>getListCountGender</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a219a98e382eb43c702733aa3cd3c9911" prot="public" virt="non-virtual"><scope>metaheuristics::generators::MultiobjectiveHillClimbingDistance</scope><name>getReference</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1ab42dff866b566cdebbaff1cf525f1cc6" prot="public" virt="non-virtual"><scope>metaheuristics::generators::MultiobjectiveHillClimbingDistance</scope><name>getReferenceList</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1ab0de4c056a6eb043cc62116113db97cc" prot="public" virt="non-virtual"><scope>metaheuristics::generators::MultiobjectiveHillClimbingDistance</scope><name>getSizeNeighbors</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1ac6bf6c632f2f4bf2a9bc019da91bed65" prot="public" virt="non-virtual"><scope>metaheuristics::generators::MultiobjectiveHillClimbingDistance</scope><name>getSonList</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a55f2c227b5ae08a1348abc86b8f7bde0" prot="public" virt="non-virtual"><scope>metaheuristics::generators::MultiobjectiveHillClimbingDistance</scope><name>getTrace</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a11b7751fc6ecab7b94656603397d7bcf" prot="public" virt="non-virtual"><scope>metaheuristics::generators::MultiobjectiveHillClimbingDistance</scope><name>getType</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1ad7a218ada739e664148fa6b7a142e230" prot="public" virt="non-virtual"><scope>metaheuristics::generators::MultiobjectiveHillClimbingDistance</scope><name>getWeight</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a951d109b82b78815b6ef66ebc63a081e" prot="protected" virt="non-virtual"><scope>metaheuristics::generators::MultiobjectiveHillClimbingDistance</scope><name>ifacceptCandidate</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a783b28f8f12ec4038acadd2f65da32b8" prot="protected" virt="non-virtual"><scope>metaheuristics::generators::MultiobjectiveHillClimbingDistance</scope><name>listStateReference</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1aacc979cdd75b9a163ee31b2c64b6ada8" prot="protected" virt="non-virtual"><scope>metaheuristics::generators::MultiobjectiveHillClimbingDistance</scope><name>listTrace</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a0746a26ac2d1d9704d6fe70a8b388eaf" prot="public" virt="non-virtual"><scope>metaheuristics::generators::MultiobjectiveHillClimbingDistance</scope><name>MultiobjectiveHillClimbingDistance</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1abf2593f91d8b9f80960a4b73205b8e92" prot="public" virt="non-virtual"><scope>metaheuristics::generators::MultiobjectiveHillClimbingDistance</scope><name>setGeneratorType</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a8f99370175ae108cbc9bbd4013217b7d" prot="public" virt="non-virtual"><scope>metaheuristics::generators::MultiobjectiveHillClimbingDistance</scope><name>setInitialReference</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a739de66fc8d95d6e37225d832db0806d" prot="public" virt="non-virtual"><scope>metaheuristics::generators::MultiobjectiveHillClimbingDistance</scope><name>setStateRef</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a5648b368f9668f65f8da3752f8989802" prot="public" virt="non-virtual"><scope>metaheuristics::generators::MultiobjectiveHillClimbingDistance</scope><name>setWeight</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a9850acb72822604a69bbd959dedb4577" prot="private" virt="non-virtual"><scope>metaheuristics::generators::MultiobjectiveHillClimbingDistance</scope><name>sizeNeighbors</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1ae8f88d2accea4910c8b8be5c6f9794e7" prot="private" virt="non-virtual"><scope>metaheuristics::generators::MultiobjectiveHillClimbingDistance</scope><name>solutionMoreDistance</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1ac39189d3dae148f7bc0ec99f46920857" prot="protected" virt="non-virtual"><scope>metaheuristics::generators::MultiobjectiveHillClimbingDistance</scope><name>stateReferenceHC</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1ac2e4de5263cd3bfc836f02c094fa7568" prot="protected" virt="non-virtual"><scope>metaheuristics::generators::MultiobjectiveHillClimbingDistance</scope><name>strategy</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a1386ef8198d329017efcc8c3f5bfb8d7" prot="protected" virt="non-virtual"><scope>metaheuristics::generators::MultiobjectiveHillClimbingDistance</scope><name>typeAcceptation</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1ae6cb9243a915a01bd386b192dd0f21a8" prot="protected" virt="non-virtual"><scope>metaheuristics::generators::MultiobjectiveHillClimbingDistance</scope><name>typeCandidate</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a35ed16f3af3c7fdcbff8165d9674cc9a" prot="public" virt="non-virtual"><scope>metaheuristics::generators::MultiobjectiveHillClimbingDistance</scope><name>updateReference</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1aa4989ed7210d391970644b534f382d18" prot="private" virt="non-virtual"><scope>metaheuristics::generators::MultiobjectiveHillClimbingDistance</scope><name>visitedState</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a11f07097b43f6c1b6effebe39a417e80" prot="protected" virt="non-virtual"><scope>metaheuristics::generators::MultiobjectiveHillClimbingDistance</scope><name>weight</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

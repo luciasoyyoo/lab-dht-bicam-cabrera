@@ -1,0 +1,46 @@
+\doxysection{Accept\+Not\+Bad\+T.\+java}
+\hypertarget{AcceptNotBadT_8java_source}{}\label{AcceptNotBadT_8java_source}\index{AcceptNotBadT.java@{AcceptNotBadT.java}}
+\mbox{\hyperlink{AcceptNotBadT_8java}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{AcceptNotBadT_8java_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{AcceptNotBadT_8java_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{AcceptNotBadT_8java_source_l00005}00005\ \textcolor{keyword}{package\ }local\_search.acceptation\_type;}
+\DoxyCodeLine{\Hypertarget{AcceptNotBadT_8java_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{AcceptNotBadT_8java_source_l00007}00007\ \textcolor{keyword}{import}\ java.lang.reflect.InvocationTargetException;}
+\DoxyCodeLine{\Hypertarget{AcceptNotBadT_8java_source_l00008}00008\ \textcolor{keyword}{import}\ java.util.concurrent.ThreadLocalRandom;}
+\DoxyCodeLine{\Hypertarget{AcceptNotBadT_8java_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{AcceptNotBadT_8java_source_l00010}00010\ \textcolor{keyword}{import}\ metaheurictics.strategy.Strategy;}
+\DoxyCodeLine{\Hypertarget{AcceptNotBadT_8java_source_l00011}00011\ \textcolor{keyword}{import}\ metaheuristics.generators.SimulatedAnnealing;}
+\DoxyCodeLine{\Hypertarget{AcceptNotBadT_8java_source_l00012}00012\ \textcolor{keyword}{import}\ problem.definition.Problem;}
+\DoxyCodeLine{\Hypertarget{AcceptNotBadT_8java_source_l00013}00013\ \textcolor{keyword}{import}\ problem.definition.State;}
+\DoxyCodeLine{\Hypertarget{AcceptNotBadT_8java_source_l00014}00014\ \textcolor{keyword}{import}\ problem.definition.Problem.ProblemType;}
+\DoxyCodeLine{\Hypertarget{AcceptNotBadT_8java_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{AcceptNotBadT_8java_source_l00022}\mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1AcceptNotBadT}{00022}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1AcceptNotBadT}{AcceptNotBadT}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1AcceptableCandidate}{AcceptableCandidate}}\{}
+\DoxyCodeLine{\Hypertarget{AcceptNotBadT_8java_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{AcceptNotBadT_8java_source_l00029}00029\ \ \ \ \ @SuppressWarnings(\textcolor{stringliteral}{"{}squid:S2245"{}})}
+\DoxyCodeLine{\Hypertarget{AcceptNotBadT_8java_source_l00030}00030\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{AcceptNotBadT_8java_source_l00045}\mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1AcceptNotBadT_ab913b2e75ae2c8a85091ba229f13d123}{00045}}\ \ \ \ \ \textcolor{keyword}{public}\ Boolean\ \mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1AcceptNotBadT_ab913b2e75ae2c8a85091ba229f13d123}{acceptCandidate}}(\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ stateCurrent,\ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ stateCandidate)\ \textcolor{keywordflow}{throws}\ IllegalArgumentException,\ SecurityException,\ ClassNotFoundException,\ InstantiationException,\ IllegalAccessException,\ InvocationTargetException,\ NoSuchMethodException\ \{}
+\DoxyCodeLine{\Hypertarget{AcceptNotBadT_8java_source_l00046}00046\ \ \ \ \ \ \ \ \ Boolean\ accept\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{AcceptNotBadT_8java_source_l00047}00047\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classproblem_1_1definition_1_1Problem}{Problem}}\ problem\ =\ \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy}{Strategy}}.\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_ad2641e12c52292930364de6655333aa8}{getStrategy}}().\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_a4bc6bd95db71e14b1f48c1bfc85f1305}{getProblem}}();}
+\DoxyCodeLine{\Hypertarget{AcceptNotBadT_8java_source_l00048}00048\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (problem.getTypeProblem().equals(\mbox{\hyperlink{enumproblem_1_1definition_1_1Problem_1_1ProblemType}{ProblemType}}.\mbox{\hyperlink{enumproblem_1_1definition_1_1Problem_1_1ProblemType_aa55383c4cb9a71cfeabc7f715ee0cd6e}{Maximizar}}))\ \{}
+\DoxyCodeLine{\Hypertarget{AcceptNotBadT_8java_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ result\ =\ (stateCandidate.getEvaluation().\textcolor{keyword}{get}(0)\ -\/\ stateCurrent.getEvaluation().get(0))\ /\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1SimulatedAnnealing}{SimulatedAnnealing}}.\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a54de458e42332b9c5c0146f1e5b29626}{getTinitial}}();}
+\DoxyCodeLine{\Hypertarget{AcceptNotBadT_8java_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ probaleatory\ =\ ThreadLocalRandom.current().nextDouble();}
+\DoxyCodeLine{\Hypertarget{AcceptNotBadT_8java_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ exp\ =\ Math.exp(result);}
+\DoxyCodeLine{\Hypertarget{AcceptNotBadT_8java_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((stateCandidate.getEvaluation().get(0)\ >=\ stateCurrent.getEvaluation().get(0))}
+\DoxyCodeLine{\Hypertarget{AcceptNotBadT_8java_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ||\ (probaleatory\ <\ exp))}
+\DoxyCodeLine{\Hypertarget{AcceptNotBadT_8java_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ accept\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{AcceptNotBadT_8java_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{AcceptNotBadT_8java_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ accept\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{AcceptNotBadT_8java_source_l00057}00057\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{AcceptNotBadT_8java_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ result\_min\ =\ (stateCandidate.getEvaluation().\textcolor{keyword}{get}(0)\ -\/\ stateCurrent.getEvaluation().get(0))\ /\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1SimulatedAnnealing}{SimulatedAnnealing}}.\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1SimulatedAnnealing_a54de458e42332b9c5c0146f1e5b29626}{getTinitial}}();}
+\DoxyCodeLine{\Hypertarget{AcceptNotBadT_8java_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((stateCandidate.getEvaluation().get(0)\ <=\ stateCurrent.getEvaluation().get(0))}
+\DoxyCodeLine{\Hypertarget{AcceptNotBadT_8java_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ||\ (ThreadLocalRandom.current().nextDouble()\ <\ Math.exp(result\_min)))}
+\DoxyCodeLine{\Hypertarget{AcceptNotBadT_8java_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ accept\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{AcceptNotBadT_8java_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{AcceptNotBadT_8java_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ accept\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{AcceptNotBadT_8java_source_l00064}00064\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AcceptNotBadT_8java_source_l00065}00065\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ accept;}
+\DoxyCodeLine{\Hypertarget{AcceptNotBadT_8java_source_l00066}00066\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AcceptNotBadT_8java_source_l00067}00067\ \}}
+
+\end{DoxyCode}

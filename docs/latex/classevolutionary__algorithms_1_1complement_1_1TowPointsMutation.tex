@@ -1,0 +1,102 @@
+\doxysection{Referencia de la clase evolutionary\+\_\+algorithms.\+complement.\+Tow\+Points\+Mutation}
+\hypertarget{classevolutionary__algorithms_1_1complement_1_1TowPointsMutation}{}\label{classevolutionary__algorithms_1_1complement_1_1TowPointsMutation}\index{evolutionary\_algorithms.complement.TowPointsMutation@{evolutionary\_algorithms.complement.TowPointsMutation}}
+
+
+\doxylink{classevolutionary__algorithms_1_1complement_1_1TowPointsMutation}{Tow\+Points\+Mutation} -\/ applies two-\/points mutation.  
+
+
+
+
+Diagrama de herencia de evolutionary\+\_\+algorithms.\+complement.\+Tow\+Points\+Mutation
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=277pt]{classevolutionary__algorithms_1_1complement_1_1TowPointsMutation__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagrama de colaboración de evolutionary\+\_\+algorithms.\+complement.\+Tow\+Points\+Mutation\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=277pt]{classevolutionary__algorithms_1_1complement_1_1TowPointsMutation__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1TowPointsMutation_aba8bc136aacf5eafcd9e73d032218e16}{mutation}} (\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} newind, double PM)
+\begin{DoxyCompactList}\small\item\em mutation -\/ applies two-\/points mutation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+\doxylink{classevolutionary__algorithms_1_1complement_1_1TowPointsMutation}{Tow\+Points\+Mutation} -\/ applies two-\/points mutation. 
+
+Definición en la línea \mbox{\hyperlink{TowPointsMutation_8java_source_l00009}{9}} del archivo \mbox{\hyperlink{TowPointsMutation_8java_source}{Tow\+Points\+Mutation.\+java}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{classevolutionary__algorithms_1_1complement_1_1TowPointsMutation_doc-func-members}
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{classevolutionary__algorithms_1_1complement_1_1TowPointsMutation_aba8bc136aacf5eafcd9e73d032218e16}\index{evolutionary\_algorithms.complement.TowPointsMutation@{evolutionary\_algorithms.complement.TowPointsMutation}!mutation@{mutation}}
+\index{mutation@{mutation}!evolutionary\_algorithms.complement.TowPointsMutation@{evolutionary\_algorithms.complement.TowPointsMutation}}
+\doxysubsubsection{\texorpdfstring{mutation()}{mutation()}}
+{\footnotesize\ttfamily \label{classevolutionary__algorithms_1_1complement_1_1TowPointsMutation_aba8bc136aacf5eafcd9e73d032218e16} 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} evolutionary\+\_\+algorithms.\+complement.\+Tow\+Points\+Mutation.\+mutation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}}]{newind}{, }\item[{double}]{PM}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+mutation -\/ applies two-\/points mutation. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em newind} & \\
+\hline
+{\em PM} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+returns the mutated state 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1Mutation_a027da26e5a49d8ca908b03acffebb226}{evolutionary\+\_\+algorithms.\+complement.\+Mutation}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{TowPointsMutation_8java_source_l00020}{20}} del archivo \mbox{\hyperlink{TowPointsMutation_8java_source}{Tow\+Points\+Mutation.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ Object\ key1\ =\ Strategy.getStrategy().getProblem().getCodification().getAleatoryKey();}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ Object\ key2\ =\ Strategy.getStrategy().getProblem().getCodification().getAleatoryKey();}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ Object\ value1\ =\ Strategy.getStrategy().getProblem().getCodification().getVariableAleatoryValue((Integer)\ key1);}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ Object\ value2\ =\ Strategy.getStrategy().getProblem().getCodification().getVariableAleatoryValue((Integer)\ key2);}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ newind.getCode().set((Integer)\ key1,\ (Integer)value2);}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ newind.getCode().set((Integer)\ key2,\ (Integer)value1);}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ newind;}
+\DoxyCodeLine{00028\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{classproblem_1_1definition_1_1Codification_a01a0c8247d76d4c4c32c7f3e51c2d5f8}{problem.\+definition.\+Codification.\+get\+Aleatory\+Key()}}, \mbox{\hyperlink{State_8java_source_l00068}{problem.\+definition.\+State.\+get\+Code()}}, \mbox{\hyperlink{Problem_8java_source_l00114}{problem.\+definition.\+Problem.\+get\+Codification()}}, \mbox{\hyperlink{Strategy_8java_source_l00405}{metaheurictics.\+strategy.\+Strategy.\+get\+Problem()}}, \mbox{\hyperlink{Strategy_8java_source_l00080}{metaheurictics.\+strategy.\+Strategy.\+get\+Strategy()}} y \mbox{\hyperlink{classproblem_1_1definition_1_1Codification_ad5875a47b3e863653ede3bb7feae524f}{problem.\+definition.\+Codification.\+get\+Variable\+Aleatory\+Value()}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classevolutionary__algorithms_1_1complement_1_1TowPointsMutation_aba8bc136aacf5eafcd9e73d032218e16_cgraph}
+\end{center}
+\end{figure}
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{TowPointsMutation_8java}{Tow\+Points\+Mutation.\+java}}\end{DoxyCompactItemize}

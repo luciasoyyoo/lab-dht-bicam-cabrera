@@ -1,0 +1,102 @@
+\doxysection{Referencia de la clase factory\+\_\+method.\+Factory\+Loader}
+\hypertarget{classfactory__method_1_1FactoryLoader}{}\label{classfactory__method_1_1FactoryLoader}\index{factory\_method.FactoryLoader@{factory\_method.FactoryLoader}}
+
+
+\doxylink{classfactory__method_1_1FactoryLoader}{Factory\+Loader} -\/ Class responsible for loading factory classes.  
+
+
+
+
+Diagrama de colaboración de factory\+\_\+method.\+Factory\+Loader\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=239pt]{classfactory__method_1_1FactoryLoader__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Métodos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static Object \mbox{\hyperlink{classfactory__method_1_1FactoryLoader_a4e61ffc7038a082277d67e3e59cdb859}{get\+Instance}} (String class\+Name)  throws Class\+Not\+Found\+Exception, Illegal\+Argument\+Exception, Security\+Exception, Instantiation\+Exception, Illegal\+Access\+Exception, Invocation\+Target\+Exception, No\+Such\+Method\+Exception
+\begin{DoxyCompactList}\small\item\em \doxylink{classfactory__method_1_1FactoryLoader}{Factory\+Loader} -\/ Carga dinámicamente una clase por su nombre y crea una instancia. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+\doxylink{classfactory__method_1_1FactoryLoader}{Factory\+Loader} -\/ Class responsible for loading factory classes. 
+
+Definición en la línea \mbox{\hyperlink{FactoryLoader_8java_source_l00008}{8}} del archivo \mbox{\hyperlink{FactoryLoader_8java_source}{Factory\+Loader.\+java}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{classfactory__method_1_1FactoryLoader_doc-func-members}
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{classfactory__method_1_1FactoryLoader_a4e61ffc7038a082277d67e3e59cdb859}\index{factory\_method.FactoryLoader@{factory\_method.FactoryLoader}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!factory\_method.FactoryLoader@{factory\_method.FactoryLoader}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily \label{classfactory__method_1_1FactoryLoader_a4e61ffc7038a082277d67e3e59cdb859} 
+Object factory\+\_\+method.\+Factory\+Loader.\+get\+Instance (\begin{DoxyParamCaption}\item[{String}]{class\+Name}{}\end{DoxyParamCaption}) throws Class\+Not\+Found\+Exception, Illegal\+Argument\+Exception, Security\+Exception, Instantiation\+Exception, Illegal\+Access\+Exception, Invocation\+Target\+Exception, No\+Such\+Method\+Exception\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+\doxylink{classfactory__method_1_1FactoryLoader}{Factory\+Loader} -\/ Carga dinámicamente una clase por su nombre y crea una instancia. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em class\+Name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em Class\+Not\+Found\+Exception} & \\
+\hline
+{\em Illegal\+Argument\+Exception} & \\
+\hline
+{\em Security\+Exception} & \\
+\hline
+{\em Instantiation\+Exception} & \\
+\hline
+{\em Illegal\+Access\+Exception} & \\
+\hline
+{\em Invocation\+Target\+Exception} & \\
+\hline
+{\em No\+Such\+Method\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definición en la línea \mbox{\hyperlink{FactoryLoader_8java_source_l00021}{21}} del archivo \mbox{\hyperlink{FactoryLoader_8java_source}{Factory\+Loader.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Let\ exceptions\ propagate\ to\ caller\ instead\ of\ swallowing\ them\ (prevents\ null\ dereference)}}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ @SuppressWarnings(\textcolor{stringliteral}{"{}rawtypes"{}})}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ Class\ c\ =\ Class.forName(className);}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ use\ getDeclaredConstructor().newInstance()\ to\ avoid\ deprecated\ Class.newInstance()}}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ Object\ o\ =\ c.getDeclaredConstructor().newInstance();}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ return\ o;}
+\DoxyCodeLine{00028\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referenciado por \mbox{\hyperlink{FactoryAcceptCandidate_8java_source_l00029}{factory\+\_\+method.\+Factory\+Accept\+Candidate.\+create\+Accept\+Candidate()}}, \mbox{\hyperlink{FactoryCrossover_8java_source_l00024}{factory\+\_\+method.\+Factory\+Crossover.\+create\+Crossover()}}, \mbox{\hyperlink{FactoryDistribution_8java_source_l00020}{factory\+\_\+method.\+Factory\+Distribution.\+create\+Distribution()}}, \mbox{\hyperlink{FactorySolutionMethod_8java_source_l00022}{factory\+\_\+method.\+Factory\+Solution\+Method.\+created\+Solution\+Method()}}, \mbox{\hyperlink{FactoryGenerator_8java_source_l00025}{factory\+\_\+method.\+Factory\+Generator.\+create\+Generator()}}, \mbox{\hyperlink{FactoryMutation_8java_source_l00024}{factory\+\_\+method.\+Factory\+Mutation.\+create\+Mutation()}}, \mbox{\hyperlink{FactoryReplace_8java_source_l00026}{factory\+\_\+method.\+Factory\+Replace.\+create\+Replace()}}, \mbox{\hyperlink{FactorySampling_8java_source_l00023}{factory\+\_\+method.\+Factory\+Sampling.\+create\+Sampling()}}, \mbox{\hyperlink{FactoryCandidate_8java_source_l00026}{factory\+\_\+method.\+Factory\+Candidate.\+create\+Search\+Candidate()}} y \mbox{\hyperlink{FactoryFatherSelection_8java_source_l00024}{factory\+\_\+method.\+Factory\+Father\+Selection.\+create\+Select\+Father()}}.
+
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classfactory__method_1_1FactoryLoader_a4e61ffc7038a082277d67e3e59cdb859_icgraph}
+\end{center}
+\end{figure}
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{FactoryLoader_8java}{Factory\+Loader.\+java}}\end{DoxyCompactItemize}

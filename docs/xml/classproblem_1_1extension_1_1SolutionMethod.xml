@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="es">
+  <compounddef id="classproblem_1_1extension_1_1SolutionMethod" kind="class" language="Java" prot="public" abstract="yes">
+    <compoundname>problem::extension::SolutionMethod</compoundname>
+    <derivedcompoundref refid="classproblem_1_1extension_1_1FactoresPonderados" prot="public" virt="non-virtual">problem.extension.FactoresPonderados</derivedcompoundref>
+    <derivedcompoundref refid="classproblem_1_1extension_1_1MultiObjetivoPuro" prot="public" virt="non-virtual">problem.extension.MultiObjetivoPuro</derivedcompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classproblem_1_1extension_1_1SolutionMethod_1ae31d6d6000b9043bdee5e2d79fd2a628" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>abstract void</type>
+        <definition>abstract void problem.extension.SolutionMethod.evaluationState</definition>
+        <argsstring>(State state)</argsstring>
+        <name>evaluationState</name>
+        <qualifiedname>problem.extension.SolutionMethod.evaluationState</qualifiedname>
+        <reimplementedby refid="classproblem_1_1extension_1_1FactoresPonderados_1a935d426d08fbf69af9ea5fe2196692bc">evaluationState</reimplementedby>
+        <reimplementedby refid="classproblem_1_1extension_1_1MultiObjetivoPuro_1aaac35db96f3f750b6f5349243c39d122">evaluationState</reimplementedby>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>Evaluar un estado según el método de solución concreto. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>estado a evaluar; se espera que la implementación modifique la lista de evaluaciones del estado. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/problem/extension/SolutionMethod.java" line="20" column="22"/>
+        <referencedby refid="classproblem_1_1definition_1_1Problem_1a74d56127a8524b4a20f6ab831744f164" compoundref="Problem_8java" startline="171" endline="183">problem.definition.Problem.Evaluate</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="classproblem_1_1extension_1_1SolutionMethod" kindref="compound">SolutionMethod</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Abstracción para métodos concretos que evalúan un <computeroutput><ref refid="classproblem_1_1definition_1_1State" kindref="compound">problem.definition.State</ref></computeroutput>.</para>
+<para>Implementaciones específicas calculan y asignan la lista de evaluaciones del estado. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>problem.extension.SolutionMethod</label>
+        <link refid="classproblem_1_1extension_1_1SolutionMethod"/>
+      </node>
+      <node id="2">
+        <label>problem.extension.FactoresPonderados</label>
+        <link refid="classproblem_1_1extension_1_1FactoresPonderados"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>problem.extension.MultiObjetivoPuro</label>
+        <link refid="classproblem_1_1extension_1_1MultiObjetivoPuro"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>problem.extension.SolutionMethod</label>
+        <link refid="classproblem_1_1extension_1_1SolutionMethod"/>
+      </node>
+    </collaborationgraph>
+    <location file="practica5/src/main/java/problem/extension/SolutionMethod.java" line="12" column="17" bodyfile="practica5/src/main/java/problem/extension/SolutionMethod.java" bodystart="12" bodyend="21"/>
+    <listofallmembers>
+      <member refid="classproblem_1_1extension_1_1SolutionMethod_1ae31d6d6000b9043bdee5e2d79fd2a628" prot="public" virt="non-virtual"><scope>problem::extension::SolutionMethod</scope><name>evaluationState</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

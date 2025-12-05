@@ -1,0 +1,1031 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="es">
+  <compounddef id="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm" kind="class" language="Java" prot="public">
+    <compoundname>metaheuristics::generators::DistributionEstimationAlgorithm</compoundname>
+    <basecompoundref refid="classmetaheuristics_1_1generators_1_1Generator" prot="public" virt="non-virtual">metaheuristics.generators.Generator</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a4663f82ff00e2f37157c09e12a8fe4fd" prot="private" static="no" mutable="no">
+        <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+        <definition>State metaheuristics.generators.DistributionEstimationAlgorithm.stateReferenceDA</definition>
+        <argsstring></argsstring>
+        <name>stateReferenceDA</name>
+        <qualifiedname>metaheuristics.generators.DistributionEstimationAlgorithm.stateReferenceDA</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" line="32" column="15" bodyfile="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" bodystart="32" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a8087863b6c6a820fdf5c9b6aa3bc151c" compoundref="DistributionEstimationAlgorithm_8java" startline="124" endline="139">metaheuristics.generators.DistributionEstimationAlgorithm.getReference</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1aec5d60202316756f6b08e51f90c11cc0" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+        <definition>List&lt;State&gt; metaheuristics.generators.DistributionEstimationAlgorithm.referenceList</definition>
+        <argsstring></argsstring>
+        <name>referenceList</name>
+        <qualifiedname>metaheuristics.generators.DistributionEstimationAlgorithm.referenceList</qualifiedname>
+        <initializer>= new ArrayList&lt;<ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref>&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" line="33" column="14" bodyfile="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" bodystart="33" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a2e90e06f027b83effd624f8faf132f56" compoundref="DistributionEstimationAlgorithm_8java" startline="214" endline="216">metaheuristics.generators.DistributionEstimationAlgorithm.getListReference</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a951d5d5991b9e676084456258c2c2947" compoundref="DistributionEstimationAlgorithm_8java" startline="189" endline="208">metaheuristics.generators.DistributionEstimationAlgorithm.getListStateRef</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a8087863b6c6a820fdf5c9b6aa3bc151c" compoundref="DistributionEstimationAlgorithm_8java" startline="124" endline="139">metaheuristics.generators.DistributionEstimationAlgorithm.getReference</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1aec5cc42528713e5a6148dcf801967a4f" compoundref="DistributionEstimationAlgorithm_8java" startline="146" endline="153">metaheuristics.generators.DistributionEstimationAlgorithm.getReferenceList</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a76fb30adfebb2354dfd7a3cb2bf5afe3" compoundref="DistributionEstimationAlgorithm_8java" startline="222" endline="224">metaheuristics.generators.DistributionEstimationAlgorithm.setListReference</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1aae6c25e5e1e4c93694755233cb016ea6" compoundref="DistributionEstimationAlgorithm_8java" startline="179" endline="183">metaheuristics.generators.DistributionEstimationAlgorithm.updateReference</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1ac075d9624747efdfb4ee40eb8f05a686" prot="private" static="no" mutable="no">
+        <type><ref refid="interfacefactory__interface_1_1IFFactoryFatherSelection" kindref="compound">IFFactoryFatherSelection</ref></type>
+        <definition>IFFactoryFatherSelection metaheuristics.generators.DistributionEstimationAlgorithm.iffatherselection</definition>
+        <argsstring></argsstring>
+        <name>iffatherselection</name>
+        <qualifiedname>metaheuristics.generators.DistributionEstimationAlgorithm.iffatherselection</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" line="35" column="34" bodyfile="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" bodystart="35" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1aa50eadf373760bd9ddb3345fc64838e7" compoundref="DistributionEstimationAlgorithm_8java" startline="246" endline="252">metaheuristics.generators.DistributionEstimationAlgorithm.getfathersList</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a3ceddf16b5595b4471eeccdb75a101d0" prot="private" static="no" mutable="no">
+        <type><ref refid="interfacefactory__interface_1_1IFFSampling" kindref="compound">IFFSampling</ref></type>
+        <definition>IFFSampling metaheuristics.generators.DistributionEstimationAlgorithm.iffsampling</definition>
+        <argsstring></argsstring>
+        <name>iffsampling</name>
+        <qualifiedname>metaheuristics.generators.DistributionEstimationAlgorithm.iffsampling</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" line="36" column="21" bodyfile="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" bodystart="36" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a5d496021c3310be8abbc218d4bc63baa" compoundref="DistributionEstimationAlgorithm_8java" startline="95" endline="117">metaheuristics.generators.DistributionEstimationAlgorithm.generate</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1ad043e0940b90329de4a34423342bdf80" prot="private" static="no" mutable="no">
+        <type><ref refid="interfacefactory__interface_1_1IFFactoryReplace" kindref="compound">IFFactoryReplace</ref></type>
+        <definition>IFFactoryReplace metaheuristics.generators.DistributionEstimationAlgorithm.iffreplace</definition>
+        <argsstring></argsstring>
+        <name>iffreplace</name>
+        <qualifiedname>metaheuristics.generators.DistributionEstimationAlgorithm.iffreplace</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" line="37" column="26" bodyfile="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" bodystart="37" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1aae6c25e5e1e4c93694755233cb016ea6" compoundref="DistributionEstimationAlgorithm_8java" startline="179" endline="183">metaheuristics.generators.DistributionEstimationAlgorithm.updateReference</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1add9e35cb827a02c81654c3571614999a" prot="private" static="no" mutable="no">
+        <type><ref refid="enumevolutionary__algorithms_1_1complement_1_1DistributionType" kindref="compound">DistributionType</ref></type>
+        <definition>DistributionType metaheuristics.generators.DistributionEstimationAlgorithm.distributionType</definition>
+        <argsstring></argsstring>
+        <name>distributionType</name>
+        <qualifiedname>metaheuristics.generators.DistributionEstimationAlgorithm.distributionType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" line="38" column="26" bodyfile="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" bodystart="38" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a473bbd5a91fcec6c570120bc90ab963a" compoundref="DistributionEstimationAlgorithm_8java" startline="304" endline="306">metaheuristics.generators.DistributionEstimationAlgorithm.getDistributionType</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1ab22c0d511e722c39d85cc6a4486d2772" compoundref="DistributionEstimationAlgorithm_8java" startline="312" endline="314">metaheuristics.generators.DistributionEstimationAlgorithm.setDistributionType</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a6498475ec771820413a3d33dc1ada435" prot="private" static="no" mutable="no">
+        <type><ref refid="enumevolutionary__algorithms_1_1complement_1_1SamplingType" kindref="compound">SamplingType</ref></type>
+        <definition>SamplingType metaheuristics.generators.DistributionEstimationAlgorithm.Samplingtype</definition>
+        <argsstring></argsstring>
+        <name>Samplingtype</name>
+        <qualifiedname>metaheuristics.generators.DistributionEstimationAlgorithm.Samplingtype</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" line="39" column="22" bodyfile="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" bodystart="39" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a5d496021c3310be8abbc218d4bc63baa" compoundref="DistributionEstimationAlgorithm_8java" startline="95" endline="117">metaheuristics.generators.DistributionEstimationAlgorithm.generate</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1ad8d812c866c4528cfcee15fec6ae493c" prot="private" static="no" mutable="no">
+        <type><ref refid="enummetaheuristics_1_1generators_1_1GeneratorType" kindref="compound">GeneratorType</ref></type>
+        <definition>GeneratorType metaheuristics.generators.DistributionEstimationAlgorithm.generatorType</definition>
+        <argsstring></argsstring>
+        <name>generatorType</name>
+        <qualifiedname>metaheuristics.generators.DistributionEstimationAlgorithm.generatorType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" line="45" column="23" bodyfile="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" bodystart="45" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1aa9ae94137e444e26a5ec3c4c7e512b34" compoundref="DistributionEstimationAlgorithm_8java" startline="230" endline="232">metaheuristics.generators.DistributionEstimationAlgorithm.getGeneratorType</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a8d743d159276575ddc51036464d28533" compoundref="DistributionEstimationAlgorithm_8java" startline="238" endline="240">metaheuristics.generators.DistributionEstimationAlgorithm.setGeneratorType</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a29827001a6d79c5b923d0aa477f6fde2" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float metaheuristics.generators.DistributionEstimationAlgorithm.weight</definition>
+        <argsstring></argsstring>
+        <name>weight</name>
+        <qualifiedname>metaheuristics.generators.DistributionEstimationAlgorithm.weight</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" line="49" column="15" bodyfile="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" bodystart="49" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1ad12cfff2a65093d0cd966b9dea4e3c4d" compoundref="DistributionEstimationAlgorithm_8java" startline="60" endline="70">metaheuristics.generators.DistributionEstimationAlgorithm.DistributionEstimationAlgorithm</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a03ea61f13a989523d24b8a50ca1e1d78" compoundref="DistributionEstimationAlgorithm_8java" startline="295" endline="298">metaheuristics.generators.DistributionEstimationAlgorithm.setWeight</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a1e506530844bc24ae7ef61628abeb6c7" prot="private" static="no" mutable="no">
+        <type>int[]</type>
+        <definition>int [] metaheuristics.generators.DistributionEstimationAlgorithm.listCountBetterGender</definition>
+        <argsstring></argsstring>
+        <name>listCountBetterGender</name>
+        <qualifiedname>metaheuristics.generators.DistributionEstimationAlgorithm.listCountBetterGender</qualifiedname>
+        <initializer>= new int[10]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" line="52" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" bodystart="52" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1ad12cfff2a65093d0cd966b9dea4e3c4d" compoundref="DistributionEstimationAlgorithm_8java" startline="60" endline="70">metaheuristics.generators.DistributionEstimationAlgorithm.DistributionEstimationAlgorithm</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a7cb6134151b044ce0afd428b3e6d751e" prot="private" static="no" mutable="no">
+        <type>int[]</type>
+        <definition>int [] metaheuristics.generators.DistributionEstimationAlgorithm.listCountGender</definition>
+        <argsstring></argsstring>
+        <name>listCountGender</name>
+        <qualifiedname>metaheuristics.generators.DistributionEstimationAlgorithm.listCountGender</qualifiedname>
+        <initializer>= new int[10]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" line="53" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" bodystart="53" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1ad12cfff2a65093d0cd966b9dea4e3c4d" compoundref="DistributionEstimationAlgorithm_8java" startline="60" endline="70">metaheuristics.generators.DistributionEstimationAlgorithm.DistributionEstimationAlgorithm</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a1170f5c9f59c259b858518ce5d4b9c53" prot="private" static="no" mutable="no">
+        <type>float[]</type>
+        <definition>float [] metaheuristics.generators.DistributionEstimationAlgorithm.listTrace</definition>
+        <argsstring></argsstring>
+        <name>listTrace</name>
+        <qualifiedname>metaheuristics.generators.DistributionEstimationAlgorithm.listTrace</qualifiedname>
+        <initializer>= new float[1200000]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" line="54" column="15" bodyfile="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" bodystart="54" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1ad12cfff2a65093d0cd966b9dea4e3c4d" compoundref="DistributionEstimationAlgorithm_8java" startline="60" endline="70">metaheuristics.generators.DistributionEstimationAlgorithm.DistributionEstimationAlgorithm</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1ae50e0df6a1c2ba93f382441dd74391a2" prot="private" static="yes" mutable="no">
+        <type>final List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+        <definition>final List&lt;State&gt; metaheuristics.generators.DistributionEstimationAlgorithm.sonList</definition>
+        <argsstring></argsstring>
+        <name>sonList</name>
+        <qualifiedname>metaheuristics.generators.DistributionEstimationAlgorithm.sonList</qualifiedname>
+        <initializer>= new ArrayList&lt;<ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref>&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" line="34" column="27" bodyfile="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" bodystart="34" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a9d9915d817035bd6a090415ab684afbc" compoundref="DistributionEstimationAlgorithm_8java" startline="259" endline="262">metaheuristics.generators.DistributionEstimationAlgorithm.getSonList</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a9c5e4917260b4db67d9250bc25cd6b76" prot="public" static="yes" mutable="no">
+        <type>final <ref refid="enumevolutionary__algorithms_1_1complement_1_1ReplaceType" kindref="compound">ReplaceType</ref></type>
+        <definition>final ReplaceType metaheuristics.generators.DistributionEstimationAlgorithm.replaceType</definition>
+        <argsstring></argsstring>
+        <name>replaceType</name>
+        <qualifiedname>metaheuristics.generators.DistributionEstimationAlgorithm.replaceType</qualifiedname>
+        <initializer>= <ref refid="enumevolutionary__algorithms_1_1complement_1_1ReplaceType_1add8d19fe300f2768faa2a51f56ccf7ed" kindref="member">ReplaceType.GenerationalReplace</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" line="42" column="33" bodyfile="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" bodystart="42" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1aae6c25e5e1e4c93694755233cb016ea6" compoundref="DistributionEstimationAlgorithm_8java" startline="179" endline="183">metaheuristics.generators.DistributionEstimationAlgorithm.updateReference</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1ac2aafd54d7a5db503bfd7d0cf025464d" prot="public" static="yes" mutable="no">
+        <type>final <ref refid="enumevolutionary__algorithms_1_1complement_1_1SelectionType" kindref="compound">SelectionType</ref></type>
+        <definition>final SelectionType metaheuristics.generators.DistributionEstimationAlgorithm.selectionType</definition>
+        <argsstring></argsstring>
+        <name>selectionType</name>
+        <qualifiedname>metaheuristics.generators.DistributionEstimationAlgorithm.selectionType</qualifiedname>
+        <initializer>= <ref refid="enumevolutionary__algorithms_1_1complement_1_1SelectionType_1a122c944398d78db6354b4320bc68b256" kindref="member">SelectionType.TruncationSelection</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" line="43" column="35" bodyfile="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" bodystart="43" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1aa50eadf373760bd9ddb3345fc64838e7" compoundref="DistributionEstimationAlgorithm_8java" startline="246" endline="252">metaheuristics.generators.DistributionEstimationAlgorithm.getfathersList</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a8c33a9ea6b34a10a79b288408d3ba80f" prot="public" static="yes" mutable="no">
+        <type>final int</type>
+        <definition>final int metaheuristics.generators.DistributionEstimationAlgorithm.truncation</definition>
+        <argsstring></argsstring>
+        <name>truncation</name>
+        <qualifiedname>metaheuristics.generators.DistributionEstimationAlgorithm.truncation</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" line="47" column="25" bodyfile="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" bodystart="47" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1aa50eadf373760bd9ddb3345fc64838e7" compoundref="DistributionEstimationAlgorithm_8java" startline="246" endline="252">metaheuristics.generators.DistributionEstimationAlgorithm.getfathersList</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a15b9c3d9f7da69124b58dd08aca096dc" prot="public" static="yes" mutable="no">
+        <type>final int</type>
+        <definition>final int metaheuristics.generators.DistributionEstimationAlgorithm.countRef</definition>
+        <argsstring></argsstring>
+        <name>countRef</name>
+        <qualifiedname>metaheuristics.generators.DistributionEstimationAlgorithm.countRef</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" line="48" column="25" bodyfile="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" bodystart="48" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1RandomSearch_1ad7023836b94dd23bffd78ab7b9915551" compoundref="RandomSearch_8java" startline="66" endline="72">metaheuristics.generators.RandomSearch.generate</referencedby>
+        <referencedby refid="classmetaheurictics_1_1strategy_1_1Strategy_1ae5fae0f94a80e56677aa3f7ac77b6d44" compoundref="Strategy_8java" startline="307" endline="325">metaheurictics.strategy.Strategy.update</referencedby>
+        <referencedby refid="classlocal__search_1_1complement_1_1UpdateParameter_1aa88a78351c0bc5de77f1ad05bee29e11" compoundref="UpdateParameter_8java" startline="39" endline="61">local_search.complement.UpdateParameter.updateParameter</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1ad12cfff2a65093d0cd966b9dea4e3c4d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>metaheuristics.generators.DistributionEstimationAlgorithm.DistributionEstimationAlgorithm</definition>
+        <argsstring>()</argsstring>
+        <name>DistributionEstimationAlgorithm</name>
+        <qualifiedname>metaheuristics.generators.DistributionEstimationAlgorithm.DistributionEstimationAlgorithm</qualifiedname>
+        <briefdescription>
+<para><ref refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm" kindref="compound">DistributionEstimationAlgorithm</ref> - constructor for distribution estimation algorithms. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" line="60" column="8" bodyfile="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" bodystart="60" bodyend="70"/>
+        <references refid="enummetaheuristics_1_1generators_1_1GeneratorType_1aad36814ee53c9a9c502a5fbe48e1d018" compoundref="GeneratorType_8java" startline="8">metaheuristics.generators.GeneratorType.DistributionEstimationAlgorithm</references>
+        <references refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a951d5d5991b9e676084456258c2c2947" compoundref="DistributionEstimationAlgorithm_8java" startline="189" endline="208">metaheuristics.generators.DistributionEstimationAlgorithm.getListStateRef</references>
+        <references refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a1e506530844bc24ae7ef61628abeb6c7" compoundref="DistributionEstimationAlgorithm_8java" startline="52">metaheuristics.generators.DistributionEstimationAlgorithm.listCountBetterGender</references>
+        <references refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a7cb6134151b044ce0afd428b3e6d751e" compoundref="DistributionEstimationAlgorithm_8java" startline="53">metaheuristics.generators.DistributionEstimationAlgorithm.listCountGender</references>
+        <references refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a1170f5c9f59c259b858518ce5d4b9c53" compoundref="DistributionEstimationAlgorithm_8java" startline="54">metaheuristics.generators.DistributionEstimationAlgorithm.listTrace</references>
+        <references refid="enumevolutionary__algorithms_1_1complement_1_1SamplingType_1a5977cc498ccf2fadbb7a661e2d7c5eca" compoundref="SamplingType_8java" startline="7">evolutionary_algorithms.complement.SamplingType.ProbabilisticSampling</references>
+        <references refid="enumevolutionary__algorithms_1_1complement_1_1DistributionType_1ac3bae8d1f4a336c15822dc7524d3ba03" compoundref="DistributionType_8java" startline="7">evolutionary_algorithms.complement.DistributionType.Univariate</references>
+        <references refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a29827001a6d79c5b923d0aa477f6fde2" compoundref="DistributionEstimationAlgorithm_8java" startline="49">metaheuristics.generators.DistributionEstimationAlgorithm.weight</references>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a951d5d5991b9e676084456258c2c2947" compoundref="DistributionEstimationAlgorithm_8java" startline="189" endline="208">metaheuristics.generators.DistributionEstimationAlgorithm.getListStateRef</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a2f10a41d1699e59b53412f2730a105bc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+        <definition>State metaheuristics.generators.DistributionEstimationAlgorithm.maxValue</definition>
+        <argsstring>(List&lt; State &gt; listInd)</argsstring>
+        <name>maxValue</name>
+        <qualifiedname>metaheuristics.generators.DistributionEstimationAlgorithm.maxValue</qualifiedname>
+        <param>
+          <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+          <declname>listInd</declname>
+        </param>
+        <briefdescription>
+<para>maxValue - method to find the state with the maximum value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>listInd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns the state with the maximum evaluation value. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" line="77" column="14" bodyfile="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" bodystart="77" bodyend="87"/>
+        <references refid="classproblem_1_1definition_1_1State_1a226ea6fab8e7060cf131edfdb245a6fa" compoundref="State_8java" startline="104" endline="106">problem.definition.State.getEvaluation</references>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a5d496021c3310be8abbc218d4bc63baa" compoundref="DistributionEstimationAlgorithm_8java" startline="95" endline="117">metaheuristics.generators.DistributionEstimationAlgorithm.generate</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a5d496021c3310be8abbc218d4bc63baa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+        <definition>State metaheuristics.generators.DistributionEstimationAlgorithm.generate</definition>
+        <argsstring>(Integer operatornumber)</argsstring>
+        <name>generate</name>
+        <qualifiedname>metaheuristics.generators.DistributionEstimationAlgorithm.generate</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1a06f6f7622b9ce32590eadbdf6bf962b5">generate</reimplements>
+        <param>
+          <type>Integer</type>
+          <declname>operatornumber</declname>
+        </param>
+        <exceptions> throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException,	NoSuchMethodException </exceptions>
+        <briefdescription>
+<para>generate - method to generate a new state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>operatornumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns the generated state. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" line="95" column="14" bodyfile="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" bodystart="95" bodyend="117"/>
+        <references refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1aa50eadf373760bd9ddb3345fc64838e7" compoundref="DistributionEstimationAlgorithm_8java" startline="246" endline="252">metaheuristics.generators.DistributionEstimationAlgorithm.getfathersList</references>
+        <references refid="classproblem_1_1definition_1_1Problem_1a1427b83a226c7a174deee23925af14e4" compoundref="Problem_8java" startline="57" endline="59">problem.definition.Problem.getFunction</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1a4bc6bd95db71e14b1f48c1bfc85f1305" compoundref="Strategy_8java" startline="405" endline="407">metaheurictics.strategy.Strategy.getProblem</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1ad2641e12c52292930364de6655333aa8" compoundref="Strategy_8java" startline="80" endline="85">metaheurictics.strategy.Strategy.getStrategy</references>
+        <references refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a3ceddf16b5595b4471eeccdb75a101d0" compoundref="DistributionEstimationAlgorithm_8java" startline="36">metaheuristics.generators.DistributionEstimationAlgorithm.iffsampling</references>
+        <references refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a2f10a41d1699e59b53412f2730a105bc" compoundref="DistributionEstimationAlgorithm_8java" startline="77" endline="87">metaheuristics.generators.DistributionEstimationAlgorithm.maxValue</references>
+        <references refid="classevolutionary__algorithms_1_1complement_1_1Sampling_1a6e7058367ab7e7c4758bf37c61a75ba2">evolutionary_algorithms.complement.Sampling.sampling</references>
+        <references refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a6498475ec771820413a3d33dc1ada435" compoundref="DistributionEstimationAlgorithm_8java" startline="39">metaheuristics.generators.DistributionEstimationAlgorithm.Samplingtype</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a8087863b6c6a820fdf5c9b6aa3bc151c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+        <definition>State metaheuristics.generators.DistributionEstimationAlgorithm.getReference</definition>
+        <argsstring>()</argsstring>
+        <name>getReference</name>
+        <qualifiedname>metaheuristics.generators.DistributionEstimationAlgorithm.getReference</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1aa56dd45a45776f6023b9f74179cc6384">getReference</reimplements>
+        <briefdescription>
+<para>getReference - method to get the current reference state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>returns the current reference state. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" line="124" column="14" bodyfile="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" bodystart="124" bodyend="139"/>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1a4bc6bd95db71e14b1f48c1bfc85f1305" compoundref="Strategy_8java" startline="405" endline="407">metaheurictics.strategy.Strategy.getProblem</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1ad2641e12c52292930364de6655333aa8" compoundref="Strategy_8java" startline="80" endline="85">metaheurictics.strategy.Strategy.getStrategy</references>
+        <references refid="classproblem_1_1definition_1_1Problem_1ad6f38df755179e22ffe487ba4a5c8021" compoundref="Problem_8java" startline="97" endline="99">problem.definition.Problem.getTypeProblem</references>
+        <references refid="enumproblem_1_1definition_1_1Problem_1_1ProblemType_1aa55383c4cb9a71cfeabc7f715ee0cd6e" compoundref="Problem_8java" startline="29">problem.definition.Problem.ProblemType.Maximizar</references>
+        <references refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1aec5d60202316756f6b08e51f90c11cc0" compoundref="DistributionEstimationAlgorithm_8java" startline="33">metaheuristics.generators.DistributionEstimationAlgorithm.referenceList</references>
+        <references refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a4663f82ff00e2f37157c09e12a8fe4fd" compoundref="DistributionEstimationAlgorithm_8java" startline="32">metaheuristics.generators.DistributionEstimationAlgorithm.stateReferenceDA</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1aec5cc42528713e5a6148dcf801967a4f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+        <definition>List&lt; State &gt; metaheuristics.generators.DistributionEstimationAlgorithm.getReferenceList</definition>
+        <argsstring>()</argsstring>
+        <name>getReferenceList</name>
+        <qualifiedname>metaheuristics.generators.DistributionEstimationAlgorithm.getReferenceList</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1ae168237b306de55fe4d6dfda75c7cd13">getReferenceList</reimplements>
+        <briefdescription>
+<para>getReferenceList - method to get the list of reference states. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>returns the list of reference states. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" line="146" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" bodystart="146" bodyend="153"/>
+        <references refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1aec5d60202316756f6b08e51f90c11cc0" compoundref="DistributionEstimationAlgorithm_8java" startline="33">metaheuristics.generators.DistributionEstimationAlgorithm.referenceList</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a65df1345bc39190ac99421eefc1bbd67" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="enummetaheuristics_1_1generators_1_1GeneratorType" kindref="compound">GeneratorType</ref></type>
+        <definition>GeneratorType metaheuristics.generators.DistributionEstimationAlgorithm.getType</definition>
+        <argsstring>()</argsstring>
+        <name>getType</name>
+        <qualifiedname>metaheuristics.generators.DistributionEstimationAlgorithm.getType</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1a5a123306b43c42d28cd1d6e17f8067a5">getType</reimplements>
+        <briefdescription>
+<para>getType - method to get the generator type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>returns the generator type. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" line="160" column="22" bodyfile="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" bodystart="160" bodyend="162"/>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a3d83ca9d02abf4db1fbb391855f66c6a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheuristics.generators.DistributionEstimationAlgorithm.setInitialReference</definition>
+        <argsstring>(State stateInitialRef)</argsstring>
+        <name>setInitialReference</name>
+        <qualifiedname>metaheuristics.generators.DistributionEstimationAlgorithm.setInitialReference</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1aa9f7c4c983705f843b8fcc81e4aa8ba4">setInitialReference</reimplements>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>stateInitialRef</declname>
+        </param>
+        <briefdescription>
+<para>setInitialReference - method to set the initial reference state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stateInitialRef</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" line="169" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" bodystart="169" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1aae6c25e5e1e4c93694755233cb016ea6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheuristics.generators.DistributionEstimationAlgorithm.updateReference</definition>
+        <argsstring>(State stateCandidate, Integer countIterationsCurrent)</argsstring>
+        <name>updateReference</name>
+        <qualifiedname>metaheuristics.generators.DistributionEstimationAlgorithm.updateReference</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1aa1c5878953f2111221b21cb9b1e6cc9f">updateReference</reimplements>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>stateCandidate</declname>
+        </param>
+        <param>
+          <type>Integer</type>
+          <declname>countIterationsCurrent</declname>
+        </param>
+        <exceptions> throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException,	NoSuchMethodException </exceptions>
+        <briefdescription>
+<para>updateReference - method to update the reference state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stateCandidate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>countIterationsCurrent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" line="179" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" bodystart="179" bodyend="183"/>
+        <references refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1ad043e0940b90329de4a34423342bdf80" compoundref="DistributionEstimationAlgorithm_8java" startline="37">metaheuristics.generators.DistributionEstimationAlgorithm.iffreplace</references>
+        <references refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1aec5d60202316756f6b08e51f90c11cc0" compoundref="DistributionEstimationAlgorithm_8java" startline="33">metaheuristics.generators.DistributionEstimationAlgorithm.referenceList</references>
+        <references refid="classevolutionary__algorithms_1_1complement_1_1Replace_1aac9402083a696d23ca0d97540d3951e5">evolutionary_algorithms.complement.Replace.replace</references>
+        <references refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a9c5e4917260b4db67d9250bc25cd6b76" compoundref="DistributionEstimationAlgorithm_8java" startline="42">metaheuristics.generators.DistributionEstimationAlgorithm.replaceType</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a951d5d5991b9e676084456258c2c2947" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+        <definition>List&lt; State &gt; metaheuristics.generators.DistributionEstimationAlgorithm.getListStateRef</definition>
+        <argsstring>()</argsstring>
+        <name>getListStateRef</name>
+        <qualifiedname>metaheuristics.generators.DistributionEstimationAlgorithm.getListStateRef</qualifiedname>
+        <briefdescription>
+<para>getListStateRef - method to get the list of reference states. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>returns the list of reference states. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" line="189" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" bodystart="189" bodyend="208"/>
+        <references refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1ad12cfff2a65093d0cd966b9dea4e3c4d" compoundref="DistributionEstimationAlgorithm_8java" startline="60" endline="70">metaheuristics.generators.DistributionEstimationAlgorithm.DistributionEstimationAlgorithm</references>
+        <references refid="enummetaheuristics_1_1generators_1_1GeneratorType_1aad36814ee53c9a9c502a5fbe48e1d018" compoundref="GeneratorType_8java" startline="8">metaheuristics.generators.GeneratorType.DistributionEstimationAlgorithm</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1ac70469856a2b6424f29952c0e77eebf8" compoundref="Strategy_8java" startline="421" endline="433">metaheurictics.strategy.Strategy.getListKey</references>
+        <references refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a2e90e06f027b83effd624f8faf132f56" compoundref="DistributionEstimationAlgorithm_8java" startline="214" endline="216">metaheuristics.generators.DistributionEstimationAlgorithm.getListReference</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1ad2641e12c52292930364de6655333aa8" compoundref="Strategy_8java" startline="80" endline="85">metaheurictics.strategy.Strategy.getStrategy</references>
+        <references refid="classmetaheuristics_1_1generators_1_1RandomSearch_1ab7be9a87a0cb3de1e17f14e79a0b32ce" compoundref="RandomSearch_8java" startline="36">metaheuristics.generators.RandomSearch.listStateReference</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1a72b0b983ab5990ef999037f9c331515a" compoundref="Strategy_8java" startline="38">metaheurictics.strategy.Strategy.mapGenerators</references>
+        <references refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1aec5d60202316756f6b08e51f90c11cc0" compoundref="DistributionEstimationAlgorithm_8java" startline="33">metaheuristics.generators.DistributionEstimationAlgorithm.referenceList</references>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1ad12cfff2a65093d0cd966b9dea4e3c4d" compoundref="DistributionEstimationAlgorithm_8java" startline="60" endline="70">metaheuristics.generators.DistributionEstimationAlgorithm.DistributionEstimationAlgorithm</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a2e90e06f027b83effd624f8faf132f56" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+        <definition>List&lt; State &gt; metaheuristics.generators.DistributionEstimationAlgorithm.getListReference</definition>
+        <argsstring>()</argsstring>
+        <name>getListReference</name>
+        <qualifiedname>metaheuristics.generators.DistributionEstimationAlgorithm.getListReference</qualifiedname>
+        <briefdescription>
+<para>getListReference - method to get the list of reference states. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>returns the list of reference states. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" line="214" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" bodystart="214" bodyend="216"/>
+        <references refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1aec5d60202316756f6b08e51f90c11cc0" compoundref="DistributionEstimationAlgorithm_8java" startline="33">metaheuristics.generators.DistributionEstimationAlgorithm.referenceList</references>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a951d5d5991b9e676084456258c2c2947" compoundref="DistributionEstimationAlgorithm_8java" startline="189" endline="208">metaheuristics.generators.DistributionEstimationAlgorithm.getListStateRef</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a76fb30adfebb2354dfd7a3cb2bf5afe3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheuristics.generators.DistributionEstimationAlgorithm.setListReference</definition>
+        <argsstring>(List&lt; State &gt; listReference)</argsstring>
+        <name>setListReference</name>
+        <qualifiedname>metaheuristics.generators.DistributionEstimationAlgorithm.setListReference</qualifiedname>
+        <param>
+          <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+          <declname>listReference</declname>
+        </param>
+        <briefdescription>
+<para>setListReference - method to set the list of reference states. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>listReference</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" line="222" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" bodystart="222" bodyend="224"/>
+        <references refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1aec5d60202316756f6b08e51f90c11cc0" compoundref="DistributionEstimationAlgorithm_8java" startline="33">metaheuristics.generators.DistributionEstimationAlgorithm.referenceList</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1aa9ae94137e444e26a5ec3c4c7e512b34" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="enummetaheuristics_1_1generators_1_1GeneratorType" kindref="compound">GeneratorType</ref></type>
+        <definition>GeneratorType metaheuristics.generators.DistributionEstimationAlgorithm.getGeneratorType</definition>
+        <argsstring>()</argsstring>
+        <name>getGeneratorType</name>
+        <qualifiedname>metaheuristics.generators.DistributionEstimationAlgorithm.getGeneratorType</qualifiedname>
+        <briefdescription>
+<para>getGeneratorType - method to get the generator type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>returns the generator type. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" line="230" column="22" bodyfile="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" bodystart="230" bodyend="232"/>
+        <references refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1ad8d812c866c4528cfcee15fec6ae493c" compoundref="DistributionEstimationAlgorithm_8java" startline="45">metaheuristics.generators.DistributionEstimationAlgorithm.generatorType</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a8d743d159276575ddc51036464d28533" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheuristics.generators.DistributionEstimationAlgorithm.setGeneratorType</definition>
+        <argsstring>(GeneratorType generatorType)</argsstring>
+        <name>setGeneratorType</name>
+        <qualifiedname>metaheuristics.generators.DistributionEstimationAlgorithm.setGeneratorType</qualifiedname>
+        <param>
+          <type><ref refid="enummetaheuristics_1_1generators_1_1GeneratorType" kindref="compound">GeneratorType</ref></type>
+          <declname>generatorType</declname>
+        </param>
+        <briefdescription>
+<para>setGeneratorType - method to set the generator type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>generatorType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" line="238" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" bodystart="238" bodyend="240"/>
+        <references refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1ad8d812c866c4528cfcee15fec6ae493c" compoundref="DistributionEstimationAlgorithm_8java" startline="45">metaheuristics.generators.DistributionEstimationAlgorithm.generatorType</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1aa50eadf373760bd9ddb3345fc64838e7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+        <definition>List&lt; State &gt; metaheuristics.generators.DistributionEstimationAlgorithm.getfathersList</definition>
+        <argsstring>()</argsstring>
+        <name>getfathersList</name>
+        <qualifiedname>metaheuristics.generators.DistributionEstimationAlgorithm.getfathersList</qualifiedname>
+        <exceptions> throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException </exceptions>
+        <briefdescription>
+<para>getfathersList - method to get the list of father states. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>returns the list of father states. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" line="246" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" bodystart="246" bodyend="252"/>
+        <references refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1ac075d9624747efdfb4ee40eb8f05a686" compoundref="DistributionEstimationAlgorithm_8java" startline="35">metaheuristics.generators.DistributionEstimationAlgorithm.iffatherselection</references>
+        <references refid="classevolutionary__algorithms_1_1complement_1_1FatherSelection_1aa6e6bd01ac639141a67815fb65f7c831">evolutionary_algorithms.complement.FatherSelection.selection</references>
+        <references refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1ac2aafd54d7a5db503bfd7d0cf025464d" compoundref="DistributionEstimationAlgorithm_8java" startline="43">metaheuristics.generators.DistributionEstimationAlgorithm.selectionType</references>
+        <references refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a8c33a9ea6b34a10a79b288408d3ba80f" compoundref="DistributionEstimationAlgorithm_8java" startline="47">metaheuristics.generators.DistributionEstimationAlgorithm.truncation</references>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a5d496021c3310be8abbc218d4bc63baa" compoundref="DistributionEstimationAlgorithm_8java" startline="95" endline="117">metaheuristics.generators.DistributionEstimationAlgorithm.generate</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a9d9915d817035bd6a090415ab684afbc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+        <definition>List&lt; State &gt; metaheuristics.generators.DistributionEstimationAlgorithm.getSonList</definition>
+        <argsstring>()</argsstring>
+        <name>getSonList</name>
+        <qualifiedname>metaheuristics.generators.DistributionEstimationAlgorithm.getSonList</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1aee09d724c1b3040e7a7ad0b64e341c96">getSonList</reimplements>
+        <briefdescription>
+<para>getSonList - method to get the list of son states. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>returns the list of son states. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" line="259" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" bodystart="259" bodyend="262"/>
+        <references refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1ae50e0df6a1c2ba93f382441dd74391a2" compoundref="DistributionEstimationAlgorithm_8java" startline="34">metaheuristics.generators.DistributionEstimationAlgorithm.sonList</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1af7d5ee7c1b8affad2bd7419e375b7c86" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean metaheuristics.generators.DistributionEstimationAlgorithm.awardUpdateREF</definition>
+        <argsstring>(State stateCandidate)</argsstring>
+        <name>awardUpdateREF</name>
+        <qualifiedname>metaheuristics.generators.DistributionEstimationAlgorithm.awardUpdateREF</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1a3513d3953ecc97683f38bcb662b74b9b">awardUpdateREF</reimplements>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>stateCandidate</declname>
+        </param>
+        <briefdescription>
+<para>awardUpdateREF - method to award the update of the reference state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stateCandidate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns true if the candidate state is already in the reference list, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" line="269" column="16" bodyfile="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" bodystart="269" bodyend="278"/>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a54fb6f7606227a703d5398457eae9a37" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float metaheuristics.generators.DistributionEstimationAlgorithm.getWeight</definition>
+        <argsstring>()</argsstring>
+        <name>getWeight</name>
+        <qualifiedname>metaheuristics.generators.DistributionEstimationAlgorithm.getWeight</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1a64f2b824081c7af593bf9aa8eabf2c9e">getWeight</reimplements>
+        <briefdescription>
+<para>getWeight - method to get the weight. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>returns the weight. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" line="285" column="14" bodyfile="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" bodystart="285" bodyend="288"/>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a03ea61f13a989523d24b8a50ca1e1d78" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheuristics.generators.DistributionEstimationAlgorithm.setWeight</definition>
+        <argsstring>(float weight)</argsstring>
+        <name>setWeight</name>
+        <qualifiedname>metaheuristics.generators.DistributionEstimationAlgorithm.setWeight</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1a8b3c66b57b4c739666989fbce667eb40">setWeight</reimplements>
+        <param>
+          <type>float</type>
+          <declname>weight</declname>
+        </param>
+        <briefdescription>
+<para>setWeight - method to set the weight. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>weight</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" line="295" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" bodystart="295" bodyend="298"/>
+        <references refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a29827001a6d79c5b923d0aa477f6fde2" compoundref="DistributionEstimationAlgorithm_8java" startline="49">metaheuristics.generators.DistributionEstimationAlgorithm.weight</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a473bbd5a91fcec6c570120bc90ab963a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="enumevolutionary__algorithms_1_1complement_1_1DistributionType" kindref="compound">DistributionType</ref></type>
+        <definition>DistributionType metaheuristics.generators.DistributionEstimationAlgorithm.getDistributionType</definition>
+        <argsstring>()</argsstring>
+        <name>getDistributionType</name>
+        <qualifiedname>metaheuristics.generators.DistributionEstimationAlgorithm.getDistributionType</qualifiedname>
+        <briefdescription>
+<para>getDistributionType - method to get the distribution type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>returns the distribution type. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" line="304" column="25" bodyfile="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" bodystart="304" bodyend="306"/>
+        <references refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1add9e35cb827a02c81654c3571614999a" compoundref="DistributionEstimationAlgorithm_8java" startline="38">metaheuristics.generators.DistributionEstimationAlgorithm.distributionType</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1ab22c0d511e722c39d85cc6a4486d2772" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheuristics.generators.DistributionEstimationAlgorithm.setDistributionType</definition>
+        <argsstring>(DistributionType distributionType)</argsstring>
+        <name>setDistributionType</name>
+        <qualifiedname>metaheuristics.generators.DistributionEstimationAlgorithm.setDistributionType</qualifiedname>
+        <param>
+          <type><ref refid="enumevolutionary__algorithms_1_1complement_1_1DistributionType" kindref="compound">DistributionType</ref></type>
+          <declname>distributionType</declname>
+        </param>
+        <briefdescription>
+<para>setDistributionType - method to set the distribution type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>distributionType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the distribution type to set </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" line="312" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" bodystart="312" bodyend="314"/>
+        <references refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1add9e35cb827a02c81654c3571614999a" compoundref="DistributionEstimationAlgorithm_8java" startline="38">metaheuristics.generators.DistributionEstimationAlgorithm.distributionType</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a9531a297fed4d19b797aad4c56bf61df" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int[]</type>
+        <definition>int[] metaheuristics.generators.DistributionEstimationAlgorithm.getListCountBetterGender</definition>
+        <argsstring>()</argsstring>
+        <name>getListCountBetterGender</name>
+        <qualifiedname>metaheuristics.generators.DistributionEstimationAlgorithm.getListCountBetterGender</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1ac5bace71f51c16b611ede3ed53263473">getListCountBetterGender</reimplements>
+        <briefdescription>
+<para>getListCountBetterGender - method to get the list of count better gender. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>returns the list of count better gender. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" line="321" column="12" bodyfile="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" bodystart="321" bodyend="324"/>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1ab9a3474ef9ec58a0267dbdcea0317273" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int[]</type>
+        <definition>int[] metaheuristics.generators.DistributionEstimationAlgorithm.getListCountGender</definition>
+        <argsstring>()</argsstring>
+        <name>getListCountGender</name>
+        <qualifiedname>metaheuristics.generators.DistributionEstimationAlgorithm.getListCountGender</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1ac5d6d45ee8017fb87d80aa952edfc34e">getListCountGender</reimplements>
+        <briefdescription>
+<para>getListCountGender - method to get the list of count gender. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>returns the list of count gender. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" line="331" column="12" bodyfile="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" bodystart="331" bodyend="334"/>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a3aa3187d3dc98c005228d80422b52ea6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float[]</type>
+        <definition>float[] metaheuristics.generators.DistributionEstimationAlgorithm.getTrace</definition>
+        <argsstring>()</argsstring>
+        <name>getTrace</name>
+        <qualifiedname>metaheuristics.generators.DistributionEstimationAlgorithm.getTrace</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1a75d7f30dd2cb3f92475db8525ac7c6e7">getTrace</reimplements>
+        <briefdescription>
+<para>getTrace - method to get the trace. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>returns the trace. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" line="341" column="14" bodyfile="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" bodystart="341" bodyend="344"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm" kindref="compound">DistributionEstimationAlgorithm</ref> - class for distribution estimation algorithms. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>metaheuristics.generators.DistributionEstimationAlgorithm</label>
+        <link refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>metaheuristics.generators.Generator</label>
+        <link refid="classmetaheuristics_1_1generators_1_1Generator"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4">
+        <label>Cloneable</label>
+      </node>
+      <node id="9">
+        <label>evolutionary_algorithms.complement.DistributionType</label>
+        <link refid="enumevolutionary__algorithms_1_1complement_1_1DistributionType"/>
+      </node>
+      <node id="11">
+        <label>evolutionary_algorithms.complement.ReplaceType</label>
+        <link refid="enumevolutionary__algorithms_1_1complement_1_1ReplaceType"/>
+      </node>
+      <node id="10">
+        <label>evolutionary_algorithms.complement.SamplingType</label>
+        <link refid="enumevolutionary__algorithms_1_1complement_1_1SamplingType"/>
+      </node>
+      <node id="12">
+        <label>evolutionary_algorithms.complement.SelectionType</label>
+        <link refid="enumevolutionary__algorithms_1_1complement_1_1SelectionType"/>
+      </node>
+      <node id="7">
+        <label>factory_interface.IFFSampling</label>
+        <link refid="interfacefactory__interface_1_1IFFSampling"/>
+      </node>
+      <node id="6">
+        <label>factory_interface.IFFactoryFatherSelection</label>
+        <link refid="interfacefactory__interface_1_1IFFactoryFatherSelection"/>
+      </node>
+      <node id="8">
+        <label>factory_interface.IFFactoryReplace</label>
+        <link refid="interfacefactory__interface_1_1IFFactoryReplace"/>
+      </node>
+      <node id="1">
+        <label>metaheuristics.generators.DistributionEstimationAlgorithm</label>
+        <link refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-stateReferenceDA</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>-iffatherselection</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>-iffsampling</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>-iffreplace</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>-distributionType</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>-Samplingtype</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>+replaceType</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>+selectionType</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>-generatorType</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>metaheuristics.generators.Generator</label>
+        <link refid="classmetaheuristics_1_1generators_1_1Generator"/>
+      </node>
+      <node id="5">
+        <label>metaheuristics.generators.GeneratorType</label>
+        <link refid="enummetaheuristics_1_1generators_1_1GeneratorType"/>
+      </node>
+      <node id="3">
+        <label>problem.definition.State</label>
+        <link refid="classproblem_1_1definition_1_1State"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>#typeGenerator</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" line="30" column="7" bodyfile="practica5/src/main/java/metaheuristics/generators/DistributionEstimationAlgorithm.java" bodystart="30" bodyend="346"/>
+    <listofallmembers>
+      <member refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1af7d5ee7c1b8affad2bd7419e375b7c86" prot="public" virt="non-virtual"><scope>metaheuristics::generators::DistributionEstimationAlgorithm</scope><name>awardUpdateREF</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1Generator_1a43815f3944c514ba3156b0e68482befa" prot="public" virt="non-virtual"><scope>metaheuristics::generators::DistributionEstimationAlgorithm</scope><name>countBetterGender</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1Generator_1a3c0145210385b6257c8fc20cac1f830a" prot="public" virt="non-virtual"><scope>metaheuristics::generators::DistributionEstimationAlgorithm</scope><name>countGender</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a15b9c3d9f7da69124b58dd08aca096dc" prot="public" virt="non-virtual"><scope>metaheuristics::generators::DistributionEstimationAlgorithm</scope><name>countRef</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1ad12cfff2a65093d0cd966b9dea4e3c4d" prot="public" virt="non-virtual"><scope>metaheuristics::generators::DistributionEstimationAlgorithm</scope><name>DistributionEstimationAlgorithm</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1add9e35cb827a02c81654c3571614999a" prot="private" virt="non-virtual"><scope>metaheuristics::generators::DistributionEstimationAlgorithm</scope><name>distributionType</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a5d496021c3310be8abbc218d4bc63baa" prot="public" virt="non-virtual"><scope>metaheuristics::generators::DistributionEstimationAlgorithm</scope><name>generate</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1ad8d812c866c4528cfcee15fec6ae493c" prot="private" virt="non-virtual"><scope>metaheuristics::generators::DistributionEstimationAlgorithm</scope><name>generatorType</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a473bbd5a91fcec6c570120bc90ab963a" prot="public" virt="non-virtual"><scope>metaheuristics::generators::DistributionEstimationAlgorithm</scope><name>getDistributionType</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1aa50eadf373760bd9ddb3345fc64838e7" prot="public" virt="non-virtual"><scope>metaheuristics::generators::DistributionEstimationAlgorithm</scope><name>getfathersList</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1aa9ae94137e444e26a5ec3c4c7e512b34" prot="public" virt="non-virtual"><scope>metaheuristics::generators::DistributionEstimationAlgorithm</scope><name>getGeneratorType</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a9531a297fed4d19b797aad4c56bf61df" prot="public" virt="non-virtual"><scope>metaheuristics::generators::DistributionEstimationAlgorithm</scope><name>getListCountBetterGender</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1ab9a3474ef9ec58a0267dbdcea0317273" prot="public" virt="non-virtual"><scope>metaheuristics::generators::DistributionEstimationAlgorithm</scope><name>getListCountGender</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a2e90e06f027b83effd624f8faf132f56" prot="public" virt="non-virtual"><scope>metaheuristics::generators::DistributionEstimationAlgorithm</scope><name>getListReference</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a951d5d5991b9e676084456258c2c2947" prot="public" virt="non-virtual"><scope>metaheuristics::generators::DistributionEstimationAlgorithm</scope><name>getListStateRef</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a8087863b6c6a820fdf5c9b6aa3bc151c" prot="public" virt="non-virtual"><scope>metaheuristics::generators::DistributionEstimationAlgorithm</scope><name>getReference</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1aec5cc42528713e5a6148dcf801967a4f" prot="public" virt="non-virtual"><scope>metaheuristics::generators::DistributionEstimationAlgorithm</scope><name>getReferenceList</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a9d9915d817035bd6a090415ab684afbc" prot="public" virt="non-virtual"><scope>metaheuristics::generators::DistributionEstimationAlgorithm</scope><name>getSonList</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a3aa3187d3dc98c005228d80422b52ea6" prot="public" virt="non-virtual"><scope>metaheuristics::generators::DistributionEstimationAlgorithm</scope><name>getTrace</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a65df1345bc39190ac99421eefc1bbd67" prot="public" virt="non-virtual"><scope>metaheuristics::generators::DistributionEstimationAlgorithm</scope><name>getType</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a54fb6f7606227a703d5398457eae9a37" prot="public" virt="non-virtual"><scope>metaheuristics::generators::DistributionEstimationAlgorithm</scope><name>getWeight</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1ac075d9624747efdfb4ee40eb8f05a686" prot="private" virt="non-virtual"><scope>metaheuristics::generators::DistributionEstimationAlgorithm</scope><name>iffatherselection</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1ad043e0940b90329de4a34423342bdf80" prot="private" virt="non-virtual"><scope>metaheuristics::generators::DistributionEstimationAlgorithm</scope><name>iffreplace</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a3ceddf16b5595b4471eeccdb75a101d0" prot="private" virt="non-virtual"><scope>metaheuristics::generators::DistributionEstimationAlgorithm</scope><name>iffsampling</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a1e506530844bc24ae7ef61628abeb6c7" prot="private" virt="non-virtual"><scope>metaheuristics::generators::DistributionEstimationAlgorithm</scope><name>listCountBetterGender</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a7cb6134151b044ce0afd428b3e6d751e" prot="private" virt="non-virtual"><scope>metaheuristics::generators::DistributionEstimationAlgorithm</scope><name>listCountGender</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a1170f5c9f59c259b858518ce5d4b9c53" prot="private" virt="non-virtual"><scope>metaheuristics::generators::DistributionEstimationAlgorithm</scope><name>listTrace</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a2f10a41d1699e59b53412f2730a105bc" prot="public" virt="non-virtual"><scope>metaheuristics::generators::DistributionEstimationAlgorithm</scope><name>maxValue</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1aec5d60202316756f6b08e51f90c11cc0" prot="private" virt="non-virtual"><scope>metaheuristics::generators::DistributionEstimationAlgorithm</scope><name>referenceList</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a9c5e4917260b4db67d9250bc25cd6b76" prot="public" virt="non-virtual"><scope>metaheuristics::generators::DistributionEstimationAlgorithm</scope><name>replaceType</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a6498475ec771820413a3d33dc1ada435" prot="private" virt="non-virtual"><scope>metaheuristics::generators::DistributionEstimationAlgorithm</scope><name>Samplingtype</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1ac2aafd54d7a5db503bfd7d0cf025464d" prot="public" virt="non-virtual"><scope>metaheuristics::generators::DistributionEstimationAlgorithm</scope><name>selectionType</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1ab22c0d511e722c39d85cc6a4486d2772" prot="public" virt="non-virtual"><scope>metaheuristics::generators::DistributionEstimationAlgorithm</scope><name>setDistributionType</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a8d743d159276575ddc51036464d28533" prot="public" virt="non-virtual"><scope>metaheuristics::generators::DistributionEstimationAlgorithm</scope><name>setGeneratorType</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a3d83ca9d02abf4db1fbb391855f66c6a" prot="public" virt="non-virtual"><scope>metaheuristics::generators::DistributionEstimationAlgorithm</scope><name>setInitialReference</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a76fb30adfebb2354dfd7a3cb2bf5afe3" prot="public" virt="non-virtual"><scope>metaheuristics::generators::DistributionEstimationAlgorithm</scope><name>setListReference</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a03ea61f13a989523d24b8a50ca1e1d78" prot="public" virt="non-virtual"><scope>metaheuristics::generators::DistributionEstimationAlgorithm</scope><name>setWeight</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1ae50e0df6a1c2ba93f382441dd74391a2" prot="private" virt="non-virtual"><scope>metaheuristics::generators::DistributionEstimationAlgorithm</scope><name>sonList</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a4663f82ff00e2f37157c09e12a8fe4fd" prot="private" virt="non-virtual"><scope>metaheuristics::generators::DistributionEstimationAlgorithm</scope><name>stateReferenceDA</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a8c33a9ea6b34a10a79b288408d3ba80f" prot="public" virt="non-virtual"><scope>metaheuristics::generators::DistributionEstimationAlgorithm</scope><name>truncation</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1aae6c25e5e1e4c93694755233cb016ea6" prot="public" virt="non-virtual"><scope>metaheuristics::generators::DistributionEstimationAlgorithm</scope><name>updateReference</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a29827001a6d79c5b923d0aa477f6fde2" prot="private" virt="non-virtual"><scope>metaheuristics::generators::DistributionEstimationAlgorithm</scope><name>weight</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

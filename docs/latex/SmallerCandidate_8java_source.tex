@@ -1,0 +1,37 @@
+\doxysection{Smaller\+Candidate.\+java}
+\hypertarget{SmallerCandidate_8java_source}{}\label{SmallerCandidate_8java_source}\index{SmallerCandidate.java@{SmallerCandidate.java}}
+\mbox{\hyperlink{SmallerCandidate_8java}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{SmallerCandidate_8java_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{SmallerCandidate_8java_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{SmallerCandidate_8java_source_l00005}00005\ \textcolor{keyword}{package\ }local\_search.candidate\_type;}
+\DoxyCodeLine{\Hypertarget{SmallerCandidate_8java_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{SmallerCandidate_8java_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{SmallerCandidate_8java_source_l00008}00008\ \textcolor{keyword}{import}\ java.lang.reflect.InvocationTargetException;}
+\DoxyCodeLine{\Hypertarget{SmallerCandidate_8java_source_l00009}00009\ \textcolor{keyword}{import}\ java.util.List;}
+\DoxyCodeLine{\Hypertarget{SmallerCandidate_8java_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{SmallerCandidate_8java_source_l00011}00011\ \textcolor{keyword}{import}\ problem.definition.State;}
+\DoxyCodeLine{\Hypertarget{SmallerCandidate_8java_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{SmallerCandidate_8java_source_l00019}\mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1SmallerCandidate}{00019}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1SmallerCandidate}{SmallerCandidate}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1SearchCandidate}{SearchCandidate}}\ \{}
+\DoxyCodeLine{\Hypertarget{SmallerCandidate_8java_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{SmallerCandidate_8java_source_l00021}00021\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{SmallerCandidate_8java_source_l00029}\mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1SmallerCandidate_a69eb3c75ce366bc050c117fa764b82be}{00029}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ \mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1SmallerCandidate_a69eb3c75ce366bc050c117fa764b82be}{stateSearch}}(List<State>\ listNeighborhood)\ \textcolor{keywordflow}{throws}\ IllegalArgumentException,\ SecurityException,\ ClassNotFoundException,\ InstantiationException,\ IllegalAccessException,\ InvocationTargetException,\ NoSuchMethodException\ \{}
+\DoxyCodeLine{\Hypertarget{SmallerCandidate_8java_source_l00030}00030\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ stateSmaller\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{SmallerCandidate_8java_source_l00031}00031\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(listNeighborhood.size()\ >\ 1)\{}
+\DoxyCodeLine{\Hypertarget{SmallerCandidate_8java_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ counter\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{SmallerCandidate_8java_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ currentCount\ =\ listNeighborhood.get(0).getEvaluation().get(0);}
+\DoxyCodeLine{\Hypertarget{SmallerCandidate_8java_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 1;\ i\ <\ listNeighborhood.size();\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{SmallerCandidate_8java_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ counter\ =\ listNeighborhood.get(i).getEvaluation().get(0);}
+\DoxyCodeLine{\Hypertarget{SmallerCandidate_8java_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (counter\ <\ currentCount)\ \{}
+\DoxyCodeLine{\Hypertarget{SmallerCandidate_8java_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ currentCount\ =\ counter;}
+\DoxyCodeLine{\Hypertarget{SmallerCandidate_8java_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ stateSmaller\ =\ listNeighborhood.get(i);}
+\DoxyCodeLine{\Hypertarget{SmallerCandidate_8java_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{SmallerCandidate_8java_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ counter\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{SmallerCandidate_8java_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{SmallerCandidate_8java_source_l00042}00042\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{SmallerCandidate_8java_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ stateSmaller\ =\ listNeighborhood.get(0);}
+\DoxyCodeLine{\Hypertarget{SmallerCandidate_8java_source_l00044}00044\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ stateSmaller;}
+\DoxyCodeLine{\Hypertarget{SmallerCandidate_8java_source_l00045}00045\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{SmallerCandidate_8java_source_l00046}00046\ \}}
+
+\end{DoxyCode}

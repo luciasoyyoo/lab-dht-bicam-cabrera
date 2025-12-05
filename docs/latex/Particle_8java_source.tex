@@ -1,0 +1,227 @@
+\doxysection{Particle.\+java}
+\hypertarget{Particle_8java_source}{}\label{Particle_8java_source}\index{Particle.java@{Particle.java}}
+\mbox{\hyperlink{Particle_8java}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00001}00001\ \textcolor{keyword}{package\ }metaheuristics.generators;}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00003}00003\ \textcolor{keyword}{import}\ java.lang.reflect.InvocationTargetException;}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00004}00004\ \textcolor{keyword}{import}\ java.util.ArrayList;}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00005}00005\ \textcolor{keyword}{import}\ java.util.List;}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00006}00006\ \textcolor{keyword}{import}\ java.util.concurrent.ThreadLocalRandom;}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00008}00008\ \textcolor{keyword}{import}\ metaheurictics.strategy.Strategy;}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00010}00010\ \textcolor{keyword}{import}\ problem.definition.Problem.ProblemType;}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00011}00011\ \textcolor{keyword}{import}\ problem.definition.State;}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00016}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle}{00016}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_a24355b57fa206820a3b519e8f65ebc4a}{Particle}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator}{Generator}}\ \{}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00018}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_ac3ace0a70b52edbf96d5925e46fcd420}{00018}}\ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_ac3ace0a70b52edbf96d5925e46fcd420}{statePBest}};}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00019}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_a4d222dd12e7086c625de03c7d35bf909}{00019}}\ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_a4d222dd12e7086c625de03c7d35bf909}{stateActual}};}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00020}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_a8ed4bebd5b92729b240f105705c31b19}{00020}}\ \ \ \ \ \textcolor{keyword}{private}\ ArrayList<Object>\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_a8ed4bebd5b92729b240f105705c31b19}{velocity}};}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00021}00021\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00022}00022\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00026}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_a24355b57fa206820a3b519e8f65ebc4a}{00026}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_a24355b57fa206820a3b519e8f65ebc4a}{Particle}}()\ \{}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00027}00027\ \ \ \ \ \ \ \ \ super();}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00028}00028\ \ \ \ \ \ \ \ \ this.stateActual\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}();}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00029}00029\ \ \ \ \ \ \ \ \ this.statePBest\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}();}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00030}00030\ \ \ \ \ \ \ \ \ this.velocity\ =\ \textcolor{keyword}{new}\ ArrayList<Object>();}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00031}00031\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00032}00032\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00039}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_a2bcad653ae834df9f3242b75972a4e43}{00039}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_a2bcad653ae834df9f3242b75972a4e43}{Particle}}(\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_ac3ace0a70b52edbf96d5925e46fcd420}{statePBest}},\ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_a4d222dd12e7086c625de03c7d35bf909}{stateActual}},\ ArrayList<Object>\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_a8ed4bebd5b92729b240f105705c31b19}{velocity}})\ \{}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00040}00040\ \ \ \ \ \ \ \ \ super();}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00041}00041\ \ \ \ \ \ \ \ \ this.statePBest\ =\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_ac3ace0a70b52edbf96d5925e46fcd420}{statePBest}};}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00042}00042\ \ \ \ \ \ \ \ \ this.stateActual\ =\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_a4d222dd12e7086c625de03c7d35bf909}{stateActual}};}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00043}00043\ \ \ \ \ \ \ \ \ this.velocity\ =\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_a8ed4bebd5b92729b240f105705c31b19}{velocity}};}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00044}00044\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00050}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_a4d39d153e84e0c8f558fe4c9d2e1a62b}{00050}}\ \ \ \ \ \textcolor{keyword}{public}\ ArrayList<Object>\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_a4d39d153e84e0c8f558fe4c9d2e1a62b}{getVelocity}}()\ \{}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00051}00051\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_a8ed4bebd5b92729b240f105705c31b19}{velocity}};}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00052}00052\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00058}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_afd5da2cbdadc6839a6bc0fa889905b13}{00058}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_afd5da2cbdadc6839a6bc0fa889905b13}{setVelocity}}(ArrayList<Object>\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_a8ed4bebd5b92729b240f105705c31b19}{velocity}})\ \{}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00059}00059\ \ \ \ \ \ \ \ \ this.velocity\ =\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_a8ed4bebd5b92729b240f105705c31b19}{velocity}};}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00060}00060\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00066}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_ae73e3ec5cb0c62c033a28c502b05c243}{00066}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_ae73e3ec5cb0c62c033a28c502b05c243}{getStatePBest}}()\ \{}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00067}00067\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_ac3ace0a70b52edbf96d5925e46fcd420}{statePBest}};}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00068}00068\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00069}00069\ }
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00074}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_ab6280c7ef3a2d4898f25517ffcba8d53}{00074}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_ab6280c7ef3a2d4898f25517ffcba8d53}{setStatePBest}}(\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_ac3ace0a70b52edbf96d5925e46fcd420}{statePBest}})\ \{}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00075}00075\ \ \ \ \ \ \ \ \ this.statePBest\ =\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_ac3ace0a70b52edbf96d5925e46fcd420}{statePBest}};}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00076}00076\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00077}00077\ }
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00082}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_a2208c6b0ed77df08e2b80bdc75095359}{00082}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_a2208c6b0ed77df08e2b80bdc75095359}{getStateActual}}()\ \{}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00083}00083\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_a4d222dd12e7086c625de03c7d35bf909}{stateActual}};}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00084}00084\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00090}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_abdb874dd079ba7e259cd8702370baa48}{00090}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_abdb874dd079ba7e259cd8702370baa48}{setStateActual}}(\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_a4d222dd12e7086c625de03c7d35bf909}{stateActual}})\ \{}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00091}00091\ \ \ \ \ \ \ \ \ this.stateActual\ =\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_a4d222dd12e7086c625de03c7d35bf909}{stateActual}};}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00092}00092\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00105}00105\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00106}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_a0c716340cbccf5c27c6b587b96d0b596}{00106}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_a0c716340cbccf5c27c6b587b96d0b596}{generate}}(Integer\ operatornumber)}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throws}\ IllegalArgumentException,\ SecurityException,}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ ClassNotFoundException,\ InstantiationException,}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ IllegalAccessException,\ InvocationTargetException,}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ NoSuchMethodException\ \{}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00111}00111\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00112}00112\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00113}00113\ \ \ \ \ \ \ \ \ ArrayList<Object>\ actualVelocity\ =\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_acfc132343407756e7b016506963b7984}{UpdateVelocity}}();}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00114}00114\ \ \ \ \ \ \ \ \ ArrayList<Object>\ newCode\ =\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_a2b55cd9e4995053b3c90009e8f9bfc5d}{UpdateCode}}(actualVelocity);}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00115}00115\ \ \ \ \ \ \ \ \ this.velocity\ =\ actualVelocity;}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00116}00116\ \ \ \ \ \ \ \ \ this.stateActual.\mbox{\hyperlink{classproblem_1_1definition_1_1State_ab15765262a6e1cc7661c51cbcf0e7785}{setCode}}(newCode);}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00117}00117\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00118}00118\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00119}00119\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00120}00120\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00126}00126\ \ \ \ \ @SuppressWarnings(\textcolor{stringliteral}{"{}squid:S2245"{}})}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00127}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_acfc132343407756e7b016506963b7984}{00127}}\ \ \ \ \ private\ ArrayList<Object>\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_acfc132343407756e7b016506963b7984}{UpdateVelocity}}()\{\ \textcolor{comment}{//\ actualizar\ velocidad}}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00128}00128\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ w\ =\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a920f572bad5f93b03c3347356f7c2bc4}{ParticleSwarmOptimization.wmax}}\ -\/\ ((\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a920f572bad5f93b03c3347356f7c2bc4}{ParticleSwarmOptimization.wmax}}\ -\/\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization}{ParticleSwarmOptimization}}.\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a25ee209144e81a8a9b36dda74df290c1}{wmin}})\ /\ \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy}{Strategy}}.\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_ad2641e12c52292930364de6655333aa8}{getStrategy}}().getCountMax())\ *\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization}{ParticleSwarmOptimization}}.\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a12c12b70f5c84e0f06027adbe4db63f1}{getCountCurrentIterPSO}}();\ \ \textcolor{comment}{//CALCULO\ DE\ LA\ INERCIA}}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00129}00129\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ rand1\ =\ ThreadLocalRandom.current().nextDouble();}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00130}00130\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ rand2\ =\ ThreadLocalRandom.current().nextDouble();}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00131}00131\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ inertia,\ cognitive,\ social;}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00132}00132\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ learning\ =\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization}{ParticleSwarmOptimization}}.\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a4a53547ab8ca6aa61df72a02a76e3e80}{learning1}}\ +\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization}{ParticleSwarmOptimization}}.\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_afcbf94cbccaf2d2654fac058793cc173}{learning2}};\ \textcolor{comment}{//\ ratios\ de\ aprendizaje\ cognitivo\ y\ social}}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00133}00133\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization}{ParticleSwarmOptimization}}.constriction\ =\ 2/(Math.abs(2\ -\/\ learning-\/Math.sqrt((learning\ *\ learning)-\/\ 4\ *\ learning)));\ \ \ \textcolor{comment}{//\ Factor\ de\ costriccion}}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00134}00134\ \ \ \ \ \ \ \ \ ArrayList<Object>\ actualVelocity\ =\ \textcolor{keyword}{new}\ ArrayList<Object>();}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00135}00135\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_a8ed4bebd5b92729b240f105705c31b19}{velocity}}.isEmpty())\{}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00136}00136\ \ \ \ \ \ \ \ \ \ \ \ \ for\ (int\ i\ =\ 0;\ i\ <\ Strategy.getStrategy().getProblem().getState().getCode().size();\ i++)\{}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00137}00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ velocity.add(0.0);}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00138}00138\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00139}00139\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00140}00140\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ recorre\ el\ vector\ velocidad\ y\ lo\ actualiza}}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00141}00141\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy}{Strategy}}.\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_ad2641e12c52292930364de6655333aa8}{getStrategy}}().getProblem().getState().getCode().size();\ i++)\ \{\ \ }
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00142}00142\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ cumulo\ donde\ se\ encuentra\ la\ particula}}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00143}00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ swarm\ =\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization}{ParticleSwarmOptimization}}.\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a9d7f0796fac17cb2d4fe19a9f9960ae4}{getCountParticle}}()\ /\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization}{ParticleSwarmOptimization}}.\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a8df765e1194a606605e5eefa5c136010}{getCountParticleBySwarm}}();\ }
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ inertia\ =\ w\ *\ (Double)\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_a8ed4bebd5b92729b240f105705c31b19}{velocity}}.get(i);\ \ }
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00145}00145\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization}{ParticleSwarmOptimization}}.\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a45a990b27b172338c10931d135b88b7f}{binary}}\ ==\ \textcolor{keyword}{true})\{}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00146}00146\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cognitive\ =\ (Double)(\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization}{ParticleSwarmOptimization}}.\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a4a53547ab8ca6aa61df72a02a76e3e80}{learning1}}\ *\ rand1\ *\ ((Integer)(\textcolor{keyword}{this}.statePBest.getCode().get(i))\ -\/\ (Integer)(\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_a4d222dd12e7086c625de03c7d35bf909}{stateActual}}.\mbox{\hyperlink{classproblem_1_1definition_1_1State_a2e75b6f2bedb2107478ecd1e8e681418}{getCode}}().get(i))));}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00147}00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ social\ =\ (Double)(\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization}{ParticleSwarmOptimization}}.\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_afcbf94cbccaf2d2654fac058793cc173}{learning2}}\ *\ rand2\ *\ (((Integer)(((\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}})\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization}{ParticleSwarmOptimization}}.lBest[swarm]).getCode().get(i)))\ -\/\ ((Integer)(\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_a4d222dd12e7086c625de03c7d35bf909}{stateActual}}.\mbox{\hyperlink{classproblem_1_1definition_1_1State_a2e75b6f2bedb2107478ecd1e8e681418}{getCode}}().get(i)))));}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00148}00148\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00149}00149\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00150}00150\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cognitive\ =\ (Double)(ParticleSwarmOptimization.learning1\ *\ rand1\ *\ ((Double)(\textcolor{keyword}{this}.statePBest.getCode().get(i))\ -\/\ (Double)(\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_a4d222dd12e7086c625de03c7d35bf909}{stateActual}}.\mbox{\hyperlink{classproblem_1_1definition_1_1State_a2e75b6f2bedb2107478ecd1e8e681418}{getCode}}().get(i))));}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00151}00151\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ social\ =\ (Double)(ParticleSwarmOptimization.learning2\ *\ rand2\ *\ (((Double)(((State)\ ParticleSwarmOptimization.lBest[swarm]).getCode().get(i)))\ -\/\ ((Double)(\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_a4d222dd12e7086c625de03c7d35bf909}{stateActual}}.\mbox{\hyperlink{classproblem_1_1definition_1_1State_a2e75b6f2bedb2107478ecd1e8e681418}{getCode}}().get(i)))));}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00152}00152\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00153}00153\ \ \ \ \ \ \ \ \ \ \ \ \ actualVelocity.add(ParticleSwarmOptimization.constriction*(inertia\ +\ cognitive\ +\ social));}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00154}00154\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00155}00155\ \ }
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00156}00156\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ actualVelocity;}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00157}00157\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00158}00158\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00163}00163\ \ \ \ \ @SuppressWarnings(\textcolor{stringliteral}{"{}squid:S2245"{}})}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00164}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_a2b55cd9e4995053b3c90009e8f9bfc5d}{00164}}\ \ \ \ \ private\ ArrayList<Object>\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_a2b55cd9e4995053b3c90009e8f9bfc5d}{UpdateCode}}(ArrayList<Object>\ actualVelocity)\ \{\ \ \textcolor{comment}{//\ CALCULO\ DE\ LA\ NUEA\ POSICION\ DE\ LA\ PARTICULA}}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00165}00165\ \ \ \ \ \ \ \ \ ArrayList<Object>\ newCode\ =\ \textcolor{keyword}{new}\ ArrayList<Object>();}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00166}00166\ \ \ \ \ \ \ \ \ \textcolor{comment}{//poner\ la\ condicion\ de\ si\ se\ esta\ trabajando\ con\ valores\ continuos\ o\ binarios}}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00167}00167\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization}{ParticleSwarmOptimization}}.\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a45a990b27b172338c10931d135b88b7f}{binary}}\ ==\ \textcolor{keyword}{false})\{\ \ }
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00168}00168\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_a4d222dd12e7086c625de03c7d35bf909}{stateActual}}.getCode().size();\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00169}00169\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ newCode.add(\ (Double)(\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_a4d222dd12e7086c625de03c7d35bf909}{stateActual}}.getCode().get(i))\ +\ (Double)(actualVelocity.get(i))\ );}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00170}00170\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00171}00171\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ newCode;}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00172}00172\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00173}00173\ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//c{\ucr}lculo\ de\ la\ posicion\ para\ codificacion\ binaria}}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00174}00174\ \ \ \ \ \ \ \ \ \ \ \ \ ArrayList<Object>\ binaryCode\ =\ \textcolor{keyword}{new}\ ArrayList<Object>();}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00175}00175\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_a4d222dd12e7086c625de03c7d35bf909}{stateActual}}.getCode().size();\ i++)\{}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00176}00176\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ rand\ =\ ThreadLocalRandom.current().nextDouble();}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00177}00177\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ s\ =\ 1/(1\ +\ 1.72\ *\ (Double)(actualVelocity.get(i)));\ \textcolor{comment}{//\ }}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00178}00178\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (rand\ <\ s)\{}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00179}00179\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ binaryCode.add(1);}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00180}00180\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00181}00181\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00182}00182\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ binaryCode.add(0);}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00183}00183\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00184}00184\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00185}00185\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ binaryCode;}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00186}00186\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00187}00187\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00188}00188\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00189}00189\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00202}00202\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00203}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_a8a8a33dd0ab1d3352d36b239d5c11beb}{00203}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_a8a8a33dd0ab1d3352d36b239d5c11beb}{updateReference}}(\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ stateCandidate,}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00204}00204\ \ \ \ \ \ \ \ \ \ \ \ \ Integer\ countIterationsCurrent)\ \textcolor{keywordflow}{throws}\ IllegalArgumentException,}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00205}00205\ \ \ \ \ \ \ \ \ \ \ \ \ SecurityException,\ ClassNotFoundException,\ InstantiationException,}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00206}00206\ \ \ \ \ \ \ \ \ \ \ \ \ IllegalAccessException,\ InvocationTargetException,}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00207}00207\ \ \ \ \ \ \ \ \ \ \ \ \ NoSuchMethodException\ \{}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00208}00208\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00209}00209\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy}{Strategy}}.\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_ad2641e12c52292930364de6655333aa8}{getStrategy}}().\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_a4bc6bd95db71e14b1f48c1bfc85f1305}{getProblem}}().\mbox{\hyperlink{classproblem_1_1definition_1_1Problem_ad6f38df755179e22ffe487ba4a5c8021}{getTypeProblem}}().equals(\mbox{\hyperlink{enumproblem_1_1definition_1_1Problem_1_1ProblemType}{ProblemType}}.\mbox{\hyperlink{enumproblem_1_1definition_1_1Problem_1_1ProblemType_aa55383c4cb9a71cfeabc7f715ee0cd6e}{Maximizar}}))\{}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00210}00210\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_a4d222dd12e7086c625de03c7d35bf909}{stateActual}}.getEvaluation().get(0)\ >\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_ac3ace0a70b52edbf96d5925e46fcd420}{statePBest}}.getEvaluation().get(0))\{}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00211}00211\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_ac3ace0a70b52edbf96d5925e46fcd420}{statePBest}}.setCode(\textcolor{keyword}{new}\ ArrayList<Object>(\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_a4d222dd12e7086c625de03c7d35bf909}{stateActual}}.getCode()));}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00212}00212\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_ac3ace0a70b52edbf96d5925e46fcd420}{statePBest}}.setEvaluation(\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_a4d222dd12e7086c625de03c7d35bf909}{stateActual}}.getEvaluation());}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00213}00213\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00214}00214\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00215}00215\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00216}00216\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(stateCandidate.getEvaluation().get(0)\ <\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_ac3ace0a70b52edbf96d5925e46fcd420}{statePBest}}.getEvaluation().get(0))\{}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00217}00217\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_ac3ace0a70b52edbf96d5925e46fcd420}{statePBest}}.setCode(\textcolor{keyword}{new}\ ArrayList<Object>(stateCandidate.getCode()));}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00218}00218\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_ac3ace0a70b52edbf96d5925e46fcd420}{statePBest}}.setEvaluation(stateCandidate.getEvaluation());}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00219}00219\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00220}00220\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00221}00221\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00222}00222\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00223}00223\ }
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00224}00224\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00229}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_a53ebefe17cac18b12d48d4f8ccd51eba}{00229}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_a53ebefe17cac18b12d48d4f8ccd51eba}{getReference}}()\ \{}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00230}00230\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00231}00231\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00232}00232\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00233}00233\ }
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00234}00234\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00239}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_a88c49fdd37fef41c38d7ac4aec35d15c}{00239}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_a88c49fdd37fef41c38d7ac4aec35d15c}{setInitialReference}}(\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ stateInitialRef)\ \{}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00240}00240\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00241}00241\ }
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00242}00242\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00243}00243\ }
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00244}00244\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00249}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_aa9ac8fb8fb1c8794ff598461b7473c5c}{00249}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{GeneratorType}}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_aa9ac8fb8fb1c8794ff598461b7473c5c}{getType}}()\ \{}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00250}00250\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00251}00251\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00252}00252\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00253}00253\ }
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00254}00254\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00259}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_a7d37225aa866b6ac5ea18bcf4031cc18}{00259}}\ \ \ \ \ \textcolor{keyword}{public}\ List<State>\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_a7d37225aa866b6ac5ea18bcf4031cc18}{getReferenceList}}()\ \{}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00260}00260\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00261}00261\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00262}00262\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00263}00263\ }
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00264}00264\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00269}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_a3d68da3423ad9fcf1cedc905dfcba1f9}{00269}}\ \ \ \ \ \textcolor{keyword}{public}\ List<State>\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_a3d68da3423ad9fcf1cedc905dfcba1f9}{getSonList}}()\ \{}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00270}00270\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00271}00271\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00272}00272\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00273}00273\ }
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00274}00274\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00280}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_a72847262dd09c89d6445eef9410d0517}{00280}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{boolean}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_a72847262dd09c89d6445eef9410d0517}{awardUpdateREF}}(\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ stateCandidate)\ \{}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00281}00281\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00282}00282\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00283}00283\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00284}00284\ }
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00285}00285\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00290}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_a10fc7e67d22c152246a0de74b4f0c5e3}{00290}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_a10fc7e67d22c152246a0de74b4f0c5e3}{setWeight}}(\textcolor{keywordtype}{float}\ weight)\ \{}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00291}00291\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00292}00292\ }
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00293}00293\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00294}00294\ }
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00295}00295\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00300}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_acd575095868ddd1c81452bdd09fb7a54}{00300}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_acd575095868ddd1c81452bdd09fb7a54}{getWeight}}()\ \{}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00301}00301\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00302}00302\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00303}00303\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00304}00304\ }
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00305}00305\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00310}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_a9c934efbd2a96bafa16a04e149e759aa}{00310}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}[]\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_a9c934efbd2a96bafa16a04e149e759aa}{getTrace}}()\ \{}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00311}00311\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00312}00312\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{float}[0];}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00313}00313\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00314}00314\ }
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00315}00315\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00320}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_a905df3e3e8bc835c68e02fc9cf20ea93}{00320}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}[]\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_a905df3e3e8bc835c68e02fc9cf20ea93}{getListCountBetterGender}}()\ \{}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00321}00321\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00322}00322\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[0];}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00323}00323\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00324}00324\ }
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00325}00325\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00330}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_abe7d91e6ddbe9f54e11fee6333d03700}{00330}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}[]\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle_abe7d91e6ddbe9f54e11fee6333d03700}{getListCountGender}}()\ \{}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00331}00331\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00332}00332\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[0];}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00333}00333\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00334}00334\ }
+\DoxyCodeLine{\Hypertarget{Particle_8java_source_l00335}00335\ \}}
+
+\end{DoxyCode}

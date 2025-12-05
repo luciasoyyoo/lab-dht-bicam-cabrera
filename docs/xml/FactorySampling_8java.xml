@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="es">
+  <compounddef id="FactorySampling_8java" kind="file" language="Java">
+    <compoundname>FactorySampling.java</compoundname>
+    <includes local="no">java.lang.reflect.InvocationTargetException</includes>
+    <includes local="no">evolutionary_algorithms.complement.Sampling</includes>
+    <includes local="no">evolutionary_algorithms.complement.SamplingType</includes>
+    <includes local="no">factory_interface.IFFSampling</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>FactorySampling.java</label>
+        <link refid="FactorySampling_8java"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>evolutionary_algorithms.complement.Sampling</label>
+      </node>
+      <node id="4">
+        <label>evolutionary_algorithms.complement.SamplingType</label>
+      </node>
+      <node id="5">
+        <label>factory_interface.IFFSampling</label>
+      </node>
+      <node id="2">
+        <label>java.lang.reflect.InvocationTargetException</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classfactory__method_1_1FactorySampling" prot="public">factory_method::FactorySampling</innerclass>
+    <innernamespace refid="namespacefactory__method">factory_method</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">package<sp/></highlight><highlight class="normal">factory_method;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>java.lang.reflect.InvocationTargetException;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>evolutionary_algorithms.complement.Sampling;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>evolutionary_algorithms.complement.SamplingType;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>factory_interface.IFFSampling;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="classfactory__method_1_1FactorySampling" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classfactory__method_1_1FactorySampling" kindref="compound">FactorySampling</ref><sp/></highlight><highlight class="keyword">implements</highlight><highlight class="normal"><sp/><ref refid="interfacefactory__interface_1_1IFFSampling" kindref="compound">IFFSampling</ref><sp/>{</highlight></codeline>
+<codeline lineno="17" refid="classfactory__method_1_1FactorySampling_1ac0ddd9e1c0a87bbd729f7e65e495b258" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/><ref refid="classevolutionary__algorithms_1_1complement_1_1Sampling" kindref="compound">Sampling</ref><sp/><ref refid="classfactory__method_1_1FactorySampling_1ac0ddd9e1c0a87bbd729f7e65e495b258" kindref="member">sampling</ref>;</highlight></codeline>
+<codeline lineno="23" refid="classfactory__method_1_1FactorySampling_1a33a535d67935fdd077359930be8c125d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classevolutionary__algorithms_1_1complement_1_1Sampling" kindref="compound">Sampling</ref><sp/><ref refid="classfactory__method_1_1FactorySampling_1a33a535d67935fdd077359930be8c125d" kindref="member">createSampling</ref>(<ref refid="enumevolutionary__algorithms_1_1complement_1_1SamplingType" kindref="compound">SamplingType</ref><sp/>typesampling)<sp/></highlight><highlight class="keywordflow">throws</highlight><highlight class="normal"><sp/>IllegalArgumentException,<sp/>SecurityException,<sp/>ClassNotFoundException,<sp/>InstantiationException,<sp/>IllegalAccessException,<sp/>InvocationTargetException,<sp/>NoSuchMethodException<sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>String<sp/>className<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;evolutionary_algorithms.complement.&quot;</highlight><highlight class="normal"><sp/>+<sp/>typesampling.toString();</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfactory__method_1_1FactorySampling_1ac0ddd9e1c0a87bbd729f7e65e495b258" kindref="member">sampling</ref><sp/>=<sp/>(<ref refid="classevolutionary__algorithms_1_1complement_1_1Sampling" kindref="compound">Sampling</ref>)<sp/><ref refid="classfactory__method_1_1FactoryLoader" kindref="compound">FactoryLoader</ref>.<ref refid="classfactory__method_1_1FactoryLoader_1a4e61ffc7038a082277d67e3e59cdb859" kindref="member">getInstance</ref>(className);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classfactory__method_1_1FactorySampling_1ac0ddd9e1c0a87bbd729f7e65e495b258" kindref="member">sampling</ref>;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="practica5/src/main/java/factory_method/FactorySampling.java"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,211 @@
+\doxysection{Referencia de la clase evolutionary\+\_\+algorithms.\+complement.\+Probabilistic\+Sampling}
+\hypertarget{classevolutionary__algorithms_1_1complement_1_1ProbabilisticSampling}{}\label{classevolutionary__algorithms_1_1complement_1_1ProbabilisticSampling}\index{evolutionary\_algorithms.complement.ProbabilisticSampling@{evolutionary\_algorithms.complement.ProbabilisticSampling}}
+
+
+\doxylink{classevolutionary__algorithms_1_1complement_1_1ProbabilisticSampling}{Probabilistic\+Sampling} -\/ applies probabilistic sampling to select individuals.  
+
+
+
+
+Diagrama de herencia de evolutionary\+\_\+algorithms.\+complement.\+Probabilistic\+Sampling
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=277pt]{classevolutionary__algorithms_1_1complement_1_1ProbabilisticSampling__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagrama de colaboración de evolutionary\+\_\+algorithms.\+complement.\+Probabilistic\+Sampling\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=277pt]{classevolutionary__algorithms_1_1complement_1_1ProbabilisticSampling__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1ProbabilisticSampling_a985f07b42905655bfaffb59b10f3471e}{sampling}} (List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ fathers, int count\+Ind)
+\begin{DoxyCompactList}\small\item\em Uses Thread\+Local\+Random for algorithmic (non-\/cryptographic) randomness. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1ProbabilisticSampling_a034f2039f6c915edd8b074acaeca25b7}{list\+State}} (int count\+Ind)
+\begin{DoxyCompactList}\small\item\em list\+State -\/ initializes the list of individuals. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+\doxylink{classevolutionary__algorithms_1_1complement_1_1ProbabilisticSampling}{Probabilistic\+Sampling} -\/ applies probabilistic sampling to select individuals. 
+
+Definición en la línea \mbox{\hyperlink{ProbabilisticSampling_8java_source_l00017}{17}} del archivo \mbox{\hyperlink{ProbabilisticSampling_8java_source}{Probabilistic\+Sampling.\+java}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{classevolutionary__algorithms_1_1complement_1_1ProbabilisticSampling_doc-func-members}
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{classevolutionary__algorithms_1_1complement_1_1ProbabilisticSampling_a034f2039f6c915edd8b074acaeca25b7}\index{evolutionary\_algorithms.complement.ProbabilisticSampling@{evolutionary\_algorithms.complement.ProbabilisticSampling}!listState@{listState}}
+\index{listState@{listState}!evolutionary\_algorithms.complement.ProbabilisticSampling@{evolutionary\_algorithms.complement.ProbabilisticSampling}}
+\doxysubsubsection{\texorpdfstring{listState()}{listState()}}
+{\footnotesize\ttfamily \label{classevolutionary__algorithms_1_1complement_1_1ProbabilisticSampling_a034f2039f6c915edd8b074acaeca25b7} 
+List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ evolutionary\+\_\+algorithms.\+complement.\+Probabilistic\+Sampling.\+list\+State (\begin{DoxyParamCaption}\item[{int}]{count\+Ind}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+list\+State -\/ initializes the list of individuals. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em count\+Ind} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{ProbabilisticSampling_8java_source_l00095}{95}} del archivo \mbox{\hyperlink{ProbabilisticSampling_8java_source}{Probabilistic\+Sampling.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ List<State>\ staList\ =\ \textcolor{keyword}{new}\ ArrayList<State>(countInd);}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ countInd;\ i++)\ \{}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ State\ state\ =\ \textcolor{keyword}{new}\ State();}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ state.setCode(\textcolor{keyword}{new}\ ArrayList<Object>());}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ state.setNumber(Strategy.getStrategy().getCountCurrent());}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ state.setTypeGenerator(GeneratorType.DistributionEstimationAlgorithm);}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ staList.add(state);}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ staList;}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{GeneratorType_8java_source_l00008}{metaheuristics.\+generators.\+Generator\+Type.\+Distribution\+Estimation\+Algorithm}}, \mbox{\hyperlink{Strategy_8java_source_l00471}{metaheurictics.\+strategy.\+Strategy.\+get\+Count\+Current()}}, \mbox{\hyperlink{Strategy_8java_source_l00080}{metaheurictics.\+strategy.\+Strategy.\+get\+Strategy()}}, \mbox{\hyperlink{State_8java_source_l00077}{problem.\+definition.\+State.\+set\+Code()}}, \mbox{\hyperlink{State_8java_source_l00130}{problem.\+definition.\+State.\+set\+Number()}} y \mbox{\hyperlink{State_8java_source_l00094}{problem.\+definition.\+State.\+set\+Type\+Generator()}}.
+
+
+
+Referenciado por \mbox{\hyperlink{ProbabilisticSampling_8java_source_l00033}{sampling()}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classevolutionary__algorithms_1_1complement_1_1ProbabilisticSampling_a034f2039f6c915edd8b074acaeca25b7_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classevolutionary__algorithms_1_1complement_1_1ProbabilisticSampling_a034f2039f6c915edd8b074acaeca25b7_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classevolutionary__algorithms_1_1complement_1_1ProbabilisticSampling_a985f07b42905655bfaffb59b10f3471e}\index{evolutionary\_algorithms.complement.ProbabilisticSampling@{evolutionary\_algorithms.complement.ProbabilisticSampling}!sampling@{sampling}}
+\index{sampling@{sampling}!evolutionary\_algorithms.complement.ProbabilisticSampling@{evolutionary\_algorithms.complement.ProbabilisticSampling}}
+\doxysubsubsection{\texorpdfstring{sampling()}{sampling()}}
+{\footnotesize\ttfamily \label{classevolutionary__algorithms_1_1complement_1_1ProbabilisticSampling_a985f07b42905655bfaffb59b10f3471e} 
+List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ evolutionary\+\_\+algorithms.\+complement.\+Probabilistic\+Sampling.\+sampling (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$}]{fathers}{, }\item[{int}]{count\+Ind}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Uses Thread\+Local\+Random for algorithmic (non-\/cryptographic) randomness. 
+
+This RNG is used for evolutionary algorithm operations (crossover point, selection between children, etc.) and is not used for security-\/sensitive purposes. Therefore we suppress the Sonar security hotspot S2245 here. sampling -\/ applies probabilistic sampling to select individuals. 
+\begin{DoxyParams}{Parámetros}
+{\em fathers} & \\
+\hline
+{\em count\+Ind} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+returns a list of sampled individuals 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1Sampling_a6e7058367ab7e7c4758bf37c61a75ba2}{evolutionary\+\_\+algorithms.\+complement.\+Sampling}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{ProbabilisticSampling_8java_source_l00033}{33}} del archivo \mbox{\hyperlink{ProbabilisticSampling_8java_source}{Probabilistic\+Sampling.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ cantV\ =\ fathers.get(0).getCode().size();}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ List<State>\ staList\ =\ listState(countInd);}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ cantV;\ i++)\ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ Object[]\ values\ =\ \textcolor{keyword}{new}\ Object[fathers.size()];\ \textcolor{comment}{//\ arreglo\ de\ valores\ de\ una\ variable}}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ Object[]\ arrtemp\ =\ \textcolor{keyword}{new}\ Object[Strategy.getStrategy().getProblem().getPossibleValue()];}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//llenar\ el\ arreglo\ con\ todos\ los\ valores\ posibles}}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ arrtemp.length;\ j++)\ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arrtemp[j]\ =\ j;}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ values.length;\ j++)\ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ values[j]\ =\ fathers.get(j).getCode().get(i);}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ k\ =\ 0;}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ sum\ =\ 0;\ \textcolor{comment}{//\ suma\ acumulativa\ por\ cada\ valor\ posible}}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ arrOcc[]\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[arrtemp.length];\ \textcolor{comment}{//\ arreglo\ paralelo\ para\ contar\ la\ cantidad\ de\ ocurrencias\ de\ un\ valor\ posible}}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//llenar\ el\ arreglo\ con\ la\ cantidad\ de\ ocurrencias\ de\ cada\ valor\ posible,\ para\ cada\ variable}}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//recorrer\ el\ arreglo\ de\ valores\ de\ una\ variable}}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (k\ <\ arrtemp.length)\ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ count\ =\ 0;}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ values.length;\ j++)\ \{}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}((Integer)values[j]\ !=\ -\/1\ \&\&\ values[j]\ ==\ arrtemp[k])\{\ \textcolor{comment}{//}}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ count++;}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ values[j]\ =\ -\/1;}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arrOcc[k]\ =\ count;}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sum\ =\ sum\ +\ count;}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ k++;}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ l\ =\ 0;\ l\ <\ countInd;\ l++)\ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{boolean}\ find\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ p\ =\ 0;}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ random;}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (sum\ >\ 0)\ random\ =\ ThreadLocalRandom.current().nextInt(sum)\ +\ 1;}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ random\ =\ 1;}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (p\ <\ arrOcc.length\ \&\&\ find\ ==\ \textcolor{keyword}{false})\ \{}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ random\ =\ random\ -\/\ arrOcc[p];}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(random\ <=\ 0)\{}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ staList.get(l).getCode().add(arrtemp[p]);}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ find\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ p++;}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(find\ ==\ \textcolor{keyword}{false})\{}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ bound\ =\ Strategy.getStrategy().getProblem().getCodification().getVariableCount()\ *\ 10;}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ value\ =\ (bound\ >\ 0)\ ?\ ThreadLocalRandom.current().nextInt(bound)\ :\ 0;}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ staList.get(l).getCode().add(Integer.valueOf(value));}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ staList;}
+\DoxyCodeLine{00087\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{Problem_8java_source_l00114}{problem.\+definition.\+Problem.\+get\+Codification()}}, \mbox{\hyperlink{Problem_8java_source_l00149}{problem.\+definition.\+Problem.\+get\+Possible\+Value()}}, \mbox{\hyperlink{Strategy_8java_source_l00405}{metaheurictics.\+strategy.\+Strategy.\+get\+Problem()}}, \mbox{\hyperlink{Strategy_8java_source_l00080}{metaheurictics.\+strategy.\+Strategy.\+get\+Strategy()}}, \mbox{\hyperlink{classproblem_1_1definition_1_1Codification_a3fadfa69736eedaf89c53863dd6ddc6d}{problem.\+definition.\+Codification.\+get\+Variable\+Count()}} y \mbox{\hyperlink{ProbabilisticSampling_8java_source_l00095}{list\+State()}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classevolutionary__algorithms_1_1complement_1_1ProbabilisticSampling_a985f07b42905655bfaffb59b10f3471e_cgraph}
+\end{center}
+\end{figure}
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{ProbabilisticSampling_8java}{Probabilistic\+Sampling.\+java}}\end{DoxyCompactItemize}

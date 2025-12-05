@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="es">
+  <compounddef id="classfactory__method_1_1FactoryCrossover" kind="class" language="Java" prot="public">
+    <compoundname>factory_method::FactoryCrossover</compoundname>
+    <basecompoundref refid="interfacefactory__interface_1_1IFFactoryCrossover" prot="public" virt="non-virtual">factory_interface.IFFactoryCrossover</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classfactory__method_1_1FactoryCrossover_1a958bbac8cc07bb3330e165078dbe56a7" prot="private" static="no" mutable="no">
+        <type><ref refid="classevolutionary__algorithms_1_1complement_1_1Crossover" kindref="compound">Crossover</ref></type>
+        <definition>Crossover factory_method.FactoryCrossover.crossing</definition>
+        <argsstring></argsstring>
+        <name>crossing</name>
+        <qualifiedname>factory_method.FactoryCrossover.crossing</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/factory_method/FactoryCrossover.java" line="17" column="19" bodyfile="practica5/src/main/java/factory_method/FactoryCrossover.java" bodystart="17" bodyend="-1"/>
+        <referencedby refid="classfactory__method_1_1FactoryCrossover_1ae361191d68e551e12a823f5956111a49" compoundref="FactoryCrossover_8java" startline="24" endline="29">factory_method.FactoryCrossover.createCrossover</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classfactory__method_1_1FactoryCrossover_1ae361191d68e551e12a823f5956111a49" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classevolutionary__algorithms_1_1complement_1_1Crossover" kindref="compound">Crossover</ref></type>
+        <definition>Crossover factory_method.FactoryCrossover.createCrossover</definition>
+        <argsstring>(CrossoverType Crossovertype)</argsstring>
+        <name>createCrossover</name>
+        <qualifiedname>factory_method.FactoryCrossover.createCrossover</qualifiedname>
+        <reimplements refid="interfacefactory__interface_1_1IFFactoryCrossover_1af2c954dab1eb110beaab79ccae6115c5">createCrossover</reimplements>
+        <param>
+          <type><ref refid="enumevolutionary__algorithms_1_1complement_1_1CrossoverType" kindref="compound">CrossoverType</ref></type>
+          <declname>Crossovertype</declname>
+        </param>
+        <exceptions> throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException </exceptions>
+        <briefdescription>
+<para>createCrossover - Creates an instance of <ref refid="classevolutionary__algorithms_1_1complement_1_1Crossover" kindref="compound">Crossover</ref> based on the provided <ref refid="enumevolutionary__algorithms_1_1complement_1_1CrossoverType" kindref="compound">CrossoverType</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Crossovertype</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns an instance of <ref refid="classevolutionary__algorithms_1_1complement_1_1Crossover" kindref="compound">Crossover</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/factory_method/FactoryCrossover.java" line="24" column="18" bodyfile="practica5/src/main/java/factory_method/FactoryCrossover.java" bodystart="24" bodyend="29"/>
+        <references refid="classfactory__method_1_1FactoryCrossover_1a958bbac8cc07bb3330e165078dbe56a7" compoundref="FactoryCrossover_8java" startline="17">factory_method.FactoryCrossover.crossing</references>
+        <references refid="classfactory__method_1_1FactoryLoader_1a4e61ffc7038a082277d67e3e59cdb859" compoundref="FactoryLoader_8java" startline="21" endline="28">factory_method.FactoryLoader.getInstance</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="classfactory__method_1_1FactoryCrossover" kindref="compound">FactoryCrossover</ref> - Interface for creating crossover strategies. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>factory_interface.IFFactoryCrossover</label>
+        <link refid="interfacefactory__interface_1_1IFFactoryCrossover"/>
+      </node>
+      <node id="1">
+        <label>factory_method.FactoryCrossover</label>
+        <link refid="classfactory__method_1_1FactoryCrossover"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>evolutionary_algorithms.complement.Crossover</label>
+        <link refid="classevolutionary__algorithms_1_1complement_1_1Crossover"/>
+      </node>
+      <node id="2">
+        <label>factory_interface.IFFactoryCrossover</label>
+        <link refid="interfacefactory__interface_1_1IFFactoryCrossover"/>
+      </node>
+      <node id="1">
+        <label>factory_method.FactoryCrossover</label>
+        <link refid="classfactory__method_1_1FactoryCrossover"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-crossing</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="practica5/src/main/java/factory_method/FactoryCrossover.java" line="16" column="7" bodyfile="practica5/src/main/java/factory_method/FactoryCrossover.java" bodystart="16" bodyend="30"/>
+    <listofallmembers>
+      <member refid="classfactory__method_1_1FactoryCrossover_1ae361191d68e551e12a823f5956111a49" prot="public" virt="non-virtual"><scope>factory_method::FactoryCrossover</scope><name>createCrossover</name></member>
+      <member refid="classfactory__method_1_1FactoryCrossover_1a958bbac8cc07bb3330e165078dbe56a7" prot="private" virt="non-virtual"><scope>factory_method::FactoryCrossover</scope><name>crossing</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

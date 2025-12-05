@@ -1,0 +1,822 @@
+\doxysection{Referencia de la clase metaheuristics.\+generators.\+Random\+Search}
+\hypertarget{classmetaheuristics_1_1generators_1_1RandomSearch}{}\label{classmetaheuristics_1_1generators_1_1RandomSearch}\index{metaheuristics.generators.RandomSearch@{metaheuristics.generators.RandomSearch}}
+
+
+\doxylink{classmetaheuristics_1_1generators_1_1RandomSearch}{Random\+Search} -\/ class that implements the Random Search metaheuristic.  
+
+
+
+
+Diagrama de herencia de metaheuristics.\+generators.\+Random\+Search
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classmetaheuristics_1_1generators_1_1RandomSearch__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagrama de colaboración de metaheuristics.\+generators.\+Random\+Search\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1RandomSearch__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1RandomSearch_ab94942d43169f104044b32d1e513f9f2}{Random\+Search}} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{classmetaheuristics_1_1generators_1_1RandomSearch}{Random\+Search} -\/ class that implements the Random Search metaheuristic. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1RandomSearch_ad7023836b94dd23bffd78ab7b9915551}{generate}} (Integer operatornumber)  throws Illegal\+Argument\+Exception, Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception, Illegal\+Access\+Exception, Invocation\+Target\+Exception, No\+Such\+Method\+Exception 
+\begin{DoxyCompactList}\small\item\em generate -\/ generate a new state for the random search. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1RandomSearch_aff9eb703f54f81e6c52c0f2242c726c9}{get\+Reference}} ()
+\begin{DoxyCompactList}\small\item\em get\+Reference -\/ get the reference state for the random search. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1RandomSearch_a13ed1a979ee6b0c7e1c9b1a8dc245a42}{set\+Initial\+Reference}} (\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} state\+Initial\+Ref)
+\begin{DoxyCompactList}\small\item\em set\+Initial\+Reference -\/ set the initial reference state for the random search. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1RandomSearch_a0ec26b03ce5dd592af4568fa0b4b915e}{update\+Reference}} (\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} state\+Candidate, Integer count\+Iterations\+Current)  throws Illegal\+Argument\+Exception, Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception, Illegal\+Access\+Exception, Invocation\+Target\+Exception, No\+Such\+Method\+Exception 
+\begin{DoxyCompactList}\small\item\em update\+Reference -\/ update the reference state and the personal best state of the particle. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{Generator\+Type}} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1RandomSearch_ac91ed100725544f9a3b74c1950d202eb}{get\+Type}} ()
+\begin{DoxyCompactList}\small\item\em get\+Type -\/ get the type of the generator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{Generator\+Type}} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1RandomSearch_ab6f8c524a2947214b1c2fdfbefdd6a62}{get\+Type\+Generator}} ()
+\begin{DoxyCompactList}\small\item\em get\+Type\+Generator -\/ get the type of the generator. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1RandomSearch_a4f1278b5787af80bfca253179a4d2de4}{set\+Type\+Generator}} (\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{Generator\+Type}} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1RandomSearch_a14824f061a82565bcbe633ab11cc8c99}{type\+Generator}})
+\begin{DoxyCompactList}\small\item\em set\+Type\+Generator -\/ set the type of the generator. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1RandomSearch_a86fdf2273755318267c1839988d2074c}{get\+Reference\+List}} ()
+\begin{DoxyCompactList}\small\item\em get\+Reference\+List -\/ get the list of reference states for the random search. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1RandomSearch_a31385fa5fe7d4a79578a92daa41e6b6e}{get\+Son\+List}} ()
+\begin{DoxyCompactList}\small\item\em get\+Son\+List -\/ get the son list. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1RandomSearch_a76a5b1a98d0456923d6eba8635dcb81a}{award\+Update\+REF}} (\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} state\+Candidate)
+\begin{DoxyCompactList}\small\item\em award\+Update\+REF -\/ award the update of the reference state. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1RandomSearch_af83f9d33ce8b1909a426d5eb70f3d272}{get\+Weight}} ()
+\begin{DoxyCompactList}\small\item\em get\+Weight -\/ get the weight of the generator. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1RandomSearch_a7a6ced92bd465675956f08a646e93aaa}{set\+Weight}} (float \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1RandomSearch_a9c70568238fb6c172062e8709c28c53c}{weight}})
+\begin{DoxyCompactList}\small\item\em set\+Weight -\/ set the weight of the generator. \end{DoxyCompactList}\item 
+int\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1RandomSearch_aeb13ba46d7b1dceaa28e5f348869e5b2}{get\+List\+Count\+Better\+Gender}} ()
+\begin{DoxyCompactList}\small\item\em get\+List\+Count\+Better\+Gender -\/ get the list of count better gender. \end{DoxyCompactList}\item 
+int\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1RandomSearch_a0f1f95ae1c09092029ca31c7cc5296d5}{get\+List\+Count\+Gender}} ()
+\begin{DoxyCompactList}\small\item\em get\+List\+Count\+Gender -\/ get the list of count gender. \end{DoxyCompactList}\item 
+float\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1RandomSearch_ab0a81fb9ec17688eaa9e68532192e278}{get\+Trace}} ()
+\begin{DoxyCompactList}\small\item\em get\+Trace -\/ get the trace of the generator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static final List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1RandomSearch_ab7be9a87a0cb3de1e17f14e79a0b32ce}{list\+State\+Reference}} = Collections.\+synchronized\+List(new Array\+List$<$\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}$>$())
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1CandidateValue}{Candidate\+Value}} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1RandomSearch_a31725eeb416cd0b5845bf0b2b8cd9a61}{candidatevalue}}
+\item 
+\mbox{\hyperlink{enumlocal__search_1_1acceptation__type_1_1AcceptType}{Accept\+Type}} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1RandomSearch_a713ff99310ed0fb343bd9514bc3d92dc}{type\+Acceptation}}
+\item 
+\mbox{\hyperlink{enumlocal__search_1_1complement_1_1StrategyType}{Strategy\+Type}} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1RandomSearch_a423df75382c7b0481b472ba9d64dbc06}{strategy}}
+\item 
+\mbox{\hyperlink{enumlocal__search_1_1candidate__type_1_1CandidateType}{Candidate\+Type}} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1RandomSearch_a41464d2c8c9fea8baa80db5e8555065a}{type\+Candidate}}
+\item 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1RandomSearch_a0d8cba82a8afe29331014b860f3f40e2}{state\+Reference\+RS}}
+\item 
+\mbox{\hyperlink{interfacefactory__interface_1_1IFFactoryAcceptCandidate}{IFFactory\+Accept\+Candidate}} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1RandomSearch_aaccc7be6beddc8bfcdf9ef6399f2e27f}{ifaccept\+Candidate}}
+\item 
+\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{Generator\+Type}} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1RandomSearch_a14824f061a82565bcbe633ab11cc8c99}{type\+Generator}}
+\item 
+float \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1RandomSearch_a9c70568238fb6c172062e8709c28c53c}{weight}}
+\item 
+int\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1RandomSearch_a0bf4dbdcfe91cc3ec191b96ba9104a07}{list\+Count\+Better\+Gender}} = new int\mbox{[}10\mbox{]}
+\item 
+int\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1RandomSearch_a9fdd813456c4f26698cc0c1fed994b4f}{list\+Count\+Gender}} = new int\mbox{[}10\mbox{]}
+\item 
+float\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1RandomSearch_a3d9000b9b84e9918bcf2e8187a057d7d}{list\+Trace}} = new float\mbox{[}1200000\mbox{]}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Otros miembros heredados}
+\doxysubsection*{Atributos públicos heredados de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator}{metaheuristics.\+generators.\+Generator}}}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a3c0145210385b6257c8fc20cac1f830a}{count\+Gender}}
+\item 
+int \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a43815f3944c514ba3156b0e68482befa}{count\+Better\+Gender}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+\doxylink{classmetaheuristics_1_1generators_1_1RandomSearch}{Random\+Search} -\/ class that implements the Random Search metaheuristic. 
+
+Definición en la línea \mbox{\hyperlink{RandomSearch_8java_source_l00024}{24}} del archivo \mbox{\hyperlink{RandomSearch_8java_source}{Random\+Search.\+java}}.
+
+
+
+\label{doc-constructors}
+\Hypertarget{classmetaheuristics_1_1generators_1_1RandomSearch_doc-constructors}
+\doxysubsection{Documentación de constructores y destructores}
+\Hypertarget{classmetaheuristics_1_1generators_1_1RandomSearch_ab94942d43169f104044b32d1e513f9f2}\index{metaheuristics.generators.RandomSearch@{metaheuristics.generators.RandomSearch}!RandomSearch@{RandomSearch}}
+\index{RandomSearch@{RandomSearch}!metaheuristics.generators.RandomSearch@{metaheuristics.generators.RandomSearch}}
+\doxysubsubsection{\texorpdfstring{RandomSearch()}{RandomSearch()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1RandomSearch_ab94942d43169f104044b32d1e513f9f2} 
+metaheuristics.\+generators.\+Random\+Search.\+Random\+Search (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxylink{classmetaheuristics_1_1generators_1_1RandomSearch}{Random\+Search} -\/ class that implements the Random Search metaheuristic. 
+
+
+
+Definición en la línea \mbox{\hyperlink{RandomSearch_8java_source_l00046}{46}} del archivo \mbox{\hyperlink{RandomSearch_8java_source}{Random\+Search.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ super();}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ this.typeAcceptation\ =\ AcceptType.AcceptBest;}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ this.strategy\ =\ StrategyType.NORMAL;}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ this.typeCandidate\ =\ CandidateType.RandomCandidate;}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ this.candidatevalue\ =\ \textcolor{keyword}{new}\ CandidateValue();}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ this.typeGenerator\ =\ GeneratorType.RandomSearch;}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ this.weight\ =\ 50;}
+\DoxyCodeLine{00054\ \ \ \ \ listTrace[0]\ =\ this.weight;}
+\DoxyCodeLine{00055\ \ \ \ \ listCountBetterGender[0]\ =\ 0;}
+\DoxyCodeLine{00056\ \ \ \ \ listCountGender[0]\ =\ 0;}
+\DoxyCodeLine{00057\ \ \ \ \ listStateReference.clear();}
+\DoxyCodeLine{00058\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{AcceptType_8java_source_l00015}{local\+\_\+search.\+acceptation\+\_\+type.\+Accept\+Type.\+Accept\+Best}}, \mbox{\hyperlink{RandomSearch_8java_source_l00039}{list\+Count\+Better\+Gender}}, \mbox{\hyperlink{RandomSearch_8java_source_l00040}{list\+Count\+Gender}}, \mbox{\hyperlink{RandomSearch_8java_source_l00036}{list\+State\+Reference}}, \mbox{\hyperlink{RandomSearch_8java_source_l00041}{list\+Trace}}, \mbox{\hyperlink{StrategyType_8java_source_l00018}{local\+\_\+search.\+complement.\+Strategy\+Type.\+NORMAL}}, \mbox{\hyperlink{CandidateType_8java_source_l00020}{local\+\_\+search.\+candidate\+\_\+type.\+Candidate\+Type.\+Random\+Candidate}} y \mbox{\hyperlink{GeneratorType_8java_source_l00007}{metaheuristics.\+generators.\+Generator\+Type.\+Random\+Search}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{classmetaheuristics_1_1generators_1_1RandomSearch_doc-func-members}
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{classmetaheuristics_1_1generators_1_1RandomSearch_a76a5b1a98d0456923d6eba8635dcb81a}\index{metaheuristics.generators.RandomSearch@{metaheuristics.generators.RandomSearch}!awardUpdateREF@{awardUpdateREF}}
+\index{awardUpdateREF@{awardUpdateREF}!metaheuristics.generators.RandomSearch@{metaheuristics.generators.RandomSearch}}
+\doxysubsubsection{\texorpdfstring{awardUpdateREF()}{awardUpdateREF()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1RandomSearch_a76a5b1a98d0456923d6eba8635dcb81a} 
+boolean metaheuristics.\+generators.\+Random\+Search.\+award\+Update\+REF (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}}]{state\+Candidate}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+award\+Update\+REF -\/ award the update of the reference state. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em state\+Candidate} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+return true if the update is awarded, false otherwise 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a3513d3953ecc97683f38bcb662b74b9b}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{RandomSearch_8java_source_l00158}{158}} del archivo \mbox{\hyperlink{RandomSearch_8java_source}{Random\+Search.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00161\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classmetaheuristics_1_1generators_1_1RandomSearch_ad7023836b94dd23bffd78ab7b9915551}\index{metaheuristics.generators.RandomSearch@{metaheuristics.generators.RandomSearch}!generate@{generate}}
+\index{generate@{generate}!metaheuristics.generators.RandomSearch@{metaheuristics.generators.RandomSearch}}
+\doxysubsubsection{\texorpdfstring{generate()}{generate()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1RandomSearch_ad7023836b94dd23bffd78ab7b9915551} 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} metaheuristics.\+generators.\+Random\+Search.\+generate (\begin{DoxyParamCaption}\item[{Integer}]{operatornumber}{}\end{DoxyParamCaption}) throws Illegal\+Argument\+Exception, Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception, Illegal\+Access\+Exception, Invocation\+Target\+Exception, No\+Such\+Method\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+generate -\/ generate a new state for the random search. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em operatornumber} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+the generated state 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a06f6f7622b9ce32590eadbdf6bf962b5}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{RandomSearch_8java_source_l00066}{66}} del archivo \mbox{\hyperlink{RandomSearch_8java_source}{Random\+Search.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ List<State>\ neighborhood\ =\ Strategy.getStrategy().getProblem().getOperator().generateRandomState(operatornumber);}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ State\ statecandidate\ =\ candidatevalue.stateCandidate(stateReferenceRS,\ typeCandidate,\ strategy,\ operatornumber,\ neighborhood);}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(GeneticAlgorithm.countRef\ !=\ 0\ ||\ EvolutionStrategies.countRef\ !=\ 0\ ||\ DistributionEstimationAlgorithm.countRef\ !=\ 0\ ||\ ParticleSwarmOptimization.getCountRef()\ !=\ 0)}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ listStateReference.add(statecandidate);}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ statecandidate;}
+\DoxyCodeLine{00072\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{RandomSearch_8java_source_l00026}{candidatevalue}}, \mbox{\hyperlink{DistributionEstimationAlgorithm_8java_source_l00048}{metaheuristics.\+generators.\+Distribution\+Estimation\+Algorithm.\+count\+Ref}}, \mbox{\hyperlink{EvolutionStrategies_8java_source_l00041}{metaheuristics.\+generators.\+Evolution\+Strategies.\+count\+Ref}}, \mbox{\hyperlink{GeneticAlgorithm_8java_source_l00055}{metaheuristics.\+generators.\+Genetic\+Algorithm.\+count\+Ref}}, \mbox{\hyperlink{classproblem_1_1definition_1_1Operator_a08c63f0d681ef130fccdb04d24ddf181}{problem.\+definition.\+Operator.\+generate\+Random\+State()}}, \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00344}{metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+get\+Count\+Ref()}}, \mbox{\hyperlink{Problem_8java_source_l00131}{problem.\+definition.\+Problem.\+get\+Operator()}}, \mbox{\hyperlink{Strategy_8java_source_l00405}{metaheurictics.\+strategy.\+Strategy.\+get\+Problem()}}, \mbox{\hyperlink{Strategy_8java_source_l00080}{metaheurictics.\+strategy.\+Strategy.\+get\+Strategy()}}, \mbox{\hyperlink{RandomSearch_8java_source_l00036}{list\+State\+Reference}}, \mbox{\hyperlink{RandomSearch_8java_source_l00030}{state\+Reference\+RS}}, \mbox{\hyperlink{RandomSearch_8java_source_l00028}{strategy}} y \mbox{\hyperlink{RandomSearch_8java_source_l00029}{type\+Candidate}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1RandomSearch_ad7023836b94dd23bffd78ab7b9915551_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmetaheuristics_1_1generators_1_1RandomSearch_aeb13ba46d7b1dceaa28e5f348869e5b2}\index{metaheuristics.generators.RandomSearch@{metaheuristics.generators.RandomSearch}!getListCountBetterGender@{getListCountBetterGender}}
+\index{getListCountBetterGender@{getListCountBetterGender}!metaheuristics.generators.RandomSearch@{metaheuristics.generators.RandomSearch}}
+\doxysubsubsection{\texorpdfstring{getListCountBetterGender()}{getListCountBetterGender()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1RandomSearch_aeb13ba46d7b1dceaa28e5f348869e5b2} 
+int\mbox{[}$\,$\mbox{]} metaheuristics.\+generators.\+Random\+Search.\+get\+List\+Count\+Better\+Gender (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+List\+Count\+Better\+Gender -\/ get the list of count better gender. 
+
+\begin{DoxyReturn}{Devuelve}
+the list of count better gender 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_ac5bace71f51c16b611ede3ed53263473}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{RandomSearch_8java_source_l00189}{189}} del archivo \mbox{\hyperlink{RandomSearch_8java_source}{Random\+Search.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (this.listCountBetterGender\ ==\ \textcolor{keyword}{null})\ ?\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[0]\ :\ Arrays.copyOf(this.listCountBetterGender,\ this.listCountBetterGender.length);}
+\DoxyCodeLine{00192\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classmetaheuristics_1_1generators_1_1RandomSearch_a0f1f95ae1c09092029ca31c7cc5296d5}\index{metaheuristics.generators.RandomSearch@{metaheuristics.generators.RandomSearch}!getListCountGender@{getListCountGender}}
+\index{getListCountGender@{getListCountGender}!metaheuristics.generators.RandomSearch@{metaheuristics.generators.RandomSearch}}
+\doxysubsubsection{\texorpdfstring{getListCountGender()}{getListCountGender()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1RandomSearch_a0f1f95ae1c09092029ca31c7cc5296d5} 
+int\mbox{[}$\,$\mbox{]} metaheuristics.\+generators.\+Random\+Search.\+get\+List\+Count\+Gender (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+List\+Count\+Gender -\/ get the list of count gender. 
+
+\begin{DoxyReturn}{Devuelve}
+the list of count gender 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_ac5d6d45ee8017fb87d80aa952edfc34e}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{RandomSearch_8java_source_l00199}{199}} del archivo \mbox{\hyperlink{RandomSearch_8java_source}{Random\+Search.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (this.listCountGender\ ==\ \textcolor{keyword}{null})\ ?\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[0]\ :\ Arrays.copyOf(this.listCountGender,\ this.listCountGender.length);}
+\DoxyCodeLine{00202\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classmetaheuristics_1_1generators_1_1RandomSearch_aff9eb703f54f81e6c52c0f2242c726c9}\index{metaheuristics.generators.RandomSearch@{metaheuristics.generators.RandomSearch}!getReference@{getReference}}
+\index{getReference@{getReference}!metaheuristics.generators.RandomSearch@{metaheuristics.generators.RandomSearch}}
+\doxysubsubsection{\texorpdfstring{getReference()}{getReference()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1RandomSearch_aff9eb703f54f81e6c52c0f2242c726c9} 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} metaheuristics.\+generators.\+Random\+Search.\+get\+Reference (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Reference -\/ get the reference state for the random search. 
+
+\begin{DoxyReturn}{Devuelve}
+the reference state 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_aa56dd45a45776f6023b9f74179cc6384}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{RandomSearch_8java_source_l00079}{79}} del archivo \mbox{\hyperlink{RandomSearch_8java_source}{Random\+Search.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ stateReferenceRS;}
+\DoxyCodeLine{00081\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{RandomSearch_8java_source_l00030}{state\+Reference\+RS}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1RandomSearch_a86fdf2273755318267c1839988d2074c}\index{metaheuristics.generators.RandomSearch@{metaheuristics.generators.RandomSearch}!getReferenceList@{getReferenceList}}
+\index{getReferenceList@{getReferenceList}!metaheuristics.generators.RandomSearch@{metaheuristics.generators.RandomSearch}}
+\doxysubsubsection{\texorpdfstring{getReferenceList()}{getReferenceList()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1RandomSearch_a86fdf2273755318267c1839988d2074c} 
+List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ metaheuristics.\+generators.\+Random\+Search.\+get\+Reference\+List (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Reference\+List -\/ get the list of reference states for the random search. 
+
+\begin{DoxyReturn}{Devuelve}
+the list of reference states 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_ae168237b306de55fe4d6dfda75c7cd13}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{RandomSearch_8java_source_l00137}{137}} del archivo \mbox{\hyperlink{RandomSearch_8java_source}{Random\+Search.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ listStateReference.add(stateReferenceRS);}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ listStateReference;}
+\DoxyCodeLine{00140\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{RandomSearch_8java_source_l00036}{list\+State\+Reference}} y \mbox{\hyperlink{RandomSearch_8java_source_l00030}{state\+Reference\+RS}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1RandomSearch_a31385fa5fe7d4a79578a92daa41e6b6e}\index{metaheuristics.generators.RandomSearch@{metaheuristics.generators.RandomSearch}!getSonList@{getSonList}}
+\index{getSonList@{getSonList}!metaheuristics.generators.RandomSearch@{metaheuristics.generators.RandomSearch}}
+\doxysubsubsection{\texorpdfstring{getSonList()}{getSonList()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1RandomSearch_a31385fa5fe7d4a79578a92daa41e6b6e} 
+List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ metaheuristics.\+generators.\+Random\+Search.\+get\+Son\+List (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Son\+List -\/ get the son list. 
+
+\begin{DoxyReturn}{Devuelve}
+the son list 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_aee09d724c1b3040e7a7ad0b64e341c96}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{RandomSearch_8java_source_l00147}{147}} del archivo \mbox{\hyperlink{RandomSearch_8java_source}{Random\+Search.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00150\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classmetaheuristics_1_1generators_1_1RandomSearch_ab0a81fb9ec17688eaa9e68532192e278}\index{metaheuristics.generators.RandomSearch@{metaheuristics.generators.RandomSearch}!getTrace@{getTrace}}
+\index{getTrace@{getTrace}!metaheuristics.generators.RandomSearch@{metaheuristics.generators.RandomSearch}}
+\doxysubsubsection{\texorpdfstring{getTrace()}{getTrace()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1RandomSearch_ab0a81fb9ec17688eaa9e68532192e278} 
+float\mbox{[}$\,$\mbox{]} metaheuristics.\+generators.\+Random\+Search.\+get\+Trace (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Trace -\/ get the trace of the generator. 
+
+\begin{DoxyReturn}{Devuelve}
+the trace of the generator 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a75d7f30dd2cb3f92475db8525ac7c6e7}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{RandomSearch_8java_source_l00209}{209}} del archivo \mbox{\hyperlink{RandomSearch_8java_source}{Random\+Search.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (this.listTrace\ ==\ \textcolor{keyword}{null})\ ?\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{float}[0]\ :\ Arrays.copyOf(this.listTrace,\ this.listTrace.length);}
+\DoxyCodeLine{00212\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classmetaheuristics_1_1generators_1_1RandomSearch_ac91ed100725544f9a3b74c1950d202eb}\index{metaheuristics.generators.RandomSearch@{metaheuristics.generators.RandomSearch}!getType@{getType}}
+\index{getType@{getType}!metaheuristics.generators.RandomSearch@{metaheuristics.generators.RandomSearch}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1RandomSearch_ac91ed100725544f9a3b74c1950d202eb} 
+\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{Generator\+Type}} metaheuristics.\+generators.\+Random\+Search.\+get\+Type (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Type -\/ get the type of the generator. 
+
+\begin{DoxyReturn}{Devuelve}
+the type of the generator 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a5a123306b43c42d28cd1d6e17f8067a5}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{RandomSearch_8java_source_l00112}{112}} del archivo \mbox{\hyperlink{RandomSearch_8java_source}{Random\+Search.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this.typeGenerator;}
+\DoxyCodeLine{00114\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classmetaheuristics_1_1generators_1_1RandomSearch_ab6f8c524a2947214b1c2fdfbefdd6a62}\index{metaheuristics.generators.RandomSearch@{metaheuristics.generators.RandomSearch}!getTypeGenerator@{getTypeGenerator}}
+\index{getTypeGenerator@{getTypeGenerator}!metaheuristics.generators.RandomSearch@{metaheuristics.generators.RandomSearch}}
+\doxysubsubsection{\texorpdfstring{getTypeGenerator()}{getTypeGenerator()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1RandomSearch_ab6f8c524a2947214b1c2fdfbefdd6a62} 
+\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{Generator\+Type}} metaheuristics.\+generators.\+Random\+Search.\+get\+Type\+Generator (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Type\+Generator -\/ get the type of the generator. 
+
+\begin{DoxyReturn}{Devuelve}
+the type of the generator 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{RandomSearch_8java_source_l00120}{120}} del archivo \mbox{\hyperlink{RandomSearch_8java_source}{Random\+Search.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ typeGenerator;}
+\DoxyCodeLine{00122\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{RandomSearch_8java_source_l00032}{type\+Generator}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1RandomSearch_af83f9d33ce8b1909a426d5eb70f3d272}\index{metaheuristics.generators.RandomSearch@{metaheuristics.generators.RandomSearch}!getWeight@{getWeight}}
+\index{getWeight@{getWeight}!metaheuristics.generators.RandomSearch@{metaheuristics.generators.RandomSearch}}
+\doxysubsubsection{\texorpdfstring{getWeight()}{getWeight()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1RandomSearch_af83f9d33ce8b1909a426d5eb70f3d272} 
+float metaheuristics.\+generators.\+Random\+Search.\+get\+Weight (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Weight -\/ get the weight of the generator. 
+
+\begin{DoxyReturn}{Devuelve}
+the weight of the generator 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a64f2b824081c7af593bf9aa8eabf2c9e}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{RandomSearch_8java_source_l00169}{169}} del archivo \mbox{\hyperlink{RandomSearch_8java_source}{Random\+Search.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this.weight;}
+\DoxyCodeLine{00172\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classmetaheuristics_1_1generators_1_1RandomSearch_a13ed1a979ee6b0c7e1c9b1a8dc245a42}\index{metaheuristics.generators.RandomSearch@{metaheuristics.generators.RandomSearch}!setInitialReference@{setInitialReference}}
+\index{setInitialReference@{setInitialReference}!metaheuristics.generators.RandomSearch@{metaheuristics.generators.RandomSearch}}
+\doxysubsubsection{\texorpdfstring{setInitialReference()}{setInitialReference()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1RandomSearch_a13ed1a979ee6b0c7e1c9b1a8dc245a42} 
+void metaheuristics.\+generators.\+Random\+Search.\+set\+Initial\+Reference (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}}]{state\+Initial\+Ref}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+set\+Initial\+Reference -\/ set the initial reference state for the random search. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em state\+Initial\+Ref} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_aa9f7c4c983705f843b8fcc81e4aa8ba4}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{RandomSearch_8java_source_l00088}{88}} del archivo \mbox{\hyperlink{RandomSearch_8java_source}{Random\+Search.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ this.stateReferenceRS\ =\ stateInitialRef;}
+\DoxyCodeLine{00090\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classmetaheuristics_1_1generators_1_1RandomSearch_a4f1278b5787af80bfca253179a4d2de4}\index{metaheuristics.generators.RandomSearch@{metaheuristics.generators.RandomSearch}!setTypeGenerator@{setTypeGenerator}}
+\index{setTypeGenerator@{setTypeGenerator}!metaheuristics.generators.RandomSearch@{metaheuristics.generators.RandomSearch}}
+\doxysubsubsection{\texorpdfstring{setTypeGenerator()}{setTypeGenerator()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1RandomSearch_a4f1278b5787af80bfca253179a4d2de4} 
+void metaheuristics.\+generators.\+Random\+Search.\+set\+Type\+Generator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{Generator\+Type}}}]{type\+Generator}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+set\+Type\+Generator -\/ set the type of the generator. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em type\+Generator} & \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{RandomSearch_8java_source_l00128}{128}} del archivo \mbox{\hyperlink{RandomSearch_8java_source}{Random\+Search.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ this.typeGenerator\ =\ typeGenerator;}
+\DoxyCodeLine{00130\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{RandomSearch_8java_source_l00032}{type\+Generator}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1RandomSearch_a7a6ced92bd465675956f08a646e93aaa}\index{metaheuristics.generators.RandomSearch@{metaheuristics.generators.RandomSearch}!setWeight@{setWeight}}
+\index{setWeight@{setWeight}!metaheuristics.generators.RandomSearch@{metaheuristics.generators.RandomSearch}}
+\doxysubsubsection{\texorpdfstring{setWeight()}{setWeight()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1RandomSearch_a7a6ced92bd465675956f08a646e93aaa} 
+void metaheuristics.\+generators.\+Random\+Search.\+set\+Weight (\begin{DoxyParamCaption}\item[{float}]{weight}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+set\+Weight -\/ set the weight of the generator. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em weight} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a8b3c66b57b4c739666989fbce667eb40}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{RandomSearch_8java_source_l00179}{179}} del archivo \mbox{\hyperlink{RandomSearch_8java_source}{Random\+Search.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ this.weight\ =\ weight;}
+\DoxyCodeLine{00182\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{RandomSearch_8java_source_l00034}{weight}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1RandomSearch_a0ec26b03ce5dd592af4568fa0b4b915e}\index{metaheuristics.generators.RandomSearch@{metaheuristics.generators.RandomSearch}!updateReference@{updateReference}}
+\index{updateReference@{updateReference}!metaheuristics.generators.RandomSearch@{metaheuristics.generators.RandomSearch}}
+\doxysubsubsection{\texorpdfstring{updateReference()}{updateReference()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1RandomSearch_a0ec26b03ce5dd592af4568fa0b4b915e} 
+void metaheuristics.\+generators.\+Random\+Search.\+update\+Reference (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}}]{state\+Candidate}{, }\item[{Integer}]{count\+Iterations\+Current}{}\end{DoxyParamCaption}) throws Illegal\+Argument\+Exception, Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception, Illegal\+Access\+Exception, Invocation\+Target\+Exception, No\+Such\+Method\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+update\+Reference -\/ update the reference state and the personal best state of the particle. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em state\+Candidate} & \\
+\hline
+{\em count\+Iterations\+Current} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_aa1c5878953f2111221b21cb9b1e6cc9f}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{RandomSearch_8java_source_l00098}{98}} del archivo \mbox{\hyperlink{RandomSearch_8java_source}{Random\+Search.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ ifacceptCandidate\ =\ \textcolor{keyword}{new}\ FactoryAcceptCandidate();}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ AcceptableCandidate\ candidate\ =\ ifacceptCandidate.createAcceptCandidate(typeAcceptation);}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ Boolean\ accept\ =\ candidate.acceptCandidate(stateReferenceRS,\ stateCandidate);}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(accept.equals(\textcolor{keyword}{true}))}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ stateReferenceRS\ =\ stateCandidate;}
+\DoxyCodeLine{00104\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1AcceptableCandidate_aa9e62e1d2d213c3828d2491b506d0592}{local\+\_\+search.\+acceptation\+\_\+type.\+Acceptable\+Candidate.\+accept\+Candidate()}}, \mbox{\hyperlink{RandomSearch_8java_source_l00031}{ifaccept\+Candidate}}, \mbox{\hyperlink{RandomSearch_8java_source_l00030}{state\+Reference\+RS}} y \mbox{\hyperlink{RandomSearch_8java_source_l00027}{type\+Acceptation}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1RandomSearch_a0ec26b03ce5dd592af4568fa0b4b915e_cgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-variable-members}
+\Hypertarget{classmetaheuristics_1_1generators_1_1RandomSearch_doc-variable-members}
+\doxysubsection{Documentación de datos miembro}
+\Hypertarget{classmetaheuristics_1_1generators_1_1RandomSearch_a31725eeb416cd0b5845bf0b2b8cd9a61}\index{metaheuristics.generators.RandomSearch@{metaheuristics.generators.RandomSearch}!candidatevalue@{candidatevalue}}
+\index{candidatevalue@{candidatevalue}!metaheuristics.generators.RandomSearch@{metaheuristics.generators.RandomSearch}}
+\doxysubsubsection{\texorpdfstring{candidatevalue}{candidatevalue}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1RandomSearch_a31725eeb416cd0b5845bf0b2b8cd9a61} 
+\mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1CandidateValue}{Candidate\+Value}} metaheuristics.\+generators.\+Random\+Search.\+candidatevalue\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{RandomSearch_8java_source_l00026}{26}} del archivo \mbox{\hyperlink{RandomSearch_8java_source}{Random\+Search.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{RandomSearch_8java_source_l00066}{generate()}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1RandomSearch_aaccc7be6beddc8bfcdf9ef6399f2e27f}\index{metaheuristics.generators.RandomSearch@{metaheuristics.generators.RandomSearch}!ifacceptCandidate@{ifacceptCandidate}}
+\index{ifacceptCandidate@{ifacceptCandidate}!metaheuristics.generators.RandomSearch@{metaheuristics.generators.RandomSearch}}
+\doxysubsubsection{\texorpdfstring{ifacceptCandidate}{ifacceptCandidate}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1RandomSearch_aaccc7be6beddc8bfcdf9ef6399f2e27f} 
+\mbox{\hyperlink{interfacefactory__interface_1_1IFFactoryAcceptCandidate}{IFFactory\+Accept\+Candidate}} metaheuristics.\+generators.\+Random\+Search.\+ifaccept\+Candidate\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{RandomSearch_8java_source_l00031}{31}} del archivo \mbox{\hyperlink{RandomSearch_8java_source}{Random\+Search.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{RandomSearch_8java_source_l00098}{update\+Reference()}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1RandomSearch_a0bf4dbdcfe91cc3ec191b96ba9104a07}\index{metaheuristics.generators.RandomSearch@{metaheuristics.generators.RandomSearch}!listCountBetterGender@{listCountBetterGender}}
+\index{listCountBetterGender@{listCountBetterGender}!metaheuristics.generators.RandomSearch@{metaheuristics.generators.RandomSearch}}
+\doxysubsubsection{\texorpdfstring{listCountBetterGender}{listCountBetterGender}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1RandomSearch_a0bf4dbdcfe91cc3ec191b96ba9104a07} 
+int \mbox{[}$\,$\mbox{]} metaheuristics.\+generators.\+Random\+Search.\+list\+Count\+Better\+Gender = new int\mbox{[}10\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{RandomSearch_8java_source_l00039}{39}} del archivo \mbox{\hyperlink{RandomSearch_8java_source}{Random\+Search.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{RandomSearch_8java_source_l00046}{Random\+Search()}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1RandomSearch_a9fdd813456c4f26698cc0c1fed994b4f}\index{metaheuristics.generators.RandomSearch@{metaheuristics.generators.RandomSearch}!listCountGender@{listCountGender}}
+\index{listCountGender@{listCountGender}!metaheuristics.generators.RandomSearch@{metaheuristics.generators.RandomSearch}}
+\doxysubsubsection{\texorpdfstring{listCountGender}{listCountGender}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1RandomSearch_a9fdd813456c4f26698cc0c1fed994b4f} 
+int \mbox{[}$\,$\mbox{]} metaheuristics.\+generators.\+Random\+Search.\+list\+Count\+Gender = new int\mbox{[}10\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{RandomSearch_8java_source_l00040}{40}} del archivo \mbox{\hyperlink{RandomSearch_8java_source}{Random\+Search.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{RandomSearch_8java_source_l00046}{Random\+Search()}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1RandomSearch_ab7be9a87a0cb3de1e17f14e79a0b32ce}\index{metaheuristics.generators.RandomSearch@{metaheuristics.generators.RandomSearch}!listStateReference@{listStateReference}}
+\index{listStateReference@{listStateReference}!metaheuristics.generators.RandomSearch@{metaheuristics.generators.RandomSearch}}
+\doxysubsubsection{\texorpdfstring{listStateReference}{listStateReference}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1RandomSearch_ab7be9a87a0cb3de1e17f14e79a0b32ce} 
+final List$<$\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}$>$ metaheuristics.\+generators.\+Random\+Search.\+list\+State\+Reference = Collections.\+synchronized\+List(new Array\+List$<$\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}$>$())\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{RandomSearch_8java_source_l00036}{36}} del archivo \mbox{\hyperlink{RandomSearch_8java_source}{Random\+Search.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{Strategy_8java_source_l00483}{metaheurictics.\+strategy.\+Strategy.\+destroy\+Execute()}}, \mbox{\hyperlink{RandomSearch_8java_source_l00066}{generate()}}, \mbox{\hyperlink{DistributionEstimationAlgorithm_8java_source_l00189}{metaheuristics.\+generators.\+Distribution\+Estimation\+Algorithm.\+get\+List\+State\+Ref()}}, \mbox{\hyperlink{EvolutionStrategies_8java_source_l00164}{metaheuristics.\+generators.\+Evolution\+Strategies.\+get\+List\+State\+Ref()}}, \mbox{\hyperlink{GeneticAlgorithm_8java_source_l00200}{metaheuristics.\+generators.\+Genetic\+Algorithm.\+get\+List\+State\+Ref()}}, \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00220}{metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+get\+List\+State\+Ref()}}, \mbox{\hyperlink{RandomSearch_8java_source_l00137}{get\+Reference\+List()}} y \mbox{\hyperlink{RandomSearch_8java_source_l00046}{Random\+Search()}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1RandomSearch_a3d9000b9b84e9918bcf2e8187a057d7d}\index{metaheuristics.generators.RandomSearch@{metaheuristics.generators.RandomSearch}!listTrace@{listTrace}}
+\index{listTrace@{listTrace}!metaheuristics.generators.RandomSearch@{metaheuristics.generators.RandomSearch}}
+\doxysubsubsection{\texorpdfstring{listTrace}{listTrace}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1RandomSearch_a3d9000b9b84e9918bcf2e8187a057d7d} 
+float \mbox{[}$\,$\mbox{]} metaheuristics.\+generators.\+Random\+Search.\+list\+Trace = new float\mbox{[}1200000\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{RandomSearch_8java_source_l00041}{41}} del archivo \mbox{\hyperlink{RandomSearch_8java_source}{Random\+Search.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{RandomSearch_8java_source_l00046}{Random\+Search()}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1RandomSearch_a0d8cba82a8afe29331014b860f3f40e2}\index{metaheuristics.generators.RandomSearch@{metaheuristics.generators.RandomSearch}!stateReferenceRS@{stateReferenceRS}}
+\index{stateReferenceRS@{stateReferenceRS}!metaheuristics.generators.RandomSearch@{metaheuristics.generators.RandomSearch}}
+\doxysubsubsection{\texorpdfstring{stateReferenceRS}{stateReferenceRS}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1RandomSearch_a0d8cba82a8afe29331014b860f3f40e2} 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} metaheuristics.\+generators.\+Random\+Search.\+state\+Reference\+RS\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{RandomSearch_8java_source_l00030}{30}} del archivo \mbox{\hyperlink{RandomSearch_8java_source}{Random\+Search.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{RandomSearch_8java_source_l00066}{generate()}}, \mbox{\hyperlink{RandomSearch_8java_source_l00079}{get\+Reference()}}, \mbox{\hyperlink{RandomSearch_8java_source_l00137}{get\+Reference\+List()}} y \mbox{\hyperlink{RandomSearch_8java_source_l00098}{update\+Reference()}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1RandomSearch_a423df75382c7b0481b472ba9d64dbc06}\index{metaheuristics.generators.RandomSearch@{metaheuristics.generators.RandomSearch}!strategy@{strategy}}
+\index{strategy@{strategy}!metaheuristics.generators.RandomSearch@{metaheuristics.generators.RandomSearch}}
+\doxysubsubsection{\texorpdfstring{strategy}{strategy}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1RandomSearch_a423df75382c7b0481b472ba9d64dbc06} 
+\mbox{\hyperlink{enumlocal__search_1_1complement_1_1StrategyType}{Strategy\+Type}} metaheuristics.\+generators.\+Random\+Search.\+strategy\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{RandomSearch_8java_source_l00028}{28}} del archivo \mbox{\hyperlink{RandomSearch_8java_source}{Random\+Search.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{RandomSearch_8java_source_l00066}{generate()}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1RandomSearch_a713ff99310ed0fb343bd9514bc3d92dc}\index{metaheuristics.generators.RandomSearch@{metaheuristics.generators.RandomSearch}!typeAcceptation@{typeAcceptation}}
+\index{typeAcceptation@{typeAcceptation}!metaheuristics.generators.RandomSearch@{metaheuristics.generators.RandomSearch}}
+\doxysubsubsection{\texorpdfstring{typeAcceptation}{typeAcceptation}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1RandomSearch_a713ff99310ed0fb343bd9514bc3d92dc} 
+\mbox{\hyperlink{enumlocal__search_1_1acceptation__type_1_1AcceptType}{Accept\+Type}} metaheuristics.\+generators.\+Random\+Search.\+type\+Acceptation\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{RandomSearch_8java_source_l00027}{27}} del archivo \mbox{\hyperlink{RandomSearch_8java_source}{Random\+Search.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{RandomSearch_8java_source_l00098}{update\+Reference()}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1RandomSearch_a41464d2c8c9fea8baa80db5e8555065a}\index{metaheuristics.generators.RandomSearch@{metaheuristics.generators.RandomSearch}!typeCandidate@{typeCandidate}}
+\index{typeCandidate@{typeCandidate}!metaheuristics.generators.RandomSearch@{metaheuristics.generators.RandomSearch}}
+\doxysubsubsection{\texorpdfstring{typeCandidate}{typeCandidate}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1RandomSearch_a41464d2c8c9fea8baa80db5e8555065a} 
+\mbox{\hyperlink{enumlocal__search_1_1candidate__type_1_1CandidateType}{Candidate\+Type}} metaheuristics.\+generators.\+Random\+Search.\+type\+Candidate\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{RandomSearch_8java_source_l00029}{29}} del archivo \mbox{\hyperlink{RandomSearch_8java_source}{Random\+Search.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{RandomSearch_8java_source_l00066}{generate()}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1RandomSearch_a14824f061a82565bcbe633ab11cc8c99}\index{metaheuristics.generators.RandomSearch@{metaheuristics.generators.RandomSearch}!typeGenerator@{typeGenerator}}
+\index{typeGenerator@{typeGenerator}!metaheuristics.generators.RandomSearch@{metaheuristics.generators.RandomSearch}}
+\doxysubsubsection{\texorpdfstring{typeGenerator}{typeGenerator}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1RandomSearch_a14824f061a82565bcbe633ab11cc8c99} 
+\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{Generator\+Type}} metaheuristics.\+generators.\+Random\+Search.\+type\+Generator\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{RandomSearch_8java_source_l00032}{32}} del archivo \mbox{\hyperlink{RandomSearch_8java_source}{Random\+Search.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{RandomSearch_8java_source_l00120}{get\+Type\+Generator()}} y \mbox{\hyperlink{RandomSearch_8java_source_l00128}{set\+Type\+Generator()}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1RandomSearch_a9c70568238fb6c172062e8709c28c53c}\index{metaheuristics.generators.RandomSearch@{metaheuristics.generators.RandomSearch}!weight@{weight}}
+\index{weight@{weight}!metaheuristics.generators.RandomSearch@{metaheuristics.generators.RandomSearch}}
+\doxysubsubsection{\texorpdfstring{weight}{weight}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1RandomSearch_a9c70568238fb6c172062e8709c28c53c} 
+float metaheuristics.\+generators.\+Random\+Search.\+weight\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{RandomSearch_8java_source_l00034}{34}} del archivo \mbox{\hyperlink{RandomSearch_8java_source}{Random\+Search.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{RandomSearch_8java_source_l00179}{set\+Weight()}}.
+
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{RandomSearch_8java}{Random\+Search.\+java}}\end{DoxyCompactItemize}

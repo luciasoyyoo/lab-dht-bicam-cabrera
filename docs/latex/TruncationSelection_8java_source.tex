@@ -1,0 +1,64 @@
+\doxysection{Truncation\+Selection.\+java}
+\hypertarget{TruncationSelection_8java_source}{}\label{TruncationSelection_8java_source}\index{TruncationSelection.java@{TruncationSelection.java}}
+\mbox{\hyperlink{TruncationSelection_8java}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{TruncationSelection_8java_source_l00001}00001\ \textcolor{keyword}{package\ }evolutionary\_algorithms.complement;}
+\DoxyCodeLine{\Hypertarget{TruncationSelection_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{TruncationSelection_8java_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{TruncationSelection_8java_source_l00004}00004\ \textcolor{keyword}{import}\ java.util.ArrayList;}
+\DoxyCodeLine{\Hypertarget{TruncationSelection_8java_source_l00005}00005\ \textcolor{keyword}{import}\ java.util.List;}
+\DoxyCodeLine{\Hypertarget{TruncationSelection_8java_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{TruncationSelection_8java_source_l00007}00007\ \textcolor{keyword}{import}\ metaheurictics.strategy.Strategy;}
+\DoxyCodeLine{\Hypertarget{TruncationSelection_8java_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{TruncationSelection_8java_source_l00009}00009\ \textcolor{keyword}{import}\ problem.definition.State;}
+\DoxyCodeLine{\Hypertarget{TruncationSelection_8java_source_l00010}00010\ \textcolor{keyword}{import}\ problem.definition.Problem.ProblemType;}
+\DoxyCodeLine{\Hypertarget{TruncationSelection_8java_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{TruncationSelection_8java_source_l00015}\mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1TruncationSelection}{00015}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1TruncationSelection}{TruncationSelection}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1FatherSelection}{FatherSelection}}\ \{}
+\DoxyCodeLine{\Hypertarget{TruncationSelection_8java_source_l00016}00016\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{TruncationSelection_8java_source_l00022}\mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1TruncationSelection_abfd00bbf62267166f7af2cd942223134}{00022}}\ \ \ \ \ \textcolor{keyword}{public}\ List<State>\ \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1TruncationSelection_abfd00bbf62267166f7af2cd942223134}{orderBetter}}\ (List<State>\ listState)\{}
+\DoxyCodeLine{\Hypertarget{TruncationSelection_8java_source_l00023}00023\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ var\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{TruncationSelection_8java_source_l00024}00024\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ listState.size()-\/\ 1;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{TruncationSelection_8java_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ i+1;\ j\ <\ listState.size();\ j++)\ \{}
+\DoxyCodeLine{\Hypertarget{TruncationSelection_8java_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(listState.get(i).getEvaluation().get(0)\ <\ listState.get(j).getEvaluation().get(0))\{}
+\DoxyCodeLine{\Hypertarget{TruncationSelection_8java_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ =\ listState.get(i);}
+\DoxyCodeLine{\Hypertarget{TruncationSelection_8java_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ listState.set(i,\ listState.get(j));}
+\DoxyCodeLine{\Hypertarget{TruncationSelection_8java_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ listState.set(j,var);}
+\DoxyCodeLine{\Hypertarget{TruncationSelection_8java_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TruncationSelection_8java_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TruncationSelection_8java_source_l00032}00032\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TruncationSelection_8java_source_l00033}00033\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ listState;}
+\DoxyCodeLine{\Hypertarget{TruncationSelection_8java_source_l00034}00034\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TruncationSelection_8java_source_l00035}00035\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{TruncationSelection_8java_source_l00041}\mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1TruncationSelection_aa0d3f437007ccd6f8004b949025251e8}{00041}}\ \ \ \ \ \textcolor{keyword}{public}\ List<State>\ \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1TruncationSelection_aa0d3f437007ccd6f8004b949025251e8}{ascOrderBetter}}\ (List<State>\ listState)\{}
+\DoxyCodeLine{\Hypertarget{TruncationSelection_8java_source_l00042}00042\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ var\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{TruncationSelection_8java_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ listState.size()-\/\ 1;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{TruncationSelection_8java_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ i+1;\ j\ <\ listState.size();\ j++)\ \{}
+\DoxyCodeLine{\Hypertarget{TruncationSelection_8java_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(listState.get(i).getEvaluation().get(0)\ >\ listState.get(j).getEvaluation().get(0))\{}
+\DoxyCodeLine{\Hypertarget{TruncationSelection_8java_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ =\ listState.get(i);}
+\DoxyCodeLine{\Hypertarget{TruncationSelection_8java_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ listState.set(i,\ listState.get(j));}
+\DoxyCodeLine{\Hypertarget{TruncationSelection_8java_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ listState.set(j,var);}
+\DoxyCodeLine{\Hypertarget{TruncationSelection_8java_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TruncationSelection_8java_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TruncationSelection_8java_source_l00051}00051\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TruncationSelection_8java_source_l00052}00052\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ listState;}
+\DoxyCodeLine{\Hypertarget{TruncationSelection_8java_source_l00053}00053\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TruncationSelection_8java_source_l00054}00054\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{TruncationSelection_8java_source_l00055}00055\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{TruncationSelection_8java_source_l00062}\mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1TruncationSelection_ab59a8422f18ba171cb70b680c84eaac1}{00062}}\ \ \ \ \ \textcolor{keyword}{public}\ List<State>\ \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1TruncationSelection_ab59a8422f18ba171cb70b680c84eaac1}{selection}}(List<State>\ listState,\ \textcolor{keywordtype}{int}\ truncation)\ \{}
+\DoxyCodeLine{\Hypertarget{TruncationSelection_8java_source_l00063}00063\ \ \ \ \ \ \ \ \ List<State>\ AuxList\ =\ \textcolor{keyword}{new}\ ArrayList<State>();}
+\DoxyCodeLine{\Hypertarget{TruncationSelection_8java_source_l00064}00064\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy}{Strategy}}.\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_ad2641e12c52292930364de6655333aa8}{getStrategy}}().\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_a4bc6bd95db71e14b1f48c1bfc85f1305}{getProblem}}().\mbox{\hyperlink{classproblem_1_1definition_1_1Problem_ad6f38df755179e22ffe487ba4a5c8021}{getTypeProblem}}().equals(\mbox{\hyperlink{enumproblem_1_1definition_1_1Problem_1_1ProblemType}{ProblemType}}.\mbox{\hyperlink{enumproblem_1_1definition_1_1Problem_1_1ProblemType_aa55383c4cb9a71cfeabc7f715ee0cd6e}{Maximizar}}))\ \{}
+\DoxyCodeLine{\Hypertarget{TruncationSelection_8java_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ listState\ =\ \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1TruncationSelection_abfd00bbf62267166f7af2cd942223134}{orderBetter}}(listState);}
+\DoxyCodeLine{\Hypertarget{TruncationSelection_8java_source_l00066}00066\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{TruncationSelection_8java_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy}{Strategy}}.\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_ad2641e12c52292930364de6655333aa8}{getStrategy}}().\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_a4bc6bd95db71e14b1f48c1bfc85f1305}{getProblem}}().\mbox{\hyperlink{classproblem_1_1definition_1_1Problem_ad6f38df755179e22ffe487ba4a5c8021}{getTypeProblem}}().equals(\mbox{\hyperlink{enumproblem_1_1definition_1_1Problem_1_1ProblemType}{ProblemType}}.\mbox{\hyperlink{enumproblem_1_1definition_1_1Problem_1_1ProblemType_aa1a15967abb927b9b6038c0a0af5fa18}{Minimizar}}))}
+\DoxyCodeLine{\Hypertarget{TruncationSelection_8java_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ listState\ =\ \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1TruncationSelection_aa0d3f437007ccd6f8004b949025251e8}{ascOrderBetter}}(listState);}
+\DoxyCodeLine{\Hypertarget{TruncationSelection_8java_source_l00069}00069\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TruncationSelection_8java_source_l00070}00070\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ i\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{TruncationSelection_8java_source_l00071}00071\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(AuxList.size()<\ truncation)\{}
+\DoxyCodeLine{\Hypertarget{TruncationSelection_8java_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ AuxList.add(listState.get(i));}
+\DoxyCodeLine{\Hypertarget{TruncationSelection_8java_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ i++;}
+\DoxyCodeLine{\Hypertarget{TruncationSelection_8java_source_l00074}00074\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TruncationSelection_8java_source_l00075}00075\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ AuxList;}
+\DoxyCodeLine{\Hypertarget{TruncationSelection_8java_source_l00076}00076\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TruncationSelection_8java_source_l00077}00077\ \}}
+
+\end{DoxyCode}

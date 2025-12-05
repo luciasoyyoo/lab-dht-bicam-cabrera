@@ -1,0 +1,971 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="es">
+  <compounddef id="classmetaheuristics_1_1generators_1_1SimulatedAnnealing" kind="class" language="Java" prot="public">
+    <compoundname>metaheuristics::generators::SimulatedAnnealing</compoundname>
+    <basecompoundref refid="classmetaheuristics_1_1generators_1_1Generator" prot="public" virt="non-virtual">metaheuristics.generators.Generator</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1aba2f66057a6dd21cd1e6b3995ded996c" prot="private" static="no" mutable="no">
+        <type><ref refid="classlocal__search_1_1candidate__type_1_1CandidateValue" kindref="compound">CandidateValue</ref></type>
+        <definition>CandidateValue metaheuristics.generators.SimulatedAnnealing.candidatevalue</definition>
+        <argsstring></argsstring>
+        <name>candidatevalue</name>
+        <qualifiedname>metaheuristics.generators.SimulatedAnnealing.candidatevalue</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" line="25" column="24" bodyfile="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" bodystart="25" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a42465a5f9da3ff282afbd8cae9603274" compoundref="SimulatedAnnealing_8java" startline="118" endline="122">metaheuristics.generators.SimulatedAnnealing.generate</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a14b22498bb70cc309d0c1bf66627959b" prot="private" static="no" mutable="no">
+        <type><ref refid="enumlocal__search_1_1acceptation__type_1_1AcceptType" kindref="compound">AcceptType</ref></type>
+        <definition>AcceptType metaheuristics.generators.SimulatedAnnealing.typeAcceptation</definition>
+        <argsstring></argsstring>
+        <name>typeAcceptation</name>
+        <qualifiedname>metaheuristics.generators.SimulatedAnnealing.typeAcceptation</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" line="26" column="20" bodyfile="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" bodystart="26" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1af6e00b21dc4f621cbee1a9ed85b9770e" compoundref="SimulatedAnnealing_8java" startline="156" endline="168">metaheuristics.generators.SimulatedAnnealing.updateReference</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a78d443dc318f9a1537f45e4241691eb6" prot="private" static="no" mutable="no">
+        <type><ref refid="enumlocal__search_1_1complement_1_1StrategyType" kindref="compound">StrategyType</ref></type>
+        <definition>StrategyType metaheuristics.generators.SimulatedAnnealing.strategy</definition>
+        <argsstring></argsstring>
+        <name>strategy</name>
+        <qualifiedname>metaheuristics.generators.SimulatedAnnealing.strategy</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" line="27" column="22" bodyfile="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" bodystart="27" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a42465a5f9da3ff282afbd8cae9603274" compoundref="SimulatedAnnealing_8java" startline="118" endline="122">metaheuristics.generators.SimulatedAnnealing.generate</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1adc272255c564b496520029696f3d6665" prot="private" static="no" mutable="no">
+        <type><ref refid="enumlocal__search_1_1candidate__type_1_1CandidateType" kindref="compound">CandidateType</ref></type>
+        <definition>CandidateType metaheuristics.generators.SimulatedAnnealing.typeCandidate</definition>
+        <argsstring></argsstring>
+        <name>typeCandidate</name>
+        <qualifiedname>metaheuristics.generators.SimulatedAnnealing.typeCandidate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" line="28" column="23" bodyfile="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" bodystart="28" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a42465a5f9da3ff282afbd8cae9603274" compoundref="SimulatedAnnealing_8java" startline="118" endline="122">metaheuristics.generators.SimulatedAnnealing.generate</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a53133e9907cee763a9dc5d807d52e965" prot="private" static="no" mutable="no">
+        <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+        <definition>State metaheuristics.generators.SimulatedAnnealing.stateReferenceSA</definition>
+        <argsstring></argsstring>
+        <name>stateReferenceSA</name>
+        <qualifiedname>metaheuristics.generators.SimulatedAnnealing.stateReferenceSA</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" line="29" column="15" bodyfile="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" bodystart="29" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a42465a5f9da3ff282afbd8cae9603274" compoundref="SimulatedAnnealing_8java" startline="118" endline="122">metaheuristics.generators.SimulatedAnnealing.generate</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1aadbaa9f82c1d336b0007493ae74d6b07" compoundref="SimulatedAnnealing_8java" startline="129" endline="131">metaheuristics.generators.SimulatedAnnealing.getReference</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a0228e9c2ac6f1bb8dd4e452e3b7791ca" compoundref="SimulatedAnnealing_8java" startline="184" endline="187">metaheuristics.generators.SimulatedAnnealing.getReferenceList</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1af6e00b21dc4f621cbee1a9ed85b9770e" compoundref="SimulatedAnnealing_8java" startline="156" endline="168">metaheuristics.generators.SimulatedAnnealing.updateReference</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1aa4e1bfb8d9af657714728b5b2a5cb322" prot="private" static="no" mutable="no">
+        <type><ref refid="interfacefactory__interface_1_1IFFactoryAcceptCandidate" kindref="compound">IFFactoryAcceptCandidate</ref></type>
+        <definition>IFFactoryAcceptCandidate metaheuristics.generators.SimulatedAnnealing.ifacceptCandidate</definition>
+        <argsstring></argsstring>
+        <name>ifacceptCandidate</name>
+        <qualifiedname>metaheuristics.generators.SimulatedAnnealing.ifacceptCandidate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" line="30" column="38" bodyfile="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" bodystart="30" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1af6e00b21dc4f621cbee1a9ed85b9770e" compoundref="SimulatedAnnealing_8java" startline="156" endline="168">metaheuristics.generators.SimulatedAnnealing.updateReference</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1aab3934a05e37f41f57f1bd449b015c92" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int metaheuristics.generators.SimulatedAnnealing.countRept</definition>
+        <argsstring></argsstring>
+        <name>countRept</name>
+        <qualifiedname>metaheuristics.generators.SimulatedAnnealing.countRept</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" line="53" column="17" bodyfile="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" bodystart="53" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1af6e00b21dc4f621cbee1a9ed85b9770e" compoundref="SimulatedAnnealing_8java" startline="156" endline="168">metaheuristics.generators.SimulatedAnnealing.updateReference</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1acfe4c36fcd2481896e4aa50d97ffb1d8" prot="private" static="no" mutable="no">
+        <type><ref refid="enummetaheuristics_1_1generators_1_1GeneratorType" kindref="compound">GeneratorType</ref></type>
+        <definition>GeneratorType metaheuristics.generators.SimulatedAnnealing.typeGenerator</definition>
+        <argsstring></argsstring>
+        <name>typeGenerator</name>
+        <qualifiedname>metaheuristics.generators.SimulatedAnnealing.typeGenerator</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" line="54" column="27" bodyfile="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" bodystart="54" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1afd5b39c160dde18e329cb2c1e6f78c7e" compoundref="SimulatedAnnealing_8java" startline="69" endline="71">metaheuristics.generators.SimulatedAnnealing.getTypeGenerator</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1ad60a310eb9f0cd4887dc348ed3a8237b" compoundref="SimulatedAnnealing_8java" startline="77" endline="79">metaheuristics.generators.SimulatedAnnealing.setTypeGenerator</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a3d7097840ef5c91150b33454b901a001" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+        <definition>List&lt;State&gt; metaheuristics.generators.SimulatedAnnealing.listStateReference</definition>
+        <argsstring></argsstring>
+        <name>listStateReference</name>
+        <qualifiedname>metaheuristics.generators.SimulatedAnnealing.listStateReference</qualifiedname>
+        <initializer>= new ArrayList&lt;<ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref>&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" line="55" column="18" bodyfile="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" bodystart="55" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a0228e9c2ac6f1bb8dd4e452e3b7791ca" compoundref="SimulatedAnnealing_8java" startline="184" endline="187">metaheuristics.generators.SimulatedAnnealing.getReferenceList</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a6700e17003775441ab84b9b7e1b9b81c" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float metaheuristics.generators.SimulatedAnnealing.weight</definition>
+        <argsstring></argsstring>
+        <name>weight</name>
+        <qualifiedname>metaheuristics.generators.SimulatedAnnealing.weight</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" line="56" column="19" bodyfile="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" bodystart="56" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1aa8743c43beb6426cde3ec0c4e26540e1" compoundref="SimulatedAnnealing_8java" startline="216" endline="219">metaheuristics.generators.SimulatedAnnealing.getWeight</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a19bda7a83cc317fca0853b72d333c7e9" compoundref="SimulatedAnnealing_8java" startline="226" endline="229">metaheuristics.generators.SimulatedAnnealing.setWeight</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1ab3cd175e54b2e49c7712d0949a69a9e1" compoundref="SimulatedAnnealing_8java" startline="98" endline="110">metaheuristics.generators.SimulatedAnnealing.SimulatedAnnealing</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a4f9e1d30acbde47e4be0b7084c8bd5d3" prot="private" static="no" mutable="no">
+        <type>int[]</type>
+        <definition>int [] metaheuristics.generators.SimulatedAnnealing.listCountBetterGender</definition>
+        <argsstring></argsstring>
+        <name>listCountBetterGender</name>
+        <qualifiedname>metaheuristics.generators.SimulatedAnnealing.listCountBetterGender</qualifiedname>
+        <initializer>= new int[10]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" line="60" column="17" bodyfile="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" bodystart="60" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1aae733e716b463e946d832b33c1b9653b" compoundref="SimulatedAnnealing_8java" startline="236" endline="239">metaheuristics.generators.SimulatedAnnealing.getListCountBetterGender</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1ab3cd175e54b2e49c7712d0949a69a9e1" compoundref="SimulatedAnnealing_8java" startline="98" endline="110">metaheuristics.generators.SimulatedAnnealing.SimulatedAnnealing</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1aded9e3d89cd38bfaad676e3536287d1f" prot="private" static="no" mutable="no">
+        <type>int[]</type>
+        <definition>int [] metaheuristics.generators.SimulatedAnnealing.listCountGender</definition>
+        <argsstring></argsstring>
+        <name>listCountGender</name>
+        <qualifiedname>metaheuristics.generators.SimulatedAnnealing.listCountGender</qualifiedname>
+        <initializer>= new int[10]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" line="61" column="17" bodyfile="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" bodystart="61" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a561cb467405e63cb9355b2d638463d13" compoundref="SimulatedAnnealing_8java" startline="246" endline="249">metaheuristics.generators.SimulatedAnnealing.getListCountGender</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1ab3cd175e54b2e49c7712d0949a69a9e1" compoundref="SimulatedAnnealing_8java" startline="98" endline="110">metaheuristics.generators.SimulatedAnnealing.SimulatedAnnealing</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a16307a8fa45d9e1e5979de2b91fb1cda" prot="private" static="no" mutable="no">
+        <type>float[]</type>
+        <definition>float [] metaheuristics.generators.SimulatedAnnealing.listTrace</definition>
+        <argsstring></argsstring>
+        <name>listTrace</name>
+        <qualifiedname>metaheuristics.generators.SimulatedAnnealing.listTrace</qualifiedname>
+        <initializer>= new float[1200000]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" line="62" column="19" bodyfile="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" bodystart="62" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a6af67fc9994b85087052b858e02976f6" compoundref="SimulatedAnnealing_8java" startline="256" endline="259">metaheuristics.generators.SimulatedAnnealing.getTrace</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1ab3cd175e54b2e49c7712d0949a69a9e1" compoundref="SimulatedAnnealing_8java" startline="98" endline="110">metaheuristics.generators.SimulatedAnnealing.SimulatedAnnealing</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a46f42ec0ae3460344e7a177dc8932f41" prot="public" static="yes" mutable="no">
+        <type>final double</type>
+        <definition>final double metaheuristics.generators.SimulatedAnnealing.alpha</definition>
+        <argsstring></argsstring>
+        <name>alpha</name>
+        <qualifiedname>metaheuristics.generators.SimulatedAnnealing.alpha</qualifiedname>
+        <initializer>= 0.93</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" line="32" column="28" bodyfile="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" bodystart="32" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1af6e00b21dc4f621cbee1a9ed85b9770e" compoundref="SimulatedAnnealing_8java" startline="156" endline="168">metaheuristics.generators.SimulatedAnnealing.updateReference</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a1fff787e98b3cdfc46d01ba0e80fe6b1" prot="public" static="yes" mutable="no">
+        <type>final Double</type>
+        <definition>final Double metaheuristics.generators.SimulatedAnnealing.tfinal</definition>
+        <argsstring></argsstring>
+        <name>tfinal</name>
+        <qualifiedname>metaheuristics.generators.SimulatedAnnealing.tfinal</qualifiedname>
+        <initializer>= 41.66</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" line="35" column="28" bodyfile="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" bodystart="35" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a7a5ade37358362ab5729dca3cca702a2" prot="private" static="yes" mutable="no">
+        <type>Double</type>
+        <definition>Double metaheuristics.generators.SimulatedAnnealing.tinitial</definition>
+        <argsstring></argsstring>
+        <name>tinitial</name>
+        <qualifiedname>metaheuristics.generators.SimulatedAnnealing.tinitial</qualifiedname>
+        <initializer>= 250.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" line="34" column="23" bodyfile="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" bodystart="34" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a54de458e42332b9c5c0146f1e5b29626" compoundref="SimulatedAnnealing_8java" startline="84" endline="86">metaheuristics.generators.SimulatedAnnealing.getTinitial</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a430cd43c882d314ec6014c3bccb6e7b9" compoundref="SimulatedAnnealing_8java" startline="91" endline="93">metaheuristics.generators.SimulatedAnnealing.setTinitial</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="package-static-attrib">
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1ada54fbe66abb5a0c9b8ee124b560d6b5" prot="package" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int metaheuristics.generators.SimulatedAnnealing.countIterationsT</definition>
+        <argsstring></argsstring>
+        <name>countIterationsT</name>
+        <qualifiedname>metaheuristics.generators.SimulatedAnnealing.countIterationsT</qualifiedname>
+        <initializer>= 50</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" line="36" column="12" bodyfile="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" bodystart="36" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a0e8d77d251d9fda0655a995f6e086615" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int metaheuristics.generators.SimulatedAnnealing.getCountIterationsT</definition>
+        <argsstring>()</argsstring>
+        <name>getCountIterationsT</name>
+        <qualifiedname>metaheuristics.generators.SimulatedAnnealing.getCountIterationsT</qualifiedname>
+        <briefdescription>
+<para>getCountIterationsT - get the count of iterations for temperature update. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the count of iterations for temperature update </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" line="42" column="19" bodyfile="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" bodystart="42" bodyend="44"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1af6e00b21dc4f621cbee1a9ed85b9770e" compoundref="SimulatedAnnealing_8java" startline="156" endline="168">metaheuristics.generators.SimulatedAnnealing.updateReference</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a4c993ab96484d3f07910164682808ffb" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void metaheuristics.generators.SimulatedAnnealing.setCountIterationsT</definition>
+        <argsstring>(int c)</argsstring>
+        <name>setCountIterationsT</name>
+        <qualifiedname>metaheuristics.generators.SimulatedAnnealing.setCountIterationsT</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>setCountIterationsT - set the count of iterations for temperature update. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the count of iterations to set </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" line="50" column="20" bodyfile="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" bodystart="50" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a54de458e42332b9c5c0146f1e5b29626" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Double</type>
+        <definition>static Double metaheuristics.generators.SimulatedAnnealing.getTinitial</definition>
+        <argsstring>()</argsstring>
+        <name>getTinitial</name>
+        <qualifiedname>metaheuristics.generators.SimulatedAnnealing.getTinitial</qualifiedname>
+        <briefdescription>
+<para>Getter for initial temperature. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" line="84" column="22" bodyfile="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" bodystart="84" bodyend="86"/>
+        <references refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a7a5ade37358362ab5729dca3cca702a2" compoundref="SimulatedAnnealing_8java" startline="34">metaheuristics.generators.SimulatedAnnealing.tinitial</references>
+        <referencedby refid="classlocal__search_1_1acceptation__type_1_1AcceptNotBadT_1ab913b2e75ae2c8a85091ba229f13d123" compoundref="AcceptNotBadT_8java" startline="45" endline="66">local_search.acceptation_type.AcceptNotBadT.acceptCandidate</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a430cd43c882d314ec6014c3bccb6e7b9" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void metaheuristics.generators.SimulatedAnnealing.setTinitial</definition>
+        <argsstring>(Double t)</argsstring>
+        <name>setTinitial</name>
+        <qualifiedname>metaheuristics.generators.SimulatedAnnealing.setTinitial</qualifiedname>
+        <param>
+          <type>Double</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>Setter for initial temperature. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" line="91" column="20" bodyfile="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" bodystart="91" bodyend="93"/>
+        <references refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a7a5ade37358362ab5729dca3cca702a2" compoundref="SimulatedAnnealing_8java" startline="34">metaheuristics.generators.SimulatedAnnealing.tinitial</references>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1afd5b39c160dde18e329cb2c1e6f78c7e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="enummetaheuristics_1_1generators_1_1GeneratorType" kindref="compound">GeneratorType</ref></type>
+        <definition>GeneratorType metaheuristics.generators.SimulatedAnnealing.getTypeGenerator</definition>
+        <argsstring>()</argsstring>
+        <name>getTypeGenerator</name>
+        <qualifiedname>metaheuristics.generators.SimulatedAnnealing.getTypeGenerator</qualifiedname>
+        <briefdescription>
+<para>getTypeGenerator - get the type of the generator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the type of the generator </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" line="69" column="26" bodyfile="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" bodystart="69" bodyend="71"/>
+        <references refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1acfe4c36fcd2481896e4aa50d97ffb1d8" compoundref="SimulatedAnnealing_8java" startline="54">metaheuristics.generators.SimulatedAnnealing.typeGenerator</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1ad60a310eb9f0cd4887dc348ed3a8237b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheuristics.generators.SimulatedAnnealing.setTypeGenerator</definition>
+        <argsstring>(GeneratorType typeGenerator)</argsstring>
+        <name>setTypeGenerator</name>
+        <qualifiedname>metaheuristics.generators.SimulatedAnnealing.setTypeGenerator</qualifiedname>
+        <param>
+          <type><ref refid="enummetaheuristics_1_1generators_1_1GeneratorType" kindref="compound">GeneratorType</ref></type>
+          <declname>typeGenerator</declname>
+        </param>
+        <briefdescription>
+<para>setTypeGenerator - set the type of the generator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>typeGenerator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" line="77" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" bodystart="77" bodyend="79"/>
+        <references refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1acfe4c36fcd2481896e4aa50d97ffb1d8" compoundref="SimulatedAnnealing_8java" startline="54">metaheuristics.generators.SimulatedAnnealing.typeGenerator</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1ab3cd175e54b2e49c7712d0949a69a9e1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>metaheuristics.generators.SimulatedAnnealing.SimulatedAnnealing</definition>
+        <argsstring>()</argsstring>
+        <name>SimulatedAnnealing</name>
+        <qualifiedname>metaheuristics.generators.SimulatedAnnealing.SimulatedAnnealing</qualifiedname>
+        <briefdescription>
+<para><ref refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing" kindref="compound">SimulatedAnnealing</ref> - descripcion (añade detalles). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" line="98" column="8" bodyfile="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" bodystart="98" bodyend="110"/>
+        <references refid="enumlocal__search_1_1acceptation__type_1_1AcceptType_1a551aa04981fa57f44dc35789cb5b2e2f" compoundref="AcceptType_8java" startline="15">local_search.acceptation_type.AcceptType.AcceptNotBadT</references>
+        <references refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a4f9e1d30acbde47e4be0b7084c8bd5d3" compoundref="SimulatedAnnealing_8java" startline="60">metaheuristics.generators.SimulatedAnnealing.listCountBetterGender</references>
+        <references refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1aded9e3d89cd38bfaad676e3536287d1f" compoundref="SimulatedAnnealing_8java" startline="61">metaheuristics.generators.SimulatedAnnealing.listCountGender</references>
+        <references refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a16307a8fa45d9e1e5979de2b91fb1cda" compoundref="SimulatedAnnealing_8java" startline="62">metaheuristics.generators.SimulatedAnnealing.listTrace</references>
+        <references refid="enumlocal__search_1_1complement_1_1StrategyType_1a6319a2518e93ad757c398fb858df8c9e" compoundref="StrategyType_8java" startline="18">local_search.complement.StrategyType.NORMAL</references>
+        <references refid="enumlocal__search_1_1candidate__type_1_1CandidateType_1a3914a76aec072c9056c8a338449c0532" compoundref="CandidateType_8java" startline="20">local_search.candidate_type.CandidateType.RandomCandidate</references>
+        <references refid="enummetaheuristics_1_1generators_1_1GeneratorType_1ad1eaf4a28c6bc787131e2badd38b2f8d" compoundref="GeneratorType_8java" startline="7">metaheuristics.generators.GeneratorType.SimulatedAnnealing</references>
+        <references refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a6700e17003775441ab84b9b7e1b9b81c" compoundref="SimulatedAnnealing_8java" startline="56">metaheuristics.generators.SimulatedAnnealing.weight</references>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1af6e00b21dc4f621cbee1a9ed85b9770e" compoundref="SimulatedAnnealing_8java" startline="156" endline="168">metaheuristics.generators.SimulatedAnnealing.updateReference</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a42465a5f9da3ff282afbd8cae9603274" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+        <definition>State metaheuristics.generators.SimulatedAnnealing.generate</definition>
+        <argsstring>(Integer operatornumber)</argsstring>
+        <name>generate</name>
+        <qualifiedname>metaheuristics.generators.SimulatedAnnealing.generate</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1a06f6f7622b9ce32590eadbdf6bf962b5">generate</reimplements>
+        <param>
+          <type>Integer</type>
+          <declname>operatornumber</declname>
+        </param>
+        <exceptions> throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException </exceptions>
+        <briefdescription>
+<para>generate - method to generate a new state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>operatornumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>return the generated state </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" line="118" column="14" bodyfile="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" bodystart="118" bodyend="122"/>
+        <references refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1aba2f66057a6dd21cd1e6b3995ded996c" compoundref="SimulatedAnnealing_8java" startline="25">metaheuristics.generators.SimulatedAnnealing.candidatevalue</references>
+        <references refid="classproblem_1_1definition_1_1Operator_1a5b6625843e73d938f9235985bf966b34">problem.definition.Operator.generatedNewState</references>
+        <references refid="classproblem_1_1definition_1_1Problem_1a4cd649edb8862f21af171491cb9b9386" compoundref="Problem_8java" startline="131" endline="133">problem.definition.Problem.getOperator</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1a4bc6bd95db71e14b1f48c1bfc85f1305" compoundref="Strategy_8java" startline="405" endline="407">metaheurictics.strategy.Strategy.getProblem</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1ad2641e12c52292930364de6655333aa8" compoundref="Strategy_8java" startline="80" endline="85">metaheurictics.strategy.Strategy.getStrategy</references>
+        <references refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a53133e9907cee763a9dc5d807d52e965" compoundref="SimulatedAnnealing_8java" startline="29">metaheuristics.generators.SimulatedAnnealing.stateReferenceSA</references>
+        <references refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a78d443dc318f9a1537f45e4241691eb6" compoundref="SimulatedAnnealing_8java" startline="27">metaheuristics.generators.SimulatedAnnealing.strategy</references>
+        <references refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1adc272255c564b496520029696f3d6665" compoundref="SimulatedAnnealing_8java" startline="28">metaheuristics.generators.SimulatedAnnealing.typeCandidate</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1aadbaa9f82c1d336b0007493ae74d6b07" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+        <definition>State metaheuristics.generators.SimulatedAnnealing.getReference</definition>
+        <argsstring>()</argsstring>
+        <name>getReference</name>
+        <qualifiedname>metaheuristics.generators.SimulatedAnnealing.getReference</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1aa56dd45a45776f6023b9f74179cc6384">getReference</reimplements>
+        <briefdescription>
+<para>getReference - get the reference state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the reference state </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" line="129" column="14" bodyfile="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" bodystart="129" bodyend="131"/>
+        <references refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a53133e9907cee763a9dc5d807d52e965" compoundref="SimulatedAnnealing_8java" startline="29">metaheuristics.generators.SimulatedAnnealing.stateReferenceSA</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a98382f5ece5062c48988d2642bf6cd60" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheuristics.generators.SimulatedAnnealing.setStateRef</definition>
+        <argsstring>(State stateRef)</argsstring>
+        <name>setStateRef</name>
+        <qualifiedname>metaheuristics.generators.SimulatedAnnealing.setStateRef</qualifiedname>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>stateRef</declname>
+        </param>
+        <briefdescription>
+<para>setStateRef - set the reference state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stateRef</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the reference state to set </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" line="137" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" bodystart="137" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1ae2a08a4f7183db472485cdf70fed53a1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheuristics.generators.SimulatedAnnealing.setInitialReference</definition>
+        <argsstring>(State stateInitialRef)</argsstring>
+        <name>setInitialReference</name>
+        <qualifiedname>metaheuristics.generators.SimulatedAnnealing.setInitialReference</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1aa9f7c4c983705f843b8fcc81e4aa8ba4">setInitialReference</reimplements>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>stateInitialRef</declname>
+        </param>
+        <briefdescription>
+<para>setInitialReference - set the initial reference state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stateInitialRef</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the initial reference state to set </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" line="146" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" bodystart="146" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1af6e00b21dc4f621cbee1a9ed85b9770e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheuristics.generators.SimulatedAnnealing.updateReference</definition>
+        <argsstring>(State stateCandidate, Integer countIterationsCurrent)</argsstring>
+        <name>updateReference</name>
+        <qualifiedname>metaheuristics.generators.SimulatedAnnealing.updateReference</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1aa1c5878953f2111221b21cb9b1e6cc9f">updateReference</reimplements>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>stateCandidate</declname>
+        </param>
+        <param>
+          <type>Integer</type>
+          <declname>countIterationsCurrent</declname>
+        </param>
+        <exceptions> throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException </exceptions>
+        <briefdescription>
+<para>updateReference - update the reference state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stateCandidate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>countIterationsCurrent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" line="156" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" bodystart="156" bodyend="168"/>
+        <references refid="classlocal__search_1_1acceptation__type_1_1AcceptableCandidate_1aa9e62e1d2d213c3828d2491b506d0592">local_search.acceptation_type.AcceptableCandidate.acceptCandidate</references>
+        <references refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a46f42ec0ae3460344e7a177dc8932f41" compoundref="SimulatedAnnealing_8java" startline="32">metaheuristics.generators.SimulatedAnnealing.alpha</references>
+        <references refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1aab3934a05e37f41f57f1bd449b015c92" compoundref="SimulatedAnnealing_8java" startline="53">metaheuristics.generators.SimulatedAnnealing.countRept</references>
+        <references refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a0e8d77d251d9fda0655a995f6e086615" compoundref="SimulatedAnnealing_8java" startline="42" endline="44">metaheuristics.generators.SimulatedAnnealing.getCountIterationsT</references>
+        <references refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1aa4e1bfb8d9af657714728b5b2a5cb322" compoundref="SimulatedAnnealing_8java" startline="30">metaheuristics.generators.SimulatedAnnealing.ifacceptCandidate</references>
+        <references refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1ab3cd175e54b2e49c7712d0949a69a9e1" compoundref="SimulatedAnnealing_8java" startline="98" endline="110">metaheuristics.generators.SimulatedAnnealing.SimulatedAnnealing</references>
+        <references refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a53133e9907cee763a9dc5d807d52e965" compoundref="SimulatedAnnealing_8java" startline="29">metaheuristics.generators.SimulatedAnnealing.stateReferenceSA</references>
+        <references refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a14b22498bb70cc309d0c1bf66627959b" compoundref="SimulatedAnnealing_8java" startline="26">metaheuristics.generators.SimulatedAnnealing.typeAcceptation</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a98d43a4efb241b43981dbecc5b6f3b1d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="enummetaheuristics_1_1generators_1_1GeneratorType" kindref="compound">GeneratorType</ref></type>
+        <definition>GeneratorType metaheuristics.generators.SimulatedAnnealing.getType</definition>
+        <argsstring>()</argsstring>
+        <name>getType</name>
+        <qualifiedname>metaheuristics.generators.SimulatedAnnealing.getType</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1a5a123306b43c42d28cd1d6e17f8067a5">getType</reimplements>
+        <briefdescription>
+<para>getType - get the type of the generator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the type of the generator </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" line="175" column="22" bodyfile="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" bodystart="175" bodyend="177"/>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a0228e9c2ac6f1bb8dd4e452e3b7791ca" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+        <definition>List&lt; State &gt; metaheuristics.generators.SimulatedAnnealing.getReferenceList</definition>
+        <argsstring>()</argsstring>
+        <name>getReferenceList</name>
+        <qualifiedname>metaheuristics.generators.SimulatedAnnealing.getReferenceList</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1ae168237b306de55fe4d6dfda75c7cd13">getReferenceList</reimplements>
+        <briefdescription>
+<para>getReferenceList - get the list of reference states. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the list of reference states </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" line="184" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" bodystart="184" bodyend="187"/>
+        <references refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a3d7097840ef5c91150b33454b901a001" compoundref="SimulatedAnnealing_8java" startline="55">metaheuristics.generators.SimulatedAnnealing.listStateReference</references>
+        <references refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a53133e9907cee763a9dc5d807d52e965" compoundref="SimulatedAnnealing_8java" startline="29">metaheuristics.generators.SimulatedAnnealing.stateReferenceSA</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1aefc4df55a0b09417f9b4a098f2c29d31" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+        <definition>List&lt; State &gt; metaheuristics.generators.SimulatedAnnealing.getSonList</definition>
+        <argsstring>()</argsstring>
+        <name>getSonList</name>
+        <qualifiedname>metaheuristics.generators.SimulatedAnnealing.getSonList</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1aee09d724c1b3040e7a7ad0b64e341c96">getSonList</reimplements>
+        <briefdescription>
+<para>getSonList - get the list of child states. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the list of child states </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" line="194" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" bodystart="194" bodyend="197"/>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a9c5aedc7476522393077fdf35a5d24d1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean metaheuristics.generators.SimulatedAnnealing.awardUpdateREF</definition>
+        <argsstring>(State stateCandidate)</argsstring>
+        <name>awardUpdateREF</name>
+        <qualifiedname>metaheuristics.generators.SimulatedAnnealing.awardUpdateREF</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1a3513d3953ecc97683f38bcb662b74b9b">awardUpdateREF</reimplements>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>stateCandidate</declname>
+        </param>
+        <briefdescription>
+<para>awardUpdateREF - award the update of the reference state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stateCandidate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>return true if the update is awarded, false otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" line="205" column="16" bodyfile="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" bodystart="205" bodyend="208"/>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1aa8743c43beb6426cde3ec0c4e26540e1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float metaheuristics.generators.SimulatedAnnealing.getWeight</definition>
+        <argsstring>()</argsstring>
+        <name>getWeight</name>
+        <qualifiedname>metaheuristics.generators.SimulatedAnnealing.getWeight</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1a64f2b824081c7af593bf9aa8eabf2c9e">getWeight</reimplements>
+        <briefdescription>
+<para>getWeight - get the weight of the generator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the weight of the generator </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" line="216" column="14" bodyfile="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" bodystart="216" bodyend="219"/>
+        <references refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a6700e17003775441ab84b9b7e1b9b81c" compoundref="SimulatedAnnealing_8java" startline="56">metaheuristics.generators.SimulatedAnnealing.weight</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a19bda7a83cc317fca0853b72d333c7e9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheuristics.generators.SimulatedAnnealing.setWeight</definition>
+        <argsstring>(float weight)</argsstring>
+        <name>setWeight</name>
+        <qualifiedname>metaheuristics.generators.SimulatedAnnealing.setWeight</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1a8b3c66b57b4c739666989fbce667eb40">setWeight</reimplements>
+        <param>
+          <type>float</type>
+          <declname>weight</declname>
+        </param>
+        <briefdescription>
+<para>setWeight - set the weight of the generator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>weight</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the weight to set </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" line="226" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" bodystart="226" bodyend="229"/>
+        <references refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a6700e17003775441ab84b9b7e1b9b81c" compoundref="SimulatedAnnealing_8java" startline="56">metaheuristics.generators.SimulatedAnnealing.weight</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1aae733e716b463e946d832b33c1b9653b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int[]</type>
+        <definition>int[] metaheuristics.generators.SimulatedAnnealing.getListCountBetterGender</definition>
+        <argsstring>()</argsstring>
+        <name>getListCountBetterGender</name>
+        <qualifiedname>metaheuristics.generators.SimulatedAnnealing.getListCountBetterGender</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1ac5bace71f51c16b611ede3ed53263473">getListCountBetterGender</reimplements>
+        <briefdescription>
+<para>getListCountBetterGender - get the list of better gender counts. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the list of better gender counts </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" line="236" column="12" bodyfile="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" bodystart="236" bodyend="239"/>
+        <references refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a4f9e1d30acbde47e4be0b7084c8bd5d3" compoundref="SimulatedAnnealing_8java" startline="60">metaheuristics.generators.SimulatedAnnealing.listCountBetterGender</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a561cb467405e63cb9355b2d638463d13" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int[]</type>
+        <definition>int[] metaheuristics.generators.SimulatedAnnealing.getListCountGender</definition>
+        <argsstring>()</argsstring>
+        <name>getListCountGender</name>
+        <qualifiedname>metaheuristics.generators.SimulatedAnnealing.getListCountGender</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1ac5d6d45ee8017fb87d80aa952edfc34e">getListCountGender</reimplements>
+        <briefdescription>
+<para>getListCountGender - get the list of gender counts. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the list of gender counts </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" line="246" column="12" bodyfile="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" bodystart="246" bodyend="249"/>
+        <references refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1aded9e3d89cd38bfaad676e3536287d1f" compoundref="SimulatedAnnealing_8java" startline="61">metaheuristics.generators.SimulatedAnnealing.listCountGender</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a6af67fc9994b85087052b858e02976f6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float[]</type>
+        <definition>float[] metaheuristics.generators.SimulatedAnnealing.getTrace</definition>
+        <argsstring>()</argsstring>
+        <name>getTrace</name>
+        <qualifiedname>metaheuristics.generators.SimulatedAnnealing.getTrace</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1a75d7f30dd2cb3f92475db8525ac7c6e7">getTrace</reimplements>
+        <briefdescription>
+<para>getTrace -get the trace of the generator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the trace of the generator </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" line="256" column="14" bodyfile="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" bodystart="256" bodyend="259"/>
+        <references refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a16307a8fa45d9e1e5979de2b91fb1cda" compoundref="SimulatedAnnealing_8java" startline="62">metaheuristics.generators.SimulatedAnnealing.listTrace</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing" kindref="compound">SimulatedAnnealing</ref> - class that implements the Simulated Annealing metaheuristic. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>metaheuristics.generators.SimulatedAnnealing</label>
+        <link refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>metaheuristics.generators.Generator</label>
+        <link refid="classmetaheuristics_1_1generators_1_1Generator"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="11">
+        <label>Cloneable</label>
+      </node>
+      <node id="13">
+        <label>factory_interface.IFFactoryAcceptCandidate</label>
+        <link refid="interfacefactory__interface_1_1IFFactoryAcceptCandidate"/>
+      </node>
+      <node id="4">
+        <label>factory_interface.IFFactoryCandidate</label>
+        <link refid="interfacefactory__interface_1_1IFFactoryCandidate"/>
+      </node>
+      <node id="7">
+        <label>local_search.acceptation_type.AcceptType</label>
+        <link refid="enumlocal__search_1_1acceptation__type_1_1AcceptType"/>
+      </node>
+      <node id="9">
+        <label>local_search.candidate_type.CandidateType</label>
+        <link refid="enumlocal__search_1_1candidate__type_1_1CandidateType"/>
+      </node>
+      <node id="3">
+        <label>local_search.candidate_type.CandidateValue</label>
+        <link refid="classlocal__search_1_1candidate__type_1_1CandidateValue"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-ifFactory</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>-tabusolution</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>-searchcandidate</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>local_search.candidate_type.SearchCandidate</label>
+        <link refid="classlocal__search_1_1candidate__type_1_1SearchCandidate"/>
+      </node>
+      <node id="8">
+        <label>local_search.complement.StrategyType</label>
+        <link refid="enumlocal__search_1_1complement_1_1StrategyType"/>
+      </node>
+      <node id="5">
+        <label>local_search.complement.TabuSolutions</label>
+        <link refid="classlocal__search_1_1complement_1_1TabuSolutions"/>
+      </node>
+      <node id="1">
+        <label>metaheuristics.generators.SimulatedAnnealing</label>
+        <link refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-candidatevalue</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>-typeAcceptation</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>-strategy</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>-typeCandidate</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>-stateReferenceSA</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>-ifacceptCandidate</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>-typeGenerator</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>metaheuristics.generators.Generator</label>
+        <link refid="classmetaheuristics_1_1generators_1_1Generator"/>
+      </node>
+      <node id="12">
+        <label>metaheuristics.generators.GeneratorType</label>
+        <link refid="enummetaheuristics_1_1generators_1_1GeneratorType"/>
+      </node>
+      <node id="10">
+        <label>problem.definition.State</label>
+        <link refid="classproblem_1_1definition_1_1State"/>
+        <childnode refid="11" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>#typeGenerator</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" line="23" column="7" bodyfile="practica5/src/main/java/metaheuristics/generators/SimulatedAnnealing.java" bodystart="23" bodyend="261"/>
+    <listofallmembers>
+      <member refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a46f42ec0ae3460344e7a177dc8932f41" prot="public" virt="non-virtual"><scope>metaheuristics::generators::SimulatedAnnealing</scope><name>alpha</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a9c5aedc7476522393077fdf35a5d24d1" prot="public" virt="non-virtual"><scope>metaheuristics::generators::SimulatedAnnealing</scope><name>awardUpdateREF</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1aba2f66057a6dd21cd1e6b3995ded996c" prot="private" virt="non-virtual"><scope>metaheuristics::generators::SimulatedAnnealing</scope><name>candidatevalue</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1Generator_1a43815f3944c514ba3156b0e68482befa" prot="public" virt="non-virtual"><scope>metaheuristics::generators::SimulatedAnnealing</scope><name>countBetterGender</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1Generator_1a3c0145210385b6257c8fc20cac1f830a" prot="public" virt="non-virtual"><scope>metaheuristics::generators::SimulatedAnnealing</scope><name>countGender</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1ada54fbe66abb5a0c9b8ee124b560d6b5" prot="package" virt="non-virtual"><scope>metaheuristics::generators::SimulatedAnnealing</scope><name>countIterationsT</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1aab3934a05e37f41f57f1bd449b015c92" prot="private" virt="non-virtual"><scope>metaheuristics::generators::SimulatedAnnealing</scope><name>countRept</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a42465a5f9da3ff282afbd8cae9603274" prot="public" virt="non-virtual"><scope>metaheuristics::generators::SimulatedAnnealing</scope><name>generate</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a0e8d77d251d9fda0655a995f6e086615" prot="public" virt="non-virtual"><scope>metaheuristics::generators::SimulatedAnnealing</scope><name>getCountIterationsT</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1aae733e716b463e946d832b33c1b9653b" prot="public" virt="non-virtual"><scope>metaheuristics::generators::SimulatedAnnealing</scope><name>getListCountBetterGender</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a561cb467405e63cb9355b2d638463d13" prot="public" virt="non-virtual"><scope>metaheuristics::generators::SimulatedAnnealing</scope><name>getListCountGender</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1aadbaa9f82c1d336b0007493ae74d6b07" prot="public" virt="non-virtual"><scope>metaheuristics::generators::SimulatedAnnealing</scope><name>getReference</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a0228e9c2ac6f1bb8dd4e452e3b7791ca" prot="public" virt="non-virtual"><scope>metaheuristics::generators::SimulatedAnnealing</scope><name>getReferenceList</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1aefc4df55a0b09417f9b4a098f2c29d31" prot="public" virt="non-virtual"><scope>metaheuristics::generators::SimulatedAnnealing</scope><name>getSonList</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a54de458e42332b9c5c0146f1e5b29626" prot="public" virt="non-virtual"><scope>metaheuristics::generators::SimulatedAnnealing</scope><name>getTinitial</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a6af67fc9994b85087052b858e02976f6" prot="public" virt="non-virtual"><scope>metaheuristics::generators::SimulatedAnnealing</scope><name>getTrace</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a98d43a4efb241b43981dbecc5b6f3b1d" prot="public" virt="non-virtual"><scope>metaheuristics::generators::SimulatedAnnealing</scope><name>getType</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1afd5b39c160dde18e329cb2c1e6f78c7e" prot="public" virt="non-virtual"><scope>metaheuristics::generators::SimulatedAnnealing</scope><name>getTypeGenerator</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1aa8743c43beb6426cde3ec0c4e26540e1" prot="public" virt="non-virtual"><scope>metaheuristics::generators::SimulatedAnnealing</scope><name>getWeight</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1aa4e1bfb8d9af657714728b5b2a5cb322" prot="private" virt="non-virtual"><scope>metaheuristics::generators::SimulatedAnnealing</scope><name>ifacceptCandidate</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a4f9e1d30acbde47e4be0b7084c8bd5d3" prot="private" virt="non-virtual"><scope>metaheuristics::generators::SimulatedAnnealing</scope><name>listCountBetterGender</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1aded9e3d89cd38bfaad676e3536287d1f" prot="private" virt="non-virtual"><scope>metaheuristics::generators::SimulatedAnnealing</scope><name>listCountGender</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a3d7097840ef5c91150b33454b901a001" prot="private" virt="non-virtual"><scope>metaheuristics::generators::SimulatedAnnealing</scope><name>listStateReference</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a16307a8fa45d9e1e5979de2b91fb1cda" prot="private" virt="non-virtual"><scope>metaheuristics::generators::SimulatedAnnealing</scope><name>listTrace</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a4c993ab96484d3f07910164682808ffb" prot="public" virt="non-virtual"><scope>metaheuristics::generators::SimulatedAnnealing</scope><name>setCountIterationsT</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1ae2a08a4f7183db472485cdf70fed53a1" prot="public" virt="non-virtual"><scope>metaheuristics::generators::SimulatedAnnealing</scope><name>setInitialReference</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a98382f5ece5062c48988d2642bf6cd60" prot="public" virt="non-virtual"><scope>metaheuristics::generators::SimulatedAnnealing</scope><name>setStateRef</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a430cd43c882d314ec6014c3bccb6e7b9" prot="public" virt="non-virtual"><scope>metaheuristics::generators::SimulatedAnnealing</scope><name>setTinitial</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1ad60a310eb9f0cd4887dc348ed3a8237b" prot="public" virt="non-virtual"><scope>metaheuristics::generators::SimulatedAnnealing</scope><name>setTypeGenerator</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a19bda7a83cc317fca0853b72d333c7e9" prot="public" virt="non-virtual"><scope>metaheuristics::generators::SimulatedAnnealing</scope><name>setWeight</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1ab3cd175e54b2e49c7712d0949a69a9e1" prot="public" virt="non-virtual"><scope>metaheuristics::generators::SimulatedAnnealing</scope><name>SimulatedAnnealing</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a53133e9907cee763a9dc5d807d52e965" prot="private" virt="non-virtual"><scope>metaheuristics::generators::SimulatedAnnealing</scope><name>stateReferenceSA</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a78d443dc318f9a1537f45e4241691eb6" prot="private" virt="non-virtual"><scope>metaheuristics::generators::SimulatedAnnealing</scope><name>strategy</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a1fff787e98b3cdfc46d01ba0e80fe6b1" prot="public" virt="non-virtual"><scope>metaheuristics::generators::SimulatedAnnealing</scope><name>tfinal</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a7a5ade37358362ab5729dca3cca702a2" prot="private" virt="non-virtual"><scope>metaheuristics::generators::SimulatedAnnealing</scope><name>tinitial</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a14b22498bb70cc309d0c1bf66627959b" prot="private" virt="non-virtual"><scope>metaheuristics::generators::SimulatedAnnealing</scope><name>typeAcceptation</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1adc272255c564b496520029696f3d6665" prot="private" virt="non-virtual"><scope>metaheuristics::generators::SimulatedAnnealing</scope><name>typeCandidate</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1acfe4c36fcd2481896e4aa50d97ffb1d8" prot="private" virt="non-virtual"><scope>metaheuristics::generators::SimulatedAnnealing</scope><name>typeGenerator</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1af6e00b21dc4f621cbee1a9ed85b9770e" prot="public" virt="non-virtual"><scope>metaheuristics::generators::SimulatedAnnealing</scope><name>updateReference</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a6700e17003775441ab84b9b7e1b9b81c" prot="private" virt="non-virtual"><scope>metaheuristics::generators::SimulatedAnnealing</scope><name>weight</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

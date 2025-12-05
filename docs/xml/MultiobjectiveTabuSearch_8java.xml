@@ -1,0 +1,297 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="es">
+  <compounddef id="MultiobjectiveTabuSearch_8java" kind="file" language="Java">
+    <compoundname>MultiobjectiveTabuSearch.java</compoundname>
+    <includes local="no">java.lang.reflect.InvocationTargetException</includes>
+    <includes local="no">java.util.ArrayList</includes>
+    <includes local="no">java.util.List</includes>
+    <includes local="no">factory_interface.IFFactoryAcceptCandidate</includes>
+    <includes local="no">factory_method.FactoryAcceptCandidate</includes>
+    <includes local="no">local_search.acceptation_type.AcceptType</includes>
+    <includes local="no">local_search.acceptation_type.AcceptableCandidate</includes>
+    <includes local="no">local_search.candidate_type.CandidateType</includes>
+    <includes local="no">local_search.candidate_type.CandidateValue</includes>
+    <includes local="no">local_search.complement.StrategyType</includes>
+    <includes local="no">local_search.complement.TabuSolutions</includes>
+    <includes local="no">metaheurictics.strategy.Strategy</includes>
+    <includes local="no">problem.definition.Problem</includes>
+    <includes local="no">problem.definition.State</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>MultiobjectiveTabuSearch.java</label>
+        <link refid="MultiobjectiveTabuSearch_8java"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>factory_interface.IFFactoryAcceptCandidate</label>
+      </node>
+      <node id="6">
+        <label>factory_method.FactoryAcceptCandidate</label>
+      </node>
+      <node id="2">
+        <label>java.lang.reflect.InvocationTargetException</label>
+      </node>
+      <node id="3">
+        <label>java.util.ArrayList</label>
+      </node>
+      <node id="4">
+        <label>java.util.List</label>
+      </node>
+      <node id="7">
+        <label>local_search.acceptation_type.AcceptType</label>
+      </node>
+      <node id="8">
+        <label>local_search.acceptation_type.AcceptableCandidate</label>
+      </node>
+      <node id="9">
+        <label>local_search.candidate_type.CandidateType</label>
+      </node>
+      <node id="10">
+        <label>local_search.candidate_type.CandidateValue</label>
+      </node>
+      <node id="11">
+        <label>local_search.complement.StrategyType</label>
+      </node>
+      <node id="12">
+        <label>local_search.complement.TabuSolutions</label>
+      </node>
+      <node id="13">
+        <label>metaheurictics.strategy.Strategy</label>
+      </node>
+      <node id="14">
+        <label>problem.definition.Problem</label>
+      </node>
+      <node id="15">
+        <label>problem.definition.State</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch" prot="public">metaheuristics::generators::MultiobjectiveTabuSearch</innerclass>
+    <innernamespace refid="namespacemetaheuristics_1_1generators">metaheuristics::generators</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">package<sp/></highlight><highlight class="normal">metaheuristics.generators;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>java.lang.reflect.InvocationTargetException;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>java.util.ArrayList;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>java.util.List;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>factory_interface.IFFactoryAcceptCandidate;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>factory_method.FactoryAcceptCandidate;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>local_search.acceptation_type.AcceptType;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>local_search.acceptation_type.AcceptableCandidate;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>local_search.candidate_type.CandidateType;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>local_search.candidate_type.CandidateValue;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>local_search.complement.StrategyType;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>local_search.complement.TabuSolutions;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>metaheurictics.strategy.Strategy;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>problem.definition.Problem;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>problem.definition.State;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a34d8bdaed4d57911bd7bde63157c8703" kindref="member">MultiobjectiveTabuSearch</ref><sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/><ref refid="classmetaheuristics_1_1generators_1_1Generator" kindref="compound">Generator</ref><sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1ac1077518972d0de6f6cdb4669a5c32b8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/><ref refid="classlocal__search_1_1candidate__type_1_1CandidateValue" kindref="compound">CandidateValue</ref><sp/><ref refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1ac1077518972d0de6f6cdb4669a5c32b8" kindref="member">candidatevalue</ref>;</highlight></codeline>
+<codeline lineno="28" refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a09c4a34396dafd514a3b43c86f368d0f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/><ref refid="enumlocal__search_1_1acceptation__type_1_1AcceptType" kindref="compound">AcceptType</ref><sp/><ref refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a09c4a34396dafd514a3b43c86f368d0f" kindref="member">typeAcceptation</ref>;</highlight></codeline>
+<codeline lineno="29" refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a048690a51992d1a585cb0c36064252f1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/><ref refid="enumlocal__search_1_1complement_1_1StrategyType" kindref="compound">StrategyType</ref><sp/><ref refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a048690a51992d1a585cb0c36064252f1" kindref="member">strategy</ref>;</highlight></codeline>
+<codeline lineno="30" refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a97da542e1d41a93fb2af3b9deee60fdc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/><ref refid="enumlocal__search_1_1candidate__type_1_1CandidateType" kindref="compound">CandidateType</ref><sp/><ref refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a97da542e1d41a93fb2af3b9deee60fdc" kindref="member">typeCandidate</ref>;</highlight></codeline>
+<codeline lineno="31" refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1af0997147df854712548011b247a5f174" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref><sp/><ref refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1af0997147df854712548011b247a5f174" kindref="member">stateReferenceTS</ref>;</highlight></codeline>
+<codeline lineno="32" refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1aa71ff0be1f4f97b95dd7780c2b0b40be" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/><ref refid="interfacefactory__interface_1_1IFFactoryAcceptCandidate" kindref="compound">IFFactoryAcceptCandidate</ref><sp/><ref refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1aa71ff0be1f4f97b95dd7780c2b0b40be" kindref="member">ifacceptCandidate</ref>;</highlight></codeline>
+<codeline lineno="33" refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1ab5623431c4358f5f3293c4c5e23a7992" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/><ref refid="enummetaheuristics_1_1generators_1_1GeneratorType" kindref="compound">GeneratorType</ref><sp/><ref refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1ab5623431c4358f5f3293c4c5e23a7992" kindref="member">typeGenerator</ref>;</highlight></codeline>
+<codeline lineno="34" refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a9222859138dedf83000373b31f226829" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>List&lt;State&gt;<sp/><ref refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a9222859138dedf83000373b31f226829" kindref="member">listStateReference</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>ArrayList&lt;State&gt;();</highlight></codeline>
+<codeline lineno="35" refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1aa4607bb225547e49d5202adfb63b0c9a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1aa4607bb225547e49d5202adfb63b0c9a" kindref="member">weight</ref>;</highlight></codeline>
+<codeline lineno="36" refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a5e668cca34188f2c6c03e2951fe0b100" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>List&lt;Float&gt;<sp/><ref refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a5e668cca34188f2c6c03e2951fe0b100" kindref="member">listTrace</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>ArrayList&lt;Float&gt;();</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1ae279b2ed418314d15e6c56b842c20e23" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref><sp/><ref refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1ae279b2ed418314d15e6c56b842c20e23" kindref="member">getStateReferenceTS</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1af0997147df854712548011b247a5f174" kindref="member">stateReferenceTS</ref>;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1acfded8b29215bc85064637d868cf3917" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1acfded8b29215bc85064637d868cf3917" kindref="member">setStateReferenceTS</ref>(<ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref><sp/><ref refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1af0997147df854712548011b247a5f174" kindref="member">stateReferenceTS</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.stateReferenceTS<sp/>=<sp/><ref refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1af0997147df854712548011b247a5f174" kindref="member">stateReferenceTS</ref>;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a6988226dc64befc6c8f6959085929efc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="enummetaheuristics_1_1generators_1_1GeneratorType" kindref="compound">GeneratorType</ref><sp/><ref refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a6988226dc64befc6c8f6959085929efc" kindref="member">getTypeGenerator</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1ab5623431c4358f5f3293c4c5e23a7992" kindref="member">typeGenerator</ref>;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a754ffcf3508a256e16fbf626048da0ce" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a754ffcf3508a256e16fbf626048da0ce" kindref="member">setTypeGenerator</ref>(<ref refid="enummetaheuristics_1_1generators_1_1GeneratorType" kindref="compound">GeneratorType</ref><sp/><ref refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1ab5623431c4358f5f3293c4c5e23a7992" kindref="member">typeGenerator</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.typeGenerator<sp/>=<sp/><ref refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1ab5623431c4358f5f3293c4c5e23a7992" kindref="member">typeGenerator</ref>;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a34d8bdaed4d57911bd7bde63157c8703" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a34d8bdaed4d57911bd7bde63157c8703" kindref="member">MultiobjectiveTabuSearch</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super();</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.typeAcceptation<sp/>=<sp/><ref refid="enumlocal__search_1_1acceptation__type_1_1AcceptType" kindref="compound">AcceptType</ref>.<ref refid="enumlocal__search_1_1acceptation__type_1_1AcceptType_1a671422b03983faac4a66030015eedb85" kindref="member">AcceptNotDominatedTabu</ref>;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.strategy<sp/>=<sp/><ref refid="enumlocal__search_1_1complement_1_1StrategyType" kindref="compound">StrategyType</ref>.<ref refid="enumlocal__search_1_1complement_1_1StrategyType_1ac0c34198bb10ffedf05b8be68f72c170" kindref="member">TABU</ref>;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Use<sp/>problem<sp/>API<sp/>directly<sp/>when<sp/>needed;<sp/>avoid<sp/>unused<sp/>local<sp/>variable</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.typeCandidate<sp/>=<sp/><ref refid="enumlocal__search_1_1candidate__type_1_1CandidateType" kindref="compound">CandidateType</ref>.<ref refid="enumlocal__search_1_1candidate__type_1_1CandidateType_1a3914a76aec072c9056c8a338449c0532" kindref="member">RandomCandidate</ref>;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.candidatevalue<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classlocal__search_1_1candidate__type_1_1CandidateValue" kindref="compound">CandidateValue</ref>();</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.typeGenerator<sp/>=<sp/><ref refid="enummetaheuristics_1_1generators_1_1GeneratorType" kindref="compound">GeneratorType</ref>.<ref refid="enummetaheuristics_1_1generators_1_1GeneratorType_1a7ab22e629b0297ba3442d06ffb613a38" kindref="member">MultiobjectiveTabuSearch</ref>;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.weight<sp/>=<sp/>50;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a5e668cca34188f2c6c03e2951fe0b100" kindref="member">listTrace</ref>.add(<ref refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1aa4607bb225547e49d5202adfb63b0c9a" kindref="member">weight</ref>);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>@Override</highlight></codeline>
+<codeline lineno="91" refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a719352455b19c8fc2244a4d7387db236" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref><sp/><ref refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a719352455b19c8fc2244a4d7387db236" kindref="member">generate</ref>(Integer<sp/>operatornumber)<sp/></highlight><highlight class="keywordflow">throws</highlight><highlight class="normal"><sp/>IllegalArgumentException,<sp/>SecurityException,<sp/>ClassNotFoundException,<sp/>InstantiationException,<sp/>IllegalAccessException,<sp/>InvocationTargetException,<sp/>NoSuchMethodException<sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Devuelve<sp/>la<sp/>lista<sp/>de<sp/>soluciones<sp/>no<sp/>dominadas<sp/>de<sp/>todos<sp/>los<sp/>vecinos<sp/>posibles<sp/>de<sp/>stateReferenceTS<sp/>que<sp/>no<sp/>se<sp/>encuentran<sp/>en<sp/>la<sp/>lista<sp/>Tabu</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>List&lt;State&gt;<sp/>neighborhood<sp/>=<sp/><ref refid="classmetaheurictics_1_1strategy_1_1Strategy" kindref="compound">Strategy</ref>.<ref refid="classmetaheurictics_1_1strategy_1_1Strategy_1ad2641e12c52292930364de6655333aa8" kindref="member">getStrategy</ref>().<ref refid="classmetaheurictics_1_1strategy_1_1Strategy_1a4bc6bd95db71e14b1f48c1bfc85f1305" kindref="member">getProblem</ref>().<ref refid="classproblem_1_1definition_1_1Problem_1a4cd649edb8862f21af171491cb9b9386" kindref="member">getOperator</ref>().<ref refid="classproblem_1_1definition_1_1Operator_1a5b6625843e73d938f9235985bf966b34" kindref="member">generatedNewState</ref>(<ref refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1af0997147df854712548011b247a5f174" kindref="member">stateReferenceTS</ref>,<sp/>operatornumber);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Se<sp/>escoge<sp/>uno<sp/>aleatoriamente<sp/>como<sp/>vecino<sp/>con<sp/>RandomCandidate</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref><sp/>statecandidate<sp/>=<sp/><ref refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1ac1077518972d0de6f6cdb4669a5c32b8" kindref="member">candidatevalue</ref>.stateCandidate(<ref refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1af0997147df854712548011b247a5f174" kindref="member">stateReferenceTS</ref>,<sp/><ref refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a97da542e1d41a93fb2af3b9deee60fdc" kindref="member">typeCandidate</ref>,<sp/><ref refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a048690a51992d1a585cb0c36064252f1" kindref="member">strategy</ref>,<sp/>operatornumber,<sp/>neighborhood);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>statecandidate;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>@Override</highlight></codeline>
+<codeline lineno="105" refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a5e7f4e1f1fb436f2fb9c1770b90ee253" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a5e7f4e1f1fb436f2fb9c1770b90ee253" kindref="member">updateReference</ref>(<ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref><sp/>stateCandidate,<sp/>Integer<sp/>countIterationsCurrent)</highlight><highlight class="keywordflow">throws</highlight><highlight class="normal"><sp/>IllegalArgumentException,<sp/>SecurityException,<sp/>ClassNotFoundException,<sp/>InstantiationException,<sp/>IllegalAccessException,<sp/>InvocationTargetException,<sp/>NoSuchMethodException<sp/>{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1aa71ff0be1f4f97b95dd7780c2b0b40be" kindref="member">ifacceptCandidate</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classfactory__method_1_1FactoryAcceptCandidate" kindref="compound">FactoryAcceptCandidate</ref>();</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classlocal__search_1_1acceptation__type_1_1AcceptableCandidate" kindref="compound">AcceptableCandidate</ref><sp/>candidate<sp/>=<sp/><ref refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1aa71ff0be1f4f97b95dd7780c2b0b40be" kindref="member">ifacceptCandidate</ref>.createAcceptCandidate(<ref refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a09c4a34396dafd514a3b43c86f368d0f" kindref="member">typeAcceptation</ref>);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Boolean<sp/>acept<sp/>=<sp/>candidate.<ref refid="classlocal__search_1_1acceptation__type_1_1AcceptableCandidate_1aa9e62e1d2d213c3828d2491b506d0592" kindref="member">acceptCandidate</ref>(<ref refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1af0997147df854712548011b247a5f174" kindref="member">stateReferenceTS</ref>,<sp/>stateCandidate);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(acept.equals(</highlight><highlight class="keyword">true</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1af0997147df854712548011b247a5f174" kindref="member">stateReferenceTS</ref><sp/>=<sp/>stateCandidate;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a048690a51992d1a585cb0c36064252f1" kindref="member">strategy</ref>.equals(<ref refid="enumlocal__search_1_1complement_1_1StrategyType" kindref="compound">StrategyType</ref>.<ref refid="enumlocal__search_1_1complement_1_1StrategyType_1ac0c34198bb10ffedf05b8be68f72c170" kindref="member">TABU</ref>)<sp/>&amp;&amp;<sp/>acept.equals(</highlight><highlight class="keyword">true</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classlocal__search_1_1complement_1_1TabuSolutions" kindref="compound">TabuSolutions</ref>.<ref refid="classlocal__search_1_1complement_1_1TabuSolutions_1ad602469482bab1bd52b03ef738bd7907" kindref="member">listTabu</ref>.size()<sp/>&lt;<sp/><ref refid="classlocal__search_1_1complement_1_1TabuSolutions" kindref="compound">TabuSolutions</ref>.<ref refid="classlocal__search_1_1complement_1_1TabuSolutions_1a294b3167e2976e63e7264c619e756d82" kindref="member">maxelements</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Boolean<sp/>find<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>count<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>((<ref refid="classlocal__search_1_1complement_1_1TabuSolutions" kindref="compound">TabuSolutions</ref>.<ref refid="classlocal__search_1_1complement_1_1TabuSolutions_1ad602469482bab1bd52b03ef738bd7907" kindref="member">listTabu</ref>.size()<sp/>&gt;<sp/>count)<sp/>&amp;&amp;<sp/>(find.equals(</highlight><highlight class="keyword">false</highlight><highlight class="normal">)))<sp/>{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classlocal__search_1_1complement_1_1TabuSolutions" kindref="compound">TabuSolutions</ref>.<ref refid="classlocal__search_1_1complement_1_1TabuSolutions_1ad602469482bab1bd52b03ef738bd7907" kindref="member">listTabu</ref>.get(count).equals(stateCandidate))<sp/>{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>find<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>count++;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(find.equals(</highlight><highlight class="keyword">false</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classlocal__search_1_1complement_1_1TabuSolutions" kindref="compound">TabuSolutions</ref>.<ref refid="classlocal__search_1_1complement_1_1TabuSolutions_1ad602469482bab1bd52b03ef738bd7907" kindref="member">listTabu</ref>.add(stateCandidate);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classlocal__search_1_1complement_1_1TabuSolutions" kindref="compound">TabuSolutions</ref>.<ref refid="classlocal__search_1_1complement_1_1TabuSolutions_1ad602469482bab1bd52b03ef738bd7907" kindref="member">listTabu</ref>.remove(0);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Boolean<sp/>find<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>count<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<ref refid="classlocal__search_1_1complement_1_1TabuSolutions" kindref="compound">TabuSolutions</ref>.<ref refid="classlocal__search_1_1complement_1_1TabuSolutions_1ad602469482bab1bd52b03ef738bd7907" kindref="member">listTabu</ref>.size()<sp/>&gt;<sp/>count<sp/>&amp;&amp;<sp/>find.equals(</highlight><highlight class="keyword">false</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classlocal__search_1_1complement_1_1TabuSolutions" kindref="compound">TabuSolutions</ref>.<ref refid="classlocal__search_1_1complement_1_1TabuSolutions_1ad602469482bab1bd52b03ef738bd7907" kindref="member">listTabu</ref>.get(count).equals(stateCandidate))<sp/>{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>find<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>count++;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(find.equals(</highlight><highlight class="keyword">false</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classlocal__search_1_1complement_1_1TabuSolutions" kindref="compound">TabuSolutions</ref>.<ref refid="classlocal__search_1_1complement_1_1TabuSolutions_1ad602469482bab1bd52b03ef738bd7907" kindref="member">listTabu</ref>.add(stateCandidate);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a3ca25be7ef0c28d3ba6e26473972d887" kindref="member">getReferenceList</ref>();</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>@Override</highlight></codeline>
+<codeline lineno="148" refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1ade7cc640bcb709edaa015682155aaac2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="enummetaheuristics_1_1generators_1_1GeneratorType" kindref="compound">GeneratorType</ref><sp/><ref refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1ade7cc640bcb709edaa015682155aaac2" kindref="member">getType</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>this.typeGenerator;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>@Override</highlight></codeline>
+<codeline lineno="157" refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a3ca25be7ef0c28d3ba6e26473972d887" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>List&lt;State&gt;<sp/><ref refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a3ca25be7ef0c28d3ba6e26473972d887" kindref="member">getReferenceList</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a9222859138dedf83000373b31f226829" kindref="member">listStateReference</ref>.add(<ref refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1af0997147df854712548011b247a5f174" kindref="member">stateReferenceTS</ref>);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a9222859138dedf83000373b31f226829" kindref="member">listStateReference</ref>;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>@Override</highlight></codeline>
+<codeline lineno="167" refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1ae22ff41cdbe5f2f7cb370a03ed24c477" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref><sp/><ref refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1ae22ff41cdbe5f2f7cb370a03ed24c477" kindref="member">getReference</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1af0997147df854712548011b247a5f174" kindref="member">stateReferenceTS</ref>;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/>@Override</highlight></codeline>
+<codeline lineno="176" refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a6c25c3204b4e4fc62ae1fb0a5806a3ed" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a6c25c3204b4e4fc62ae1fb0a5806a3ed" kindref="member">setInitialReference</ref>(<ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref><sp/>stateInitialRef)<sp/>{</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.stateReferenceTS<sp/>=<sp/>stateInitialRef;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184" refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1af0e27b06643d94b9e37a7004af55a58a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1af0e27b06643d94b9e37a7004af55a58a" kindref="member">setStateRef</ref>(<ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref><sp/>stateRef)<sp/>{</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.stateReferenceTS<sp/>=<sp/>stateRef;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/>@Override</highlight></codeline>
+<codeline lineno="193" refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a1c0f71e47e5f6b6e6669866ac8892f24" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>List&lt;State&gt;<sp/><ref refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a1c0f71e47e5f6b6e6669866ac8892f24" kindref="member">getSonList</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO<sp/>Auto-generated<sp/>method<sp/>stub</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">null</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202" refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a8f5e5b2afaea89a98a1a05a3b192d23c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a8f5e5b2afaea89a98a1a05a3b192d23c" kindref="member">setTypeCandidate</ref>(<ref refid="enumlocal__search_1_1candidate__type_1_1CandidateType" kindref="compound">CandidateType</ref><sp/><ref refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a97da542e1d41a93fb2af3b9deee60fdc" kindref="member">typeCandidate</ref>){</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.typeCandidate<sp/>=<sp/><ref refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a97da542e1d41a93fb2af3b9deee60fdc" kindref="member">typeCandidate</ref>;</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/>@Override</highlight></codeline>
+<codeline lineno="212" refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a3a2df89fb924f93a84d2579afa9a30e7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/><ref refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a3a2df89fb924f93a84d2579afa9a30e7" kindref="member">awardUpdateREF</ref>(<ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref><sp/>stateCandidate)<sp/>{</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO<sp/>Auto-generated<sp/>method<sp/>stub</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222" refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a646763accfdf08b677e0e41773747517" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a646763accfdf08b677e0e41773747517" kindref="member">getWeight</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO<sp/>Auto-generated<sp/>method<sp/>stub</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>this.weight;</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/>@Override</highlight></codeline>
+<codeline lineno="232" refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a04e6d1cc450203864d6e022db854e3bb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a04e6d1cc450203864d6e022db854e3bb" kindref="member">setWeight</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1aa4607bb225547e49d5202adfb63b0c9a" kindref="member">weight</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO<sp/>Auto-generated<sp/>method<sp/>stub</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.weight<sp/>=<sp/><ref refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1aa4607bb225547e49d5202adfb63b0c9a" kindref="member">weight</ref>;</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/>@Override</highlight></codeline>
+<codeline lineno="242" refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a9fc33be2953363e41d8bfe1b9e59d2c3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">[]<sp/><ref refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a9fc33be2953363e41d8bfe1b9e59d2c3" kindref="member">getListCountBetterGender</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO<sp/>Auto-generated<sp/>method<sp/>stub</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>generator<sp/>doesn&apos;t<sp/>maintain<sp/>listCount<sp/>arrays;<sp/>return<sp/>empty<sp/>array<sp/>to<sp/>avoid<sp/>nulls</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">[0];</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/>@Override</highlight></codeline>
+<codeline lineno="253" refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1ab32b15614e2605a9de9730ff419f8676" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">[]<sp/><ref refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1ab32b15614e2605a9de9730ff419f8676" kindref="member">getListCountGender</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO<sp/>Auto-generated<sp/>method<sp/>stub</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>generator<sp/>doesn&apos;t<sp/>maintain<sp/>listCount<sp/>arrays;<sp/>return<sp/>empty<sp/>array<sp/>to<sp/>avoid<sp/>nulls</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">[0];</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/>@Override</highlight></codeline>
+<codeline lineno="264" refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a0201b91c6b86834fcaee559a20a100e6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">[]<sp/><ref refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a0201b91c6b86834fcaee559a20a100e6" kindref="member">getTrace</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO<sp/>Auto-generated<sp/>method<sp/>stub</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(this.listTrace<sp/>==<sp/></highlight><highlight class="keyword">null</highlight><highlight class="normal">)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">[0];</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">[]<sp/>arr<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">[this.listTrace.size()];</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>this.listTrace.size();<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Float<sp/>v<sp/>=<sp/>this.listTrace.get(i);</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>arr[i]<sp/>=<sp/>(v<sp/>==<sp/></highlight><highlight class="keyword">null</highlight><highlight class="normal">)<sp/>?<sp/>0f<sp/>:<sp/>v.floatValue();</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>arr;</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"></highlight></codeline>
+<codeline lineno="275"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"></highlight></codeline>
+<codeline lineno="277"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="practica5/src/main/java/metaheuristics/generators/MultiobjectiveTabuSearch.java"/>
+  </compounddef>
+</doxygen>

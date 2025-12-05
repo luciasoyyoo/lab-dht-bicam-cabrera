@@ -1,0 +1,43 @@
+\doxysection{Mutation\+Operator.\+java}
+\hypertarget{MutationOperator_8java_source}{}\label{MutationOperator_8java_source}\index{MutationOperator.java@{MutationOperator.java}}
+\mbox{\hyperlink{MutationOperator_8java}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{MutationOperator_8java_source_l00001}\mbox{\hyperlink{namespaceproblem__operators}{00001}}\ \textcolor{keyword}{package\ }problem\_operators;}
+\DoxyCodeLine{\Hypertarget{MutationOperator_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{MutationOperator_8java_source_l00003}00003\ \textcolor{keyword}{import}\ java.util.ArrayList;}
+\DoxyCodeLine{\Hypertarget{MutationOperator_8java_source_l00004}00004\ \textcolor{keyword}{import}\ java.util.List;}
+\DoxyCodeLine{\Hypertarget{MutationOperator_8java_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{MutationOperator_8java_source_l00006}00006\ \textcolor{keyword}{import}\ metaheurictics.strategy.Strategy;}
+\DoxyCodeLine{\Hypertarget{MutationOperator_8java_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{MutationOperator_8java_source_l00008}00008\ \textcolor{keyword}{import}\ problem.definition.Operator;}
+\DoxyCodeLine{\Hypertarget{MutationOperator_8java_source_l00009}00009\ \textcolor{keyword}{import}\ problem.definition.State;}
+\DoxyCodeLine{\Hypertarget{MutationOperator_8java_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{MutationOperator_8java_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{MutationOperator_8java_source_l00015}\mbox{\hyperlink{classproblem__operators_1_1MutationOperator}{00015}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classproblem__operators_1_1MutationOperator}{MutationOperator}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{classproblem_1_1definition_1_1Operator}{Operator}}\ \{}
+\DoxyCodeLine{\Hypertarget{MutationOperator_8java_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{MutationOperator_8java_source_l00032}\mbox{\hyperlink{classproblem__operators_1_1MutationOperator_adc581cf1337e53458e6695aec007028b}{00032}}\ \ \ \ \ \textcolor{keyword}{public}\ List<State>\ \mbox{\hyperlink{classproblem__operators_1_1MutationOperator_adc581cf1337e53458e6695aec007028b}{generatedNewState}}(\textcolor{keyword}{final}\ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ stateCurrent,}
+\DoxyCodeLine{\Hypertarget{MutationOperator_8java_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{final}\ Integer\ operatornumber)\ \{}
+\DoxyCodeLine{\Hypertarget{MutationOperator_8java_source_l00034}00034\ \ \ \ \ \ \ \ \ List<State>\ listNeigborhood\ =\ \textcolor{keyword}{new}\ ArrayList<State>();}
+\DoxyCodeLine{\Hypertarget{MutationOperator_8java_source_l00035}00035\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ operatornumber;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{MutationOperator_8java_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ key\ =\ \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy}{Strategy}}.\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_ad2641e12c52292930364de6655333aa8}{getStrategy}}().\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_a4bc6bd95db71e14b1f48c1bfc85f1305}{getProblem}}()}
+\DoxyCodeLine{\Hypertarget{MutationOperator_8java_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .\mbox{\hyperlink{classproblem_1_1definition_1_1Problem_a7da2aa6b2a6f00f6f3993e6fdc43e34b}{getCodification}}()}
+\DoxyCodeLine{\Hypertarget{MutationOperator_8java_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .\mbox{\hyperlink{classproblem_1_1definition_1_1Codification_a01a0c8247d76d4c4c32c7f3e51c2d5f8}{getAleatoryKey}}();}
+\DoxyCodeLine{\Hypertarget{MutationOperator_8java_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ Object\ candidate\ =\ \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy}{Strategy}}.\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_ad2641e12c52292930364de6655333aa8}{getStrategy}}().\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_a4bc6bd95db71e14b1f48c1bfc85f1305}{getProblem}}()}
+\DoxyCodeLine{\Hypertarget{MutationOperator_8java_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .\mbox{\hyperlink{classproblem_1_1definition_1_1Problem_a7da2aa6b2a6f00f6f3993e6fdc43e34b}{getCodification}}()}
+\DoxyCodeLine{\Hypertarget{MutationOperator_8java_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .\mbox{\hyperlink{classproblem_1_1definition_1_1Codification_ad5875a47b3e863653ede3bb7feae524f}{getVariableAleatoryValue}}(key);}
+\DoxyCodeLine{\Hypertarget{MutationOperator_8java_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ state\ =\ (\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}})\ stateCurrent.\mbox{\hyperlink{classproblem_1_1definition_1_1State_aaf14fa8466c945ff5e134028c6c259f8}{getCopy}}();}
+\DoxyCodeLine{\Hypertarget{MutationOperator_8java_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ state.\mbox{\hyperlink{classproblem_1_1definition_1_1State_a2e75b6f2bedb2107478ecd1e8e681418}{getCode}}().set(key,\ candidate);}
+\DoxyCodeLine{\Hypertarget{MutationOperator_8java_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ listNeigborhood.add(state);}
+\DoxyCodeLine{\Hypertarget{MutationOperator_8java_source_l00045}00045\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MutationOperator_8java_source_l00046}00046\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ listNeigborhood;}
+\DoxyCodeLine{\Hypertarget{MutationOperator_8java_source_l00047}00047\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MutationOperator_8java_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{MutationOperator_8java_source_l00064}00064\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{MutationOperator_8java_source_l00070}\mbox{\hyperlink{classproblem__operators_1_1MutationOperator_a0f6271c1365408220a1749db18e335d9}{00070}}\ \ \ \ \ \textcolor{keyword}{public}\ List<State>\ \mbox{\hyperlink{classproblem__operators_1_1MutationOperator_a0f6271c1365408220a1749db18e335d9}{generateRandomState}}(\textcolor{keyword}{final}\ Integer\ operatornumber)\ \{}
+\DoxyCodeLine{\Hypertarget{MutationOperator_8java_source_l00071}00071\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{\Hypertarget{MutationOperator_8java_source_l00072}00072\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{MutationOperator_8java_source_l00073}00073\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MutationOperator_8java_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{MutationOperator_8java_source_l00075}00075\ \}}
+
+\end{DoxyCode}

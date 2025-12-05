@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>practica5: Archivo de código fuente InstanceDE.java</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">practica5
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('InstanceDE_8java_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">InstanceDE.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="InstanceDE_8java.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">package </span>metaheuristics.generators;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">import</span> factory_method.FactoryGenerator;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">import</span> java.util.logging.Level;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">import</span> java.util.logging.Logger;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span></div>
+<div class="foldopen" id="foldopen00012" data-start="{" data-end="};">
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="classmetaheuristics_1_1generators_1_1InstanceDE.html">   12</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classmetaheuristics_1_1generators_1_1InstanceDE.html">InstanceDE</a> <span class="keyword">implements</span> Runnable {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="classmetaheuristics_1_1generators_1_1InstanceDE.html#a133f04a6b8ec86f20dbf6c2abac5a61d">   14</a></span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Logger <a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1InstanceDE.html#a133f04a6b8ec86f20dbf6c2abac5a61d">LOGGER</a> = Logger.getLogger(<a class="code hl_class" href="classmetaheuristics_1_1generators_1_1InstanceDE.html">InstanceDE</a>.class.getName());</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="classmetaheuristics_1_1generators_1_1InstanceDE.html#aa025bce5c645eeffbbd6e4eb507a16f1">   16</a></span>    <span class="keyword">private</span> <span class="keywordtype">boolean</span> <a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1InstanceDE.html#aa025bce5c645eeffbbd6e4eb507a16f1">terminate</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    </div>
+<div class="foldopen" id="foldopen00021" data-start="{" data-end="}">
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="classmetaheuristics_1_1generators_1_1InstanceDE.html#a670666f9e178336ab435f4c3f9f8b60e">   21</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classmetaheuristics_1_1generators_1_1InstanceDE.html#a670666f9e178336ab435f4c3f9f8b60e">run</a>() {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <a class="code hl_class" href="classfactory__method_1_1FactoryGenerator.html">FactoryGenerator</a> ifFactoryGenerator = <span class="keyword">new</span> <a class="code hl_class" href="classfactory__method_1_1FactoryGenerator.html">FactoryGenerator</a>();</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <a class="code hl_class" href="classmetaheuristics_1_1generators_1_1Generator.html">Generator</a> generatorDE = <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            generatorDE = ifFactoryGenerator.<a class="code hl_function" href="classfactory__method_1_1FactoryGenerator.html#a76c269b114cbf643e92a7467b7cf21f7">createGenerator</a>(<a class="code hl_class" href="enummetaheuristics_1_1generators_1_1GeneratorType.html">GeneratorType</a>.<a class="code hl_variable" href="enummetaheuristics_1_1generators_1_1GeneratorType.html#aad36814ee53c9a9c502a5fbe48e1d018">DistributionEstimationAlgorithm</a>);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        } <span class="keywordflow">catch</span> (Exception e) {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            <span class="comment">// Log exception instead of printing stack trace so debug info is available</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            <span class="comment">// but the code is safe for production.</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            <a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1InstanceDE.html#a133f04a6b8ec86f20dbf6c2abac5a61d">LOGGER</a>.log(Level.SEVERE, <span class="stringliteral">&quot;Failed to create DistributionEstimationAlgorithm generator&quot;</span>, e);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        }</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keywordtype">boolean</span> find = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keywordtype">int</span> i = 0;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keywordflow">while</span> (find == <span class="keyword">false</span>) {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            <span class="keywordflow">if</span>(<a class="code hl_class" href="classmetaheuristics_1_1generators_1_1MultiGenerator.html">MultiGenerator</a>.<a class="code hl_function" href="classmetaheuristics_1_1generators_1_1MultiGenerator.html#ab331905baebb433340e05d19e174340b">getListGenerators</a>()[i].<a class="code hl_function" href="classmetaheuristics_1_1generators_1_1Generator.html#a5a123306b43c42d28cd1d6e17f8067a5">getType</a>().equals(<a class="code hl_class" href="enummetaheuristics_1_1generators_1_1GeneratorType.html">GeneratorType</a>.<a class="code hl_variable" href="enummetaheuristics_1_1generators_1_1GeneratorType.html#aad36814ee53c9a9c502a5fbe48e1d018">DistributionEstimationAlgorithm</a>)){</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                <a class="code hl_class" href="classmetaheuristics_1_1generators_1_1MultiGenerator.html">MultiGenerator</a>.<a class="code hl_function" href="classmetaheuristics_1_1generators_1_1MultiGenerator.html#ab331905baebb433340e05d19e174340b">getListGenerators</a>()[i] = generatorDE;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                find = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            }</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            <span class="keywordflow">else</span> i++;    </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        }</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1InstanceDE.html#aa025bce5c645eeffbbd6e4eb507a16f1">terminate</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    }</div>
+</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span></div>
+<div class="foldopen" id="foldopen00047" data-start="{" data-end="}">
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="classmetaheuristics_1_1generators_1_1InstanceDE.html#a1da514370250dac706d4d441080b68da">   47</a></span>    <span class="keyword">public</span> <span class="keywordtype">boolean</span> <a class="code hl_function" href="classmetaheuristics_1_1generators_1_1InstanceDE.html#a1da514370250dac706d4d441080b68da">isTerminate</a>() {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1InstanceDE.html#aa025bce5c645eeffbbd6e4eb507a16f1">terminate</a>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    }</div>
+</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span></div>
+<div class="foldopen" id="foldopen00055" data-start="{" data-end="}">
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="classmetaheuristics_1_1generators_1_1InstanceDE.html#ade700027e8d1498e7480c9e1cff25a27">   55</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classmetaheuristics_1_1generators_1_1InstanceDE.html#ade700027e8d1498e7480c9e1cff25a27">setTerminate</a>(<span class="keywordtype">boolean</span> <a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1InstanceDE.html#aa025bce5c645eeffbbd6e4eb507a16f1">terminate</a>) {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        this.terminate = <a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1InstanceDE.html#aa025bce5c645eeffbbd6e4eb507a16f1">terminate</a>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    }</div>
+</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>}</div>
+</div>
+<div class="ttc" id="aclassfactory__method_1_1FactoryGenerator_html"><div class="ttname"><a href="classfactory__method_1_1FactoryGenerator.html">factory_method.FactoryGenerator</a></div><div class="ttdoc">FactoryGenerator - Interface for creating generator strategies.</div><div class="ttdef"><b>Definition</b> <a href="FactoryGenerator_8java_source.html#l00016">FactoryGenerator.java:16</a></div></div>
+<div class="ttc" id="aclassfactory__method_1_1FactoryGenerator_html_a76c269b114cbf643e92a7467b7cf21f7"><div class="ttname"><a href="classfactory__method_1_1FactoryGenerator.html#a76c269b114cbf643e92a7467b7cf21f7">factory_method.FactoryGenerator.createGenerator</a></div><div class="ttdeci">Generator createGenerator(GeneratorType generatorType)</div><div class="ttdoc">createGenerator - Creates an instance of Generator based on the provided GeneratorType.</div><div class="ttdef"><b>Definition</b> <a href="FactoryGenerator_8java_source.html#l00025">FactoryGenerator.java:25</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1Generator_html"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1Generator.html">metaheuristics.generators.Generator</a></div><div class="ttdoc">Generator - abstract base class for solution generators in metaheuristic algorithms.</div><div class="ttdef"><b>Definition</b> <a href="Generator_8java_source.html#l00013">Generator.java:13</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1Generator_html_a5a123306b43c42d28cd1d6e17f8067a5"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1Generator.html#a5a123306b43c42d28cd1d6e17f8067a5">metaheuristics.generators.Generator.getType</a></div><div class="ttdeci">abstract GeneratorType getType()</div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1InstanceDE_html"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1InstanceDE.html">metaheuristics.generators.InstanceDE</a></div><div class="ttdoc">InstanceDE - class that implements the Runnable interface to create an instance of the Distribution E...</div><div class="ttdef"><b>Definition</b> <a href="#l00012">InstanceDE.java:12</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1InstanceDE_html_a133f04a6b8ec86f20dbf6c2abac5a61d"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1InstanceDE.html#a133f04a6b8ec86f20dbf6c2abac5a61d">metaheuristics.generators.InstanceDE.LOGGER</a></div><div class="ttdeci">static final Logger LOGGER</div><div class="ttdef"><b>Definition</b> <a href="#l00014">InstanceDE.java:14</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1InstanceDE_html_a1da514370250dac706d4d441080b68da"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1InstanceDE.html#a1da514370250dac706d4d441080b68da">metaheuristics.generators.InstanceDE.isTerminate</a></div><div class="ttdeci">boolean isTerminate()</div><div class="ttdoc">isTerminate - check if the instance is terminated.</div><div class="ttdef"><b>Definition</b> <a href="#l00047">InstanceDE.java:47</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1InstanceDE_html_a670666f9e178336ab435f4c3f9f8b60e"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1InstanceDE.html#a670666f9e178336ab435f4c3f9f8b60e">metaheuristics.generators.InstanceDE.run</a></div><div class="ttdeci">void run()</div><div class="ttdoc">run - create an instance of the Distribution Estimation Algorithm generator.</div><div class="ttdef"><b>Definition</b> <a href="#l00021">InstanceDE.java:21</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1InstanceDE_html_aa025bce5c645eeffbbd6e4eb507a16f1"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1InstanceDE.html#aa025bce5c645eeffbbd6e4eb507a16f1">metaheuristics.generators.InstanceDE.terminate</a></div><div class="ttdeci">boolean terminate</div><div class="ttdef"><b>Definition</b> <a href="#l00016">InstanceDE.java:16</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1InstanceDE_html_ade700027e8d1498e7480c9e1cff25a27"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1InstanceDE.html#ade700027e8d1498e7480c9e1cff25a27">metaheuristics.generators.InstanceDE.setTerminate</a></div><div class="ttdeci">void setTerminate(boolean terminate)</div><div class="ttdoc">setTerminate - set the termination status of the instance.</div><div class="ttdef"><b>Definition</b> <a href="#l00055">InstanceDE.java:55</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1MultiGenerator_html"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1MultiGenerator.html">metaheuristics.generators.MultiGenerator</a></div><div class="ttdoc">MultiGenerator - class that implements the Multi-Generator metaheuristic.</div><div class="ttdef"><b>Definition</b> <a href="MultiGenerator_8java_source.html#l00022">MultiGenerator.java:22</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1MultiGenerator_html_ab331905baebb433340e05d19e174340b"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1MultiGenerator.html#ab331905baebb433340e05d19e174340b">metaheuristics.generators.MultiGenerator.getListGenerators</a></div><div class="ttdeci">static Generator[] getListGenerators()</div><div class="ttdoc">getListGenerators - get the list of generators.</div><div class="ttdef"><b>Definition</b> <a href="MultiGenerator_8java_source.html#l00161">MultiGenerator.java:161</a></div></div>
+<div class="ttc" id="aenummetaheuristics_1_1generators_1_1GeneratorType_html"><div class="ttname"><a href="enummetaheuristics_1_1generators_1_1GeneratorType.html">metaheuristics.generators.GeneratorType</a></div><div class="ttdoc">GeneratorType - enumeration of different types of solution generators used in metaheuristic algorithm...</div><div class="ttdef"><b>Definition</b> <a href="GeneratorType_8java_source.html#l00006">GeneratorType.java:6</a></div></div>
+<div class="ttc" id="aenummetaheuristics_1_1generators_1_1GeneratorType_html_aad36814ee53c9a9c502a5fbe48e1d018"><div class="ttname"><a href="enummetaheuristics_1_1generators_1_1GeneratorType.html#aad36814ee53c9a9c502a5fbe48e1d018">metaheuristics.generators.GeneratorType.DistributionEstimationAlgorithm</a></div><div class="ttdeci">DistributionEstimationAlgorithm</div><div class="ttdef"><b>Definition</b> <a href="GeneratorType_8java_source.html#l00008">GeneratorType.java:8</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_35e5e1a6dfa5adce22aec671c4d5c0d1.html">practica5</a></li><li class="navelem"><a href="dir_d2e984a8ddfea0cacd32e4238c7e9dd9.html">src</a></li><li class="navelem"><a href="dir_4a158cb6d41a1065711987d4dec8e14e.html">main</a></li><li class="navelem"><a href="dir_67084513cc423c424b0c8f4661d8bd90.html">java</a></li><li class="navelem"><a href="dir_6f516081a8775e0e6b8e509d37a46596.html">metaheuristics</a></li><li class="navelem"><a href="dir_be05ed143b34307001aec965668c7f6c.html">generators</a></li><li class="navelem"><a href="InstanceDE_8java.html">InstanceDE.java</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

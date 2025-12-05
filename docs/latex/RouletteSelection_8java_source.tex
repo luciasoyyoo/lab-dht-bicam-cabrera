@@ -1,0 +1,61 @@
+\doxysection{Roulette\+Selection.\+java}
+\hypertarget{RouletteSelection_8java_source}{}\label{RouletteSelection_8java_source}\index{RouletteSelection.java@{RouletteSelection.java}}
+\mbox{\hyperlink{RouletteSelection_8java}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{RouletteSelection_8java_source_l00001}00001\ \textcolor{keyword}{package\ }evolutionary\_algorithms.complement;}
+\DoxyCodeLine{\Hypertarget{RouletteSelection_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{RouletteSelection_8java_source_l00003}00003\ \textcolor{keyword}{import}\ java.util.ArrayList;}
+\DoxyCodeLine{\Hypertarget{RouletteSelection_8java_source_l00004}00004\ \textcolor{keyword}{import}\ java.util.List;}
+\DoxyCodeLine{\Hypertarget{RouletteSelection_8java_source_l00005}00005\ \textcolor{keyword}{import}\ java.util.concurrent.ThreadLocalRandom;}
+\DoxyCodeLine{\Hypertarget{RouletteSelection_8java_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{RouletteSelection_8java_source_l00007}00007\ \textcolor{keyword}{import}\ metaheuristics.generators.LimitRoulette;}
+\DoxyCodeLine{\Hypertarget{RouletteSelection_8java_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{RouletteSelection_8java_source_l00009}00009\ \textcolor{keyword}{import}\ problem.definition.State;}
+\DoxyCodeLine{\Hypertarget{RouletteSelection_8java_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{RouletteSelection_8java_source_l00014}\mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1RouletteSelection}{00014}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1RouletteSelection}{RouletteSelection}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1FatherSelection}{FatherSelection}}\ \{}
+\DoxyCodeLine{\Hypertarget{RouletteSelection_8java_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{RouletteSelection_8java_source_l00016}00016\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{RouletteSelection_8java_source_l00023}\mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1RouletteSelection_ace4f2faee78f128d104fedb0cf3963fd}{00023}}\ \ \ \ \ \textcolor{keyword}{public}\ List<State>\ \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1RouletteSelection_ace4f2faee78f128d104fedb0cf3963fd}{selection}}(List<State>\ listState,\ \textcolor{keywordtype}{int}\ truncation)\ \{}
+\DoxyCodeLine{\Hypertarget{RouletteSelection_8java_source_l00024}00024\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ totalWeight\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{RouletteSelection_8java_source_l00025}00025\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ listState.size();\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{RouletteSelection_8java_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ totalWeight\ =\ (float)\ (listState.get(i).getEvaluation().get(0)\ +\ totalWeight);}
+\DoxyCodeLine{\Hypertarget{RouletteSelection_8java_source_l00027}00027\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RouletteSelection_8java_source_l00028}00028\ \ \ \ \ \ \ \ \ List<Float>\ listProb\ =\ \textcolor{keyword}{new}\ ArrayList<Float>();}
+\DoxyCodeLine{\Hypertarget{RouletteSelection_8java_source_l00029}00029\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ listState.size();\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{RouletteSelection_8java_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ probF\ =\ (float)\ (listState.get(i).getEvaluation().get(0)\ /\ totalWeight);}
+\DoxyCodeLine{\Hypertarget{RouletteSelection_8java_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ listProb.add(probF);}
+\DoxyCodeLine{\Hypertarget{RouletteSelection_8java_source_l00032}00032\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RouletteSelection_8java_source_l00033}00033\ \ \ \ \ \ \ \ \ List<LimitRoulette>\ listLimit\ =\ \textcolor{keyword}{new}\ ArrayList<LimitRoulette>();}
+\DoxyCodeLine{\Hypertarget{RouletteSelection_8java_source_l00034}00034\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ limitHigh\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{RouletteSelection_8java_source_l00035}00035\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ limitLow\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{RouletteSelection_8java_source_l00036}00036\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ listProb.size();\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{RouletteSelection_8java_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitRoulette}{LimitRoulette}}\ limitRoulette\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitRoulette}{LimitRoulette}}();}
+\DoxyCodeLine{\Hypertarget{RouletteSelection_8java_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ limitHigh\ =\ listProb.get(i)\ +\ limitHigh;}
+\DoxyCodeLine{\Hypertarget{RouletteSelection_8java_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ limitRoulette.\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitRoulette_a0822acf2c718ff18695f40042659844d}{setLimitHigh}}(limitHigh);}
+\DoxyCodeLine{\Hypertarget{RouletteSelection_8java_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ limitRoulette.\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitRoulette_a6e2cc0e2c945ab59920d9eb2253271fe}{setLimitLow}}(limitLow);}
+\DoxyCodeLine{\Hypertarget{RouletteSelection_8java_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ limitLow\ =\ limitHigh;}
+\DoxyCodeLine{\Hypertarget{RouletteSelection_8java_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ limitRoulette.setGenerator(listGenerators.get(i));}}
+\DoxyCodeLine{\Hypertarget{RouletteSelection_8java_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ listLimit.add(limitRoulette);}
+\DoxyCodeLine{\Hypertarget{RouletteSelection_8java_source_l00044}00044\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RouletteSelection_8java_source_l00045}00045\ \ \ \ \ \ \ \ \ List<State>\ fatherList\ =\ \textcolor{keyword}{new}\ ArrayList<State>();}
+\DoxyCodeLine{\Hypertarget{RouletteSelection_8java_source_l00046}00046\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ listState.size();\ j++)\ \{}
+\DoxyCodeLine{\Hypertarget{RouletteSelection_8java_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Uses\ ThreadLocalRandom\ for\ algorithmic\ (non-\/cryptographic)\ randomness.}}
+\DoxyCodeLine{\Hypertarget{RouletteSelection_8java_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ This\ RNG\ decides\ selection\ in\ the\ evolutionary\ algorithm\ and\ is\ not}}
+\DoxyCodeLine{\Hypertarget{RouletteSelection_8java_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ used\ for\ security-\/sensitive\ purposes.\ Suppress\ Sonar\ hotspot\ S2245.}}
+\DoxyCodeLine{\Hypertarget{RouletteSelection_8java_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ @SuppressWarnings(\textcolor{stringliteral}{"{}squid:S2245"{}})}
+\DoxyCodeLine{\Hypertarget{RouletteSelection_8java_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ numbAleatory\ =\ (float)\ ThreadLocalRandom.current().nextDouble();}
+\DoxyCodeLine{\Hypertarget{RouletteSelection_8java_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{boolean}\ find\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{RouletteSelection_8java_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ i\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{RouletteSelection_8java_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ ((find\ ==\ \textcolor{keyword}{false})\ \&\&\ (i\ <\ listLimit.size()))\{}
+\DoxyCodeLine{\Hypertarget{RouletteSelection_8java_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}((listLimit.get(i).getLimitLow()\ <=\ numbAleatory)\ \&\&\ (numbAleatory\ <=\ listLimit.get(i).getLimitHigh()))\{}
+\DoxyCodeLine{\Hypertarget{RouletteSelection_8java_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ find\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{RouletteSelection_8java_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ fatherList.add(listState.get(i));}
+\DoxyCodeLine{\Hypertarget{RouletteSelection_8java_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RouletteSelection_8java_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ i++;}
+\DoxyCodeLine{\Hypertarget{RouletteSelection_8java_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RouletteSelection_8java_source_l00061}00061\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RouletteSelection_8java_source_l00062}00062\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ fatherList;}
+\DoxyCodeLine{\Hypertarget{RouletteSelection_8java_source_l00063}00063\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{RouletteSelection_8java_source_l00064}00064\ \}}
+
+\end{DoxyCode}

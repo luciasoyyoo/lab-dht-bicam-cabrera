@@ -1,0 +1,224 @@
+\doxysection{Referencia de la clase local\+\_\+search.\+acceptation\+\_\+type.\+Dominance}
+\hypertarget{classlocal__search_1_1acceptation__type_1_1Dominance}{}\label{classlocal__search_1_1acceptation__type_1_1Dominance}\index{local\_search.acceptation\_type.Dominance@{local\_search.acceptation\_type.Dominance}}
+
+
+\doxylink{classlocal__search_1_1acceptation__type_1_1Dominance}{Dominance} -\/ Utilities for Pareto dominance comparisons.  
+
+
+
+
+Diagrama de colaboración de local\+\_\+search.\+acceptation\+\_\+type.\+Dominance\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{classlocal__search_1_1acceptation__type_1_1Dominance__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+boolean \mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1Dominance_ad61c0e3cb6cc4036419cb36758cf3814}{list\+Dominance}} (\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} solutionX, List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ list)
+\begin{DoxyCompactList}\small\item\em Check whether solutionX dominates members of the supplied list and update the list accordingly. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1Dominance_a0dafd58be8365a22956f59417841a2d8}{dominance}} (\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} solutionX, \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} solutionY)
+\begin{DoxyCompactList}\small\item\em Determine whether solutionX Pareto-\/dominates solutionY. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+\doxylink{classlocal__search_1_1acceptation__type_1_1Dominance}{Dominance} -\/ Utilities for Pareto dominance comparisons. 
+
+Provides helpers to test dominance relations between multi-\/objective solution states and to maintain a Pareto front (list of non-\/dominated solutions). 
+
+Definición en la línea \mbox{\hyperlink{Dominance_8java_source_l00018}{18}} del archivo \mbox{\hyperlink{Dominance_8java_source}{Dominance.\+java}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{classlocal__search_1_1acceptation__type_1_1Dominance_doc-func-members}
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{classlocal__search_1_1acceptation__type_1_1Dominance_a0dafd58be8365a22956f59417841a2d8}\index{local\_search.acceptation\_type.Dominance@{local\_search.acceptation\_type.Dominance}!dominance@{dominance}}
+\index{dominance@{dominance}!local\_search.acceptation\_type.Dominance@{local\_search.acceptation\_type.Dominance}}
+\doxysubsubsection{\texorpdfstring{dominance()}{dominance()}}
+{\footnotesize\ttfamily \label{classlocal__search_1_1acceptation__type_1_1Dominance_a0dafd58be8365a22956f59417841a2d8} 
+boolean local\+\_\+search.\+acceptation\+\_\+type.\+Dominance.\+dominance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}}]{solutionX}{, }\item[{\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}}]{solutionY}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Determine whether solutionX Pareto-\/dominates solutionY. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em solutionX} & the candidate solution \\
+\hline
+{\em solutionY} & the reference solution \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+true if solutionX dominates solutionY according to the problem objective type, false otherwise 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{Dominance_8java_source_l00087}{87}} del archivo \mbox{\hyperlink{Dominance_8java_source}{Dominance.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{boolean}\ dominance\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ countBest\ =\ 0;}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ countEquals\ =\ 0;}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Si\ solutionX\ domina\ a\ solutionY}}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(Strategy.getStrategy().getProblem().getTypeProblem().equals(ProblemType.Maximizar))\ \{}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Recorriendo\ las\ evaluaciones\ de\ las\ funciones\ objetivo}}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ solutionX.getEvaluation().size();\ i++)\ \{}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(solutionX.getEvaluation().get(i).floatValue()\ >\ solutionY.getEvaluation().get(i).floatValue())\{}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ countBest++;}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(solutionX.getEvaluation().get(i).floatValue()\ ==\ solutionY.getEvaluation().get(i).floatValue())\{}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ countEquals++;}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \ \ }
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Recorriendo\ las\ evaluaciones\ de\ las\ funciones\ objetivo}}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ solutionX.getEvaluation().size();\ i++)\ \{}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(solutionX.getEvaluation().get(i).floatValue()\ <\ solutionY.getEvaluation().get(i).floatValue())\{}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ countBest++;}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(solutionX.getEvaluation().get(i).floatValue()\ ==\ solutionY.getEvaluation().get(i).floatValue())\{}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ countEquals++;}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \ \ }
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}((countBest\ >=\ 1)\ \&\&\ (countEquals\ +\ countBest\ ==\ solutionX.getEvaluation().size()))\ \{}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ dominance\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ dominance;}
+\DoxyCodeLine{00118\ \ \ \ \ \}\ }
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{Dominance_8java_source_l00087}{dominance()}}, \mbox{\hyperlink{State_8java_source_l00104}{problem.\+definition.\+State.\+get\+Evaluation()}}, \mbox{\hyperlink{Strategy_8java_source_l00405}{metaheurictics.\+strategy.\+Strategy.\+get\+Problem()}}, \mbox{\hyperlink{Strategy_8java_source_l00080}{metaheurictics.\+strategy.\+Strategy.\+get\+Strategy()}}, \mbox{\hyperlink{Problem_8java_source_l00097}{problem.\+definition.\+Problem.\+get\+Type\+Problem()}} y \mbox{\hyperlink{Problem_8java_source_l00029}{problem.\+definition.\+Problem.\+Problem\+Type.\+Maximizar}}.
+
+
+
+Referenciado por \mbox{\hyperlink{AcceptMulticase_8java_source_l00034}{local\+\_\+search.\+acceptation\+\_\+type.\+Accept\+Multicase.\+accept\+Candidate()}}, \mbox{\hyperlink{AcceptNotDominated_8java_source_l00028}{local\+\_\+search.\+acceptation\+\_\+type.\+Accept\+Not\+Dominated.\+accept\+Candidate()}}, \mbox{\hyperlink{Dominance_8java_source_l00087}{dominance()}}, \mbox{\hyperlink{AcceptMulticase_8java_source_l00106}{local\+\_\+search.\+acceptation\+\_\+type.\+Accept\+Multicase.\+dominance\+Counter()}}, \mbox{\hyperlink{AcceptMulticase_8java_source_l00117}{local\+\_\+search.\+acceptation\+\_\+type.\+Accept\+Multicase.\+dominance\+Rank()}}, \mbox{\hyperlink{Dominance_8java_source_l00033}{list\+Dominance()}} y \mbox{\hyperlink{NotDominatedCandidate_8java_source_l00027}{local\+\_\+search.\+candidate\+\_\+type.\+Not\+Dominated\+Candidate.\+state\+Search()}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlocal__search_1_1acceptation__type_1_1Dominance_a0dafd58be8365a22956f59417841a2d8_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlocal__search_1_1acceptation__type_1_1Dominance_a0dafd58be8365a22956f59417841a2d8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classlocal__search_1_1acceptation__type_1_1Dominance_ad61c0e3cb6cc4036419cb36758cf3814}\index{local\_search.acceptation\_type.Dominance@{local\_search.acceptation\_type.Dominance}!listDominance@{listDominance}}
+\index{listDominance@{listDominance}!local\_search.acceptation\_type.Dominance@{local\_search.acceptation\_type.Dominance}}
+\doxysubsubsection{\texorpdfstring{listDominance()}{listDominance()}}
+{\footnotesize\ttfamily \label{classlocal__search_1_1acceptation__type_1_1Dominance_ad61c0e3cb6cc4036419cb36758cf3814} 
+boolean local\+\_\+search.\+acceptation\+\_\+type.\+Dominance.\+list\+Dominance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}}]{solutionX}{, }\item[{List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$}]{list}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check whether solutionX dominates members of the supplied list and update the list accordingly. 
+
+If solutionX is not dominated and not present it is added.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em solutionX} & the candidate solution to test \\
+\hline
+{\em list} & the list of non-\/dominated solutions (Pareto front) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+true if the solution was added to the list (i.\+e. it is non-\/dominated and not duplicate), false otherwise 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{Dominance_8java_source_l00033}{33}} del archivo \mbox{\hyperlink{Dominance_8java_source}{Dominance.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{boolean}\ domain\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ list.size()\ \&\&\ domain\ ==\ \textcolor{keyword}{false};\ i++)\ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Si\ la\ soluci{\ucr}n\ X\ domina\ a\ la\ soluci{\ucr}n\ de\ la\ lista}}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(dominance(solutionX,\ list.get(i))\ ==\ \textcolor{keyword}{true})\{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Se\ elimina\ el\ elemento\ de\ la\ lista}}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ list.remove(i);}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i!=0)\ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ i-\/-\/;\ \ \ \ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Strategy.getStrategy().generator.getType().equals(GeneratorType.MultiobjectiveHillClimbingDistance)\&\&list.size()!=0)\ \{}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MultiobjectiveHillClimbingDistance.distanceCalculateAdd(list);}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (list.size()>0)\ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(dominance(list.get(i),\ solutionX)\ ==\ \textcolor{keyword}{true})\{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ domain\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Si\ la\ soluci{\ucr}n\ X\ no\ fue\ dominada}}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(domain\ ==\ \textcolor{keyword}{false})\{}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Comprobando\ que\ la\ soluci{\ucr}n\ no\ exista}}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{boolean}\ found\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ k\ =\ 0;\ k\ <\ list.size()\ \&\&\ found\ ==\ \textcolor{keyword}{false};\ k++)\ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ State\ element\ =\ list.get(k);}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ found\ =\ solutionX.Comparator(element);}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Si\ la\ soluci{\ucr}n\ no\ existe}}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(found\ ==\ \textcolor{keyword}{false})\{}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Se\ guarda\ la\ soluci{\ucr}n\ candidata\ en\ la\ lista\ de\ soluciones\ {\ucr}ptimas\ de\ Pareto}}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ list.add(solutionX.clone());}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Strategy.getStrategy().generator.getType().equals(GeneratorType.MultiobjectiveHillClimbingDistance))\ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MultiobjectiveHillClimbingDistance.distanceCalculateAdd(list);}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{State_8java_source_l00142}{problem.\+definition.\+State.\+clone()}}, \mbox{\hyperlink{State_8java_source_l00171}{problem.\+definition.\+State.\+Comparator()}}, \mbox{\hyperlink{MultiobjectiveHillClimbingDistance_8java_source_l00234}{metaheuristics.\+generators.\+Multiobjective\+Hill\+Climbing\+Distance.\+distance\+Calculate\+Add()}}, \mbox{\hyperlink{Dominance_8java_source_l00087}{dominance()}}, \mbox{\hyperlink{Strategy_8java_source_l00044}{metaheurictics.\+strategy.\+Strategy.\+generator}}, \mbox{\hyperlink{Strategy_8java_source_l00080}{metaheurictics.\+strategy.\+Strategy.\+get\+Strategy()}}, \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a5a123306b43c42d28cd1d6e17f8067a5}{metaheuristics.\+generators.\+Generator.\+get\+Type()}} y \mbox{\hyperlink{GeneratorType_8java_source_l00010}{metaheuristics.\+generators.\+Generator\+Type.\+Multiobjective\+Hill\+Climbing\+Distance}}.
+
+
+
+Referenciado por \mbox{\hyperlink{AcceptMulticase_8java_source_l00034}{local\+\_\+search.\+acceptation\+\_\+type.\+Accept\+Multicase.\+accept\+Candidate()}}, \mbox{\hyperlink{AcceptNotDominated_8java_source_l00028}{local\+\_\+search.\+acceptation\+\_\+type.\+Accept\+Not\+Dominated.\+accept\+Candidate()}} y \mbox{\hyperlink{AcceptNotDominatedTabu_8java_source_l00027}{local\+\_\+search.\+acceptation\+\_\+type.\+Accept\+Not\+Dominated\+Tabu.\+accept\+Candidate()}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlocal__search_1_1acceptation__type_1_1Dominance_ad61c0e3cb6cc4036419cb36758cf3814_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlocal__search_1_1acceptation__type_1_1Dominance_ad61c0e3cb6cc4036419cb36758cf3814_icgraph}
+\end{center}
+\end{figure}
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Dominance_8java}{Dominance.\+java}}\end{DoxyCompactItemize}

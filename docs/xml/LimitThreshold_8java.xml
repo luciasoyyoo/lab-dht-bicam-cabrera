@@ -1,0 +1,267 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="es">
+  <compounddef id="LimitThreshold_8java" kind="file" language="Java">
+    <compoundname>LimitThreshold.java</compoundname>
+    <includes local="no">java.lang.reflect.InvocationTargetException</includes>
+    <includes local="no">java.util.List</includes>
+    <includes local="no">java.util.Arrays</includes>
+    <includes local="no">local_search.acceptation_type.AcceptType</includes>
+    <includes local="no">local_search.acceptation_type.AcceptableCandidate</includes>
+    <includes local="no">local_search.candidate_type.CandidateType</includes>
+    <includes local="no">local_search.candidate_type.CandidateValue</includes>
+    <includes local="no">local_search.complement.StrategyType</includes>
+    <includes local="no">metaheurictics.strategy.Strategy</includes>
+    <includes local="no">problem.definition.Problem</includes>
+    <includes local="no">problem.definition.State</includes>
+    <includes local="no">problem.definition.Problem.ProblemType</includes>
+    <includes local="no">factory_interface.IFFactoryAcceptCandidate</includes>
+    <includes local="no">factory_method.FactoryAcceptCandidate</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>LimitThreshold.java</label>
+        <link refid="LimitThreshold_8java"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>factory_interface.IFFactoryAcceptCandidate</label>
+      </node>
+      <node id="15">
+        <label>factory_method.FactoryAcceptCandidate</label>
+      </node>
+      <node id="2">
+        <label>java.lang.reflect.InvocationTargetException</label>
+      </node>
+      <node id="4">
+        <label>java.util.Arrays</label>
+      </node>
+      <node id="3">
+        <label>java.util.List</label>
+      </node>
+      <node id="5">
+        <label>local_search.acceptation_type.AcceptType</label>
+      </node>
+      <node id="6">
+        <label>local_search.acceptation_type.AcceptableCandidate</label>
+      </node>
+      <node id="7">
+        <label>local_search.candidate_type.CandidateType</label>
+      </node>
+      <node id="8">
+        <label>local_search.candidate_type.CandidateValue</label>
+      </node>
+      <node id="9">
+        <label>local_search.complement.StrategyType</label>
+      </node>
+      <node id="10">
+        <label>metaheurictics.strategy.Strategy</label>
+      </node>
+      <node id="11">
+        <label>problem.definition.Problem</label>
+      </node>
+      <node id="13">
+        <label>problem.definition.Problem.ProblemType</label>
+      </node>
+      <node id="12">
+        <label>problem.definition.State</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classmetaheuristics_1_1generators_1_1LimitThreshold" prot="public">metaheuristics::generators::LimitThreshold</innerclass>
+    <innernamespace refid="namespacemetaheuristics_1_1generators">metaheuristics::generators</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">package<sp/></highlight><highlight class="normal">metaheuristics.generators;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>java.lang.reflect.InvocationTargetException;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>java.util.List;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>java.util.Arrays;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>local_search.acceptation_type.AcceptType;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>local_search.acceptation_type.AcceptableCandidate;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>local_search.candidate_type.CandidateType;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>local_search.candidate_type.CandidateValue;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>local_search.complement.StrategyType;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>metaheurictics.strategy.Strategy;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>problem.definition.Problem;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>problem.definition.State;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>problem.definition.Problem.ProblemType;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>factory_interface.IFFactoryAcceptCandidate;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>factory_method.FactoryAcceptCandidate;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="classmetaheuristics_1_1generators_1_1LimitThreshold" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1aed9ff52ca66ef9bb47e893daa27f819c" kindref="member">LimitThreshold</ref><sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/><ref refid="classmetaheuristics_1_1generators_1_1Generator" kindref="compound">Generator</ref>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="30" refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1a8de640dccf8fbbb2939fd99300824f83" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/><ref refid="classlocal__search_1_1candidate__type_1_1CandidateValue" kindref="compound">CandidateValue</ref><sp/><ref refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1a8de640dccf8fbbb2939fd99300824f83" kindref="member">candidatevalue</ref>;</highlight></codeline>
+<codeline lineno="31" refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1a01b5a352c85678089d9ffb36e9ad194b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/><ref refid="enumlocal__search_1_1acceptation__type_1_1AcceptType" kindref="compound">AcceptType</ref><sp/><ref refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1a01b5a352c85678089d9ffb36e9ad194b" kindref="member">typeAcceptation</ref>;</highlight></codeline>
+<codeline lineno="32" refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1a6937fd0de12562783fa0c65cec27aaf3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/><ref refid="enumlocal__search_1_1complement_1_1StrategyType" kindref="compound">StrategyType</ref><sp/><ref refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1a6937fd0de12562783fa0c65cec27aaf3" kindref="member">strategy</ref>;</highlight></codeline>
+<codeline lineno="33" refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1a2622c44d8b1279642668df5933b4db73" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/><ref refid="enumlocal__search_1_1candidate__type_1_1CandidateType" kindref="compound">CandidateType</ref><sp/><ref refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1a2622c44d8b1279642668df5933b4db73" kindref="member">typeCandidate</ref>;</highlight></codeline>
+<codeline lineno="34" refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1a918667f403a9499aa7c9ff5d43077cb8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref><sp/><ref refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1a918667f403a9499aa7c9ff5d43077cb8" kindref="member">stateReferenceLT</ref>;</highlight></codeline>
+<codeline lineno="35" refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1a5ef646af57248b1d00c64c80d0e1734c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/><ref refid="interfacefactory__interface_1_1IFFactoryAcceptCandidate" kindref="compound">IFFactoryAcceptCandidate</ref><sp/><ref refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1a5ef646af57248b1d00c64c80d0e1734c" kindref="member">ifacceptCandidate</ref>;</highlight></codeline>
+<codeline lineno="36" refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1a04f6a8113008c70ba9db211a1785d01d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/><ref refid="enummetaheuristics_1_1generators_1_1GeneratorType" kindref="compound">GeneratorType</ref><sp/><ref refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1a04f6a8113008c70ba9db211a1785d01d" kindref="member">typeGenerator</ref>;</highlight></codeline>
+<codeline lineno="37" refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1abee112e06031970c3d0e204ee85dd3ac" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1abee112e06031970c3d0e204ee85dd3ac" kindref="member">weight</ref>;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//problemas<sp/>dinamicos</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//problemas<sp/>dinamicos:<sp/>use<sp/>instance<sp/>fields<sp/>from<sp/>Generator<sp/>(countGender,<sp/>countBetterGender)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1acd21d216be875ea8dbf479edbc256fb5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">[]<sp/><ref refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1acd21d216be875ea8dbf479edbc256fb5" kindref="member">listCountBetterGender</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">[10];</highlight></codeline>
+<codeline lineno="42" refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1a3f67694dc1f9bb655c1b8b8a7654c3fb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">[]<sp/><ref refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1a3f67694dc1f9bb655c1b8b8a7654c3fb" kindref="member">listCountGender</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">[10];</highlight></codeline>
+<codeline lineno="43" refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1a53828a560c7c9e40a74f1f7b133ac34e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">[]<sp/><ref refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1a53828a560c7c9e40a74f1f7b133ac34e" kindref="member">listTrace</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">[1200000];</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="49" refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1a6afc908f2de8507b181968175449c0cc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="enummetaheuristics_1_1generators_1_1GeneratorType" kindref="compound">GeneratorType</ref><sp/><ref refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1a6afc908f2de8507b181968175449c0cc" kindref="member">getTypeGenerator</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1a04f6a8113008c70ba9db211a1785d01d" kindref="member">typeGenerator</ref>;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1ab9f14ff4d97b19cc4219f2560fe36c54" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1ab9f14ff4d97b19cc4219f2560fe36c54" kindref="member">setTypeGenerator</ref>(<ref refid="enummetaheuristics_1_1generators_1_1GeneratorType" kindref="compound">GeneratorType</ref><sp/><ref refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1a04f6a8113008c70ba9db211a1785d01d" kindref="member">typeGenerator</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.typeGenerator<sp/>=<sp/><ref refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1a04f6a8113008c70ba9db211a1785d01d" kindref="member">typeGenerator</ref>;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1aed9ff52ca66ef9bb47e893daa27f819c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1aed9ff52ca66ef9bb47e893daa27f819c" kindref="member">LimitThreshold</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super();</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.typeAcceptation<sp/>=<sp/><ref refid="enumlocal__search_1_1acceptation__type_1_1AcceptType" kindref="compound">AcceptType</ref>.<ref refid="enumlocal__search_1_1acceptation__type_1_1AcceptType_1a654e7f0a28a2166635686e85f6c2410c" kindref="member">AcceptNotBadU</ref>;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.strategy<sp/>=<sp/><ref refid="enumlocal__search_1_1complement_1_1StrategyType" kindref="compound">StrategyType</ref>.<ref refid="enumlocal__search_1_1complement_1_1StrategyType_1a6319a2518e93ad757c398fb858df8c9e" kindref="member">NORMAL</ref>;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classproblem_1_1definition_1_1Problem" kindref="compound">Problem</ref><sp/>problem<sp/>=<sp/><ref refid="classmetaheurictics_1_1strategy_1_1Strategy" kindref="compound">Strategy</ref>.<ref refid="classmetaheurictics_1_1strategy_1_1Strategy_1ad2641e12c52292930364de6655333aa8" kindref="member">getStrategy</ref>().<ref refid="classmetaheurictics_1_1strategy_1_1Strategy_1a4bc6bd95db71e14b1f48c1bfc85f1305" kindref="member">getProblem</ref>();</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(problem.getTypeProblem().equals(<ref refid="enumproblem_1_1definition_1_1Problem_1_1ProblemType" kindref="compound">ProblemType</ref>.<ref refid="enumproblem_1_1definition_1_1Problem_1_1ProblemType_1aa55383c4cb9a71cfeabc7f715ee0cd6e" kindref="member">Maximizar</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.typeCandidate<sp/>=<sp/><ref refid="enumlocal__search_1_1candidate__type_1_1CandidateType" kindref="compound">CandidateType</ref>.<ref refid="enumlocal__search_1_1candidate__type_1_1CandidateType_1a10a1f7a483a38c8c3911ff48e588faef" kindref="member">GreaterCandidate</ref>;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.typeCandidate<sp/>=<sp/><ref refid="enumlocal__search_1_1candidate__type_1_1CandidateType" kindref="compound">CandidateType</ref>.<ref refid="enumlocal__search_1_1candidate__type_1_1CandidateType_1a83d72037a210a5d2146a2690a6a956e9" kindref="member">SmallerCandidate</ref>;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.candidatevalue<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classlocal__search_1_1candidate__type_1_1CandidateValue" kindref="compound">CandidateValue</ref>();</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.typeGenerator<sp/>=<sp/><ref refid="enummetaheuristics_1_1generators_1_1GeneratorType" kindref="compound">GeneratorType</ref>.<ref refid="enummetaheuristics_1_1generators_1_1GeneratorType_1a67701bca73b1d45dcfb2fbd70e31b6d5" kindref="member">LimitThreshold</ref>;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.weight<sp/>=<sp/>(float)<sp/>50.0;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1a53828a560c7c9e40a74f1f7b133ac34e" kindref="member">listTrace</ref>[0]<sp/>=<sp/><ref refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1abee112e06031970c3d0e204ee85dd3ac" kindref="member">weight</ref>;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1acd21d216be875ea8dbf479edbc256fb5" kindref="member">listCountBetterGender</ref>[0]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1a3f67694dc1f9bb655c1b8b8a7654c3fb" kindref="member">listCountGender</ref>[0]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>@Override</highlight></codeline>
+<codeline lineno="93" refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1af2ac27e167ad69093379e30a9dcf1955" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref><sp/><ref refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1af2ac27e167ad69093379e30a9dcf1955" kindref="member">generate</ref>(Integer<sp/>operatornumber)<sp/></highlight><highlight class="keywordflow">throws</highlight><highlight class="normal"><sp/>IllegalArgumentException,<sp/>SecurityException,<sp/>ClassNotFoundException,<sp/>InstantiationException,<sp/>IllegalAccessException,<sp/>InvocationTargetException,<sp/>NoSuchMethodException<sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>List&lt;State&gt;<sp/>neighborhood<sp/>=<sp/><ref refid="classmetaheurictics_1_1strategy_1_1Strategy" kindref="compound">Strategy</ref>.<ref refid="classmetaheurictics_1_1strategy_1_1Strategy_1ad2641e12c52292930364de6655333aa8" kindref="member">getStrategy</ref>().<ref refid="classmetaheurictics_1_1strategy_1_1Strategy_1a4bc6bd95db71e14b1f48c1bfc85f1305" kindref="member">getProblem</ref>().<ref refid="classproblem_1_1definition_1_1Problem_1a4cd649edb8862f21af171491cb9b9386" kindref="member">getOperator</ref>().<ref refid="classproblem_1_1definition_1_1Operator_1a5b6625843e73d938f9235985bf966b34" kindref="member">generatedNewState</ref>(<ref refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1a918667f403a9499aa7c9ff5d43077cb8" kindref="member">stateReferenceLT</ref>,<sp/>operatornumber);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref><sp/>statecandidate<sp/>=<sp/><ref refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1a8de640dccf8fbbb2939fd99300824f83" kindref="member">candidatevalue</ref>.stateCandidate(<ref refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1a918667f403a9499aa7c9ff5d43077cb8" kindref="member">stateReferenceLT</ref>,<sp/><ref refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1a2622c44d8b1279642668df5933b4db73" kindref="member">typeCandidate</ref>,<sp/><ref refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1a6937fd0de12562783fa0c65cec27aaf3" kindref="member">strategy</ref>,<sp/>operatornumber,<sp/>neighborhood);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>statecandidate;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>@Override</highlight></codeline>
+<codeline lineno="105" refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1a74c3d66b7aba895e95facbced3cac70f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1a74c3d66b7aba895e95facbced3cac70f" kindref="member">updateReference</ref>(<ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref><sp/>stateCandidate,<sp/>Integer<sp/>countIterationsCurrent)<sp/></highlight><highlight class="keywordflow">throws</highlight><highlight class="normal"><sp/>IllegalArgumentException,<sp/>SecurityException,<sp/>ClassNotFoundException,<sp/>InstantiationException,<sp/>IllegalAccessException,<sp/>InvocationTargetException,<sp/>NoSuchMethodException<sp/>{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1a5ef646af57248b1d00c64c80d0e1734c" kindref="member">ifacceptCandidate</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classfactory__method_1_1FactoryAcceptCandidate" kindref="compound">FactoryAcceptCandidate</ref>();</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classlocal__search_1_1acceptation__type_1_1AcceptableCandidate" kindref="compound">AcceptableCandidate</ref><sp/>candidate<sp/>=<sp/><ref refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1a5ef646af57248b1d00c64c80d0e1734c" kindref="member">ifacceptCandidate</ref>.createAcceptCandidate(<ref refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1a01b5a352c85678089d9ffb36e9ad194b" kindref="member">typeAcceptation</ref>);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Boolean<sp/>accept<sp/>=<sp/>candidate.<ref refid="classlocal__search_1_1acceptation__type_1_1AcceptableCandidate_1aa9e62e1d2d213c3828d2491b506d0592" kindref="member">acceptCandidate</ref>(<ref refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1a918667f403a9499aa7c9ff5d43077cb8" kindref="member">stateReferenceLT</ref><sp/>,<sp/>stateCandidate);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(accept.equals(</highlight><highlight class="keyword">true</highlight><highlight class="normal">)){</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1a918667f403a9499aa7c9ff5d43077cb8" kindref="member">stateReferenceLT</ref><sp/>=<sp/>stateCandidate;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>@Override</highlight></codeline>
+<codeline lineno="120" refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1a677121a3422f5f63b35057d1fbdbe22e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref><sp/><ref refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1a677121a3422f5f63b35057d1fbdbe22e" kindref="member">getReference</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1a918667f403a9499aa7c9ff5d43077cb8" kindref="member">stateReferenceLT</ref>;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128" refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1ae1a9d64d4a4220f5e99a21b7962b219f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1ae1a9d64d4a4220f5e99a21b7962b219f" kindref="member">setStateRef</ref>(<ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref><sp/>stateRef)<sp/>{</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.stateReferenceLT<sp/>=<sp/>stateRef;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>@Override</highlight></codeline>
+<codeline lineno="137" refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1a76fd122b2147aa598df1414732f62001" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1a76fd122b2147aa598df1414732f62001" kindref="member">setInitialReference</ref>(<ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref><sp/>stateInitialRef)<sp/>{</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.stateReferenceLT<sp/>=<sp/>stateInitialRef;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>@Override</highlight></codeline>
+<codeline lineno="147" refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1a716e77810e2bbc6c72c975314029e168" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="enummetaheuristics_1_1generators_1_1GeneratorType" kindref="compound">GeneratorType</ref><sp/><ref refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1a716e77810e2bbc6c72c975314029e168" kindref="member">getType</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>this.typeGenerator;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>@Override</highlight></codeline>
+<codeline lineno="156" refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1aa1bb91cb7aa4956d44487d0acf2066c1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>List&lt;State&gt;<sp/><ref refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1aa1bb91cb7aa4956d44487d0acf2066c1" kindref="member">getReferenceList</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">null</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>@Override</highlight></codeline>
+<codeline lineno="165" refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1afe588006bfb32514f23e50da61b1e0a7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>List&lt;State&gt;<sp/><ref refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1afe588006bfb32514f23e50da61b1e0a7" kindref="member">getSonList</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO<sp/>Auto-generated<sp/>method<sp/>stub</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">null</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174" refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1a9d8e138e7a9a4e1a00ff0260b677affb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1a9d8e138e7a9a4e1a00ff0260b677affb" kindref="member">setTypeCandidate</ref>(<ref refid="enumlocal__search_1_1candidate__type_1_1CandidateType" kindref="compound">CandidateType</ref><sp/><ref refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1a2622c44d8b1279642668df5933b4db73" kindref="member">typeCandidate</ref>){</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.typeCandidate<sp/>=<sp/><ref refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1a2622c44d8b1279642668df5933b4db73" kindref="member">typeCandidate</ref>;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/>@Override</highlight></codeline>
+<codeline lineno="184" refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1ae31f7d76b6ee0c2520a648dd633fb82a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/><ref refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1ae31f7d76b6ee0c2520a648dd633fb82a" kindref="member">awardUpdateREF</ref>(<ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref><sp/>stateCandidate)<sp/>{</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO<sp/>Auto-generated<sp/>method<sp/>stub</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193" refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1a6b7bf930711a043f746384b80cfa867a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1a6b7bf930711a043f746384b80cfa867a" kindref="member">getWeight</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO<sp/>Auto-generated<sp/>method<sp/>stub</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>this.weight;</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/>@Override</highlight></codeline>
+<codeline lineno="203" refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1a789fadcd73af2861e3719a1e17029949" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1a789fadcd73af2861e3719a1e17029949" kindref="member">setWeight</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1abee112e06031970c3d0e204ee85dd3ac" kindref="member">weight</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO<sp/>Auto-generated<sp/>method<sp/>stub</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.weight<sp/>=<sp/><ref refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1abee112e06031970c3d0e204ee85dd3ac" kindref="member">weight</ref>;</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/>@Override</highlight></codeline>
+<codeline lineno="214" refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1a0017345434c5e714ff22fee916c7aac6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">[]<sp/><ref refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1a0017345434c5e714ff22fee916c7aac6" kindref="member">getListCountBetterGender</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO<sp/>Auto-generated<sp/>method<sp/>stub</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(this.listCountBetterGender<sp/>==<sp/></highlight><highlight class="keyword">null</highlight><highlight class="normal">)<sp/>?<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">[0]<sp/>:<sp/>Arrays.copyOf(this.listCountBetterGender,<sp/>this.listCountBetterGender.length);</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/>@Override</highlight></codeline>
+<codeline lineno="224" refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1adf6905af1e88d74c5760aa59e6bd3250" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">[]<sp/><ref refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1adf6905af1e88d74c5760aa59e6bd3250" kindref="member">getListCountGender</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO<sp/>Auto-generated<sp/>method<sp/>stub</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(this.listCountGender<sp/>==<sp/></highlight><highlight class="keyword">null</highlight><highlight class="normal">)<sp/>?<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">[0]<sp/>:<sp/>Arrays.copyOf(this.listCountGender,<sp/>this.listCountGender.length);</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/>@Override</highlight></codeline>
+<codeline lineno="234" refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1a9ede5fad8f945fb984d5d966b544b81f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">[]<sp/><ref refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1a9ede5fad8f945fb984d5d966b544b81f" kindref="member">getTrace</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO<sp/>Auto-generated<sp/>method<sp/>stub</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(this.listTrace<sp/>==<sp/></highlight><highlight class="keyword">null</highlight><highlight class="normal">)<sp/>?<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">[0]<sp/>:<sp/>Arrays.copyOf(this.listTrace,<sp/>this.listTrace.length);</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="practica5/src/main/java/metaheuristics/generators/LimitThreshold.java"/>
+  </compounddef>
+</doxygen>

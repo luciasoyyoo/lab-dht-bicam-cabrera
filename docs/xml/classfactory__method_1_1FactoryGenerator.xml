@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="es">
+  <compounddef id="classfactory__method_1_1FactoryGenerator" kind="class" language="Java" prot="public">
+    <compoundname>factory_method::FactoryGenerator</compoundname>
+    <basecompoundref refid="interfacefactory__interface_1_1IFFactoryGenerator" prot="public" virt="non-virtual">factory_interface.IFFactoryGenerator</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classfactory__method_1_1FactoryGenerator_1a85ceb32e0a0d2d6948a21d3667182520" prot="private" static="no" mutable="no">
+        <type><ref refid="classmetaheuristics_1_1generators_1_1Generator" kindref="compound">Generator</ref></type>
+        <definition>Generator factory_method.FactoryGenerator.generator</definition>
+        <argsstring></argsstring>
+        <name>generator</name>
+        <qualifiedname>factory_method.FactoryGenerator.generator</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/factory_method/FactoryGenerator.java" line="18" column="19" bodyfile="practica5/src/main/java/factory_method/FactoryGenerator.java" bodystart="18" bodyend="-1"/>
+        <referencedby refid="classfactory__method_1_1FactoryGenerator_1a76c269b114cbf643e92a7467b7cf21f7" compoundref="FactoryGenerator_8java" startline="25" endline="29">factory_method.FactoryGenerator.createGenerator</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classfactory__method_1_1FactoryGenerator_1a76c269b114cbf643e92a7467b7cf21f7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classmetaheuristics_1_1generators_1_1Generator" kindref="compound">Generator</ref></type>
+        <definition>Generator factory_method.FactoryGenerator.createGenerator</definition>
+        <argsstring>(GeneratorType generatorType)</argsstring>
+        <name>createGenerator</name>
+        <qualifiedname>factory_method.FactoryGenerator.createGenerator</qualifiedname>
+        <reimplements refid="interfacefactory__interface_1_1IFFactoryGenerator_1a8b4b2b773b74f6c627788aa87ef1387e">createGenerator</reimplements>
+        <param>
+          <type><ref refid="enummetaheuristics_1_1generators_1_1GeneratorType" kindref="compound">GeneratorType</ref></type>
+          <declname>generatorType</declname>
+        </param>
+        <exceptions> throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException </exceptions>
+        <briefdescription>
+<para>createGenerator - Creates an instance of <ref refid="classmetaheuristics_1_1generators_1_1Generator" kindref="compound">Generator</ref> based on the provided <ref refid="enummetaheuristics_1_1generators_1_1GeneratorType" kindref="compound">GeneratorType</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>generatorType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns an instance of <ref refid="classmetaheuristics_1_1generators_1_1Generator" kindref="compound">Generator</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/factory_method/FactoryGenerator.java" line="25" column="18" bodyfile="practica5/src/main/java/factory_method/FactoryGenerator.java" bodystart="25" bodyend="29"/>
+        <references refid="classfactory__method_1_1FactoryGenerator_1a85ceb32e0a0d2d6948a21d3667182520" compoundref="FactoryGenerator_8java" startline="18">factory_method.FactoryGenerator.generator</references>
+        <references refid="classfactory__method_1_1FactoryLoader_1a4e61ffc7038a082277d67e3e59cdb859" compoundref="FactoryLoader_8java" startline="21" endline="28">factory_method.FactoryLoader.getInstance</references>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiGenerator_1ada4833a51b39d1372e2c050448bbab6c" compoundref="MultiGenerator_8java" startline="90" endline="124">metaheuristics.generators.MultiGenerator.initializeGenerators</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1InstanceDE_1a670666f9e178336ab435f4c3f9f8b60e" compoundref="InstanceDE_8java" startline="21" endline="41">metaheuristics.generators.InstanceDE.run</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1InstanceEE_1a0b7588c73c2a82f79b2282c83bf4b9c8" compoundref="InstanceEE_8java" startline="19" endline="38">metaheuristics.generators.InstanceEE.run</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1InstanceGA_1aefa3b4de3be77d579e499fbd6a6f5761" compoundref="InstanceGA_8java" startline="21" endline="39">metaheuristics.generators.InstanceGA.run</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="classfactory__method_1_1FactoryGenerator" kindref="compound">FactoryGenerator</ref> - Interface for creating generator strategies. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>factory_interface.IFFactoryGenerator</label>
+        <link refid="interfacefactory__interface_1_1IFFactoryGenerator"/>
+      </node>
+      <node id="1">
+        <label>factory_method.FactoryGenerator</label>
+        <link refid="classfactory__method_1_1FactoryGenerator"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>factory_interface.IFFactoryGenerator</label>
+        <link refid="interfacefactory__interface_1_1IFFactoryGenerator"/>
+      </node>
+      <node id="1">
+        <label>factory_method.FactoryGenerator</label>
+        <link refid="classfactory__method_1_1FactoryGenerator"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-generator</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>metaheuristics.generators.Generator</label>
+        <link refid="classmetaheuristics_1_1generators_1_1Generator"/>
+      </node>
+    </collaborationgraph>
+    <location file="practica5/src/main/java/factory_method/FactoryGenerator.java" line="16" column="7" bodyfile="practica5/src/main/java/factory_method/FactoryGenerator.java" bodystart="16" bodyend="30"/>
+    <listofallmembers>
+      <member refid="classfactory__method_1_1FactoryGenerator_1a76c269b114cbf643e92a7467b7cf21f7" prot="public" virt="non-virtual"><scope>factory_method::FactoryGenerator</scope><name>createGenerator</name></member>
+      <member refid="classfactory__method_1_1FactoryGenerator_1a85ceb32e0a0d2d6948a21d3667182520" prot="private" virt="non-virtual"><scope>factory_method::FactoryGenerator</scope><name>generator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

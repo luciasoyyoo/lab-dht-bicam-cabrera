@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="es">
+  <compounddef id="TowPointsMutation_8java" kind="file" language="Java">
+    <compoundname>TowPointsMutation.java</compoundname>
+    <includes local="no">metaheurictics.strategy.Strategy</includes>
+    <includes local="no">problem.definition.State</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>TowPointsMutation.java</label>
+        <link refid="TowPointsMutation_8java"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>metaheurictics.strategy.Strategy</label>
+      </node>
+      <node id="3">
+        <label>problem.definition.State</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classevolutionary__algorithms_1_1complement_1_1TowPointsMutation" prot="public">evolutionary_algorithms::complement::TowPointsMutation</innerclass>
+    <innernamespace refid="namespaceevolutionary__algorithms_1_1complement">evolutionary_algorithms::complement</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">package<sp/></highlight><highlight class="normal">evolutionary_algorithms.complement;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>metaheurictics.strategy.Strategy;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>problem.definition.State;</highlight></codeline>
+<codeline lineno="9" refid="classevolutionary__algorithms_1_1complement_1_1TowPointsMutation" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classevolutionary__algorithms_1_1complement_1_1TowPointsMutation" kindref="compound">TowPointsMutation</ref><sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/><ref refid="classevolutionary__algorithms_1_1complement_1_1Mutation" kindref="compound">Mutation</ref><sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>legacy<sp/>ProblemState-based<sp/>mutation<sp/>removed:<sp/>use<sp/>State-based<sp/>mutation<sp/>below</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>@Override</highlight></codeline>
+<codeline lineno="20" refid="classevolutionary__algorithms_1_1complement_1_1TowPointsMutation_1aba8bc136aacf5eafcd9e73d032218e16" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref><sp/><ref refid="classevolutionary__algorithms_1_1complement_1_1TowPointsMutation_1aba8bc136aacf5eafcd9e73d032218e16" kindref="member">mutation</ref>(<ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref><sp/>newind,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>PM)<sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Object<sp/>key1<sp/>=<sp/><ref refid="classmetaheurictics_1_1strategy_1_1Strategy" kindref="compound">Strategy</ref>.<ref refid="classmetaheurictics_1_1strategy_1_1Strategy_1ad2641e12c52292930364de6655333aa8" kindref="member">getStrategy</ref>().<ref refid="classmetaheurictics_1_1strategy_1_1Strategy_1a4bc6bd95db71e14b1f48c1bfc85f1305" kindref="member">getProblem</ref>().<ref refid="classproblem_1_1definition_1_1Problem_1a7da2aa6b2a6f00f6f3993e6fdc43e34b" kindref="member">getCodification</ref>().<ref refid="classproblem_1_1definition_1_1Codification_1a01a0c8247d76d4c4c32c7f3e51c2d5f8" kindref="member">getAleatoryKey</ref>();</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Object<sp/>key2<sp/>=<sp/><ref refid="classmetaheurictics_1_1strategy_1_1Strategy" kindref="compound">Strategy</ref>.<ref refid="classmetaheurictics_1_1strategy_1_1Strategy_1ad2641e12c52292930364de6655333aa8" kindref="member">getStrategy</ref>().<ref refid="classmetaheurictics_1_1strategy_1_1Strategy_1a4bc6bd95db71e14b1f48c1bfc85f1305" kindref="member">getProblem</ref>().<ref refid="classproblem_1_1definition_1_1Problem_1a7da2aa6b2a6f00f6f3993e6fdc43e34b" kindref="member">getCodification</ref>().<ref refid="classproblem_1_1definition_1_1Codification_1a01a0c8247d76d4c4c32c7f3e51c2d5f8" kindref="member">getAleatoryKey</ref>();</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Object<sp/>value1<sp/>=<sp/><ref refid="classmetaheurictics_1_1strategy_1_1Strategy" kindref="compound">Strategy</ref>.<ref refid="classmetaheurictics_1_1strategy_1_1Strategy_1ad2641e12c52292930364de6655333aa8" kindref="member">getStrategy</ref>().<ref refid="classmetaheurictics_1_1strategy_1_1Strategy_1a4bc6bd95db71e14b1f48c1bfc85f1305" kindref="member">getProblem</ref>().<ref refid="classproblem_1_1definition_1_1Problem_1a7da2aa6b2a6f00f6f3993e6fdc43e34b" kindref="member">getCodification</ref>().<ref refid="classproblem_1_1definition_1_1Codification_1ad5875a47b3e863653ede3bb7feae524f" kindref="member">getVariableAleatoryValue</ref>((Integer)<sp/>key1);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Object<sp/>value2<sp/>=<sp/><ref refid="classmetaheurictics_1_1strategy_1_1Strategy" kindref="compound">Strategy</ref>.<ref refid="classmetaheurictics_1_1strategy_1_1Strategy_1ad2641e12c52292930364de6655333aa8" kindref="member">getStrategy</ref>().<ref refid="classmetaheurictics_1_1strategy_1_1Strategy_1a4bc6bd95db71e14b1f48c1bfc85f1305" kindref="member">getProblem</ref>().<ref refid="classproblem_1_1definition_1_1Problem_1a7da2aa6b2a6f00f6f3993e6fdc43e34b" kindref="member">getCodification</ref>().<ref refid="classproblem_1_1definition_1_1Codification_1ad5875a47b3e863653ede3bb7feae524f" kindref="member">getVariableAleatoryValue</ref>((Integer)<sp/>key2);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>newind.<ref refid="classproblem_1_1definition_1_1State_1a2e75b6f2bedb2107478ecd1e8e681418" kindref="member">getCode</ref>().set((Integer)<sp/>key1,<sp/>(Integer)value2);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>newind.<ref refid="classproblem_1_1definition_1_1State_1a2e75b6f2bedb2107478ecd1e8e681418" kindref="member">getCode</ref>().set((Integer)<sp/>key2,<sp/>(Integer)value1);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>newind;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/></highlight></codeline>
+    </programlisting>
+    <location file="practica5/src/main/java/evolutionary_algorithms/complement/TowPointsMutation.java"/>
+  </compounddef>
+</doxygen>

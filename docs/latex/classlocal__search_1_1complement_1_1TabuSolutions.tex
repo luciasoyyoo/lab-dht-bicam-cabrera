@@ -1,0 +1,160 @@
+\doxysection{Referencia de la clase local\+\_\+search.\+complement.\+Tabu\+Solutions}
+\hypertarget{classlocal__search_1_1complement_1_1TabuSolutions}{}\label{classlocal__search_1_1complement_1_1TabuSolutions}\index{local\_search.complement.TabuSolutions@{local\_search.complement.TabuSolutions}}
+
+
+\doxylink{classlocal__search_1_1complement_1_1TabuSolutions}{Tabu\+Solutions} -\/ helper that manages a tabu list and filters neighborhoods.  
+
+
+
+
+Diagrama de colaboración de local\+\_\+search.\+complement.\+Tabu\+Solutions\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{classlocal__search_1_1complement_1_1TabuSolutions__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ \mbox{\hyperlink{classlocal__search_1_1complement_1_1TabuSolutions_abe7521e1b6c8ca96a3a6b5b63cd08c48}{filter\+Neighborhood}} (List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ list\+Neighborhood)  throws Exception 
+\begin{DoxyCompactList}\small\item\em Remove tabu solutions from the supplied neighborhood list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static final List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ \mbox{\hyperlink{classlocal__search_1_1complement_1_1TabuSolutions_ad602469482bab1bd52b03ef738bd7907}{list\+Tabu}} = Collections.\+synchronized\+List(new Array\+List$<$\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}$>$())
+\begin{DoxyCompactList}\small\item\em Global synchronized tabu list shared by the local search components. \end{DoxyCompactList}\item 
+static final int \mbox{\hyperlink{classlocal__search_1_1complement_1_1TabuSolutions_a294b3167e2976e63e7264c619e756d82}{maxelements}} = 0
+\begin{DoxyCompactList}\small\item\em Maximum number of elements allowed in the tabu list (unused/placeholder). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+\doxylink{classlocal__search_1_1complement_1_1TabuSolutions}{Tabu\+Solutions} -\/ helper that manages a tabu list and filters neighborhoods. 
+
+Provides a synchronized global tabu list and a utility to remove tabu entries from candidate neighborhoods. The filtering method will throw an Exception if all neighbors are tabu. 
+
+Definición en la línea \mbox{\hyperlink{TabuSolutions_8java_source_l00016}{16}} del archivo \mbox{\hyperlink{TabuSolutions_8java_source}{Tabu\+Solutions.\+java}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{classlocal__search_1_1complement_1_1TabuSolutions_doc-func-members}
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{classlocal__search_1_1complement_1_1TabuSolutions_abe7521e1b6c8ca96a3a6b5b63cd08c48}\index{local\_search.complement.TabuSolutions@{local\_search.complement.TabuSolutions}!filterNeighborhood@{filterNeighborhood}}
+\index{filterNeighborhood@{filterNeighborhood}!local\_search.complement.TabuSolutions@{local\_search.complement.TabuSolutions}}
+\doxysubsubsection{\texorpdfstring{filterNeighborhood()}{filterNeighborhood()}}
+{\footnotesize\ttfamily \label{classlocal__search_1_1complement_1_1TabuSolutions_abe7521e1b6c8ca96a3a6b5b63cd08c48} 
+List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ local\+\_\+search.\+complement.\+Tabu\+Solutions.\+filter\+Neighborhood (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$}]{list\+Neighborhood}{}\end{DoxyParamCaption}) throws Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Remove tabu solutions from the supplied neighborhood list. 
+
+This method iterates the provided neighborhood and removes any element that equals an element in the global {\ttfamily \doxylink{classlocal__search_1_1complement_1_1TabuSolutions_ad602469482bab1bd52b03ef738bd7907}{list\+Tabu}}. If after filtering the neighborhood becomes empty the method throws an Exception to signal the caller that no valid neighbors remain.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em list\+Neighborhood} & list of neighbor States to filter \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+a filtered List$<$\+State$>$ with tabu entries removed 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em Exception} & when no neighbors remain after filtering \\
+\hline
+\end{DoxyExceptions}
+
+
+Definición en la línea \mbox{\hyperlink{TabuSolutions_8java_source_l00036}{36}} del archivo \mbox{\hyperlink{TabuSolutions_8java_source}{Tabu\+Solutions.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00037\ \ \ \ \ List<State>\ listFiltrate;}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ If\ there\ are\ entries\ in\ the\ tabu\ list,\ remove\ matching\ neighbors}}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!listTabu.isEmpty())\ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ listNeighborhood.size()\ -\/\ 1;\ i\ >=\ 0\ ;\ i-\/-\/)\ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ count\_tabu\ =\ 0;\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (listTabu.size()\ >\ count\_tabu)\ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (listNeighborhood.get(i).equals(listTabu.get(count\_tabu)))\ \{}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ listNeighborhood.remove(i);}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ count\_tabu++;}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ listFiltrate\ =\ listNeighborhood;}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (listFiltrate.isEmpty())\ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ Exception();}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ listFiltrate\ =\ listNeighborhood;}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ listFiltrate;}
+\DoxyCodeLine{00057\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{TabuSolutions_8java_source_l00019}{list\+Tabu}}.
+
+
+
+Referenciado por \mbox{\hyperlink{CandidateValue_8java_source_l00074}{local\+\_\+search.\+candidate\+\_\+type.\+Candidate\+Value.\+state\+Candidate()}}.
+
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlocal__search_1_1complement_1_1TabuSolutions_abe7521e1b6c8ca96a3a6b5b63cd08c48_icgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-variable-members}
+\Hypertarget{classlocal__search_1_1complement_1_1TabuSolutions_doc-variable-members}
+\doxysubsection{Documentación de datos miembro}
+\Hypertarget{classlocal__search_1_1complement_1_1TabuSolutions_ad602469482bab1bd52b03ef738bd7907}\index{local\_search.complement.TabuSolutions@{local\_search.complement.TabuSolutions}!listTabu@{listTabu}}
+\index{listTabu@{listTabu}!local\_search.complement.TabuSolutions@{local\_search.complement.TabuSolutions}}
+\doxysubsubsection{\texorpdfstring{listTabu}{listTabu}}
+{\footnotesize\ttfamily \label{classlocal__search_1_1complement_1_1TabuSolutions_ad602469482bab1bd52b03ef738bd7907} 
+final List$<$\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}$>$ local\+\_\+search.\+complement.\+Tabu\+Solutions.\+list\+Tabu = Collections.\+synchronized\+List(new Array\+List$<$\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}$>$())\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Global synchronized tabu list shared by the local search components. 
+
+
+
+Definición en la línea \mbox{\hyperlink{TabuSolutions_8java_source_l00019}{19}} del archivo \mbox{\hyperlink{TabuSolutions_8java_source}{Tabu\+Solutions.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{TabuSolutions_8java_source_l00036}{filter\+Neighborhood()}}, \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00105}{metaheuristics.\+generators.\+Multiobjective\+Tabu\+Search.\+update\+Reference()}} y \mbox{\hyperlink{TabuSearch_8java_source_l00133}{metaheuristics.\+generators.\+Tabu\+Search.\+update\+Reference()}}.
+
+\Hypertarget{classlocal__search_1_1complement_1_1TabuSolutions_a294b3167e2976e63e7264c619e756d82}\index{local\_search.complement.TabuSolutions@{local\_search.complement.TabuSolutions}!maxelements@{maxelements}}
+\index{maxelements@{maxelements}!local\_search.complement.TabuSolutions@{local\_search.complement.TabuSolutions}}
+\doxysubsubsection{\texorpdfstring{maxelements}{maxelements}}
+{\footnotesize\ttfamily \label{classlocal__search_1_1complement_1_1TabuSolutions_a294b3167e2976e63e7264c619e756d82} 
+final int local\+\_\+search.\+complement.\+Tabu\+Solutions.\+maxelements = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Maximum number of elements allowed in the tabu list (unused/placeholder). 
+
+
+
+Definición en la línea \mbox{\hyperlink{TabuSolutions_8java_source_l00022}{22}} del archivo \mbox{\hyperlink{TabuSolutions_8java_source}{Tabu\+Solutions.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00105}{metaheuristics.\+generators.\+Multiobjective\+Tabu\+Search.\+update\+Reference()}} y \mbox{\hyperlink{TabuSearch_8java_source_l00133}{metaheuristics.\+generators.\+Tabu\+Search.\+update\+Reference()}}.
+
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{TabuSolutions_8java}{Tabu\+Solutions.\+java}}\end{DoxyCompactItemize}

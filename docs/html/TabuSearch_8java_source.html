@@ -1,0 +1,393 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>practica5: Archivo de código fuente TabuSearch.java</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">practica5
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('TabuSearch_8java_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">TabuSearch.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="TabuSearch_8java.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">package </span>metaheuristics.generators;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">import</span> java.lang.reflect.InvocationTargetException;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">import</span> java.util.ArrayList;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">import</span> java.util.List;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">import</span> java.util.Arrays;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">import</span> local_search.acceptation_type.AcceptType;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">import</span> local_search.acceptation_type.AcceptableCandidate;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">import</span> local_search.candidate_type.CandidateType;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">import</span> local_search.candidate_type.CandidateValue;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">import</span> local_search.complement.StrategyType;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">import</span> local_search.complement.TabuSolutions;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">import</span> metaheurictics.strategy.Strategy;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">import</span> problem.definition.Problem;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">import</span> problem.definition.State;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">import</span> problem.definition.Problem.ProblemType;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">import</span> factory_interface.IFFactoryAcceptCandidate;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">import</span> factory_method.FactoryAcceptCandidate;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span></div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="};">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classmetaheuristics_1_1generators_1_1TabuSearch.html">   28</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_function" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#ad0157e54c7cc9736d0cfc1785a3f65bf">TabuSearch</a> <span class="keyword">extends</span> <a class="code hl_class" href="classmetaheuristics_1_1generators_1_1Generator.html">Generator</a> {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#a31d63307aa195061e188c7723c4a33f7">   30</a></span>    <span class="keyword">private</span> <a class="code hl_class" href="classlocal__search_1_1candidate__type_1_1CandidateValue.html">CandidateValue</a> <a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#a31d63307aa195061e188c7723c4a33f7">candidatevalue</a>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#afff3deea8e2f9e0edca22f21f8ff5856">   31</a></span>    <span class="keyword">private</span> <a class="code hl_class" href="enumlocal__search_1_1acceptation__type_1_1AcceptType.html">AcceptType</a> <a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#afff3deea8e2f9e0edca22f21f8ff5856">typeAcceptation</a>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#ae47364d69ae1f46aacca49de6dd7b3b9">   32</a></span>    <span class="keyword">private</span> <a class="code hl_class" href="enumlocal__search_1_1complement_1_1StrategyType.html">StrategyType</a> <a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#ae47364d69ae1f46aacca49de6dd7b3b9">strategy</a>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#ade3c6897851f8b12cc446cc7eeef4354">   33</a></span>    <span class="keyword">private</span> <a class="code hl_class" href="enumlocal__search_1_1candidate__type_1_1CandidateType.html">CandidateType</a> <a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#ade3c6897851f8b12cc446cc7eeef4354">typeCandidate</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#a4c8bb4f31daa880c2a864f198bc58e4f">   34</a></span>    <span class="keyword">private</span> <a class="code hl_class" href="classproblem_1_1definition_1_1State.html">State</a> <a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#a4c8bb4f31daa880c2a864f198bc58e4f">stateReferenceTS</a>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#a9cce5e426fbdd081c7ecd1f1dbcbdf25">   35</a></span>    <span class="keyword">private</span> <a class="code hl_interface" href="interfacefactory__interface_1_1IFFactoryAcceptCandidate.html">IFFactoryAcceptCandidate</a> <a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#a9cce5e426fbdd081c7ecd1f1dbcbdf25">ifacceptCandidate</a>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#a976bc147b738e91a7b245424208ea510">   36</a></span>    <span class="keyword">private</span> <a class="code hl_class" href="enummetaheuristics_1_1generators_1_1GeneratorType.html">GeneratorType</a> <a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#a976bc147b738e91a7b245424208ea510">typeGenerator</a>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#a9dcb165b751d73d8d5b0817c5b4290cc">   37</a></span>    <span class="keyword">private</span> List&lt;State&gt; <a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#a9dcb165b751d73d8d5b0817c5b4290cc">listStateReference</a> = <span class="keyword">new</span> ArrayList&lt;State&gt;();</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#a18c862379e9c0da8496b6e1dee6ea5f7">   38</a></span>    <span class="keyword">private</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#a18c862379e9c0da8496b6e1dee6ea5f7">weight</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="comment">//problemas dinamicos: use instance fields from Generator (countGender, countBetterGender)</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#a9d1d860d8496cc16392eb4e86f4db8dd">   41</a></span>    <span class="keyword">private</span> <span class="keywordtype">int</span>[] <a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#a9d1d860d8496cc16392eb4e86f4db8dd">listCountBetterGender</a> = <span class="keyword">new</span> <span class="keywordtype">int</span>[10];</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#aadb7222432c87f8c7d3e49541af74e3e">   42</a></span>    <span class="keyword">private</span> <span class="keywordtype">int</span>[] <a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#aadb7222432c87f8c7d3e49541af74e3e">listCountGender</a> = <span class="keyword">new</span> <span class="keywordtype">int</span>[10];</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#a8c9a0a34d4ea513261aff246068b490e">   43</a></span>    <span class="keyword">private</span> <span class="keywordtype">float</span>[] <a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#a8c9a0a34d4ea513261aff246068b490e">listTrace</a> = <span class="keyword">new</span> <span class="keywordtype">float</span>[1200000];</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span></div>
+<div class="foldopen" id="foldopen00050" data-start="{" data-end="}">
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#a6f3c2a118b89b335ccdf87ed881a7fc4">   50</a></span>    <span class="keyword">public</span> <a class="code hl_class" href="enummetaheuristics_1_1generators_1_1GeneratorType.html">GeneratorType</a> <a class="code hl_function" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#a6f3c2a118b89b335ccdf87ed881a7fc4">getTypeGenerator</a>() {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#a976bc147b738e91a7b245424208ea510">typeGenerator</a>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    }</div>
+</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span></div>
+<div class="foldopen" id="foldopen00058" data-start="{" data-end="}">
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#ab9330d706d7d48afbdc6595ba717130f">   58</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#ab9330d706d7d48afbdc6595ba717130f">setTypeGenerator</a>(<a class="code hl_class" href="enummetaheuristics_1_1generators_1_1GeneratorType.html">GeneratorType</a> <a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#a976bc147b738e91a7b245424208ea510">typeGenerator</a>) {</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        this.typeGenerator = <a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#a976bc147b738e91a7b245424208ea510">typeGenerator</a>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    }</div>
+</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span></div>
+<div class="foldopen" id="foldopen00065" data-start="{" data-end="}">
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#ad0157e54c7cc9736d0cfc1785a3f65bf">   65</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#ad0157e54c7cc9736d0cfc1785a3f65bf">TabuSearch</a>() {</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        super();</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        this.typeAcceptation = <a class="code hl_class" href="enumlocal__search_1_1acceptation__type_1_1AcceptType.html">AcceptType</a>.<a class="code hl_variable" href="enumlocal__search_1_1acceptation__type_1_1AcceptType.html#a809f4fc0d597cbbca39ee7d6e9141aaa">AcceptAnyone</a>;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        this.strategy = <a class="code hl_class" href="enumlocal__search_1_1complement_1_1StrategyType.html">StrategyType</a>.<a class="code hl_variable" href="enumlocal__search_1_1complement_1_1StrategyType.html#ac0c34198bb10ffedf05b8be68f72c170">TABU</a>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <a class="code hl_class" href="classproblem_1_1definition_1_1Problem.html">Problem</a> problem = <a class="code hl_class" href="classmetaheurictics_1_1strategy_1_1Strategy.html">Strategy</a>.<a class="code hl_function" href="classmetaheurictics_1_1strategy_1_1Strategy.html#ad2641e12c52292930364de6655333aa8">getStrategy</a>().<a class="code hl_function" href="classmetaheurictics_1_1strategy_1_1Strategy.html#a4bc6bd95db71e14b1f48c1bfc85f1305">getProblem</a>();</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <span class="keywordflow">if</span>(problem.getTypeProblem().equals(<a class="code hl_class" href="enumproblem_1_1definition_1_1Problem_1_1ProblemType.html">ProblemType</a>.<a class="code hl_variable" href="enumproblem_1_1definition_1_1Problem_1_1ProblemType.html#aa55383c4cb9a71cfeabc7f715ee0cd6e">Maximizar</a>)) {</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            this.typeCandidate = <a class="code hl_class" href="enumlocal__search_1_1candidate__type_1_1CandidateType.html">CandidateType</a>.<a class="code hl_variable" href="enumlocal__search_1_1candidate__type_1_1CandidateType.html#a10a1f7a483a38c8c3911ff48e588faef">GreaterCandidate</a>;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        }</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="keywordflow">else</span>{</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            this.typeCandidate = <a class="code hl_class" href="enumlocal__search_1_1candidate__type_1_1CandidateType.html">CandidateType</a>.<a class="code hl_variable" href="enumlocal__search_1_1candidate__type_1_1CandidateType.html#a83d72037a210a5d2146a2690a6a956e9">SmallerCandidate</a>;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        }</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        this.candidatevalue = <span class="keyword">new</span> <a class="code hl_class" href="classlocal__search_1_1candidate__type_1_1CandidateValue.html">CandidateValue</a>();</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        this.typeGenerator = <a class="code hl_class" href="enummetaheuristics_1_1generators_1_1GeneratorType.html">GeneratorType</a>.<a class="code hl_variable" href="enummetaheuristics_1_1generators_1_1GeneratorType.html#a35b152adcd5d695fdb37492228eb24fc">TabuSearch</a>;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        this.weight = 50;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#a8c9a0a34d4ea513261aff246068b490e">listTrace</a>[0] = this.weight;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#a9d1d860d8496cc16392eb4e86f4db8dd">listCountBetterGender</a>[0] = 0;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#aadb7222432c87f8c7d3e49541af74e3e">listCountGender</a>[0] = 0;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    }</div>
+</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    @Override</div>
+<div class="foldopen" id="foldopen00095" data-start="{" data-end="}">
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#a960394b27d55ada10842a94184aa39b4">   95</a></span>    <span class="keyword">public</span> <a class="code hl_class" href="classproblem_1_1definition_1_1State.html">State</a> <a class="code hl_function" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#a960394b27d55ada10842a94184aa39b4">generate</a>(Integer operatornumber) <span class="keywordflow">throws</span> IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        List&lt;State&gt; neighborhood = <a class="code hl_class" href="classmetaheurictics_1_1strategy_1_1Strategy.html">Strategy</a>.<a class="code hl_function" href="classmetaheurictics_1_1strategy_1_1Strategy.html#ad2641e12c52292930364de6655333aa8">getStrategy</a>().<a class="code hl_function" href="classmetaheurictics_1_1strategy_1_1Strategy.html#a4bc6bd95db71e14b1f48c1bfc85f1305">getProblem</a>().<a class="code hl_function" href="classproblem_1_1definition_1_1Problem.html#a4cd649edb8862f21af171491cb9b9386">getOperator</a>().<a class="code hl_function" href="classproblem_1_1definition_1_1Operator.html#a5b6625843e73d938f9235985bf966b34">generatedNewState</a>(<a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#a4c8bb4f31daa880c2a864f198bc58e4f">stateReferenceTS</a>, operatornumber);</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <a class="code hl_class" href="classproblem_1_1definition_1_1State.html">State</a> statecandidate = <a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#a31d63307aa195061e188c7723c4a33f7">candidatevalue</a>.stateCandidate(<a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#a4c8bb4f31daa880c2a864f198bc58e4f">stateReferenceTS</a>, <a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#ade3c6897851f8b12cc446cc7eeef4354">typeCandidate</a>, <a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#ae47364d69ae1f46aacca49de6dd7b3b9">strategy</a>, operatornumber, neighborhood);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        <span class="keywordflow">return</span> statecandidate;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    }</div>
+</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    @Override</div>
+<div class="foldopen" id="foldopen00106" data-start="{" data-end="}">
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#ada5be4a7b947390cc70ad6b9bf33d412">  106</a></span>    <span class="keyword">public</span> <a class="code hl_class" href="classproblem_1_1definition_1_1State.html">State</a> <a class="code hl_function" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#ada5be4a7b947390cc70ad6b9bf33d412">getReference</a>() {</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#a4c8bb4f31daa880c2a864f198bc58e4f">stateReferenceTS</a>;</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    }</div>
+</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    @Override</div>
+<div class="foldopen" id="foldopen00115" data-start="{" data-end="}">
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#a934077931cd4880ed942a42af6ab195f">  115</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#a934077931cd4880ed942a42af6ab195f">setInitialReference</a>(<a class="code hl_class" href="classproblem_1_1definition_1_1State.html">State</a> stateInitialRef) {</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        this.stateReferenceTS = stateInitialRef;</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    }</div>
+</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span></div>
+<div class="foldopen" id="foldopen00123" data-start="{" data-end="}">
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno"><a class="line" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#a989071f26389ac8286a7b9cf6b86d845">  123</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#a989071f26389ac8286a7b9cf6b86d845">setStateRef</a>(<a class="code hl_class" href="classproblem_1_1definition_1_1State.html">State</a> stateRef) {</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        this.stateReferenceTS = stateRef;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    }</div>
+</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    @Override            </div>
+<div class="foldopen" id="foldopen00133" data-start="{" data-end="}">
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno"><a class="line" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#a8e5310bc24ca49dccb985a122173936c">  133</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#a8e5310bc24ca49dccb985a122173936c">updateReference</a>(<a class="code hl_class" href="classproblem_1_1definition_1_1State.html">State</a> stateCandidate, Integer countIterationsCurrent)<span class="keywordflow">throws</span> IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        <a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#a9cce5e426fbdd081c7ecd1f1dbcbdf25">ifacceptCandidate</a> = <span class="keyword">new</span> <a class="code hl_class" href="classfactory__method_1_1FactoryAcceptCandidate.html">FactoryAcceptCandidate</a>();</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        <a class="code hl_class" href="classlocal__search_1_1acceptation__type_1_1AcceptableCandidate.html">AcceptableCandidate</a> candidate = <a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#a9cce5e426fbdd081c7ecd1f1dbcbdf25">ifacceptCandidate</a>.createAcceptCandidate(<a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#afff3deea8e2f9e0edca22f21f8ff5856">typeAcceptation</a>);</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        Boolean acept = candidate.<a class="code hl_function" href="classlocal__search_1_1acceptation__type_1_1AcceptableCandidate.html#aa9e62e1d2d213c3828d2491b506d0592">acceptCandidate</a>(<a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#a4c8bb4f31daa880c2a864f198bc58e4f">stateReferenceTS</a>, stateCandidate);</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        <span class="keywordflow">if</span>(acept.equals(<span class="keyword">true</span>))</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>            <a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#a4c8bb4f31daa880c2a864f198bc58e4f">stateReferenceTS</a> = stateCandidate;</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#ae47364d69ae1f46aacca49de6dd7b3b9">strategy</a>.equals(<a class="code hl_class" href="enumlocal__search_1_1complement_1_1StrategyType.html">StrategyType</a>.<a class="code hl_variable" href="enumlocal__search_1_1complement_1_1StrategyType.html#ac0c34198bb10ffedf05b8be68f72c170">TABU</a>) &amp;&amp; acept.equals(<span class="keyword">true</span>)) {</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classlocal__search_1_1complement_1_1TabuSolutions.html">TabuSolutions</a>.<a class="code hl_variable" href="classlocal__search_1_1complement_1_1TabuSolutions.html#ad602469482bab1bd52b03ef738bd7907">listTabu</a>.size() &lt; <a class="code hl_class" href="classlocal__search_1_1complement_1_1TabuSolutions.html">TabuSolutions</a>.<a class="code hl_variable" href="classlocal__search_1_1complement_1_1TabuSolutions.html#a294b3167e2976e63e7264c619e756d82">maxelements</a>) {</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>                Boolean find = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>                <span class="keywordtype">int</span> count = 0;</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>                <span class="keywordflow">while</span> ((<a class="code hl_class" href="classlocal__search_1_1complement_1_1TabuSolutions.html">TabuSolutions</a>.<a class="code hl_variable" href="classlocal__search_1_1complement_1_1TabuSolutions.html#ad602469482bab1bd52b03ef738bd7907">listTabu</a>.size() &gt; count) &amp;&amp; (find.equals(<span class="keyword">false</span>))) {</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>                    <span class="keywordflow">if</span> ((<a class="code hl_class" href="classlocal__search_1_1complement_1_1TabuSolutions.html">TabuSolutions</a>.<a class="code hl_variable" href="classlocal__search_1_1complement_1_1TabuSolutions.html#ad602469482bab1bd52b03ef738bd7907">listTabu</a>.get(count).Comparator(stateCandidate))==<span class="keyword">true</span>) {</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>                        find = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>                    }</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>                    count++;</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>                }</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>                <span class="keywordflow">if</span> (find.equals(<span class="keyword">false</span>)) {</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>                    <a class="code hl_class" href="classlocal__search_1_1complement_1_1TabuSolutions.html">TabuSolutions</a>.<a class="code hl_variable" href="classlocal__search_1_1complement_1_1TabuSolutions.html#ad602469482bab1bd52b03ef738bd7907">listTabu</a>.add(stateCandidate);</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>                }</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>                <a class="code hl_class" href="classlocal__search_1_1complement_1_1TabuSolutions.html">TabuSolutions</a>.<a class="code hl_variable" href="classlocal__search_1_1complement_1_1TabuSolutions.html#ad602469482bab1bd52b03ef738bd7907">listTabu</a>.remove(0);</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>                Boolean find = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>                <span class="keywordtype">int</span> count = 0;</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>                <span class="keywordflow">while</span> (<a class="code hl_class" href="classlocal__search_1_1complement_1_1TabuSolutions.html">TabuSolutions</a>.<a class="code hl_variable" href="classlocal__search_1_1complement_1_1TabuSolutions.html#ad602469482bab1bd52b03ef738bd7907">listTabu</a>.size() &gt; count &amp;&amp; find.equals(<span class="keyword">false</span>)) {</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>                    <span class="keywordflow">if</span> ((<a class="code hl_class" href="classlocal__search_1_1complement_1_1TabuSolutions.html">TabuSolutions</a>.<a class="code hl_variable" href="classlocal__search_1_1complement_1_1TabuSolutions.html#ad602469482bab1bd52b03ef738bd7907">listTabu</a>.get(count).Comparator(stateCandidate))==<span class="keyword">true</span>) {</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>                        find = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>                    }</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>                    count++;</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>                }</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>                <span class="keywordflow">if</span> (find.equals(<span class="keyword">false</span>)) {</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>                    <a class="code hl_class" href="classlocal__search_1_1complement_1_1TabuSolutions.html">TabuSolutions</a>.<a class="code hl_variable" href="classlocal__search_1_1complement_1_1TabuSolutions.html#ad602469482bab1bd52b03ef738bd7907">listTabu</a>.add(stateCandidate);</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>                }</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>            }</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>        }</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    }</div>
+</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span> </div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    @Override</div>
+<div class="foldopen" id="foldopen00175" data-start="{" data-end="}">
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno"><a class="line" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#ad36e2583d8edb47cc2e8dae351ff3a1a">  175</a></span>    <span class="keyword">public</span> <a class="code hl_class" href="enummetaheuristics_1_1generators_1_1GeneratorType.html">GeneratorType</a> <a class="code hl_function" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#ad36e2583d8edb47cc2e8dae351ff3a1a">getType</a>() {</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>        <span class="keywordflow">return</span> this.typeGenerator;</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    }</div>
+</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span> </div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    @Override</div>
+<div class="foldopen" id="foldopen00184" data-start="{" data-end="}">
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno"><a class="line" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#aab7acb152f577f48ee9a0f29b01e3689">  184</a></span>    <span class="keyword">public</span> List&lt;State&gt; <a class="code hl_function" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#aab7acb152f577f48ee9a0f29b01e3689">getReferenceList</a>() {</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>        <a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#a9dcb165b751d73d8d5b0817c5b4290cc">listStateReference</a>.add(<a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#a4c8bb4f31daa880c2a864f198bc58e4f">stateReferenceTS</a>);</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>        <span class="keywordflow">return</span> <span class="keyword">new</span> ArrayList&lt;State&gt;(<a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#a9dcb165b751d73d8d5b0817c5b4290cc">listStateReference</a>);</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>    }</div>
+</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span> </div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>    @Override</div>
+<div class="foldopen" id="foldopen00194" data-start="{" data-end="}">
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno"><a class="line" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#acc567d162eb376a317f3d8eae95420a1">  194</a></span>    <span class="keyword">public</span> List&lt;State&gt; <a class="code hl_function" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#acc567d162eb376a317f3d8eae95420a1">getSonList</a>() {</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>        <span class="comment">// TODO Auto-generated method stub</span></div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    }</div>
+</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span></div>
+<div class="foldopen" id="foldopen00203" data-start="{" data-end="}">
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno"><a class="line" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#a9c28686a2db567c3c4484d6065dcd04a">  203</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#a9c28686a2db567c3c4484d6065dcd04a">setTypeCandidate</a>(<a class="code hl_class" href="enumlocal__search_1_1candidate__type_1_1CandidateType.html">CandidateType</a> <a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#ade3c6897851f8b12cc446cc7eeef4354">typeCandidate</a>){</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>        this.typeCandidate = <a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#ade3c6897851f8b12cc446cc7eeef4354">typeCandidate</a>;</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>    }</div>
+</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span> </div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>    @Override</div>
+<div class="foldopen" id="foldopen00213" data-start="{" data-end="}">
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno"><a class="line" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#adc6c6a8184388aafc9d143d63ca7ffde">  213</a></span>    <span class="keyword">public</span> <span class="keywordtype">boolean</span> <a class="code hl_function" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#adc6c6a8184388aafc9d143d63ca7ffde">awardUpdateREF</a>(<a class="code hl_class" href="classproblem_1_1definition_1_1State.html">State</a> stateCandidate) {</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>        <span class="comment">// TODO Auto-generated method stub</span></div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>    }</div>
+</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span></div>
+<div class="foldopen" id="foldopen00222" data-start="{" data-end="}">
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno"><a class="line" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#a8a29d1741aaafb540e647ffda3d690e6">  222</a></span>    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_function" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#a8a29d1741aaafb540e647ffda3d690e6">getWeight</a>() {</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>        <span class="comment">// TODO Auto-generated method stub</span></div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>        <span class="keywordflow">return</span> this.weight;</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>    }</div>
+</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span> </div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>    @Override</div>
+<div class="foldopen" id="foldopen00232" data-start="{" data-end="}">
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno"><a class="line" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#a87599bb3ca19dda7107a5ae796531f4d">  232</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#a87599bb3ca19dda7107a5ae796531f4d">setWeight</a>(<span class="keywordtype">float</span> <a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#a18c862379e9c0da8496b6e1dee6ea5f7">weight</a>) {</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>        <span class="comment">// TODO Auto-generated method stub</span></div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>        this.weight = <a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#a18c862379e9c0da8496b6e1dee6ea5f7">weight</a>;</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>    }</div>
+</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span> </div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>    @Override</div>
+<div class="foldopen" id="foldopen00242" data-start="{" data-end="}">
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno"><a class="line" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#ac5abb641df2c61b9c1aa4911ae69fb75">  242</a></span>    <span class="keyword">public</span> <span class="keywordtype">int</span>[] <a class="code hl_function" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#ac5abb641df2c61b9c1aa4911ae69fb75">getListCountBetterGender</a>() {</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>        <span class="comment">// TODO Auto-generated method stub</span></div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>        <span class="keywordflow">return</span> (this.listCountBetterGender == <span class="keyword">null</span>) ? <span class="keyword">new</span> <span class="keywordtype">int</span>[0] : Arrays.copyOf(this.listCountBetterGender, this.listCountBetterGender.length);</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>    }</div>
+</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span> </div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>    @Override</div>
+<div class="foldopen" id="foldopen00252" data-start="{" data-end="}">
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno"><a class="line" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#aa15df7ff1b01b2b9997ad2b8ca39d3aa">  252</a></span>    <span class="keyword">public</span> <span class="keywordtype">int</span>[] <a class="code hl_function" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#aa15df7ff1b01b2b9997ad2b8ca39d3aa">getListCountGender</a>() {</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>        <span class="comment">// TODO Auto-generated method stub</span></div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>        <span class="keywordflow">return</span> (this.listCountGender == <span class="keyword">null</span>) ? <span class="keyword">new</span> <span class="keywordtype">int</span>[0] : Arrays.copyOf(this.listCountGender, this.listCountGender.length);</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>    }</div>
+</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span> </div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>    @Override</div>
+<div class="foldopen" id="foldopen00262" data-start="{" data-end="}">
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno"><a class="line" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#add5beec981c395092cd1101d8aa66850">  262</a></span>    <span class="keyword">public</span> <span class="keywordtype">float</span>[] <a class="code hl_function" href="classmetaheuristics_1_1generators_1_1TabuSearch.html#add5beec981c395092cd1101d8aa66850">getTrace</a>() {</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>        <span class="comment">// TODO Auto-generated method stub</span></div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>        <span class="keywordflow">return</span> (this.listTrace == <span class="keyword">null</span>) ? <span class="keyword">new</span> <span class="keywordtype">float</span>[0] : Arrays.copyOf(this.listTrace, this.listTrace.length);</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>    }</div>
+</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span> </div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>}</div>
+</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span> </div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span> </div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span> </div>
+<div class="ttc" id="aclassfactory__method_1_1FactoryAcceptCandidate_html"><div class="ttname"><a href="classfactory__method_1_1FactoryAcceptCandidate.html">factory_method.FactoryAcceptCandidate</a></div><div class="ttdoc">FactoryAcceptCandidate - Interface for creating acceptable candidates.</div><div class="ttdef"><b>Definition</b> <a href="FactoryAcceptCandidate_8java_source.html#l00021">FactoryAcceptCandidate.java:21</a></div></div>
+<div class="ttc" id="aclasslocal__search_1_1acceptation__type_1_1AcceptableCandidate_html"><div class="ttname"><a href="classlocal__search_1_1acceptation__type_1_1AcceptableCandidate.html">local_search.acceptation_type.AcceptableCandidate</a></div><div class="ttdoc">AcceptableCandidate - Base type for acceptation strategies.</div><div class="ttdef"><b>Definition</b> <a href="AcceptableCandidate_8java_source.html#l00012">AcceptableCandidate.java:12</a></div></div>
+<div class="ttc" id="aclasslocal__search_1_1acceptation__type_1_1AcceptableCandidate_html_aa9e62e1d2d213c3828d2491b506d0592"><div class="ttname"><a href="classlocal__search_1_1acceptation__type_1_1AcceptableCandidate.html#aa9e62e1d2d213c3828d2491b506d0592">local_search.acceptation_type.AcceptableCandidate.acceptCandidate</a></div><div class="ttdeci">abstract Boolean acceptCandidate(State stateCurrent, State stateCandidate)</div><div class="ttdoc">Evaluate whether a candidate state should be accepted.</div></div>
+<div class="ttc" id="aclasslocal__search_1_1candidate__type_1_1CandidateValue_html"><div class="ttname"><a href="classlocal__search_1_1candidate__type_1_1CandidateValue.html">local_search.candidate_type.CandidateValue</a></div><div class="ttdoc">CandidateValue - Factory/wrapper for creating and using SearchCandidate selection strategies.</div><div class="ttdef"><b>Definition</b> <a href="CandidateValue_8java_source.html#l00029">CandidateValue.java:29</a></div></div>
+<div class="ttc" id="aclasslocal__search_1_1complement_1_1TabuSolutions_html"><div class="ttname"><a href="classlocal__search_1_1complement_1_1TabuSolutions.html">local_search.complement.TabuSolutions</a></div><div class="ttdoc">TabuSolutions - helper that manages a tabu list and filters neighborhoods.</div><div class="ttdef"><b>Definition</b> <a href="TabuSolutions_8java_source.html#l00016">TabuSolutions.java:16</a></div></div>
+<div class="ttc" id="aclasslocal__search_1_1complement_1_1TabuSolutions_html_a294b3167e2976e63e7264c619e756d82"><div class="ttname"><a href="classlocal__search_1_1complement_1_1TabuSolutions.html#a294b3167e2976e63e7264c619e756d82">local_search.complement.TabuSolutions.maxelements</a></div><div class="ttdeci">static final int maxelements</div><div class="ttdoc">Maximum number of elements allowed in the tabu list (unused/placeholder).</div><div class="ttdef"><b>Definition</b> <a href="TabuSolutions_8java_source.html#l00022">TabuSolutions.java:22</a></div></div>
+<div class="ttc" id="aclasslocal__search_1_1complement_1_1TabuSolutions_html_ad602469482bab1bd52b03ef738bd7907"><div class="ttname"><a href="classlocal__search_1_1complement_1_1TabuSolutions.html#ad602469482bab1bd52b03ef738bd7907">local_search.complement.TabuSolutions.listTabu</a></div><div class="ttdeci">static final List&lt; State &gt; listTabu</div><div class="ttdoc">Global synchronized tabu list shared by the local search components.</div><div class="ttdef"><b>Definition</b> <a href="TabuSolutions_8java_source.html#l00019">TabuSolutions.java:19</a></div></div>
+<div class="ttc" id="aclassmetaheurictics_1_1strategy_1_1Strategy_html"><div class="ttname"><a href="classmetaheurictics_1_1strategy_1_1Strategy.html">metaheurictics.strategy.Strategy</a></div><div class="ttdoc">Strategy -.</div><div class="ttdef"><b>Definition</b> <a href="Strategy_8java_source.html#l00033">Strategy.java:33</a></div></div>
+<div class="ttc" id="aclassmetaheurictics_1_1strategy_1_1Strategy_html_a4bc6bd95db71e14b1f48c1bfc85f1305"><div class="ttname"><a href="classmetaheurictics_1_1strategy_1_1Strategy.html#a4bc6bd95db71e14b1f48c1bfc85f1305">metaheurictics.strategy.Strategy.getProblem</a></div><div class="ttdeci">Problem getProblem()</div><div class="ttdoc">getProblem - method to get the problem.</div><div class="ttdef"><b>Definition</b> <a href="Strategy_8java_source.html#l00405">Strategy.java:405</a></div></div>
+<div class="ttc" id="aclassmetaheurictics_1_1strategy_1_1Strategy_html_ad2641e12c52292930364de6655333aa8"><div class="ttname"><a href="classmetaheurictics_1_1strategy_1_1Strategy.html#ad2641e12c52292930364de6655333aa8">metaheurictics.strategy.Strategy.getStrategy</a></div><div class="ttdeci">static Strategy getStrategy()</div><div class="ttdoc">getStrategy - getter of Strategy singleton instance</div><div class="ttdef"><b>Definition</b> <a href="Strategy_8java_source.html#l00080">Strategy.java:80</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1Generator_html"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1Generator.html">metaheuristics.generators.Generator</a></div><div class="ttdoc">Generator - abstract base class for solution generators in metaheuristic algorithms.</div><div class="ttdef"><b>Definition</b> <a href="Generator_8java_source.html#l00013">Generator.java:13</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1TabuSearch_html_a18c862379e9c0da8496b6e1dee6ea5f7"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1TabuSearch.html#a18c862379e9c0da8496b6e1dee6ea5f7">metaheuristics.generators.TabuSearch.weight</a></div><div class="ttdeci">float weight</div><div class="ttdef"><b>Definition</b> <a href="#l00038">TabuSearch.java:38</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1TabuSearch_html_a31d63307aa195061e188c7723c4a33f7"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1TabuSearch.html#a31d63307aa195061e188c7723c4a33f7">metaheuristics.generators.TabuSearch.candidatevalue</a></div><div class="ttdeci">CandidateValue candidatevalue</div><div class="ttdef"><b>Definition</b> <a href="#l00030">TabuSearch.java:30</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1TabuSearch_html_a4c8bb4f31daa880c2a864f198bc58e4f"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1TabuSearch.html#a4c8bb4f31daa880c2a864f198bc58e4f">metaheuristics.generators.TabuSearch.stateReferenceTS</a></div><div class="ttdeci">State stateReferenceTS</div><div class="ttdef"><b>Definition</b> <a href="#l00034">TabuSearch.java:34</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1TabuSearch_html_a6f3c2a118b89b335ccdf87ed881a7fc4"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1TabuSearch.html#a6f3c2a118b89b335ccdf87ed881a7fc4">metaheuristics.generators.TabuSearch.getTypeGenerator</a></div><div class="ttdeci">GeneratorType getTypeGenerator()</div><div class="ttdoc">getTypeGenerator - get the type of the generator.</div><div class="ttdef"><b>Definition</b> <a href="#l00050">TabuSearch.java:50</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1TabuSearch_html_a87599bb3ca19dda7107a5ae796531f4d"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1TabuSearch.html#a87599bb3ca19dda7107a5ae796531f4d">metaheuristics.generators.TabuSearch.setWeight</a></div><div class="ttdeci">void setWeight(float weight)</div><div class="ttdoc">setWeight - set the weight of the generator.</div><div class="ttdef"><b>Definition</b> <a href="#l00232">TabuSearch.java:232</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1TabuSearch_html_a8a29d1741aaafb540e647ffda3d690e6"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1TabuSearch.html#a8a29d1741aaafb540e647ffda3d690e6">metaheuristics.generators.TabuSearch.getWeight</a></div><div class="ttdeci">float getWeight()</div><div class="ttdoc">getWeight - get the weight of the generator.</div><div class="ttdef"><b>Definition</b> <a href="#l00222">TabuSearch.java:222</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1TabuSearch_html_a8c9a0a34d4ea513261aff246068b490e"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1TabuSearch.html#a8c9a0a34d4ea513261aff246068b490e">metaheuristics.generators.TabuSearch.listTrace</a></div><div class="ttdeci">float[] listTrace</div><div class="ttdef"><b>Definition</b> <a href="#l00043">TabuSearch.java:43</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1TabuSearch_html_a8e5310bc24ca49dccb985a122173936c"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1TabuSearch.html#a8e5310bc24ca49dccb985a122173936c">metaheuristics.generators.TabuSearch.updateReference</a></div><div class="ttdeci">void updateReference(State stateCandidate, Integer countIterationsCurrent)</div><div class="ttdoc">updateReference - update the reference state.</div><div class="ttdef"><b>Definition</b> <a href="#l00133">TabuSearch.java:133</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1TabuSearch_html_a934077931cd4880ed942a42af6ab195f"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1TabuSearch.html#a934077931cd4880ed942a42af6ab195f">metaheuristics.generators.TabuSearch.setInitialReference</a></div><div class="ttdeci">void setInitialReference(State stateInitialRef)</div><div class="ttdoc">setInitialReference - set the initial reference state.</div><div class="ttdef"><b>Definition</b> <a href="#l00115">TabuSearch.java:115</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1TabuSearch_html_a960394b27d55ada10842a94184aa39b4"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1TabuSearch.html#a960394b27d55ada10842a94184aa39b4">metaheuristics.generators.TabuSearch.generate</a></div><div class="ttdeci">State generate(Integer operatornumber)</div><div class="ttdoc">generate - method to generate a new state.</div><div class="ttdef"><b>Definition</b> <a href="#l00095">TabuSearch.java:95</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1TabuSearch_html_a976bc147b738e91a7b245424208ea510"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1TabuSearch.html#a976bc147b738e91a7b245424208ea510">metaheuristics.generators.TabuSearch.typeGenerator</a></div><div class="ttdeci">GeneratorType typeGenerator</div><div class="ttdef"><b>Definition</b> <a href="#l00036">TabuSearch.java:36</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1TabuSearch_html_a989071f26389ac8286a7b9cf6b86d845"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1TabuSearch.html#a989071f26389ac8286a7b9cf6b86d845">metaheuristics.generators.TabuSearch.setStateRef</a></div><div class="ttdeci">void setStateRef(State stateRef)</div><div class="ttdoc">setStateRef - set the reference state.</div><div class="ttdef"><b>Definition</b> <a href="#l00123">TabuSearch.java:123</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1TabuSearch_html_a9c28686a2db567c3c4484d6065dcd04a"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1TabuSearch.html#a9c28686a2db567c3c4484d6065dcd04a">metaheuristics.generators.TabuSearch.setTypeCandidate</a></div><div class="ttdeci">void setTypeCandidate(CandidateType typeCandidate)</div><div class="ttdoc">setTypeCandidate - set the type of the candidate.</div><div class="ttdef"><b>Definition</b> <a href="#l00203">TabuSearch.java:203</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1TabuSearch_html_a9cce5e426fbdd081c7ecd1f1dbcbdf25"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1TabuSearch.html#a9cce5e426fbdd081c7ecd1f1dbcbdf25">metaheuristics.generators.TabuSearch.ifacceptCandidate</a></div><div class="ttdeci">IFFactoryAcceptCandidate ifacceptCandidate</div><div class="ttdef"><b>Definition</b> <a href="#l00035">TabuSearch.java:35</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1TabuSearch_html_a9d1d860d8496cc16392eb4e86f4db8dd"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1TabuSearch.html#a9d1d860d8496cc16392eb4e86f4db8dd">metaheuristics.generators.TabuSearch.listCountBetterGender</a></div><div class="ttdeci">int[] listCountBetterGender</div><div class="ttdef"><b>Definition</b> <a href="#l00041">TabuSearch.java:41</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1TabuSearch_html_a9dcb165b751d73d8d5b0817c5b4290cc"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1TabuSearch.html#a9dcb165b751d73d8d5b0817c5b4290cc">metaheuristics.generators.TabuSearch.listStateReference</a></div><div class="ttdeci">List&lt; State &gt; listStateReference</div><div class="ttdef"><b>Definition</b> <a href="#l00037">TabuSearch.java:37</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1TabuSearch_html_aa15df7ff1b01b2b9997ad2b8ca39d3aa"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1TabuSearch.html#aa15df7ff1b01b2b9997ad2b8ca39d3aa">metaheuristics.generators.TabuSearch.getListCountGender</a></div><div class="ttdeci">int[] getListCountGender()</div><div class="ttdoc">getListCountGender - get the list of counts for gender.</div><div class="ttdef"><b>Definition</b> <a href="#l00252">TabuSearch.java:252</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1TabuSearch_html_aab7acb152f577f48ee9a0f29b01e3689"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1TabuSearch.html#aab7acb152f577f48ee9a0f29b01e3689">metaheuristics.generators.TabuSearch.getReferenceList</a></div><div class="ttdeci">List&lt; State &gt; getReferenceList()</div><div class="ttdoc">getReferenceList - get the list of reference states.</div><div class="ttdef"><b>Definition</b> <a href="#l00184">TabuSearch.java:184</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1TabuSearch_html_aadb7222432c87f8c7d3e49541af74e3e"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1TabuSearch.html#aadb7222432c87f8c7d3e49541af74e3e">metaheuristics.generators.TabuSearch.listCountGender</a></div><div class="ttdeci">int[] listCountGender</div><div class="ttdef"><b>Definition</b> <a href="#l00042">TabuSearch.java:42</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1TabuSearch_html_ab9330d706d7d48afbdc6595ba717130f"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1TabuSearch.html#ab9330d706d7d48afbdc6595ba717130f">metaheuristics.generators.TabuSearch.setTypeGenerator</a></div><div class="ttdeci">void setTypeGenerator(GeneratorType typeGenerator)</div><div class="ttdoc">setTypeGenerator - set the type of the generator.</div><div class="ttdef"><b>Definition</b> <a href="#l00058">TabuSearch.java:58</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1TabuSearch_html_ac5abb641df2c61b9c1aa4911ae69fb75"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1TabuSearch.html#ac5abb641df2c61b9c1aa4911ae69fb75">metaheuristics.generators.TabuSearch.getListCountBetterGender</a></div><div class="ttdeci">int[] getListCountBetterGender()</div><div class="ttdoc">getListCountBetterGender - get the list of counts for better gender.</div><div class="ttdef"><b>Definition</b> <a href="#l00242">TabuSearch.java:242</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1TabuSearch_html_acc567d162eb376a317f3d8eae95420a1"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1TabuSearch.html#acc567d162eb376a317f3d8eae95420a1">metaheuristics.generators.TabuSearch.getSonList</a></div><div class="ttdeci">List&lt; State &gt; getSonList()</div><div class="ttdoc">getSonList - get the list of child states.</div><div class="ttdef"><b>Definition</b> <a href="#l00194">TabuSearch.java:194</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1TabuSearch_html_ad0157e54c7cc9736d0cfc1785a3f65bf"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1TabuSearch.html#ad0157e54c7cc9736d0cfc1785a3f65bf">metaheuristics.generators.TabuSearch.TabuSearch</a></div><div class="ttdeci">TabuSearch()</div><div class="ttdoc">TabuSearch - constructor for the Tabu Search metaheuristic.</div><div class="ttdef"><b>Definition</b> <a href="#l00065">TabuSearch.java:65</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1TabuSearch_html_ad36e2583d8edb47cc2e8dae351ff3a1a"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1TabuSearch.html#ad36e2583d8edb47cc2e8dae351ff3a1a">metaheuristics.generators.TabuSearch.getType</a></div><div class="ttdeci">GeneratorType getType()</div><div class="ttdoc">getType - get the type of the generator.</div><div class="ttdef"><b>Definition</b> <a href="#l00175">TabuSearch.java:175</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1TabuSearch_html_ada5be4a7b947390cc70ad6b9bf33d412"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1TabuSearch.html#ada5be4a7b947390cc70ad6b9bf33d412">metaheuristics.generators.TabuSearch.getReference</a></div><div class="ttdeci">State getReference()</div><div class="ttdoc">getReference - get the reference state.</div><div class="ttdef"><b>Definition</b> <a href="#l00106">TabuSearch.java:106</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1TabuSearch_html_adc6c6a8184388aafc9d143d63ca7ffde"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1TabuSearch.html#adc6c6a8184388aafc9d143d63ca7ffde">metaheuristics.generators.TabuSearch.awardUpdateREF</a></div><div class="ttdeci">boolean awardUpdateREF(State stateCandidate)</div><div class="ttdoc">awardUpdateREF - award the update of the reference state.</div><div class="ttdef"><b>Definition</b> <a href="#l00213">TabuSearch.java:213</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1TabuSearch_html_add5beec981c395092cd1101d8aa66850"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1TabuSearch.html#add5beec981c395092cd1101d8aa66850">metaheuristics.generators.TabuSearch.getTrace</a></div><div class="ttdeci">float[] getTrace()</div><div class="ttdoc">getTrace - get the trace of the generator.</div><div class="ttdef"><b>Definition</b> <a href="#l00262">TabuSearch.java:262</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1TabuSearch_html_ade3c6897851f8b12cc446cc7eeef4354"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1TabuSearch.html#ade3c6897851f8b12cc446cc7eeef4354">metaheuristics.generators.TabuSearch.typeCandidate</a></div><div class="ttdeci">CandidateType typeCandidate</div><div class="ttdef"><b>Definition</b> <a href="#l00033">TabuSearch.java:33</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1TabuSearch_html_ae47364d69ae1f46aacca49de6dd7b3b9"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1TabuSearch.html#ae47364d69ae1f46aacca49de6dd7b3b9">metaheuristics.generators.TabuSearch.strategy</a></div><div class="ttdeci">StrategyType strategy</div><div class="ttdef"><b>Definition</b> <a href="#l00032">TabuSearch.java:32</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1TabuSearch_html_afff3deea8e2f9e0edca22f21f8ff5856"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1TabuSearch.html#afff3deea8e2f9e0edca22f21f8ff5856">metaheuristics.generators.TabuSearch.typeAcceptation</a></div><div class="ttdeci">AcceptType typeAcceptation</div><div class="ttdef"><b>Definition</b> <a href="#l00031">TabuSearch.java:31</a></div></div>
+<div class="ttc" id="aclassproblem_1_1definition_1_1Operator_html_a5b6625843e73d938f9235985bf966b34"><div class="ttname"><a href="classproblem_1_1definition_1_1Operator.html#a5b6625843e73d938f9235985bf966b34">problem.definition.Operator.generatedNewState</a></div><div class="ttdeci">abstract List&lt; State &gt; generatedNewState(State stateCurrent, Integer operatornumber)</div><div class="ttdoc">Generar nuevos estados a partir de un estado dado.</div></div>
+<div class="ttc" id="aclassproblem_1_1definition_1_1Problem_html"><div class="ttname"><a href="classproblem_1_1definition_1_1Problem.html">problem.definition.Problem</a></div><div class="ttdoc">Problem.</div><div class="ttdef"><b>Definition</b> <a href="Problem_8java_source.html#l00024">Problem.java:24</a></div></div>
+<div class="ttc" id="aclassproblem_1_1definition_1_1Problem_html_a4cd649edb8862f21af171491cb9b9386"><div class="ttname"><a href="classproblem_1_1definition_1_1Problem.html#a4cd649edb8862f21af171491cb9b9386">problem.definition.Problem.getOperator</a></div><div class="ttdeci">Operator getOperator()</div><div class="ttdoc">Obtener el operador encargado de generar nuevos estados.</div><div class="ttdef"><b>Definition</b> <a href="Problem_8java_source.html#l00131">Problem.java:131</a></div></div>
+<div class="ttc" id="aclassproblem_1_1definition_1_1State_html"><div class="ttname"><a href="classproblem_1_1definition_1_1State.html">problem.definition.State</a></div><div class="ttdoc">State.</div><div class="ttdef"><b>Definition</b> <a href="State_8java_source.html#l00016">State.java:16</a></div></div>
+<div class="ttc" id="aenumlocal__search_1_1acceptation__type_1_1AcceptType_html"><div class="ttname"><a href="enumlocal__search_1_1acceptation__type_1_1AcceptType.html">local_search.acceptation_type.AcceptType</a></div><div class="ttdoc">AcceptType - Enumeration of the available acceptation strategies.</div><div class="ttdef"><b>Definition</b> <a href="AcceptType_8java_source.html#l00013">AcceptType.java:14</a></div></div>
+<div class="ttc" id="aenumlocal__search_1_1acceptation__type_1_1AcceptType_html_a809f4fc0d597cbbca39ee7d6e9141aaa"><div class="ttname"><a href="enumlocal__search_1_1acceptation__type_1_1AcceptType.html#a809f4fc0d597cbbca39ee7d6e9141aaa">local_search.acceptation_type.AcceptType.AcceptAnyone</a></div><div class="ttdeci">AcceptAnyone</div><div class="ttdef"><b>Definition</b> <a href="AcceptType_8java_source.html#l00015">AcceptType.java:15</a></div></div>
+<div class="ttc" id="aenumlocal__search_1_1candidate__type_1_1CandidateType_html"><div class="ttname"><a href="enumlocal__search_1_1candidate__type_1_1CandidateType.html">local_search.candidate_type.CandidateType</a></div><div class="ttdoc">CandidateType - enumeration of available candidate selection strategies.</div><div class="ttdef"><b>Definition</b> <a href="CandidateType_8java_source.html#l00013">CandidateType.java:13</a></div></div>
+<div class="ttc" id="aenumlocal__search_1_1candidate__type_1_1CandidateType_html_a10a1f7a483a38c8c3911ff48e588faef"><div class="ttname"><a href="enumlocal__search_1_1candidate__type_1_1CandidateType.html#a10a1f7a483a38c8c3911ff48e588faef">local_search.candidate_type.CandidateType.GreaterCandidate</a></div><div class="ttdeci">GreaterCandidate</div><div class="ttdoc">Select the largest/best candidate according to objective.</div><div class="ttdef"><b>Definition</b> <a href="CandidateType_8java_source.html#l00018">CandidateType.java:18</a></div></div>
+<div class="ttc" id="aenumlocal__search_1_1candidate__type_1_1CandidateType_html_a83d72037a210a5d2146a2690a6a956e9"><div class="ttname"><a href="enumlocal__search_1_1candidate__type_1_1CandidateType.html#a83d72037a210a5d2146a2690a6a956e9">local_search.candidate_type.CandidateType.SmallerCandidate</a></div><div class="ttdeci">SmallerCandidate</div><div class="ttdoc">Select the smallest/best candidate according to objective.</div><div class="ttdef"><b>Definition</b> <a href="CandidateType_8java_source.html#l00016">CandidateType.java:16</a></div></div>
+<div class="ttc" id="aenumlocal__search_1_1complement_1_1StrategyType_html"><div class="ttname"><a href="enumlocal__search_1_1complement_1_1StrategyType.html">local_search.complement.StrategyType</a></div><div class="ttdoc">StrategyType - enumeration of local search strategy modes.</div><div class="ttdef"><b>Definition</b> <a href="StrategyType_8java_source.html#l00013">StrategyType.java:14</a></div></div>
+<div class="ttc" id="aenumlocal__search_1_1complement_1_1StrategyType_html_ac0c34198bb10ffedf05b8be68f72c170"><div class="ttname"><a href="enumlocal__search_1_1complement_1_1StrategyType.html#ac0c34198bb10ffedf05b8be68f72c170">local_search.complement.StrategyType.TABU</a></div><div class="ttdeci">TABU</div><div class="ttdoc">Use tabu-list based neighborhood filtering and behavior.</div><div class="ttdef"><b>Definition</b> <a href="StrategyType_8java_source.html#l00016">StrategyType.java:16</a></div></div>
+<div class="ttc" id="aenummetaheuristics_1_1generators_1_1GeneratorType_html"><div class="ttname"><a href="enummetaheuristics_1_1generators_1_1GeneratorType.html">metaheuristics.generators.GeneratorType</a></div><div class="ttdoc">GeneratorType - enumeration of different types of solution generators used in metaheuristic algorithm...</div><div class="ttdef"><b>Definition</b> <a href="GeneratorType_8java_source.html#l00006">GeneratorType.java:6</a></div></div>
+<div class="ttc" id="aenummetaheuristics_1_1generators_1_1GeneratorType_html_a35b152adcd5d695fdb37492228eb24fc"><div class="ttname"><a href="enummetaheuristics_1_1generators_1_1GeneratorType.html#a35b152adcd5d695fdb37492228eb24fc">metaheuristics.generators.GeneratorType.TabuSearch</a></div><div class="ttdeci">TabuSearch</div><div class="ttdef"><b>Definition</b> <a href="GeneratorType_8java_source.html#l00007">GeneratorType.java:7</a></div></div>
+<div class="ttc" id="aenumproblem_1_1definition_1_1Problem_1_1ProblemType_html"><div class="ttname"><a href="enumproblem_1_1definition_1_1Problem_1_1ProblemType.html">problem.definition.Problem.ProblemType</a></div><div class="ttdoc">ProblemType - descripcion (añade detalles).</div><div class="ttdef"><b>Definition</b> <a href="Problem_8java_source.html#l00029">Problem.java:29</a></div></div>
+<div class="ttc" id="aenumproblem_1_1definition_1_1Problem_1_1ProblemType_html_aa55383c4cb9a71cfeabc7f715ee0cd6e"><div class="ttname"><a href="enumproblem_1_1definition_1_1Problem_1_1ProblemType.html#aa55383c4cb9a71cfeabc7f715ee0cd6e">problem.definition.Problem.ProblemType.Maximizar</a></div><div class="ttdeci">Maximizar</div><div class="ttdef"><b>Definition</b> <a href="Problem_8java_source.html#l00029">Problem.java:29</a></div></div>
+<div class="ttc" id="ainterfacefactory__interface_1_1IFFactoryAcceptCandidate_html"><div class="ttname"><a href="interfacefactory__interface_1_1IFFactoryAcceptCandidate.html">factory_interface.IFFactoryAcceptCandidate</a></div><div class="ttdoc">IFFactoryAcceptCandidate - Interface for creating acceptable candidates.</div><div class="ttdef"><b>Definition</b> <a href="IFFactoryAcceptCandidate_8java_source.html#l00015">IFFactoryAcceptCandidate.java:15</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_35e5e1a6dfa5adce22aec671c4d5c0d1.html">practica5</a></li><li class="navelem"><a href="dir_d2e984a8ddfea0cacd32e4238c7e9dd9.html">src</a></li><li class="navelem"><a href="dir_4a158cb6d41a1065711987d4dec8e14e.html">main</a></li><li class="navelem"><a href="dir_67084513cc423c424b0c8f4661d8bd90.html">java</a></li><li class="navelem"><a href="dir_6f516081a8775e0e6b8e509d37a46596.html">metaheuristics</a></li><li class="navelem"><a href="dir_be05ed143b34307001aec965668c7f6c.html">generators</a></li><li class="navelem"><a href="TabuSearch_8java.html">TabuSearch.java</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

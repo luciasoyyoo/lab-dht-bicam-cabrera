@@ -1,0 +1,55 @@
+\doxysection{One\+Point\+Crossover.\+java}
+\hypertarget{OnePointCrossover_8java_source}{}\label{OnePointCrossover_8java_source}\index{OnePointCrossover.java@{OnePointCrossover.java}}
+\mbox{\hyperlink{OnePointCrossover_8java}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{OnePointCrossover_8java_source_l00001}00001\ \textcolor{keyword}{package\ }evolutionary\_algorithms.complement;}
+\DoxyCodeLine{\Hypertarget{OnePointCrossover_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{OnePointCrossover_8java_source_l00003}00003\ \textcolor{keyword}{import}\ java.util.ArrayList;}
+\DoxyCodeLine{\Hypertarget{OnePointCrossover_8java_source_l00004}00004\ \textcolor{keyword}{import}\ java.util.List;}
+\DoxyCodeLine{\Hypertarget{OnePointCrossover_8java_source_l00005}00005\ \textcolor{keyword}{import}\ java.util.concurrent.ThreadLocalRandom;}
+\DoxyCodeLine{\Hypertarget{OnePointCrossover_8java_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{OnePointCrossover_8java_source_l00007}00007\ \textcolor{keyword}{import}\ metaheurictics.strategy.Strategy;}
+\DoxyCodeLine{\Hypertarget{OnePointCrossover_8java_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{OnePointCrossover_8java_source_l00009}00009\ \textcolor{keyword}{import}\ problem.definition.State;}
+\DoxyCodeLine{\Hypertarget{OnePointCrossover_8java_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{OnePointCrossover_8java_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{OnePointCrossover_8java_source_l00015}\mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1OnePointCrossover}{00015}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1OnePointCrossover}{OnePointCrossover}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1Crossover}{Crossover}}\ \{}
+\DoxyCodeLine{\Hypertarget{OnePointCrossover_8java_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{OnePointCrossover_8java_source_l00023}00023\ \ \ \ \ @SuppressWarnings(\textcolor{stringliteral}{"{}squid:S2245"{}})}
+\DoxyCodeLine{\Hypertarget{OnePointCrossover_8java_source_l00024}00024\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{OnePointCrossover_8java_source_l00032}\mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1OnePointCrossover_a6d644b471de305b6508b2b647edc76d1}{00032}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1OnePointCrossover_a6d644b471de305b6508b2b647edc76d1}{crossover}}(\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ father1,\ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ father2,\ \textcolor{keywordtype}{double}\ PC)\ \{}
+\DoxyCodeLine{\Hypertarget{OnePointCrossover_8java_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{OnePointCrossover_8java_source_l00034}00034\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ newInd\ =\ (\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}})\ father1.\mbox{\hyperlink{classproblem_1_1definition_1_1State_aaf14fa8466c945ff5e134028c6c259f8}{getCopy}}();}
+\DoxyCodeLine{\Hypertarget{OnePointCrossover_8java_source_l00035}00035\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{OnePointCrossover_8java_source_l00036}00036\ \ \ \ \ \ \ \ \ List<Object>\ ind1\ =\ \textcolor{keyword}{new}\ ArrayList<Object>();}
+\DoxyCodeLine{\Hypertarget{OnePointCrossover_8java_source_l00037}00037\ \ \ \ \ \ \ \ \ List<Object>\ ind2\ =\ \textcolor{keyword}{new}\ ArrayList<Object>();}
+\DoxyCodeLine{\Hypertarget{OnePointCrossover_8java_source_l00038}00038\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{OnePointCrossover_8java_source_l00039}00039\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ number\ =\ ThreadLocalRandom.current().nextDouble();\ \textcolor{comment}{//\ thread-\/safe,\ [0.0,\ 1.0)}}
+\DoxyCodeLine{\Hypertarget{OnePointCrossover_8java_source_l00040}00040\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(number\ <=\ PC)\{}
+\DoxyCodeLine{\Hypertarget{OnePointCrossover_8java_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//llenar\ los\ valores\ de\ cada\ hijo}}
+\DoxyCodeLine{\Hypertarget{OnePointCrossover_8java_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ bound\ =\ \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy}{Strategy}}.\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_ad2641e12c52292930364de6655333aa8}{getStrategy}}().\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_a4bc6bd95db71e14b1f48c1bfc85f1305}{getProblem}}().\mbox{\hyperlink{classproblem_1_1definition_1_1Problem_a7da2aa6b2a6f00f6f3993e6fdc43e34b}{getCodification}}().\mbox{\hyperlink{classproblem_1_1definition_1_1Codification_a3fadfa69736eedaf89c53863dd6ddc6d}{getVariableCount}}();}
+\DoxyCodeLine{\Hypertarget{OnePointCrossover_8java_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ pos\ =\ (bound\ >\ 0)\ ?\ ThreadLocalRandom.current().nextInt(bound)\ :\ 0;}
+\DoxyCodeLine{\Hypertarget{OnePointCrossover_8java_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ father1.\mbox{\hyperlink{classproblem_1_1definition_1_1State_a2e75b6f2bedb2107478ecd1e8e681418}{getCode}}().size();\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{OnePointCrossover_8java_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i\ <=\ pos)\{}
+\DoxyCodeLine{\Hypertarget{OnePointCrossover_8java_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ind1.add(father1.\mbox{\hyperlink{classproblem_1_1definition_1_1State_a2e75b6f2bedb2107478ecd1e8e681418}{getCode}}().get(i));}
+\DoxyCodeLine{\Hypertarget{OnePointCrossover_8java_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ind2.add(father2.\mbox{\hyperlink{classproblem_1_1definition_1_1State_a2e75b6f2bedb2107478ecd1e8e681418}{getCode}}().get(i));}
+\DoxyCodeLine{\Hypertarget{OnePointCrossover_8java_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{OnePointCrossover_8java_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{OnePointCrossover_8java_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ind1.add(father2.\mbox{\hyperlink{classproblem_1_1definition_1_1State_a2e75b6f2bedb2107478ecd1e8e681418}{getCode}}().get(i));}
+\DoxyCodeLine{\Hypertarget{OnePointCrossover_8java_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ind2.add(father1.\mbox{\hyperlink{classproblem_1_1definition_1_1State_a2e75b6f2bedb2107478ecd1e8e681418}{getCode}}().get(i));}
+\DoxyCodeLine{\Hypertarget{OnePointCrossover_8java_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{OnePointCrossover_8java_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{OnePointCrossover_8java_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{OnePointCrossover_8java_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//generar\ un\ numero\ aleatorio\ 0\ o\ 1,\ si\ es\ 0\ me\ quedo\ con\ ind1\ si\ es\ 1\ con\ ind2.}}
+\DoxyCodeLine{\Hypertarget{OnePointCrossover_8java_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ random\ =\ ThreadLocalRandom.current().nextInt(2);}
+\DoxyCodeLine{\Hypertarget{OnePointCrossover_8java_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(random\ ==\ 0)}
+\DoxyCodeLine{\Hypertarget{OnePointCrossover_8java_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ newInd.\mbox{\hyperlink{classproblem_1_1definition_1_1State_ab15765262a6e1cc7661c51cbcf0e7785}{setCode}}((ArrayList<Object>)\ ind1);}
+\DoxyCodeLine{\Hypertarget{OnePointCrossover_8java_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ newInd.\mbox{\hyperlink{classproblem_1_1definition_1_1State_ab15765262a6e1cc7661c51cbcf0e7785}{setCode}}((ArrayList<Object>)\ ind2);\ }
+\DoxyCodeLine{\Hypertarget{OnePointCrossover_8java_source_l00060}00060\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{OnePointCrossover_8java_source_l00061}00061\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ newInd;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{OnePointCrossover_8java_source_l00062}00062\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{OnePointCrossover_8java_source_l00063}00063\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{OnePointCrossover_8java_source_l00064}00064\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{OnePointCrossover_8java_source_l00065}00065\ \}}
+
+\end{DoxyCode}

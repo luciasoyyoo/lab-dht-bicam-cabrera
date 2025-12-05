@@ -1,0 +1,130 @@
+\doxysection{Referencia de la clase local\+\_\+search.\+acceptation\+\_\+type.\+Accept\+Not\+BadU}
+\hypertarget{classlocal__search_1_1acceptation__type_1_1AcceptNotBadU}{}\label{classlocal__search_1_1acceptation__type_1_1AcceptNotBadU}\index{local\_search.acceptation\_type.AcceptNotBadU@{local\_search.acceptation\_type.AcceptNotBadU}}
+
+
+\doxylink{classlocal__search_1_1acceptation__type_1_1AcceptNotBadU}{Accept\+Not\+BadU} -\/ Threshold based acceptation strategy.  
+
+
+
+
+Diagrama de herencia de local\+\_\+search.\+acceptation\+\_\+type.\+Accept\+Not\+BadU
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{classlocal__search_1_1acceptation__type_1_1AcceptNotBadU__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagrama de colaboración de local\+\_\+search.\+acceptation\+\_\+type.\+Accept\+Not\+BadU\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{classlocal__search_1_1acceptation__type_1_1AcceptNotBadU__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+Boolean \mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1AcceptNotBadU_aae18a93b424add171ea18e79645977c7}{accept\+Candidate}} (\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} state\+Current, \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} state\+Candidate)  throws Illegal\+Argument\+Exception, Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception, Illegal\+Access\+Exception, Invocation\+Target\+Exception, No\+Such\+Method\+Exception 
+\begin{DoxyCompactList}\small\item\em Decide acceptance using a configured threshold in the strategy. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+\doxylink{classlocal__search_1_1acceptation__type_1_1AcceptNotBadU}{Accept\+Not\+BadU} -\/ Threshold based acceptation strategy. 
+
+Accepts a candidate when the evaluation difference between the current and candidate state is below/above a configured threshold (depending on maximization/minimization). 
+
+Definición en la línea \mbox{\hyperlink{AcceptNotBadU_8java_source_l00021}{21}} del archivo \mbox{\hyperlink{AcceptNotBadU_8java_source}{Accept\+Not\+Bad\+U.\+java}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{classlocal__search_1_1acceptation__type_1_1AcceptNotBadU_doc-func-members}
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{classlocal__search_1_1acceptation__type_1_1AcceptNotBadU_aae18a93b424add171ea18e79645977c7}\index{local\_search.acceptation\_type.AcceptNotBadU@{local\_search.acceptation\_type.AcceptNotBadU}!acceptCandidate@{acceptCandidate}}
+\index{acceptCandidate@{acceptCandidate}!local\_search.acceptation\_type.AcceptNotBadU@{local\_search.acceptation\_type.AcceptNotBadU}}
+\doxysubsubsection{\texorpdfstring{acceptCandidate()}{acceptCandidate()}}
+{\footnotesize\ttfamily \label{classlocal__search_1_1acceptation__type_1_1AcceptNotBadU_aae18a93b424add171ea18e79645977c7} 
+Boolean local\+\_\+search.\+acceptation\+\_\+type.\+Accept\+Not\+Bad\+U.\+accept\+Candidate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}}]{state\+Current}{, }\item[{\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}}]{state\+Candidate}{}\end{DoxyParamCaption}) throws Illegal\+Argument\+Exception, Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception, Illegal\+Access\+Exception, Invocation\+Target\+Exception, No\+Such\+Method\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Decide acceptance using a configured threshold in the strategy. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em state\+Current} & the current state \\
+\hline
+{\em state\+Candidate} & the candidate state \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+true if candidate is accepted according to threshold, false otherwise 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em Illegal\+Argument\+Exception} & on invalid arguments \\
+\hline
+{\em Security\+Exception} & on reflective access problems \\
+\hline
+{\em Class\+Not\+Found\+Exception} & when a referenced class cannot be found \\
+\hline
+{\em Instantiation\+Exception} & on reflective instantiation failures \\
+\hline
+{\em Illegal\+Access\+Exception} & on illegal reflective access \\
+\hline
+{\em Invocation\+Target\+Exception} & when a reflective call throws \\
+\hline
+{\em No\+Such\+Method\+Exception} & when a reflective method lookup fails \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplementado de \mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1AcceptableCandidate_aa9e62e1d2d213c3828d2491b506d0592}{local\+\_\+search.\+acceptation\+\_\+type.\+Acceptable\+Candidate}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{AcceptNotBadU_8java_source_l00038}{38}} del archivo \mbox{\hyperlink{AcceptNotBadU_8java_source}{Accept\+Not\+Bad\+U.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ Boolean\ accept\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ Problem\ problem\ =\ Strategy.getStrategy().getProblem();}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (problem.getTypeProblem().equals(ProblemType.Maximizar))\ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ Double\ result\ =\ stateCurrent.getEvaluation().get(0)\ -\/\ stateCandidate.getEvaluation().get(0);}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (result\ <\ Strategy.getStrategy().getThreshold())}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ accept\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ accept\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ Double\ result\_min\ =\ stateCurrent.getEvaluation().get(0)\ -\/\ stateCandidate.getEvaluation().get(0);}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (result\_min\ >\ Strategy.getStrategy().getThreshold())}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ accept\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ accept\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ accept;}
+\DoxyCodeLine{00055\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{Strategy_8java_source_l00405}{metaheurictics.\+strategy.\+Strategy.\+get\+Problem()}}, \mbox{\hyperlink{Strategy_8java_source_l00080}{metaheurictics.\+strategy.\+Strategy.\+get\+Strategy()}}, \mbox{\hyperlink{Strategy_8java_source_l00492}{metaheurictics.\+strategy.\+Strategy.\+get\+Threshold()}} y \mbox{\hyperlink{Problem_8java_source_l00029}{problem.\+definition.\+Problem.\+Problem\+Type.\+Maximizar}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlocal__search_1_1acceptation__type_1_1AcceptNotBadU_aae18a93b424add171ea18e79645977c7_cgraph}
+\end{center}
+\end{figure}
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{AcceptNotBadU_8java}{Accept\+Not\+Bad\+U.\+java}}\end{DoxyCompactItemize}

@@ -1,0 +1,850 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="es">
+  <compounddef id="classmetaheuristics_1_1generators_1_1HillClimbingRestart" kind="class" language="Java" prot="public">
+    <compoundname>metaheuristics::generators::HillClimbingRestart</compoundname>
+    <basecompoundref refid="classmetaheuristics_1_1generators_1_1Generator" prot="public" virt="non-virtual">metaheuristics.generators.Generator</basecompoundref>
+    <sectiondef kind="package-attrib">
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a68a804f2cd73d4c64e622a0d5ae19bf7" prot="package" static="no" mutable="no">
+        <type>int</type>
+        <definition>int metaheuristics.generators.HillClimbingRestart.count</definition>
+        <argsstring></argsstring>
+        <name>count</name>
+        <qualifiedname>metaheuristics.generators.HillClimbingRestart.count</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/HillClimbingRestart.java" line="25" column="5" bodyfile="practica5/src/main/java/metaheuristics/generators/HillClimbingRestart.java" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a0b5df3023a33860fc025fea91320ad0a" prot="package" static="no" mutable="no">
+        <type>int</type>
+        <definition>int metaheuristics.generators.HillClimbingRestart.countCurrent</definition>
+        <argsstring></argsstring>
+        <name>countCurrent</name>
+        <qualifiedname>metaheuristics.generators.HillClimbingRestart.countCurrent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/HillClimbingRestart.java" line="26" column="5" bodyfile="practica5/src/main/java/metaheuristics/generators/HillClimbingRestart.java" bodystart="26" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a182d5ab3f9f30d90440c5adecb7fc15d" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+        <definition>List&lt;State&gt; metaheuristics.generators.HillClimbingRestart.listRef</definition>
+        <argsstring></argsstring>
+        <name>listRef</name>
+        <qualifiedname>metaheuristics.generators.HillClimbingRestart.listRef</qualifiedname>
+        <initializer>= new ArrayList&lt;<ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref>&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/HillClimbingRestart.java" line="27" column="14" bodyfile="practica5/src/main/java/metaheuristics/generators/HillClimbingRestart.java" bodystart="27" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a03effb92915e2642b7d87763987a43ae" compoundref="HillClimbingRestart_8java" startline="73" endline="85">metaheuristics.generators.HillClimbingRestart.generate</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a9923306bd8e167dd5f395000e599efb0" prot="private" static="no" mutable="no">
+        <type>int[]</type>
+        <definition>int [] metaheuristics.generators.HillClimbingRestart.listCountBetterGender</definition>
+        <argsstring></argsstring>
+        <name>listCountBetterGender</name>
+        <qualifiedname>metaheuristics.generators.HillClimbingRestart.listCountBetterGender</qualifiedname>
+        <initializer>= new int[10]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/HillClimbingRestart.java" line="40" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/HillClimbingRestart.java" bodystart="40" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1aa506be31a40c309915296132624ee47e" compoundref="HillClimbingRestart_8java" startline="47" endline="64">metaheuristics.generators.HillClimbingRestart.HillClimbingRestart</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1afc72d453fdf0b5b1a48098fcec254c83" prot="private" static="no" mutable="no">
+        <type>int[]</type>
+        <definition>int [] metaheuristics.generators.HillClimbingRestart.listCountGender</definition>
+        <argsstring></argsstring>
+        <name>listCountGender</name>
+        <qualifiedname>metaheuristics.generators.HillClimbingRestart.listCountGender</qualifiedname>
+        <initializer>= new int[10]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/HillClimbingRestart.java" line="41" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/HillClimbingRestart.java" bodystart="41" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1aa506be31a40c309915296132624ee47e" compoundref="HillClimbingRestart_8java" startline="47" endline="64">metaheuristics.generators.HillClimbingRestart.HillClimbingRestart</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1aa4e351847f576d35e7f2edf48914fdf2" prot="private" static="no" mutable="no">
+        <type>float[]</type>
+        <definition>float [] metaheuristics.generators.HillClimbingRestart.listTrace</definition>
+        <argsstring></argsstring>
+        <name>listTrace</name>
+        <qualifiedname>metaheuristics.generators.HillClimbingRestart.listTrace</qualifiedname>
+        <initializer>= new float[1200000]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/HillClimbingRestart.java" line="42" column="15" bodyfile="practica5/src/main/java/metaheuristics/generators/HillClimbingRestart.java" bodystart="42" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1aa506be31a40c309915296132624ee47e" compoundref="HillClimbingRestart_8java" startline="47" endline="64">metaheuristics.generators.HillClimbingRestart.HillClimbingRestart</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a23ed06875ea0fa490a1efaf76d8bb5c7" prot="protected" static="no" mutable="no">
+        <type><ref refid="classlocal__search_1_1candidate__type_1_1CandidateValue" kindref="compound">CandidateValue</ref></type>
+        <definition>CandidateValue metaheuristics.generators.HillClimbingRestart.candidatevalue</definition>
+        <argsstring></argsstring>
+        <name>candidatevalue</name>
+        <qualifiedname>metaheuristics.generators.HillClimbingRestart.candidatevalue</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/HillClimbingRestart.java" line="28" column="26" bodyfile="practica5/src/main/java/metaheuristics/generators/HillClimbingRestart.java" bodystart="28" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a03effb92915e2642b7d87763987a43ae" compoundref="HillClimbingRestart_8java" startline="73" endline="85">metaheuristics.generators.HillClimbingRestart.generate</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1aea052b47f30e618db3a455b10c1aaf17" prot="protected" static="no" mutable="no">
+        <type><ref refid="enumlocal__search_1_1acceptation__type_1_1AcceptType" kindref="compound">AcceptType</ref></type>
+        <definition>AcceptType metaheuristics.generators.HillClimbingRestart.typeAcceptation</definition>
+        <argsstring></argsstring>
+        <name>typeAcceptation</name>
+        <qualifiedname>metaheuristics.generators.HillClimbingRestart.typeAcceptation</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/HillClimbingRestart.java" line="29" column="22" bodyfile="practica5/src/main/java/metaheuristics/generators/HillClimbingRestart.java" bodystart="29" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a7dceb2a864772b9f3b83befa4fe39be8" compoundref="HillClimbingRestart_8java" startline="88" endline="99">metaheuristics.generators.HillClimbingRestart.updateReference</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a98e07ea55428b62fa1226143689c04ca" prot="protected" static="no" mutable="no">
+        <type><ref refid="enumlocal__search_1_1complement_1_1StrategyType" kindref="compound">StrategyType</ref></type>
+        <definition>StrategyType metaheuristics.generators.HillClimbingRestart.strategy</definition>
+        <argsstring></argsstring>
+        <name>strategy</name>
+        <qualifiedname>metaheuristics.generators.HillClimbingRestart.strategy</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/HillClimbingRestart.java" line="30" column="24" bodyfile="practica5/src/main/java/metaheuristics/generators/HillClimbingRestart.java" bodystart="30" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a03effb92915e2642b7d87763987a43ae" compoundref="HillClimbingRestart_8java" startline="73" endline="85">metaheuristics.generators.HillClimbingRestart.generate</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a14205273d7d3406afedfb2c9d2b04b0d" prot="protected" static="no" mutable="no">
+        <type><ref refid="enumlocal__search_1_1candidate__type_1_1CandidateType" kindref="compound">CandidateType</ref></type>
+        <definition>CandidateType metaheuristics.generators.HillClimbingRestart.typeCandidate</definition>
+        <argsstring></argsstring>
+        <name>typeCandidate</name>
+        <qualifiedname>metaheuristics.generators.HillClimbingRestart.typeCandidate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/HillClimbingRestart.java" line="31" column="25" bodyfile="practica5/src/main/java/metaheuristics/generators/HillClimbingRestart.java" bodystart="31" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a03effb92915e2642b7d87763987a43ae" compoundref="HillClimbingRestart_8java" startline="73" endline="85">metaheuristics.generators.HillClimbingRestart.generate</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a5f8692ea039bfcb06a9d273a764ff369" compoundref="HillClimbingRestart_8java" startline="182" endline="184">metaheuristics.generators.HillClimbingRestart.setTypeCandidate</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a0bbe1bf96597fa2ce2a4d773167837de" prot="protected" static="no" mutable="no">
+        <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+        <definition>State metaheuristics.generators.HillClimbingRestart.stateReferenceHC</definition>
+        <argsstring></argsstring>
+        <name>stateReferenceHC</name>
+        <qualifiedname>metaheuristics.generators.HillClimbingRestart.stateReferenceHC</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/HillClimbingRestart.java" line="32" column="17" bodyfile="practica5/src/main/java/metaheuristics/generators/HillClimbingRestart.java" bodystart="32" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a03effb92915e2642b7d87763987a43ae" compoundref="HillClimbingRestart_8java" startline="73" endline="85">metaheuristics.generators.HillClimbingRestart.generate</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a5e3061ee142cac26d79dd339d317a510" compoundref="HillClimbingRestart_8java" startline="122" endline="124">metaheuristics.generators.HillClimbingRestart.getReference</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a49761f30e65f59d4d167087d80198d5f" compoundref="HillClimbingRestart_8java" startline="108" endline="115">metaheuristics.generators.HillClimbingRestart.getReferenceList</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a7dceb2a864772b9f3b83befa4fe39be8" compoundref="HillClimbingRestart_8java" startline="88" endline="99">metaheuristics.generators.HillClimbingRestart.updateReference</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1adeb6f910da4801edd022be26cca512c3" prot="protected" static="no" mutable="no">
+        <type><ref refid="interfacefactory__interface_1_1IFFactoryAcceptCandidate" kindref="compound">IFFactoryAcceptCandidate</ref></type>
+        <definition>IFFactoryAcceptCandidate metaheuristics.generators.HillClimbingRestart.ifacceptCandidate</definition>
+        <argsstring></argsstring>
+        <name>ifacceptCandidate</name>
+        <qualifiedname>metaheuristics.generators.HillClimbingRestart.ifacceptCandidate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/HillClimbingRestart.java" line="33" column="36" bodyfile="practica5/src/main/java/metaheuristics/generators/HillClimbingRestart.java" bodystart="33" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a7dceb2a864772b9f3b83befa4fe39be8" compoundref="HillClimbingRestart_8java" startline="88" endline="99">metaheuristics.generators.HillClimbingRestart.updateReference</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a094d3cb1ae9e4613cc3acf49ad8b7e35" prot="protected" static="no" mutable="no">
+        <type><ref refid="enummetaheuristics_1_1generators_1_1GeneratorType" kindref="compound">GeneratorType</ref></type>
+        <definition>GeneratorType metaheuristics.generators.HillClimbingRestart.generatortype</definition>
+        <argsstring></argsstring>
+        <name>generatortype</name>
+        <qualifiedname>metaheuristics.generators.HillClimbingRestart.generatortype</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/HillClimbingRestart.java" line="34" column="25" bodyfile="practica5/src/main/java/metaheuristics/generators/HillClimbingRestart.java" bodystart="34" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a1e8a1b9daa568d8e6fe3198b91280f0d" compoundref="HillClimbingRestart_8java" startline="147" endline="149">metaheuristics.generators.HillClimbingRestart.getGeneratorType</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a85673ed2f36cfc7535ee29314689fb69" compoundref="HillClimbingRestart_8java" startline="155" endline="157">metaheuristics.generators.HillClimbingRestart.setGeneratorType</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1abcb10bdd1e98fc6dff611028b9aed273" prot="protected" static="no" mutable="no">
+        <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+        <definition>List&lt;State&gt; metaheuristics.generators.HillClimbingRestart.listStateReference</definition>
+        <argsstring></argsstring>
+        <name>listStateReference</name>
+        <qualifiedname>metaheuristics.generators.HillClimbingRestart.listStateReference</qualifiedname>
+        <initializer>= new ArrayList&lt;<ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref>&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/HillClimbingRestart.java" line="35" column="16" bodyfile="practica5/src/main/java/metaheuristics/generators/HillClimbingRestart.java" bodystart="35" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a49761f30e65f59d4d167087d80198d5f" compoundref="HillClimbingRestart_8java" startline="108" endline="115">metaheuristics.generators.HillClimbingRestart.getReferenceList</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1aee7424dbd521df9a700fd67d4233f8d5" prot="protected" static="no" mutable="no">
+        <type>float</type>
+        <definition>float metaheuristics.generators.HillClimbingRestart.weight</definition>
+        <argsstring></argsstring>
+        <name>weight</name>
+        <qualifiedname>metaheuristics.generators.HillClimbingRestart.weight</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/HillClimbingRestart.java" line="36" column="17" bodyfile="practica5/src/main/java/metaheuristics/generators/HillClimbingRestart.java" bodystart="36" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1ac0eaefcd46b53f01bfeb46387a475c8b" compoundref="HillClimbingRestart_8java" startline="213" endline="216">metaheuristics.generators.HillClimbingRestart.setWeight</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1aa506be31a40c309915296132624ee47e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>metaheuristics.generators.HillClimbingRestart.HillClimbingRestart</definition>
+        <argsstring>()</argsstring>
+        <name>HillClimbingRestart</name>
+        <qualifiedname>metaheuristics.generators.HillClimbingRestart.HillClimbingRestart</qualifiedname>
+        <briefdescription>
+<para><ref refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart" kindref="compound">HillClimbingRestart</ref> - class that implements the Hill Climbing Restart metaheuristic. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/HillClimbingRestart.java" line="47" column="8" bodyfile="practica5/src/main/java/metaheuristics/generators/HillClimbingRestart.java" bodystart="47" bodyend="64"/>
+        <references refid="enumlocal__search_1_1acceptation__type_1_1AcceptType_1abc2c141301995f3a5a501195a81c1420" compoundref="AcceptType_8java" startline="15">local_search.acceptation_type.AcceptType.AcceptBest</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1a4bc6bd95db71e14b1f48c1bfc85f1305" compoundref="Strategy_8java" startline="405" endline="407">metaheurictics.strategy.Strategy.getProblem</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1ad2641e12c52292930364de6655333aa8" compoundref="Strategy_8java" startline="80" endline="85">metaheurictics.strategy.Strategy.getStrategy</references>
+        <references refid="classproblem_1_1definition_1_1Problem_1ad6f38df755179e22ffe487ba4a5c8021" compoundref="Problem_8java" startline="97" endline="99">problem.definition.Problem.getTypeProblem</references>
+        <references refid="enumlocal__search_1_1candidate__type_1_1CandidateType_1a10a1f7a483a38c8c3911ff48e588faef" compoundref="CandidateType_8java" startline="18">local_search.candidate_type.CandidateType.GreaterCandidate</references>
+        <references refid="enummetaheuristics_1_1generators_1_1GeneratorType_1a2b1ac0dff3bb2c5c1486cc0e234afe9e" compoundref="GeneratorType_8java" startline="7">metaheuristics.generators.GeneratorType.HillClimbing</references>
+        <references refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a9923306bd8e167dd5f395000e599efb0" compoundref="HillClimbingRestart_8java" startline="40">metaheuristics.generators.HillClimbingRestart.listCountBetterGender</references>
+        <references refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1afc72d453fdf0b5b1a48098fcec254c83" compoundref="HillClimbingRestart_8java" startline="41">metaheuristics.generators.HillClimbingRestart.listCountGender</references>
+        <references refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1aa4e351847f576d35e7f2edf48914fdf2" compoundref="HillClimbingRestart_8java" startline="42">metaheuristics.generators.HillClimbingRestart.listTrace</references>
+        <references refid="enumproblem_1_1definition_1_1Problem_1_1ProblemType_1aa55383c4cb9a71cfeabc7f715ee0cd6e" compoundref="Problem_8java" startline="29">problem.definition.Problem.ProblemType.Maximizar</references>
+        <references refid="enumlocal__search_1_1complement_1_1StrategyType_1a6319a2518e93ad757c398fb858df8c9e" compoundref="StrategyType_8java" startline="18">local_search.complement.StrategyType.NORMAL</references>
+        <references refid="enumlocal__search_1_1candidate__type_1_1CandidateType_1a83d72037a210a5d2146a2690a6a956e9" compoundref="CandidateType_8java" startline="16">local_search.candidate_type.CandidateType.SmallerCandidate</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a03effb92915e2642b7d87763987a43ae" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+        <definition>State metaheuristics.generators.HillClimbingRestart.generate</definition>
+        <argsstring>(Integer operatornumber)</argsstring>
+        <name>generate</name>
+        <qualifiedname>metaheuristics.generators.HillClimbingRestart.generate</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1a06f6f7622b9ce32590eadbdf6bf962b5">generate</reimplements>
+        <param>
+          <type>Integer</type>
+          <declname>operatornumber</declname>
+        </param>
+        <exceptions> throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException </exceptions>
+        <briefdescription>
+<para>generate - generate a new state based on the current state and the operator number. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>operatornumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the operator number to use for generating the new state </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the newly generated state </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/HillClimbingRestart.java" line="73" column="14" bodyfile="practica5/src/main/java/metaheuristics/generators/HillClimbingRestart.java" bodystart="73" bodyend="85"/>
+        <references refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a23ed06875ea0fa490a1efaf76d8bb5c7" compoundref="HillClimbingRestart_8java" startline="28">metaheuristics.generators.HillClimbingRestart.candidatevalue</references>
+        <references refid="classproblem_1_1definition_1_1Problem_1a74d56127a8524b4a20f6ab831744f164" compoundref="Problem_8java" startline="171" endline="183">problem.definition.Problem.Evaluate</references>
+        <references refid="classproblem_1_1definition_1_1Operator_1a5b6625843e73d938f9235985bf966b34">problem.definition.Operator.generatedNewState</references>
+        <references refid="classproblem_1_1definition_1_1Operator_1a08c63f0d681ef130fccdb04d24ddf181">problem.definition.Operator.generateRandomState</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1a6440afde976cb69c01b95d4c41a9ff5c" compoundref="Strategy_8java" startline="471" endline="473">metaheurictics.strategy.Strategy.getCountCurrent</references>
+        <references refid="classproblem_1_1definition_1_1Problem_1a4cd649edb8862f21af171491cb9b9386" compoundref="Problem_8java" startline="131" endline="133">problem.definition.Problem.getOperator</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1a4bc6bd95db71e14b1f48c1bfc85f1305" compoundref="Strategy_8java" startline="405" endline="407">metaheurictics.strategy.Strategy.getProblem</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1ad2641e12c52292930364de6655333aa8" compoundref="Strategy_8java" startline="80" endline="85">metaheurictics.strategy.Strategy.getStrategy</references>
+        <references refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a182d5ab3f9f30d90440c5adecb7fc15d" compoundref="HillClimbingRestart_8java" startline="27">metaheuristics.generators.HillClimbingRestart.listRef</references>
+        <references refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a0bbe1bf96597fa2ce2a4d773167837de" compoundref="HillClimbingRestart_8java" startline="32">metaheuristics.generators.HillClimbingRestart.stateReferenceHC</references>
+        <references refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a98e07ea55428b62fa1226143689c04ca" compoundref="HillClimbingRestart_8java" startline="30">metaheuristics.generators.HillClimbingRestart.strategy</references>
+        <references refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a14205273d7d3406afedfb2c9d2b04b0d" compoundref="HillClimbingRestart_8java" startline="31">metaheuristics.generators.HillClimbingRestart.typeCandidate</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a7dceb2a864772b9f3b83befa4fe39be8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheuristics.generators.HillClimbingRestart.updateReference</definition>
+        <argsstring>(State stateCandidate, Integer countIterationsCurrent)</argsstring>
+        <name>updateReference</name>
+        <qualifiedname>metaheuristics.generators.HillClimbingRestart.updateReference</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1aa1c5878953f2111221b21cb9b1e6cc9f">updateReference</reimplements>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>stateCandidate</declname>
+        </param>
+        <param>
+          <type>Integer</type>
+          <declname>countIterationsCurrent</declname>
+        </param>
+        <exceptions> throws IllegalArgumentException, 			SecurityException, ClassNotFoundException, InstantiationException, 			IllegalAccessException, InvocationTargetException, 			NoSuchMethodException </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/HillClimbingRestart.java" line="88" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/HillClimbingRestart.java" bodystart="88" bodyend="99"/>
+        <references refid="classlocal__search_1_1acceptation__type_1_1AcceptableCandidate_1aa9e62e1d2d213c3828d2491b506d0592">local_search.acceptation_type.AcceptableCandidate.acceptCandidate</references>
+        <references refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1adeb6f910da4801edd022be26cca512c3" compoundref="HillClimbingRestart_8java" startline="33">metaheuristics.generators.HillClimbingRestart.ifacceptCandidate</references>
+        <references refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a0bbe1bf96597fa2ce2a4d773167837de" compoundref="HillClimbingRestart_8java" startline="32">metaheuristics.generators.HillClimbingRestart.stateReferenceHC</references>
+        <references refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1aea052b47f30e618db3a455b10c1aaf17" compoundref="HillClimbingRestart_8java" startline="29">metaheuristics.generators.HillClimbingRestart.typeAcceptation</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a49761f30e65f59d4d167087d80198d5f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+        <definition>List&lt; State &gt; metaheuristics.generators.HillClimbingRestart.getReferenceList</definition>
+        <argsstring>()</argsstring>
+        <name>getReferenceList</name>
+        <qualifiedname>metaheuristics.generators.HillClimbingRestart.getReferenceList</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1ae168237b306de55fe4d6dfda75c7cd13">getReferenceList</reimplements>
+        <briefdescription>
+<para>getReferenceList - get the list of reference states. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the list of reference states </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/HillClimbingRestart.java" line="108" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/HillClimbingRestart.java" bodystart="108" bodyend="115"/>
+        <references refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1abcb10bdd1e98fc6dff611028b9aed273" compoundref="HillClimbingRestart_8java" startline="35">metaheuristics.generators.HillClimbingRestart.listStateReference</references>
+        <references refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a0bbe1bf96597fa2ce2a4d773167837de" compoundref="HillClimbingRestart_8java" startline="32">metaheuristics.generators.HillClimbingRestart.stateReferenceHC</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a5e3061ee142cac26d79dd339d317a510" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+        <definition>State metaheuristics.generators.HillClimbingRestart.getReference</definition>
+        <argsstring>()</argsstring>
+        <name>getReference</name>
+        <qualifiedname>metaheuristics.generators.HillClimbingRestart.getReference</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1aa56dd45a45776f6023b9f74179cc6384">getReference</reimplements>
+        <briefdescription>
+<para>getReference - get the reference state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the reference state </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/HillClimbingRestart.java" line="122" column="14" bodyfile="practica5/src/main/java/metaheuristics/generators/HillClimbingRestart.java" bodystart="122" bodyend="124"/>
+        <references refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a0bbe1bf96597fa2ce2a4d773167837de" compoundref="HillClimbingRestart_8java" startline="32">metaheuristics.generators.HillClimbingRestart.stateReferenceHC</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1aaffe883ee63837669011c0203a4c7581" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheuristics.generators.HillClimbingRestart.setStateRef</definition>
+        <argsstring>(State stateRef)</argsstring>
+        <name>setStateRef</name>
+        <qualifiedname>metaheuristics.generators.HillClimbingRestart.setStateRef</qualifiedname>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>stateRef</declname>
+        </param>
+        <briefdescription>
+<para>setStateRef - set the reference state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stateRef</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/HillClimbingRestart.java" line="130" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/HillClimbingRestart.java" bodystart="130" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a2b8d1783e14c2813fe5bcf7051d8ee0e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheuristics.generators.HillClimbingRestart.setInitialReference</definition>
+        <argsstring>(State stateInitialRef)</argsstring>
+        <name>setInitialReference</name>
+        <qualifiedname>metaheuristics.generators.HillClimbingRestart.setInitialReference</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1aa9f7c4c983705f843b8fcc81e4aa8ba4">setInitialReference</reimplements>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>stateInitialRef</declname>
+        </param>
+        <briefdescription>
+<para>setInitialReference - set the initial reference state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stateInitialRef</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/HillClimbingRestart.java" line="139" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/HillClimbingRestart.java" bodystart="139" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a1e8a1b9daa568d8e6fe3198b91280f0d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="enummetaheuristics_1_1generators_1_1GeneratorType" kindref="compound">GeneratorType</ref></type>
+        <definition>GeneratorType metaheuristics.generators.HillClimbingRestart.getGeneratorType</definition>
+        <argsstring>()</argsstring>
+        <name>getGeneratorType</name>
+        <qualifiedname>metaheuristics.generators.HillClimbingRestart.getGeneratorType</qualifiedname>
+        <briefdescription>
+<para>getGeneratorType - get the generator type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the generator type </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/HillClimbingRestart.java" line="147" column="22" bodyfile="practica5/src/main/java/metaheuristics/generators/HillClimbingRestart.java" bodystart="147" bodyend="149"/>
+        <references refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a094d3cb1ae9e4613cc3acf49ad8b7e35" compoundref="HillClimbingRestart_8java" startline="34">metaheuristics.generators.HillClimbingRestart.generatortype</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a85673ed2f36cfc7535ee29314689fb69" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheuristics.generators.HillClimbingRestart.setGeneratorType</definition>
+        <argsstring>(GeneratorType generatortype)</argsstring>
+        <name>setGeneratorType</name>
+        <qualifiedname>metaheuristics.generators.HillClimbingRestart.setGeneratorType</qualifiedname>
+        <param>
+          <type><ref refid="enummetaheuristics_1_1generators_1_1GeneratorType" kindref="compound">GeneratorType</ref></type>
+          <declname>generatortype</declname>
+        </param>
+        <briefdescription>
+<para>setGeneratorType - set the generator type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>generatortype</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/HillClimbingRestart.java" line="155" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/HillClimbingRestart.java" bodystart="155" bodyend="157"/>
+        <references refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a094d3cb1ae9e4613cc3acf49ad8b7e35" compoundref="HillClimbingRestart_8java" startline="34">metaheuristics.generators.HillClimbingRestart.generatortype</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a5619536e28aea8438593614d4dadc277" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="enummetaheuristics_1_1generators_1_1GeneratorType" kindref="compound">GeneratorType</ref></type>
+        <definition>GeneratorType metaheuristics.generators.HillClimbingRestart.getType</definition>
+        <argsstring>()</argsstring>
+        <name>getType</name>
+        <qualifiedname>metaheuristics.generators.HillClimbingRestart.getType</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1a5a123306b43c42d28cd1d6e17f8067a5">getType</reimplements>
+        <briefdescription>
+<para>getType - get the generator type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the generator type </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/HillClimbingRestart.java" line="164" column="22" bodyfile="practica5/src/main/java/metaheuristics/generators/HillClimbingRestart.java" bodystart="164" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a1dd92d2c831e259f6448ce4aa4418c79" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+        <definition>List&lt; State &gt; metaheuristics.generators.HillClimbingRestart.getSonList</definition>
+        <argsstring>()</argsstring>
+        <name>getSonList</name>
+        <qualifiedname>metaheuristics.generators.HillClimbingRestart.getSonList</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1aee09d724c1b3040e7a7ad0b64e341c96">getSonList</reimplements>
+        <briefdescription>
+<para>getSonList - get the list of son states. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the list of son states </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/HillClimbingRestart.java" line="173" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/HillClimbingRestart.java" bodystart="173" bodyend="176"/>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a5f8692ea039bfcb06a9d273a764ff369" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheuristics.generators.HillClimbingRestart.setTypeCandidate</definition>
+        <argsstring>(CandidateType typeCandidate)</argsstring>
+        <name>setTypeCandidate</name>
+        <qualifiedname>metaheuristics.generators.HillClimbingRestart.setTypeCandidate</qualifiedname>
+        <param>
+          <type><ref refid="enumlocal__search_1_1candidate__type_1_1CandidateType" kindref="compound">CandidateType</ref></type>
+          <declname>typeCandidate</declname>
+        </param>
+        <briefdescription>
+<para>setTypeCandidate - set the candidate type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>typeCandidate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/HillClimbingRestart.java" line="182" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/HillClimbingRestart.java" bodystart="182" bodyend="184"/>
+        <references refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a14205273d7d3406afedfb2c9d2b04b0d" compoundref="HillClimbingRestart_8java" startline="31">metaheuristics.generators.HillClimbingRestart.typeCandidate</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a247b1b03f1e9971c59364d08c92ce608" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean metaheuristics.generators.HillClimbingRestart.awardUpdateREF</definition>
+        <argsstring>(State stateCandidate)</argsstring>
+        <name>awardUpdateREF</name>
+        <qualifiedname>metaheuristics.generators.HillClimbingRestart.awardUpdateREF</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1a3513d3953ecc97683f38bcb662b74b9b">awardUpdateREF</reimplements>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>stateCandidate</declname>
+        </param>
+        <briefdescription>
+<para>awardUpdateREF - award the update of the reference state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stateCandidate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns true if the update is awarded, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/HillClimbingRestart.java" line="192" column="16" bodyfile="practica5/src/main/java/metaheuristics/generators/HillClimbingRestart.java" bodystart="192" bodyend="195"/>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a2c1694a6f6a5a015d846058f0725b0fd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float metaheuristics.generators.HillClimbingRestart.getWeight</definition>
+        <argsstring>()</argsstring>
+        <name>getWeight</name>
+        <qualifiedname>metaheuristics.generators.HillClimbingRestart.getWeight</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1a64f2b824081c7af593bf9aa8eabf2c9e">getWeight</reimplements>
+        <briefdescription>
+<para>getWeight - get the weight of the state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the weight of the state </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/HillClimbingRestart.java" line="203" column="14" bodyfile="practica5/src/main/java/metaheuristics/generators/HillClimbingRestart.java" bodystart="203" bodyend="206"/>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1ac0eaefcd46b53f01bfeb46387a475c8b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheuristics.generators.HillClimbingRestart.setWeight</definition>
+        <argsstring>(float weight)</argsstring>
+        <name>setWeight</name>
+        <qualifiedname>metaheuristics.generators.HillClimbingRestart.setWeight</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1a8b3c66b57b4c739666989fbce667eb40">setWeight</reimplements>
+        <param>
+          <type>float</type>
+          <declname>weight</declname>
+        </param>
+        <briefdescription>
+<para>setWeight - set the weight of the state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>weight</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/HillClimbingRestart.java" line="213" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/HillClimbingRestart.java" bodystart="213" bodyend="216"/>
+        <references refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1aee7424dbd521df9a700fd67d4233f8d5" compoundref="HillClimbingRestart_8java" startline="36">metaheuristics.generators.HillClimbingRestart.weight</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1abd8ee7fd7f93f9c7eedfe132540aa5b0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int[]</type>
+        <definition>int[] metaheuristics.generators.HillClimbingRestart.getListCountBetterGender</definition>
+        <argsstring>()</argsstring>
+        <name>getListCountBetterGender</name>
+        <qualifiedname>metaheuristics.generators.HillClimbingRestart.getListCountBetterGender</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1ac5bace71f51c16b611ede3ed53263473">getListCountBetterGender</reimplements>
+        <briefdescription>
+<para>getListCountBetterGender - get the list of count better gender. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the list of count better gender </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/HillClimbingRestart.java" line="225" column="12" bodyfile="practica5/src/main/java/metaheuristics/generators/HillClimbingRestart.java" bodystart="225" bodyend="228"/>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1ac6137239ca4b758d714c51c5b58f77d4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int[]</type>
+        <definition>int[] metaheuristics.generators.HillClimbingRestart.getListCountGender</definition>
+        <argsstring>()</argsstring>
+        <name>getListCountGender</name>
+        <qualifiedname>metaheuristics.generators.HillClimbingRestart.getListCountGender</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1ac5d6d45ee8017fb87d80aa952edfc34e">getListCountGender</reimplements>
+        <briefdescription>
+<para>getListCountGender - get the list of count gender. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the list of count gender </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/HillClimbingRestart.java" line="235" column="12" bodyfile="practica5/src/main/java/metaheuristics/generators/HillClimbingRestart.java" bodystart="235" bodyend="238"/>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a1d1837e94c6818cad9bd13d6ac2c7e8b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float[]</type>
+        <definition>float[] metaheuristics.generators.HillClimbingRestart.getTrace</definition>
+        <argsstring>()</argsstring>
+        <name>getTrace</name>
+        <qualifiedname>metaheuristics.generators.HillClimbingRestart.getTrace</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1a75d7f30dd2cb3f92475db8525ac7c6e7">getTrace</reimplements>
+        <briefdescription>
+<para>getTrace - get the trace of the state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the trace of the state </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/HillClimbingRestart.java" line="245" column="14" bodyfile="practica5/src/main/java/metaheuristics/generators/HillClimbingRestart.java" bodystart="245" bodyend="248"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart" kindref="compound">HillClimbingRestart</ref> - class that implements the Hill Climbing Restart metaheuristic. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>metaheuristics.generators.HillClimbingRestart</label>
+        <link refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>metaheuristics.generators.Generator</label>
+        <link refid="classmetaheuristics_1_1generators_1_1Generator"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="11">
+        <label>Cloneable</label>
+      </node>
+      <node id="13">
+        <label>factory_interface.IFFactoryAcceptCandidate</label>
+        <link refid="interfacefactory__interface_1_1IFFactoryAcceptCandidate"/>
+      </node>
+      <node id="4">
+        <label>factory_interface.IFFactoryCandidate</label>
+        <link refid="interfacefactory__interface_1_1IFFactoryCandidate"/>
+      </node>
+      <node id="7">
+        <label>local_search.acceptation_type.AcceptType</label>
+        <link refid="enumlocal__search_1_1acceptation__type_1_1AcceptType"/>
+      </node>
+      <node id="9">
+        <label>local_search.candidate_type.CandidateType</label>
+        <link refid="enumlocal__search_1_1candidate__type_1_1CandidateType"/>
+      </node>
+      <node id="3">
+        <label>local_search.candidate_type.CandidateValue</label>
+        <link refid="classlocal__search_1_1candidate__type_1_1CandidateValue"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-ifFactory</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>-tabusolution</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>-searchcandidate</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>local_search.candidate_type.SearchCandidate</label>
+        <link refid="classlocal__search_1_1candidate__type_1_1SearchCandidate"/>
+      </node>
+      <node id="8">
+        <label>local_search.complement.StrategyType</label>
+        <link refid="enumlocal__search_1_1complement_1_1StrategyType"/>
+      </node>
+      <node id="5">
+        <label>local_search.complement.TabuSolutions</label>
+        <link refid="classlocal__search_1_1complement_1_1TabuSolutions"/>
+      </node>
+      <node id="1">
+        <label>metaheuristics.generators.HillClimbingRestart</label>
+        <link refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>#candidatevalue</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>#typeAcceptation</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>#strategy</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>#typeCandidate</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>#stateReferenceHC</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>#ifacceptCandidate</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>#generatortype</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>metaheuristics.generators.Generator</label>
+        <link refid="classmetaheuristics_1_1generators_1_1Generator"/>
+      </node>
+      <node id="12">
+        <label>metaheuristics.generators.GeneratorType</label>
+        <link refid="enummetaheuristics_1_1generators_1_1GeneratorType"/>
+      </node>
+      <node id="10">
+        <label>problem.definition.State</label>
+        <link refid="classproblem_1_1definition_1_1State"/>
+        <childnode refid="11" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>#typeGenerator</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="practica5/src/main/java/metaheuristics/generators/HillClimbingRestart.java" line="23" column="7" bodyfile="practica5/src/main/java/metaheuristics/generators/HillClimbingRestart.java" bodystart="23" bodyend="249"/>
+    <listofallmembers>
+      <member refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a247b1b03f1e9971c59364d08c92ce608" prot="public" virt="non-virtual"><scope>metaheuristics::generators::HillClimbingRestart</scope><name>awardUpdateREF</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a23ed06875ea0fa490a1efaf76d8bb5c7" prot="protected" virt="non-virtual"><scope>metaheuristics::generators::HillClimbingRestart</scope><name>candidatevalue</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a68a804f2cd73d4c64e622a0d5ae19bf7" prot="package" virt="non-virtual"><scope>metaheuristics::generators::HillClimbingRestart</scope><name>count</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1Generator_1a43815f3944c514ba3156b0e68482befa" prot="public" virt="non-virtual"><scope>metaheuristics::generators::HillClimbingRestart</scope><name>countBetterGender</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a0b5df3023a33860fc025fea91320ad0a" prot="package" virt="non-virtual"><scope>metaheuristics::generators::HillClimbingRestart</scope><name>countCurrent</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1Generator_1a3c0145210385b6257c8fc20cac1f830a" prot="public" virt="non-virtual"><scope>metaheuristics::generators::HillClimbingRestart</scope><name>countGender</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a03effb92915e2642b7d87763987a43ae" prot="public" virt="non-virtual"><scope>metaheuristics::generators::HillClimbingRestart</scope><name>generate</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a094d3cb1ae9e4613cc3acf49ad8b7e35" prot="protected" virt="non-virtual"><scope>metaheuristics::generators::HillClimbingRestart</scope><name>generatortype</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a1e8a1b9daa568d8e6fe3198b91280f0d" prot="public" virt="non-virtual"><scope>metaheuristics::generators::HillClimbingRestart</scope><name>getGeneratorType</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1abd8ee7fd7f93f9c7eedfe132540aa5b0" prot="public" virt="non-virtual"><scope>metaheuristics::generators::HillClimbingRestart</scope><name>getListCountBetterGender</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1ac6137239ca4b758d714c51c5b58f77d4" prot="public" virt="non-virtual"><scope>metaheuristics::generators::HillClimbingRestart</scope><name>getListCountGender</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a5e3061ee142cac26d79dd339d317a510" prot="public" virt="non-virtual"><scope>metaheuristics::generators::HillClimbingRestart</scope><name>getReference</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a49761f30e65f59d4d167087d80198d5f" prot="public" virt="non-virtual"><scope>metaheuristics::generators::HillClimbingRestart</scope><name>getReferenceList</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a1dd92d2c831e259f6448ce4aa4418c79" prot="public" virt="non-virtual"><scope>metaheuristics::generators::HillClimbingRestart</scope><name>getSonList</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a1d1837e94c6818cad9bd13d6ac2c7e8b" prot="public" virt="non-virtual"><scope>metaheuristics::generators::HillClimbingRestart</scope><name>getTrace</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a5619536e28aea8438593614d4dadc277" prot="public" virt="non-virtual"><scope>metaheuristics::generators::HillClimbingRestart</scope><name>getType</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a2c1694a6f6a5a015d846058f0725b0fd" prot="public" virt="non-virtual"><scope>metaheuristics::generators::HillClimbingRestart</scope><name>getWeight</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1aa506be31a40c309915296132624ee47e" prot="public" virt="non-virtual"><scope>metaheuristics::generators::HillClimbingRestart</scope><name>HillClimbingRestart</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1adeb6f910da4801edd022be26cca512c3" prot="protected" virt="non-virtual"><scope>metaheuristics::generators::HillClimbingRestart</scope><name>ifacceptCandidate</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a9923306bd8e167dd5f395000e599efb0" prot="private" virt="non-virtual"><scope>metaheuristics::generators::HillClimbingRestart</scope><name>listCountBetterGender</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1afc72d453fdf0b5b1a48098fcec254c83" prot="private" virt="non-virtual"><scope>metaheuristics::generators::HillClimbingRestart</scope><name>listCountGender</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a182d5ab3f9f30d90440c5adecb7fc15d" prot="private" virt="non-virtual"><scope>metaheuristics::generators::HillClimbingRestart</scope><name>listRef</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1abcb10bdd1e98fc6dff611028b9aed273" prot="protected" virt="non-virtual"><scope>metaheuristics::generators::HillClimbingRestart</scope><name>listStateReference</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1aa4e351847f576d35e7f2edf48914fdf2" prot="private" virt="non-virtual"><scope>metaheuristics::generators::HillClimbingRestart</scope><name>listTrace</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a85673ed2f36cfc7535ee29314689fb69" prot="public" virt="non-virtual"><scope>metaheuristics::generators::HillClimbingRestart</scope><name>setGeneratorType</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a2b8d1783e14c2813fe5bcf7051d8ee0e" prot="public" virt="non-virtual"><scope>metaheuristics::generators::HillClimbingRestart</scope><name>setInitialReference</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1aaffe883ee63837669011c0203a4c7581" prot="public" virt="non-virtual"><scope>metaheuristics::generators::HillClimbingRestart</scope><name>setStateRef</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a5f8692ea039bfcb06a9d273a764ff369" prot="public" virt="non-virtual"><scope>metaheuristics::generators::HillClimbingRestart</scope><name>setTypeCandidate</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1ac0eaefcd46b53f01bfeb46387a475c8b" prot="public" virt="non-virtual"><scope>metaheuristics::generators::HillClimbingRestart</scope><name>setWeight</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a0bbe1bf96597fa2ce2a4d773167837de" prot="protected" virt="non-virtual"><scope>metaheuristics::generators::HillClimbingRestart</scope><name>stateReferenceHC</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a98e07ea55428b62fa1226143689c04ca" prot="protected" virt="non-virtual"><scope>metaheuristics::generators::HillClimbingRestart</scope><name>strategy</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1aea052b47f30e618db3a455b10c1aaf17" prot="protected" virt="non-virtual"><scope>metaheuristics::generators::HillClimbingRestart</scope><name>typeAcceptation</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a14205273d7d3406afedfb2c9d2b04b0d" prot="protected" virt="non-virtual"><scope>metaheuristics::generators::HillClimbingRestart</scope><name>typeCandidate</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a7dceb2a864772b9f3b83befa4fe39be8" prot="public" virt="non-virtual"><scope>metaheuristics::generators::HillClimbingRestart</scope><name>updateReference</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1aee7424dbd521df9a700fd67d4233f8d5" prot="protected" virt="non-virtual"><scope>metaheuristics::generators::HillClimbingRestart</scope><name>weight</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

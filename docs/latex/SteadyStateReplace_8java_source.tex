@@ -1,0 +1,79 @@
+\doxysection{Steady\+State\+Replace.\+java}
+\hypertarget{SteadyStateReplace_8java_source}{}\label{SteadyStateReplace_8java_source}\index{SteadyStateReplace.java@{SteadyStateReplace.java}}
+\mbox{\hyperlink{SteadyStateReplace_8java}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00001}00001\ \textcolor{keyword}{package\ }evolutionary\_algorithms.complement;}
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00004}00004\ \textcolor{keyword}{import}\ java.util.List;}
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00005}00005\ \textcolor{keyword}{import}\ metaheurictics.strategy.Strategy;}
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00006}00006\ \textcolor{keyword}{import}\ problem.definition.State;}
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00007}00007\ \textcolor{keyword}{import}\ problem.definition.Problem.ProblemType;}
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00013}\mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1SteadyStateReplace}{00013}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1SteadyStateReplace}{SteadyStateReplace}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1Replace}{Replace}}\ \{}
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00015}00015\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00022}\mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1SteadyStateReplace_a1283c4f4d8b9bbe5ae5dc4916934c8a9}{00022}}\ \ \ \ \ \textcolor{keyword}{public}\ List<State>\ \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1SteadyStateReplace_a1283c4f4d8b9bbe5ae5dc4916934c8a9}{replace}}(\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ stateCandidate,\ List<State>\ listState)\ \{}
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00023}00023\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ stateREP\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00024}00024\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy}{Strategy}}.\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_ad2641e12c52292930364de6655333aa8}{getStrategy}}().\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_a4bc6bd95db71e14b1f48c1bfc85f1305}{getProblem}}().\mbox{\hyperlink{classproblem_1_1definition_1_1Problem_ad6f38df755179e22ffe487ba4a5c8021}{getTypeProblem}}().equals(\mbox{\hyperlink{enumproblem_1_1definition_1_1Problem_1_1ProblemType}{ProblemType}}.\mbox{\hyperlink{enumproblem_1_1definition_1_1Problem_1_1ProblemType_aa55383c4cb9a71cfeabc7f715ee0cd6e}{Maximizar}}))\ \{}
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ stateREP\ =\ \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1SteadyStateReplace_affa2735e2c66cb923a0a90661c7f3e87}{minValue}}(listState);}
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(stateCandidate.\mbox{\hyperlink{classproblem_1_1definition_1_1State_a226ea6fab8e7060cf131edfdb245a6fa}{getEvaluation}}().get(0)\ >=\ stateREP.\mbox{\hyperlink{classproblem_1_1definition_1_1State_a226ea6fab8e7060cf131edfdb245a6fa}{getEvaluation}}().get(0))\{}
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Boolean\ find\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ count\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ ((find.equals(\textcolor{keyword}{false}))\ \&\&\ (listState.size()\ >\ count))\{}
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(listState.get(count).equals(stateREP))\{}
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ listState.remove(count);}
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ listState.add(count,\ stateCandidate);}
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ find\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ count\ ++;}
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00038}00038\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00039}00039\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy}{Strategy}}.\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_ad2641e12c52292930364de6655333aa8}{getStrategy}}().\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_a4bc6bd95db71e14b1f48c1bfc85f1305}{getProblem}}().\mbox{\hyperlink{classproblem_1_1definition_1_1Problem_ad6f38df755179e22ffe487ba4a5c8021}{getTypeProblem}}().equals(\mbox{\hyperlink{enumproblem_1_1definition_1_1Problem_1_1ProblemType}{ProblemType}}.\mbox{\hyperlink{enumproblem_1_1definition_1_1Problem_1_1ProblemType_aa1a15967abb927b9b6038c0a0af5fa18}{Minimizar}}))\{}
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ stateREP\ =\ \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1SteadyStateReplace_aaefcd55e0ee9ae9823dc07ab72466288}{maxValue}}(listState);}
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(stateCandidate.\mbox{\hyperlink{classproblem_1_1definition_1_1State_a226ea6fab8e7060cf131edfdb245a6fa}{getEvaluation}}().get(0)\ <=\ stateREP.\mbox{\hyperlink{classproblem_1_1definition_1_1State_a226ea6fab8e7060cf131edfdb245a6fa}{getEvaluation}}().get(0))\{}
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Boolean\ find\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ count\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ ((find.equals(\textcolor{keyword}{false}))\ \&\&\ (listState.size()\ >\ count))\{}
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(listState.get(count).equals(stateREP))\{}
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ listState.remove(count);}
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ listState.add(count,\ stateCandidate);}
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ find\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ count\ ++;}
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00055}00055\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00056}00056\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ listState;}
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00057}00057\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00058}00058\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00064}\mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1SteadyStateReplace_affa2735e2c66cb923a0a90661c7f3e87}{00064}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1SteadyStateReplace_affa2735e2c66cb923a0a90661c7f3e87}{minValue}}(List<State>\ listState)\ \{}
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00065}00065\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ value\ =\ listState.get(0);}
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00066}00066\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ min\ =\ listState.get(0).\mbox{\hyperlink{classproblem_1_1definition_1_1State_a226ea6fab8e7060cf131edfdb245a6fa}{getEvaluation}}().get(0);}
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00067}00067\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 1;\ i\ <\ listState.size();\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (listState.get(i).getEvaluation().get(0)\ <\ min)\ \{}
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ min\ =\ listState.get(i).getEvaluation().get(0);}
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ value\ =\ listState.get(i);}
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00072}00072\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00073}00073\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ value;}
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00074}00074\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00081}\mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1SteadyStateReplace_aaefcd55e0ee9ae9823dc07ab72466288}{00081}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1SteadyStateReplace_aaefcd55e0ee9ae9823dc07ab72466288}{maxValue}}(List<State>\ listState)\ \{}
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00082}00082\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ value\ =\ listState.get(0);}
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00083}00083\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ max\ =\ listState.get(0).\mbox{\hyperlink{classproblem_1_1definition_1_1State_a226ea6fab8e7060cf131edfdb245a6fa}{getEvaluation}}().get(0);}
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00084}00084\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 1;\ i\ <\ listState.size();\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (listState.get(i).getEvaluation().get(0)\ >\ max)\ \{}
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ max\ =\ listState.get(i).getEvaluation().get(0);}
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ value\ =\ listState.get(i);}
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00089}00089\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00090}00090\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ value;}
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00091}00091\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{SteadyStateReplace_8java_source_l00092}00092\ \}}
+
+\end{DoxyCode}

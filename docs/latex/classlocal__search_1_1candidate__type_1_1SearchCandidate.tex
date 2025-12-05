@@ -1,0 +1,90 @@
+\doxysection{Referencia de la clase local\+\_\+search.\+candidate\+\_\+type.\+Search\+Candidate}
+\hypertarget{classlocal__search_1_1candidate__type_1_1SearchCandidate}{}\label{classlocal__search_1_1candidate__type_1_1SearchCandidate}\index{local\_search.candidate\_type.SearchCandidate@{local\_search.candidate\_type.SearchCandidate}}
+
+
+\doxylink{classlocal__search_1_1candidate__type_1_1SearchCandidate}{Search\+Candidate} -\/ abstract base class for candidate selection strategies.  
+
+
+
+
+Diagrama de herencia de local\+\_\+search.\+candidate\+\_\+type.\+Search\+Candidate
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlocal__search_1_1candidate__type_1_1SearchCandidate__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagrama de colaboración de local\+\_\+search.\+candidate\+\_\+type.\+Search\+Candidate\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=203pt]{classlocal__search_1_1candidate__type_1_1SearchCandidate__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+abstract \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} \mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1SearchCandidate_a0f10adc1526fb08f54427c50734f8abf}{state\+Search}} (List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ list\+Neighborhood)  throws Illegal\+Argument\+Exception, Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception, Illegal\+Access\+Exception, Invocation\+Target\+Exception, No\+Such\+Method\+Exception 
+\begin{DoxyCompactList}\small\item\em Choose a candidate state from the provided neighborhood. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+\doxylink{classlocal__search_1_1candidate__type_1_1SearchCandidate}{Search\+Candidate} -\/ abstract base class for candidate selection strategies. 
+
+Concrete subclasses implement {\ttfamily \doxylink{classlocal__search_1_1candidate__type_1_1SearchCandidate_a0f10adc1526fb08f54427c50734f8abf}{state\+Search}} to select a candidate \doxylink{classproblem_1_1definition_1_1State}{State} from a provided neighborhood. 
+
+Definición en la línea \mbox{\hyperlink{SearchCandidate_8java_source_l00019}{19}} del archivo \mbox{\hyperlink{SearchCandidate_8java_source}{Search\+Candidate.\+java}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{classlocal__search_1_1candidate__type_1_1SearchCandidate_doc-func-members}
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{classlocal__search_1_1candidate__type_1_1SearchCandidate_a0f10adc1526fb08f54427c50734f8abf}\index{local\_search.candidate\_type.SearchCandidate@{local\_search.candidate\_type.SearchCandidate}!stateSearch@{stateSearch}}
+\index{stateSearch@{stateSearch}!local\_search.candidate\_type.SearchCandidate@{local\_search.candidate\_type.SearchCandidate}}
+\doxysubsubsection{\texorpdfstring{stateSearch()}{stateSearch()}}
+{\footnotesize\ttfamily \label{classlocal__search_1_1candidate__type_1_1SearchCandidate_a0f10adc1526fb08f54427c50734f8abf} 
+abstract \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} local\+\_\+search.\+candidate\+\_\+type.\+Search\+Candidate.\+state\+Search (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$}]{list\+Neighborhood}{}\end{DoxyParamCaption}) throws Illegal\+Argument\+Exception, Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception, Illegal\+Access\+Exception, Invocation\+Target\+Exception, No\+Such\+Method\+Exception\hspace{0.3cm}{\ttfamily [abstract]}}
+
+
+
+Choose a candidate state from the provided neighborhood. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em list\+Neighborhood} & the list of neighboring States to choose from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+chosen \doxylink{classproblem_1_1definition_1_1State}{State} 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em Reflective\+Operation\+Exception} & when reflective operations fail \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplementado en \mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1GreaterCandidate_a2d2d47efc889cca9b440e64746b67f46}{local\+\_\+search.\+candidate\+\_\+type.\+Greater\+Candidate}}, \mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1NotDominatedCandidate_a8f08ece6519709427b4917712b805159}{local\+\_\+search.\+candidate\+\_\+type.\+Not\+Dominated\+Candidate}}, \mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1RandomCandidate_a66efbf984c90ee02f81608b3621220a9}{local\+\_\+search.\+candidate\+\_\+type.\+Random\+Candidate}} y \mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1SmallerCandidate_a69eb3c75ce366bc050c117fa764b82be}{local\+\_\+search.\+candidate\+\_\+type.\+Smaller\+Candidate}}.
+
+
+
+Referenciado por \mbox{\hyperlink{CandidateValue_8java_source_l00074}{local\+\_\+search.\+candidate\+\_\+type.\+Candidate\+Value.\+state\+Candidate()}}.
+
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlocal__search_1_1candidate__type_1_1SearchCandidate_a0f10adc1526fb08f54427c50734f8abf_icgraph}
+\end{center}
+\end{figure}
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{SearchCandidate_8java}{Search\+Candidate.\+java}}\end{DoxyCompactItemize}

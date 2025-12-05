@@ -1,0 +1,896 @@
+\doxysection{Referencia de la clase problem.\+definition.\+Problem}
+\hypertarget{classproblem_1_1definition_1_1Problem}{}\label{classproblem_1_1definition_1_1Problem}\index{problem.definition.Problem@{problem.definition.Problem}}
+
+
+\doxylink{classproblem_1_1definition_1_1Problem}{Problem}.  
+
+
+
+
+Diagrama de colaboración de problem.\+definition.\+Problem\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classproblem_1_1definition_1_1Problem__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Clases}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{enumproblem_1_1definition_1_1Problem_1_1ProblemType}{Problem\+Type}}
+\begin{DoxyCompactList}\small\item\em \doxylink{enumproblem_1_1definition_1_1Problem_1_1ProblemType}{Problem\+Type} -\/ descripcion (añade detalles). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classproblem_1_1definition_1_1Problem_a88bf7becf2c7c7beef8a24afe1397d6a}{Problem}} ()
+\begin{DoxyCompactList}\small\item\em Constructor por defecto. \end{DoxyCompactList}\item 
+Array\+List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1ObjetiveFunction}{Objetive\+Function}} $>$ \mbox{\hyperlink{classproblem_1_1definition_1_1Problem_a1427b83a226c7a174deee23925af14e4}{get\+Function}} ()
+\begin{DoxyCompactList}\small\item\em Obtener la lista de funciones objetivo del problema. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classproblem_1_1definition_1_1Problem_af7a73fa0767acd800875f32e97386d21}{set\+Function}} (Array\+List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1ObjetiveFunction}{Objetive\+Function}} $>$ \mbox{\hyperlink{classproblem_1_1definition_1_1Problem_a43216e475bc790f615d6c6096f55009d}{function}})
+\begin{DoxyCompactList}\small\item\em Establecer las funciones objetivo del problema. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} \mbox{\hyperlink{classproblem_1_1definition_1_1Problem_ad685c1f6c1edba96aa5082d1fdf8bb35}{get\+State}} ()
+\begin{DoxyCompactList}\small\item\em Obtener una copia del estado actual del problema. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classproblem_1_1definition_1_1Problem_afa1cbf017b0c64122fb2db7e4e7df2a2}{set\+State}} (\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} \mbox{\hyperlink{classproblem_1_1definition_1_1Problem_a9d5bdbaaa3ab7261904ca45852f46249}{state}})
+\begin{DoxyCompactList}\small\item\em Establecer el estado actual del problema (copia defensiva). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{enumproblem_1_1definition_1_1Problem_1_1ProblemType}{Problem\+Type}} \mbox{\hyperlink{classproblem_1_1definition_1_1Problem_ad6f38df755179e22ffe487ba4a5c8021}{get\+Type\+Problem}} ()
+\begin{DoxyCompactList}\small\item\em Obtener el tipo de problema (Maximizar / Minimizar). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classproblem_1_1definition_1_1Problem_a8c0af80ee55954ced5ad7a7e81c84c6a}{set\+Type\+Problem}} (\mbox{\hyperlink{enumproblem_1_1definition_1_1Problem_1_1ProblemType}{Problem\+Type}} \mbox{\hyperlink{classproblem_1_1definition_1_1Problem_a3d230269c9b6bccd54fea12149a3c7b8}{type\+Problem}})
+\begin{DoxyCompactList}\small\item\em Establecer el tipo de problema. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classproblem_1_1definition_1_1Codification}{Codification}} \mbox{\hyperlink{classproblem_1_1definition_1_1Problem_a7da2aa6b2a6f00f6f3993e6fdc43e34b}{get\+Codification}} ()
+\begin{DoxyCompactList}\small\item\em Obtener la codificación usada para representar estados. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classproblem_1_1definition_1_1Problem_a33a672579a66c2add5476e0fe446b4eb}{set\+Codification}} (\mbox{\hyperlink{classproblem_1_1definition_1_1Codification}{Codification}} \mbox{\hyperlink{classproblem_1_1definition_1_1Problem_a0ecc87130634f9aae2610a541347be19}{codification}})
+\begin{DoxyCompactList}\small\item\em Establecer la codificación de variables para el problema. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classproblem_1_1definition_1_1Operator}{Operator}} \mbox{\hyperlink{classproblem_1_1definition_1_1Problem_a4cd649edb8862f21af171491cb9b9386}{get\+Operator}} ()
+\begin{DoxyCompactList}\small\item\em Obtener el operador encargado de generar nuevos estados. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classproblem_1_1definition_1_1Problem_a2b4cde1a61f7587d1e90d3c6d0b804fe}{set\+Operator}} (\mbox{\hyperlink{classproblem_1_1definition_1_1Operator}{Operator}} \mbox{\hyperlink{classproblem_1_1definition_1_1Problem_aa8dda2409e952ae76989f705664c20a1}{operator}})
+\begin{DoxyCompactList}\small\item\em Establecer el operador de generación de estados. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classproblem_1_1definition_1_1Problem_a9a98e419b1fbf5368f68c3894ef733c6}{get\+Possible\+Value}} ()
+\begin{DoxyCompactList}\small\item\em Obtener el número de valores posibles (uso dependiente de la codificación). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classproblem_1_1definition_1_1Problem_a110ea946c11ac38487f2f94d7407ee4b}{set\+Possible\+Value}} (int \mbox{\hyperlink{classproblem_1_1definition_1_1Problem_acbe93a56dc15db61619b505d17e34127}{possible\+Value}})
+\begin{DoxyCompactList}\small\item\em Establecer el número de valores posibles. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classproblem_1_1definition_1_1Problem_a74d56127a8524b4a20f6ab831744f164}{Evaluate}} (\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} \mbox{\hyperlink{classproblem_1_1definition_1_1Problem_a9d5bdbaaa3ab7261904ca45852f46249}{state}})  throws Illegal\+Argument\+Exception, Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception, Illegal\+Access\+Exception, Invocation\+Target\+Exception, No\+Such\+Method\+Exception 
+\begin{DoxyCompactList}\small\item\em Evaluar un estado de solución. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{enumproblem_1_1extension_1_1TypeSolutionMethod}{Type\+Solution\+Method}} \mbox{\hyperlink{classproblem_1_1definition_1_1Problem_a6731d9f81ab05739dce8ddb4800e1d80}{get\+Type\+Solution\+Method}} ()
+\begin{DoxyCompactList}\small\item\em Obtener el tipo de método de solución configurado. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classproblem_1_1definition_1_1Problem_a31c200ce7f4bb23052bff995ec12d521}{set\+Type\+Solution\+Method}} (\mbox{\hyperlink{enumproblem_1_1extension_1_1TypeSolutionMethod}{Type\+Solution\+Method}} \mbox{\hyperlink{classproblem_1_1definition_1_1Problem_a331828d9233c7997c58a844b8536e869}{type\+Solution\+Method}})
+\begin{DoxyCompactList}\small\item\em Establecer el tipo de método de solución. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interfacefactory__interface_1_1IFFactorySolutionMethod}{IFFactory\+Solution\+Method}} \mbox{\hyperlink{classproblem_1_1definition_1_1Problem_a333591de57cbc861ffe762d93b7616e7}{get\+Factory\+Solution\+Method}} ()
+\begin{DoxyCompactList}\small\item\em Obtener la fábrica de métodos de solución. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classproblem_1_1definition_1_1Problem_a33e0dea915fd0bbded79b7be8478dd79}{set\+Factory\+Solution\+Method}} (\mbox{\hyperlink{interfacefactory__interface_1_1IFFactorySolutionMethod}{IFFactory\+Solution\+Method}} \mbox{\hyperlink{classproblem_1_1definition_1_1Problem_a29bde4c1722b923cb95c7157dd49ee55}{factory\+Solution\+Method}})
+\item 
+\mbox{\hyperlink{classproblem_1_1extension_1_1SolutionMethod}{Solution\+Method}} \mbox{\hyperlink{classproblem_1_1definition_1_1Problem_a443db14206d399250f49e78175ca829e}{new\+Solution\+Method}} (\mbox{\hyperlink{enumproblem_1_1extension_1_1TypeSolutionMethod}{Type\+Solution\+Method}} \mbox{\hyperlink{classproblem_1_1definition_1_1Problem_a331828d9233c7997c58a844b8536e869}{type\+Solution\+Method}})  throws Illegal\+Argument\+Exception, Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception, Illegal\+Access\+Exception, Invocation\+Target\+Exception, No\+Such\+Method\+Exception 
+\begin{DoxyCompactList}\small\item\em Crear una instancia de {\ttfamily \doxylink{classproblem_1_1extension_1_1SolutionMethod}{Solution\+Method}} para el tipo solicitado. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+Array\+List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1ObjetiveFunction}{Objetive\+Function}} $>$ \mbox{\hyperlink{classproblem_1_1definition_1_1Problem_a43216e475bc790f615d6c6096f55009d}{function}}
+\item 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} \mbox{\hyperlink{classproblem_1_1definition_1_1Problem_a9d5bdbaaa3ab7261904ca45852f46249}{state}}
+\item 
+\mbox{\hyperlink{enumproblem_1_1definition_1_1Problem_1_1ProblemType}{Problem\+Type}} \mbox{\hyperlink{classproblem_1_1definition_1_1Problem_a3d230269c9b6bccd54fea12149a3c7b8}{type\+Problem}}
+\item 
+\mbox{\hyperlink{classproblem_1_1definition_1_1Codification}{Codification}} \mbox{\hyperlink{classproblem_1_1definition_1_1Problem_a0ecc87130634f9aae2610a541347be19}{codification}}
+\item 
+\mbox{\hyperlink{classproblem_1_1definition_1_1Operator}{Operator}} \mbox{\hyperlink{classproblem_1_1definition_1_1Problem_aa8dda2409e952ae76989f705664c20a1}{operator}}
+\item 
+int \mbox{\hyperlink{classproblem_1_1definition_1_1Problem_acbe93a56dc15db61619b505d17e34127}{possible\+Value}}
+\item 
+\mbox{\hyperlink{enumproblem_1_1extension_1_1TypeSolutionMethod}{Type\+Solution\+Method}} \mbox{\hyperlink{classproblem_1_1definition_1_1Problem_a331828d9233c7997c58a844b8536e869}{type\+Solution\+Method}}
+\item 
+\mbox{\hyperlink{interfacefactory__interface_1_1IFFactorySolutionMethod}{IFFactory\+Solution\+Method}} \mbox{\hyperlink{classproblem_1_1definition_1_1Problem_a29bde4c1722b923cb95c7157dd49ee55}{factory\+Solution\+Method}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+\doxylink{classproblem_1_1definition_1_1Problem}{Problem}. 
+
+Encapsula la definición del problema a resolver\+: funciones objetivo, codificación, operador generador de estados y método de solución.
+
+Esta clase actúa como contenedor de las piezas necesarias para evaluar y manipular estados de solución dentro de los metaheurísticos. No modifica el comportamiento de evaluación —solo documenta y expone getters/setters usados por los generadores y estrategias. 
+
+Definición en la línea \mbox{\hyperlink{Problem_8java_source_l00024}{24}} del archivo \mbox{\hyperlink{Problem_8java_source}{Problem.\+java}}.
+
+
+
+\label{doc-constructors}
+\Hypertarget{classproblem_1_1definition_1_1Problem_doc-constructors}
+\doxysubsection{Documentación de constructores y destructores}
+\Hypertarget{classproblem_1_1definition_1_1Problem_a88bf7becf2c7c7beef8a24afe1397d6a}\index{problem.definition.Problem@{problem.definition.Problem}!Problem@{Problem}}
+\index{Problem@{Problem}!problem.definition.Problem@{problem.definition.Problem}}
+\doxysubsubsection{\texorpdfstring{Problem()}{Problem()}}
+{\footnotesize\ttfamily \label{classproblem_1_1definition_1_1Problem_a88bf7becf2c7c7beef8a24afe1397d6a} 
+problem.\+definition.\+Problem.\+Problem (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor por defecto. 
+
+Inicializa una instancia vacía; los componentes concretos (funciones, codificación, operador) se deben inyectar mediante los setters antes de usar {\ttfamily \doxylink{classproblem_1_1definition_1_1Problem_a74d56127a8524b4a20f6ab831744f164}{Evaluate(\+State)}}. 
+
+Definición en la línea \mbox{\hyperlink{Problem_8java_source_l00047}{47}} del archivo \mbox{\hyperlink{Problem_8java_source}{Problem.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ super();}
+\DoxyCodeLine{00049\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-func-members}
+\Hypertarget{classproblem_1_1definition_1_1Problem_doc-func-members}
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{classproblem_1_1definition_1_1Problem_a74d56127a8524b4a20f6ab831744f164}\index{problem.definition.Problem@{problem.definition.Problem}!Evaluate@{Evaluate}}
+\index{Evaluate@{Evaluate}!problem.definition.Problem@{problem.definition.Problem}}
+\doxysubsubsection{\texorpdfstring{Evaluate()}{Evaluate()}}
+{\footnotesize\ttfamily \label{classproblem_1_1definition_1_1Problem_a74d56127a8524b4a20f6ab831744f164} 
+void problem.\+definition.\+Problem.\+Evaluate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}}]{state}{}\end{DoxyParamCaption}) throws Illegal\+Argument\+Exception, Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception, Illegal\+Access\+Exception, Invocation\+Target\+Exception, No\+Such\+Method\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Evaluar un estado de solución. 
+
+Dependiendo del {\ttfamily \doxylink{classproblem_1_1definition_1_1Problem_a331828d9233c7997c58a844b8536e869}{type\+Solution\+Method}} realiza una evaluación simple usando la primera función objetivo o delega en un {\ttfamily \doxylink{classproblem_1_1extension_1_1SolutionMethod}{Solution\+Method}}.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em state} & estado a evaluar (se modifica su lista de evaluaciones) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em Reflective\+Operation\+Exception} & si falla la creación reflexiva del método de solución \\
+\hline
+\end{DoxyExceptions}
+
+
+Definición en la línea \mbox{\hyperlink{Problem_8java_source_l00171}{171}} del archivo \mbox{\hyperlink{Problem_8java_source}{Problem.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ eval\ =\ 0;\ \ \ \ \ \ \ }
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ ArrayList<Double>\ evaluation\ =\ \textcolor{keyword}{new}\ ArrayList<Double>(this.\textcolor{keyword}{function}.size());}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (typeSolutionMethod\ ==\ \textcolor{keyword}{null})\ \{}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ eval=\ \textcolor{keyword}{function}.get(0).Evaluation(state);}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \ \ \ \ evaluation.add(evaluation.size(),\ eval);}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \ \ \ \ state.setEvaluation(evaluation);}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \ \ \ \ SolutionMethod\ method\ =\ newSolutionMethod(typeSolutionMethod);}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \ \ \ \ method.evaluationState(state);}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00183\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{classproblem_1_1extension_1_1SolutionMethod_ae31d6d6000b9043bdee5e2d79fd2a628}{problem.\+extension.\+Solution\+Method.\+evaluation\+State()}}, \mbox{\hyperlink{Problem_8java_source_l00221}{new\+Solution\+Method()}}, \mbox{\hyperlink{Problem_8java_source_l00032}{state}} y \mbox{\hyperlink{Problem_8java_source_l00037}{type\+Solution\+Method}}.
+
+
+
+Referenciado por \mbox{\hyperlink{MultiGenerator_8java_source_l00129}{metaheuristics.\+generators.\+Multi\+Generator.\+create\+Instance\+Generators\+BPP()}}, \mbox{\hyperlink{HillClimbingRestart_8java_source_l00073}{metaheuristics.\+generators.\+Hill\+Climbing\+Restart.\+generate()}}, \mbox{\hyperlink{NotDominatedCandidate_8java_source_l00027}{local\+\_\+search.\+candidate\+\_\+type.\+Not\+Dominated\+Candidate.\+state\+Search()}}, \mbox{\hyperlink{MultiobjectiveHillClimbingDistance_8java_source_l00087}{metaheuristics.\+generators.\+Multiobjective\+Hill\+Climbing\+Distance.\+update\+Reference()}} y \mbox{\hyperlink{MultiobjectiveHillClimbingRestart_8java_source_l00083}{metaheuristics.\+generators.\+Multiobjective\+Hill\+Climbing\+Restart.\+update\+Reference()}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classproblem_1_1definition_1_1Problem_a74d56127a8524b4a20f6ab831744f164_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classproblem_1_1definition_1_1Problem_a74d56127a8524b4a20f6ab831744f164_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classproblem_1_1definition_1_1Problem_a7da2aa6b2a6f00f6f3993e6fdc43e34b}\index{problem.definition.Problem@{problem.definition.Problem}!getCodification@{getCodification}}
+\index{getCodification@{getCodification}!problem.definition.Problem@{problem.definition.Problem}}
+\doxysubsubsection{\texorpdfstring{getCodification()}{getCodification()}}
+{\footnotesize\ttfamily \label{classproblem_1_1definition_1_1Problem_a7da2aa6b2a6f00f6f3993e6fdc43e34b} 
+\mbox{\hyperlink{classproblem_1_1definition_1_1Codification}{Codification}} problem.\+definition.\+Problem.\+get\+Codification (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtener la codificación usada para representar estados. 
+
+\begin{DoxyReturn}{Devuelve}
+la {\ttfamily \doxylink{classproblem_1_1definition_1_1Codification}{Codification}} configurada 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{Problem_8java_source_l00114}{114}} del archivo \mbox{\hyperlink{Problem_8java_source}{Problem.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ codification;}
+\DoxyCodeLine{00116\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{Problem_8java_source_l00034}{codification}}.
+
+
+
+Referenciado por \mbox{\hyperlink{OnePointCrossover_8java_source_l00032}{evolutionary\+\_\+algorithms.\+complement.\+One\+Point\+Crossover.\+crossover()}}, \mbox{\hyperlink{MutationOperator_8java_source_l00032}{problem\+\_\+operators.\+Mutation\+Operator.\+generated\+New\+State()}}, \mbox{\hyperlink{AIOMutation_8java_source_l00031}{evolutionary\+\_\+algorithms.\+complement.\+AIOMutation.\+mutation()}}, \mbox{\hyperlink{OnePointMutation_8java_source_l00028}{evolutionary\+\_\+algorithms.\+complement.\+One\+Point\+Mutation.\+mutation()}}, \mbox{\hyperlink{TowPointsMutation_8java_source_l00020}{evolutionary\+\_\+algorithms.\+complement.\+Tow\+Points\+Mutation.\+mutation()}} y \mbox{\hyperlink{ProbabilisticSampling_8java_source_l00033}{evolutionary\+\_\+algorithms.\+complement.\+Probabilistic\+Sampling.\+sampling()}}.
+
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classproblem_1_1definition_1_1Problem_a7da2aa6b2a6f00f6f3993e6fdc43e34b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classproblem_1_1definition_1_1Problem_a333591de57cbc861ffe762d93b7616e7}\index{problem.definition.Problem@{problem.definition.Problem}!getFactorySolutionMethod@{getFactorySolutionMethod}}
+\index{getFactorySolutionMethod@{getFactorySolutionMethod}!problem.definition.Problem@{problem.definition.Problem}}
+\doxysubsubsection{\texorpdfstring{getFactorySolutionMethod()}{getFactorySolutionMethod()}}
+{\footnotesize\ttfamily \label{classproblem_1_1definition_1_1Problem_a333591de57cbc861ffe762d93b7616e7} 
+\mbox{\hyperlink{interfacefactory__interface_1_1IFFactorySolutionMethod}{IFFactory\+Solution\+Method}} problem.\+definition.\+Problem.\+get\+Factory\+Solution\+Method (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtener la fábrica de métodos de solución. 
+
+\begin{DoxyReturn}{Devuelve}
+fábrica configurada (puede ser null) 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{Problem_8java_source_l00206}{206}} del archivo \mbox{\hyperlink{Problem_8java_source}{Problem.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ factorySolutionMethod;}
+\DoxyCodeLine{00208\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{Problem_8java_source_l00038}{factory\+Solution\+Method}}.
+
+\Hypertarget{classproblem_1_1definition_1_1Problem_a1427b83a226c7a174deee23925af14e4}\index{problem.definition.Problem@{problem.definition.Problem}!getFunction@{getFunction}}
+\index{getFunction@{getFunction}!problem.definition.Problem@{problem.definition.Problem}}
+\doxysubsubsection{\texorpdfstring{getFunction()}{getFunction()}}
+{\footnotesize\ttfamily \label{classproblem_1_1definition_1_1Problem_a1427b83a226c7a174deee23925af14e4} 
+Array\+List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1ObjetiveFunction}{Objetive\+Function}} $>$ problem.\+definition.\+Problem.\+get\+Function (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtener la lista de funciones objetivo del problema. 
+
+\begin{DoxyReturn}{Devuelve}
+copia defensiva de la lista de {\ttfamily \doxylink{classproblem_1_1definition_1_1ObjetiveFunction}{Objetive\+Function}}; nunca devuelve la referencia interna (puede ser lista vacía). 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{Problem_8java_source_l00057}{57}} del archivo \mbox{\hyperlink{Problem_8java_source}{Problem.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (\textcolor{keyword}{function}\ ==\ \textcolor{keyword}{null})\ ?\ \textcolor{keyword}{new}\ ArrayList<ObjetiveFunction>()\ :\ new\ ArrayList<ObjetiveFunction>(function);}
+\DoxyCodeLine{00059\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referenciado por \mbox{\hyperlink{FactoresPonderados_8java_source_l00029}{problem.\+extension.\+Factores\+Ponderados.\+evaluation\+State()}}, \mbox{\hyperlink{MultiObjetivoPuro_8java_source_l00029}{problem.\+extension.\+Multi\+Objetivo\+Puro.\+evaluation\+State()}}, \mbox{\hyperlink{DistributionEstimationAlgorithm_8java_source_l00095}{metaheuristics.\+generators.\+Distribution\+Estimation\+Algorithm.\+generate()}} y \mbox{\hyperlink{Strategy_8java_source_l00540}{metaheurictics.\+strategy.\+Strategy.\+update\+Ref\+Generator()}}.
+
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classproblem_1_1definition_1_1Problem_a1427b83a226c7a174deee23925af14e4_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classproblem_1_1definition_1_1Problem_a4cd649edb8862f21af171491cb9b9386}\index{problem.definition.Problem@{problem.definition.Problem}!getOperator@{getOperator}}
+\index{getOperator@{getOperator}!problem.definition.Problem@{problem.definition.Problem}}
+\doxysubsubsection{\texorpdfstring{getOperator()}{getOperator()}}
+{\footnotesize\ttfamily \label{classproblem_1_1definition_1_1Problem_a4cd649edb8862f21af171491cb9b9386} 
+\mbox{\hyperlink{classproblem_1_1definition_1_1Operator}{Operator}} problem.\+definition.\+Problem.\+get\+Operator (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtener el operador encargado de generar nuevos estados. 
+
+\begin{DoxyReturn}{Devuelve}
+operador configurado 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{Problem_8java_source_l00131}{131}} del archivo \mbox{\hyperlink{Problem_8java_source}{Problem.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ operator;}
+\DoxyCodeLine{00133\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{Problem_8java_source_l00035}{operator}}.
+
+
+
+Referenciado por \mbox{\hyperlink{HillClimbing_8java_source_l00072}{metaheuristics.\+generators.\+Hill\+Climbing.\+generate()}}, \mbox{\hyperlink{HillClimbingRestart_8java_source_l00073}{metaheuristics.\+generators.\+Hill\+Climbing\+Restart.\+generate()}}, \mbox{\hyperlink{LimitThreshold_8java_source_l00093}{metaheuristics.\+generators.\+Limit\+Threshold.\+generate()}}, \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00090}{metaheuristics.\+generators.\+Multi\+Case\+Simulated\+Annealing.\+generate()}}, \mbox{\hyperlink{MultiobjectiveHillClimbingDistance_8java_source_l00068}{metaheuristics.\+generators.\+Multiobjective\+Hill\+Climbing\+Distance.\+generate()}}, \mbox{\hyperlink{MultiobjectiveHillClimbingRestart_8java_source_l00071}{metaheuristics.\+generators.\+Multiobjective\+Hill\+Climbing\+Restart.\+generate()}}, \mbox{\hyperlink{MultiobjectiveStochasticHillClimbing_8java_source_l00055}{metaheuristics.\+generators.\+Multiobjective\+Stochastic\+Hill\+Climbing.\+generate()}}, \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00091}{metaheuristics.\+generators.\+Multiobjective\+Tabu\+Search.\+generate()}}, \mbox{\hyperlink{RandomSearch_8java_source_l00066}{metaheuristics.\+generators.\+Random\+Search.\+generate()}}, \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00118}{metaheuristics.\+generators.\+Simulated\+Annealing.\+generate()}}, \mbox{\hyperlink{TabuSearch_8java_source_l00095}{metaheuristics.\+generators.\+Tabu\+Search.\+generate()}}, \mbox{\hyperlink{CandidateValue_8java_source_l00074}{local\+\_\+search.\+candidate\+\_\+type.\+Candidate\+Value.\+state\+Candidate()}}, \mbox{\hyperlink{MultiobjectiveHillClimbingDistance_8java_source_l00087}{metaheuristics.\+generators.\+Multiobjective\+Hill\+Climbing\+Distance.\+update\+Reference()}} y \mbox{\hyperlink{MultiobjectiveHillClimbingRestart_8java_source_l00083}{metaheuristics.\+generators.\+Multiobjective\+Hill\+Climbing\+Restart.\+update\+Reference()}}.
+
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classproblem_1_1definition_1_1Problem_a4cd649edb8862f21af171491cb9b9386_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classproblem_1_1definition_1_1Problem_a9a98e419b1fbf5368f68c3894ef733c6}\index{problem.definition.Problem@{problem.definition.Problem}!getPossibleValue@{getPossibleValue}}
+\index{getPossibleValue@{getPossibleValue}!problem.definition.Problem@{problem.definition.Problem}}
+\doxysubsubsection{\texorpdfstring{getPossibleValue()}{getPossibleValue()}}
+{\footnotesize\ttfamily \label{classproblem_1_1definition_1_1Problem_a9a98e419b1fbf5368f68c3894ef733c6} 
+int problem.\+definition.\+Problem.\+get\+Possible\+Value (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtener el número de valores posibles (uso dependiente de la codificación). 
+
+\begin{DoxyReturn}{Devuelve}
+número de valores posibles 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{Problem_8java_source_l00149}{149}} del archivo \mbox{\hyperlink{Problem_8java_source}{Problem.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ possibleValue;}
+\DoxyCodeLine{00151\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{Problem_8java_source_l00036}{possible\+Value}}.
+
+
+
+Referenciado por \mbox{\hyperlink{ProbabilisticSampling_8java_source_l00033}{evolutionary\+\_\+algorithms.\+complement.\+Probabilistic\+Sampling.\+sampling()}}.
+
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classproblem_1_1definition_1_1Problem_a9a98e419b1fbf5368f68c3894ef733c6_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classproblem_1_1definition_1_1Problem_ad685c1f6c1edba96aa5082d1fdf8bb35}\index{problem.definition.Problem@{problem.definition.Problem}!getState@{getState}}
+\index{getState@{getState}!problem.definition.Problem@{problem.definition.Problem}}
+\doxysubsubsection{\texorpdfstring{getState()}{getState()}}
+{\footnotesize\ttfamily \label{classproblem_1_1definition_1_1Problem_ad685c1f6c1edba96aa5082d1fdf8bb35} 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} problem.\+definition.\+Problem.\+get\+State (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtener una copia del estado actual del problema. 
+
+Devuelve una copia para evitar aliasing con la representación interna.
+
+\begin{DoxyReturn}{Devuelve}
+copia de {\ttfamily \doxylink{classproblem_1_1definition_1_1State}{State}} o null si no hay estado inicial. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{Problem_8java_source_l00079}{79}} del archivo \mbox{\hyperlink{Problem_8java_source}{Problem.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (state\ ==\ \textcolor{keyword}{null})\ ?\ null\ :\ \textcolor{keyword}{new}\ State(state);}
+\DoxyCodeLine{00081\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{Problem_8java_source_l00032}{state}}.
+
+
+
+Referenciado por \mbox{\hyperlink{EvolutionStrategies_8java_source_l00076}{metaheuristics.\+generators.\+Evolution\+Strategies.\+generate()}}, \mbox{\hyperlink{GeneticAlgorithm_8java_source_l00090}{metaheuristics.\+generators.\+Genetic\+Algorithm.\+generate()}} y \mbox{\hyperlink{MultiGenerator_8java_source_l00090}{metaheuristics.\+generators.\+Multi\+Generator.\+initialize\+Generators()}}.
+
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classproblem_1_1definition_1_1Problem_ad685c1f6c1edba96aa5082d1fdf8bb35_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classproblem_1_1definition_1_1Problem_ad6f38df755179e22ffe487ba4a5c8021}\index{problem.definition.Problem@{problem.definition.Problem}!getTypeProblem@{getTypeProblem}}
+\index{getTypeProblem@{getTypeProblem}!problem.definition.Problem@{problem.definition.Problem}}
+\doxysubsubsection{\texorpdfstring{getTypeProblem()}{getTypeProblem()}}
+{\footnotesize\ttfamily \label{classproblem_1_1definition_1_1Problem_ad6f38df755179e22ffe487ba4a5c8021} 
+\mbox{\hyperlink{enumproblem_1_1definition_1_1Problem_1_1ProblemType}{Problem\+Type}} problem.\+definition.\+Problem.\+get\+Type\+Problem (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtener el tipo de problema (Maximizar / Minimizar). 
+
+\begin{DoxyReturn}{Devuelve}
+el {\ttfamily \doxylink{enumproblem_1_1definition_1_1Problem_1_1ProblemType}{Problem\+Type}} configurado para este problema 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{Problem_8java_source_l00097}{97}} del archivo \mbox{\hyperlink{Problem_8java_source}{Problem.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ typeProblem;}
+\DoxyCodeLine{00099\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{Problem_8java_source_l00033}{type\+Problem}}.
+
+
+
+Referenciado por \mbox{\hyperlink{Dominance_8java_source_l00087}{local\+\_\+search.\+acceptation\+\_\+type.\+Dominance.\+dominance()}}, \mbox{\hyperlink{FactoresPonderados_8java_source_l00029}{problem.\+extension.\+Factores\+Ponderados.\+evaluation\+State()}}, \mbox{\hyperlink{MultiObjetivoPuro_8java_source_l00029}{problem.\+extension.\+Multi\+Objetivo\+Puro.\+evaluation\+State()}}, \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00403}{metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+g\+Best\+Inicial()}}, \mbox{\hyperlink{DistributionEstimationAlgorithm_8java_source_l00124}{metaheuristics.\+generators.\+Distribution\+Estimation\+Algorithm.\+get\+Reference()}}, \mbox{\hyperlink{EvolutionStrategies_8java_source_l00101}{metaheuristics.\+generators.\+Evolution\+Strategies.\+get\+Reference()}}, \mbox{\hyperlink{GeneticAlgorithm_8java_source_l00132}{metaheuristics.\+generators.\+Genetic\+Algorithm.\+get\+Reference()}}, \mbox{\hyperlink{HillClimbing_8java_source_l00048}{metaheuristics.\+generators.\+Hill\+Climbing.\+Hill\+Climbing()}}, \mbox{\hyperlink{HillClimbingRestart_8java_source_l00047}{metaheuristics.\+generators.\+Hill\+Climbing\+Restart.\+Hill\+Climbing\+Restart()}}, \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00173}{metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+inicialice\+LBest()}}, \mbox{\hyperlink{SteadyStateReplace_8java_source_l00022}{evolutionary\+\_\+algorithms.\+complement.\+Steady\+State\+Replace.\+replace()}}, \mbox{\hyperlink{MultiGenerator_8java_source_l00302}{metaheuristics.\+generators.\+Multi\+Generator.\+search\+State()}}, \mbox{\hyperlink{TruncationSelection_8java_source_l00062}{evolutionary\+\_\+algorithms.\+complement.\+Truncation\+Selection.\+selection()}}, \mbox{\hyperlink{Particle_8java_source_l00203}{metaheuristics.\+generators.\+Particle.\+update\+Reference()}} y \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00364}{metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+update\+Reference()}}.
+
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classproblem_1_1definition_1_1Problem_ad6f38df755179e22ffe487ba4a5c8021_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classproblem_1_1definition_1_1Problem_a6731d9f81ab05739dce8ddb4800e1d80}\index{problem.definition.Problem@{problem.definition.Problem}!getTypeSolutionMethod@{getTypeSolutionMethod}}
+\index{getTypeSolutionMethod@{getTypeSolutionMethod}!problem.definition.Problem@{problem.definition.Problem}}
+\doxysubsubsection{\texorpdfstring{getTypeSolutionMethod()}{getTypeSolutionMethod()}}
+{\footnotesize\ttfamily \label{classproblem_1_1definition_1_1Problem_a6731d9f81ab05739dce8ddb4800e1d80} 
+\mbox{\hyperlink{enumproblem_1_1extension_1_1TypeSolutionMethod}{Type\+Solution\+Method}} problem.\+definition.\+Problem.\+get\+Type\+Solution\+Method (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtener el tipo de método de solución configurado. 
+
+\begin{DoxyReturn}{Devuelve}
+tipo de método de solución o null 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{Problem_8java_source_l00190}{190}} del archivo \mbox{\hyperlink{Problem_8java_source}{Problem.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ typeSolutionMethod;}
+\DoxyCodeLine{00192\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{Problem_8java_source_l00037}{type\+Solution\+Method}}.
+
+\Hypertarget{classproblem_1_1definition_1_1Problem_a443db14206d399250f49e78175ca829e}\index{problem.definition.Problem@{problem.definition.Problem}!newSolutionMethod@{newSolutionMethod}}
+\index{newSolutionMethod@{newSolutionMethod}!problem.definition.Problem@{problem.definition.Problem}}
+\doxysubsubsection{\texorpdfstring{newSolutionMethod()}{newSolutionMethod()}}
+{\footnotesize\ttfamily \label{classproblem_1_1definition_1_1Problem_a443db14206d399250f49e78175ca829e} 
+\mbox{\hyperlink{classproblem_1_1extension_1_1SolutionMethod}{Solution\+Method}} problem.\+definition.\+Problem.\+new\+Solution\+Method (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{enumproblem_1_1extension_1_1TypeSolutionMethod}{Type\+Solution\+Method}}}]{type\+Solution\+Method}{}\end{DoxyParamCaption}) throws Illegal\+Argument\+Exception, Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception, Illegal\+Access\+Exception, Invocation\+Target\+Exception, No\+Such\+Method\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Crear una instancia de {\ttfamily \doxylink{classproblem_1_1extension_1_1SolutionMethod}{Solution\+Method}} para el tipo solicitado. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em type\+Solution\+Method} & tipo de método de solución a crear \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+instancia de {\ttfamily \doxylink{classproblem_1_1extension_1_1SolutionMethod}{Solution\+Method}} 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em Reflective\+Operation\+Exception} & si la creación vía fábrica falla \\
+\hline
+\end{DoxyExceptions}
+
+
+Definición en la línea \mbox{\hyperlink{Problem_8java_source_l00221}{221}} del archivo \mbox{\hyperlink{Problem_8java_source}{Problem.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ factorySolutionMethod\ =\ \textcolor{keyword}{new}\ FactorySolutionMethod();}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ SolutionMethod\ solutionMethod\ =\ factorySolutionMethod.createdSolutionMethod(typeSolutionMethod);}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ solutionMethod;}
+\DoxyCodeLine{00225\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{Problem_8java_source_l00038}{factory\+Solution\+Method}} y \mbox{\hyperlink{Problem_8java_source_l00037}{type\+Solution\+Method}}.
+
+
+
+Referenciado por \mbox{\hyperlink{Problem_8java_source_l00171}{Evaluate()}}.
+
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classproblem_1_1definition_1_1Problem_a443db14206d399250f49e78175ca829e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classproblem_1_1definition_1_1Problem_a33a672579a66c2add5476e0fe446b4eb}\index{problem.definition.Problem@{problem.definition.Problem}!setCodification@{setCodification}}
+\index{setCodification@{setCodification}!problem.definition.Problem@{problem.definition.Problem}}
+\doxysubsubsection{\texorpdfstring{setCodification()}{setCodification()}}
+{\footnotesize\ttfamily \label{classproblem_1_1definition_1_1Problem_a33a672579a66c2add5476e0fe446b4eb} 
+void problem.\+definition.\+Problem.\+set\+Codification (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classproblem_1_1definition_1_1Codification}{Codification}}}]{codification}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Establecer la codificación de variables para el problema. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em codification} & implementación de {\ttfamily \doxylink{classproblem_1_1definition_1_1Codification}{Codification}} \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{Problem_8java_source_l00122}{122}} del archivo \mbox{\hyperlink{Problem_8java_source}{Problem.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ this.codification\ =\ codification;}
+\DoxyCodeLine{00124\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{Problem_8java_source_l00034}{codification}}.
+
+\Hypertarget{classproblem_1_1definition_1_1Problem_a33e0dea915fd0bbded79b7be8478dd79}\index{problem.definition.Problem@{problem.definition.Problem}!setFactorySolutionMethod@{setFactorySolutionMethod}}
+\index{setFactorySolutionMethod@{setFactorySolutionMethod}!problem.definition.Problem@{problem.definition.Problem}}
+\doxysubsubsection{\texorpdfstring{setFactorySolutionMethod()}{setFactorySolutionMethod()}}
+{\footnotesize\ttfamily \label{classproblem_1_1definition_1_1Problem_a33e0dea915fd0bbded79b7be8478dd79} 
+void problem.\+definition.\+Problem.\+set\+Factory\+Solution\+Method (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfacefactory__interface_1_1IFFactorySolutionMethod}{IFFactory\+Solution\+Method}}}]{factory\+Solution\+Method}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{Problem_8java_source_l00209}{209}} del archivo \mbox{\hyperlink{Problem_8java_source}{Problem.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ this.factorySolutionMethod\ =\ factorySolutionMethod;}
+\DoxyCodeLine{00212\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{Problem_8java_source_l00038}{factory\+Solution\+Method}}.
+
+\Hypertarget{classproblem_1_1definition_1_1Problem_af7a73fa0767acd800875f32e97386d21}\index{problem.definition.Problem@{problem.definition.Problem}!setFunction@{setFunction}}
+\index{setFunction@{setFunction}!problem.definition.Problem@{problem.definition.Problem}}
+\doxysubsubsection{\texorpdfstring{setFunction()}{setFunction()}}
+{\footnotesize\ttfamily \label{classproblem_1_1definition_1_1Problem_af7a73fa0767acd800875f32e97386d21} 
+void problem.\+definition.\+Problem.\+set\+Function (\begin{DoxyParamCaption}\item[{Array\+List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1ObjetiveFunction}{Objetive\+Function}} $>$}]{function}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Establecer las funciones objetivo del problema. 
+
+Se realiza una copia defensiva de la lista proporcionada.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em function} & lista de funciones objetivo \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{Problem_8java_source_l00068}{68}} del archivo \mbox{\hyperlink{Problem_8java_source}{Problem.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ this.function\ =\ (\textcolor{keyword}{function}\ ==\ \textcolor{keyword}{null})\ ?\ \textcolor{keyword}{new}\ ArrayList<ObjetiveFunction>()\ :\ \textcolor{keyword}{new}\ ArrayList<ObjetiveFunction>(\textcolor{keyword}{function});}
+\DoxyCodeLine{00070\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classproblem_1_1definition_1_1Problem_a2b4cde1a61f7587d1e90d3c6d0b804fe}\index{problem.definition.Problem@{problem.definition.Problem}!setOperator@{setOperator}}
+\index{setOperator@{setOperator}!problem.definition.Problem@{problem.definition.Problem}}
+\doxysubsubsection{\texorpdfstring{setOperator()}{setOperator()}}
+{\footnotesize\ttfamily \label{classproblem_1_1definition_1_1Problem_a2b4cde1a61f7587d1e90d3c6d0b804fe} 
+void problem.\+definition.\+Problem.\+set\+Operator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classproblem_1_1definition_1_1Operator}{Operator}}}]{operator}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Establecer el operador de generación de estados. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em operator} & operador que implementa la generación de estados \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{Problem_8java_source_l00140}{140}} del archivo \mbox{\hyperlink{Problem_8java_source}{Problem.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ this.operator\ =\ operator;}
+\DoxyCodeLine{00142\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{Problem_8java_source_l00035}{operator}}.
+
+\Hypertarget{classproblem_1_1definition_1_1Problem_a110ea946c11ac38487f2f94d7407ee4b}\index{problem.definition.Problem@{problem.definition.Problem}!setPossibleValue@{setPossibleValue}}
+\index{setPossibleValue@{setPossibleValue}!problem.definition.Problem@{problem.definition.Problem}}
+\doxysubsubsection{\texorpdfstring{setPossibleValue()}{setPossibleValue()}}
+{\footnotesize\ttfamily \label{classproblem_1_1definition_1_1Problem_a110ea946c11ac38487f2f94d7407ee4b} 
+void problem.\+definition.\+Problem.\+set\+Possible\+Value (\begin{DoxyParamCaption}\item[{int}]{possible\+Value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Establecer el número de valores posibles. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em possible\+Value} & número de valores \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{Problem_8java_source_l00158}{158}} del archivo \mbox{\hyperlink{Problem_8java_source}{Problem.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ this.possibleValue\ =\ possibleValue;}
+\DoxyCodeLine{00160\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{Problem_8java_source_l00036}{possible\+Value}}.
+
+\Hypertarget{classproblem_1_1definition_1_1Problem_afa1cbf017b0c64122fb2db7e4e7df2a2}\index{problem.definition.Problem@{problem.definition.Problem}!setState@{setState}}
+\index{setState@{setState}!problem.definition.Problem@{problem.definition.Problem}}
+\doxysubsubsection{\texorpdfstring{setState()}{setState()}}
+{\footnotesize\ttfamily \label{classproblem_1_1definition_1_1Problem_afa1cbf017b0c64122fb2db7e4e7df2a2} 
+void problem.\+definition.\+Problem.\+set\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}}]{state}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Establecer el estado actual del problema (copia defensiva). 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em state} & estado a asignar; si es null se resetea el estado interno. \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{Problem_8java_source_l00088}{88}} del archivo \mbox{\hyperlink{Problem_8java_source}{Problem.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ this.state\ =\ (state\ ==\ \textcolor{keyword}{null})\ ?\ \textcolor{keyword}{null}\ :\ new\ State(state);}
+\DoxyCodeLine{00090\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{Problem_8java_source_l00032}{state}}.
+
+
+
+Referenciado por \mbox{\hyperlink{Strategy_8java_source_l00094}{metaheurictics.\+strategy.\+Strategy.\+execute\+Strategy()}}.
+
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classproblem_1_1definition_1_1Problem_afa1cbf017b0c64122fb2db7e4e7df2a2_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classproblem_1_1definition_1_1Problem_a8c0af80ee55954ced5ad7a7e81c84c6a}\index{problem.definition.Problem@{problem.definition.Problem}!setTypeProblem@{setTypeProblem}}
+\index{setTypeProblem@{setTypeProblem}!problem.definition.Problem@{problem.definition.Problem}}
+\doxysubsubsection{\texorpdfstring{setTypeProblem()}{setTypeProblem()}}
+{\footnotesize\ttfamily \label{classproblem_1_1definition_1_1Problem_a8c0af80ee55954ced5ad7a7e81c84c6a} 
+void problem.\+definition.\+Problem.\+set\+Type\+Problem (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{enumproblem_1_1definition_1_1Problem_1_1ProblemType}{Problem\+Type}}}]{type\+Problem}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Establecer el tipo de problema. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em type\+Problem} & tipo de problema (Maximizar o Minimizar) \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{Problem_8java_source_l00105}{105}} del archivo \mbox{\hyperlink{Problem_8java_source}{Problem.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ this.typeProblem\ =\ typeProblem;}
+\DoxyCodeLine{00107\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{Problem_8java_source_l00033}{type\+Problem}}.
+
+\Hypertarget{classproblem_1_1definition_1_1Problem_a31c200ce7f4bb23052bff995ec12d521}\index{problem.definition.Problem@{problem.definition.Problem}!setTypeSolutionMethod@{setTypeSolutionMethod}}
+\index{setTypeSolutionMethod@{setTypeSolutionMethod}!problem.definition.Problem@{problem.definition.Problem}}
+\doxysubsubsection{\texorpdfstring{setTypeSolutionMethod()}{setTypeSolutionMethod()}}
+{\footnotesize\ttfamily \label{classproblem_1_1definition_1_1Problem_a31c200ce7f4bb23052bff995ec12d521} 
+void problem.\+definition.\+Problem.\+set\+Type\+Solution\+Method (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{enumproblem_1_1extension_1_1TypeSolutionMethod}{Type\+Solution\+Method}}}]{type\+Solution\+Method}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Establecer el tipo de método de solución. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em type\+Solution\+Method} & tipo a usar para evaluar estados \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{Problem_8java_source_l00198}{198}} del archivo \mbox{\hyperlink{Problem_8java_source}{Problem.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ this.typeSolutionMethod\ =\ typeSolutionMethod;}
+\DoxyCodeLine{00200\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{Problem_8java_source_l00037}{type\+Solution\+Method}}.
+
+
+
+\label{doc-variable-members}
+\Hypertarget{classproblem_1_1definition_1_1Problem_doc-variable-members}
+\doxysubsection{Documentación de datos miembro}
+\Hypertarget{classproblem_1_1definition_1_1Problem_a0ecc87130634f9aae2610a541347be19}\index{problem.definition.Problem@{problem.definition.Problem}!codification@{codification}}
+\index{codification@{codification}!problem.definition.Problem@{problem.definition.Problem}}
+\doxysubsubsection{\texorpdfstring{codification}{codification}}
+{\footnotesize\ttfamily \label{classproblem_1_1definition_1_1Problem_a0ecc87130634f9aae2610a541347be19} 
+\mbox{\hyperlink{classproblem_1_1definition_1_1Codification}{Codification}} problem.\+definition.\+Problem.\+codification\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{Problem_8java_source_l00034}{34}} del archivo \mbox{\hyperlink{Problem_8java_source}{Problem.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{Problem_8java_source_l00114}{get\+Codification()}} y \mbox{\hyperlink{Problem_8java_source_l00122}{set\+Codification()}}.
+
+\Hypertarget{classproblem_1_1definition_1_1Problem_a29bde4c1722b923cb95c7157dd49ee55}\index{problem.definition.Problem@{problem.definition.Problem}!factorySolutionMethod@{factorySolutionMethod}}
+\index{factorySolutionMethod@{factorySolutionMethod}!problem.definition.Problem@{problem.definition.Problem}}
+\doxysubsubsection{\texorpdfstring{factorySolutionMethod}{factorySolutionMethod}}
+{\footnotesize\ttfamily \label{classproblem_1_1definition_1_1Problem_a29bde4c1722b923cb95c7157dd49ee55} 
+\mbox{\hyperlink{interfacefactory__interface_1_1IFFactorySolutionMethod}{IFFactory\+Solution\+Method}} problem.\+definition.\+Problem.\+factory\+Solution\+Method\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{Problem_8java_source_l00038}{38}} del archivo \mbox{\hyperlink{Problem_8java_source}{Problem.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{Problem_8java_source_l00206}{get\+Factory\+Solution\+Method()}}, \mbox{\hyperlink{Problem_8java_source_l00221}{new\+Solution\+Method()}} y \mbox{\hyperlink{Problem_8java_source_l00209}{set\+Factory\+Solution\+Method()}}.
+
+\Hypertarget{classproblem_1_1definition_1_1Problem_a43216e475bc790f615d6c6096f55009d}\index{problem.definition.Problem@{problem.definition.Problem}!function@{function}}
+\index{function@{function}!problem.definition.Problem@{problem.definition.Problem}}
+\doxysubsubsection{\texorpdfstring{function}{function}}
+{\footnotesize\ttfamily \label{classproblem_1_1definition_1_1Problem_a43216e475bc790f615d6c6096f55009d} 
+Array\+List$<$\mbox{\hyperlink{classproblem_1_1definition_1_1ObjetiveFunction}{Objetive\+Function}}$>$ problem.\+definition.\+Problem.\+function\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{Problem_8java_source_l00031}{31}} del archivo \mbox{\hyperlink{Problem_8java_source}{Problem.\+java}}.
+
+\Hypertarget{classproblem_1_1definition_1_1Problem_aa8dda2409e952ae76989f705664c20a1}\index{problem.definition.Problem@{problem.definition.Problem}!operator@{operator}}
+\index{operator@{operator}!problem.definition.Problem@{problem.definition.Problem}}
+\doxysubsubsection{\texorpdfstring{operator}{operator}}
+{\footnotesize\ttfamily \label{classproblem_1_1definition_1_1Problem_aa8dda2409e952ae76989f705664c20a1} 
+\mbox{\hyperlink{classproblem_1_1definition_1_1Operator}{Operator}} problem.\+definition.\+Problem.\+operator\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{Problem_8java_source_l00035}{35}} del archivo \mbox{\hyperlink{Problem_8java_source}{Problem.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{Problem_8java_source_l00131}{get\+Operator()}} y \mbox{\hyperlink{Problem_8java_source_l00140}{set\+Operator()}}.
+
+\Hypertarget{classproblem_1_1definition_1_1Problem_acbe93a56dc15db61619b505d17e34127}\index{problem.definition.Problem@{problem.definition.Problem}!possibleValue@{possibleValue}}
+\index{possibleValue@{possibleValue}!problem.definition.Problem@{problem.definition.Problem}}
+\doxysubsubsection{\texorpdfstring{possibleValue}{possibleValue}}
+{\footnotesize\ttfamily \label{classproblem_1_1definition_1_1Problem_acbe93a56dc15db61619b505d17e34127} 
+int problem.\+definition.\+Problem.\+possible\+Value\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{Problem_8java_source_l00036}{36}} del archivo \mbox{\hyperlink{Problem_8java_source}{Problem.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{Problem_8java_source_l00149}{get\+Possible\+Value()}} y \mbox{\hyperlink{Problem_8java_source_l00158}{set\+Possible\+Value()}}.
+
+\Hypertarget{classproblem_1_1definition_1_1Problem_a9d5bdbaaa3ab7261904ca45852f46249}\index{problem.definition.Problem@{problem.definition.Problem}!state@{state}}
+\index{state@{state}!problem.definition.Problem@{problem.definition.Problem}}
+\doxysubsubsection{\texorpdfstring{state}{state}}
+{\footnotesize\ttfamily \label{classproblem_1_1definition_1_1Problem_a9d5bdbaaa3ab7261904ca45852f46249} 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} problem.\+definition.\+Problem.\+state\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{Problem_8java_source_l00032}{32}} del archivo \mbox{\hyperlink{Problem_8java_source}{Problem.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{Problem_8java_source_l00171}{Evaluate()}}, \mbox{\hyperlink{Problem_8java_source_l00079}{get\+State()}} y \mbox{\hyperlink{Problem_8java_source_l00088}{set\+State()}}.
+
+\Hypertarget{classproblem_1_1definition_1_1Problem_a3d230269c9b6bccd54fea12149a3c7b8}\index{problem.definition.Problem@{problem.definition.Problem}!typeProblem@{typeProblem}}
+\index{typeProblem@{typeProblem}!problem.definition.Problem@{problem.definition.Problem}}
+\doxysubsubsection{\texorpdfstring{typeProblem}{typeProblem}}
+{\footnotesize\ttfamily \label{classproblem_1_1definition_1_1Problem_a3d230269c9b6bccd54fea12149a3c7b8} 
+\mbox{\hyperlink{enumproblem_1_1definition_1_1Problem_1_1ProblemType}{Problem\+Type}} problem.\+definition.\+Problem.\+type\+Problem\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{Problem_8java_source_l00033}{33}} del archivo \mbox{\hyperlink{Problem_8java_source}{Problem.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{Problem_8java_source_l00097}{get\+Type\+Problem()}} y \mbox{\hyperlink{Problem_8java_source_l00105}{set\+Type\+Problem()}}.
+
+\Hypertarget{classproblem_1_1definition_1_1Problem_a331828d9233c7997c58a844b8536e869}\index{problem.definition.Problem@{problem.definition.Problem}!typeSolutionMethod@{typeSolutionMethod}}
+\index{typeSolutionMethod@{typeSolutionMethod}!problem.definition.Problem@{problem.definition.Problem}}
+\doxysubsubsection{\texorpdfstring{typeSolutionMethod}{typeSolutionMethod}}
+{\footnotesize\ttfamily \label{classproblem_1_1definition_1_1Problem_a331828d9233c7997c58a844b8536e869} 
+\mbox{\hyperlink{enumproblem_1_1extension_1_1TypeSolutionMethod}{Type\+Solution\+Method}} problem.\+definition.\+Problem.\+type\+Solution\+Method\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{Problem_8java_source_l00037}{37}} del archivo \mbox{\hyperlink{Problem_8java_source}{Problem.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{Problem_8java_source_l00171}{Evaluate()}}, \mbox{\hyperlink{Problem_8java_source_l00190}{get\+Type\+Solution\+Method()}}, \mbox{\hyperlink{Problem_8java_source_l00221}{new\+Solution\+Method()}} y \mbox{\hyperlink{Problem_8java_source_l00198}{set\+Type\+Solution\+Method()}}.
+
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Problem_8java}{Problem.\+java}}\end{DoxyCompactItemize}

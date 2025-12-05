@@ -1,0 +1,259 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="es">
+  <compounddef id="HillClimbing_8java" kind="file" language="Java">
+    <compoundname>HillClimbing.java</compoundname>
+    <includes local="no">java.lang.reflect.InvocationTargetException</includes>
+    <includes local="no">java.util.ArrayList</includes>
+    <includes local="no">java.util.List</includes>
+    <includes local="no">local_search.acceptation_type.AcceptType</includes>
+    <includes local="no">local_search.acceptation_type.AcceptableCandidate</includes>
+    <includes local="no">local_search.candidate_type.CandidateType</includes>
+    <includes local="no">local_search.candidate_type.CandidateValue</includes>
+    <includes local="no">local_search.complement.StrategyType</includes>
+    <includes local="no">metaheurictics.strategy.Strategy</includes>
+    <includes local="no">problem.definition.State</includes>
+    <includes local="no">problem.definition.Problem.ProblemType</includes>
+    <includes local="no">factory_interface.IFFactoryAcceptCandidate</includes>
+    <includes local="no">factory_method.FactoryAcceptCandidate</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>HillClimbing.java</label>
+        <link refid="HillClimbing_8java"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>factory_interface.IFFactoryAcceptCandidate</label>
+      </node>
+      <node id="14">
+        <label>factory_method.FactoryAcceptCandidate</label>
+      </node>
+      <node id="2">
+        <label>java.lang.reflect.InvocationTargetException</label>
+      </node>
+      <node id="3">
+        <label>java.util.ArrayList</label>
+      </node>
+      <node id="4">
+        <label>java.util.List</label>
+      </node>
+      <node id="5">
+        <label>local_search.acceptation_type.AcceptType</label>
+      </node>
+      <node id="6">
+        <label>local_search.acceptation_type.AcceptableCandidate</label>
+      </node>
+      <node id="7">
+        <label>local_search.candidate_type.CandidateType</label>
+      </node>
+      <node id="8">
+        <label>local_search.candidate_type.CandidateValue</label>
+      </node>
+      <node id="9">
+        <label>local_search.complement.StrategyType</label>
+      </node>
+      <node id="10">
+        <label>metaheurictics.strategy.Strategy</label>
+      </node>
+      <node id="12">
+        <label>problem.definition.Problem.ProblemType</label>
+      </node>
+      <node id="11">
+        <label>problem.definition.State</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classmetaheuristics_1_1generators_1_1HillClimbing" prot="public">metaheuristics::generators::HillClimbing</innerclass>
+    <innernamespace refid="namespacemetaheuristics_1_1generators">metaheuristics::generators</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">package<sp/></highlight><highlight class="normal">metaheuristics.generators;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>java.lang.reflect.InvocationTargetException;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>java.util.ArrayList;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>java.util.List;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>local_search.acceptation_type.AcceptType;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>local_search.acceptation_type.AcceptableCandidate;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>local_search.candidate_type.CandidateType;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>local_search.candidate_type.CandidateValue;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>local_search.complement.StrategyType;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>metaheurictics.strategy.Strategy;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>problem.definition.State;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>problem.definition.Problem.ProblemType;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>factory_interface.IFFactoryAcceptCandidate;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>factory_method.FactoryAcceptCandidate;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="classmetaheuristics_1_1generators_1_1HillClimbing" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classmetaheuristics_1_1generators_1_1HillClimbing_1af34d8991af9ef04c0d8355040e5f2611" kindref="member">HillClimbing</ref><sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/><ref refid="classmetaheuristics_1_1generators_1_1Generator" kindref="compound">Generator</ref>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="classmetaheuristics_1_1generators_1_1HillClimbing_1a3f9dd1fc279a04cee2fb3206678a2c30" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/><ref refid="classlocal__search_1_1candidate__type_1_1CandidateValue" kindref="compound">CandidateValue</ref><sp/><ref refid="classmetaheuristics_1_1generators_1_1HillClimbing_1a3f9dd1fc279a04cee2fb3206678a2c30" kindref="member">candidatevalue</ref>;</highlight></codeline>
+<codeline lineno="30" refid="classmetaheuristics_1_1generators_1_1HillClimbing_1a777aadb130ce93d3a8a29e252f485a65" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/><ref refid="enumlocal__search_1_1acceptation__type_1_1AcceptType" kindref="compound">AcceptType</ref><sp/><ref refid="classmetaheuristics_1_1generators_1_1HillClimbing_1a777aadb130ce93d3a8a29e252f485a65" kindref="member">typeAcceptation</ref>;</highlight></codeline>
+<codeline lineno="31" refid="classmetaheuristics_1_1generators_1_1HillClimbing_1ac9e8e7a40ca250d938ed896ea47c167c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/><ref refid="enumlocal__search_1_1complement_1_1StrategyType" kindref="compound">StrategyType</ref><sp/><ref refid="classmetaheuristics_1_1generators_1_1HillClimbing_1ac9e8e7a40ca250d938ed896ea47c167c" kindref="member">strategy</ref>;</highlight></codeline>
+<codeline lineno="32" refid="classmetaheuristics_1_1generators_1_1HillClimbing_1a908b6923734a87ee40227f30fd158424" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/><ref refid="enumlocal__search_1_1candidate__type_1_1CandidateType" kindref="compound">CandidateType</ref><sp/><ref refid="classmetaheuristics_1_1generators_1_1HillClimbing_1a908b6923734a87ee40227f30fd158424" kindref="member">typeCandidate</ref>;</highlight></codeline>
+<codeline lineno="33" refid="classmetaheuristics_1_1generators_1_1HillClimbing_1a4396c7086458dc1ac342d51ab5ad7f02" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref><sp/><ref refid="classmetaheuristics_1_1generators_1_1HillClimbing_1a4396c7086458dc1ac342d51ab5ad7f02" kindref="member">stateReferenceHC</ref>;</highlight></codeline>
+<codeline lineno="34" refid="classmetaheuristics_1_1generators_1_1HillClimbing_1af41ce2cba0e64cd77f757fde246adbb0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/><ref refid="interfacefactory__interface_1_1IFFactoryAcceptCandidate" kindref="compound">IFFactoryAcceptCandidate</ref><sp/><ref refid="classmetaheuristics_1_1generators_1_1HillClimbing_1af41ce2cba0e64cd77f757fde246adbb0" kindref="member">ifacceptCandidate</ref>;</highlight></codeline>
+<codeline lineno="35" refid="classmetaheuristics_1_1generators_1_1HillClimbing_1aaf00e8e2be746394f6f0124e5e0f8df0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/><ref refid="enummetaheuristics_1_1generators_1_1GeneratorType" kindref="compound">GeneratorType</ref><sp/><ref refid="classmetaheuristics_1_1generators_1_1HillClimbing_1aaf00e8e2be746394f6f0124e5e0f8df0" kindref="member">generatortype</ref>;</highlight></codeline>
+<codeline lineno="36" refid="classmetaheuristics_1_1generators_1_1HillClimbing_1a212f480eb02ac3be119f5f1e2c93ae52" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/>List&lt;State&gt;<sp/><ref refid="classmetaheuristics_1_1generators_1_1HillClimbing_1a212f480eb02ac3be119f5f1e2c93ae52" kindref="member">listStateReference</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>ArrayList&lt;State&gt;();<sp/></highlight></codeline>
+<codeline lineno="37" refid="classmetaheuristics_1_1generators_1_1HillClimbing_1a280a7518b2a6113cdb329c867957f444" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classmetaheuristics_1_1generators_1_1HillClimbing_1a280a7518b2a6113cdb329c867957f444" kindref="member">weight</ref>;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//problemas<sp/>dinamicos</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//problemas<sp/>dinamicos:<sp/>use<sp/>instance<sp/>fields<sp/>from<sp/>Generator<sp/>(countGender,<sp/>countBetterGender)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="classmetaheuristics_1_1generators_1_1HillClimbing_1abbb2074b8d7357f76d0ec4e1b6733a60" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">[]<sp/><ref refid="classmetaheuristics_1_1generators_1_1HillClimbing_1abbb2074b8d7357f76d0ec4e1b6733a60" kindref="member">listCountBetterGender</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">[10];</highlight></codeline>
+<codeline lineno="42" refid="classmetaheuristics_1_1generators_1_1HillClimbing_1afcb28f8869546f4af2972bbafe64f181" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">[]<sp/><ref refid="classmetaheuristics_1_1generators_1_1HillClimbing_1afcb28f8869546f4af2972bbafe64f181" kindref="member">listCountGender</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">[10];</highlight></codeline>
+<codeline lineno="43" refid="classmetaheuristics_1_1generators_1_1HillClimbing_1a3256981e03c8cf380eaa540099ac960d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">[]<sp/><ref refid="classmetaheuristics_1_1generators_1_1HillClimbing_1a3256981e03c8cf380eaa540099ac960d" kindref="member">listTrace</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">[1200000];</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="48" refid="classmetaheuristics_1_1generators_1_1HillClimbing_1af34d8991af9ef04c0d8355040e5f2611" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classmetaheuristics_1_1generators_1_1HillClimbing_1af34d8991af9ef04c0d8355040e5f2611" kindref="member">HillClimbing</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super();</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.typeAcceptation<sp/>=<sp/><ref refid="enumlocal__search_1_1acceptation__type_1_1AcceptType" kindref="compound">AcceptType</ref>.<ref refid="enumlocal__search_1_1acceptation__type_1_1AcceptType_1abc2c141301995f3a5a501195a81c1420" kindref="member">AcceptBest</ref>;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.strategy<sp/>=<sp/><ref refid="enumlocal__search_1_1complement_1_1StrategyType" kindref="compound">StrategyType</ref>.<ref refid="enumlocal__search_1_1complement_1_1StrategyType_1a6319a2518e93ad757c398fb858df8c9e" kindref="member">NORMAL</ref>;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="classmetaheurictics_1_1strategy_1_1Strategy" kindref="compound">Strategy</ref>.<ref refid="classmetaheurictics_1_1strategy_1_1Strategy_1ad2641e12c52292930364de6655333aa8" kindref="member">getStrategy</ref>().<ref refid="classmetaheurictics_1_1strategy_1_1Strategy_1a4bc6bd95db71e14b1f48c1bfc85f1305" kindref="member">getProblem</ref>().<ref refid="classproblem_1_1definition_1_1Problem_1ad6f38df755179e22ffe487ba4a5c8021" kindref="member">getTypeProblem</ref>().equals(<ref refid="enumproblem_1_1definition_1_1Problem_1_1ProblemType" kindref="compound">ProblemType</ref>.<ref refid="enumproblem_1_1definition_1_1Problem_1_1ProblemType_1aa55383c4cb9a71cfeabc7f715ee0cd6e" kindref="member">Maximizar</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.typeCandidate<sp/>=<sp/><ref refid="enumlocal__search_1_1candidate__type_1_1CandidateType" kindref="compound">CandidateType</ref>.<ref refid="enumlocal__search_1_1candidate__type_1_1CandidateType_1a10a1f7a483a38c8c3911ff48e588faef" kindref="member">GreaterCandidate</ref>;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.typeCandidate<sp/>=<sp/><ref refid="enumlocal__search_1_1candidate__type_1_1CandidateType" kindref="compound">CandidateType</ref>.<ref refid="enumlocal__search_1_1candidate__type_1_1CandidateType_1a83d72037a210a5d2146a2690a6a956e9" kindref="member">SmallerCandidate</ref>;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.candidatevalue<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classlocal__search_1_1candidate__type_1_1CandidateValue" kindref="compound">CandidateValue</ref>();</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>this.generatortype<sp/>=<sp/><ref refid="enummetaheuristics_1_1generators_1_1GeneratorType" kindref="compound">GeneratorType</ref>.<ref refid="enummetaheuristics_1_1generators_1_1GeneratorType_1a2b1ac0dff3bb2c5c1486cc0e234afe9e" kindref="member">HillClimbing</ref>;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.weight<sp/>=<sp/>50;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmetaheuristics_1_1generators_1_1HillClimbing_1a3256981e03c8cf380eaa540099ac960d" kindref="member">listTrace</ref>[0]<sp/>=<sp/>this.weight;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmetaheuristics_1_1generators_1_1HillClimbing_1abbb2074b8d7357f76d0ec4e1b6733a60" kindref="member">listCountBetterGender</ref>[0]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmetaheuristics_1_1generators_1_1HillClimbing_1afcb28f8869546f4af2972bbafe64f181" kindref="member">listCountGender</ref>[0]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>@Override</highlight></codeline>
+<codeline lineno="72" refid="classmetaheuristics_1_1generators_1_1HillClimbing_1abcb16309481537b632ff4ece07534f97" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref><sp/><ref refid="classmetaheuristics_1_1generators_1_1HillClimbing_1abcb16309481537b632ff4ece07534f97" kindref="member">generate</ref>(Integer<sp/>operatornumber)<sp/></highlight><highlight class="keywordflow">throws</highlight><highlight class="normal"><sp/>IllegalArgumentException,<sp/>SecurityException,<sp/>ClassNotFoundException,<sp/>InstantiationException,<sp/>IllegalAccessException,<sp/>InvocationTargetException,<sp/>NoSuchMethodException<sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>List&lt;State&gt;<sp/>neighborhood<sp/>=<sp/><ref refid="classmetaheurictics_1_1strategy_1_1Strategy" kindref="compound">Strategy</ref>.<ref refid="classmetaheurictics_1_1strategy_1_1Strategy_1ad2641e12c52292930364de6655333aa8" kindref="member">getStrategy</ref>().<ref refid="classmetaheurictics_1_1strategy_1_1Strategy_1a4bc6bd95db71e14b1f48c1bfc85f1305" kindref="member">getProblem</ref>().<ref refid="classproblem_1_1definition_1_1Problem_1a4cd649edb8862f21af171491cb9b9386" kindref="member">getOperator</ref>().<ref refid="classproblem_1_1definition_1_1Operator_1a5b6625843e73d938f9235985bf966b34" kindref="member">generatedNewState</ref>(<ref refid="classmetaheuristics_1_1generators_1_1HillClimbing_1a4396c7086458dc1ac342d51ab5ad7f02" kindref="member">stateReferenceHC</ref>,<sp/>operatornumber);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref><sp/>statecandidate<sp/>=<sp/><ref refid="classmetaheuristics_1_1generators_1_1HillClimbing_1a3f9dd1fc279a04cee2fb3206678a2c30" kindref="member">candidatevalue</ref>.stateCandidate(<ref refid="classmetaheuristics_1_1generators_1_1HillClimbing_1a4396c7086458dc1ac342d51ab5ad7f02" kindref="member">stateReferenceHC</ref>,<sp/><ref refid="classmetaheuristics_1_1generators_1_1HillClimbing_1a908b6923734a87ee40227f30fd158424" kindref="member">typeCandidate</ref>,<sp/><ref refid="classmetaheuristics_1_1generators_1_1HillClimbing_1ac9e8e7a40ca250d938ed896ea47c167c" kindref="member">strategy</ref>,<sp/>operatornumber,<sp/>neighborhood);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>statecandidate;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>@Override</highlight></codeline>
+<codeline lineno="85" refid="classmetaheuristics_1_1generators_1_1HillClimbing_1afc5f08a9d50796fdf3bbc8dd3e4d8b87" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classmetaheuristics_1_1generators_1_1HillClimbing_1afc5f08a9d50796fdf3bbc8dd3e4d8b87" kindref="member">updateReference</ref>(<ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref><sp/>stateCandidate,<sp/>Integer<sp/>countIterationsCurrent)<sp/></highlight><highlight class="keywordflow">throws</highlight><highlight class="normal"><sp/>IllegalArgumentException,<sp/>SecurityException,<sp/>ClassNotFoundException,<sp/>InstantiationException,<sp/>IllegalAccessException,<sp/>InvocationTargetException,<sp/>NoSuchMethodException<sp/>{</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmetaheuristics_1_1generators_1_1HillClimbing_1af41ce2cba0e64cd77f757fde246adbb0" kindref="member">ifacceptCandidate</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classfactory__method_1_1FactoryAcceptCandidate" kindref="compound">FactoryAcceptCandidate</ref>();</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classlocal__search_1_1acceptation__type_1_1AcceptableCandidate" kindref="compound">AcceptableCandidate</ref><sp/>candidate<sp/>=<sp/><ref refid="classmetaheuristics_1_1generators_1_1HillClimbing_1af41ce2cba0e64cd77f757fde246adbb0" kindref="member">ifacceptCandidate</ref>.createAcceptCandidate(<ref refid="classmetaheuristics_1_1generators_1_1HillClimbing_1a777aadb130ce93d3a8a29e252f485a65" kindref="member">typeAcceptation</ref>);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Boolean<sp/>accept<sp/>=<sp/>candidate.<ref refid="classlocal__search_1_1acceptation__type_1_1AcceptableCandidate_1aa9e62e1d2d213c3828d2491b506d0592" kindref="member">acceptCandidate</ref>(<ref refid="classmetaheuristics_1_1generators_1_1HillClimbing_1a4396c7086458dc1ac342d51ab5ad7f02" kindref="member">stateReferenceHC</ref>,<sp/>stateCandidate);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(accept.equals(</highlight><highlight class="keyword">true</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmetaheuristics_1_1generators_1_1HillClimbing_1a4396c7086458dc1ac342d51ab5ad7f02" kindref="member">stateReferenceHC</ref><sp/>=<sp/>stateCandidate;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>@Override</highlight></codeline>
+<codeline lineno="98" refid="classmetaheuristics_1_1generators_1_1HillClimbing_1a45523304d129ec007b65256ce9a3e89e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>List&lt;State&gt;<sp/><ref refid="classmetaheuristics_1_1generators_1_1HillClimbing_1a45523304d129ec007b65256ce9a3e89e" kindref="member">getReferenceList</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classmetaheuristics_1_1generators_1_1HillClimbing_1a4396c7086458dc1ac342d51ab5ad7f02" kindref="member">stateReferenceHC</ref><sp/>!=<sp/></highlight><highlight class="keyword">null</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>keep<sp/>internal<sp/>list<sp/>updated<sp/>but<sp/>do<sp/>not<sp/>expose<sp/>it<sp/>directly</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classmetaheuristics_1_1generators_1_1HillClimbing_1a212f480eb02ac3be119f5f1e2c93ae52" kindref="member">listStateReference</ref>.isEmpty()<sp/>||<sp/><ref refid="classmetaheuristics_1_1generators_1_1HillClimbing_1a212f480eb02ac3be119f5f1e2c93ae52" kindref="member">listStateReference</ref>.get(<ref refid="classmetaheuristics_1_1generators_1_1HillClimbing_1a212f480eb02ac3be119f5f1e2c93ae52" kindref="member">listStateReference</ref>.size()<sp/>-<sp/>1)<sp/>!=<sp/><ref refid="classmetaheuristics_1_1generators_1_1HillClimbing_1a4396c7086458dc1ac342d51ab5ad7f02" kindref="member">stateReferenceHC</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmetaheuristics_1_1generators_1_1HillClimbing_1a212f480eb02ac3be119f5f1e2c93ae52" kindref="member">listStateReference</ref>.add(<ref refid="classmetaheuristics_1_1generators_1_1HillClimbing_1a4396c7086458dc1ac342d51ab5ad7f02" kindref="member">stateReferenceHC</ref>);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>ArrayList&lt;State&gt;(<ref refid="classmetaheuristics_1_1generators_1_1HillClimbing_1a212f480eb02ac3be119f5f1e2c93ae52" kindref="member">listStateReference</ref>);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>@Override</highlight></codeline>
+<codeline lineno="113" refid="classmetaheuristics_1_1generators_1_1HillClimbing_1afb086dfd5037d8cbbdea556e09ad9f7f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref><sp/><ref refid="classmetaheuristics_1_1generators_1_1HillClimbing_1afb086dfd5037d8cbbdea556e09ad9f7f" kindref="member">getReference</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="classmetaheuristics_1_1generators_1_1HillClimbing_1a4396c7086458dc1ac342d51ab5ad7f02" kindref="member">stateReferenceHC</ref><sp/>==<sp/></highlight><highlight class="keyword">null</highlight><highlight class="normal">)<sp/>?<sp/>null<sp/>:<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref>(<ref refid="classmetaheuristics_1_1generators_1_1HillClimbing_1a4396c7086458dc1ac342d51ab5ad7f02" kindref="member">stateReferenceHC</ref>);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121" refid="classmetaheuristics_1_1generators_1_1HillClimbing_1a04e698625fb41011cd55eafecf915867" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classmetaheuristics_1_1generators_1_1HillClimbing_1a04e698625fb41011cd55eafecf915867" kindref="member">setStateRef</ref>(<ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref><sp/>stateRef)<sp/>{</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.stateReferenceHC<sp/>=<sp/>(stateRef<sp/>==<sp/></highlight><highlight class="keyword">null</highlight><highlight class="normal">)<sp/>?<sp/></highlight><highlight class="keyword">null</highlight><highlight class="normal"><sp/>:<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref>(stateRef);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>@Override</highlight></codeline>
+<codeline lineno="130" refid="classmetaheuristics_1_1generators_1_1HillClimbing_1a0790d02b85721c230e066191da3f2c6f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classmetaheuristics_1_1generators_1_1HillClimbing_1a0790d02b85721c230e066191da3f2c6f" kindref="member">setInitialReference</ref>(<ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref><sp/>stateInitialRef)<sp/>{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.stateReferenceHC<sp/>=<sp/>(stateInitialRef<sp/>==<sp/></highlight><highlight class="keyword">null</highlight><highlight class="normal">)<sp/>?<sp/></highlight><highlight class="keyword">null</highlight><highlight class="normal"><sp/>:<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref>(stateInitialRef);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138" refid="classmetaheuristics_1_1generators_1_1HillClimbing_1ae95ec499eb79cc3ac7fc95dc536c988a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="enummetaheuristics_1_1generators_1_1GeneratorType" kindref="compound">GeneratorType</ref><sp/><ref refid="classmetaheuristics_1_1generators_1_1HillClimbing_1ae95ec499eb79cc3ac7fc95dc536c988a" kindref="member">getGeneratorType</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classmetaheuristics_1_1generators_1_1HillClimbing_1aaf00e8e2be746394f6f0124e5e0f8df0" kindref="member">generatortype</ref>;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146" refid="classmetaheuristics_1_1generators_1_1HillClimbing_1a008076ca9306260bf48dbaf469b031a9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classmetaheuristics_1_1generators_1_1HillClimbing_1a008076ca9306260bf48dbaf469b031a9" kindref="member">setGeneratorType</ref>(<ref refid="enummetaheuristics_1_1generators_1_1GeneratorType" kindref="compound">GeneratorType</ref><sp/><ref refid="classmetaheuristics_1_1generators_1_1HillClimbing_1aaf00e8e2be746394f6f0124e5e0f8df0" kindref="member">generatortype</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.generatortype<sp/>=<sp/><ref refid="classmetaheuristics_1_1generators_1_1HillClimbing_1aaf00e8e2be746394f6f0124e5e0f8df0" kindref="member">generatortype</ref>;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>@Override</highlight></codeline>
+<codeline lineno="155" refid="classmetaheuristics_1_1generators_1_1HillClimbing_1a44dfa53f4234b1367c70660dd0858be7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="enummetaheuristics_1_1generators_1_1GeneratorType" kindref="compound">GeneratorType</ref><sp/><ref refid="classmetaheuristics_1_1generators_1_1HillClimbing_1a44dfa53f4234b1367c70660dd0858be7" kindref="member">getType</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>this.generatortype;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>@Override</highlight></codeline>
+<codeline lineno="164" refid="classmetaheuristics_1_1generators_1_1HillClimbing_1a1a568d406158a216f47b267847d0e18e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>List&lt;State&gt;<sp/><ref refid="classmetaheuristics_1_1generators_1_1HillClimbing_1a1a568d406158a216f47b267847d0e18e" kindref="member">getSonList</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO<sp/>Auto-generated<sp/>method<sp/>stub</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">null</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173" refid="classmetaheuristics_1_1generators_1_1HillClimbing_1ab7aed0f2b9a7874d1fa09a37fced2b8f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classmetaheuristics_1_1generators_1_1HillClimbing_1ab7aed0f2b9a7874d1fa09a37fced2b8f" kindref="member">setTypeCandidate</ref>(<ref refid="enumlocal__search_1_1candidate__type_1_1CandidateType" kindref="compound">CandidateType</ref><sp/><ref refid="classmetaheuristics_1_1generators_1_1HillClimbing_1a908b6923734a87ee40227f30fd158424" kindref="member">typeCandidate</ref>){</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.typeCandidate<sp/>=<sp/><ref refid="classmetaheuristics_1_1generators_1_1HillClimbing_1a908b6923734a87ee40227f30fd158424" kindref="member">typeCandidate</ref>;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/>@Override</highlight></codeline>
+<codeline lineno="183" refid="classmetaheuristics_1_1generators_1_1HillClimbing_1ae761f3055d7e563799a97cbe44172611" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/><ref refid="classmetaheuristics_1_1generators_1_1HillClimbing_1ae761f3055d7e563799a97cbe44172611" kindref="member">awardUpdateREF</ref>(<ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref><sp/>stateCandidate)<sp/>{</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO<sp/>Auto-generated<sp/>method<sp/>stub</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/>@Override</highlight></codeline>
+<codeline lineno="193" refid="classmetaheuristics_1_1generators_1_1HillClimbing_1a8bc57ebf6d41c795a9366c1b7b1bec15" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classmetaheuristics_1_1generators_1_1HillClimbing_1a8bc57ebf6d41c795a9366c1b7b1bec15" kindref="member">getWeight</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO<sp/>Auto-generated<sp/>method<sp/>stub</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/>@Override</highlight></codeline>
+<codeline lineno="203" refid="classmetaheuristics_1_1generators_1_1HillClimbing_1aa40a855ef60361b2406caacf6f7a0455" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classmetaheuristics_1_1generators_1_1HillClimbing_1aa40a855ef60361b2406caacf6f7a0455" kindref="member">setWeight</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classmetaheuristics_1_1generators_1_1HillClimbing_1a280a7518b2a6113cdb329c867957f444" kindref="member">weight</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO<sp/>Auto-generated<sp/>method<sp/>stub</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/>@Override</highlight></codeline>
+<codeline lineno="213" refid="classmetaheuristics_1_1generators_1_1HillClimbing_1a6395f4b4c5bcbc7c15d304eea58fb616" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">[]<sp/><ref refid="classmetaheuristics_1_1generators_1_1HillClimbing_1a6395f4b4c5bcbc7c15d304eea58fb616" kindref="member">getListCountBetterGender</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO<sp/>Auto-generated<sp/>method<sp/>stub</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(this.listCountBetterGender<sp/>==<sp/></highlight><highlight class="keyword">null</highlight><highlight class="normal">)<sp/>?<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">[0]<sp/>:<sp/>java.util.Arrays.copyOf(this.listCountBetterGender,<sp/>this.listCountBetterGender.length);</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/>@Override</highlight></codeline>
+<codeline lineno="223" refid="classmetaheuristics_1_1generators_1_1HillClimbing_1a443bd2414ab65785fdf92dc6087404b4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">[]<sp/><ref refid="classmetaheuristics_1_1generators_1_1HillClimbing_1a443bd2414ab65785fdf92dc6087404b4" kindref="member">getListCountGender</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO<sp/>Auto-generated<sp/>method<sp/>stub</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(this.listCountGender<sp/>==<sp/></highlight><highlight class="keyword">null</highlight><highlight class="normal">)<sp/>?<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">[0]<sp/>:<sp/>java.util.Arrays.copyOf(this.listCountGender,<sp/>this.listCountGender.length);</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/>@Override</highlight></codeline>
+<codeline lineno="233" refid="classmetaheuristics_1_1generators_1_1HillClimbing_1ab3095afd08464f7c7f1c9f3a6ebf4fb4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">[]<sp/><ref refid="classmetaheuristics_1_1generators_1_1HillClimbing_1ab3095afd08464f7c7f1c9f3a6ebf4fb4" kindref="member">getTrace</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO<sp/>Auto-generated<sp/>method<sp/>stub</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(this.listTrace<sp/>==<sp/></highlight><highlight class="keyword">null</highlight><highlight class="normal">)<sp/>?<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">[0]<sp/>:<sp/>java.util.Arrays.copyOf(this.listTrace,<sp/>this.listTrace.length);</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="237"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="practica5/src/main/java/metaheuristics/generators/HillClimbing.java"/>
+  </compounddef>
+</doxygen>

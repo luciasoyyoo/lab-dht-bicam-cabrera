@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="es">
+  <compounddef id="classevolutionary__algorithms_1_1complement_1_1OnePointCrossover" kind="class" language="Java" prot="public">
+    <compoundname>evolutionary_algorithms::complement::OnePointCrossover</compoundname>
+    <basecompoundref refid="classevolutionary__algorithms_1_1complement_1_1Crossover" prot="public" virt="non-virtual">evolutionary_algorithms.complement.Crossover</basecompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classevolutionary__algorithms_1_1complement_1_1OnePointCrossover_1a6d644b471de305b6508b2b647edc76d1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+        <definition>State evolutionary_algorithms.complement.OnePointCrossover.crossover</definition>
+        <argsstring>(State father1, State father2, double PC)</argsstring>
+        <name>crossover</name>
+        <qualifiedname>evolutionary_algorithms.complement.OnePointCrossover.crossover</qualifiedname>
+        <reimplements refid="classevolutionary__algorithms_1_1complement_1_1Crossover_1a77155266e5646a87bcd427189938cc32">crossover</reimplements>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>father1</declname>
+        </param>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>father2</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>PC</declname>
+        </param>
+        <briefdescription>
+<para>Uses ThreadLocalRandom for algorithmic (non-cryptographic) randomness. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This RNG is used for evolutionary algorithm operations (crossover point, selection between children, etc.) and is not used for security-sensitive purposes. Therefore we suppress the Sonar security hotspot S2245 here. crossover - applies the crossover operation to two parent states. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>father1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>father2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>PC</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns the offspring resulting from the crossover between father1 and father2 </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/evolutionary_algorithms/complement/OnePointCrossover.java" line="32" column="14" bodyfile="practica5/src/main/java/evolutionary_algorithms/complement/OnePointCrossover.java" bodystart="32" bodyend="62"/>
+        <references refid="classproblem_1_1definition_1_1State_1a2e75b6f2bedb2107478ecd1e8e681418" compoundref="State_8java" startline="68" endline="70">problem.definition.State.getCode</references>
+        <references refid="classproblem_1_1definition_1_1Problem_1a7da2aa6b2a6f00f6f3993e6fdc43e34b" compoundref="Problem_8java" startline="114" endline="116">problem.definition.Problem.getCodification</references>
+        <references refid="classproblem_1_1definition_1_1State_1aaf14fa8466c945ff5e134028c6c259f8" compoundref="State_8java" startline="161" endline="163">problem.definition.State.getCopy</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1a4bc6bd95db71e14b1f48c1bfc85f1305" compoundref="Strategy_8java" startline="405" endline="407">metaheurictics.strategy.Strategy.getProblem</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1ad2641e12c52292930364de6655333aa8" compoundref="Strategy_8java" startline="80" endline="85">metaheurictics.strategy.Strategy.getStrategy</references>
+        <references refid="classproblem_1_1definition_1_1Codification_1a3fadfa69736eedaf89c53863dd6ddc6d">problem.definition.Codification.getVariableCount</references>
+        <references refid="classproblem_1_1definition_1_1State_1ab15765262a6e1cc7661c51cbcf0e7785" compoundref="State_8java" startline="77" endline="79">problem.definition.State.setCode</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="classevolutionary__algorithms_1_1complement_1_1OnePointCrossover" kindref="compound">OnePointCrossover</ref> - applies the one-point crossover operator. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>evolutionary_algorithms.complement.OnePointCrossover</label>
+        <link refid="classevolutionary__algorithms_1_1complement_1_1OnePointCrossover"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>evolutionary_algorithms.complement.Crossover</label>
+        <link refid="classevolutionary__algorithms_1_1complement_1_1Crossover"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>evolutionary_algorithms.complement.OnePointCrossover</label>
+        <link refid="classevolutionary__algorithms_1_1complement_1_1OnePointCrossover"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>evolutionary_algorithms.complement.Crossover</label>
+        <link refid="classevolutionary__algorithms_1_1complement_1_1Crossover"/>
+      </node>
+    </collaborationgraph>
+    <location file="practica5/src/main/java/evolutionary_algorithms/complement/OnePointCrossover.java" line="15" column="7" bodyfile="practica5/src/main/java/evolutionary_algorithms/complement/OnePointCrossover.java" bodystart="15" bodyend="65"/>
+    <listofallmembers>
+      <member refid="classevolutionary__algorithms_1_1complement_1_1OnePointCrossover_1a6d644b471de305b6508b2b647edc76d1" prot="public" virt="non-virtual"><scope>evolutionary_algorithms::complement::OnePointCrossover</scope><name>crossover</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

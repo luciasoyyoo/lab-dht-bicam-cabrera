@@ -1,0 +1,168 @@
+\doxysection{Referencia de la clase problem\+\_\+operators.\+Mutation\+Operator}
+\hypertarget{classproblem__operators_1_1MutationOperator}{}\label{classproblem__operators_1_1MutationOperator}\index{problem\_operators.MutationOperator@{problem\_operators.MutationOperator}}
+
+
+\doxylink{classproblem__operators_1_1MutationOperator}{Mutation\+Operator} -\/ defines a mutation operator for generating new states.  
+
+
+
+
+Diagrama de herencia de problem\+\_\+operators.\+Mutation\+Operator
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{classproblem__operators_1_1MutationOperator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagrama de colaboración de problem\+\_\+operators.\+Mutation\+Operator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{classproblem__operators_1_1MutationOperator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ \mbox{\hyperlink{classproblem__operators_1_1MutationOperator_adc581cf1337e53458e6695aec007028b}{generated\+New\+State}} (final \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} state\+Current, final Integer operatornumber)
+\begin{DoxyCompactList}\small\item\em Generate a neighborhood of states by mutating the provided state. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ \mbox{\hyperlink{classproblem__operators_1_1MutationOperator_a0f6271c1365408220a1749db18e335d9}{generate\+Random\+State}} (final Integer operatornumber)
+\begin{DoxyCompactList}\small\item\em Generate a list of random states using this mutation operator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+\doxylink{classproblem__operators_1_1MutationOperator}{Mutation\+Operator} -\/ defines a mutation operator for generating new states. 
+
+Definición en la línea \mbox{\hyperlink{MutationOperator_8java_source_l00015}{15}} del archivo \mbox{\hyperlink{MutationOperator_8java_source}{Mutation\+Operator.\+java}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{classproblem__operators_1_1MutationOperator_doc-func-members}
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{classproblem__operators_1_1MutationOperator_adc581cf1337e53458e6695aec007028b}\index{problem\_operators.MutationOperator@{problem\_operators.MutationOperator}!generatedNewState@{generatedNewState}}
+\index{generatedNewState@{generatedNewState}!problem\_operators.MutationOperator@{problem\_operators.MutationOperator}}
+\doxysubsubsection{\texorpdfstring{generatedNewState()}{generatedNewState()}}
+{\footnotesize\ttfamily \label{classproblem__operators_1_1MutationOperator_adc581cf1337e53458e6695aec007028b} 
+List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ problem\+\_\+operators.\+Mutation\+Operator.\+generated\+New\+State (\begin{DoxyParamCaption}\item[{final \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}}]{state\+Current}{, }\item[{final Integer}]{operatornumber}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Generate a neighborhood of states by mutating the provided state. 
+
+Contract for overriding implementations\+:
+\begin{DoxyItemize}
+\item Return a non-\/null List of \doxylink{classproblem_1_1definition_1_1State}{State} objects (may be empty).
+\item Each returned \doxylink{classproblem_1_1definition_1_1State}{State} should be a safe copy (no shared mutable internals).
+\item The {\ttfamily operatornumber} parameter indicates how many neighbors should be produced. 
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parámetros}
+{\em state\+Current} & the state to mutate (must not be modified by callers) \\
+\hline
+{\em operatornumber} & number of neighbor states to generate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+list of neighboring states, never null 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classproblem_1_1definition_1_1Operator_a5b6625843e73d938f9235985bf966b34}{problem.\+definition.\+Operator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{MutationOperator_8java_source_l00032}{32}} del archivo \mbox{\hyperlink{MutationOperator_8java_source}{Mutation\+Operator.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ List<State>\ listNeigborhood\ =\ \textcolor{keyword}{new}\ ArrayList<State>();}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ operatornumber;\ i++)\ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ key\ =\ Strategy.getStrategy().getProblem()}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .getCodification()}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .getAleatoryKey();}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ Object\ candidate\ =\ Strategy.getStrategy().getProblem()}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .getCodification()}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .getVariableAleatoryValue(key);}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ State\ state\ =\ (State)\ stateCurrent.getCopy();}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ state.getCode().set(key,\ candidate);}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ listNeigborhood.add(state);}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ listNeigborhood;}
+\DoxyCodeLine{00047\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{classproblem_1_1definition_1_1Codification_a01a0c8247d76d4c4c32c7f3e51c2d5f8}{problem.\+definition.\+Codification.\+get\+Aleatory\+Key()}}, \mbox{\hyperlink{State_8java_source_l00068}{problem.\+definition.\+State.\+get\+Code()}}, \mbox{\hyperlink{Problem_8java_source_l00114}{problem.\+definition.\+Problem.\+get\+Codification()}}, \mbox{\hyperlink{State_8java_source_l00161}{problem.\+definition.\+State.\+get\+Copy()}}, \mbox{\hyperlink{Strategy_8java_source_l00405}{metaheurictics.\+strategy.\+Strategy.\+get\+Problem()}}, \mbox{\hyperlink{Strategy_8java_source_l00080}{metaheurictics.\+strategy.\+Strategy.\+get\+Strategy()}} y \mbox{\hyperlink{classproblem_1_1definition_1_1Codification_ad5875a47b3e863653ede3bb7feae524f}{problem.\+definition.\+Codification.\+get\+Variable\+Aleatory\+Value()}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classproblem__operators_1_1MutationOperator_adc581cf1337e53458e6695aec007028b_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classproblem__operators_1_1MutationOperator_a0f6271c1365408220a1749db18e335d9}\index{problem\_operators.MutationOperator@{problem\_operators.MutationOperator}!generateRandomState@{generateRandomState}}
+\index{generateRandomState@{generateRandomState}!problem\_operators.MutationOperator@{problem\_operators.MutationOperator}}
+\doxysubsubsection{\texorpdfstring{generateRandomState()}{generateRandomState()}}
+{\footnotesize\ttfamily \label{classproblem__operators_1_1MutationOperator_a0f6271c1365408220a1749db18e335d9} 
+List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ problem\+\_\+operators.\+Mutation\+Operator.\+generate\+Random\+State (\begin{DoxyParamCaption}\item[{final Integer}]{operatornumber}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Generate a list of random states using this mutation operator. 
+
+Contract for overriding implementations\+:
+\begin{DoxyItemize}
+\item Must return a non-\/null List of \doxylink{classproblem_1_1definition_1_1State}{State} objects (may be empty).
+\item Each returned \doxylink{classproblem_1_1definition_1_1State}{State} should be a safe copy (no shared mutable internals that could be modified externally).
+\item The {\ttfamily operatornumber} parameter indicates how many random states should be produced. 
+\end{DoxyItemize}
+
+Subclasses overriding this method should preserve the contract above.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em operatornumber} & number of random states to generate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+list of randomly generated states, never null generate\+Random\+State -\/ method to generate random states. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parámetros}
+{\em operatornumber} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+returns list of random states. 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classproblem_1_1definition_1_1Operator_a08c63f0d681ef130fccdb04d24ddf181}{problem.\+definition.\+Operator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{MutationOperator_8java_source_l00070}{70}} del archivo \mbox{\hyperlink{MutationOperator_8java_source}{Mutation\+Operator.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00073\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{MutationOperator_8java}{Mutation\+Operator.\+java}}\end{DoxyCompactItemize}

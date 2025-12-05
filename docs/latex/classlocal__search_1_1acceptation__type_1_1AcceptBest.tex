@@ -1,0 +1,130 @@
+\doxysection{Referencia de la clase local\+\_\+search.\+acceptation\+\_\+type.\+Accept\+Best}
+\hypertarget{classlocal__search_1_1acceptation__type_1_1AcceptBest}{}\label{classlocal__search_1_1acceptation__type_1_1AcceptBest}\index{local\_search.acceptation\_type.AcceptBest@{local\_search.acceptation\_type.AcceptBest}}
+
+
+\doxylink{classlocal__search_1_1acceptation__type_1_1AcceptBest}{Accept\+Best} -\/ Accept the candidate only if it improves (or ties) the current state.  
+
+
+
+
+Diagrama de herencia de local\+\_\+search.\+acceptation\+\_\+type.\+Accept\+Best
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{classlocal__search_1_1acceptation__type_1_1AcceptBest__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagrama de colaboración de local\+\_\+search.\+acceptation\+\_\+type.\+Accept\+Best\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{classlocal__search_1_1acceptation__type_1_1AcceptBest__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+Boolean \mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1AcceptBest_a0ecd99df90a9818e14ddf8908cc38626}{accept\+Candidate}} (\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} state\+Current, \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} state\+Candidate)  throws Illegal\+Argument\+Exception, Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception, Illegal\+Access\+Exception, Invocation\+Target\+Exception, No\+Such\+Method\+Exception 
+\begin{DoxyCompactList}\small\item\em Evaluate and decide acceptance of a candidate state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+\doxylink{classlocal__search_1_1acceptation__type_1_1AcceptBest}{Accept\+Best} -\/ Accept the candidate only if it improves (or ties) the current state. 
+
+Accepts the candidate state when it is better according to the problem objective type (maximize/minimize). 
+
+Definición en la línea \mbox{\hyperlink{AcceptBest_8java_source_l00020}{20}} del archivo \mbox{\hyperlink{AcceptBest_8java_source}{Accept\+Best.\+java}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{classlocal__search_1_1acceptation__type_1_1AcceptBest_doc-func-members}
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{classlocal__search_1_1acceptation__type_1_1AcceptBest_a0ecd99df90a9818e14ddf8908cc38626}\index{local\_search.acceptation\_type.AcceptBest@{local\_search.acceptation\_type.AcceptBest}!acceptCandidate@{acceptCandidate}}
+\index{acceptCandidate@{acceptCandidate}!local\_search.acceptation\_type.AcceptBest@{local\_search.acceptation\_type.AcceptBest}}
+\doxysubsubsection{\texorpdfstring{acceptCandidate()}{acceptCandidate()}}
+{\footnotesize\ttfamily \label{classlocal__search_1_1acceptation__type_1_1AcceptBest_a0ecd99df90a9818e14ddf8908cc38626} 
+Boolean local\+\_\+search.\+acceptation\+\_\+type.\+Accept\+Best.\+accept\+Candidate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}}]{state\+Current}{, }\item[{\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}}]{state\+Candidate}{}\end{DoxyParamCaption}) throws Illegal\+Argument\+Exception, Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception, Illegal\+Access\+Exception, Invocation\+Target\+Exception, No\+Such\+Method\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Evaluate and decide acceptance of a candidate state. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em state\+Current} & current state \\
+\hline
+{\em state\+Candidate} & candidate state to evaluate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+true if candidate should be accepted according to the problem objective (maximization/minimization), false otherwise 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em Illegal\+Argument\+Exception} & when arguments are invalid \\
+\hline
+{\em Security\+Exception} & on reflective access problems \\
+\hline
+{\em Class\+Not\+Found\+Exception} & when a referenced class cannot be found \\
+\hline
+{\em Instantiation\+Exception} & when a class cannot be instantiated reflectively \\
+\hline
+{\em Illegal\+Access\+Exception} & on illegal reflective access \\
+\hline
+{\em Invocation\+Target\+Exception} & when a reflective call throws an exception \\
+\hline
+{\em No\+Such\+Method\+Exception} & when a reflective method lookup fails \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplementado de \mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1AcceptableCandidate_aa9e62e1d2d213c3828d2491b506d0592}{local\+\_\+search.\+acceptation\+\_\+type.\+Acceptable\+Candidate}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{AcceptBest_8java_source_l00038}{38}} del archivo \mbox{\hyperlink{AcceptBest_8java_source}{Accept\+Best.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ Boolean\ accept\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ Problem\ problem\ =\ Strategy.getStrategy().getProblem();}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(problem.getTypeProblem().equals(ProblemType.Maximizar))\ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (stateCandidate.getEvaluation().get(0)\ >=\ stateCurrent.getEvaluation().get(0))\ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ accept\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ accept\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (stateCandidate.getEvaluation().get(0)\ <=\ stateCurrent.getEvaluation().get(0))\ \{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ accept\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ accept\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ accept;}
+\DoxyCodeLine{00055\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{Strategy_8java_source_l00405}{metaheurictics.\+strategy.\+Strategy.\+get\+Problem()}}, \mbox{\hyperlink{Strategy_8java_source_l00080}{metaheurictics.\+strategy.\+Strategy.\+get\+Strategy()}} y \mbox{\hyperlink{Problem_8java_source_l00029}{problem.\+definition.\+Problem.\+Problem\+Type.\+Maximizar}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlocal__search_1_1acceptation__type_1_1AcceptBest_a0ecd99df90a9818e14ddf8908cc38626_cgraph}
+\end{center}
+\end{figure}
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{AcceptBest_8java}{Accept\+Best.\+java}}\end{DoxyCompactItemize}

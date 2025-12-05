@@ -1,0 +1,127 @@
+\doxysection{Referencia de la clase problem.\+extension.\+Factores\+Ponderados}
+\hypertarget{classproblem_1_1extension_1_1FactoresPonderados}{}\label{classproblem_1_1extension_1_1FactoresPonderados}\index{problem.extension.FactoresPonderados@{problem.extension.FactoresPonderados}}
+
+
+\doxylink{classproblem_1_1extension_1_1FactoresPonderados}{Factores\+Ponderados}.  
+
+
+
+
+Diagrama de herencia de problem.\+extension.\+Factores\+Ponderados
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{classproblem_1_1extension_1_1FactoresPonderados__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagrama de colaboración de problem.\+extension.\+Factores\+Ponderados\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{classproblem_1_1extension_1_1FactoresPonderados__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classproblem_1_1extension_1_1FactoresPonderados_a935d426d08fbf69af9ea5fe2196692bc}{evaluation\+State}} (\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} state)
+\begin{DoxyCompactList}\small\item\em evaluation\+State \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+\doxylink{classproblem_1_1extension_1_1FactoresPonderados}{Factores\+Ponderados}. 
+
+Implementación de {\ttfamily \doxylink{classproblem_1_1extension_1_1SolutionMethod}{Solution\+Method}} que combina funciones objetivo mediante factores ponderados. 
+
+Definición en la línea \mbox{\hyperlink{FactoresPonderados_8java_source_l00016}{16}} del archivo \mbox{\hyperlink{FactoresPonderados_8java_source}{Factores\+Ponderados.\+java}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{classproblem_1_1extension_1_1FactoresPonderados_doc-func-members}
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{classproblem_1_1extension_1_1FactoresPonderados_a935d426d08fbf69af9ea5fe2196692bc}\index{problem.extension.FactoresPonderados@{problem.extension.FactoresPonderados}!evaluationState@{evaluationState}}
+\index{evaluationState@{evaluationState}!problem.extension.FactoresPonderados@{problem.extension.FactoresPonderados}}
+\doxysubsubsection{\texorpdfstring{evaluationState()}{evaluationState()}}
+{\footnotesize\ttfamily \label{classproblem_1_1extension_1_1FactoresPonderados_a935d426d08fbf69af9ea5fe2196692bc} 
+void problem.\+extension.\+Factores\+Ponderados.\+evaluation\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}}]{state}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+evaluation\+State 
+
+Evalúa un estado aplicando la suma ponderada de cada función objetivo, teniendo en cuenta si la función es de maximizar o minimizar.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em state} & estado a evaluar; la lista de evaluación del estado se actualiza con el valor calculado. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementado de \mbox{\hyperlink{classproblem_1_1extension_1_1SolutionMethod_ae31d6d6000b9043bdee5e2d79fd2a628}{problem.\+extension.\+Solution\+Method}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{FactoresPonderados_8java_source_l00029}{29}} del archivo \mbox{\hyperlink{FactoresPonderados_8java_source}{Factores\+Ponderados.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ eval\ =\ 0;\ \ \ \ \ \ \ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ tempWeight\ =\ 0;\ \ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ ArrayList<Double>\ evaluation\ =\ \textcolor{keyword}{new}\ ArrayList<Double>(Strategy.getStrategy().getProblem().getFunction().size());}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ Strategy.getStrategy().getProblem().getFunction().size();\ i++)\ \{}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ tempWeight\ =\ 0;}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(Strategy.getStrategy().getProblem().getTypeProblem().equals(ProblemType.Maximizar))\{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(Strategy.getStrategy().getProblem().getFunction().get(i).getTypeProblem().equals(ProblemType.Maximizar))\{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tempWeight\ =\ Strategy.getStrategy().getProblem().getFunction().get(i).Evaluation(state);}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tempWeight\ =\ tempWeight\ *\ Strategy.getStrategy().getProblem().getFunction().get(i).getWeight();}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tempWeight\ =\ 1\ -\/\ Strategy.getStrategy().getProblem().getFunction().get(i).Evaluation(state);}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tempWeight\ =\ tempWeight\ *\ Strategy.getStrategy().getProblem().getFunction().get(i).getWeight();}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(Strategy.getStrategy().getProblem().getFunction().get(i).getTypeProblem().equals(ProblemType.Maximizar))\{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tempWeight\ =\ 1\ -\/\ Strategy.getStrategy().getProblem().getFunction().get(i).Evaluation(state);}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tempWeight\ =\ tempWeight\ *\ Strategy.getStrategy().getProblem().getFunction().get(i).getWeight();}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tempWeight\ =\ Strategy.getStrategy().getProblem().getFunction().get(i).Evaluation(state);}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tempWeight\ =\ tempWeight\ *\ Strategy.getStrategy().getProblem().getFunction().get(i).getWeight();}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ eval\ +=\ tempWeight;}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ evaluation.add(evaluation.size(),\ eval);}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ state.setEvaluation(evaluation);}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00063\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{Problem_8java_source_l00057}{problem.\+definition.\+Problem.\+get\+Function()}}, \mbox{\hyperlink{Strategy_8java_source_l00405}{metaheurictics.\+strategy.\+Strategy.\+get\+Problem()}}, \mbox{\hyperlink{Strategy_8java_source_l00080}{metaheurictics.\+strategy.\+Strategy.\+get\+Strategy()}}, \mbox{\hyperlink{Problem_8java_source_l00097}{problem.\+definition.\+Problem.\+get\+Type\+Problem()}}, \mbox{\hyperlink{Problem_8java_source_l00029}{problem.\+definition.\+Problem.\+Problem\+Type.\+Maximizar}} y \mbox{\hyperlink{State_8java_source_l00113}{problem.\+definition.\+State.\+set\+Evaluation()}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classproblem_1_1extension_1_1FactoresPonderados_a935d426d08fbf69af9ea5fe2196692bc_cgraph}
+\end{center}
+\end{figure}
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{FactoresPonderados_8java}{Factores\+Ponderados.\+java}}\end{DoxyCompactItemize}

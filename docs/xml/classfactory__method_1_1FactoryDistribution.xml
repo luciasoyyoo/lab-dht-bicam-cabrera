@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="es">
+  <compounddef id="classfactory__method_1_1FactoryDistribution" kind="class" language="Java" prot="public">
+    <compoundname>factory_method::FactoryDistribution</compoundname>
+    <basecompoundref refid="interfacefactory__interface_1_1IFFactoryDistribution" prot="public" virt="non-virtual">factory_interface.IFFactoryDistribution</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classfactory__method_1_1FactoryDistribution_1aadd22e8b32163307abb4790b9ce67281" prot="private" static="no" mutable="no">
+        <type><ref refid="classevolutionary__algorithms_1_1complement_1_1Distribution" kindref="compound">Distribution</ref></type>
+        <definition>Distribution factory_method.FactoryDistribution.distribution</definition>
+        <argsstring></argsstring>
+        <name>distribution</name>
+        <qualifiedname>factory_method.FactoryDistribution.distribution</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/factory_method/FactoryDistribution.java" line="13" column="22" bodyfile="practica5/src/main/java/factory_method/FactoryDistribution.java" bodystart="13" bodyend="-1"/>
+        <referencedby refid="classfactory__method_1_1FactoryDistribution_1a3e8c76621dcc6efd598b0ab445216de5" compoundref="FactoryDistribution_8java" startline="20" endline="25">factory_method.FactoryDistribution.createDistribution</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classfactory__method_1_1FactoryDistribution_1a3e8c76621dcc6efd598b0ab445216de5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classevolutionary__algorithms_1_1complement_1_1Distribution" kindref="compound">Distribution</ref></type>
+        <definition>Distribution factory_method.FactoryDistribution.createDistribution</definition>
+        <argsstring>(DistributionType distributiontype)</argsstring>
+        <name>createDistribution</name>
+        <qualifiedname>factory_method.FactoryDistribution.createDistribution</qualifiedname>
+        <reimplements refid="interfacefactory__interface_1_1IFFactoryDistribution_1ac63d070c238ef57b8d17409af36f43cb">createDistribution</reimplements>
+        <param>
+          <type><ref refid="enumevolutionary__algorithms_1_1complement_1_1DistributionType" kindref="compound">DistributionType</ref></type>
+          <declname>distributiontype</declname>
+        </param>
+        <exceptions> throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException </exceptions>
+        <briefdescription>
+<para>createDistribution - Creates an instance of <ref refid="classevolutionary__algorithms_1_1complement_1_1Distribution" kindref="compound">Distribution</ref> based on the provided <ref refid="enumevolutionary__algorithms_1_1complement_1_1DistributionType" kindref="compound">DistributionType</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>distributiontype</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns an instance of <ref refid="classevolutionary__algorithms_1_1complement_1_1Distribution" kindref="compound">Distribution</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/factory_method/FactoryDistribution.java" line="20" column="21" bodyfile="practica5/src/main/java/factory_method/FactoryDistribution.java" bodystart="20" bodyend="25"/>
+        <references refid="classfactory__method_1_1FactoryDistribution_1aadd22e8b32163307abb4790b9ce67281" compoundref="FactoryDistribution_8java" startline="13">factory_method.FactoryDistribution.distribution</references>
+        <references refid="classfactory__method_1_1FactoryLoader_1a4e61ffc7038a082277d67e3e59cdb859" compoundref="FactoryLoader_8java" startline="21" endline="28">factory_method.FactoryLoader.getInstance</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="classfactory__method_1_1FactoryDistribution" kindref="compound">FactoryDistribution</ref> - Interface for creating distribution strategies. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>factory_interface.IFFactoryDistribution</label>
+        <link refid="interfacefactory__interface_1_1IFFactoryDistribution"/>
+      </node>
+      <node id="1">
+        <label>factory_method.FactoryDistribution</label>
+        <link refid="classfactory__method_1_1FactoryDistribution"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>evolutionary_algorithms.complement.Distribution</label>
+        <link refid="classevolutionary__algorithms_1_1complement_1_1Distribution"/>
+      </node>
+      <node id="2">
+        <label>factory_interface.IFFactoryDistribution</label>
+        <link refid="interfacefactory__interface_1_1IFFactoryDistribution"/>
+      </node>
+      <node id="1">
+        <label>factory_method.FactoryDistribution</label>
+        <link refid="classfactory__method_1_1FactoryDistribution"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-distribution</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="practica5/src/main/java/factory_method/FactoryDistribution.java" line="12" column="7" bodyfile="practica5/src/main/java/factory_method/FactoryDistribution.java" bodystart="12" bodyend="26"/>
+    <listofallmembers>
+      <member refid="classfactory__method_1_1FactoryDistribution_1a3e8c76621dcc6efd598b0ab445216de5" prot="public" virt="non-virtual"><scope>factory_method::FactoryDistribution</scope><name>createDistribution</name></member>
+      <member refid="classfactory__method_1_1FactoryDistribution_1aadd22e8b32163307abb4790b9ce67281" prot="private" virt="non-virtual"><scope>factory_method::FactoryDistribution</scope><name>distribution</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

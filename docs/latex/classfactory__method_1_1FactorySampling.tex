@@ -1,0 +1,121 @@
+\doxysection{Referencia de la clase factory\+\_\+method.\+Factory\+Sampling}
+\hypertarget{classfactory__method_1_1FactorySampling}{}\label{classfactory__method_1_1FactorySampling}\index{factory\_method.FactorySampling@{factory\_method.FactorySampling}}
+
+
+\doxylink{classfactory__method_1_1FactorySampling}{Factory\+Sampling} -\/ Class responsible for creating sampling strategies.  
+
+
+
+
+Diagrama de herencia de factory\+\_\+method.\+Factory\+Sampling
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{classfactory__method_1_1FactorySampling__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagrama de colaboración de factory\+\_\+method.\+Factory\+Sampling\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classfactory__method_1_1FactorySampling__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1Sampling}{Sampling}} \mbox{\hyperlink{classfactory__method_1_1FactorySampling_a33a535d67935fdd077359930be8c125d}{create\+Sampling}} (\mbox{\hyperlink{enumevolutionary__algorithms_1_1complement_1_1SamplingType}{Sampling\+Type}} typesampling)  throws Illegal\+Argument\+Exception, Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception, Illegal\+Access\+Exception, Invocation\+Target\+Exception, No\+Such\+Method\+Exception 
+\begin{DoxyCompactList}\small\item\em create\+Sampling -\/ Creates an instance of \doxylink{classevolutionary__algorithms_1_1complement_1_1Sampling}{Sampling} based on the provided \doxylink{enumevolutionary__algorithms_1_1complement_1_1SamplingType}{Sampling\+Type}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1Sampling}{Sampling}} \mbox{\hyperlink{classfactory__method_1_1FactorySampling_ac0ddd9e1c0a87bbd729f7e65e495b258}{sampling}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+\doxylink{classfactory__method_1_1FactorySampling}{Factory\+Sampling} -\/ Class responsible for creating sampling strategies. 
+
+Definición en la línea \mbox{\hyperlink{FactorySampling_8java_source_l00016}{16}} del archivo \mbox{\hyperlink{FactorySampling_8java_source}{Factory\+Sampling.\+java}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{classfactory__method_1_1FactorySampling_doc-func-members}
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{classfactory__method_1_1FactorySampling_a33a535d67935fdd077359930be8c125d}\index{factory\_method.FactorySampling@{factory\_method.FactorySampling}!createSampling@{createSampling}}
+\index{createSampling@{createSampling}!factory\_method.FactorySampling@{factory\_method.FactorySampling}}
+\doxysubsubsection{\texorpdfstring{createSampling()}{createSampling()}}
+{\footnotesize\ttfamily \label{classfactory__method_1_1FactorySampling_a33a535d67935fdd077359930be8c125d} 
+\mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1Sampling}{Sampling}} factory\+\_\+method.\+Factory\+Sampling.\+create\+Sampling (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{enumevolutionary__algorithms_1_1complement_1_1SamplingType}{Sampling\+Type}}}]{typesampling}{}\end{DoxyParamCaption}) throws Illegal\+Argument\+Exception, Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception, Illegal\+Access\+Exception, Invocation\+Target\+Exception, No\+Such\+Method\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+create\+Sampling -\/ Creates an instance of \doxylink{classevolutionary__algorithms_1_1complement_1_1Sampling}{Sampling} based on the provided \doxylink{enumevolutionary__algorithms_1_1complement_1_1SamplingType}{Sampling\+Type}. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em typesampling} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+returns an instance of \doxylink{classevolutionary__algorithms_1_1complement_1_1Sampling}{Sampling} 
+\end{DoxyReturn}
+
+
+Implementa \mbox{\hyperlink{interfacefactory__interface_1_1IFFSampling_a0ad830470c6482d155ba7e11e32f756b}{factory\+\_\+interface.\+IFFSampling}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{FactorySampling_8java_source_l00023}{23}} del archivo \mbox{\hyperlink{FactorySampling_8java_source}{Factory\+Sampling.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ String\ className\ =\ \textcolor{stringliteral}{"{}evolutionary\_algorithms.complement."{}}\ +\ typesampling.toString();}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ sampling\ =\ (Sampling)\ FactoryLoader.getInstance(className);}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ sampling;}
+\DoxyCodeLine{00028\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{FactoryLoader_8java_source_l00021}{factory\+\_\+method.\+Factory\+Loader.\+get\+Instance()}} y \mbox{\hyperlink{FactorySampling_8java_source_l00017}{sampling}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classfactory__method_1_1FactorySampling_a33a535d67935fdd077359930be8c125d_cgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-variable-members}
+\Hypertarget{classfactory__method_1_1FactorySampling_doc-variable-members}
+\doxysubsection{Documentación de datos miembro}
+\Hypertarget{classfactory__method_1_1FactorySampling_ac0ddd9e1c0a87bbd729f7e65e495b258}\index{factory\_method.FactorySampling@{factory\_method.FactorySampling}!sampling@{sampling}}
+\index{sampling@{sampling}!factory\_method.FactorySampling@{factory\_method.FactorySampling}}
+\doxysubsubsection{\texorpdfstring{sampling}{sampling}}
+{\footnotesize\ttfamily \label{classfactory__method_1_1FactorySampling_ac0ddd9e1c0a87bbd729f7e65e495b258} 
+\mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1Sampling}{Sampling}} factory\+\_\+method.\+Factory\+Sampling.\+sampling\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{FactorySampling_8java_source_l00017}{17}} del archivo \mbox{\hyperlink{FactorySampling_8java_source}{Factory\+Sampling.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{FactorySampling_8java_source_l00023}{create\+Sampling()}}.
+
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{FactorySampling_8java}{Factory\+Sampling.\+java}}\end{DoxyCompactItemize}

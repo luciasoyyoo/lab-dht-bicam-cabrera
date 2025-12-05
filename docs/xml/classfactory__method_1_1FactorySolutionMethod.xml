@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="es">
+  <compounddef id="classfactory__method_1_1FactorySolutionMethod" kind="class" language="Java" prot="public">
+    <compoundname>factory_method::FactorySolutionMethod</compoundname>
+    <basecompoundref refid="interfacefactory__interface_1_1IFFactorySolutionMethod" prot="public" virt="non-virtual">factory_interface.IFFactorySolutionMethod</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classfactory__method_1_1FactorySolutionMethod_1ac14902718f819590e98b555ae308ea78" prot="private" static="no" mutable="no">
+        <type><ref refid="classproblem_1_1extension_1_1SolutionMethod" kindref="compound">SolutionMethod</ref></type>
+        <definition>SolutionMethod factory_method.FactorySolutionMethod.solutionMethod</definition>
+        <argsstring></argsstring>
+        <name>solutionMethod</name>
+        <qualifiedname>factory_method.FactorySolutionMethod.solutionMethod</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/factory_method/FactorySolutionMethod.java" line="14" column="24" bodyfile="practica5/src/main/java/factory_method/FactorySolutionMethod.java" bodystart="14" bodyend="-1"/>
+        <referencedby refid="classfactory__method_1_1FactorySolutionMethod_1aa94ebb4be85308784dbeec3d7c44209d" compoundref="FactorySolutionMethod_8java" startline="22" endline="26">factory_method.FactorySolutionMethod.createdSolutionMethod</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classfactory__method_1_1FactorySolutionMethod_1aa94ebb4be85308784dbeec3d7c44209d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classproblem_1_1extension_1_1SolutionMethod" kindref="compound">SolutionMethod</ref></type>
+        <definition>SolutionMethod factory_method.FactorySolutionMethod.createdSolutionMethod</definition>
+        <argsstring>(TypeSolutionMethod method)</argsstring>
+        <name>createdSolutionMethod</name>
+        <qualifiedname>factory_method.FactorySolutionMethod.createdSolutionMethod</qualifiedname>
+        <reimplements refid="interfacefactory__interface_1_1IFFactorySolutionMethod_1acefa262efa7711ee87b59ae8780d2bb3">createdSolutionMethod</reimplements>
+        <param>
+          <type><ref refid="enumproblem_1_1extension_1_1TypeSolutionMethod" kindref="compound">TypeSolutionMethod</ref></type>
+          <declname>method</declname>
+        </param>
+        <exceptions> throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException </exceptions>
+        <briefdescription>
+<para>createdSolutionMethod - Creates an instance of <ref refid="classproblem_1_1extension_1_1SolutionMethod" kindref="compound">SolutionMethod</ref> based on the provided <ref refid="enumproblem_1_1extension_1_1TypeSolutionMethod" kindref="compound">TypeSolutionMethod</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>method</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns an instance of <ref refid="classproblem_1_1extension_1_1SolutionMethod" kindref="compound">SolutionMethod</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/factory_method/FactorySolutionMethod.java" line="22" column="23" bodyfile="practica5/src/main/java/factory_method/FactorySolutionMethod.java" bodystart="22" bodyend="26"/>
+        <references refid="classfactory__method_1_1FactoryLoader_1a4e61ffc7038a082277d67e3e59cdb859" compoundref="FactoryLoader_8java" startline="21" endline="28">factory_method.FactoryLoader.getInstance</references>
+        <references refid="classfactory__method_1_1FactorySolutionMethod_1ac14902718f819590e98b555ae308ea78" compoundref="FactorySolutionMethod_8java" startline="14">factory_method.FactorySolutionMethod.solutionMethod</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="classfactory__method_1_1FactorySolutionMethod" kindref="compound">FactorySolutionMethod</ref> - Class responsible for creating solution method strategies. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>factory_interface.IFFactorySolutionMethod</label>
+        <link refid="interfacefactory__interface_1_1IFFactorySolutionMethod"/>
+      </node>
+      <node id="1">
+        <label>factory_method.FactorySolutionMethod</label>
+        <link refid="classfactory__method_1_1FactorySolutionMethod"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>factory_interface.IFFactorySolutionMethod</label>
+        <link refid="interfacefactory__interface_1_1IFFactorySolutionMethod"/>
+      </node>
+      <node id="1">
+        <label>factory_method.FactorySolutionMethod</label>
+        <link refid="classfactory__method_1_1FactorySolutionMethod"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-solutionMethod</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>problem.extension.SolutionMethod</label>
+        <link refid="classproblem_1_1extension_1_1SolutionMethod"/>
+      </node>
+    </collaborationgraph>
+    <location file="practica5/src/main/java/factory_method/FactorySolutionMethod.java" line="12" column="7" bodyfile="practica5/src/main/java/factory_method/FactorySolutionMethod.java" bodystart="12" bodyend="28"/>
+    <listofallmembers>
+      <member refid="classfactory__method_1_1FactorySolutionMethod_1aa94ebb4be85308784dbeec3d7c44209d" prot="public" virt="non-virtual"><scope>factory_method::FactorySolutionMethod</scope><name>createdSolutionMethod</name></member>
+      <member refid="classfactory__method_1_1FactorySolutionMethod_1ac14902718f819590e98b555ae308ea78" prot="private" virt="non-virtual"><scope>factory_method::FactorySolutionMethod</scope><name>solutionMethod</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,111 @@
+\doxysection{State.\+java}
+\hypertarget{State_8java_source}{}\label{State_8java_source}\index{State.java@{State.java}}
+\mbox{\hyperlink{State_8java}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00001}00001\ \textcolor{keyword}{package\ }problem.definition;}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00003}00003\ \textcolor{keyword}{import}\ java.util.ArrayList;}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00005}00005\ \textcolor{keyword}{import}\ metaheuristics.generators.GeneratorType;}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00016}\mbox{\hyperlink{classproblem_1_1definition_1_1State}{00016}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classproblem_1_1definition_1_1State_a1a5212628b1f4ec0f1091211615cda9c}{State}}\ \textcolor{keyword}{implements}\ Cloneable\ \{}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00017}00017\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00018}\mbox{\hyperlink{classproblem_1_1definition_1_1State_a79f46901bd3af4954eb9fc8cc75fe362}{00018}}\ \ \ \ \ \textcolor{keyword}{protected}\ \mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{GeneratorType}}\ \mbox{\hyperlink{classproblem_1_1definition_1_1State_a79f46901bd3af4954eb9fc8cc75fe362}{typeGenerator}};}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00019}\mbox{\hyperlink{classproblem_1_1definition_1_1State_a282b2052d61ad952dda46310a8e92a09}{00019}}\ \ \ \ \ \textcolor{keyword}{protected}\ ArrayList<Double>\ \mbox{\hyperlink{classproblem_1_1definition_1_1State_a282b2052d61ad952dda46310a8e92a09}{evaluation}};}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00020}\mbox{\hyperlink{classproblem_1_1definition_1_1State_ad580b219425de32eb855574094f74848}{00020}}\ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classproblem_1_1definition_1_1State_ad580b219425de32eb855574094f74848}{number}};}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00021}\mbox{\hyperlink{classproblem_1_1definition_1_1State_ad8f438f65cd2b4e47f8634a4706d7ca4}{00021}}\ \ \ \ \ \textcolor{keyword}{protected}\ ArrayList<Object>\ \mbox{\hyperlink{classproblem_1_1definition_1_1State_ad8f438f65cd2b4e47f8634a4706d7ca4}{code}};}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00022}00022\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00030}\mbox{\hyperlink{classproblem_1_1definition_1_1State_a1a5212628b1f4ec0f1091211615cda9c}{00030}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classproblem_1_1definition_1_1State_a1a5212628b1f4ec0f1091211615cda9c}{State}}(\mbox{\hyperlink{classproblem_1_1definition_1_1State_a1a5212628b1f4ec0f1091211615cda9c}{State}}\ ps)\ \{}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00031}00031\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ps\ ==\ \textcolor{keyword}{null})\ \{}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ this.code\ =\ \textcolor{keyword}{new}\ ArrayList<Object>();}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ this.evaluation\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ this.number\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ this.typeGenerator\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00037}00037\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00038}00038\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classproblem_1_1definition_1_1State_a79f46901bd3af4954eb9fc8cc75fe362}{typeGenerator}}\ =\ ps.\mbox{\hyperlink{classproblem_1_1definition_1_1State_a59d2cd4e1c7f90ac887e46adffb6c944}{getTypeGenerator}}();}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00039}00039\ \ \ \ \ \ \ \ \ ArrayList<Double>\ eval\ =\ ps.\mbox{\hyperlink{classproblem_1_1definition_1_1State_a226ea6fab8e7060cf131edfdb245a6fa}{getEvaluation}}();}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00040}00040\ \ \ \ \ \ \ \ \ this.evaluation\ =\ (eval\ ==\ \textcolor{keyword}{null})\ ?\ \textcolor{keyword}{null}\ :\ \textcolor{keyword}{new}\ ArrayList<Double>(eval);}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00041}00041\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classproblem_1_1definition_1_1State_ad580b219425de32eb855574094f74848}{number}}\ =\ ps.\mbox{\hyperlink{classproblem_1_1definition_1_1State_af8aecb9c06562fcda193b6a1da0b9ca3}{getNumber}}();}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00042}00042\ \ \ \ \ \ \ \ \ ArrayList<Object>\ c\ =\ ps.\mbox{\hyperlink{classproblem_1_1definition_1_1State_a2e75b6f2bedb2107478ecd1e8e681418}{getCode}}();}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00043}00043\ \ \ \ \ \ \ \ \ this.code\ =\ (c\ ==\ \textcolor{keyword}{null})\ ?\ \textcolor{keyword}{new}\ ArrayList<Object>()\ :\ \textcolor{keyword}{new}\ ArrayList<Object>(c);}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00044}00044\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00045}00045\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00051}\mbox{\hyperlink{classproblem_1_1definition_1_1State_ac1993711acbcb84cb789d52f59ec1e29}{00051}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classproblem_1_1definition_1_1State_ac1993711acbcb84cb789d52f59ec1e29}{State}}(ArrayList<Object>\ \mbox{\hyperlink{classproblem_1_1definition_1_1State_ad8f438f65cd2b4e47f8634a4706d7ca4}{code}})\ \{}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00052}00052\ \ \ \ \ \ \ \ \ super();}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00053}00053\ \ \ \ \ \ \ \ \ this.code\ =\ (\mbox{\hyperlink{classproblem_1_1definition_1_1State_ad8f438f65cd2b4e47f8634a4706d7ca4}{code}}\ ==\ \textcolor{keyword}{null})\ ?\ \textcolor{keyword}{new}\ ArrayList<Object>()\ :\ \textcolor{keyword}{new}\ ArrayList<Object>(\mbox{\hyperlink{classproblem_1_1definition_1_1State_ad8f438f65cd2b4e47f8634a4706d7ca4}{code}});}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00054}00054\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00055}00055\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00059}\mbox{\hyperlink{classproblem_1_1definition_1_1State_aac57a8314601200a442cbd429b718e8c}{00059}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classproblem_1_1definition_1_1State_aac57a8314601200a442cbd429b718e8c}{State}}()\ \{}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00060}00060\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classproblem_1_1definition_1_1State_ad8f438f65cd2b4e47f8634a4706d7ca4}{code}}=\textcolor{keyword}{new}\ ArrayList<Object>();}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00061}00061\ \ \ \ \ \}\ \ \ }
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00062}00062\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00068}\mbox{\hyperlink{classproblem_1_1definition_1_1State_a2e75b6f2bedb2107478ecd1e8e681418}{00068}}\ \ \ \ \ \textcolor{keyword}{public}\ ArrayList<Object>\ \mbox{\hyperlink{classproblem_1_1definition_1_1State_a2e75b6f2bedb2107478ecd1e8e681418}{getCode}}()\ \{}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00069}00069\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (\mbox{\hyperlink{classproblem_1_1definition_1_1State_ad8f438f65cd2b4e47f8634a4706d7ca4}{code}}\ ==\ \textcolor{keyword}{null})\ ?\ \textcolor{keyword}{new}\ ArrayList<Object>()\ :\ \textcolor{keyword}{new}\ ArrayList<Object>(\mbox{\hyperlink{classproblem_1_1definition_1_1State_ad8f438f65cd2b4e47f8634a4706d7ca4}{code}});}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00070}00070\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00077}\mbox{\hyperlink{classproblem_1_1definition_1_1State_ab15765262a6e1cc7661c51cbcf0e7785}{00077}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classproblem_1_1definition_1_1State_ab15765262a6e1cc7661c51cbcf0e7785}{setCode}}(ArrayList<Object>\ listCode)\ \{}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00078}00078\ \ \ \ \ \ \ \ \ this.code\ =\ (listCode\ ==\ \textcolor{keyword}{null})\ ?\ \textcolor{keyword}{new}\ ArrayList<Object>()\ :\ \textcolor{keyword}{new}\ ArrayList<Object>(listCode);}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00079}00079\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00086}\mbox{\hyperlink{classproblem_1_1definition_1_1State_a59d2cd4e1c7f90ac887e46adffb6c944}{00086}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{GeneratorType}}\ \mbox{\hyperlink{classproblem_1_1definition_1_1State_a59d2cd4e1c7f90ac887e46adffb6c944}{getTypeGenerator}}()\ \{}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00087}00087\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classproblem_1_1definition_1_1State_a79f46901bd3af4954eb9fc8cc75fe362}{typeGenerator}};}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00088}00088\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00094}\mbox{\hyperlink{classproblem_1_1definition_1_1State_afccaeac3af66cb772e2b3e70758b8fe6}{00094}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classproblem_1_1definition_1_1State_afccaeac3af66cb772e2b3e70758b8fe6}{setTypeGenerator}}(\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{GeneratorType}}\ \mbox{\hyperlink{classproblem_1_1definition_1_1State_a79f46901bd3af4954eb9fc8cc75fe362}{typeGenerator}})\ \{}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00095}00095\ \ \ \ \ \ \ \ \ this.typeGenerator\ =\ \mbox{\hyperlink{classproblem_1_1definition_1_1State_a79f46901bd3af4954eb9fc8cc75fe362}{typeGenerator}};}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00096}00096\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00097}00097\ }
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00098}00098\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00104}\mbox{\hyperlink{classproblem_1_1definition_1_1State_a226ea6fab8e7060cf131edfdb245a6fa}{00104}}\ \ \ \ \ \textcolor{keyword}{public}\ ArrayList<Double>\ \mbox{\hyperlink{classproblem_1_1definition_1_1State_a226ea6fab8e7060cf131edfdb245a6fa}{getEvaluation}}()\ \{}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00105}00105\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (\mbox{\hyperlink{classproblem_1_1definition_1_1State_a282b2052d61ad952dda46310a8e92a09}{evaluation}}\ ==\ \textcolor{keyword}{null})\ ?\ null\ :\ \textcolor{keyword}{new}\ ArrayList<Double>(\mbox{\hyperlink{classproblem_1_1definition_1_1State_a282b2052d61ad952dda46310a8e92a09}{evaluation}});}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00106}00106\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00107}00107\ }
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00113}\mbox{\hyperlink{classproblem_1_1definition_1_1State_abeaa628078af4804e5e9d93b3de593b5}{00113}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classproblem_1_1definition_1_1State_abeaa628078af4804e5e9d93b3de593b5}{setEvaluation}}(ArrayList<Double>\ \mbox{\hyperlink{classproblem_1_1definition_1_1State_a282b2052d61ad952dda46310a8e92a09}{evaluation}})\ \{}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00114}00114\ \ \ \ \ \ \ \ \ this.evaluation\ =\ (\mbox{\hyperlink{classproblem_1_1definition_1_1State_a282b2052d61ad952dda46310a8e92a09}{evaluation}}\ ==\ \textcolor{keyword}{null})\ ?\ \textcolor{keyword}{null}\ :\ \textcolor{keyword}{new}\ ArrayList<Double>(\mbox{\hyperlink{classproblem_1_1definition_1_1State_a282b2052d61ad952dda46310a8e92a09}{evaluation}});}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00115}00115\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00116}00116\ }
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00122}\mbox{\hyperlink{classproblem_1_1definition_1_1State_af8aecb9c06562fcda193b6a1da0b9ca3}{00122}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classproblem_1_1definition_1_1State_af8aecb9c06562fcda193b6a1da0b9ca3}{getNumber}}()\ \{}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00123}00123\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classproblem_1_1definition_1_1State_ad580b219425de32eb855574094f74848}{number}};}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00124}00124\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00130}\mbox{\hyperlink{classproblem_1_1definition_1_1State_ab802f63ab88415158f9c6cf468b6c8b3}{00130}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classproblem_1_1definition_1_1State_ab802f63ab88415158f9c6cf468b6c8b3}{setNumber}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{classproblem_1_1definition_1_1State_ad580b219425de32eb855574094f74848}{number}})\ \{}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00131}00131\ \ \ \ \ \ \ \ \ this.number\ =\ \mbox{\hyperlink{classproblem_1_1definition_1_1State_ad580b219425de32eb855574094f74848}{number}};}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00132}00132\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00133}00133\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00142}\mbox{\hyperlink{classproblem_1_1definition_1_1State_a113f6883a1f6bd20eea2da09a0adc5c3}{00142}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classproblem_1_1definition_1_1State_a1a5212628b1f4ec0f1091211615cda9c}{State}}\ \mbox{\hyperlink{classproblem_1_1definition_1_1State_a113f6883a1f6bd20eea2da09a0adc5c3}{clone}}()\{}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00143}00143\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classproblem_1_1definition_1_1State_a1a5212628b1f4ec0f1091211615cda9c}{State}}\ s\ =\ (\mbox{\hyperlink{classproblem_1_1definition_1_1State_a1a5212628b1f4ec0f1091211615cda9c}{State}})\ super.clone();}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00145}00145\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ deep-\/copy\ mutable\ collections}}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00146}00146\ \ \ \ \ \ \ \ \ \ \ \ \ s.code\ =\ (this.code\ ==\ \textcolor{keyword}{null})\ ?\ \textcolor{keyword}{new}\ ArrayList<Object>()\ :\ \textcolor{keyword}{new}\ ArrayList<Object>(this.code);}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00147}00147\ \ \ \ \ \ \ \ \ \ \ \ \ s.evaluation\ =\ (this.evaluation\ ==\ \textcolor{keyword}{null})\ ?\ \textcolor{keyword}{null}\ :\ \textcolor{keyword}{new}\ ArrayList<Double>(this.evaluation);}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00148}00148\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ primitive\ and\ enum-\/like\ fields\ are\ safe\ to\ copy\ by\ assignment}}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00149}00149\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ s;}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00150}00150\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (CloneNotSupportedException\ e)\ \{}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00151}00151\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ fallback\ to\ copy\ constructor}}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00152}00152\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classproblem_1_1definition_1_1State_aac57a8314601200a442cbd429b718e8c}{State}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00153}00153\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00154}00154\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00155}00155\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00161}\mbox{\hyperlink{classproblem_1_1definition_1_1State_aaf14fa8466c945ff5e134028c6c259f8}{00161}}\ \ \ \ \ \textcolor{keyword}{public}\ Object\ \mbox{\hyperlink{classproblem_1_1definition_1_1State_aaf14fa8466c945ff5e134028c6c259f8}{getCopy}}()\{}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00162}00162\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classproblem_1_1definition_1_1State_aac57a8314601200a442cbd429b718e8c}{State}}(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00163}00163\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00164}00164\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00171}\mbox{\hyperlink{classproblem_1_1definition_1_1State_aea3cb9557745c174837425d06135f980}{00171}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{boolean}\ \mbox{\hyperlink{classproblem_1_1definition_1_1State_aea3cb9557745c174837425d06135f980}{Comparator}}(\mbox{\hyperlink{classproblem_1_1definition_1_1State_a1a5212628b1f4ec0f1091211615cda9c}{State}}\ state)\{}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00172}00172\ }
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00173}00173\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{boolean}\ result=\textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00174}00174\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(state.\mbox{\hyperlink{classproblem_1_1definition_1_1State_a2e75b6f2bedb2107478ecd1e8e681418}{getCode}}().equals(\mbox{\hyperlink{classproblem_1_1definition_1_1State_a2e75b6f2bedb2107478ecd1e8e681418}{getCode}}()))\{}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00175}00175\ \ \ \ \ \ \ \ \ \ \ \ \ result=\textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00176}00176\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00177}00177\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00178}00178\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00185}\mbox{\hyperlink{classproblem_1_1definition_1_1State_aac773d24ebabc0a6e1dc041c5039fe47}{00185}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classproblem_1_1definition_1_1State_aac773d24ebabc0a6e1dc041c5039fe47}{Distance}}(\mbox{\hyperlink{classproblem_1_1definition_1_1State_a1a5212628b1f4ec0f1091211615cda9c}{State}}\ state)\{}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00186}00186\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ distancia\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00187}00187\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ state.\mbox{\hyperlink{classproblem_1_1definition_1_1State_a2e75b6f2bedb2107478ecd1e8e681418}{getCode}}().size();\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00188}00188\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!(state.\mbox{\hyperlink{classproblem_1_1definition_1_1State_a2e75b6f2bedb2107478ecd1e8e681418}{getCode}}().get(i).equals(\textcolor{keyword}{this}.getCode().get(i))))\ \{}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00189}00189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ distancia++;}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00190}00190\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00191}00191\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00192}00192\ \ \ \ \ \textcolor{keywordflow}{return}\ distancia;}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00193}00193\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{State_8java_source_l00194}00194\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,100 @@
+\doxysection{Dominance.\+java}
+\hypertarget{Dominance_8java_source}{}\label{Dominance_8java_source}\index{Dominance.java@{Dominance.java}}
+\mbox{\hyperlink{Dominance_8java}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00001}00001\ \textcolor{keyword}{package\ }local\_search.acceptation\_type;}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00003}00003\ \textcolor{keyword}{import}\ java.util.List;}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00005}00005\ \textcolor{keyword}{import}\ metaheurictics.strategy.Strategy;}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00006}00006\ \textcolor{keyword}{import}\ metaheuristics.generators.GeneratorType;}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00007}00007\ \textcolor{keyword}{import}\ metaheuristics.generators.MultiobjectiveHillClimbingDistance;}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00008}00008\ \textcolor{keyword}{import}\ problem.definition.Problem.ProblemType;}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00009}00009\ \textcolor{keyword}{import}\ problem.definition.State;}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00018}\mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1Dominance}{00018}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1Dominance}{Dominance}}\ \{}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00020}00020\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/Metodos\ que\ se\ utilizan\ en\ los\ algoritmos\ multiobjetivo-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\///}}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00021}00021\ \ \ \ \ \textcolor{comment}{//Funcion\ que\ determina\ si\ la\ solucion\ X\ domina\ a\ alguna\ de\ las\ soluciones\ no\ dominadas\ de\ una\ lista}}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00022}00022\ \ \ \ \ \textcolor{comment}{//Devuelve\ la\ lista\ actualizada\ y\ true\ si\ fue\ adicionada\ a\ la\ lista\ o\ false\ de\ lo\ contrario}}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00033}\mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1Dominance_ad61c0e3cb6cc4036419cb36758cf3814}{00033}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{boolean}\ \mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1Dominance_ad61c0e3cb6cc4036419cb36758cf3814}{listDominance}}(\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ solutionX,\ List<State>\ list)\{}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00034}00034\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{boolean}\ domain\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00035}00035\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ list.size()\ \&\&\ domain\ ==\ \textcolor{keyword}{false};\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Si\ la\ soluci{\ucr}n\ X\ domina\ a\ la\ soluci{\ucr}n\ de\ la\ lista}}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1Dominance_a0dafd58be8365a22956f59417841a2d8}{dominance}}(solutionX,\ list.get(i))\ ==\ \textcolor{keyword}{true})\{}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Se\ elimina\ el\ elemento\ de\ la\ lista}}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ list.remove(i);}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i!=0)\ \{}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ i-\/-\/;\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy}{Strategy}}.\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_ad2641e12c52292930364de6655333aa8}{getStrategy}}().\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_a2f0ea18b2127e6e38c1d335fed32c7e0}{generator}}.\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a5a123306b43c42d28cd1d6e17f8067a5}{getType}}().equals(\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{GeneratorType}}.\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType_a18cd5a5c6e13c6481bed1304884cc72f}{MultiobjectiveHillClimbingDistance}})\&\&list.size()!=0)\ \{}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance}{MultiobjectiveHillClimbingDistance}}.\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_a03f73587a843776e7601b966f6faa01e}{distanceCalculateAdd}}(list);}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (list.size()>0)\ \{}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1Dominance_a0dafd58be8365a22956f59417841a2d8}{dominance}}(list.get(i),\ solutionX)\ ==\ \textcolor{keyword}{true})\{}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ domain\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00053}00053\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00054}00054\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Si\ la\ soluci{\ucr}n\ X\ no\ fue\ dominada}}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00055}00055\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(domain\ ==\ \textcolor{keyword}{false})\{}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Comprobando\ que\ la\ soluci{\ucr}n\ no\ exista}}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{boolean}\ found\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ k\ =\ 0;\ k\ <\ list.size()\ \&\&\ found\ ==\ \textcolor{keyword}{false};\ k++)\ \{}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ element\ =\ list.get(k);}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ found\ =\ solutionX.\mbox{\hyperlink{classproblem_1_1definition_1_1State_aea3cb9557745c174837425d06135f980}{Comparator}}(element);}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Si\ la\ soluci{\ucr}n\ no\ existe}}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(found\ ==\ \textcolor{keyword}{false})\{}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Se\ guarda\ la\ soluci{\ucr}n\ candidata\ en\ la\ lista\ de\ soluciones\ {\ucr}ptimas\ de\ Pareto}}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ list.add(solutionX.\mbox{\hyperlink{classproblem_1_1definition_1_1State_a113f6883a1f6bd20eea2da09a0adc5c3}{clone}}());}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy}{Strategy}}.\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_ad2641e12c52292930364de6655333aa8}{getStrategy}}().\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_a2f0ea18b2127e6e38c1d335fed32c7e0}{generator}}.\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a5a123306b43c42d28cd1d6e17f8067a5}{getType}}().equals(\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{GeneratorType}}.\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType_a18cd5a5c6e13c6481bed1304884cc72f}{MultiobjectiveHillClimbingDistance}}))\ \{}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance}{MultiobjectiveHillClimbingDistance}}.\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_a03f73587a843776e7601b966f6faa01e}{distanceCalculateAdd}}(list);}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00071}00071\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00072}00072\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00075}00075\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00077}00077\ }
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00078}00078\ \ \ \ \ \textcolor{comment}{//Funcion\ que\ devuelve\ true\ si\ solutionX\ domina\ a\ solutionY}}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00087}\mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1Dominance_a0dafd58be8365a22956f59417841a2d8}{00087}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{boolean}\ \mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1Dominance_a0dafd58be8365a22956f59417841a2d8}{dominance}}(\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ solutionX,\ \ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ solutionY)\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00088}00088\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{boolean}\ \mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1Dominance_a0dafd58be8365a22956f59417841a2d8}{dominance}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00089}00089\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ countBest\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00090}00090\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ countEquals\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00091}00091\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Si\ solutionX\ domina\ a\ solutionY}}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00092}00092\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy}{Strategy}}.\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_ad2641e12c52292930364de6655333aa8}{getStrategy}}().\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_a4bc6bd95db71e14b1f48c1bfc85f1305}{getProblem}}().\mbox{\hyperlink{classproblem_1_1definition_1_1Problem_ad6f38df755179e22ffe487ba4a5c8021}{getTypeProblem}}().equals(\mbox{\hyperlink{enumproblem_1_1definition_1_1Problem_1_1ProblemType}{ProblemType}}.\mbox{\hyperlink{enumproblem_1_1definition_1_1Problem_1_1ProblemType_aa55383c4cb9a71cfeabc7f715ee0cd6e}{Maximizar}}))\ \{}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Recorriendo\ las\ evaluaciones\ de\ las\ funciones\ objetivo}}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ solutionX.\mbox{\hyperlink{classproblem_1_1definition_1_1State_a226ea6fab8e7060cf131edfdb245a6fa}{getEvaluation}}().size();\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(solutionX.\mbox{\hyperlink{classproblem_1_1definition_1_1State_a226ea6fab8e7060cf131edfdb245a6fa}{getEvaluation}}().get(i).floatValue()\ >\ solutionY.\mbox{\hyperlink{classproblem_1_1definition_1_1State_a226ea6fab8e7060cf131edfdb245a6fa}{getEvaluation}}().get(i).floatValue())\{}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ countBest++;}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(solutionX.\mbox{\hyperlink{classproblem_1_1definition_1_1State_a226ea6fab8e7060cf131edfdb245a6fa}{getEvaluation}}().get(i).floatValue()\ ==\ solutionY.\mbox{\hyperlink{classproblem_1_1definition_1_1State_a226ea6fab8e7060cf131edfdb245a6fa}{getEvaluation}}().get(i).floatValue())\{}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ countEquals++;}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \ \ }
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00102}00102\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00103}00103\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Recorriendo\ las\ evaluaciones\ de\ las\ funciones\ objetivo}}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ solutionX.\mbox{\hyperlink{classproblem_1_1definition_1_1State_a226ea6fab8e7060cf131edfdb245a6fa}{getEvaluation}}().size();\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(solutionX.\mbox{\hyperlink{classproblem_1_1definition_1_1State_a226ea6fab8e7060cf131edfdb245a6fa}{getEvaluation}}().get(i).floatValue()\ <\ solutionY.\mbox{\hyperlink{classproblem_1_1definition_1_1State_a226ea6fab8e7060cf131edfdb245a6fa}{getEvaluation}}().get(i).floatValue())\{}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ countBest++;}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(solutionX.\mbox{\hyperlink{classproblem_1_1definition_1_1State_a226ea6fab8e7060cf131edfdb245a6fa}{getEvaluation}}().get(i).floatValue()\ ==\ solutionY.\mbox{\hyperlink{classproblem_1_1definition_1_1State_a226ea6fab8e7060cf131edfdb245a6fa}{getEvaluation}}().get(i).floatValue())\{}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ countEquals++;}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \ \ }
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00113}00113\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00114}00114\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}((countBest\ >=\ 1)\ \&\&\ (countEquals\ +\ countBest\ ==\ solutionX.\mbox{\hyperlink{classproblem_1_1definition_1_1State_a226ea6fab8e7060cf131edfdb245a6fa}{getEvaluation}}().size()))\ \{}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1Dominance_a0dafd58be8365a22956f59417841a2d8}{dominance}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00116}00116\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00117}00117\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1Dominance_a0dafd58be8365a22956f59417841a2d8}{dominance}};}
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00118}00118\ \ \ \ \ \}\ }
+\DoxyCodeLine{\Hypertarget{Dominance_8java_source_l00119}00119\ \}}
+
+\end{DoxyCode}

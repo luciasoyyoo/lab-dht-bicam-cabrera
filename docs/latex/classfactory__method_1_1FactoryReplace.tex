@@ -1,0 +1,120 @@
+\doxysection{Referencia de la clase factory\+\_\+method.\+Factory\+Replace}
+\hypertarget{classfactory__method_1_1FactoryReplace}{}\label{classfactory__method_1_1FactoryReplace}\index{factory\_method.FactoryReplace@{factory\_method.FactoryReplace}}
+
+
+\doxylink{classfactory__method_1_1FactoryReplace}{Factory\+Replace} -\/ Class responsible for creating replacement strategies.  
+
+
+
+
+Diagrama de herencia de factory\+\_\+method.\+Factory\+Replace
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=245pt]{classfactory__method_1_1FactoryReplace__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagrama de colaboración de factory\+\_\+method.\+Factory\+Replace\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classfactory__method_1_1FactoryReplace__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1Replace}{Replace}} \mbox{\hyperlink{classfactory__method_1_1FactoryReplace_a3fb4ad635f082144c89b4a7c7f881951}{create\+Replace}} (\mbox{\hyperlink{enumevolutionary__algorithms_1_1complement_1_1ReplaceType}{Replace\+Type}} typereplace)  throws Illegal\+Argument\+Exception, Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception, Illegal\+Access\+Exception, Invocation\+Target\+Exception, No\+Such\+Method\+Exception
+\begin{DoxyCompactList}\small\item\em create\+Replace -\/ Creates an instance of \doxylink{classevolutionary__algorithms_1_1complement_1_1Replace}{Replace} based on the provided \doxylink{enumevolutionary__algorithms_1_1complement_1_1ReplaceType}{Replace\+Type}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1Replace}{Replace}} \mbox{\hyperlink{classfactory__method_1_1FactoryReplace_aca705f699965ab08bd8e31cf82344804}{replace}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+\doxylink{classfactory__method_1_1FactoryReplace}{Factory\+Replace} -\/ Class responsible for creating replacement strategies. 
+
+Definición en la línea \mbox{\hyperlink{FactoryReplace_8java_source_l00017}{17}} del archivo \mbox{\hyperlink{FactoryReplace_8java_source}{Factory\+Replace.\+java}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{classfactory__method_1_1FactoryReplace_doc-func-members}
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{classfactory__method_1_1FactoryReplace_a3fb4ad635f082144c89b4a7c7f881951}\index{factory\_method.FactoryReplace@{factory\_method.FactoryReplace}!createReplace@{createReplace}}
+\index{createReplace@{createReplace}!factory\_method.FactoryReplace@{factory\_method.FactoryReplace}}
+\doxysubsubsection{\texorpdfstring{createReplace()}{createReplace()}}
+{\footnotesize\ttfamily \label{classfactory__method_1_1FactoryReplace_a3fb4ad635f082144c89b4a7c7f881951} 
+\mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1Replace}{Replace}} factory\+\_\+method.\+Factory\+Replace.\+create\+Replace (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{enumevolutionary__algorithms_1_1complement_1_1ReplaceType}{Replace\+Type}}}]{typereplace}{}\end{DoxyParamCaption}) throws Illegal\+Argument\+Exception, Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception, Illegal\+Access\+Exception, Invocation\+Target\+Exception, No\+Such\+Method\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+create\+Replace -\/ Creates an instance of \doxylink{classevolutionary__algorithms_1_1complement_1_1Replace}{Replace} based on the provided \doxylink{enumevolutionary__algorithms_1_1complement_1_1ReplaceType}{Replace\+Type}. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em typereplace} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+returns an instance of \doxylink{classevolutionary__algorithms_1_1complement_1_1Replace}{Replace} 
+\end{DoxyReturn}
+
+
+Implementa \mbox{\hyperlink{interfacefactory__interface_1_1IFFactoryReplace_afad62c7e2768633a0336f04917918965}{factory\+\_\+interface.\+IFFactory\+Replace}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{FactoryReplace_8java_source_l00026}{26}} del archivo \mbox{\hyperlink{FactoryReplace_8java_source}{Factory\+Replace.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ String\ className\ =\ \textcolor{stringliteral}{"{}evolutionary\_algorithms.complement."{}}\ +\ typereplace.toString();}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ replace\ =\ (Replace)\ FactoryLoader.getInstance(className);}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ replace;}
+\DoxyCodeLine{00030\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{FactoryLoader_8java_source_l00021}{factory\+\_\+method.\+Factory\+Loader.\+get\+Instance()}} y \mbox{\hyperlink{FactoryReplace_8java_source_l00019}{replace}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classfactory__method_1_1FactoryReplace_a3fb4ad635f082144c89b4a7c7f881951_cgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-variable-members}
+\Hypertarget{classfactory__method_1_1FactoryReplace_doc-variable-members}
+\doxysubsection{Documentación de datos miembro}
+\Hypertarget{classfactory__method_1_1FactoryReplace_aca705f699965ab08bd8e31cf82344804}\index{factory\_method.FactoryReplace@{factory\_method.FactoryReplace}!replace@{replace}}
+\index{replace@{replace}!factory\_method.FactoryReplace@{factory\_method.FactoryReplace}}
+\doxysubsubsection{\texorpdfstring{replace}{replace}}
+{\footnotesize\ttfamily \label{classfactory__method_1_1FactoryReplace_aca705f699965ab08bd8e31cf82344804} 
+\mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1Replace}{Replace}} factory\+\_\+method.\+Factory\+Replace.\+replace\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{FactoryReplace_8java_source_l00019}{19}} del archivo \mbox{\hyperlink{FactoryReplace_8java_source}{Factory\+Replace.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{FactoryReplace_8java_source_l00026}{create\+Replace()}}.
+
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{FactoryReplace_8java}{Factory\+Replace.\+java}}\end{DoxyCompactItemize}

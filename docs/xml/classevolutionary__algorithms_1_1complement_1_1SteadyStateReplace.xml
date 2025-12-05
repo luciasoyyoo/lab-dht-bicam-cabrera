@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="es">
+  <compounddef id="classevolutionary__algorithms_1_1complement_1_1SteadyStateReplace" kind="class" language="Java" prot="public">
+    <compoundname>evolutionary_algorithms::complement::SteadyStateReplace</compoundname>
+    <basecompoundref refid="classevolutionary__algorithms_1_1complement_1_1Replace" prot="public" virt="non-virtual">evolutionary_algorithms.complement.Replace</basecompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classevolutionary__algorithms_1_1complement_1_1SteadyStateReplace_1a1283c4f4d8b9bbe5ae5dc4916934c8a9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+        <definition>List&lt; State &gt; evolutionary_algorithms.complement.SteadyStateReplace.replace</definition>
+        <argsstring>(State stateCandidate, List&lt; State &gt; listState)</argsstring>
+        <name>replace</name>
+        <qualifiedname>evolutionary_algorithms.complement.SteadyStateReplace.replace</qualifiedname>
+        <reimplements refid="classevolutionary__algorithms_1_1complement_1_1Replace_1aac9402083a696d23ca0d97540d3951e5">replace</reimplements>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>stateCandidate</declname>
+        </param>
+        <param>
+          <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+          <declname>listState</declname>
+        </param>
+        <briefdescription>
+<para>replace - applies steady-state replacement strategy. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stateCandidate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>listState</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns the updated list of states after replacement. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/evolutionary_algorithms/complement/SteadyStateReplace.java" line="22" column="13" bodyfile="practica5/src/main/java/evolutionary_algorithms/complement/SteadyStateReplace.java" bodystart="22" bodyend="57"/>
+        <references refid="classproblem_1_1definition_1_1State_1a226ea6fab8e7060cf131edfdb245a6fa" compoundref="State_8java" startline="104" endline="106">problem.definition.State.getEvaluation</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1a4bc6bd95db71e14b1f48c1bfc85f1305" compoundref="Strategy_8java" startline="405" endline="407">metaheurictics.strategy.Strategy.getProblem</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1ad2641e12c52292930364de6655333aa8" compoundref="Strategy_8java" startline="80" endline="85">metaheurictics.strategy.Strategy.getStrategy</references>
+        <references refid="classproblem_1_1definition_1_1Problem_1ad6f38df755179e22ffe487ba4a5c8021" compoundref="Problem_8java" startline="97" endline="99">problem.definition.Problem.getTypeProblem</references>
+        <references refid="enumproblem_1_1definition_1_1Problem_1_1ProblemType_1aa55383c4cb9a71cfeabc7f715ee0cd6e" compoundref="Problem_8java" startline="29">problem.definition.Problem.ProblemType.Maximizar</references>
+        <references refid="classevolutionary__algorithms_1_1complement_1_1SteadyStateReplace_1aaefcd55e0ee9ae9823dc07ab72466288" compoundref="SteadyStateReplace_8java" startline="81" endline="91">evolutionary_algorithms.complement.SteadyStateReplace.maxValue</references>
+        <references refid="enumproblem_1_1definition_1_1Problem_1_1ProblemType_1aa1a15967abb927b9b6038c0a0af5fa18" compoundref="Problem_8java" startline="29">problem.definition.Problem.ProblemType.Minimizar</references>
+        <references refid="classevolutionary__algorithms_1_1complement_1_1SteadyStateReplace_1affa2735e2c66cb923a0a90661c7f3e87" compoundref="SteadyStateReplace_8java" startline="64" endline="74">evolutionary_algorithms.complement.SteadyStateReplace.minValue</references>
+      </memberdef>
+      <memberdef kind="function" id="classevolutionary__algorithms_1_1complement_1_1SteadyStateReplace_1affa2735e2c66cb923a0a90661c7f3e87" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+        <definition>State evolutionary_algorithms.complement.SteadyStateReplace.minValue</definition>
+        <argsstring>(List&lt; State &gt; listState)</argsstring>
+        <name>minValue</name>
+        <qualifiedname>evolutionary_algorithms.complement.SteadyStateReplace.minValue</qualifiedname>
+        <param>
+          <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+          <declname>listState</declname>
+        </param>
+        <briefdescription>
+<para>minValue - applies steady-state replacement strategy. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>listState</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns the state with the minimum evaluation value. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/evolutionary_algorithms/complement/SteadyStateReplace.java" line="64" column="14" bodyfile="practica5/src/main/java/evolutionary_algorithms/complement/SteadyStateReplace.java" bodystart="64" bodyend="74"/>
+        <references refid="classproblem_1_1definition_1_1State_1a226ea6fab8e7060cf131edfdb245a6fa" compoundref="State_8java" startline="104" endline="106">problem.definition.State.getEvaluation</references>
+        <referencedby refid="classevolutionary__algorithms_1_1complement_1_1SteadyStateReplace_1a1283c4f4d8b9bbe5ae5dc4916934c8a9" compoundref="SteadyStateReplace_8java" startline="22" endline="57">evolutionary_algorithms.complement.SteadyStateReplace.replace</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classevolutionary__algorithms_1_1complement_1_1SteadyStateReplace_1aaefcd55e0ee9ae9823dc07ab72466288" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+        <definition>State evolutionary_algorithms.complement.SteadyStateReplace.maxValue</definition>
+        <argsstring>(List&lt; State &gt; listState)</argsstring>
+        <name>maxValue</name>
+        <qualifiedname>evolutionary_algorithms.complement.SteadyStateReplace.maxValue</qualifiedname>
+        <param>
+          <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+          <declname>listState</declname>
+        </param>
+        <briefdescription>
+<para>maxValue - applies steady-state replacement strategy. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>listState</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns the state with the maximum evaluation value. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/evolutionary_algorithms/complement/SteadyStateReplace.java" line="81" column="14" bodyfile="practica5/src/main/java/evolutionary_algorithms/complement/SteadyStateReplace.java" bodystart="81" bodyend="91"/>
+        <references refid="classproblem_1_1definition_1_1State_1a226ea6fab8e7060cf131edfdb245a6fa" compoundref="State_8java" startline="104" endline="106">problem.definition.State.getEvaluation</references>
+        <referencedby refid="classevolutionary__algorithms_1_1complement_1_1SteadyStateReplace_1a1283c4f4d8b9bbe5ae5dc4916934c8a9" compoundref="SteadyStateReplace_8java" startline="22" endline="57">evolutionary_algorithms.complement.SteadyStateReplace.replace</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="classevolutionary__algorithms_1_1complement_1_1SteadyStateReplace" kindref="compound">SteadyStateReplace</ref> - applies steady-state replacement strategy. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>evolutionary_algorithms.complement.SteadyStateReplace</label>
+        <link refid="classevolutionary__algorithms_1_1complement_1_1SteadyStateReplace"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>evolutionary_algorithms.complement.Replace</label>
+        <link refid="classevolutionary__algorithms_1_1complement_1_1Replace"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>evolutionary_algorithms.complement.SteadyStateReplace</label>
+        <link refid="classevolutionary__algorithms_1_1complement_1_1SteadyStateReplace"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>evolutionary_algorithms.complement.Replace</label>
+        <link refid="classevolutionary__algorithms_1_1complement_1_1Replace"/>
+      </node>
+    </collaborationgraph>
+    <location file="practica5/src/main/java/evolutionary_algorithms/complement/SteadyStateReplace.java" line="13" column="7" bodyfile="practica5/src/main/java/evolutionary_algorithms/complement/SteadyStateReplace.java" bodystart="13" bodyend="92"/>
+    <listofallmembers>
+      <member refid="classevolutionary__algorithms_1_1complement_1_1SteadyStateReplace_1aaefcd55e0ee9ae9823dc07ab72466288" prot="public" virt="non-virtual"><scope>evolutionary_algorithms::complement::SteadyStateReplace</scope><name>maxValue</name></member>
+      <member refid="classevolutionary__algorithms_1_1complement_1_1SteadyStateReplace_1affa2735e2c66cb923a0a90661c7f3e87" prot="public" virt="non-virtual"><scope>evolutionary_algorithms::complement::SteadyStateReplace</scope><name>minValue</name></member>
+      <member refid="classevolutionary__algorithms_1_1complement_1_1SteadyStateReplace_1a1283c4f4d8b9bbe5ae5dc4916934c8a9" prot="public" virt="non-virtual"><scope>evolutionary_algorithms::complement::SteadyStateReplace</scope><name>replace</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

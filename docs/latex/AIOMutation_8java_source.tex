@@ -1,0 +1,78 @@
+\doxysection{AIOMutation.\+java}
+\hypertarget{AIOMutation_8java_source}{}\label{AIOMutation_8java_source}\index{AIOMutation.java@{AIOMutation.java}}
+\mbox{\hyperlink{AIOMutation_8java}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00001}\mbox{\hyperlink{namespaceevolutionary__algorithms_1_1complement}{00001}}\ \textcolor{keyword}{package\ }evolutionary\_algorithms.complement;}
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00003}00003\ \textcolor{keyword}{import}\ java.util.ArrayList;}
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00004}00004\ \textcolor{keyword}{import}\ java.util.Collections;}
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00005}00005\ \textcolor{keyword}{import}\ java.util.List;}
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00007}00007\ \textcolor{keyword}{import}\ config.tspDynamic.TSPState;}
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00010}00010\ \textcolor{keyword}{import}\ metaheurictics.strategy.Strategy;}
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00012}00012\ \textcolor{keyword}{import}\ problem.definition.State;}
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00017}\mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1AIOMutation}{00017}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1AIOMutation}{AIOMutation}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1Mutation}{Mutation}}\ \{}
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00022}\mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1AIOMutation_a9a96b76b0765c424bbd13232667ca22a}{00022}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{final}\ List<Object>\ \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1AIOMutation_a9a96b76b0765c424bbd13232667ca22a}{path}}\ =\ Collections.synchronizedList(\textcolor{keyword}{new}\ ArrayList<Object>());}
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00024}00024\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00031}\mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1AIOMutation_a182dacf4bb3046d61563d6bd5f31e156}{00031}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1AIOMutation_a182dacf4bb3046d61563d6bd5f31e156}{mutation}}(\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ state,\ \textcolor{keywordtype}{double}\ PM)\ \{}
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00032}00032\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00033}00033\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ key\ =\ \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy}{Strategy}}.\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_ad2641e12c52292930364de6655333aa8}{getStrategy}}().\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_a4bc6bd95db71e14b1f48c1bfc85f1305}{getProblem}}().\mbox{\hyperlink{classproblem_1_1definition_1_1Problem_a7da2aa6b2a6f00f6f3993e6fdc43e34b}{getCodification}}().\mbox{\hyperlink{classproblem_1_1definition_1_1Codification_a01a0c8247d76d4c4c32c7f3e51c2d5f8}{getAleatoryKey}}();\ \textcolor{comment}{//seleccionar\ aleatoriamente\ una\ ciudad}}
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00034}00034\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ key1\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00035}00035\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{boolean}\ found\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00036}00036\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (found\ ==\ \textcolor{keyword}{false})\{}
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ key1\ =\ \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy}{Strategy}}.\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_ad2641e12c52292930364de6655333aa8}{getStrategy}}().\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_a4bc6bd95db71e14b1f48c1bfc85f1305}{getProblem}}().\mbox{\hyperlink{classproblem_1_1definition_1_1Problem_a7da2aa6b2a6f00f6f3993e6fdc43e34b}{getCodification}}().\mbox{\hyperlink{classproblem_1_1definition_1_1Codification_a01a0c8247d76d4c4c32c7f3e51c2d5f8}{getAleatoryKey}}();}
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(key1\ !=\ key)}
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ found\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00040}00040\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00041}00041\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1AIOMutation_aa07dddb2b2b0291e997a7ea1608529df}{sortedPathValue}}(state);}
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00042}00042\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ p1\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ p2\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00044}00044\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(key\ >\ key1)\{}
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ p2\ =\ key;}
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ p1\ =\ key1;}
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00047}00047\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00048}00048\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ p1\ =\ key;}
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ p2\ =\ key1;}
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00051}00051\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00052}00052\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ length\ =\ (p2\ -\/\ p1)\ /\ 2;}
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00053}00053\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 1;\ i\ <=\ length\ +\ 1;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ tempC\ =\ ((\mbox{\hyperlink{classconfig_1_1tspDynamic_1_1TSPState}{TSPState}})\ state.\mbox{\hyperlink{classproblem_1_1definition_1_1State_a2e75b6f2bedb2107478ecd1e8e681418}{getCode}}().\textcolor{keyword}{get}(p1\ +\ i\ -\/\ 1)).getIdCity();}
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ ((\mbox{\hyperlink{classconfig_1_1tspDynamic_1_1TSPState}{TSPState}})state.\mbox{\hyperlink{classproblem_1_1definition_1_1State_a2e75b6f2bedb2107478ecd1e8e681418}{getCode}}().\textcolor{keyword}{get}(p1\ +\ i\ -\/\ 1)).setIdCity(((\mbox{\hyperlink{classconfig_1_1tspDynamic_1_1TSPState}{TSPState}})state.\mbox{\hyperlink{classproblem_1_1definition_1_1State_a2e75b6f2bedb2107478ecd1e8e681418}{getCode}}().get(p2\ -\/\ i\ +\ 1)).getIdCity());}
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ ((\mbox{\hyperlink{classconfig_1_1tspDynamic_1_1TSPState}{TSPState}})state.\mbox{\hyperlink{classproblem_1_1definition_1_1State_a2e75b6f2bedb2107478ecd1e8e681418}{getCode}}().\textcolor{keyword}{get}(p2\ -\/\ i\ +\ 1)).setIdCity(tempC);}
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00057}00057\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00058}00058\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1AIOMutation_a9a96b76b0765c424bbd13232667ca22a}{path}}.clear();}
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00059}00059\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ state;}
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00060}00060\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00061}00061\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00066}\mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1AIOMutation_aa07dddb2b2b0291e997a7ea1608529df}{00066}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1AIOMutation_aa07dddb2b2b0291e997a7ea1608529df}{sortedPathValue}}(\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ state)\ \{}
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00067}00067\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ k\ =\ 0;\ k\ <\ state.\mbox{\hyperlink{classproblem_1_1definition_1_1State_a2e75b6f2bedb2107478ecd1e8e681418}{getCode}}().size();\ k++)\{}
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1AIOMutation_a9a96b76b0765c424bbd13232667ca22a}{path}}.add(\ state.\mbox{\hyperlink{classproblem_1_1definition_1_1State_a2e75b6f2bedb2107478ecd1e8e681418}{getCode}}().get(k));}
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00069}00069\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00070}00070\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 1;\ i\ <\ \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1AIOMutation_a9a96b76b0765c424bbd13232667ca22a}{path}}.size();\ i++)\{}
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ i;\ j++)\{}
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Integer\ data1\ =\ ((\mbox{\hyperlink{classconfig_1_1tspDynamic_1_1TSPState}{TSPState}})state.\mbox{\hyperlink{classproblem_1_1definition_1_1State_a2e75b6f2bedb2107478ecd1e8e681418}{getCode}}().\textcolor{keyword}{get}(i)).getValue();}
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Integer\ data2\ =\ ((\mbox{\hyperlink{classconfig_1_1tspDynamic_1_1TSPState}{TSPState}})state.\mbox{\hyperlink{classproblem_1_1definition_1_1State_a2e75b6f2bedb2107478ecd1e8e681418}{getCode}}().\textcolor{keyword}{get}(j)).getValue();}
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(data1\ <\ data2)\{}
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ state.\mbox{\hyperlink{classproblem_1_1definition_1_1State_a2e75b6f2bedb2107478ecd1e8e681418}{getCode}}().add(j,\ state.\mbox{\hyperlink{classproblem_1_1definition_1_1State_a2e75b6f2bedb2107478ecd1e8e681418}{getCode}}().remove(i));}
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1AIOMutation_a9a96b76b0765c424bbd13232667ca22a}{path}}.add(j,\ \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1AIOMutation_a9a96b76b0765c424bbd13232667ca22a}{path}}.remove(i));}
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00079}00079\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00080}00080\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00081}00081\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00085}\mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1AIOMutation_a3c9193b63cc517d48761bfddc3c0374b}{00085}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1AIOMutation_a3c9193b63cc517d48761bfddc3c0374b}{fillPath}}()\ \{}
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00086}00086\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ k\ =\ 0;\ k\ <\ \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy}{Strategy}}.\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_ad2641e12c52292930364de6655333aa8}{getStrategy}}().getProblem().getCodification().getVariableCount();\ k++)\{}
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1AIOMutation_a9a96b76b0765c424bbd13232667ca22a}{path}}.add(k);}
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00088}00088\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00089}00089\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00090}00090\ }
+\DoxyCodeLine{\Hypertarget{AIOMutation_8java_source_l00091}00091\ \}}
+
+\end{DoxyCode}

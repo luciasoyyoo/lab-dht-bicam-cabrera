@@ -1,0 +1,358 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>practica5: Archivo de código fuente LimitThreshold.java</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">practica5
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('LimitThreshold_8java_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">LimitThreshold.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="LimitThreshold_8java.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">package </span>metaheuristics.generators;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">import</span> java.lang.reflect.InvocationTargetException;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">import</span> java.util.List;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">import</span> java.util.Arrays;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">import</span> local_search.acceptation_type.AcceptType;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">import</span> local_search.acceptation_type.AcceptableCandidate;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">import</span> local_search.candidate_type.CandidateType;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">import</span> local_search.candidate_type.CandidateValue;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">import</span> local_search.complement.StrategyType;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">import</span> metaheurictics.strategy.Strategy;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">import</span> problem.definition.Problem;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">import</span> problem.definition.State;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">import</span> problem.definition.Problem.ProblemType;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">import</span> factory_interface.IFFactoryAcceptCandidate;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">import</span> factory_method.FactoryAcceptCandidate;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span></div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="};">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html">   28</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_function" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#aed9ff52ca66ef9bb47e893daa27f819c">LimitThreshold</a> <span class="keyword">extends</span> <a class="code hl_class" href="classmetaheuristics_1_1generators_1_1Generator.html">Generator</a>{</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a8de640dccf8fbbb2939fd99300824f83">   30</a></span>    <span class="keyword">private</span> <a class="code hl_class" href="classlocal__search_1_1candidate__type_1_1CandidateValue.html">CandidateValue</a> <a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a8de640dccf8fbbb2939fd99300824f83">candidatevalue</a>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a01b5a352c85678089d9ffb36e9ad194b">   31</a></span>    <span class="keyword">private</span> <a class="code hl_class" href="enumlocal__search_1_1acceptation__type_1_1AcceptType.html">AcceptType</a> <a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a01b5a352c85678089d9ffb36e9ad194b">typeAcceptation</a>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a6937fd0de12562783fa0c65cec27aaf3">   32</a></span>    <span class="keyword">private</span> <a class="code hl_class" href="enumlocal__search_1_1complement_1_1StrategyType.html">StrategyType</a> <a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a6937fd0de12562783fa0c65cec27aaf3">strategy</a>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a2622c44d8b1279642668df5933b4db73">   33</a></span>    <span class="keyword">private</span> <a class="code hl_class" href="enumlocal__search_1_1candidate__type_1_1CandidateType.html">CandidateType</a> <a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a2622c44d8b1279642668df5933b4db73">typeCandidate</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a918667f403a9499aa7c9ff5d43077cb8">   34</a></span>    <span class="keyword">private</span> <a class="code hl_class" href="classproblem_1_1definition_1_1State.html">State</a> <a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a918667f403a9499aa7c9ff5d43077cb8">stateReferenceLT</a>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a5ef646af57248b1d00c64c80d0e1734c">   35</a></span>    <span class="keyword">private</span> <a class="code hl_interface" href="interfacefactory__interface_1_1IFFactoryAcceptCandidate.html">IFFactoryAcceptCandidate</a> <a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a5ef646af57248b1d00c64c80d0e1734c">ifacceptCandidate</a>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a04f6a8113008c70ba9db211a1785d01d">   36</a></span>    <span class="keyword">private</span> <a class="code hl_class" href="enummetaheuristics_1_1generators_1_1GeneratorType.html">GeneratorType</a> <a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a04f6a8113008c70ba9db211a1785d01d">typeGenerator</a>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#abee112e06031970c3d0e204ee85dd3ac">   37</a></span>    <span class="keyword">private</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#abee112e06031970c3d0e204ee85dd3ac">weight</a>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="comment">//problemas dinamicos</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="comment">//problemas dinamicos: use instance fields from Generator (countGender, countBetterGender)</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#acd21d216be875ea8dbf479edbc256fb5">   41</a></span>    <span class="keyword">private</span> <span class="keywordtype">int</span>[] <a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#acd21d216be875ea8dbf479edbc256fb5">listCountBetterGender</a> = <span class="keyword">new</span> <span class="keywordtype">int</span>[10];</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a3f67694dc1f9bb655c1b8b8a7654c3fb">   42</a></span>    <span class="keyword">private</span> <span class="keywordtype">int</span>[] <a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a3f67694dc1f9bb655c1b8b8a7654c3fb">listCountGender</a> = <span class="keyword">new</span> <span class="keywordtype">int</span>[10];</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a53828a560c7c9e40a74f1f7b133ac34e">   43</a></span>    <span class="keyword">private</span> <span class="keywordtype">float</span>[] <a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a53828a560c7c9e40a74f1f7b133ac34e">listTrace</a> = <span class="keyword">new</span> <span class="keywordtype">float</span>[1200000];</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    </div>
+<div class="foldopen" id="foldopen00049" data-start="{" data-end="}">
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a6afc908f2de8507b181968175449c0cc">   49</a></span>    <span class="keyword">public</span> <a class="code hl_class" href="enummetaheuristics_1_1generators_1_1GeneratorType.html">GeneratorType</a> <a class="code hl_function" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a6afc908f2de8507b181968175449c0cc">getTypeGenerator</a>() {</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a04f6a8113008c70ba9db211a1785d01d">typeGenerator</a>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    }</div>
+</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span></div>
+<div class="foldopen" id="foldopen00057" data-start="{" data-end="}">
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#ab9f14ff4d97b19cc4219f2560fe36c54">   57</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#ab9f14ff4d97b19cc4219f2560fe36c54">setTypeGenerator</a>(<a class="code hl_class" href="enummetaheuristics_1_1generators_1_1GeneratorType.html">GeneratorType</a> <a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a04f6a8113008c70ba9db211a1785d01d">typeGenerator</a>) {</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        this.typeGenerator = <a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a04f6a8113008c70ba9db211a1785d01d">typeGenerator</a>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    }</div>
+</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span></div>
+<div class="foldopen" id="foldopen00064" data-start="{" data-end="}">
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#aed9ff52ca66ef9bb47e893daa27f819c">   64</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#aed9ff52ca66ef9bb47e893daa27f819c">LimitThreshold</a>() {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        super();</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        this.typeAcceptation = <a class="code hl_class" href="enumlocal__search_1_1acceptation__type_1_1AcceptType.html">AcceptType</a>.<a class="code hl_variable" href="enumlocal__search_1_1acceptation__type_1_1AcceptType.html#a654e7f0a28a2166635686e85f6c2410c">AcceptNotBadU</a>;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        this.strategy = <a class="code hl_class" href="enumlocal__search_1_1complement_1_1StrategyType.html">StrategyType</a>.<a class="code hl_variable" href="enumlocal__search_1_1complement_1_1StrategyType.html#a6319a2518e93ad757c398fb858df8c9e">NORMAL</a>;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <a class="code hl_class" href="classproblem_1_1definition_1_1Problem.html">Problem</a> problem = <a class="code hl_class" href="classmetaheurictics_1_1strategy_1_1Strategy.html">Strategy</a>.<a class="code hl_function" href="classmetaheurictics_1_1strategy_1_1Strategy.html#ad2641e12c52292930364de6655333aa8">getStrategy</a>().<a class="code hl_function" href="classmetaheurictics_1_1strategy_1_1Strategy.html#a4bc6bd95db71e14b1f48c1bfc85f1305">getProblem</a>();</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="keywordflow">if</span>(problem.getTypeProblem().equals(<a class="code hl_class" href="enumproblem_1_1definition_1_1Problem_1_1ProblemType.html">ProblemType</a>.<a class="code hl_variable" href="enumproblem_1_1definition_1_1Problem_1_1ProblemType.html#aa55383c4cb9a71cfeabc7f715ee0cd6e">Maximizar</a>)) {</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            this.typeCandidate = <a class="code hl_class" href="enumlocal__search_1_1candidate__type_1_1CandidateType.html">CandidateType</a>.<a class="code hl_variable" href="enumlocal__search_1_1candidate__type_1_1CandidateType.html#a10a1f7a483a38c8c3911ff48e588faef">GreaterCandidate</a>;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        }</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="keywordflow">else</span>{</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            this.typeCandidate = <a class="code hl_class" href="enumlocal__search_1_1candidate__type_1_1CandidateType.html">CandidateType</a>.<a class="code hl_variable" href="enumlocal__search_1_1candidate__type_1_1CandidateType.html#a83d72037a210a5d2146a2690a6a956e9">SmallerCandidate</a>;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        }</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        this.candidatevalue = <span class="keyword">new</span> <a class="code hl_class" href="classlocal__search_1_1candidate__type_1_1CandidateValue.html">CandidateValue</a>();</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        this.typeGenerator = <a class="code hl_class" href="enummetaheuristics_1_1generators_1_1GeneratorType.html">GeneratorType</a>.<a class="code hl_variable" href="enummetaheuristics_1_1generators_1_1GeneratorType.html#a67701bca73b1d45dcfb2fbd70e31b6d5">LimitThreshold</a>;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        this.weight = (float) 50.0;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a53828a560c7c9e40a74f1f7b133ac34e">listTrace</a>[0] = <a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#abee112e06031970c3d0e204ee85dd3ac">weight</a>;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#acd21d216be875ea8dbf479edbc256fb5">listCountBetterGender</a>[0] = 0;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a3f67694dc1f9bb655c1b8b8a7654c3fb">listCountGender</a>[0] = 0;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    }</div>
+</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    @Override</div>
+<div class="foldopen" id="foldopen00093" data-start="{" data-end="}">
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#af2ac27e167ad69093379e30a9dcf1955">   93</a></span>    <span class="keyword">public</span> <a class="code hl_class" href="classproblem_1_1definition_1_1State.html">State</a> <a class="code hl_function" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#af2ac27e167ad69093379e30a9dcf1955">generate</a>(Integer operatornumber) <span class="keywordflow">throws</span> IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        List&lt;State&gt; neighborhood = <a class="code hl_class" href="classmetaheurictics_1_1strategy_1_1Strategy.html">Strategy</a>.<a class="code hl_function" href="classmetaheurictics_1_1strategy_1_1Strategy.html#ad2641e12c52292930364de6655333aa8">getStrategy</a>().<a class="code hl_function" href="classmetaheurictics_1_1strategy_1_1Strategy.html#a4bc6bd95db71e14b1f48c1bfc85f1305">getProblem</a>().<a class="code hl_function" href="classproblem_1_1definition_1_1Problem.html#a4cd649edb8862f21af171491cb9b9386">getOperator</a>().<a class="code hl_function" href="classproblem_1_1definition_1_1Operator.html#a5b6625843e73d938f9235985bf966b34">generatedNewState</a>(<a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a918667f403a9499aa7c9ff5d43077cb8">stateReferenceLT</a>, operatornumber);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <a class="code hl_class" href="classproblem_1_1definition_1_1State.html">State</a> statecandidate = <a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a8de640dccf8fbbb2939fd99300824f83">candidatevalue</a>.stateCandidate(<a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a918667f403a9499aa7c9ff5d43077cb8">stateReferenceLT</a>, <a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a2622c44d8b1279642668df5933b4db73">typeCandidate</a>, <a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a6937fd0de12562783fa0c65cec27aaf3">strategy</a>, operatornumber, neighborhood);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        <span class="keywordflow">return</span> statecandidate;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    }</div>
+</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    @Override</div>
+<div class="foldopen" id="foldopen00105" data-start="{" data-end="}">
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a74c3d66b7aba895e95facbced3cac70f">  105</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a74c3d66b7aba895e95facbced3cac70f">updateReference</a>(<a class="code hl_class" href="classproblem_1_1definition_1_1State.html">State</a> stateCandidate, Integer countIterationsCurrent) <span class="keywordflow">throws</span> IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        <a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a5ef646af57248b1d00c64c80d0e1734c">ifacceptCandidate</a> = <span class="keyword">new</span> <a class="code hl_class" href="classfactory__method_1_1FactoryAcceptCandidate.html">FactoryAcceptCandidate</a>();</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        <a class="code hl_class" href="classlocal__search_1_1acceptation__type_1_1AcceptableCandidate.html">AcceptableCandidate</a> candidate = <a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a5ef646af57248b1d00c64c80d0e1734c">ifacceptCandidate</a>.createAcceptCandidate(<a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a01b5a352c85678089d9ffb36e9ad194b">typeAcceptation</a>);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        Boolean accept = candidate.<a class="code hl_function" href="classlocal__search_1_1acceptation__type_1_1AcceptableCandidate.html#aa9e62e1d2d213c3828d2491b506d0592">acceptCandidate</a>(<a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a918667f403a9499aa7c9ff5d43077cb8">stateReferenceLT</a> , stateCandidate);</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        <span class="keywordflow">if</span>(accept.equals(<span class="keyword">true</span>)){</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>            <a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a918667f403a9499aa7c9ff5d43077cb8">stateReferenceLT</a> = stateCandidate;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        }</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    }</div>
+</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    @Override</div>
+<div class="foldopen" id="foldopen00120" data-start="{" data-end="}">
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno"><a class="line" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a677121a3422f5f63b35057d1fbdbe22e">  120</a></span>    <span class="keyword">public</span> <a class="code hl_class" href="classproblem_1_1definition_1_1State.html">State</a> <a class="code hl_function" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a677121a3422f5f63b35057d1fbdbe22e">getReference</a>() {</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a918667f403a9499aa7c9ff5d43077cb8">stateReferenceLT</a>;</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    }</div>
+</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span></div>
+<div class="foldopen" id="foldopen00128" data-start="{" data-end="}">
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno"><a class="line" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#ae1a9d64d4a4220f5e99a21b7962b219f">  128</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#ae1a9d64d4a4220f5e99a21b7962b219f">setStateRef</a>(<a class="code hl_class" href="classproblem_1_1definition_1_1State.html">State</a> stateRef) {</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        this.stateReferenceLT = stateRef;</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    }</div>
+</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    @Override</div>
+<div class="foldopen" id="foldopen00137" data-start="{" data-end="}">
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno"><a class="line" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a76fd122b2147aa598df1414732f62001">  137</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a76fd122b2147aa598df1414732f62001">setInitialReference</a>(<a class="code hl_class" href="classproblem_1_1definition_1_1State.html">State</a> stateInitialRef) {</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        this.stateReferenceLT = stateInitialRef;</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    }</div>
+</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    @Override</div>
+<div class="foldopen" id="foldopen00147" data-start="{" data-end="}">
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno"><a class="line" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a716e77810e2bbc6c72c975314029e168">  147</a></span>    <span class="keyword">public</span> <a class="code hl_class" href="enummetaheuristics_1_1generators_1_1GeneratorType.html">GeneratorType</a> <a class="code hl_function" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a716e77810e2bbc6c72c975314029e168">getType</a>() {</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>        <span class="keywordflow">return</span> this.typeGenerator;</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    }</div>
+</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    @Override</div>
+<div class="foldopen" id="foldopen00156" data-start="{" data-end="}">
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno"><a class="line" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#aa1bb91cb7aa4956d44487d0acf2066c1">  156</a></span>    <span class="keyword">public</span> List&lt;State&gt; <a class="code hl_function" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#aa1bb91cb7aa4956d44487d0acf2066c1">getReferenceList</a>() {</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    }</div>
+</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    @Override</div>
+<div class="foldopen" id="foldopen00165" data-start="{" data-end="}">
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno"><a class="line" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#afe588006bfb32514f23e50da61b1e0a7">  165</a></span>    <span class="keyword">public</span> List&lt;State&gt; <a class="code hl_function" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#afe588006bfb32514f23e50da61b1e0a7">getSonList</a>() {</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>        <span class="comment">// TODO Auto-generated method stub</span></div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    }</div>
+</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span></div>
+<div class="foldopen" id="foldopen00174" data-start="{" data-end="}">
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno"><a class="line" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a9d8e138e7a9a4e1a00ff0260b677affb">  174</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a9d8e138e7a9a4e1a00ff0260b677affb">setTypeCandidate</a>(<a class="code hl_class" href="enumlocal__search_1_1candidate__type_1_1CandidateType.html">CandidateType</a> <a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a2622c44d8b1279642668df5933b4db73">typeCandidate</a>){</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>        this.typeCandidate = <a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a2622c44d8b1279642668df5933b4db73">typeCandidate</a>;</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    }</div>
+</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span> </div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    @Override</div>
+<div class="foldopen" id="foldopen00184" data-start="{" data-end="}">
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno"><a class="line" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#ae31f7d76b6ee0c2520a648dd633fb82a">  184</a></span>    <span class="keyword">public</span> <span class="keywordtype">boolean</span> <a class="code hl_function" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#ae31f7d76b6ee0c2520a648dd633fb82a">awardUpdateREF</a>(<a class="code hl_class" href="classproblem_1_1definition_1_1State.html">State</a> stateCandidate) {</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>        <span class="comment">// TODO Auto-generated method stub</span></div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>    }</div>
+</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span></div>
+<div class="foldopen" id="foldopen00193" data-start="{" data-end="}">
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno"><a class="line" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a6b7bf930711a043f746384b80cfa867a">  193</a></span>    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_function" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a6b7bf930711a043f746384b80cfa867a">getWeight</a>() {</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>        <span class="comment">// TODO Auto-generated method stub</span></div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>        <span class="keywordflow">return</span> this.weight;</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    }</div>
+</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span> </div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>    @Override</div>
+<div class="foldopen" id="foldopen00203" data-start="{" data-end="}">
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno"><a class="line" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a789fadcd73af2861e3719a1e17029949">  203</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a789fadcd73af2861e3719a1e17029949">setWeight</a>(<span class="keywordtype">float</span> <a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#abee112e06031970c3d0e204ee85dd3ac">weight</a>) {</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>        <span class="comment">// TODO Auto-generated method stub</span></div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>        this.weight = <a class="code hl_variable" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#abee112e06031970c3d0e204ee85dd3ac">weight</a>;</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    }</div>
+</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span> </div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span> </div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    @Override</div>
+<div class="foldopen" id="foldopen00214" data-start="{" data-end="}">
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno"><a class="line" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a0017345434c5e714ff22fee916c7aac6">  214</a></span>    <span class="keyword">public</span> <span class="keywordtype">int</span>[] <a class="code hl_function" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a0017345434c5e714ff22fee916c7aac6">getListCountBetterGender</a>() {</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>        <span class="comment">// TODO Auto-generated method stub</span></div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>        <span class="keywordflow">return</span> (this.listCountBetterGender == <span class="keyword">null</span>) ? <span class="keyword">new</span> <span class="keywordtype">int</span>[0] : Arrays.copyOf(this.listCountBetterGender, this.listCountBetterGender.length);</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>    }</div>
+</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span> </div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>    @Override</div>
+<div class="foldopen" id="foldopen00224" data-start="{" data-end="}">
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno"><a class="line" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#adf6905af1e88d74c5760aa59e6bd3250">  224</a></span>    <span class="keyword">public</span> <span class="keywordtype">int</span>[] <a class="code hl_function" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#adf6905af1e88d74c5760aa59e6bd3250">getListCountGender</a>() {</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>        <span class="comment">// TODO Auto-generated method stub</span></div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>        <span class="keywordflow">return</span> (this.listCountGender == <span class="keyword">null</span>) ? <span class="keyword">new</span> <span class="keywordtype">int</span>[0] : Arrays.copyOf(this.listCountGender, this.listCountGender.length);</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>    }</div>
+</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span> </div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>    @Override</div>
+<div class="foldopen" id="foldopen00234" data-start="{" data-end="}">
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno"><a class="line" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a9ede5fad8f945fb984d5d966b544b81f">  234</a></span>    <span class="keyword">public</span> <span class="keywordtype">float</span>[] <a class="code hl_function" href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a9ede5fad8f945fb984d5d966b544b81f">getTrace</a>() {</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>        <span class="comment">// TODO Auto-generated method stub</span></div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>        <span class="keywordflow">return</span> (this.listTrace == <span class="keyword">null</span>) ? <span class="keyword">new</span> <span class="keywordtype">float</span>[0] : Arrays.copyOf(this.listTrace, this.listTrace.length);</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>    }</div>
+</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span> </div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>}</div>
+</div>
+<div class="ttc" id="aclassfactory__method_1_1FactoryAcceptCandidate_html"><div class="ttname"><a href="classfactory__method_1_1FactoryAcceptCandidate.html">factory_method.FactoryAcceptCandidate</a></div><div class="ttdoc">FactoryAcceptCandidate - Interface for creating acceptable candidates.</div><div class="ttdef"><b>Definition</b> <a href="FactoryAcceptCandidate_8java_source.html#l00021">FactoryAcceptCandidate.java:21</a></div></div>
+<div class="ttc" id="aclasslocal__search_1_1acceptation__type_1_1AcceptableCandidate_html"><div class="ttname"><a href="classlocal__search_1_1acceptation__type_1_1AcceptableCandidate.html">local_search.acceptation_type.AcceptableCandidate</a></div><div class="ttdoc">AcceptableCandidate - Base type for acceptation strategies.</div><div class="ttdef"><b>Definition</b> <a href="AcceptableCandidate_8java_source.html#l00012">AcceptableCandidate.java:12</a></div></div>
+<div class="ttc" id="aclasslocal__search_1_1acceptation__type_1_1AcceptableCandidate_html_aa9e62e1d2d213c3828d2491b506d0592"><div class="ttname"><a href="classlocal__search_1_1acceptation__type_1_1AcceptableCandidate.html#aa9e62e1d2d213c3828d2491b506d0592">local_search.acceptation_type.AcceptableCandidate.acceptCandidate</a></div><div class="ttdeci">abstract Boolean acceptCandidate(State stateCurrent, State stateCandidate)</div><div class="ttdoc">Evaluate whether a candidate state should be accepted.</div></div>
+<div class="ttc" id="aclasslocal__search_1_1candidate__type_1_1CandidateValue_html"><div class="ttname"><a href="classlocal__search_1_1candidate__type_1_1CandidateValue.html">local_search.candidate_type.CandidateValue</a></div><div class="ttdoc">CandidateValue - Factory/wrapper for creating and using SearchCandidate selection strategies.</div><div class="ttdef"><b>Definition</b> <a href="CandidateValue_8java_source.html#l00029">CandidateValue.java:29</a></div></div>
+<div class="ttc" id="aclassmetaheurictics_1_1strategy_1_1Strategy_html"><div class="ttname"><a href="classmetaheurictics_1_1strategy_1_1Strategy.html">metaheurictics.strategy.Strategy</a></div><div class="ttdoc">Strategy -.</div><div class="ttdef"><b>Definition</b> <a href="Strategy_8java_source.html#l00033">Strategy.java:33</a></div></div>
+<div class="ttc" id="aclassmetaheurictics_1_1strategy_1_1Strategy_html_a4bc6bd95db71e14b1f48c1bfc85f1305"><div class="ttname"><a href="classmetaheurictics_1_1strategy_1_1Strategy.html#a4bc6bd95db71e14b1f48c1bfc85f1305">metaheurictics.strategy.Strategy.getProblem</a></div><div class="ttdeci">Problem getProblem()</div><div class="ttdoc">getProblem - method to get the problem.</div><div class="ttdef"><b>Definition</b> <a href="Strategy_8java_source.html#l00405">Strategy.java:405</a></div></div>
+<div class="ttc" id="aclassmetaheurictics_1_1strategy_1_1Strategy_html_ad2641e12c52292930364de6655333aa8"><div class="ttname"><a href="classmetaheurictics_1_1strategy_1_1Strategy.html#ad2641e12c52292930364de6655333aa8">metaheurictics.strategy.Strategy.getStrategy</a></div><div class="ttdeci">static Strategy getStrategy()</div><div class="ttdoc">getStrategy - getter of Strategy singleton instance</div><div class="ttdef"><b>Definition</b> <a href="Strategy_8java_source.html#l00080">Strategy.java:80</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1Generator_html"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1Generator.html">metaheuristics.generators.Generator</a></div><div class="ttdoc">Generator - abstract base class for solution generators in metaheuristic algorithms.</div><div class="ttdef"><b>Definition</b> <a href="Generator_8java_source.html#l00013">Generator.java:13</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1LimitThreshold_html_a0017345434c5e714ff22fee916c7aac6"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a0017345434c5e714ff22fee916c7aac6">metaheuristics.generators.LimitThreshold.getListCountBetterGender</a></div><div class="ttdeci">int[] getListCountBetterGender()</div><div class="ttdoc">getListCountBetterGender - get the list of count better gender.</div><div class="ttdef"><b>Definition</b> <a href="#l00214">LimitThreshold.java:214</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1LimitThreshold_html_a01b5a352c85678089d9ffb36e9ad194b"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a01b5a352c85678089d9ffb36e9ad194b">metaheuristics.generators.LimitThreshold.typeAcceptation</a></div><div class="ttdeci">AcceptType typeAcceptation</div><div class="ttdef"><b>Definition</b> <a href="#l00031">LimitThreshold.java:31</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1LimitThreshold_html_a04f6a8113008c70ba9db211a1785d01d"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a04f6a8113008c70ba9db211a1785d01d">metaheuristics.generators.LimitThreshold.typeGenerator</a></div><div class="ttdeci">GeneratorType typeGenerator</div><div class="ttdef"><b>Definition</b> <a href="#l00036">LimitThreshold.java:36</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1LimitThreshold_html_a2622c44d8b1279642668df5933b4db73"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a2622c44d8b1279642668df5933b4db73">metaheuristics.generators.LimitThreshold.typeCandidate</a></div><div class="ttdeci">CandidateType typeCandidate</div><div class="ttdef"><b>Definition</b> <a href="#l00033">LimitThreshold.java:33</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1LimitThreshold_html_a3f67694dc1f9bb655c1b8b8a7654c3fb"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a3f67694dc1f9bb655c1b8b8a7654c3fb">metaheuristics.generators.LimitThreshold.listCountGender</a></div><div class="ttdeci">int[] listCountGender</div><div class="ttdef"><b>Definition</b> <a href="#l00042">LimitThreshold.java:42</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1LimitThreshold_html_a53828a560c7c9e40a74f1f7b133ac34e"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a53828a560c7c9e40a74f1f7b133ac34e">metaheuristics.generators.LimitThreshold.listTrace</a></div><div class="ttdeci">float[] listTrace</div><div class="ttdef"><b>Definition</b> <a href="#l00043">LimitThreshold.java:43</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1LimitThreshold_html_a5ef646af57248b1d00c64c80d0e1734c"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a5ef646af57248b1d00c64c80d0e1734c">metaheuristics.generators.LimitThreshold.ifacceptCandidate</a></div><div class="ttdeci">IFFactoryAcceptCandidate ifacceptCandidate</div><div class="ttdef"><b>Definition</b> <a href="#l00035">LimitThreshold.java:35</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1LimitThreshold_html_a677121a3422f5f63b35057d1fbdbe22e"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a677121a3422f5f63b35057d1fbdbe22e">metaheuristics.generators.LimitThreshold.getReference</a></div><div class="ttdeci">State getReference()</div><div class="ttdoc">getReference - get the reference state.</div><div class="ttdef"><b>Definition</b> <a href="#l00120">LimitThreshold.java:120</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1LimitThreshold_html_a6937fd0de12562783fa0c65cec27aaf3"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a6937fd0de12562783fa0c65cec27aaf3">metaheuristics.generators.LimitThreshold.strategy</a></div><div class="ttdeci">StrategyType strategy</div><div class="ttdef"><b>Definition</b> <a href="#l00032">LimitThreshold.java:32</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1LimitThreshold_html_a6afc908f2de8507b181968175449c0cc"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a6afc908f2de8507b181968175449c0cc">metaheuristics.generators.LimitThreshold.getTypeGenerator</a></div><div class="ttdeci">GeneratorType getTypeGenerator()</div><div class="ttdoc">getTypeGenerator - get the type of the generator.</div><div class="ttdef"><b>Definition</b> <a href="#l00049">LimitThreshold.java:49</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1LimitThreshold_html_a6b7bf930711a043f746384b80cfa867a"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a6b7bf930711a043f746384b80cfa867a">metaheuristics.generators.LimitThreshold.getWeight</a></div><div class="ttdeci">float getWeight()</div><div class="ttdoc">getWeight - get the weight of the generator.</div><div class="ttdef"><b>Definition</b> <a href="#l00193">LimitThreshold.java:193</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1LimitThreshold_html_a716e77810e2bbc6c72c975314029e168"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a716e77810e2bbc6c72c975314029e168">metaheuristics.generators.LimitThreshold.getType</a></div><div class="ttdeci">GeneratorType getType()</div><div class="ttdoc">getType - get the type of the generator.</div><div class="ttdef"><b>Definition</b> <a href="#l00147">LimitThreshold.java:147</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1LimitThreshold_html_a74c3d66b7aba895e95facbced3cac70f"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a74c3d66b7aba895e95facbced3cac70f">metaheuristics.generators.LimitThreshold.updateReference</a></div><div class="ttdeci">void updateReference(State stateCandidate, Integer countIterationsCurrent)</div><div class="ttdoc">updateReference - update the reference state based on the candidate state.</div><div class="ttdef"><b>Definition</b> <a href="#l00105">LimitThreshold.java:105</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1LimitThreshold_html_a76fd122b2147aa598df1414732f62001"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a76fd122b2147aa598df1414732f62001">metaheuristics.generators.LimitThreshold.setInitialReference</a></div><div class="ttdeci">void setInitialReference(State stateInitialRef)</div><div class="ttdoc">setInitialReference - set the initial reference state.</div><div class="ttdef"><b>Definition</b> <a href="#l00137">LimitThreshold.java:137</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1LimitThreshold_html_a789fadcd73af2861e3719a1e17029949"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a789fadcd73af2861e3719a1e17029949">metaheuristics.generators.LimitThreshold.setWeight</a></div><div class="ttdeci">void setWeight(float weight)</div><div class="ttdoc">setWeight - set the weight of the generator.</div><div class="ttdef"><b>Definition</b> <a href="#l00203">LimitThreshold.java:203</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1LimitThreshold_html_a8de640dccf8fbbb2939fd99300824f83"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a8de640dccf8fbbb2939fd99300824f83">metaheuristics.generators.LimitThreshold.candidatevalue</a></div><div class="ttdeci">CandidateValue candidatevalue</div><div class="ttdef"><b>Definition</b> <a href="#l00030">LimitThreshold.java:30</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1LimitThreshold_html_a918667f403a9499aa7c9ff5d43077cb8"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a918667f403a9499aa7c9ff5d43077cb8">metaheuristics.generators.LimitThreshold.stateReferenceLT</a></div><div class="ttdeci">State stateReferenceLT</div><div class="ttdef"><b>Definition</b> <a href="#l00034">LimitThreshold.java:34</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1LimitThreshold_html_a9d8e138e7a9a4e1a00ff0260b677affb"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a9d8e138e7a9a4e1a00ff0260b677affb">metaheuristics.generators.LimitThreshold.setTypeCandidate</a></div><div class="ttdeci">void setTypeCandidate(CandidateType typeCandidate)</div><div class="ttdoc">setTypeCandidate - set the type of candidate.</div><div class="ttdef"><b>Definition</b> <a href="#l00174">LimitThreshold.java:174</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1LimitThreshold_html_a9ede5fad8f945fb984d5d966b544b81f"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#a9ede5fad8f945fb984d5d966b544b81f">metaheuristics.generators.LimitThreshold.getTrace</a></div><div class="ttdeci">float[] getTrace()</div><div class="ttdoc">getTrace - get the trace of the generator.</div><div class="ttdef"><b>Definition</b> <a href="#l00234">LimitThreshold.java:234</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1LimitThreshold_html_aa1bb91cb7aa4956d44487d0acf2066c1"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#aa1bb91cb7aa4956d44487d0acf2066c1">metaheuristics.generators.LimitThreshold.getReferenceList</a></div><div class="ttdeci">List&lt; State &gt; getReferenceList()</div><div class="ttdoc">getReferenceList - get the list of reference states.</div><div class="ttdef"><b>Definition</b> <a href="#l00156">LimitThreshold.java:156</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1LimitThreshold_html_ab9f14ff4d97b19cc4219f2560fe36c54"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#ab9f14ff4d97b19cc4219f2560fe36c54">metaheuristics.generators.LimitThreshold.setTypeGenerator</a></div><div class="ttdeci">void setTypeGenerator(GeneratorType typeGenerator)</div><div class="ttdoc">setTypeGenerator - set the type of the generator.</div><div class="ttdef"><b>Definition</b> <a href="#l00057">LimitThreshold.java:57</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1LimitThreshold_html_abee112e06031970c3d0e204ee85dd3ac"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#abee112e06031970c3d0e204ee85dd3ac">metaheuristics.generators.LimitThreshold.weight</a></div><div class="ttdeci">float weight</div><div class="ttdef"><b>Definition</b> <a href="#l00037">LimitThreshold.java:37</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1LimitThreshold_html_acd21d216be875ea8dbf479edbc256fb5"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#acd21d216be875ea8dbf479edbc256fb5">metaheuristics.generators.LimitThreshold.listCountBetterGender</a></div><div class="ttdeci">int[] listCountBetterGender</div><div class="ttdef"><b>Definition</b> <a href="#l00041">LimitThreshold.java:41</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1LimitThreshold_html_adf6905af1e88d74c5760aa59e6bd3250"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#adf6905af1e88d74c5760aa59e6bd3250">metaheuristics.generators.LimitThreshold.getListCountGender</a></div><div class="ttdeci">int[] getListCountGender()</div><div class="ttdoc">getListCountGender - get the list of count gender.</div><div class="ttdef"><b>Definition</b> <a href="#l00224">LimitThreshold.java:224</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1LimitThreshold_html_ae1a9d64d4a4220f5e99a21b7962b219f"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#ae1a9d64d4a4220f5e99a21b7962b219f">metaheuristics.generators.LimitThreshold.setStateRef</a></div><div class="ttdeci">void setStateRef(State stateRef)</div><div class="ttdoc">setStateRef - set the reference state.</div><div class="ttdef"><b>Definition</b> <a href="#l00128">LimitThreshold.java:128</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1LimitThreshold_html_ae31f7d76b6ee0c2520a648dd633fb82a"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#ae31f7d76b6ee0c2520a648dd633fb82a">metaheuristics.generators.LimitThreshold.awardUpdateREF</a></div><div class="ttdeci">boolean awardUpdateREF(State stateCandidate)</div><div class="ttdoc">awardUpdateREF - award the update of the reference state.</div><div class="ttdef"><b>Definition</b> <a href="#l00184">LimitThreshold.java:184</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1LimitThreshold_html_aed9ff52ca66ef9bb47e893daa27f819c"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#aed9ff52ca66ef9bb47e893daa27f819c">metaheuristics.generators.LimitThreshold.LimitThreshold</a></div><div class="ttdeci">LimitThreshold()</div><div class="ttdoc">LimitThreshold - class that implements the Limit Threshold metaheuristic.</div><div class="ttdef"><b>Definition</b> <a href="#l00064">LimitThreshold.java:64</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1LimitThreshold_html_af2ac27e167ad69093379e30a9dcf1955"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#af2ac27e167ad69093379e30a9dcf1955">metaheuristics.generators.LimitThreshold.generate</a></div><div class="ttdeci">State generate(Integer operatornumber)</div><div class="ttdoc">generate - generate a new state based on the operator number.</div><div class="ttdef"><b>Definition</b> <a href="#l00093">LimitThreshold.java:93</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1LimitThreshold_html_afe588006bfb32514f23e50da61b1e0a7"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1LimitThreshold.html#afe588006bfb32514f23e50da61b1e0a7">metaheuristics.generators.LimitThreshold.getSonList</a></div><div class="ttdeci">List&lt; State &gt; getSonList()</div><div class="ttdoc">getSonList - get the list of son states.</div><div class="ttdef"><b>Definition</b> <a href="#l00165">LimitThreshold.java:165</a></div></div>
+<div class="ttc" id="aclassproblem_1_1definition_1_1Operator_html_a5b6625843e73d938f9235985bf966b34"><div class="ttname"><a href="classproblem_1_1definition_1_1Operator.html#a5b6625843e73d938f9235985bf966b34">problem.definition.Operator.generatedNewState</a></div><div class="ttdeci">abstract List&lt; State &gt; generatedNewState(State stateCurrent, Integer operatornumber)</div><div class="ttdoc">Generar nuevos estados a partir de un estado dado.</div></div>
+<div class="ttc" id="aclassproblem_1_1definition_1_1Problem_html"><div class="ttname"><a href="classproblem_1_1definition_1_1Problem.html">problem.definition.Problem</a></div><div class="ttdoc">Problem.</div><div class="ttdef"><b>Definition</b> <a href="Problem_8java_source.html#l00024">Problem.java:24</a></div></div>
+<div class="ttc" id="aclassproblem_1_1definition_1_1Problem_html_a4cd649edb8862f21af171491cb9b9386"><div class="ttname"><a href="classproblem_1_1definition_1_1Problem.html#a4cd649edb8862f21af171491cb9b9386">problem.definition.Problem.getOperator</a></div><div class="ttdeci">Operator getOperator()</div><div class="ttdoc">Obtener el operador encargado de generar nuevos estados.</div><div class="ttdef"><b>Definition</b> <a href="Problem_8java_source.html#l00131">Problem.java:131</a></div></div>
+<div class="ttc" id="aclassproblem_1_1definition_1_1State_html"><div class="ttname"><a href="classproblem_1_1definition_1_1State.html">problem.definition.State</a></div><div class="ttdoc">State.</div><div class="ttdef"><b>Definition</b> <a href="State_8java_source.html#l00016">State.java:16</a></div></div>
+<div class="ttc" id="aenumlocal__search_1_1acceptation__type_1_1AcceptType_html"><div class="ttname"><a href="enumlocal__search_1_1acceptation__type_1_1AcceptType.html">local_search.acceptation_type.AcceptType</a></div><div class="ttdoc">AcceptType - Enumeration of the available acceptation strategies.</div><div class="ttdef"><b>Definition</b> <a href="AcceptType_8java_source.html#l00013">AcceptType.java:14</a></div></div>
+<div class="ttc" id="aenumlocal__search_1_1acceptation__type_1_1AcceptType_html_a654e7f0a28a2166635686e85f6c2410c"><div class="ttname"><a href="enumlocal__search_1_1acceptation__type_1_1AcceptType.html#a654e7f0a28a2166635686e85f6c2410c">local_search.acceptation_type.AcceptType.AcceptNotBadU</a></div><div class="ttdeci">AcceptNotBadU</div><div class="ttdef"><b>Definition</b> <a href="AcceptType_8java_source.html#l00015">AcceptType.java:15</a></div></div>
+<div class="ttc" id="aenumlocal__search_1_1candidate__type_1_1CandidateType_html"><div class="ttname"><a href="enumlocal__search_1_1candidate__type_1_1CandidateType.html">local_search.candidate_type.CandidateType</a></div><div class="ttdoc">CandidateType - enumeration of available candidate selection strategies.</div><div class="ttdef"><b>Definition</b> <a href="CandidateType_8java_source.html#l00013">CandidateType.java:13</a></div></div>
+<div class="ttc" id="aenumlocal__search_1_1candidate__type_1_1CandidateType_html_a10a1f7a483a38c8c3911ff48e588faef"><div class="ttname"><a href="enumlocal__search_1_1candidate__type_1_1CandidateType.html#a10a1f7a483a38c8c3911ff48e588faef">local_search.candidate_type.CandidateType.GreaterCandidate</a></div><div class="ttdeci">GreaterCandidate</div><div class="ttdoc">Select the largest/best candidate according to objective.</div><div class="ttdef"><b>Definition</b> <a href="CandidateType_8java_source.html#l00018">CandidateType.java:18</a></div></div>
+<div class="ttc" id="aenumlocal__search_1_1candidate__type_1_1CandidateType_html_a83d72037a210a5d2146a2690a6a956e9"><div class="ttname"><a href="enumlocal__search_1_1candidate__type_1_1CandidateType.html#a83d72037a210a5d2146a2690a6a956e9">local_search.candidate_type.CandidateType.SmallerCandidate</a></div><div class="ttdeci">SmallerCandidate</div><div class="ttdoc">Select the smallest/best candidate according to objective.</div><div class="ttdef"><b>Definition</b> <a href="CandidateType_8java_source.html#l00016">CandidateType.java:16</a></div></div>
+<div class="ttc" id="aenumlocal__search_1_1complement_1_1StrategyType_html"><div class="ttname"><a href="enumlocal__search_1_1complement_1_1StrategyType.html">local_search.complement.StrategyType</a></div><div class="ttdoc">StrategyType - enumeration of local search strategy modes.</div><div class="ttdef"><b>Definition</b> <a href="StrategyType_8java_source.html#l00013">StrategyType.java:14</a></div></div>
+<div class="ttc" id="aenumlocal__search_1_1complement_1_1StrategyType_html_a6319a2518e93ad757c398fb858df8c9e"><div class="ttname"><a href="enumlocal__search_1_1complement_1_1StrategyType.html#a6319a2518e93ad757c398fb858df8c9e">local_search.complement.StrategyType.NORMAL</a></div><div class="ttdeci">NORMAL</div><div class="ttdoc">Use normal (non-tabu) neighborhood processing.</div><div class="ttdef"><b>Definition</b> <a href="StrategyType_8java_source.html#l00018">StrategyType.java:18</a></div></div>
+<div class="ttc" id="aenummetaheuristics_1_1generators_1_1GeneratorType_html"><div class="ttname"><a href="enummetaheuristics_1_1generators_1_1GeneratorType.html">metaheuristics.generators.GeneratorType</a></div><div class="ttdoc">GeneratorType - enumeration of different types of solution generators used in metaheuristic algorithm...</div><div class="ttdef"><b>Definition</b> <a href="GeneratorType_8java_source.html#l00006">GeneratorType.java:6</a></div></div>
+<div class="ttc" id="aenummetaheuristics_1_1generators_1_1GeneratorType_html_a67701bca73b1d45dcfb2fbd70e31b6d5"><div class="ttname"><a href="enummetaheuristics_1_1generators_1_1GeneratorType.html#a67701bca73b1d45dcfb2fbd70e31b6d5">metaheuristics.generators.GeneratorType.LimitThreshold</a></div><div class="ttdeci">LimitThreshold</div><div class="ttdef"><b>Definition</b> <a href="GeneratorType_8java_source.html#l00007">GeneratorType.java:7</a></div></div>
+<div class="ttc" id="aenumproblem_1_1definition_1_1Problem_1_1ProblemType_html"><div class="ttname"><a href="enumproblem_1_1definition_1_1Problem_1_1ProblemType.html">problem.definition.Problem.ProblemType</a></div><div class="ttdoc">ProblemType - descripcion (añade detalles).</div><div class="ttdef"><b>Definition</b> <a href="Problem_8java_source.html#l00029">Problem.java:29</a></div></div>
+<div class="ttc" id="aenumproblem_1_1definition_1_1Problem_1_1ProblemType_html_aa55383c4cb9a71cfeabc7f715ee0cd6e"><div class="ttname"><a href="enumproblem_1_1definition_1_1Problem_1_1ProblemType.html#aa55383c4cb9a71cfeabc7f715ee0cd6e">problem.definition.Problem.ProblemType.Maximizar</a></div><div class="ttdeci">Maximizar</div><div class="ttdef"><b>Definition</b> <a href="Problem_8java_source.html#l00029">Problem.java:29</a></div></div>
+<div class="ttc" id="ainterfacefactory__interface_1_1IFFactoryAcceptCandidate_html"><div class="ttname"><a href="interfacefactory__interface_1_1IFFactoryAcceptCandidate.html">factory_interface.IFFactoryAcceptCandidate</a></div><div class="ttdoc">IFFactoryAcceptCandidate - Interface for creating acceptable candidates.</div><div class="ttdef"><b>Definition</b> <a href="IFFactoryAcceptCandidate_8java_source.html#l00015">IFFactoryAcceptCandidate.java:15</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_35e5e1a6dfa5adce22aec671c4d5c0d1.html">practica5</a></li><li class="navelem"><a href="dir_d2e984a8ddfea0cacd32e4238c7e9dd9.html">src</a></li><li class="navelem"><a href="dir_4a158cb6d41a1065711987d4dec8e14e.html">main</a></li><li class="navelem"><a href="dir_67084513cc423c424b0c8f4661d8bd90.html">java</a></li><li class="navelem"><a href="dir_6f516081a8775e0e6b8e509d37a46596.html">metaheuristics</a></li><li class="navelem"><a href="dir_be05ed143b34307001aec965668c7f6c.html">generators</a></li><li class="navelem"><a href="LimitThreshold_8java.html">LimitThreshold.java</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>practica5: Archivo de código fuente AcceptMulticase.java</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">practica5
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('AcceptMulticase_8java_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">AcceptMulticase.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="AcceptMulticase_8java.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">package </span>local_search.acceptation_type;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">import</span> metaheuristics.generators.*;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">import</span> metaheurictics.strategy.*;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">import</span> java.util.List;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">import</span> java.util.concurrent.ThreadLocalRandom;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">import</span> problem.definition.State;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span></div>
+<div class="foldopen" id="foldopen00017" data-start="{" data-end="};">
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classlocal__search_1_1acceptation__type_1_1AcceptMulticase.html">   17</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classlocal__search_1_1acceptation__type_1_1AcceptMulticase.html">AcceptMulticase</a> <span class="keyword">extends</span> <a class="code hl_class" href="classlocal__search_1_1acceptation__type_1_1AcceptableCandidate.html">AcceptableCandidate</a> {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    @SuppressWarnings(<span class="stringliteral">&quot;squid:S2245&quot;</span>)</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    @Override</div>
+<div class="foldopen" id="foldopen00034" data-start="{" data-end="}">
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="classlocal__search_1_1acceptation__type_1_1AcceptMulticase.html#a526e452510b7eebe59af4dde0c59b337">   34</a></span>    <span class="keyword">public</span> Boolean <a class="code hl_function" href="classlocal__search_1_1acceptation__type_1_1AcceptMulticase.html#a526e452510b7eebe59af4dde0c59b337">acceptCandidate</a>(<a class="code hl_class" href="classproblem_1_1definition_1_1State.html">State</a> stateCurrent, <a class="code hl_class" href="classproblem_1_1definition_1_1State.html">State</a> stateCandidate) {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="comment">// TODO Auto-generated method stub</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        Boolean accept = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        List&lt;State&gt; list = <a class="code hl_class" href="classmetaheurictics_1_1strategy_1_1Strategy.html">Strategy</a>.<a class="code hl_function" href="classmetaheurictics_1_1strategy_1_1Strategy.html#ad2641e12c52292930364de6655333aa8">getStrategy</a>().<a class="code hl_variable" href="classmetaheurictics_1_1strategy_1_1Strategy.html#aa572e7d90e24bae70ea47a31fee298f4">listRefPoblacFinal</a>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="keywordflow">if</span>(list.size() == 0){</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            list.add(stateCurrent.<a class="code hl_function" href="classproblem_1_1definition_1_1State.html#a113f6883a1f6bd20eea2da09a0adc5c3">clone</a>());</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        }</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    Double T = <a class="code hl_class" href="classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing.html">MultiCaseSimulatedAnnealing</a>.<a class="code hl_function" href="classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing.html#af8e07e094004ed50e59c401e8ba0d1bf">getTinitial</a>();</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keywordtype">double</span> pAccept = 0;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="comment">// use ThreadLocalRandom to avoid creating a new Random instance on each call</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <a class="code hl_class" href="classlocal__search_1_1acceptation__type_1_1Dominance.html">Dominance</a> dominance= <span class="keyword">new</span> <a class="code hl_class" href="classlocal__search_1_1acceptation__type_1_1Dominance.html">Dominance</a>();</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="comment">//Verificando si la soluci�n candidata domina a la soluci�n actual</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="comment">//Si la soluci�n candidata domina a la soluci�n actual</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keywordflow">if</span>(dominance.<a class="code hl_function" href="classlocal__search_1_1acceptation__type_1_1Dominance.html#a0dafd58be8365a22956f59417841a2d8">dominance</a>(stateCandidate, stateCurrent) == <span class="keyword">true</span>){</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            <span class="comment">//Se asigna como soluci�n actual la soluci�n candidata con probabilidad 1</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            pAccept = 1; </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        }</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(dominance.<a class="code hl_function" href="classlocal__search_1_1acceptation__type_1_1Dominance.html#a0dafd58be8365a22956f59417841a2d8">dominance</a>(stateCandidate, stateCurrent)== <span class="keyword">false</span>){ </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            <span class="keywordflow">if</span>(<a class="code hl_function" href="classlocal__search_1_1acceptation__type_1_1AcceptMulticase.html#a054b2c0dc802d3ac4e003b4bd763b48f">dominanceCounter</a>(stateCandidate, list) &gt; 0){</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                pAccept = 1;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            }</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code hl_function" href="classlocal__search_1_1acceptation__type_1_1AcceptMulticase.html#a9f30e2b41f460cc8992f1e33136a14cc">dominanceRank</a>(stateCandidate, list) == 0){</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                pAccept = 1;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            }</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code hl_function" href="classlocal__search_1_1acceptation__type_1_1AcceptMulticase.html#a9f30e2b41f460cc8992f1e33136a14cc">dominanceRank</a>(stateCandidate, list) &lt; <a class="code hl_function" href="classlocal__search_1_1acceptation__type_1_1AcceptMulticase.html#a9f30e2b41f460cc8992f1e33136a14cc">dominanceRank</a>(stateCurrent, list)){</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                pAccept = 1;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            }</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code hl_function" href="classlocal__search_1_1acceptation__type_1_1AcceptMulticase.html#a9f30e2b41f460cc8992f1e33136a14cc">dominanceRank</a>(stateCandidate, list) == <a class="code hl_function" href="classlocal__search_1_1acceptation__type_1_1AcceptMulticase.html#a9f30e2b41f460cc8992f1e33136a14cc">dominanceRank</a>(stateCurrent, list)){</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                <span class="comment">//Calculando la probabilidad de aceptaci�n</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                List&lt;Double&gt; evaluations = stateCurrent.<a class="code hl_function" href="classproblem_1_1definition_1_1State.html#a226ea6fab8e7060cf131edfdb245a6fa">getEvaluation</a>();</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                <span class="keywordtype">double</span> total = 0;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; evaluations.size()-1; i++) {</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                    Double evalA = evaluations.get(i);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                    Double evalB = stateCandidate.<a class="code hl_function" href="classproblem_1_1definition_1_1State.html#a226ea6fab8e7060cf131edfdb245a6fa">getEvaluation</a>().get(i);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                    <span class="keywordflow">if</span> (evalA != 0 &amp;&amp; evalB != 0) {</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                        total += (evalA - evalB)/((evalA + evalB)/2);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                    }</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                }   </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                pAccept = Math.exp(-(1-total)/T);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            }</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_function" href="classlocal__search_1_1acceptation__type_1_1AcceptMulticase.html#a9f30e2b41f460cc8992f1e33136a14cc">dominanceRank</a>(stateCandidate, list) &gt; <a class="code hl_function" href="classlocal__search_1_1acceptation__type_1_1AcceptMulticase.html#a9f30e2b41f460cc8992f1e33136a14cc">dominanceRank</a>(stateCurrent, list) &amp;&amp; <a class="code hl_function" href="classlocal__search_1_1acceptation__type_1_1AcceptMulticase.html#a9f30e2b41f460cc8992f1e33136a14cc">dominanceRank</a>(stateCurrent, list)!= 0){</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>                <span class="comment">// avoid integer division -&gt; compute ranks once and use floating point division</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                <span class="keywordtype">int</span> rankCandidate = <a class="code hl_function" href="classlocal__search_1_1acceptation__type_1_1AcceptMulticase.html#a9f30e2b41f460cc8992f1e33136a14cc">dominanceRank</a>(stateCandidate, list);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                <span class="keywordtype">int</span> rankCurrent = <a class="code hl_function" href="classlocal__search_1_1acceptation__type_1_1AcceptMulticase.html#a9f30e2b41f460cc8992f1e33136a14cc">dominanceRank</a>(stateCurrent, list);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                <span class="keywordtype">float</span> value = (rankCurrent == 0) ? 0f : ((float) rankCandidate) / ((<span class="keywordtype">float</span>) rankCurrent);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>                pAccept = Math.exp(-((<span class="keywordtype">double</span>)value+1.0)/T);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            }</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            <span class="keywordflow">else</span>{</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                <span class="comment">//Calculando la probabilidad de aceptaci�n</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                List&lt;Double&gt; evaluations = stateCurrent.<a class="code hl_function" href="classproblem_1_1definition_1_1State.html#a226ea6fab8e7060cf131edfdb245a6fa">getEvaluation</a>();</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                <span class="keywordtype">double</span> total = 0;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; evaluations.size()-1; i++) {</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                    Double evalA = evaluations.get(i);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                    Double evalB = stateCandidate.<a class="code hl_function" href="classproblem_1_1definition_1_1State.html#a226ea6fab8e7060cf131edfdb245a6fa">getEvaluation</a>().get(i);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>                    <span class="keywordflow">if</span> (evalA != 0 &amp;&amp; evalB != 0) {</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                        total += (evalA - evalB)/((evalA + evalB)/2);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>                    }</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                }</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                pAccept = Math.exp(-(1-total)/T);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>            }</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        }</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        <span class="comment">//Generar un n�mero aleatorio</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>            <span class="keywordflow">if</span>((ThreadLocalRandom.current().nextFloat()) &lt; pAccept){</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>            <span class="comment">// Don&#39;t assign to the parameter reference (dead store). The caller should handle state updates.</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>            <span class="comment">// Verificando que la soluci�n candidata domina a alguna de las soluciones</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>                accept = dominance.<a class="code hl_function" href="classlocal__search_1_1acceptation__type_1_1Dominance.html#ad61c0e3cb6cc4036419cb36758cf3814">listDominance</a>(stateCandidate, list);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        }</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        <span class="keywordflow">return</span> accept;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    }</div>
+</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="foldopen" id="foldopen00106" data-start="{" data-end="}">
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="classlocal__search_1_1acceptation__type_1_1AcceptMulticase.html#a054b2c0dc802d3ac4e003b4bd763b48f">  106</a></span>    <span class="keyword">private</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classlocal__search_1_1acceptation__type_1_1AcceptMulticase.html#a054b2c0dc802d3ac4e003b4bd763b48f">dominanceCounter</a>(<a class="code hl_class" href="classproblem_1_1definition_1_1State.html">State</a> stateCandidate, List&lt;State&gt; list) { <span class="comment">//chequea el n�mero de soluciones de Pareto que son dominados por la nueva soluci�n</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        <span class="keywordtype">int</span> counter = 0;</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; list.size(); i++) {</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>            <a class="code hl_class" href="classproblem_1_1definition_1_1State.html">State</a> solution = list.get(i);</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>            <a class="code hl_class" href="classlocal__search_1_1acceptation__type_1_1Dominance.html">Dominance</a> dominance = <span class="keyword">new</span> <a class="code hl_class" href="classlocal__search_1_1acceptation__type_1_1Dominance.html">Dominance</a>();</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            <span class="keywordflow">if</span>(dominance.<a class="code hl_function" href="classlocal__search_1_1acceptation__type_1_1Dominance.html#a0dafd58be8365a22956f59417841a2d8">dominance</a>(stateCandidate, solution) == <span class="keyword">true</span>)</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>                counter++;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        }</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        <span class="keywordflow">return</span> counter;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    }</div>
+</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="foldopen" id="foldopen00117" data-start="{" data-end="}">
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno"><a class="line" href="classlocal__search_1_1acceptation__type_1_1AcceptMulticase.html#a9f30e2b41f460cc8992f1e33136a14cc">  117</a></span>    <span class="keyword">private</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classlocal__search_1_1acceptation__type_1_1AcceptMulticase.html#a9f30e2b41f460cc8992f1e33136a14cc">dominanceRank</a>(<a class="code hl_class" href="classproblem_1_1definition_1_1State.html">State</a> stateCandidate, List&lt;State&gt; list) { <span class="comment">//calculando el n�mero de soluciones en el conjunto de Pareto que dominan a la soluci�n</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        <span class="keywordtype">int</span> rank = 0;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; list.size(); i++) {</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>            <a class="code hl_class" href="classproblem_1_1definition_1_1State.html">State</a> solution = list.get(i);</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>            <a class="code hl_class" href="classlocal__search_1_1acceptation__type_1_1Dominance.html">Dominance</a> dominance = <span class="keyword">new</span> <a class="code hl_class" href="classlocal__search_1_1acceptation__type_1_1Dominance.html">Dominance</a>();</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>            <span class="keywordflow">if</span>(dominance.<a class="code hl_function" href="classlocal__search_1_1acceptation__type_1_1Dominance.html#a0dafd58be8365a22956f59417841a2d8">dominance</a>(solution, stateCandidate) == <span class="keyword">true</span>){</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>                rank++;</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>            }</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        }</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        <span class="keywordflow">return</span> rank;</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    }</div>
+</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>}</div>
+</div>
+<div class="ttc" id="aclasslocal__search_1_1acceptation__type_1_1AcceptMulticase_html"><div class="ttname"><a href="classlocal__search_1_1acceptation__type_1_1AcceptMulticase.html">local_search.acceptation_type.AcceptMulticase</a></div><div class="ttdoc">AcceptMulticase - Multi-case acceptation strategy for multiobjective algorithms.</div><div class="ttdef"><b>Definition</b> <a href="#l00017">AcceptMulticase.java:17</a></div></div>
+<div class="ttc" id="aclasslocal__search_1_1acceptation__type_1_1AcceptMulticase_html_a054b2c0dc802d3ac4e003b4bd763b48f"><div class="ttname"><a href="classlocal__search_1_1acceptation__type_1_1AcceptMulticase.html#a054b2c0dc802d3ac4e003b4bd763b48f">local_search.acceptation_type.AcceptMulticase.dominanceCounter</a></div><div class="ttdeci">int dominanceCounter(State stateCandidate, List&lt; State &gt; list)</div><div class="ttdef"><b>Definition</b> <a href="#l00106">AcceptMulticase.java:106</a></div></div>
+<div class="ttc" id="aclasslocal__search_1_1acceptation__type_1_1AcceptMulticase_html_a526e452510b7eebe59af4dde0c59b337"><div class="ttname"><a href="classlocal__search_1_1acceptation__type_1_1AcceptMulticase.html#a526e452510b7eebe59af4dde0c59b337">local_search.acceptation_type.AcceptMulticase.acceptCandidate</a></div><div class="ttdeci">Boolean acceptCandidate(State stateCurrent, State stateCandidate)</div><div class="ttdoc">Uses ThreadLocalRandom for algorithmic (non-cryptographic) randomness.</div><div class="ttdef"><b>Definition</b> <a href="#l00034">AcceptMulticase.java:34</a></div></div>
+<div class="ttc" id="aclasslocal__search_1_1acceptation__type_1_1AcceptMulticase_html_a9f30e2b41f460cc8992f1e33136a14cc"><div class="ttname"><a href="classlocal__search_1_1acceptation__type_1_1AcceptMulticase.html#a9f30e2b41f460cc8992f1e33136a14cc">local_search.acceptation_type.AcceptMulticase.dominanceRank</a></div><div class="ttdeci">int dominanceRank(State stateCandidate, List&lt; State &gt; list)</div><div class="ttdef"><b>Definition</b> <a href="#l00117">AcceptMulticase.java:117</a></div></div>
+<div class="ttc" id="aclasslocal__search_1_1acceptation__type_1_1AcceptableCandidate_html"><div class="ttname"><a href="classlocal__search_1_1acceptation__type_1_1AcceptableCandidate.html">local_search.acceptation_type.AcceptableCandidate</a></div><div class="ttdoc">AcceptableCandidate - Base type for acceptation strategies.</div><div class="ttdef"><b>Definition</b> <a href="AcceptableCandidate_8java_source.html#l00012">AcceptableCandidate.java:12</a></div></div>
+<div class="ttc" id="aclasslocal__search_1_1acceptation__type_1_1Dominance_html"><div class="ttname"><a href="classlocal__search_1_1acceptation__type_1_1Dominance.html">local_search.acceptation_type.Dominance</a></div><div class="ttdoc">Dominance - Utilities for Pareto dominance comparisons.</div><div class="ttdef"><b>Definition</b> <a href="Dominance_8java_source.html#l00018">Dominance.java:18</a></div></div>
+<div class="ttc" id="aclasslocal__search_1_1acceptation__type_1_1Dominance_html_a0dafd58be8365a22956f59417841a2d8"><div class="ttname"><a href="classlocal__search_1_1acceptation__type_1_1Dominance.html#a0dafd58be8365a22956f59417841a2d8">local_search.acceptation_type.Dominance.dominance</a></div><div class="ttdeci">boolean dominance(State solutionX, State solutionY)</div><div class="ttdoc">Determine whether solutionX Pareto-dominates solutionY.</div><div class="ttdef"><b>Definition</b> <a href="Dominance_8java_source.html#l00087">Dominance.java:87</a></div></div>
+<div class="ttc" id="aclasslocal__search_1_1acceptation__type_1_1Dominance_html_ad61c0e3cb6cc4036419cb36758cf3814"><div class="ttname"><a href="classlocal__search_1_1acceptation__type_1_1Dominance.html#ad61c0e3cb6cc4036419cb36758cf3814">local_search.acceptation_type.Dominance.listDominance</a></div><div class="ttdeci">boolean listDominance(State solutionX, List&lt; State &gt; list)</div><div class="ttdoc">Check whether solutionX dominates members of the supplied list and update the list accordingly.</div><div class="ttdef"><b>Definition</b> <a href="Dominance_8java_source.html#l00033">Dominance.java:33</a></div></div>
+<div class="ttc" id="aclassmetaheurictics_1_1strategy_1_1Strategy_html"><div class="ttname"><a href="classmetaheurictics_1_1strategy_1_1Strategy.html">metaheurictics.strategy.Strategy</a></div><div class="ttdoc">Strategy -.</div><div class="ttdef"><b>Definition</b> <a href="Strategy_8java_source.html#l00033">Strategy.java:33</a></div></div>
+<div class="ttc" id="aclassmetaheurictics_1_1strategy_1_1Strategy_html_aa572e7d90e24bae70ea47a31fee298f4"><div class="ttname"><a href="classmetaheurictics_1_1strategy_1_1Strategy.html#aa572e7d90e24bae70ea47a31fee298f4">metaheurictics.strategy.Strategy.listRefPoblacFinal</a></div><div class="ttdeci">List&lt; State &gt; listRefPoblacFinal</div><div class="ttdef"><b>Definition</b> <a href="Strategy_8java_source.html#l00049">Strategy.java:49</a></div></div>
+<div class="ttc" id="aclassmetaheurictics_1_1strategy_1_1Strategy_html_ad2641e12c52292930364de6655333aa8"><div class="ttname"><a href="classmetaheurictics_1_1strategy_1_1Strategy.html#ad2641e12c52292930364de6655333aa8">metaheurictics.strategy.Strategy.getStrategy</a></div><div class="ttdeci">static Strategy getStrategy()</div><div class="ttdoc">getStrategy - getter of Strategy singleton instance</div><div class="ttdef"><b>Definition</b> <a href="Strategy_8java_source.html#l00080">Strategy.java:80</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_html"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing.html">metaheuristics.generators.MultiCaseSimulatedAnnealing</a></div><div class="ttdoc">MultiCaseSimulatedAnnealing - class that implements the Multi-Case Simulated Annealing metaheuristic.</div><div class="ttdef"><b>Definition</b> <a href="MultiCaseSimulatedAnnealing_8java_source.html#l00022">MultiCaseSimulatedAnnealing.java:22</a></div></div>
+<div class="ttc" id="aclassmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_html_af8e07e094004ed50e59c401e8ba0d1bf"><div class="ttname"><a href="classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing.html#af8e07e094004ed50e59c401e8ba0d1bf">metaheuristics.generators.MultiCaseSimulatedAnnealing.getTinitial</a></div><div class="ttdeci">static Double getTinitial()</div><div class="ttdef"><b>Definition</b> <a href="MultiCaseSimulatedAnnealing_8java_source.html#l00059">MultiCaseSimulatedAnnealing.java:59</a></div></div>
+<div class="ttc" id="aclassproblem_1_1definition_1_1State_html"><div class="ttname"><a href="classproblem_1_1definition_1_1State.html">problem.definition.State</a></div><div class="ttdoc">State.</div><div class="ttdef"><b>Definition</b> <a href="State_8java_source.html#l00016">State.java:16</a></div></div>
+<div class="ttc" id="aclassproblem_1_1definition_1_1State_html_a113f6883a1f6bd20eea2da09a0adc5c3"><div class="ttname"><a href="classproblem_1_1definition_1_1State.html#a113f6883a1f6bd20eea2da09a0adc5c3">problem.definition.State.clone</a></div><div class="ttdeci">State clone()</div><div class="ttdoc">clone</div><div class="ttdef"><b>Definition</b> <a href="State_8java_source.html#l00142">State.java:142</a></div></div>
+<div class="ttc" id="aclassproblem_1_1definition_1_1State_html_a226ea6fab8e7060cf131edfdb245a6fa"><div class="ttname"><a href="classproblem_1_1definition_1_1State.html#a226ea6fab8e7060cf131edfdb245a6fa">problem.definition.State.getEvaluation</a></div><div class="ttdeci">ArrayList&lt; Double &gt; getEvaluation()</div><div class="ttdoc">Obtener la lista de evaluaciones del estado.</div><div class="ttdef"><b>Definition</b> <a href="State_8java_source.html#l00104">State.java:104</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_35e5e1a6dfa5adce22aec671c4d5c0d1.html">practica5</a></li><li class="navelem"><a href="dir_d2e984a8ddfea0cacd32e4238c7e9dd9.html">src</a></li><li class="navelem"><a href="dir_4a158cb6d41a1065711987d4dec8e14e.html">main</a></li><li class="navelem"><a href="dir_67084513cc423c424b0c8f4661d8bd90.html">java</a></li><li class="navelem"><a href="dir_945c5c0e6a7c6d51287bd0dbc7037b0c.html">local_search</a></li><li class="navelem"><a href="dir_a3bdf202ce0de9ed8837454bbb6bf0e4.html">acceptation_type</a></li><li class="navelem"><a href="AcceptMulticase_8java.html">AcceptMulticase.java</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

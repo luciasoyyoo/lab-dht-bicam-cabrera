@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="es">
+  <compounddef id="classproblem_1_1extension_1_1FactoresPonderados" kind="class" language="Java" prot="public">
+    <compoundname>problem::extension::FactoresPonderados</compoundname>
+    <basecompoundref refid="classproblem_1_1extension_1_1SolutionMethod" prot="public" virt="non-virtual">problem.extension.SolutionMethod</basecompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classproblem_1_1extension_1_1FactoresPonderados_1a935d426d08fbf69af9ea5fe2196692bc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void problem.extension.FactoresPonderados.evaluationState</definition>
+        <argsstring>(State state)</argsstring>
+        <name>evaluationState</name>
+        <qualifiedname>problem.extension.FactoresPonderados.evaluationState</qualifiedname>
+        <reimplements refid="classproblem_1_1extension_1_1SolutionMethod_1ae31d6d6000b9043bdee5e2d79fd2a628">evaluationState</reimplements>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>evaluationState </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Evalúa un estado aplicando la suma ponderada de cada función objetivo, teniendo en cuenta si la función es de maximizar o minimizar.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>estado a evaluar; la lista de evaluación del estado se actualiza con el valor calculado. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/problem/extension/FactoresPonderados.java" line="29" column="13" bodyfile="practica5/src/main/java/problem/extension/FactoresPonderados.java" bodystart="29" bodyend="63"/>
+        <references refid="classproblem_1_1definition_1_1Problem_1a1427b83a226c7a174deee23925af14e4" compoundref="Problem_8java" startline="57" endline="59">problem.definition.Problem.getFunction</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1a4bc6bd95db71e14b1f48c1bfc85f1305" compoundref="Strategy_8java" startline="405" endline="407">metaheurictics.strategy.Strategy.getProblem</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1ad2641e12c52292930364de6655333aa8" compoundref="Strategy_8java" startline="80" endline="85">metaheurictics.strategy.Strategy.getStrategy</references>
+        <references refid="classproblem_1_1definition_1_1Problem_1ad6f38df755179e22ffe487ba4a5c8021" compoundref="Problem_8java" startline="97" endline="99">problem.definition.Problem.getTypeProblem</references>
+        <references refid="enumproblem_1_1definition_1_1Problem_1_1ProblemType_1aa55383c4cb9a71cfeabc7f715ee0cd6e" compoundref="Problem_8java" startline="29">problem.definition.Problem.ProblemType.Maximizar</references>
+        <references refid="classproblem_1_1definition_1_1State_1abeaa628078af4804e5e9d93b3de593b5" compoundref="State_8java" startline="113" endline="115">problem.definition.State.setEvaluation</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="classproblem_1_1extension_1_1FactoresPonderados" kindref="compound">FactoresPonderados</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Implementación de <computeroutput><ref refid="classproblem_1_1extension_1_1SolutionMethod" kindref="compound">SolutionMethod</ref></computeroutput> que combina funciones objetivo mediante factores ponderados. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>problem.extension.FactoresPonderados</label>
+        <link refid="classproblem_1_1extension_1_1FactoresPonderados"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>problem.extension.SolutionMethod</label>
+        <link refid="classproblem_1_1extension_1_1SolutionMethod"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>problem.extension.FactoresPonderados</label>
+        <link refid="classproblem_1_1extension_1_1FactoresPonderados"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>problem.extension.SolutionMethod</label>
+        <link refid="classproblem_1_1extension_1_1SolutionMethod"/>
+      </node>
+    </collaborationgraph>
+    <location file="practica5/src/main/java/problem/extension/FactoresPonderados.java" line="16" column="7" bodyfile="practica5/src/main/java/problem/extension/FactoresPonderados.java" bodystart="16" bodyend="65"/>
+    <listofallmembers>
+      <member refid="classproblem_1_1extension_1_1FactoresPonderados_1a935d426d08fbf69af9ea5fe2196692bc" prot="public" virt="non-virtual"><scope>problem::extension::FactoresPonderados</scope><name>evaluationState</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

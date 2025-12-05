@@ -1,0 +1,89 @@
+\doxysection{Referencia de la clase local\+\_\+search.\+candidate\+\_\+type.\+Random\+Candidate}
+\hypertarget{classlocal__search_1_1candidate__type_1_1RandomCandidate}{}\label{classlocal__search_1_1candidate__type_1_1RandomCandidate}\index{local\_search.candidate\_type.RandomCandidate@{local\_search.candidate\_type.RandomCandidate}}
+
+
+\doxylink{classlocal__search_1_1candidate__type_1_1RandomCandidate}{Random\+Candidate} -\/ select a neighbor at random.  
+
+
+
+
+Diagrama de herencia de local\+\_\+search.\+candidate\+\_\+type.\+Random\+Candidate
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{classlocal__search_1_1candidate__type_1_1RandomCandidate__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagrama de colaboración de local\+\_\+search.\+candidate\+\_\+type.\+Random\+Candidate\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{classlocal__search_1_1candidate__type_1_1RandomCandidate__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} \mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1RandomCandidate_a66efbf984c90ee02f81608b3621220a9}{state\+Search}} (List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ list\+Neighborhood)
+\begin{DoxyCompactList}\small\item\em Uses Thread\+Local\+Random for algorithmic (non-\/cryptographic) randomness. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+\doxylink{classlocal__search_1_1candidate__type_1_1RandomCandidate}{Random\+Candidate} -\/ select a neighbor at random. 
+
+Returns a uniformly random neighbor from the provided list. Uses Thread\+Local\+Random for thread-\/safe, efficient random number generation. 
+
+Definición en la línea \mbox{\hyperlink{RandomCandidate_8java_source_l00018}{18}} del archivo \mbox{\hyperlink{RandomCandidate_8java_source}{Random\+Candidate.\+java}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{classlocal__search_1_1candidate__type_1_1RandomCandidate_doc-func-members}
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{classlocal__search_1_1candidate__type_1_1RandomCandidate_a66efbf984c90ee02f81608b3621220a9}\index{local\_search.candidate\_type.RandomCandidate@{local\_search.candidate\_type.RandomCandidate}!stateSearch@{stateSearch}}
+\index{stateSearch@{stateSearch}!local\_search.candidate\_type.RandomCandidate@{local\_search.candidate\_type.RandomCandidate}}
+\doxysubsubsection{\texorpdfstring{stateSearch()}{stateSearch()}}
+{\footnotesize\ttfamily \label{classlocal__search_1_1candidate__type_1_1RandomCandidate_a66efbf984c90ee02f81608b3621220a9} 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} local\+\_\+search.\+candidate\+\_\+type.\+Random\+Candidate.\+state\+Search (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$}]{list\+Neighborhood}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Uses Thread\+Local\+Random for algorithmic (non-\/cryptographic) randomness. 
+
+This RNG is used to decide whether a mutation occurs in the evolutionary algorithm and is not used for security-\/sensitive purposes. Suppress Sonar security hotspot S2245 for this usage. Choose a random neighbor from the list.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em list\+Neighborhood} & list of neighbor states \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+a randomly selected \doxylink{classproblem_1_1definition_1_1State}{State} from the list 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1SearchCandidate_a0f10adc1526fb08f54427c50734f8abf}{local\+\_\+search.\+candidate\+\_\+type.\+Search\+Candidate}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{RandomCandidate_8java_source_l00033}{33}} del archivo \mbox{\hyperlink{RandomCandidate_8java_source}{Random\+Candidate.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ size\ =\ listNeighborhood.size();}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ pos\ =\ (size\ >\ 0)\ ?\ ThreadLocalRandom.current().nextInt(size)\ :\ 0;}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ State\ stateAleatory\ =\ listNeighborhood.get(pos);}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ stateAleatory;}
+\DoxyCodeLine{00038\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{RandomCandidate_8java}{Random\+Candidate.\+java}}\end{DoxyCompactItemize}

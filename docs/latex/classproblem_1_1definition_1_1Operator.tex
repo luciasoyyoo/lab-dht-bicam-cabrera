@@ -1,0 +1,123 @@
+\doxysection{Referencia de la clase problem.\+definition.\+Operator}
+\hypertarget{classproblem_1_1definition_1_1Operator}{}\label{classproblem_1_1definition_1_1Operator}\index{problem.definition.Operator@{problem.definition.Operator}}
+
+
+\doxylink{classproblem_1_1definition_1_1Operator}{Operator}.  
+
+
+
+
+Diagrama de herencia de problem.\+definition.\+Operator
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{classproblem_1_1definition_1_1Operator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagrama de colaboración de problem.\+definition.\+Operator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{classproblem_1_1definition_1_1Operator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+abstract List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ \mbox{\hyperlink{classproblem_1_1definition_1_1Operator_a5b6625843e73d938f9235985bf966b34}{generated\+New\+State}} (\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} state\+Current, Integer operatornumber)
+\begin{DoxyCompactList}\small\item\em Generar nuevos estados a partir de un estado dado. \end{DoxyCompactList}\item 
+abstract List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ \mbox{\hyperlink{classproblem_1_1definition_1_1Operator_a08c63f0d681ef130fccdb04d24ddf181}{generate\+Random\+State}} (Integer operatornumber)
+\begin{DoxyCompactList}\small\item\em Generar un conjunto de estados aleatorios. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+\doxylink{classproblem_1_1definition_1_1Operator}{Operator}. 
+
+Interfaz abstracta para operadores que generan nuevos estados a partir de un estado actual o que producen estados aleatorios. 
+
+Definición en la línea \mbox{\hyperlink{Operator_8java_source_l00011}{11}} del archivo \mbox{\hyperlink{Operator_8java_source}{Operator.\+java}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{classproblem_1_1definition_1_1Operator_doc-func-members}
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{classproblem_1_1definition_1_1Operator_a5b6625843e73d938f9235985bf966b34}\index{problem.definition.Operator@{problem.definition.Operator}!generatedNewState@{generatedNewState}}
+\index{generatedNewState@{generatedNewState}!problem.definition.Operator@{problem.definition.Operator}}
+\doxysubsubsection{\texorpdfstring{generatedNewState()}{generatedNewState()}}
+{\footnotesize\ttfamily \label{classproblem_1_1definition_1_1Operator_a5b6625843e73d938f9235985bf966b34} 
+abstract List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ problem.\+definition.\+Operator.\+generated\+New\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}}]{state\+Current}{, }\item[{Integer}]{operatornumber}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+
+
+Generar nuevos estados a partir de un estado dado. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em state\+Current} & estado base \\
+\hline
+{\em operatornumber} & índice de operador (uso dependiente de la implementación) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+lista de estados generados 
+\end{DoxyReturn}
+
+
+Reimplementado en \mbox{\hyperlink{classproblem__operators_1_1MutationOperator_adc581cf1337e53458e6695aec007028b}{problem\+\_\+operators.\+Mutation\+Operator}}.
+
+
+
+Referenciado por \mbox{\hyperlink{HillClimbing_8java_source_l00072}{metaheuristics.\+generators.\+Hill\+Climbing.\+generate()}}, \mbox{\hyperlink{HillClimbingRestart_8java_source_l00073}{metaheuristics.\+generators.\+Hill\+Climbing\+Restart.\+generate()}}, \mbox{\hyperlink{LimitThreshold_8java_source_l00093}{metaheuristics.\+generators.\+Limit\+Threshold.\+generate()}}, \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00090}{metaheuristics.\+generators.\+Multi\+Case\+Simulated\+Annealing.\+generate()}}, \mbox{\hyperlink{MultiobjectiveHillClimbingDistance_8java_source_l00068}{metaheuristics.\+generators.\+Multiobjective\+Hill\+Climbing\+Distance.\+generate()}}, \mbox{\hyperlink{MultiobjectiveHillClimbingRestart_8java_source_l00071}{metaheuristics.\+generators.\+Multiobjective\+Hill\+Climbing\+Restart.\+generate()}}, \mbox{\hyperlink{MultiobjectiveStochasticHillClimbing_8java_source_l00055}{metaheuristics.\+generators.\+Multiobjective\+Stochastic\+Hill\+Climbing.\+generate()}}, \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00091}{metaheuristics.\+generators.\+Multiobjective\+Tabu\+Search.\+generate()}}, \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00118}{metaheuristics.\+generators.\+Simulated\+Annealing.\+generate()}}, \mbox{\hyperlink{TabuSearch_8java_source_l00095}{metaheuristics.\+generators.\+Tabu\+Search.\+generate()}}, \mbox{\hyperlink{CandidateValue_8java_source_l00074}{local\+\_\+search.\+candidate\+\_\+type.\+Candidate\+Value.\+state\+Candidate()}}, \mbox{\hyperlink{MultiobjectiveHillClimbingDistance_8java_source_l00087}{metaheuristics.\+generators.\+Multiobjective\+Hill\+Climbing\+Distance.\+update\+Reference()}} y \mbox{\hyperlink{MultiobjectiveHillClimbingRestart_8java_source_l00083}{metaheuristics.\+generators.\+Multiobjective\+Hill\+Climbing\+Restart.\+update\+Reference()}}.
+
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classproblem_1_1definition_1_1Operator_a5b6625843e73d938f9235985bf966b34_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classproblem_1_1definition_1_1Operator_a08c63f0d681ef130fccdb04d24ddf181}\index{problem.definition.Operator@{problem.definition.Operator}!generateRandomState@{generateRandomState}}
+\index{generateRandomState@{generateRandomState}!problem.definition.Operator@{problem.definition.Operator}}
+\doxysubsubsection{\texorpdfstring{generateRandomState()}{generateRandomState()}}
+{\footnotesize\ttfamily \label{classproblem_1_1definition_1_1Operator_a08c63f0d681ef130fccdb04d24ddf181} 
+abstract List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ problem.\+definition.\+Operator.\+generate\+Random\+State (\begin{DoxyParamCaption}\item[{Integer}]{operatornumber}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+
+
+Generar un conjunto de estados aleatorios. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em operatornumber} & índice/semilla opcional para la generación \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+lista de estados aleatorios 
+\end{DoxyReturn}
+
+
+Reimplementado en \mbox{\hyperlink{classproblem__operators_1_1MutationOperator_a0f6271c1365408220a1749db18e335d9}{problem\+\_\+operators.\+Mutation\+Operator}}.
+
+
+
+Referenciado por \mbox{\hyperlink{HillClimbingRestart_8java_source_l00073}{metaheuristics.\+generators.\+Hill\+Climbing\+Restart.\+generate()}}, \mbox{\hyperlink{RandomSearch_8java_source_l00066}{metaheuristics.\+generators.\+Random\+Search.\+generate()}}, \mbox{\hyperlink{MultiobjectiveHillClimbingDistance_8java_source_l00087}{metaheuristics.\+generators.\+Multiobjective\+Hill\+Climbing\+Distance.\+update\+Reference()}} y \mbox{\hyperlink{MultiobjectiveHillClimbingRestart_8java_source_l00083}{metaheuristics.\+generators.\+Multiobjective\+Hill\+Climbing\+Restart.\+update\+Reference()}}.
+
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classproblem_1_1definition_1_1Operator_a08c63f0d681ef130fccdb04d24ddf181_icgraph}
+\end{center}
+\end{figure}
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Operator_8java}{Operator.\+java}}\end{DoxyCompactItemize}

@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>practica5: Archivo de código fuente AcceptBest.java</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">practica5
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('AcceptBest_8java_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">AcceptBest.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="AcceptBest_8java.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">package </span>local_search.acceptation_type;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">import</span> java.lang.reflect.InvocationTargetException;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">import</span> metaheurictics.strategy.Strategy;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">import</span> problem.definition.Problem;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">import</span> problem.definition.State;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">import</span> problem.definition.Problem.ProblemType;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span></div>
+<div class="foldopen" id="foldopen00020" data-start="{" data-end="};">
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="classlocal__search_1_1acceptation__type_1_1AcceptBest.html">   20</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classlocal__search_1_1acceptation__type_1_1AcceptBest.html">AcceptBest</a> <span class="keyword">extends</span> <a class="code hl_class" href="classlocal__search_1_1acceptation__type_1_1AcceptableCandidate.html">AcceptableCandidate</a> {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    @Override</div>
+<div class="foldopen" id="foldopen00038" data-start="{" data-end="}">
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="classlocal__search_1_1acceptation__type_1_1AcceptBest.html#a0ecd99df90a9818e14ddf8908cc38626">   38</a></span>    <span class="keyword">public</span> Boolean <a class="code hl_function" href="classlocal__search_1_1acceptation__type_1_1AcceptBest.html#a0ecd99df90a9818e14ddf8908cc38626">acceptCandidate</a>(<a class="code hl_class" href="classproblem_1_1definition_1_1State.html">State</a> stateCurrent, <a class="code hl_class" href="classproblem_1_1definition_1_1State.html">State</a> stateCandidate) <span class="keywordflow">throws</span> IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        Boolean accept = <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <a class="code hl_class" href="classproblem_1_1definition_1_1Problem.html">Problem</a> problem = <a class="code hl_class" href="classmetaheurictics_1_1strategy_1_1Strategy.html">Strategy</a>.<a class="code hl_function" href="classmetaheurictics_1_1strategy_1_1Strategy.html#ad2641e12c52292930364de6655333aa8">getStrategy</a>().<a class="code hl_function" href="classmetaheurictics_1_1strategy_1_1Strategy.html#a4bc6bd95db71e14b1f48c1bfc85f1305">getProblem</a>();</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="keywordflow">if</span>(problem.getTypeProblem().equals(<a class="code hl_class" href="enumproblem_1_1definition_1_1Problem_1_1ProblemType.html">ProblemType</a>.<a class="code hl_variable" href="enumproblem_1_1definition_1_1Problem_1_1ProblemType.html#aa55383c4cb9a71cfeabc7f715ee0cd6e">Maximizar</a>)) {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            <span class="keywordflow">if</span> (stateCandidate.getEvaluation().get(0) &gt;= stateCurrent.getEvaluation().get(0)) {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                accept = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                accept = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            }</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            <span class="keywordflow">if</span> (stateCandidate.getEvaluation().get(0) &lt;= stateCurrent.getEvaluation().get(0)) {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                accept = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                accept = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            }</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        }</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keywordflow">return</span> accept;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    }</div>
+</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>}</div>
+</div>
+<div class="ttc" id="aclasslocal__search_1_1acceptation__type_1_1AcceptBest_html"><div class="ttname"><a href="classlocal__search_1_1acceptation__type_1_1AcceptBest.html">local_search.acceptation_type.AcceptBest</a></div><div class="ttdoc">AcceptBest - Accept the candidate only if it improves (or ties) the current state.</div><div class="ttdef"><b>Definition</b> <a href="#l00020">AcceptBest.java:20</a></div></div>
+<div class="ttc" id="aclasslocal__search_1_1acceptation__type_1_1AcceptBest_html_a0ecd99df90a9818e14ddf8908cc38626"><div class="ttname"><a href="classlocal__search_1_1acceptation__type_1_1AcceptBest.html#a0ecd99df90a9818e14ddf8908cc38626">local_search.acceptation_type.AcceptBest.acceptCandidate</a></div><div class="ttdeci">Boolean acceptCandidate(State stateCurrent, State stateCandidate)</div><div class="ttdoc">Evaluate and decide acceptance of a candidate state.</div><div class="ttdef"><b>Definition</b> <a href="#l00038">AcceptBest.java:38</a></div></div>
+<div class="ttc" id="aclasslocal__search_1_1acceptation__type_1_1AcceptableCandidate_html"><div class="ttname"><a href="classlocal__search_1_1acceptation__type_1_1AcceptableCandidate.html">local_search.acceptation_type.AcceptableCandidate</a></div><div class="ttdoc">AcceptableCandidate - Base type for acceptation strategies.</div><div class="ttdef"><b>Definition</b> <a href="AcceptableCandidate_8java_source.html#l00012">AcceptableCandidate.java:12</a></div></div>
+<div class="ttc" id="aclassmetaheurictics_1_1strategy_1_1Strategy_html"><div class="ttname"><a href="classmetaheurictics_1_1strategy_1_1Strategy.html">metaheurictics.strategy.Strategy</a></div><div class="ttdoc">Strategy -.</div><div class="ttdef"><b>Definition</b> <a href="Strategy_8java_source.html#l00033">Strategy.java:33</a></div></div>
+<div class="ttc" id="aclassmetaheurictics_1_1strategy_1_1Strategy_html_a4bc6bd95db71e14b1f48c1bfc85f1305"><div class="ttname"><a href="classmetaheurictics_1_1strategy_1_1Strategy.html#a4bc6bd95db71e14b1f48c1bfc85f1305">metaheurictics.strategy.Strategy.getProblem</a></div><div class="ttdeci">Problem getProblem()</div><div class="ttdoc">getProblem - method to get the problem.</div><div class="ttdef"><b>Definition</b> <a href="Strategy_8java_source.html#l00405">Strategy.java:405</a></div></div>
+<div class="ttc" id="aclassmetaheurictics_1_1strategy_1_1Strategy_html_ad2641e12c52292930364de6655333aa8"><div class="ttname"><a href="classmetaheurictics_1_1strategy_1_1Strategy.html#ad2641e12c52292930364de6655333aa8">metaheurictics.strategy.Strategy.getStrategy</a></div><div class="ttdeci">static Strategy getStrategy()</div><div class="ttdoc">getStrategy - getter of Strategy singleton instance</div><div class="ttdef"><b>Definition</b> <a href="Strategy_8java_source.html#l00080">Strategy.java:80</a></div></div>
+<div class="ttc" id="aclassproblem_1_1definition_1_1Problem_html"><div class="ttname"><a href="classproblem_1_1definition_1_1Problem.html">problem.definition.Problem</a></div><div class="ttdoc">Problem.</div><div class="ttdef"><b>Definition</b> <a href="Problem_8java_source.html#l00024">Problem.java:24</a></div></div>
+<div class="ttc" id="aclassproblem_1_1definition_1_1State_html"><div class="ttname"><a href="classproblem_1_1definition_1_1State.html">problem.definition.State</a></div><div class="ttdoc">State.</div><div class="ttdef"><b>Definition</b> <a href="State_8java_source.html#l00016">State.java:16</a></div></div>
+<div class="ttc" id="aenumproblem_1_1definition_1_1Problem_1_1ProblemType_html"><div class="ttname"><a href="enumproblem_1_1definition_1_1Problem_1_1ProblemType.html">problem.definition.Problem.ProblemType</a></div><div class="ttdoc">ProblemType - descripcion (añade detalles).</div><div class="ttdef"><b>Definition</b> <a href="Problem_8java_source.html#l00029">Problem.java:29</a></div></div>
+<div class="ttc" id="aenumproblem_1_1definition_1_1Problem_1_1ProblemType_html_aa55383c4cb9a71cfeabc7f715ee0cd6e"><div class="ttname"><a href="enumproblem_1_1definition_1_1Problem_1_1ProblemType.html#aa55383c4cb9a71cfeabc7f715ee0cd6e">problem.definition.Problem.ProblemType.Maximizar</a></div><div class="ttdeci">Maximizar</div><div class="ttdef"><b>Definition</b> <a href="Problem_8java_source.html#l00029">Problem.java:29</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_35e5e1a6dfa5adce22aec671c4d5c0d1.html">practica5</a></li><li class="navelem"><a href="dir_d2e984a8ddfea0cacd32e4238c7e9dd9.html">src</a></li><li class="navelem"><a href="dir_4a158cb6d41a1065711987d4dec8e14e.html">main</a></li><li class="navelem"><a href="dir_67084513cc423c424b0c8f4661d8bd90.html">java</a></li><li class="navelem"><a href="dir_945c5c0e6a7c6d51287bd0dbc7037b0c.html">local_search</a></li><li class="navelem"><a href="dir_a3bdf202ce0de9ed8837454bbb6bf0e4.html">acceptation_type</a></li><li class="navelem"><a href="AcceptBest_8java.html">AcceptBest.java</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

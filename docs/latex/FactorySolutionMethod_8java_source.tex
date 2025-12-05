@@ -1,0 +1,26 @@
+\doxysection{Factory\+Solution\+Method.\+java}
+\hypertarget{FactorySolutionMethod_8java_source}{}\label{FactorySolutionMethod_8java_source}\index{FactorySolutionMethod.java@{FactorySolutionMethod.java}}
+\mbox{\hyperlink{FactorySolutionMethod_8java}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{FactorySolutionMethod_8java_source_l00001}00001\ \textcolor{keyword}{package\ }factory\_method;}
+\DoxyCodeLine{\Hypertarget{FactorySolutionMethod_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{FactorySolutionMethod_8java_source_l00003}00003\ \textcolor{keyword}{import}\ java.lang.reflect.InvocationTargetException;}
+\DoxyCodeLine{\Hypertarget{FactorySolutionMethod_8java_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{FactorySolutionMethod_8java_source_l00005}00005\ \textcolor{keyword}{import}\ problem.extension.SolutionMethod;}
+\DoxyCodeLine{\Hypertarget{FactorySolutionMethod_8java_source_l00006}00006\ \textcolor{keyword}{import}\ problem.extension.TypeSolutionMethod;}
+\DoxyCodeLine{\Hypertarget{FactorySolutionMethod_8java_source_l00007}00007\ \textcolor{keyword}{import}\ factory\_interface.IFFactorySolutionMethod;}
+\DoxyCodeLine{\Hypertarget{FactorySolutionMethod_8java_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{FactorySolutionMethod_8java_source_l00012}\mbox{\hyperlink{classfactory__method_1_1FactorySolutionMethod}{00012}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classfactory__method_1_1FactorySolutionMethod}{FactorySolutionMethod}}\ \textcolor{keyword}{implements}\ \mbox{\hyperlink{interfacefactory__interface_1_1IFFactorySolutionMethod}{IFFactorySolutionMethod}}\ \{}
+\DoxyCodeLine{\Hypertarget{FactorySolutionMethod_8java_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{FactorySolutionMethod_8java_source_l00014}\mbox{\hyperlink{classfactory__method_1_1FactorySolutionMethod_ac14902718f819590e98b555ae308ea78}{00014}}\ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{classproblem_1_1extension_1_1SolutionMethod}{SolutionMethod}}\ \mbox{\hyperlink{classfactory__method_1_1FactorySolutionMethod_ac14902718f819590e98b555ae308ea78}{solutionMethod}};}
+\DoxyCodeLine{\Hypertarget{FactorySolutionMethod_8java_source_l00015}00015\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{FactorySolutionMethod_8java_source_l00016}00016\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{FactorySolutionMethod_8java_source_l00022}\mbox{\hyperlink{classfactory__method_1_1FactorySolutionMethod_aa94ebb4be85308784dbeec3d7c44209d}{00022}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classproblem_1_1extension_1_1SolutionMethod}{SolutionMethod}}\ \mbox{\hyperlink{classfactory__method_1_1FactorySolutionMethod_aa94ebb4be85308784dbeec3d7c44209d}{createdSolutionMethod}}(\mbox{\hyperlink{enumproblem_1_1extension_1_1TypeSolutionMethod}{TypeSolutionMethod}}\ method)\ \textcolor{keywordflow}{throws}\ IllegalArgumentException,\ SecurityException,\ ClassNotFoundException,\ InstantiationException,\ IllegalAccessException,\ InvocationTargetException,\ NoSuchMethodException\ \{}
+\DoxyCodeLine{\Hypertarget{FactorySolutionMethod_8java_source_l00023}00023\ \ \ \ \ \ \ \ \ String\ className\ =\ \textcolor{stringliteral}{"{}problem.extension."{}}\ +\ method.toString();}
+\DoxyCodeLine{\Hypertarget{FactorySolutionMethod_8java_source_l00024}00024\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classfactory__method_1_1FactorySolutionMethod_ac14902718f819590e98b555ae308ea78}{solutionMethod}}\ =\ (\mbox{\hyperlink{classproblem_1_1extension_1_1SolutionMethod}{SolutionMethod}})\ \mbox{\hyperlink{classfactory__method_1_1FactoryLoader}{FactoryLoader}}.\mbox{\hyperlink{classfactory__method_1_1FactoryLoader_a4e61ffc7038a082277d67e3e59cdb859}{getInstance}}(className);}
+\DoxyCodeLine{\Hypertarget{FactorySolutionMethod_8java_source_l00025}00025\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classfactory__method_1_1FactorySolutionMethod_ac14902718f819590e98b555ae308ea78}{solutionMethod}};}
+\DoxyCodeLine{\Hypertarget{FactorySolutionMethod_8java_source_l00026}00026\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{FactorySolutionMethod_8java_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{FactorySolutionMethod_8java_source_l00028}00028\ \}}
+
+\end{DoxyCode}

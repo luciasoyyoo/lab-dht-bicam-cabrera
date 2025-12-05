@@ -1,0 +1,1647 @@
+\doxysection{Referencia de la clase metaheuristics.\+generators.\+Multi\+Generator}
+\hypertarget{classmetaheuristics_1_1generators_1_1MultiGenerator}{}\label{classmetaheuristics_1_1generators_1_1MultiGenerator}\index{metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}}
+
+
+\doxylink{classmetaheuristics_1_1generators_1_1MultiGenerator}{Multi\+Generator} -\/ class that implements the Multi-\/\+Generator metaheuristic.  
+
+
+
+
+Diagrama de herencia de metaheuristics.\+generators.\+Multi\+Generator
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classmetaheuristics_1_1generators_1_1MultiGenerator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagrama de colaboración de metaheuristics.\+generators.\+Multi\+Generator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1MultiGenerator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiGenerator_a0a930ae2c14a24ea8ec99461900b7bc0}{set\+Generator\+Type}} (\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{Generator\+Type}} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiGenerator_a16741751a6b19d2e23470f715b260c18}{generatortype}})
+\begin{DoxyCompactList}\small\item\em set\+Generator\+Type -\/ set the type of the generator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiGenerator_afce4bffeb9ed07ce3da9aef9af2f3c00}{Multi\+Generator}} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{classmetaheuristics_1_1generators_1_1MultiGenerator}{Multi\+Generator} -\/ default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiGenerator_a2309ca3d3de82961bbc61d3fb6c893fc}{generate}} (Integer operatornumber)  throws Illegal\+Argument\+Exception, Security\+Exception,    Class\+Not\+Found\+Exception, Instantiation\+Exception,    Illegal\+Access\+Exception, Invocation\+Target\+Exception,    No\+Such\+Method\+Exception 
+\begin{DoxyCompactList}\small\item\em generate -\/ generate a new state using the \doxylink{classmetaheuristics_1_1generators_1_1MultiGenerator}{Multi\+Generator}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiGenerator_a7364417b4356561cfb7656fb9818cc5d}{get\+Reference}} ()
+\begin{DoxyCompactList}\small\item\em get\+Reference -\/ get the reference state. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiGenerator_a7e6b4c2a4a6ef326d191a2da93f97d67}{get\+Reference\+List}} ()
+\begin{DoxyCompactList}\small\item\em get\+Reference\+List -\/ get the list of reference states. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiGenerator_aa68b7cbbd70430924ebf582279ceeb8a}{get\+Son\+List}} ()
+\begin{DoxyCompactList}\small\item\em get\+Son\+List -\/ get the list of son states. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{Generator\+Type}} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiGenerator_a3c29946186ba7afb379169ed3636004f}{get\+Type}} ()
+\begin{DoxyCompactList}\small\item\em get\+Type -\/ get the type of the generator. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiGenerator_abfbc81c6f1a46e6a23e1a7f3f550e9f6}{set\+Initial\+Reference}} (\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} state\+Initial\+Ref)
+\begin{DoxyCompactList}\small\item\em set\+Initial\+Reference -\/ set the initial reference state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiGenerator_a4064a096c203ec6b538929af5bd8d0d7}{update\+Reference}} (\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} state\+Candidate, Integer count\+Iterations\+Current)  throws Illegal\+Argument\+Exception,    Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception,    Illegal\+Access\+Exception, Invocation\+Target\+Exception,    No\+Such\+Method\+Exception 
+\item 
+void \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiGenerator_a06c51732247b401b0369fe6133d35793}{update\+Weight}} (\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} state\+Candidate)
+\begin{DoxyCompactList}\small\item\em update\+Weight -\/ modify the weight of the generator. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiGenerator_afef1d16b774c4e86135d2fc38d0dbed7}{search\+State}} (\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} state\+Candidate)
+\begin{DoxyCompactList}\small\item\em search\+State -\/ search for a state in the reference list. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiGenerator_a625ff0e6cad7bfefeaeb4ec8a28a71d3}{get\+Weight}} ()
+\begin{DoxyCompactList}\small\item\em get\+Weight -\/ get the weight of the generator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator}{Generator}} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiGenerator_a2c2b5c6dc19e52e87a1a0b2151fa9768}{roulette}} ()
+\begin{DoxyCompactList}\small\item\em roulette -\/ select a generator using roulette wheel selection. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiGenerator_a71676324d28a05ab7745967c6edf2218}{award\+Update\+REF}} (\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} state\+Candidate)
+\begin{DoxyCompactList}\small\item\em award\+Update\+REF -\/ update the reference of the generator. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiGenerator_ab3417c34a00f079f67eed485ceeb8f1f}{update\+Award\+SC}} ()
+\begin{DoxyCompactList}\small\item\em update\+Award\+SC -\/ update the award for the selected generator. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiGenerator_a9bca4abee16ba939d1aca80ac395a130}{update\+Award\+Imp}} ()
+\begin{DoxyCompactList}\small\item\em update\+Award\+Imp -\/ update the award for the selected generator. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiGenerator_abb314d2dd0d9a0d283574add841ba6b8}{set\+Weight}} (float weight)
+\begin{DoxyCompactList}\small\item\em set\+Weight -\/ set the weight of the generator. \end{DoxyCompactList}\item 
+float\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiGenerator_aa4acb9d61c196f56a0bde7d0a624f3fb}{get\+Trace}} ()
+\begin{DoxyCompactList}\small\item\em get\+Trace -\/ get the trace of the generator. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiGenerator_a72bc1f2921d0ed9193933d964ba217b9}{tournament}} (\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} state\+Candidate, Integer count\+Iterations\+Current)  throws Illegal\+Argument\+Exception, Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception, Illegal\+Access\+Exception, Invocation\+Target\+Exception, No\+Such\+Method\+Exception 
+\begin{DoxyCompactList}\small\item\em tournament -\/ update the tournament for the selected generator. \end{DoxyCompactList}\item 
+Object \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiGenerator_a80edefbfc3233000dca1ad30cb95f8fc}{clone}} ()
+\begin{DoxyCompactList}\small\item\em clone -\/ create a copy of the generator. \end{DoxyCompactList}\item 
+int\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiGenerator_ae534f33ba876de6d56d22f3889b8b666}{get\+List\+Count\+Better\+Gender}} ()
+\begin{DoxyCompactList}\small\item\em get\+List\+Count\+Better\+Gender -\/ get the list of counts for better gender. \end{DoxyCompactList}\item 
+int\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiGenerator_af7574c27e8798f241a9f683721a8a6b5}{get\+List\+Count\+Gender}} ()
+\begin{DoxyCompactList}\small\item\em get\+List\+Count\+Gender -\/ get the list of counts for gender. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Métodos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiGenerator_adecd56fa947c1c392c1739d1bf18b6fd}{destroy\+Multi\+Generator}} ()
+\begin{DoxyCompactList}\small\item\em destroy\+Multi\+Generator -\/ destroy the \doxylink{classmetaheuristics_1_1generators_1_1MultiGenerator}{Multi\+Generator} instance. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiGenerator_a2a25df332708a340f5115fe7ea253053}{initialize\+List\+Generator}} ()  throws Illegal\+Argument\+Exception, Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception, Illegal\+Access\+Exception, Invocation\+Target\+Exception, No\+Such\+Method\+Exception 
+\begin{DoxyCompactList}\small\item\em initialize\+List\+Generator -\/ initialize the list of generators. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiGenerator_ada4833a51b39d1372e2c050448bbab6c}{initialize\+Generators}} ()  throws Illegal\+Argument\+Exception, Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception, Illegal\+Access\+Exception, Invocation\+Target\+Exception, No\+Such\+Method\+Exception 
+\item 
+static void \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiGenerator_a21767d34c374a65dd29196459273ff34}{create\+Instance\+Generators\+BPP}} ()
+\begin{DoxyCompactList}\small\item\em create\+Instance\+Generators\+BPP -\/ create instances of generators for the BPP problem. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator}{Generator}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiGenerator_ab331905baebb433340e05d19e174340b}{get\+List\+Generators}} ()
+\begin{DoxyCompactList}\small\item\em get\+List\+Generators -\/ get the list of generators. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiGenerator_ada47e6ed9cecafd1895b88ca0b2bd827}{set\+List\+Generators}} (\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator}{Generator}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiGenerator_a818b282d2b179e572c762faa6fe0c988}{list\+Generators}})
+\begin{DoxyCompactList}\small\item\em set\+List\+Generators -\/ set the list of generators. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator}{Generator}} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiGenerator_abd14738b7100c980010e1385f622a038}{get\+Active\+Generator}} ()
+\begin{DoxyCompactList}\small\item\em get\+Active\+Generator -\/ get the active generator. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiGenerator_ae3af87d1077fa62c7aea5f0c318afe5d}{set\+Active\+Generator}} (\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator}{Generator}} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiGenerator_ae0eed5be523b836cde822f567c2f6c6a}{active\+Generator}})
+\begin{DoxyCompactList}\small\item\em set\+Active\+Generator -\/ set the active generator. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiGenerator_aeb772004a70e987935b593505f290510}{set\+List\+Generated\+PP}} (List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ new\+List\+Generated\+PP)
+\begin{DoxyCompactList}\small\item\em set\+List\+Generated\+PP -\/ set the list of generated states for the PP problem. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static final List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiGenerator_aeff68b1b8549a0b8ca24e7ad05774dee}{list\+Generated\+PP}} = Collections.\+synchronized\+List(new Array\+List$<$\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}$>$())
+\item 
+static volatile \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator}{Generator}} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiGenerator_ae0eed5be523b836cde822f567c2f6c6a}{active\+Generator}}
+\item 
+static final List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiGenerator_af1c553546060e95f2cfb9df584f1b599}{list\+State\+Reference}} = Collections.\+synchronized\+List(new Array\+List$<$\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}$>$())
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Métodos privados estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiGenerator_ae0f20594827a2bd2a4c1687e665a2b7b}{get\+List\+Generated\+PP}} ()
+\begin{DoxyCompactList}\small\item\em get\+List\+Generated\+PP -\/ get the list of generated states for the PP problem. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{Generator\+Type}} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiGenerator_a16741751a6b19d2e23470f715b260c18}{generatortype}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos estáticos privados}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator}{Generator}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiGenerator_a818b282d2b179e572c762faa6fe0c988}{list\+Generators}} = new \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator}{Generator}}\mbox{[}Generator\+Type.\+values().length\mbox{]}
+\item 
+static final Logger \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiGenerator_a681d886ae7de8af824a42c3865104a3a}{LOGGER}} = Logger.\+get\+Logger(Multi\+Generator.\+class.\+get\+Name())
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Otros miembros heredados}
+\doxysubsection*{Atributos públicos heredados de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator}{metaheuristics.\+generators.\+Generator}}}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a3c0145210385b6257c8fc20cac1f830a}{count\+Gender}}
+\item 
+int \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a43815f3944c514ba3156b0e68482befa}{count\+Better\+Gender}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+\doxylink{classmetaheuristics_1_1generators_1_1MultiGenerator}{Multi\+Generator} -\/ class that implements the Multi-\/\+Generator metaheuristic. 
+
+Definición en la línea \mbox{\hyperlink{MultiGenerator_8java_source_l00022}{22}} del archivo \mbox{\hyperlink{MultiGenerator_8java_source}{Multi\+Generator.\+java}}.
+
+
+
+\label{doc-constructors}
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiGenerator_doc-constructors}
+\doxysubsection{Documentación de constructores y destructores}
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiGenerator_afce4bffeb9ed07ce3da9aef9af2f3c00}\index{metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}!MultiGenerator@{MultiGenerator}}
+\index{MultiGenerator@{MultiGenerator}!metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}}
+\doxysubsubsection{\texorpdfstring{MultiGenerator()}{MultiGenerator()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiGenerator_afce4bffeb9ed07ce3da9aef9af2f3c00} 
+metaheuristics.\+generators.\+Multi\+Generator.\+Multi\+Generator (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxylink{classmetaheuristics_1_1generators_1_1MultiGenerator}{Multi\+Generator} -\/ default constructor. 
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiGenerator_8java_source_l00042}{42}} del archivo \mbox{\hyperlink{MultiGenerator_8java_source}{Multi\+Generator.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ super();}
+\DoxyCodeLine{00044\ \ \ \ \ this.generatortype\ =\ GeneratorType.MultiGenerator;}
+\DoxyCodeLine{00045\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{GeneratorType_8java_source_l00009}{metaheuristics.\+generators.\+Generator\+Type.\+Multi\+Generator}}.
+
+
+
+Referenciado por \mbox{\hyperlink{MultiGenerator_8java_source_l00468}{clone()}}, \mbox{\hyperlink{MultiGenerator_8java_source_l00213}{generate()}}, \mbox{\hyperlink{MultiGenerator_8java_source_l00090}{initialize\+Generators()}} y \mbox{\hyperlink{MultiGenerator_8java_source_l00455}{tournament()}}.
+
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1MultiGenerator_afce4bffeb9ed07ce3da9aef9af2f3c00_icgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-func-members}
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiGenerator_doc-func-members}
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiGenerator_a71676324d28a05ab7745967c6edf2218}\index{metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}!awardUpdateREF@{awardUpdateREF}}
+\index{awardUpdateREF@{awardUpdateREF}!metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}}
+\doxysubsubsection{\texorpdfstring{awardUpdateREF()}{awardUpdateREF()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiGenerator_a71676324d28a05ab7745967c6edf2218} 
+boolean metaheuristics.\+generators.\+Multi\+Generator.\+award\+Update\+REF (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}}]{state\+Candidate}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+award\+Update\+REF -\/ update the reference of the generator. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em state\+Candidate} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+return true if the reference was updated, false otherwise 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a3513d3953ecc97683f38bcb662b74b9b}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiGenerator_8java_source_l00384}{384}} del archivo \mbox{\hyperlink{MultiGenerator_8java_source}{Multi\+Generator.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00384\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00385\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{00386\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00387\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiGenerator_a80edefbfc3233000dca1ad30cb95f8fc}\index{metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}!clone@{clone}}
+\index{clone@{clone}!metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiGenerator_a80edefbfc3233000dca1ad30cb95f8fc} 
+Object metaheuristics.\+generators.\+Multi\+Generator.\+clone (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+clone -\/ create a copy of the generator. 
+
+\begin{DoxyReturn}{Devuelve}
+a clone of the generator 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{MultiGenerator_8java_source_l00468}{468}} del archivo \mbox{\hyperlink{MultiGenerator_8java_source}{Multi\+Generator.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00468\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00469\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\{}
+\DoxyCodeLine{00470\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ super.clone();}
+\DoxyCodeLine{00471\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (CloneNotSupportedException\ e)\ \{}
+\DoxyCodeLine{00472\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ MultiGenerator();}
+\DoxyCodeLine{00473\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00474\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{MultiGenerator_8java_source_l00042}{Multi\+Generator()}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1MultiGenerator_a80edefbfc3233000dca1ad30cb95f8fc_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiGenerator_a21767d34c374a65dd29196459273ff34}\index{metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}!createInstanceGeneratorsBPP@{createInstanceGeneratorsBPP}}
+\index{createInstanceGeneratorsBPP@{createInstanceGeneratorsBPP}!metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}}
+\doxysubsubsection{\texorpdfstring{createInstanceGeneratorsBPP()}{createInstanceGeneratorsBPP()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiGenerator_a21767d34c374a65dd29196459273ff34} 
+void metaheuristics.\+generators.\+Multi\+Generator.\+create\+Instance\+Generators\+BPP (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+create\+Instance\+Generators\+BPP -\/ create instances of generators for the BPP problem. 
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiGenerator_8java_source_l00129}{129}} del archivo \mbox{\hyperlink{MultiGenerator_8java_source}{Multi\+Generator.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ Generator\ generator\ =\ \textcolor{keyword}{new}\ RandomSearch();}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ j\ =\ 0;}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (j\ <\ EvolutionStrategies.countRef)\{}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ State\ stateCandidate;}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ stateCandidate\ =\ generator.generate(1);}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Strategy.getStrategy().getProblem().Evaluate(stateCandidate);}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ stateCandidate.setNumber(j);}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ stateCandidate.setTypeGenerator(generator.getType());}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ listGeneratedPP.add(stateCandidate);}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (Exception\ e)\ \{}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Log\ exception\ instead\ of\ printing\ stack\ trace\ to\ avoid\ debug\ output\ in\ production}}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ LOGGER.log(Level.SEVERE,\ \textcolor{stringliteral}{"{}Failed\ to\ create\ state\ candidate\ in\ createInstanceGeneratorsBPP"{}},\ e);}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ j++;}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00147\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{EvolutionStrategies_8java_source_l00041}{metaheuristics.\+generators.\+Evolution\+Strategies.\+count\+Ref}}, \mbox{\hyperlink{Problem_8java_source_l00171}{problem.\+definition.\+Problem.\+Evaluate()}}, \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a06f6f7622b9ce32590eadbdf6bf962b5}{metaheuristics.\+generators.\+Generator.\+generate()}}, \mbox{\hyperlink{Strategy_8java_source_l00405}{metaheurictics.\+strategy.\+Strategy.\+get\+Problem()}}, \mbox{\hyperlink{Strategy_8java_source_l00080}{metaheurictics.\+strategy.\+Strategy.\+get\+Strategy()}}, \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a5a123306b43c42d28cd1d6e17f8067a5}{metaheuristics.\+generators.\+Generator.\+get\+Type()}}, \mbox{\hyperlink{MultiGenerator_8java_source_l00026}{list\+Generated\+PP}}, \mbox{\hyperlink{MultiGenerator_8java_source_l00029}{LOGGER}}, \mbox{\hyperlink{State_8java_source_l00130}{problem.\+definition.\+State.\+set\+Number()}} y \mbox{\hyperlink{State_8java_source_l00094}{problem.\+definition.\+State.\+set\+Type\+Generator()}}.
+
+
+
+Referenciado por \mbox{\hyperlink{MultiGenerator_8java_source_l00090}{initialize\+Generators()}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1MultiGenerator_a21767d34c374a65dd29196459273ff34_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1MultiGenerator_a21767d34c374a65dd29196459273ff34_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiGenerator_adecd56fa947c1c392c1739d1bf18b6fd}\index{metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}!destroyMultiGenerator@{destroyMultiGenerator}}
+\index{destroyMultiGenerator@{destroyMultiGenerator}!metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}}
+\doxysubsubsection{\texorpdfstring{destroyMultiGenerator()}{destroyMultiGenerator()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiGenerator_adecd56fa947c1c392c1739d1bf18b6fd} 
+void metaheuristics.\+generators.\+Multi\+Generator.\+destroy\+Multi\+Generator (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+destroy\+Multi\+Generator -\/ destroy the \doxylink{classmetaheuristics_1_1generators_1_1MultiGenerator}{Multi\+Generator} instance. 
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiGenerator_8java_source_l00050}{50}} del archivo \mbox{\hyperlink{MultiGenerator_8java_source}{Multi\+Generator.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ listGeneratedPP.clear();}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{comment}{//listGenerators.clear();}}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ listStateReference.clear();}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ activeGenerator\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ listGenerators\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00056\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{MultiGenerator_8java_source_l00027}{active\+Generator}}, \mbox{\hyperlink{MultiGenerator_8java_source_l00026}{list\+Generated\+PP}}, \mbox{\hyperlink{MultiGenerator_8java_source_l00025}{list\+Generators}} y \mbox{\hyperlink{MultiGenerator_8java_source_l00028}{list\+State\+Reference}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiGenerator_a2309ca3d3de82961bbc61d3fb6c893fc}\index{metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}!generate@{generate}}
+\index{generate@{generate}!metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}}
+\doxysubsubsection{\texorpdfstring{generate()}{generate()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiGenerator_a2309ca3d3de82961bbc61d3fb6c893fc} 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} metaheuristics.\+generators.\+Multi\+Generator.\+generate (\begin{DoxyParamCaption}\item[{Integer}]{operatornumber}{}\end{DoxyParamCaption}) throws Illegal\+Argument\+Exception, Security\+Exception,    Class\+Not\+Found\+Exception, Instantiation\+Exception,    Illegal\+Access\+Exception, Invocation\+Target\+Exception,    No\+Such\+Method\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+generate -\/ generate a new state using the \doxylink{classmetaheuristics_1_1generators_1_1MultiGenerator}{Multi\+Generator}. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em operatornumber} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em Illegal\+Argument\+Exception} & \\
+\hline
+{\em Security\+Exception} & \\
+\hline
+{\em Class\+Not\+Found\+Exception} & \\
+\hline
+{\em Instantiation\+Exception} & \\
+\hline
+{\em Illegal\+Access\+Exception} & \\
+\hline
+{\em Invocation\+Target\+Exception} & \\
+\hline
+{\em No\+Such\+Method\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a06f6f7622b9ce32590eadbdf6bf962b5}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiGenerator_8java_source_l00213}{213}} del archivo \mbox{\hyperlink{MultiGenerator_8java_source}{Multi\+Generator.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00218\ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{00219\ \ \ \ \ Strategy.getStrategy().generator\ =\ roulette();}
+\DoxyCodeLine{00220\ \ \ \ \ MultiGenerator.setActiveGenerator(Strategy.getStrategy().generator);}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ activeGenerator.countGender++;}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ State\ state\ =\ Strategy.getStrategy().generator.generate(1);}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ state;}
+\DoxyCodeLine{00224\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{MultiGenerator_8java_source_l00027}{active\+Generator}}, \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a06f6f7622b9ce32590eadbdf6bf962b5}{metaheuristics.\+generators.\+Generator.\+generate()}}, \mbox{\hyperlink{Strategy_8java_source_l00044}{metaheurictics.\+strategy.\+Strategy.\+generator}}, \mbox{\hyperlink{Strategy_8java_source_l00080}{metaheurictics.\+strategy.\+Strategy.\+get\+Strategy()}}, \mbox{\hyperlink{MultiGenerator_8java_source_l00042}{Multi\+Generator()}} y \mbox{\hyperlink{MultiGenerator_8java_source_l00337}{roulette()}}.
+
+
+
+Referenciado por \mbox{\hyperlink{Strategy_8java_source_l00094}{metaheurictics.\+strategy.\+Strategy.\+execute\+Strategy()}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1MultiGenerator_a2309ca3d3de82961bbc61d3fb6c893fc_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1MultiGenerator_a2309ca3d3de82961bbc61d3fb6c893fc_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiGenerator_abd14738b7100c980010e1385f622a038}\index{metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}!getActiveGenerator@{getActiveGenerator}}
+\index{getActiveGenerator@{getActiveGenerator}!metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}}
+\doxysubsubsection{\texorpdfstring{getActiveGenerator()}{getActiveGenerator()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiGenerator_abd14738b7100c980010e1385f622a038} 
+\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator}{Generator}} metaheuristics.\+generators.\+Multi\+Generator.\+get\+Active\+Generator (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+get\+Active\+Generator -\/ get the active generator. 
+
+\begin{DoxyReturn}{Devuelve}
+the active generator 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{MultiGenerator_8java_source_l00177}{177}} del archivo \mbox{\hyperlink{MultiGenerator_8java_source}{Multi\+Generator.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ activeGenerator;}
+\DoxyCodeLine{00179\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{MultiGenerator_8java_source_l00027}{active\+Generator}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiGenerator_ae534f33ba876de6d56d22f3889b8b666}\index{metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}!getListCountBetterGender@{getListCountBetterGender}}
+\index{getListCountBetterGender@{getListCountBetterGender}!metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}}
+\doxysubsubsection{\texorpdfstring{getListCountBetterGender()}{getListCountBetterGender()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiGenerator_ae534f33ba876de6d56d22f3889b8b666} 
+int\mbox{[}$\,$\mbox{]} metaheuristics.\+generators.\+Multi\+Generator.\+get\+List\+Count\+Better\+Gender (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+List\+Count\+Better\+Gender -\/ get the list of counts for better gender. 
+
+\begin{DoxyReturn}{Devuelve}
+the list of counts for better gender 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_ac5bace71f51c16b611ede3ed53263473}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiGenerator_8java_source_l00481}{481}} del archivo \mbox{\hyperlink{MultiGenerator_8java_source}{Multi\+Generator.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00481\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00482\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{00483\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ MultiGenerator\ does\ not\ maintain\ these\ arrays\ itself;\ return\ empty\ array\ to\ avoid\ nulls}}
+\DoxyCodeLine{00484\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[0];}
+\DoxyCodeLine{00485\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiGenerator_af7574c27e8798f241a9f683721a8a6b5}\index{metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}!getListCountGender@{getListCountGender}}
+\index{getListCountGender@{getListCountGender}!metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}}
+\doxysubsubsection{\texorpdfstring{getListCountGender()}{getListCountGender()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiGenerator_af7574c27e8798f241a9f683721a8a6b5} 
+int\mbox{[}$\,$\mbox{]} metaheuristics.\+generators.\+Multi\+Generator.\+get\+List\+Count\+Gender (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+List\+Count\+Gender -\/ get the list of counts for gender. 
+
+\begin{DoxyReturn}{Devuelve}
+the list of counts for gender 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_ac5d6d45ee8017fb87d80aa952edfc34e}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiGenerator_8java_source_l00492}{492}} del archivo \mbox{\hyperlink{MultiGenerator_8java_source}{Multi\+Generator.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00492\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00493\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{00494\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ MultiGenerator\ does\ not\ maintain\ these\ arrays\ itself;\ return\ empty\ array\ to\ avoid\ nulls}}
+\DoxyCodeLine{00495\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[0];}
+\DoxyCodeLine{00496\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiGenerator_ae0f20594827a2bd2a4c1687e665a2b7b}\index{metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}!getListGeneratedPP@{getListGeneratedPP}}
+\index{getListGeneratedPP@{getListGeneratedPP}!metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}}
+\doxysubsubsection{\texorpdfstring{getListGeneratedPP()}{getListGeneratedPP()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiGenerator_ae0f20594827a2bd2a4c1687e665a2b7b} 
+List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ metaheuristics.\+generators.\+Multi\+Generator.\+get\+List\+Generated\+PP (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+get\+List\+Generated\+PP -\/ get the list of generated states for the PP problem. 
+
+\begin{DoxyReturn}{Devuelve}
+the list of generated states 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{MultiGenerator_8java_source_l00153}{153}} del archivo \mbox{\hyperlink{MultiGenerator_8java_source}{Multi\+Generator.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ listGeneratedPP;}
+\DoxyCodeLine{00155\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{MultiGenerator_8java_source_l00026}{list\+Generated\+PP}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiGenerator_ab331905baebb433340e05d19e174340b}\index{metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}!getListGenerators@{getListGenerators}}
+\index{getListGenerators@{getListGenerators}!metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}}
+\doxysubsubsection{\texorpdfstring{getListGenerators()}{getListGenerators()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiGenerator_ab331905baebb433340e05d19e174340b} 
+\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator}{Generator}}\mbox{[}$\,$\mbox{]} metaheuristics.\+generators.\+Multi\+Generator.\+get\+List\+Generators (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+get\+List\+Generators -\/ get the list of generators. 
+
+\begin{DoxyReturn}{Devuelve}
+the list of generators 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{MultiGenerator_8java_source_l00161}{161}} del archivo \mbox{\hyperlink{MultiGenerator_8java_source}{Multi\+Generator.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ return\ a\ defensive\ copy\ to\ avoid\ exposing\ internal\ static\ array}}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (listGenerators\ ==\ \textcolor{keyword}{null})\ ?\ null\ :\ Arrays.copyOf(listGenerators,\ listGenerators.length);}
+\DoxyCodeLine{00164\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{MultiGenerator_8java_source_l00025}{list\+Generators}}.
+
+
+
+Referenciado por \mbox{\hyperlink{InstanceDE_8java_source_l00021}{metaheuristics.\+generators.\+Instance\+DE.\+run()}}, \mbox{\hyperlink{InstanceEE_8java_source_l00019}{metaheuristics.\+generators.\+Instance\+EE.\+run()}}, \mbox{\hyperlink{InstanceGA_8java_source_l00021}{metaheuristics.\+generators.\+Instance\+GA.\+run()}}, \mbox{\hyperlink{Strategy_8java_source_l00284}{metaheurictics.\+strategy.\+Strategy.\+update\+Count\+Gender()}}, \mbox{\hyperlink{Strategy_8java_source_l00531}{metaheurictics.\+strategy.\+Strategy.\+update\+Ref\+Multi\+G()}} y \mbox{\hyperlink{Strategy_8java_source_l00298}{metaheurictics.\+strategy.\+Strategy.\+update\+Weight()}}.
+
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1MultiGenerator_ab331905baebb433340e05d19e174340b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiGenerator_a7364417b4356561cfb7656fb9818cc5d}\index{metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}!getReference@{getReference}}
+\index{getReference@{getReference}!metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}}
+\doxysubsubsection{\texorpdfstring{getReference()}{getReference()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiGenerator_a7364417b4356561cfb7656fb9818cc5d} 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} metaheuristics.\+generators.\+Multi\+Generator.\+get\+Reference (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Reference -\/ get the reference state. 
+
+\begin{DoxyReturn}{Devuelve}
+the reference state 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_aa56dd45a45776f6023b9f74179cc6384}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiGenerator_8java_source_l00231}{231}} del archivo \mbox{\hyperlink{MultiGenerator_8java_source}{Multi\+Generator.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00234\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiGenerator_a7e6b4c2a4a6ef326d191a2da93f97d67}\index{metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}!getReferenceList@{getReferenceList}}
+\index{getReferenceList@{getReferenceList}!metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}}
+\doxysubsubsection{\texorpdfstring{getReferenceList()}{getReferenceList()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiGenerator_a7e6b4c2a4a6ef326d191a2da93f97d67} 
+List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ metaheuristics.\+generators.\+Multi\+Generator.\+get\+Reference\+List (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Reference\+List -\/ get the list of reference states. 
+
+\begin{DoxyReturn}{Devuelve}
+the list of reference states 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_ae168237b306de55fe4d6dfda75c7cd13}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiGenerator_8java_source_l00241}{241}} del archivo \mbox{\hyperlink{MultiGenerator_8java_source}{Multi\+Generator.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ listStateReference;}
+\DoxyCodeLine{00244\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{MultiGenerator_8java_source_l00028}{list\+State\+Reference}}.
+
+
+
+Referenciado por \mbox{\hyperlink{Strategy_8java_source_l00094}{metaheurictics.\+strategy.\+Strategy.\+execute\+Strategy()}}.
+
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1MultiGenerator_a7e6b4c2a4a6ef326d191a2da93f97d67_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiGenerator_aa68b7cbbd70430924ebf582279ceeb8a}\index{metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}!getSonList@{getSonList}}
+\index{getSonList@{getSonList}!metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}}
+\doxysubsubsection{\texorpdfstring{getSonList()}{getSonList()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiGenerator_aa68b7cbbd70430924ebf582279ceeb8a} 
+List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ metaheuristics.\+generators.\+Multi\+Generator.\+get\+Son\+List (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Son\+List -\/ get the list of son states. 
+
+\begin{DoxyReturn}{Devuelve}
+the list of son states 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_aee09d724c1b3040e7a7ad0b64e341c96}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiGenerator_8java_source_l00251}{251}} del archivo \mbox{\hyperlink{MultiGenerator_8java_source}{Multi\+Generator.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00254\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiGenerator_aa4acb9d61c196f56a0bde7d0a624f3fb}\index{metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}!getTrace@{getTrace}}
+\index{getTrace@{getTrace}!metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}}
+\doxysubsubsection{\texorpdfstring{getTrace()}{getTrace()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiGenerator_aa4acb9d61c196f56a0bde7d0a624f3fb} 
+float\mbox{[}$\,$\mbox{]} metaheuristics.\+generators.\+Multi\+Generator.\+get\+Trace (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Trace -\/ get the trace of the generator. 
+
+\begin{DoxyReturn}{Devuelve}
+the trace array 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a75d7f30dd2cb3f92475db8525ac7c6e7}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiGenerator_8java_source_l00443}{443}} del archivo \mbox{\hyperlink{MultiGenerator_8java_source}{Multi\+Generator.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00443\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00444\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{00445\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ MultiGenerator\ does\ not\ maintain\ a\ single\ trace\ array;\ return\ empty\ array\ to\ avoid\ nulls}}
+\DoxyCodeLine{00446\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{float}[0];}
+\DoxyCodeLine{00447\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiGenerator_a3c29946186ba7afb379169ed3636004f}\index{metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}!getType@{getType}}
+\index{getType@{getType}!metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiGenerator_a3c29946186ba7afb379169ed3636004f} 
+\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{Generator\+Type}} metaheuristics.\+generators.\+Multi\+Generator.\+get\+Type (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Type -\/ get the type of the generator. 
+
+\begin{DoxyReturn}{Devuelve}
+the type of the generator 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a5a123306b43c42d28cd1d6e17f8067a5}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiGenerator_8java_source_l00261}{261}} del archivo \mbox{\hyperlink{MultiGenerator_8java_source}{Multi\+Generator.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this.generatortype;}
+\DoxyCodeLine{00263\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referenciado por \mbox{\hyperlink{MultiGenerator_8java_source_l00090}{initialize\+Generators()}}, \mbox{\hyperlink{MultiGenerator_8java_source_l00455}{tournament()}}, \mbox{\hyperlink{MultiGenerator_8java_source_l00413}{update\+Award\+Imp()}} y \mbox{\hyperlink{MultiGenerator_8java_source_l00393}{update\+Award\+SC()}}.
+
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1MultiGenerator_a3c29946186ba7afb379169ed3636004f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiGenerator_a625ff0e6cad7bfefeaeb4ec8a28a71d3}\index{metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}!getWeight@{getWeight}}
+\index{getWeight@{getWeight}!metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}}
+\doxysubsubsection{\texorpdfstring{getWeight()}{getWeight()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiGenerator_a625ff0e6cad7bfefeaeb4ec8a28a71d3} 
+float metaheuristics.\+generators.\+Multi\+Generator.\+get\+Weight (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Weight -\/ get the weight of the generator. 
+
+\begin{DoxyReturn}{Devuelve}
+the weight of the generator 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a64f2b824081c7af593bf9aa8eabf2c9e}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiGenerator_8java_source_l00328}{328}} del archivo \mbox{\hyperlink{MultiGenerator_8java_source}{Multi\+Generator.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00328\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00329\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{00330\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00331\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiGenerator_ada4833a51b39d1372e2c050448bbab6c}\index{metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}!initializeGenerators@{initializeGenerators}}
+\index{initializeGenerators@{initializeGenerators}!metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}}
+\doxysubsubsection{\texorpdfstring{initializeGenerators()}{initializeGenerators()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiGenerator_ada4833a51b39d1372e2c050448bbab6c} 
+void metaheuristics.\+generators.\+Multi\+Generator.\+initialize\+Generators (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) throws Illegal\+Argument\+Exception, Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception, Illegal\+Access\+Exception, Invocation\+Target\+Exception, No\+Such\+Method\+Exception\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\begin{DoxyVerb}initializeGenerators - initialize the generators.
+\end{DoxyVerb}
+ 
+\begin{DoxyExceptions}{Excepciones}
+{\em Illegal\+Argument\+Exception} & \\
+\hline
+{\em Security\+Exception} & \\
+\hline
+{\em Class\+Not\+Found\+Exception} & \\
+\hline
+{\em Instantiation\+Exception} & \\
+\hline
+{\em Illegal\+Access\+Exception} & \\
+\hline
+{\em Invocation\+Target\+Exception} & \\
+\hline
+{\em No\+Such\+Method\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definición en la línea \mbox{\hyperlink{MultiGenerator_8java_source_l00090}{90}} del archivo \mbox{\hyperlink{MultiGenerator_8java_source}{Multi\+Generator.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ initializeListGenerator();}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ State\ stateREF\ =\ \textcolor{keyword}{new}\ State(Strategy.getStrategy().getProblem().getState());}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ listStateReference.add(stateREF);}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ listGenerators.length;\ i++)\ \{}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((listGenerators[i].getType().equals(GeneratorType.HillClimbing))\ ||\ (listGenerators[i].getType().equals(GeneratorType.RandomSearch))\ ||\ (listGenerators[i].getType().equals(GeneratorType.TabuSearch))\ ||\ (listGenerators[i].getType().equals(GeneratorType.SimulatedAnnealing)\ ||\ (listGenerators[i].getType().equals(GeneratorType.LimitThreshold))))\{}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ listGenerators[i].setInitialReference(stateREF);}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ createInstanceGeneratorsBPP();}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ Strategy.getStrategy().listStates\ =\ MultiGenerator.getListGeneratedPP();}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ FactoryGenerator\ ifFactoryGeneratorEE\ =\ \textcolor{keyword}{new}\ FactoryGenerator();}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ Generator\ generatorEE\ =\ ifFactoryGeneratorEE.createGenerator(GeneratorType.EvolutionStrategies);}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ FactoryGenerator\ ifFactoryGeneratorGA\ =\ \textcolor{keyword}{new}\ FactoryGenerator();}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ Generator\ generatorGA\ =\ ifFactoryGeneratorGA.createGenerator(GeneratorType.GeneticAlgorithm);}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ FactoryGenerator\ ifFactoryGeneratorEDA\ =\ \textcolor{keyword}{new}\ FactoryGenerator();}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ Generator\ generatorEDA\ =\ ifFactoryGeneratorEDA.createGenerator(GeneratorType.DistributionEstimationAlgorithm);}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ MultiGenerator.getListGenerators().length;\ i++)\ \{}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(MultiGenerator.getListGenerators()[i].getType().equals(GeneratorType.EvolutionStrategies))\{}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MultiGenerator.getListGenerators()[i]\ =\ generatorEE;}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(MultiGenerator.getListGenerators()[i].getType().equals(GeneratorType.GeneticAlgorithm))\{}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MultiGenerator.getListGenerators()[i]\ =\ generatorGA;}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(MultiGenerator.getListGenerators()[i].getType().equals(GeneratorType.DistributionEstimationAlgorithm))\{}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MultiGenerator.getListGenerators()[i]\ =\ generatorEDA;}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00123\ \ \ \ \ }
+\DoxyCodeLine{00124\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{FactoryGenerator_8java_source_l00025}{factory\+\_\+method.\+Factory\+Generator.\+create\+Generator()}}, \mbox{\hyperlink{MultiGenerator_8java_source_l00129}{create\+Instance\+Generators\+BPP()}}, \mbox{\hyperlink{GeneratorType_8java_source_l00008}{metaheuristics.\+generators.\+Generator\+Type.\+Distribution\+Estimation\+Algorithm}}, \mbox{\hyperlink{GeneratorType_8java_source_l00008}{metaheuristics.\+generators.\+Generator\+Type.\+Evolution\+Strategies}}, \mbox{\hyperlink{GeneratorType_8java_source_l00008}{metaheuristics.\+generators.\+Generator\+Type.\+Genetic\+Algorithm}}, \mbox{\hyperlink{Strategy_8java_source_l00405}{metaheurictics.\+strategy.\+Strategy.\+get\+Problem()}}, \mbox{\hyperlink{Problem_8java_source_l00079}{problem.\+definition.\+Problem.\+get\+State()}}, \mbox{\hyperlink{Strategy_8java_source_l00080}{metaheurictics.\+strategy.\+Strategy.\+get\+Strategy()}}, \mbox{\hyperlink{MultiGenerator_8java_source_l00261}{get\+Type()}}, \mbox{\hyperlink{GeneratorType_8java_source_l00007}{metaheuristics.\+generators.\+Generator\+Type.\+Hill\+Climbing}}, \mbox{\hyperlink{MultiGenerator_8java_source_l00068}{initialize\+List\+Generator()}}, \mbox{\hyperlink{GeneratorType_8java_source_l00007}{metaheuristics.\+generators.\+Generator\+Type.\+Limit\+Threshold}}, \mbox{\hyperlink{MultiGenerator_8java_source_l00025}{list\+Generators}}, \mbox{\hyperlink{MultiGenerator_8java_source_l00028}{list\+State\+Reference}}, \mbox{\hyperlink{Strategy_8java_source_l00047}{metaheurictics.\+strategy.\+Strategy.\+list\+States}}, \mbox{\hyperlink{MultiGenerator_8java_source_l00042}{Multi\+Generator()}}, \mbox{\hyperlink{GeneratorType_8java_source_l00007}{metaheuristics.\+generators.\+Generator\+Type.\+Random\+Search}}, \mbox{\hyperlink{GeneratorType_8java_source_l00007}{metaheuristics.\+generators.\+Generator\+Type.\+Simulated\+Annealing}} y \mbox{\hyperlink{GeneratorType_8java_source_l00007}{metaheuristics.\+generators.\+Generator\+Type.\+Tabu\+Search}}.
+
+
+
+Referenciado por \mbox{\hyperlink{Strategy_8java_source_l00094}{metaheurictics.\+strategy.\+Strategy.\+execute\+Strategy()}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1MultiGenerator_ada4833a51b39d1372e2c050448bbab6c_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1MultiGenerator_ada4833a51b39d1372e2c050448bbab6c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiGenerator_a2a25df332708a340f5115fe7ea253053}\index{metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}!initializeListGenerator@{initializeListGenerator}}
+\index{initializeListGenerator@{initializeListGenerator}!metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}}
+\doxysubsubsection{\texorpdfstring{initializeListGenerator()}{initializeListGenerator()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiGenerator_a2a25df332708a340f5115fe7ea253053} 
+void metaheuristics.\+generators.\+Multi\+Generator.\+initialize\+List\+Generator (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) throws Illegal\+Argument\+Exception, Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception, Illegal\+Access\+Exception, Invocation\+Target\+Exception, No\+Such\+Method\+Exception\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+initialize\+List\+Generator -\/ initialize the list of generators. 
+
+
+\begin{DoxyExceptions}{Excepciones}
+{\em Illegal\+Argument\+Exception} & \\
+\hline
+{\em Security\+Exception} & \\
+\hline
+{\em Class\+Not\+Found\+Exception} & \\
+\hline
+{\em Instantiation\+Exception} & \\
+\hline
+{\em Illegal\+Access\+Exception} & \\
+\hline
+{\em Invocation\+Target\+Exception} & \\
+\hline
+{\em No\+Such\+Method\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definición en la línea \mbox{\hyperlink{MultiGenerator_8java_source_l00068}{68}} del archivo \mbox{\hyperlink{MultiGenerator_8java_source}{Multi\+Generator.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ listGenerators\ =\ \textcolor{keyword}{new}\ Generator[4];}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ Generator\ generator1\ =\ \textcolor{keyword}{new}\ HillClimbing();}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ Generator\ generator2\ =\ \textcolor{keyword}{new}\ EvolutionStrategies();}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ Generator\ generator3\ =\ \textcolor{keyword}{new}\ LimitThreshold();}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ Generator\ generator4\ =\ \textcolor{keyword}{new}\ GeneticAlgorithm();}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ listGenerators[0]\ =\ generator1;}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ listGenerators[1]\ =\ generator2;}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ listGenerators[2]\ =\ generator3;}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ listGenerators[3]\ =\ generator4;}
+\DoxyCodeLine{00078\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{MultiGenerator_8java_source_l00025}{list\+Generators}}.
+
+
+
+Referenciado por \mbox{\hyperlink{MultiGenerator_8java_source_l00090}{initialize\+Generators()}}.
+
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1MultiGenerator_a2a25df332708a340f5115fe7ea253053_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiGenerator_a2c2b5c6dc19e52e87a1a0b2151fa9768}\index{metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}!roulette@{roulette}}
+\index{roulette@{roulette}!metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}}
+\doxysubsubsection{\texorpdfstring{roulette()}{roulette()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiGenerator_a2c2b5c6dc19e52e87a1a0b2151fa9768} 
+\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator}{Generator}} metaheuristics.\+generators.\+Multi\+Generator.\+roulette (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+roulette -\/ select a generator using roulette wheel selection. 
+
+\begin{DoxyReturn}{Devuelve}
+the selected generator 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{MultiGenerator_8java_source_l00337}{337}} del archivo \mbox{\hyperlink{MultiGenerator_8java_source}{Multi\+Generator.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00337\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00338\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ totalWeight\ =\ 0;}
+\DoxyCodeLine{00339\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ listGenerators.length;\ i++)\ \{}
+\DoxyCodeLine{00340\ \ \ \ \ \ \ \ \ \ \ \ \ totalWeight\ =\ listGenerators[i].getWeight()\ +\ totalWeight;}
+\DoxyCodeLine{00341\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00342\ \ \ \ \ \ \ \ \ List<Float>\ listProb\ =\ \textcolor{keyword}{new}\ ArrayList<Float>();}
+\DoxyCodeLine{00343\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ listGenerators.length;\ i++)\ \{}
+\DoxyCodeLine{00344\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ probF\ =\ listGenerators[i].getWeight()\ /\ totalWeight;}
+\DoxyCodeLine{00345\ \ \ \ \ \ \ \ \ \ \ \ \ listProb.add(probF);}
+\DoxyCodeLine{00346\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00347\ \ \ \ \ \ \ \ \ List<LimitRoulette>\ listLimit\ =\ \textcolor{keyword}{new}\ ArrayList<LimitRoulette>();}
+\DoxyCodeLine{00348\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ limitHigh\ =\ 0;}
+\DoxyCodeLine{00349\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ limitLow\ =\ 0;}
+\DoxyCodeLine{00350\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ listProb.size();\ i++)\ \{}
+\DoxyCodeLine{00351\ \ \ \ \ \ \ \ \ \ \ \ \ LimitRoulette\ limitRoulette\ =\ \textcolor{keyword}{new}\ LimitRoulette();}
+\DoxyCodeLine{00352\ \ \ \ \ \ \ \ \ \ \ \ \ limitHigh\ =\ listProb.get(i)\ +\ limitHigh;}
+\DoxyCodeLine{00353\ \ \ \ \ \ \ \ \ \ \ \ \ limitRoulette.setLimitHigh(limitHigh);}
+\DoxyCodeLine{00354\ \ \ \ \ \ \ \ \ \ \ \ \ limitRoulette.setLimitLow(limitLow);}
+\DoxyCodeLine{00355\ \ \ \ \ \ \ \ \ \ \ \ \ limitLow\ =\ limitHigh;}
+\DoxyCodeLine{00356\ \ \ \ \ \ \ \ \ \ \ \ \ limitRoulette.setGenerator(listGenerators[i]);}
+\DoxyCodeLine{00357\ \ \ \ \ \ \ \ \ \ \ \ \ listLimit.add(limitRoulette);}
+\DoxyCodeLine{00358\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00359\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Uses\ ThreadLocalRandom\ for\ algorithmic\ (non-\/cryptographic)\ randomness.}}
+\DoxyCodeLine{00360\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ This\ RNG\ chooses\ a\ generator\ according\ to\ roulette\ weights\ and\ is\ not}}
+\DoxyCodeLine{00361\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ used\ for\ security-\/sensitive\ purposes.\ Suppress\ Sonar\ hotspot\ S2245.}}
+\DoxyCodeLine{00362\ \ \ \ \ \ \ \ \ @SuppressWarnings(\textcolor{stringliteral}{"{}squid:S2245"{}})}
+\DoxyCodeLine{00363\ \ \ \ \ \ \ \ \ float\ numbAleatory\ =\ ThreadLocalRandom.current().nextFloat();}
+\DoxyCodeLine{00364\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{boolean}\ find\ =\ false;}
+\DoxyCodeLine{00365\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ i\ =\ 0;}
+\DoxyCodeLine{00366\ \ \ \ \ \ \ \ \ while\ ((find\ ==\ false)\ \&\&\ (i\ <\ listLimit.size()))\{}
+\DoxyCodeLine{00367\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}((listLimit.get(i).getLimitLow()\ <=\ numbAleatory)\ \&\&\ (numbAleatory\ <=\ listLimit.get(i).getLimitHigh()))\{}
+\DoxyCodeLine{00368\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ find\ =\ true;}
+\DoxyCodeLine{00369\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00370\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ i++;}
+\DoxyCodeLine{00371\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00372\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (find)\ \{}
+\DoxyCodeLine{00373\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ listLimit.get(i).getGenerator();}
+\DoxyCodeLine{00374\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00375\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{return}\ listLimit.get(listLimit.size()\ -\/\ 1).getGenerator();}
+\DoxyCodeLine{00376\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{MultiGenerator_8java_source_l00025}{list\+Generators}}, \mbox{\hyperlink{LimitRoulette_8java_source_l00023}{metaheuristics.\+generators.\+Limit\+Roulette.\+set\+Generator()}}, \mbox{\hyperlink{LimitRoulette_8java_source_l00037}{metaheuristics.\+generators.\+Limit\+Roulette.\+set\+Limit\+High()}} y \mbox{\hyperlink{LimitRoulette_8java_source_l00051}{metaheuristics.\+generators.\+Limit\+Roulette.\+set\+Limit\+Low()}}.
+
+
+
+Referenciado por \mbox{\hyperlink{MultiGenerator_8java_source_l00213}{generate()}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1MultiGenerator_a2c2b5c6dc19e52e87a1a0b2151fa9768_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1MultiGenerator_a2c2b5c6dc19e52e87a1a0b2151fa9768_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiGenerator_afef1d16b774c4e86135d2fc38d0dbed7}\index{metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}!searchState@{searchState}}
+\index{searchState@{searchState}!metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}}
+\doxysubsubsection{\texorpdfstring{searchState()}{searchState()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiGenerator_afef1d16b774c4e86135d2fc38d0dbed7} 
+boolean metaheuristics.\+generators.\+Multi\+Generator.\+search\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}}]{state\+Candidate}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+search\+State -\/ search for a state in the reference list. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em state\+Candidate} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+return true if the state is found, false otherwise 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{MultiGenerator_8java_source_l00302}{302}} del archivo \mbox{\hyperlink{MultiGenerator_8java_source}{Multi\+Generator.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00303\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(Strategy.getStrategy().getProblem().getTypeProblem().equals(ProblemType.Maximizar))\{}
+\DoxyCodeLine{00304\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(stateCandidate.getEvaluation().get(0)\ >\ Strategy.getStrategy().getBestState().getEvaluation().get(0))\{}
+\DoxyCodeLine{00305\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(stateCandidate.getEvaluation().get(0)\ >\ Strategy.getStrategy().getBestState().getEvaluation().get(0))}
+\DoxyCodeLine{00306\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ activeGenerator.countBetterGender++;}
+\DoxyCodeLine{00307\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00308\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00309\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00310\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00311\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00312\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(stateCandidate.getEvaluation().get(0)\ <\ Strategy.getStrategy().getBestState().getEvaluation().get(0))\{}
+\DoxyCodeLine{00313\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(stateCandidate.getEvaluation().get(0)\ <\ Strategy.getStrategy().getBestState().getEvaluation().get(0))}
+\DoxyCodeLine{00314\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ activeGenerator.countBetterGender++;}
+\DoxyCodeLine{00315\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00316\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00317\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00318\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00319\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00320\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00321\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{MultiGenerator_8java_source_l00027}{active\+Generator}}, \mbox{\hyperlink{Strategy_8java_source_l00342}{metaheurictics.\+strategy.\+Strategy.\+get\+Best\+State()}}, \mbox{\hyperlink{State_8java_source_l00104}{problem.\+definition.\+State.\+get\+Evaluation()}}, \mbox{\hyperlink{Strategy_8java_source_l00405}{metaheurictics.\+strategy.\+Strategy.\+get\+Problem()}}, \mbox{\hyperlink{Strategy_8java_source_l00080}{metaheurictics.\+strategy.\+Strategy.\+get\+Strategy()}}, \mbox{\hyperlink{Problem_8java_source_l00097}{problem.\+definition.\+Problem.\+get\+Type\+Problem()}} y \mbox{\hyperlink{Problem_8java_source_l00029}{problem.\+definition.\+Problem.\+Problem\+Type.\+Maximizar}}.
+
+
+
+Referenciado por \mbox{\hyperlink{MultiGenerator_8java_source_l00290}{update\+Weight()}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1MultiGenerator_afef1d16b774c4e86135d2fc38d0dbed7_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1MultiGenerator_afef1d16b774c4e86135d2fc38d0dbed7_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiGenerator_ae3af87d1077fa62c7aea5f0c318afe5d}\index{metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}!setActiveGenerator@{setActiveGenerator}}
+\index{setActiveGenerator@{setActiveGenerator}!metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}}
+\doxysubsubsection{\texorpdfstring{setActiveGenerator()}{setActiveGenerator()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiGenerator_ae3af87d1077fa62c7aea5f0c318afe5d} 
+void metaheuristics.\+generators.\+Multi\+Generator.\+set\+Active\+Generator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator}{Generator}}}]{active\+Generator}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+set\+Active\+Generator -\/ set the active generator. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em active\+Generator} & the active generator to set \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{MultiGenerator_8java_source_l00184}{184}} del archivo \mbox{\hyperlink{MultiGenerator_8java_source}{Multi\+Generator.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ MultiGenerator.activeGenerator\ =\ activeGenerator;}
+\DoxyCodeLine{00186\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{MultiGenerator_8java_source_l00027}{active\+Generator}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiGenerator_a0a930ae2c14a24ea8ec99461900b7bc0}\index{metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}!setGeneratorType@{setGeneratorType}}
+\index{setGeneratorType@{setGeneratorType}!metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}}
+\doxysubsubsection{\texorpdfstring{setGeneratorType()}{setGeneratorType()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiGenerator_a0a930ae2c14a24ea8ec99461900b7bc0} 
+void metaheuristics.\+generators.\+Multi\+Generator.\+set\+Generator\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{Generator\+Type}}}]{generatortype}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+set\+Generator\+Type -\/ set the type of the generator. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em generatortype} & the type of the generator to set \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{MultiGenerator_8java_source_l00035}{35}} del archivo \mbox{\hyperlink{MultiGenerator_8java_source}{Multi\+Generator.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ this.generatortype\ =\ generatortype;}
+\DoxyCodeLine{00037\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{MultiGenerator_8java_source_l00024}{generatortype}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiGenerator_abfbc81c6f1a46e6a23e1a7f3f550e9f6}\index{metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}!setInitialReference@{setInitialReference}}
+\index{setInitialReference@{setInitialReference}!metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}}
+\doxysubsubsection{\texorpdfstring{setInitialReference()}{setInitialReference()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiGenerator_abfbc81c6f1a46e6a23e1a7f3f550e9f6} 
+void metaheuristics.\+generators.\+Multi\+Generator.\+set\+Initial\+Reference (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}}]{state\+Initial\+Ref}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+set\+Initial\+Reference -\/ set the initial reference state. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em state\+Initial\+Ref} & the initial reference state \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_aa9f7c4c983705f843b8fcc81e4aa8ba4}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiGenerator_8java_source_l00270}{270}} del archivo \mbox{\hyperlink{MultiGenerator_8java_source}{Multi\+Generator.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{00272\ }
+\DoxyCodeLine{00273\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiGenerator_aeb772004a70e987935b593505f290510}\index{metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}!setListGeneratedPP@{setListGeneratedPP}}
+\index{setListGeneratedPP@{setListGeneratedPP}!metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}}
+\doxysubsubsection{\texorpdfstring{setListGeneratedPP()}{setListGeneratedPP()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiGenerator_aeb772004a70e987935b593505f290510} 
+void metaheuristics.\+generators.\+Multi\+Generator.\+set\+List\+Generated\+PP (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$}]{new\+List\+Generated\+PP}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+set\+List\+Generated\+PP -\/ set the list of generated states for the PP problem. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em new\+List\+Generated\+PP} & the new list of generated states \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{MultiGenerator_8java_source_l00191}{191}} del archivo \mbox{\hyperlink{MultiGenerator_8java_source}{Multi\+Generator.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \textcolor{keyword}{synchronized}\ (listGeneratedPP)\ \{}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ listGeneratedPP.clear();}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (newListGeneratedPP\ !=\ \textcolor{keyword}{null})\ \{}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ listGeneratedPP.addAll(newListGeneratedPP);}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00198\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{MultiGenerator_8java_source_l00026}{list\+Generated\+PP}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiGenerator_ada47e6ed9cecafd1895b88ca0b2bd827}\index{metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}!setListGenerators@{setListGenerators}}
+\index{setListGenerators@{setListGenerators}!metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}}
+\doxysubsubsection{\texorpdfstring{setListGenerators()}{setListGenerators()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiGenerator_ada47e6ed9cecafd1895b88ca0b2bd827} 
+void metaheuristics.\+generators.\+Multi\+Generator.\+set\+List\+Generators (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator}{Generator}}\mbox{[}$\,$\mbox{]}}]{list\+Generators}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+set\+List\+Generators -\/ set the list of generators. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em list\+Generators} & the list of generators to set \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{MultiGenerator_8java_source_l00169}{169}} del archivo \mbox{\hyperlink{MultiGenerator_8java_source}{Multi\+Generator.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ store\ a\ defensive\ copy\ to\ avoid\ keeping\ a\ reference\ to\ caller's\ mutable\ array}}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ MultiGenerator.listGenerators\ =\ (listGenerators\ ==\ \textcolor{keyword}{null})\ ?\ \textcolor{keyword}{null}\ :\ Arrays.copyOf(listGenerators,\ listGenerators.length);}
+\DoxyCodeLine{00172\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{MultiGenerator_8java_source_l00025}{list\+Generators}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiGenerator_abb314d2dd0d9a0d283574add841ba6b8}\index{metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}!setWeight@{setWeight}}
+\index{setWeight@{setWeight}!metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}}
+\doxysubsubsection{\texorpdfstring{setWeight()}{setWeight()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiGenerator_abb314d2dd0d9a0d283574add841ba6b8} 
+void metaheuristics.\+generators.\+Multi\+Generator.\+set\+Weight (\begin{DoxyParamCaption}\item[{float}]{weight}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+set\+Weight -\/ set the weight of the generator. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em weight} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a8b3c66b57b4c739666989fbce667eb40}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiGenerator_8java_source_l00434}{434}} del archivo \mbox{\hyperlink{MultiGenerator_8java_source}{Multi\+Generator.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00434\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00435\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{00436\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00437\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiGenerator_a72bc1f2921d0ed9193933d964ba217b9}\index{metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}!tournament@{tournament}}
+\index{tournament@{tournament}!metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}}
+\doxysubsubsection{\texorpdfstring{tournament()}{tournament()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiGenerator_a72bc1f2921d0ed9193933d964ba217b9} 
+void metaheuristics.\+generators.\+Multi\+Generator.\+tournament (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}}]{state\+Candidate}{, }\item[{Integer}]{count\+Iterations\+Current}{}\end{DoxyParamCaption}) throws Illegal\+Argument\+Exception, Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception, Illegal\+Access\+Exception, Invocation\+Target\+Exception, No\+Such\+Method\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+tournament -\/ update the tournament for the selected generator. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em state\+Candidate} & \\
+\hline
+{\em count\+Iterations\+Current} & \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{MultiGenerator_8java_source_l00455}{455}} del archivo \mbox{\hyperlink{MultiGenerator_8java_source}{Multi\+Generator.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00455\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00456\ \ \ \ \ \ \ \ \ State\ stateTem\ =\ \textcolor{keyword}{new}\ State(stateCandidate);}
+\DoxyCodeLine{00457\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ MultiGenerator.getListGenerators().length;\ i++)\ \{}
+\DoxyCodeLine{00458\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!listGenerators[i].getType().equals(GeneratorType.MultiGenerator))}
+\DoxyCodeLine{00459\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MultiGenerator.getListGenerators()[i].updateReference(stateTem,\ countIterationsCurrent);}
+\DoxyCodeLine{00460\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00461\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{MultiGenerator_8java_source_l00261}{get\+Type()}}, \mbox{\hyperlink{MultiGenerator_8java_source_l00025}{list\+Generators}}, \mbox{\hyperlink{GeneratorType_8java_source_l00009}{metaheuristics.\+generators.\+Generator\+Type.\+Multi\+Generator}}, \mbox{\hyperlink{MultiGenerator_8java_source_l00042}{Multi\+Generator()}} y \mbox{\hyperlink{MultiGenerator_8java_source_l00455}{tournament()}}.
+
+
+
+Referenciado por \mbox{\hyperlink{MultiGenerator_8java_source_l00455}{tournament()}} y \mbox{\hyperlink{MultiGenerator_8java_source_l00276}{update\+Reference()}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1MultiGenerator_a72bc1f2921d0ed9193933d964ba217b9_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1MultiGenerator_a72bc1f2921d0ed9193933d964ba217b9_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiGenerator_a9bca4abee16ba939d1aca80ac395a130}\index{metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}!updateAwardImp@{updateAwardImp}}
+\index{updateAwardImp@{updateAwardImp}!metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}}
+\doxysubsubsection{\texorpdfstring{updateAwardImp()}{updateAwardImp()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiGenerator_a9bca4abee16ba939d1aca80ac395a130} 
+void metaheuristics.\+generators.\+Multi\+Generator.\+update\+Award\+Imp (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+update\+Award\+Imp -\/ update the award for the selected generator. 
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiGenerator_8java_source_l00413}{413}} del archivo \mbox{\hyperlink{MultiGenerator_8java_source}{Multi\+Generator.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00413\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00414\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ weightLast\ =\ activeGenerator.getWeight();}
+\DoxyCodeLine{00415\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ weightUpdate\ =\ (float)\ (weightLast\ *\ (1\ -\/\ 0.1));}
+\DoxyCodeLine{00416\ \ \ \ \ \ \ \ \ activeGenerator.setWeight(weightUpdate);}
+\DoxyCodeLine{00417\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ listGenerators.length;\ i++)\ \{}
+\DoxyCodeLine{00418\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(listGenerators[i].equals(activeGenerator))}
+\DoxyCodeLine{00419\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ activeGenerator.getTrace()[Strategy.getStrategy().getCountCurrent()]\ =\ weightUpdate;}
+\DoxyCodeLine{00420\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00421\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!listGenerators[i].getType().equals(GeneratorType.MultiGenerator))\{}
+\DoxyCodeLine{00422\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ trace\ =\ listGenerators[i].getWeight();}
+\DoxyCodeLine{00423\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ listGenerators[i].getTrace()\ [Strategy.getStrategy().getCountCurrent()]\ =\ trace;}
+\DoxyCodeLine{00424\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00425\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00426\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00427\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{MultiGenerator_8java_source_l00027}{active\+Generator}}, \mbox{\hyperlink{Strategy_8java_source_l00471}{metaheurictics.\+strategy.\+Strategy.\+get\+Count\+Current()}}, \mbox{\hyperlink{Strategy_8java_source_l00080}{metaheurictics.\+strategy.\+Strategy.\+get\+Strategy()}}, \mbox{\hyperlink{MultiGenerator_8java_source_l00261}{get\+Type()}}, \mbox{\hyperlink{MultiGenerator_8java_source_l00025}{list\+Generators}}, \mbox{\hyperlink{GeneratorType_8java_source_l00009}{metaheuristics.\+generators.\+Generator\+Type.\+Multi\+Generator}} y \mbox{\hyperlink{MultiGenerator_8java_source_l00413}{update\+Award\+Imp()}}.
+
+
+
+Referenciado por \mbox{\hyperlink{MultiGenerator_8java_source_l00413}{update\+Award\+Imp()}} y \mbox{\hyperlink{MultiGenerator_8java_source_l00290}{update\+Weight()}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1MultiGenerator_a9bca4abee16ba939d1aca80ac395a130_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1MultiGenerator_a9bca4abee16ba939d1aca80ac395a130_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiGenerator_ab3417c34a00f079f67eed485ceeb8f1f}\index{metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}!updateAwardSC@{updateAwardSC}}
+\index{updateAwardSC@{updateAwardSC}!metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}}
+\doxysubsubsection{\texorpdfstring{updateAwardSC()}{updateAwardSC()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiGenerator_ab3417c34a00f079f67eed485ceeb8f1f} 
+void metaheuristics.\+generators.\+Multi\+Generator.\+update\+Award\+SC (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+update\+Award\+SC -\/ update the award for the selected generator. 
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiGenerator_8java_source_l00393}{393}} del archivo \mbox{\hyperlink{MultiGenerator_8java_source}{Multi\+Generator.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00393\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00394\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ weightLast\ =\ activeGenerator.getWeight();}
+\DoxyCodeLine{00395\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ weightUpdate\ =\ (float)\ (weightLast\ *\ (1\ -\/\ 0.1)\ +\ 10);}
+\DoxyCodeLine{00396\ \ \ \ \ \ \ \ \ activeGenerator.setWeight(weightUpdate);}
+\DoxyCodeLine{00397\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ listGenerators.length;\ i++)\ \{}
+\DoxyCodeLine{00398\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(listGenerators[i].equals(activeGenerator))}
+\DoxyCodeLine{00399\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ activeGenerator.getTrace()[Strategy.getStrategy().getCountCurrent()]\ =\ weightUpdate;}
+\DoxyCodeLine{00400\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00401\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!listGenerators[i].getType().equals(GeneratorType.MultiGenerator))\{}
+\DoxyCodeLine{00402\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ trace\ =\ listGenerators[i].getWeight();}
+\DoxyCodeLine{00403\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ listGenerators[i].getTrace()\ [Strategy.getStrategy().getCountCurrent()]\ =\ trace;}
+\DoxyCodeLine{00404\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00405\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00406\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00407\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{MultiGenerator_8java_source_l00027}{active\+Generator}}, \mbox{\hyperlink{Strategy_8java_source_l00471}{metaheurictics.\+strategy.\+Strategy.\+get\+Count\+Current()}}, \mbox{\hyperlink{Strategy_8java_source_l00080}{metaheurictics.\+strategy.\+Strategy.\+get\+Strategy()}}, \mbox{\hyperlink{MultiGenerator_8java_source_l00261}{get\+Type()}}, \mbox{\hyperlink{MultiGenerator_8java_source_l00025}{list\+Generators}}, \mbox{\hyperlink{GeneratorType_8java_source_l00009}{metaheuristics.\+generators.\+Generator\+Type.\+Multi\+Generator}} y \mbox{\hyperlink{MultiGenerator_8java_source_l00393}{update\+Award\+SC()}}.
+
+
+
+Referenciado por \mbox{\hyperlink{MultiGenerator_8java_source_l00393}{update\+Award\+SC()}} y \mbox{\hyperlink{MultiGenerator_8java_source_l00290}{update\+Weight()}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1MultiGenerator_ab3417c34a00f079f67eed485ceeb8f1f_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1MultiGenerator_ab3417c34a00f079f67eed485ceeb8f1f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiGenerator_a4064a096c203ec6b538929af5bd8d0d7}\index{metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}!updateReference@{updateReference}}
+\index{updateReference@{updateReference}!metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}}
+\doxysubsubsection{\texorpdfstring{updateReference()}{updateReference()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiGenerator_a4064a096c203ec6b538929af5bd8d0d7} 
+void metaheuristics.\+generators.\+Multi\+Generator.\+update\+Reference (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}}]{state\+Candidate}{, }\item[{Integer}]{count\+Iterations\+Current}{}\end{DoxyParamCaption}) throws Illegal\+Argument\+Exception,    Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception,    Illegal\+Access\+Exception, Invocation\+Target\+Exception,    No\+Such\+Method\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_aa1c5878953f2111221b21cb9b1e6cc9f}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiGenerator_8java_source_l00276}{276}} del archivo \mbox{\hyperlink{MultiGenerator_8java_source}{Multi\+Generator.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00281\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{00282\ \ \ \ \ \ \ \ \ updateWeight(stateCandidate);}
+\DoxyCodeLine{00283\ \ \ \ \ \ \ \ \ tournament(stateCandidate,\ countIterationsCurrent);}
+\DoxyCodeLine{00284\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{MultiGenerator_8java_source_l00455}{tournament()}} y \mbox{\hyperlink{MultiGenerator_8java_source_l00290}{update\+Weight()}}.
+
+
+
+Referenciado por \mbox{\hyperlink{Strategy_8java_source_l00094}{metaheurictics.\+strategy.\+Strategy.\+execute\+Strategy()}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1MultiGenerator_a4064a096c203ec6b538929af5bd8d0d7_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1MultiGenerator_a4064a096c203ec6b538929af5bd8d0d7_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiGenerator_a06c51732247b401b0369fe6133d35793}\index{metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}!updateWeight@{updateWeight}}
+\index{updateWeight@{updateWeight}!metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}}
+\doxysubsubsection{\texorpdfstring{updateWeight()}{updateWeight()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiGenerator_a06c51732247b401b0369fe6133d35793} 
+void metaheuristics.\+generators.\+Multi\+Generator.\+update\+Weight (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}}]{state\+Candidate}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+update\+Weight -\/ modify the weight of the generator. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em state\+Candidate} & \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{MultiGenerator_8java_source_l00290}{290}} del archivo \mbox{\hyperlink{MultiGenerator_8java_source}{Multi\+Generator.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00290\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\ }
+\DoxyCodeLine{00291\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{boolean}\ search\ =\ searchState(stateCandidate);\textcolor{comment}{//premio\ por\ calidad.\ }}
+\DoxyCodeLine{00292\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(search\ ==\ \textcolor{keyword}{false})}
+\DoxyCodeLine{00293\ \ \ \ \ \ \ \ \ \ \ \ \ updateAwardImp();}
+\DoxyCodeLine{00294\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ updateAwardSC();}
+\DoxyCodeLine{00295\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{MultiGenerator_8java_source_l00302}{search\+State()}}, \mbox{\hyperlink{MultiGenerator_8java_source_l00413}{update\+Award\+Imp()}} y \mbox{\hyperlink{MultiGenerator_8java_source_l00393}{update\+Award\+SC()}}.
+
+
+
+Referenciado por \mbox{\hyperlink{MultiGenerator_8java_source_l00276}{update\+Reference()}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1MultiGenerator_a06c51732247b401b0369fe6133d35793_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1MultiGenerator_a06c51732247b401b0369fe6133d35793_icgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-variable-members}
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiGenerator_doc-variable-members}
+\doxysubsection{Documentación de datos miembro}
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiGenerator_ae0eed5be523b836cde822f567c2f6c6a}\index{metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}!activeGenerator@{activeGenerator}}
+\index{activeGenerator@{activeGenerator}!metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}}
+\doxysubsubsection{\texorpdfstring{activeGenerator}{activeGenerator}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiGenerator_ae0eed5be523b836cde822f567c2f6c6a} 
+volatile \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator}{Generator}} metaheuristics.\+generators.\+Multi\+Generator.\+active\+Generator\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiGenerator_8java_source_l00027}{27}} del archivo \mbox{\hyperlink{MultiGenerator_8java_source}{Multi\+Generator.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{MultiGenerator_8java_source_l00050}{destroy\+Multi\+Generator()}}, \mbox{\hyperlink{MultiGenerator_8java_source_l00213}{generate()}}, \mbox{\hyperlink{MultiGenerator_8java_source_l00177}{get\+Active\+Generator()}}, \mbox{\hyperlink{MultiGenerator_8java_source_l00302}{search\+State()}}, \mbox{\hyperlink{MultiGenerator_8java_source_l00184}{set\+Active\+Generator()}}, \mbox{\hyperlink{MultiGenerator_8java_source_l00413}{update\+Award\+Imp()}} y \mbox{\hyperlink{MultiGenerator_8java_source_l00393}{update\+Award\+SC()}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiGenerator_a16741751a6b19d2e23470f715b260c18}\index{metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}!generatortype@{generatortype}}
+\index{generatortype@{generatortype}!metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}}
+\doxysubsubsection{\texorpdfstring{generatortype}{generatortype}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiGenerator_a16741751a6b19d2e23470f715b260c18} 
+\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{Generator\+Type}} metaheuristics.\+generators.\+Multi\+Generator.\+generatortype\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiGenerator_8java_source_l00024}{24}} del archivo \mbox{\hyperlink{MultiGenerator_8java_source}{Multi\+Generator.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{MultiGenerator_8java_source_l00035}{set\+Generator\+Type()}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiGenerator_aeff68b1b8549a0b8ca24e7ad05774dee}\index{metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}!listGeneratedPP@{listGeneratedPP}}
+\index{listGeneratedPP@{listGeneratedPP}!metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}}
+\doxysubsubsection{\texorpdfstring{listGeneratedPP}{listGeneratedPP}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiGenerator_aeff68b1b8549a0b8ca24e7ad05774dee} 
+final List$<$\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}$>$ metaheuristics.\+generators.\+Multi\+Generator.\+list\+Generated\+PP = Collections.\+synchronized\+List(new Array\+List$<$\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}$>$())\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiGenerator_8java_source_l00026}{26}} del archivo \mbox{\hyperlink{MultiGenerator_8java_source}{Multi\+Generator.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{MultiGenerator_8java_source_l00129}{create\+Instance\+Generators\+BPP()}}, \mbox{\hyperlink{MultiGenerator_8java_source_l00050}{destroy\+Multi\+Generator()}}, \mbox{\hyperlink{Strategy_8java_source_l00094}{metaheurictics.\+strategy.\+Strategy.\+execute\+Strategy()}}, \mbox{\hyperlink{MultiGenerator_8java_source_l00153}{get\+List\+Generated\+PP()}} y \mbox{\hyperlink{MultiGenerator_8java_source_l00191}{set\+List\+Generated\+PP()}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiGenerator_a818b282d2b179e572c762faa6fe0c988}\index{metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}!listGenerators@{listGenerators}}
+\index{listGenerators@{listGenerators}!metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}}
+\doxysubsubsection{\texorpdfstring{listGenerators}{listGenerators}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiGenerator_a818b282d2b179e572c762faa6fe0c988} 
+\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator}{Generator}} \mbox{[}$\,$\mbox{]} metaheuristics.\+generators.\+Multi\+Generator.\+list\+Generators = new \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator}{Generator}}\mbox{[}Generator\+Type.\+values().length\mbox{]}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiGenerator_8java_source_l00025}{25}} del archivo \mbox{\hyperlink{MultiGenerator_8java_source}{Multi\+Generator.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{MultiGenerator_8java_source_l00050}{destroy\+Multi\+Generator()}}, \mbox{\hyperlink{MultiGenerator_8java_source_l00161}{get\+List\+Generators()}}, \mbox{\hyperlink{MultiGenerator_8java_source_l00090}{initialize\+Generators()}}, \mbox{\hyperlink{MultiGenerator_8java_source_l00068}{initialize\+List\+Generator()}}, \mbox{\hyperlink{MultiGenerator_8java_source_l00337}{roulette()}}, \mbox{\hyperlink{MultiGenerator_8java_source_l00169}{set\+List\+Generators()}}, \mbox{\hyperlink{MultiGenerator_8java_source_l00455}{tournament()}}, \mbox{\hyperlink{MultiGenerator_8java_source_l00413}{update\+Award\+Imp()}} y \mbox{\hyperlink{MultiGenerator_8java_source_l00393}{update\+Award\+SC()}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiGenerator_af1c553546060e95f2cfb9df584f1b599}\index{metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}!listStateReference@{listStateReference}}
+\index{listStateReference@{listStateReference}!metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}}
+\doxysubsubsection{\texorpdfstring{listStateReference}{listStateReference}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiGenerator_af1c553546060e95f2cfb9df584f1b599} 
+final List$<$\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}$>$ metaheuristics.\+generators.\+Multi\+Generator.\+list\+State\+Reference = Collections.\+synchronized\+List(new Array\+List$<$\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}$>$())\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiGenerator_8java_source_l00028}{28}} del archivo \mbox{\hyperlink{MultiGenerator_8java_source}{Multi\+Generator.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{MultiGenerator_8java_source_l00050}{destroy\+Multi\+Generator()}}, \mbox{\hyperlink{MultiGenerator_8java_source_l00241}{get\+Reference\+List()}}, \mbox{\hyperlink{MultiGenerator_8java_source_l00090}{initialize\+Generators()}} y \mbox{\hyperlink{Strategy_8java_source_l00518}{metaheurictics.\+strategy.\+Strategy.\+update\+Ref()}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiGenerator_a681d886ae7de8af824a42c3865104a3a}\index{metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}!LOGGER@{LOGGER}}
+\index{LOGGER@{LOGGER}!metaheuristics.generators.MultiGenerator@{metaheuristics.generators.MultiGenerator}}
+\doxysubsubsection{\texorpdfstring{LOGGER}{LOGGER}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiGenerator_a681d886ae7de8af824a42c3865104a3a} 
+final Logger metaheuristics.\+generators.\+Multi\+Generator.\+LOGGER = Logger.\+get\+Logger(Multi\+Generator.\+class.\+get\+Name())\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiGenerator_8java_source_l00029}{29}} del archivo \mbox{\hyperlink{MultiGenerator_8java_source}{Multi\+Generator.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{MultiGenerator_8java_source_l00129}{create\+Instance\+Generators\+BPP()}}.
+
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{MultiGenerator_8java}{Multi\+Generator.\+java}}\end{DoxyCompactItemize}

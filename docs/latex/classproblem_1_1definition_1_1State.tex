@@ -1,0 +1,839 @@
+\doxysection{Referencia de la clase problem.\+definition.\+State}
+\hypertarget{classproblem_1_1definition_1_1State}{}\label{classproblem_1_1definition_1_1State}\index{problem.definition.State@{problem.definition.State}}
+
+
+\doxylink{classproblem_1_1definition_1_1State}{State}.  
+
+
+
+
+Diagrama de herencia de problem.\+definition.\+State
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{classproblem_1_1definition_1_1State__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagrama de colaboración de problem.\+definition.\+State\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classproblem_1_1definition_1_1State__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State_a1a5212628b1f4ec0f1091211615cda9c}{State}} (State ps)
+\begin{DoxyCompactList}\small\item\em Constructor copia. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State_ac1993711acbcb84cb789d52f59ec1e29}{State}} (Array\+List$<$ Object $>$ \mbox{\hyperlink{classproblem_1_1definition_1_1State_ad8f438f65cd2b4e47f8634a4706d7ca4}{code}})
+\begin{DoxyCompactList}\small\item\em Construir un estado a partir de la representación de código. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State_aac57a8314601200a442cbd429b718e8c}{State}} ()
+\begin{DoxyCompactList}\small\item\em Constructor por defecto\+: crea un estado con código vacío. \end{DoxyCompactList}\item 
+Array\+List$<$ Object $>$ \mbox{\hyperlink{classproblem_1_1definition_1_1State_a2e75b6f2bedb2107478ecd1e8e681418}{get\+Code}} ()
+\begin{DoxyCompactList}\small\item\em Obtener la codificación del estado (copia defensiva). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classproblem_1_1definition_1_1State_ab15765262a6e1cc7661c51cbcf0e7785}{set\+Code}} (Array\+List$<$ Object $>$ list\+Code)
+\begin{DoxyCompactList}\small\item\em Establecer la codificación del estado (se copia la lista entrante). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{Generator\+Type}} \mbox{\hyperlink{classproblem_1_1definition_1_1State_a59d2cd4e1c7f90ac887e46adffb6c944}{get\+Type\+Generator}} ()
+\begin{DoxyCompactList}\small\item\em Obtener el tipo de generador asociado a este estado. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classproblem_1_1definition_1_1State_afccaeac3af66cb772e2b3e70758b8fe6}{set\+Type\+Generator}} (\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{Generator\+Type}} \mbox{\hyperlink{classproblem_1_1definition_1_1State_a79f46901bd3af4954eb9fc8cc75fe362}{type\+Generator}})
+\begin{DoxyCompactList}\small\item\em Establecer el tipo de generador responsable de crear este estado. \end{DoxyCompactList}\item 
+Array\+List$<$ Double $>$ \mbox{\hyperlink{classproblem_1_1definition_1_1State_a226ea6fab8e7060cf131edfdb245a6fa}{get\+Evaluation}} ()
+\begin{DoxyCompactList}\small\item\em Obtener la lista de evaluaciones del estado. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classproblem_1_1definition_1_1State_abeaa628078af4804e5e9d93b3de593b5}{set\+Evaluation}} (Array\+List$<$ Double $>$ \mbox{\hyperlink{classproblem_1_1definition_1_1State_a282b2052d61ad952dda46310a8e92a09}{evaluation}})
+\begin{DoxyCompactList}\small\item\em Establecer la lista de evaluaciones del estado (copia defensiva). \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classproblem_1_1definition_1_1State_af8aecb9c06562fcda193b6a1da0b9ca3}{get\+Number}} ()
+\begin{DoxyCompactList}\small\item\em Obtener el identificador numérico del estado. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classproblem_1_1definition_1_1State_ab802f63ab88415158f9c6cf468b6c8b3}{set\+Number}} (int \mbox{\hyperlink{classproblem_1_1definition_1_1State_ad580b219425de32eb855574094f74848}{number}})
+\begin{DoxyCompactList}\small\item\em Asignar el identificador numérico al estado. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State_a1a5212628b1f4ec0f1091211615cda9c}{State}} \mbox{\hyperlink{classproblem_1_1definition_1_1State_a113f6883a1f6bd20eea2da09a0adc5c3}{clone}} ()
+\begin{DoxyCompactList}\small\item\em clone \end{DoxyCompactList}\item 
+Object \mbox{\hyperlink{classproblem_1_1definition_1_1State_aaf14fa8466c945ff5e134028c6c259f8}{get\+Copy}} ()
+\begin{DoxyCompactList}\small\item\em Obtener una copia por valor del estado (implementado con copy-\/constructor). \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{classproblem_1_1definition_1_1State_aea3cb9557745c174837425d06135f980}{Comparator}} (\mbox{\hyperlink{classproblem_1_1definition_1_1State_a1a5212628b1f4ec0f1091211615cda9c}{State}} state)
+\begin{DoxyCompactList}\small\item\em Comparar la codificación de dos estados. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classproblem_1_1definition_1_1State_aac773d24ebabc0a6e1dc041c5039fe47}{Distance}} (\mbox{\hyperlink{classproblem_1_1definition_1_1State_a1a5212628b1f4ec0f1091211615cda9c}{State}} state)
+\begin{DoxyCompactList}\small\item\em Calcular la distancia (cantidad de posiciones diferentes) entre dos códigos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos protegidos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{Generator\+Type}} \mbox{\hyperlink{classproblem_1_1definition_1_1State_a79f46901bd3af4954eb9fc8cc75fe362}{type\+Generator}}
+\item 
+Array\+List$<$ Double $>$ \mbox{\hyperlink{classproblem_1_1definition_1_1State_a282b2052d61ad952dda46310a8e92a09}{evaluation}}
+\item 
+int \mbox{\hyperlink{classproblem_1_1definition_1_1State_ad580b219425de32eb855574094f74848}{number}}
+\item 
+Array\+List$<$ Object $>$ \mbox{\hyperlink{classproblem_1_1definition_1_1State_ad8f438f65cd2b4e47f8634a4706d7ca4}{code}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+\doxylink{classproblem_1_1definition_1_1State}{State}. 
+
+Representa una solución (estado) dentro del espacio de búsqueda.
+
+Contiene la codificación de la solución, su evaluación (lista de valores para problemas multiobjetivo), un identificador numérico y el tipo de generador que produjo este estado. 
+
+Definición en la línea \mbox{\hyperlink{State_8java_source_l00016}{16}} del archivo \mbox{\hyperlink{State_8java_source}{State.\+java}}.
+
+
+
+\label{doc-constructors}
+\Hypertarget{classproblem_1_1definition_1_1State_doc-constructors}
+\doxysubsection{Documentación de constructores y destructores}
+\Hypertarget{classproblem_1_1definition_1_1State_a1a5212628b1f4ec0f1091211615cda9c}\index{problem.definition.State@{problem.definition.State}!State@{State}}
+\index{State@{State}!problem.definition.State@{problem.definition.State}}
+\doxysubsubsection{\texorpdfstring{State()}{State()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{classproblem_1_1definition_1_1State_a1a5212628b1f4ec0f1091211615cda9c} 
+problem.\+definition.\+State.\+State (\begin{DoxyParamCaption}\item[{State}]{ps}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor copia. 
+
+Realiza copias defensivas de las colecciones internas.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em ps} & estado a copiar (puede ser null) \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{State_8java_source_l00030}{30}} del archivo \mbox{\hyperlink{State_8java_source}{State.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ps\ ==\ \textcolor{keyword}{null})\ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ this.code\ =\ \textcolor{keyword}{new}\ ArrayList<Object>();}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ this.evaluation\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ this.number\ =\ 0;}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ this.typeGenerator\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ typeGenerator\ =\ ps.getTypeGenerator();}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ ArrayList<Double>\ eval\ =\ ps.getEvaluation();}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ this.evaluation\ =\ (eval\ ==\ \textcolor{keyword}{null})\ ?\ \textcolor{keyword}{null}\ :\ new\ ArrayList<Double>(eval);}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ number\ =\ ps.getNumber();}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ ArrayList<Object>\ c\ =\ ps.getCode();}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ this.code\ =\ (c\ ==\ \textcolor{keyword}{null})\ ?\ \textcolor{keyword}{new}\ ArrayList<Object>()\ :\ new\ ArrayList<Object>(c);}
+\DoxyCodeLine{00044\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{State_8java_source_l00068}{get\+Code()}}, \mbox{\hyperlink{State_8java_source_l00104}{get\+Evaluation()}}, \mbox{\hyperlink{State_8java_source_l00122}{get\+Number()}}, \mbox{\hyperlink{State_8java_source_l00086}{get\+Type\+Generator()}}, \mbox{\hyperlink{State_8java_source_l00020}{number}}, \mbox{\hyperlink{State_8java_source_l00030}{State()}} y \mbox{\hyperlink{State_8java_source_l00018}{type\+Generator}}.
+
+
+
+Referenciado por \mbox{\hyperlink{State_8java_source_l00142}{clone()}}, \mbox{\hyperlink{State_8java_source_l00171}{Comparator()}}, \mbox{\hyperlink{State_8java_source_l00185}{Distance()}} y \mbox{\hyperlink{State_8java_source_l00030}{State()}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classproblem_1_1definition_1_1State_a1a5212628b1f4ec0f1091211615cda9c_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classproblem_1_1definition_1_1State_a1a5212628b1f4ec0f1091211615cda9c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classproblem_1_1definition_1_1State_ac1993711acbcb84cb789d52f59ec1e29}\index{problem.definition.State@{problem.definition.State}!State@{State}}
+\index{State@{State}!problem.definition.State@{problem.definition.State}}
+\doxysubsubsection{\texorpdfstring{State()}{State()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{classproblem_1_1definition_1_1State_ac1993711acbcb84cb789d52f59ec1e29} 
+problem.\+definition.\+State.\+State (\begin{DoxyParamCaption}\item[{Array\+List$<$ Object $>$}]{code}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construir un estado a partir de la representación de código. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em code} & lista de objetos que representan la codificación interna \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{State_8java_source_l00051}{51}} del archivo \mbox{\hyperlink{State_8java_source}{State.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ super();}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ this.code\ =\ (code\ ==\ \textcolor{keyword}{null})\ ?\ \textcolor{keyword}{new}\ ArrayList<Object>()\ :\ \textcolor{keyword}{new}\ ArrayList<Object>(code);}
+\DoxyCodeLine{00054\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{State_8java_source_l00021}{code}}.
+
+\Hypertarget{classproblem_1_1definition_1_1State_aac57a8314601200a442cbd429b718e8c}\index{problem.definition.State@{problem.definition.State}!State@{State}}
+\index{State@{State}!problem.definition.State@{problem.definition.State}}
+\doxysubsubsection{\texorpdfstring{State()}{State()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{classproblem_1_1definition_1_1State_aac57a8314601200a442cbd429b718e8c} 
+problem.\+definition.\+State.\+State (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor por defecto\+: crea un estado con código vacío. 
+
+
+
+Definición en la línea \mbox{\hyperlink{State_8java_source_l00059}{59}} del archivo \mbox{\hyperlink{State_8java_source}{State.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ code=\textcolor{keyword}{new}\ ArrayList<Object>();}
+\DoxyCodeLine{00061\ \ \ \ \ \}\ \ \ }
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{State_8java_source_l00021}{code}}.
+
+
+
+Referenciado por \mbox{\hyperlink{State_8java_source_l00142}{clone()}} y \mbox{\hyperlink{State_8java_source_l00161}{get\+Copy()}}.
+
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classproblem_1_1definition_1_1State_aac57a8314601200a442cbd429b718e8c_icgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-func-members}
+\Hypertarget{classproblem_1_1definition_1_1State_doc-func-members}
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{classproblem_1_1definition_1_1State_a113f6883a1f6bd20eea2da09a0adc5c3}\index{problem.definition.State@{problem.definition.State}!clone@{clone}}
+\index{clone@{clone}!problem.definition.State@{problem.definition.State}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \label{classproblem_1_1definition_1_1State_a113f6883a1f6bd20eea2da09a0adc5c3} 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State_a1a5212628b1f4ec0f1091211615cda9c}{State}} problem.\+definition.\+State.\+clone (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+clone 
+
+Devuelve una copia superficial segura (deep-\/copy de colecciones mutables) del estado.
+
+\begin{DoxyReturn}{Devuelve}
+nueva instancia {\ttfamily \doxylink{classproblem_1_1definition_1_1State}{State}} con copias de las colecciones 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{State_8java_source_l00142}{142}} del archivo \mbox{\hyperlink{State_8java_source}{State.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ State\ s\ =\ (State)\ super.clone();}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ deep-\/copy\ mutable\ collections}}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ s.code\ =\ (this.code\ ==\ \textcolor{keyword}{null})\ ?\ \textcolor{keyword}{new}\ ArrayList<Object>()\ :\ \textcolor{keyword}{new}\ ArrayList<Object>(this.code);}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ s.evaluation\ =\ (this.evaluation\ ==\ \textcolor{keyword}{null})\ ?\ \textcolor{keyword}{null}\ :\ new\ ArrayList<Double>(this.evaluation);}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ primitive\ and\ enum-\/like\ fields\ are\ safe\ to\ copy\ by\ assignment}}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ s;}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (CloneNotSupportedException\ e)\ \{}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ fallback\ to\ copy\ constructor}}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ State(\textcolor{keyword}{this});}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00154\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{State_8java_source_l00059}{State()}} y \mbox{\hyperlink{State_8java_source_l00030}{State()}}.
+
+
+
+Referenciado por \mbox{\hyperlink{AcceptMulticase_8java_source_l00034}{local\+\_\+search.\+acceptation\+\_\+type.\+Accept\+Multicase.\+accept\+Candidate()}}, \mbox{\hyperlink{AcceptNotDominated_8java_source_l00028}{local\+\_\+search.\+acceptation\+\_\+type.\+Accept\+Not\+Dominated.\+accept\+Candidate()}}, \mbox{\hyperlink{AcceptNotDominatedTabu_8java_source_l00027}{local\+\_\+search.\+acceptation\+\_\+type.\+Accept\+Not\+Dominated\+Tabu.\+accept\+Candidate()}}, \mbox{\hyperlink{Dominance_8java_source_l00033}{local\+\_\+search.\+acceptation\+\_\+type.\+Dominance.\+list\+Dominance()}}, \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00092}{metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+set\+LBest()}}, \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00107}{metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+set\+LBest\+At()}}, \mbox{\hyperlink{MultiobjectiveHillClimbingDistance_8java_source_l00087}{metaheuristics.\+generators.\+Multiobjective\+Hill\+Climbing\+Distance.\+update\+Reference()}} y \mbox{\hyperlink{MultiobjectiveHillClimbingRestart_8java_source_l00083}{metaheuristics.\+generators.\+Multiobjective\+Hill\+Climbing\+Restart.\+update\+Reference()}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classproblem_1_1definition_1_1State_a113f6883a1f6bd20eea2da09a0adc5c3_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classproblem_1_1definition_1_1State_a113f6883a1f6bd20eea2da09a0adc5c3_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classproblem_1_1definition_1_1State_aea3cb9557745c174837425d06135f980}\index{problem.definition.State@{problem.definition.State}!Comparator@{Comparator}}
+\index{Comparator@{Comparator}!problem.definition.State@{problem.definition.State}}
+\doxysubsubsection{\texorpdfstring{Comparator()}{Comparator()}}
+{\footnotesize\ttfamily \label{classproblem_1_1definition_1_1State_aea3cb9557745c174837425d06135f980} 
+boolean problem.\+definition.\+State.\+Comparator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classproblem_1_1definition_1_1State_a1a5212628b1f4ec0f1091211615cda9c}{State}}}]{state}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Comparar la codificación de dos estados. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em state} & estado con el que comparar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+true si las listas de código son iguales 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{State_8java_source_l00171}{171}} del archivo \mbox{\hyperlink{State_8java_source}{State.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00172\ }
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{boolean}\ result=\textcolor{keyword}{false};}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(state.getCode().equals(getCode()))\{}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ result=\textcolor{keyword}{true};}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{00178\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{State_8java_source_l00068}{get\+Code()}} y \mbox{\hyperlink{State_8java_source_l00030}{State()}}.
+
+
+
+Referenciado por \mbox{\hyperlink{MultiobjectiveHillClimbingDistance_8java_source_l00272}{metaheuristics.\+generators.\+Multiobjective\+Hill\+Climbing\+Distance.\+contain()}}, \mbox{\hyperlink{MultiobjectiveHillClimbingRestart_8java_source_l00211}{metaheuristics.\+generators.\+Multiobjective\+Hill\+Climbing\+Restart.\+contain()}} y \mbox{\hyperlink{Dominance_8java_source_l00033}{local\+\_\+search.\+acceptation\+\_\+type.\+Dominance.\+list\+Dominance()}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classproblem_1_1definition_1_1State_aea3cb9557745c174837425d06135f980_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classproblem_1_1definition_1_1State_aea3cb9557745c174837425d06135f980_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classproblem_1_1definition_1_1State_aac773d24ebabc0a6e1dc041c5039fe47}\index{problem.definition.State@{problem.definition.State}!Distance@{Distance}}
+\index{Distance@{Distance}!problem.definition.State@{problem.definition.State}}
+\doxysubsubsection{\texorpdfstring{Distance()}{Distance()}}
+{\footnotesize\ttfamily \label{classproblem_1_1definition_1_1State_aac773d24ebabc0a6e1dc041c5039fe47} 
+double problem.\+definition.\+State.\+Distance (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classproblem_1_1definition_1_1State_a1a5212628b1f4ec0f1091211615cda9c}{State}}}]{state}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Calcular la distancia (cantidad de posiciones diferentes) entre dos códigos. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em state} & otro estado a comparar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+número de posiciones distintas 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{State_8java_source_l00185}{185}} del archivo \mbox{\hyperlink{State_8java_source}{State.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ distancia\ =\ 0;}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ state.getCode().size();\ i++)\ \{}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!(state.getCode().get(i).equals(\textcolor{keyword}{this}.getCode().get(i))))\ \{}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ distancia++;}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00192\ \ \ \ \ \textcolor{keywordflow}{return}\ distancia;}
+\DoxyCodeLine{00193\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{State_8java_source_l00068}{get\+Code()}} y \mbox{\hyperlink{State_8java_source_l00030}{State()}}.
+
+
+
+Referenciado por \mbox{\hyperlink{MultiobjectiveHillClimbingDistance_8java_source_l00234}{metaheuristics.\+generators.\+Multiobjective\+Hill\+Climbing\+Distance.\+distance\+Calculate\+Add()}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classproblem_1_1definition_1_1State_aac773d24ebabc0a6e1dc041c5039fe47_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classproblem_1_1definition_1_1State_aac773d24ebabc0a6e1dc041c5039fe47_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classproblem_1_1definition_1_1State_a2e75b6f2bedb2107478ecd1e8e681418}\index{problem.definition.State@{problem.definition.State}!getCode@{getCode}}
+\index{getCode@{getCode}!problem.definition.State@{problem.definition.State}}
+\doxysubsubsection{\texorpdfstring{getCode()}{getCode()}}
+{\footnotesize\ttfamily \label{classproblem_1_1definition_1_1State_a2e75b6f2bedb2107478ecd1e8e681418} 
+Array\+List$<$ Object $>$ problem.\+definition.\+State.\+get\+Code (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtener la codificación del estado (copia defensiva). 
+
+\begin{DoxyReturn}{Devuelve}
+lista con los elementos de código 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{State_8java_source_l00068}{68}} del archivo \mbox{\hyperlink{State_8java_source}{State.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (code\ ==\ \textcolor{keyword}{null})\ ?\ \textcolor{keyword}{new}\ ArrayList<Object>()\ :\ new\ ArrayList<Object>(code);}
+\DoxyCodeLine{00070\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{State_8java_source_l00021}{code}}.
+
+
+
+Referenciado por \mbox{\hyperlink{State_8java_source_l00171}{Comparator()}}, \mbox{\hyperlink{OnePointCrossover_8java_source_l00032}{evolutionary\+\_\+algorithms.\+complement.\+One\+Point\+Crossover.\+crossover()}}, \mbox{\hyperlink{UniformCrossover_8java_source_l00042}{evolutionary\+\_\+algorithms.\+complement.\+Uniform\+Crossover.\+crossover()}}, \mbox{\hyperlink{State_8java_source_l00185}{Distance()}}, \mbox{\hyperlink{MutationOperator_8java_source_l00032}{problem\+\_\+operators.\+Mutation\+Operator.\+generated\+New\+State()}}, \mbox{\hyperlink{AIOMutation_8java_source_l00031}{evolutionary\+\_\+algorithms.\+complement.\+AIOMutation.\+mutation()}}, \mbox{\hyperlink{OnePointMutation_8java_source_l00028}{evolutionary\+\_\+algorithms.\+complement.\+One\+Point\+Mutation.\+mutation()}}, \mbox{\hyperlink{TowPointsMutation_8java_source_l00020}{evolutionary\+\_\+algorithms.\+complement.\+Tow\+Points\+Mutation.\+mutation()}}, \mbox{\hyperlink{AIOMutation_8java_source_l00066}{evolutionary\+\_\+algorithms.\+complement.\+AIOMutation.\+sorted\+Path\+Value()}} y \mbox{\hyperlink{State_8java_source_l00030}{State()}}.
+
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classproblem_1_1definition_1_1State_a2e75b6f2bedb2107478ecd1e8e681418_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classproblem_1_1definition_1_1State_aaf14fa8466c945ff5e134028c6c259f8}\index{problem.definition.State@{problem.definition.State}!getCopy@{getCopy}}
+\index{getCopy@{getCopy}!problem.definition.State@{problem.definition.State}}
+\doxysubsubsection{\texorpdfstring{getCopy()}{getCopy()}}
+{\footnotesize\ttfamily \label{classproblem_1_1definition_1_1State_aaf14fa8466c945ff5e134028c6c259f8} 
+Object problem.\+definition.\+State.\+get\+Copy (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtener una copia por valor del estado (implementado con copy-\/constructor). 
+
+\begin{DoxyReturn}{Devuelve}
+objeto {\ttfamily \doxylink{classproblem_1_1definition_1_1State}{State}} nuevo 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{State_8java_source_l00161}{161}} del archivo \mbox{\hyperlink{State_8java_source}{State.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ State(\textcolor{keyword}{this});}
+\DoxyCodeLine{00163\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{State_8java_source_l00059}{State()}}.
+
+
+
+Referenciado por \mbox{\hyperlink{OnePointCrossover_8java_source_l00032}{evolutionary\+\_\+algorithms.\+complement.\+One\+Point\+Crossover.\+crossover()}}, \mbox{\hyperlink{UniformCrossover_8java_source_l00042}{evolutionary\+\_\+algorithms.\+complement.\+Uniform\+Crossover.\+crossover()}}, \mbox{\hyperlink{EvolutionStrategies_8java_source_l00076}{metaheuristics.\+generators.\+Evolution\+Strategies.\+generate()}}, \mbox{\hyperlink{GeneticAlgorithm_8java_source_l00090}{metaheuristics.\+generators.\+Genetic\+Algorithm.\+generate()}} y \mbox{\hyperlink{MutationOperator_8java_source_l00032}{problem\+\_\+operators.\+Mutation\+Operator.\+generated\+New\+State()}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classproblem_1_1definition_1_1State_aaf14fa8466c945ff5e134028c6c259f8_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classproblem_1_1definition_1_1State_aaf14fa8466c945ff5e134028c6c259f8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classproblem_1_1definition_1_1State_a226ea6fab8e7060cf131edfdb245a6fa}\index{problem.definition.State@{problem.definition.State}!getEvaluation@{getEvaluation}}
+\index{getEvaluation@{getEvaluation}!problem.definition.State@{problem.definition.State}}
+\doxysubsubsection{\texorpdfstring{getEvaluation()}{getEvaluation()}}
+{\footnotesize\ttfamily \label{classproblem_1_1definition_1_1State_a226ea6fab8e7060cf131edfdb245a6fa} 
+Array\+List$<$ Double $>$ problem.\+definition.\+State.\+get\+Evaluation (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtener la lista de evaluaciones del estado. 
+
+\begin{DoxyReturn}{Devuelve}
+copia de la lista de evaluaciones (puede ser null) 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{State_8java_source_l00104}{104}} del archivo \mbox{\hyperlink{State_8java_source}{State.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (evaluation\ ==\ \textcolor{keyword}{null})\ ?\ null\ :\ \textcolor{keyword}{new}\ ArrayList<Double>(evaluation);}
+\DoxyCodeLine{00106\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{State_8java_source_l00019}{evaluation}}.
+
+
+
+Referenciado por \mbox{\hyperlink{AcceptMulticase_8java_source_l00034}{local\+\_\+search.\+acceptation\+\_\+type.\+Accept\+Multicase.\+accept\+Candidate()}}, \mbox{\hyperlink{AcceptNotBad_8java_source_l00028}{local\+\_\+search.\+acceptation\+\_\+type.\+Accept\+Not\+Bad.\+accept\+Candidate()}}, \mbox{\hyperlink{MetricasMultiobjetivo_8java_source_l00135}{problem.\+extension.\+Metricas\+Multiobjetivo.\+Contains()}}, \mbox{\hyperlink{MetricasMultiobjetivo_8java_source_l00088}{problem.\+extension.\+Metricas\+Multiobjetivo.\+Dispersion()}}, \mbox{\hyperlink{MetricasMultiobjetivo_8java_source_l00053}{problem.\+extension.\+Metricas\+Multiobjetivo.\+Distancia\+Generacional()}}, \mbox{\hyperlink{Dominance_8java_source_l00087}{local\+\_\+search.\+acceptation\+\_\+type.\+Dominance.\+dominance()}}, \mbox{\hyperlink{Strategy_8java_source_l00094}{metaheurictics.\+strategy.\+Strategy.\+execute\+Strategy()}}, \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00403}{metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+g\+Best\+Inicial()}}, \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00173}{metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+inicialice\+LBest()}}, \mbox{\hyperlink{SteadyStateReplace_8java_source_l00081}{evolutionary\+\_\+algorithms.\+complement.\+Steady\+State\+Replace.\+max\+Value()}}, \mbox{\hyperlink{DistributionEstimationAlgorithm_8java_source_l00077}{metaheuristics.\+generators.\+Distribution\+Estimation\+Algorithm.\+max\+Value()}}, \mbox{\hyperlink{SteadyStateReplace_8java_source_l00064}{evolutionary\+\_\+algorithms.\+complement.\+Steady\+State\+Replace.\+min\+Value()}}, \mbox{\hyperlink{SteadyStateReplace_8java_source_l00022}{evolutionary\+\_\+algorithms.\+complement.\+Steady\+State\+Replace.\+replace()}}, \mbox{\hyperlink{MultiGenerator_8java_source_l00302}{metaheuristics.\+generators.\+Multi\+Generator.\+search\+State()}}, \mbox{\hyperlink{State_8java_source_l00030}{State()}} y \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00364}{metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+update\+Reference()}}.
+
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classproblem_1_1definition_1_1State_a226ea6fab8e7060cf131edfdb245a6fa_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classproblem_1_1definition_1_1State_af8aecb9c06562fcda193b6a1da0b9ca3}\index{problem.definition.State@{problem.definition.State}!getNumber@{getNumber}}
+\index{getNumber@{getNumber}!problem.definition.State@{problem.definition.State}}
+\doxysubsubsection{\texorpdfstring{getNumber()}{getNumber()}}
+{\footnotesize\ttfamily \label{classproblem_1_1definition_1_1State_af8aecb9c06562fcda193b6a1da0b9ca3} 
+int problem.\+definition.\+State.\+get\+Number (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtener el identificador numérico del estado. 
+
+\begin{DoxyReturn}{Devuelve}
+número asignado al estado 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{State_8java_source_l00122}{122}} del archivo \mbox{\hyperlink{State_8java_source}{State.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ number;}
+\DoxyCodeLine{00124\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{State_8java_source_l00020}{number}}.
+
+
+
+Referenciado por \mbox{\hyperlink{State_8java_source_l00030}{State()}}.
+
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classproblem_1_1definition_1_1State_af8aecb9c06562fcda193b6a1da0b9ca3_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classproblem_1_1definition_1_1State_a59d2cd4e1c7f90ac887e46adffb6c944}\index{problem.definition.State@{problem.definition.State}!getTypeGenerator@{getTypeGenerator}}
+\index{getTypeGenerator@{getTypeGenerator}!problem.definition.State@{problem.definition.State}}
+\doxysubsubsection{\texorpdfstring{getTypeGenerator()}{getTypeGenerator()}}
+{\footnotesize\ttfamily \label{classproblem_1_1definition_1_1State_a59d2cd4e1c7f90ac887e46adffb6c944} 
+\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{Generator\+Type}} problem.\+definition.\+State.\+get\+Type\+Generator (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtener el tipo de generador asociado a este estado. 
+
+\begin{DoxyReturn}{Devuelve}
+tipo de generador 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{State_8java_source_l00086}{86}} del archivo \mbox{\hyperlink{State_8java_source}{State.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ typeGenerator;}
+\DoxyCodeLine{00088\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{State_8java_source_l00018}{type\+Generator}}.
+
+
+
+Referenciado por \mbox{\hyperlink{State_8java_source_l00030}{State()}}.
+
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classproblem_1_1definition_1_1State_a59d2cd4e1c7f90ac887e46adffb6c944_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classproblem_1_1definition_1_1State_ab15765262a6e1cc7661c51cbcf0e7785}\index{problem.definition.State@{problem.definition.State}!setCode@{setCode}}
+\index{setCode@{setCode}!problem.definition.State@{problem.definition.State}}
+\doxysubsubsection{\texorpdfstring{setCode()}{setCode()}}
+{\footnotesize\ttfamily \label{classproblem_1_1definition_1_1State_ab15765262a6e1cc7661c51cbcf0e7785} 
+void problem.\+definition.\+State.\+set\+Code (\begin{DoxyParamCaption}\item[{Array\+List$<$ Object $>$}]{list\+Code}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Establecer la codificación del estado (se copia la lista entrante). 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em list\+Code} & nueva codificación \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{State_8java_source_l00077}{77}} del archivo \mbox{\hyperlink{State_8java_source}{State.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ this.code\ =\ (listCode\ ==\ \textcolor{keyword}{null})\ ?\ \textcolor{keyword}{new}\ ArrayList<Object>()\ :\ \textcolor{keyword}{new}\ ArrayList<Object>(listCode);}
+\DoxyCodeLine{00079\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referenciado por \mbox{\hyperlink{OnePointCrossover_8java_source_l00032}{evolutionary\+\_\+algorithms.\+complement.\+One\+Point\+Crossover.\+crossover()}}, \mbox{\hyperlink{EvolutionStrategies_8java_source_l00076}{metaheuristics.\+generators.\+Evolution\+Strategies.\+generate()}}, \mbox{\hyperlink{GeneticAlgorithm_8java_source_l00090}{metaheuristics.\+generators.\+Genetic\+Algorithm.\+generate()}}, \mbox{\hyperlink{Particle_8java_source_l00106}{metaheuristics.\+generators.\+Particle.\+generate()}}, \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00220}{metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+get\+List\+State\+Ref()}}, \mbox{\hyperlink{ProbabilisticSampling_8java_source_l00095}{evolutionary\+\_\+algorithms.\+complement.\+Probabilistic\+Sampling.\+list\+State()}} y \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00364}{metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+update\+Reference()}}.
+
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classproblem_1_1definition_1_1State_ab15765262a6e1cc7661c51cbcf0e7785_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classproblem_1_1definition_1_1State_abeaa628078af4804e5e9d93b3de593b5}\index{problem.definition.State@{problem.definition.State}!setEvaluation@{setEvaluation}}
+\index{setEvaluation@{setEvaluation}!problem.definition.State@{problem.definition.State}}
+\doxysubsubsection{\texorpdfstring{setEvaluation()}{setEvaluation()}}
+{\footnotesize\ttfamily \label{classproblem_1_1definition_1_1State_abeaa628078af4804e5e9d93b3de593b5} 
+void problem.\+definition.\+State.\+set\+Evaluation (\begin{DoxyParamCaption}\item[{Array\+List$<$ Double $>$}]{evaluation}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Establecer la lista de evaluaciones del estado (copia defensiva). 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em evaluation} & lista de doubles que representan la evaluación \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{State_8java_source_l00113}{113}} del archivo \mbox{\hyperlink{State_8java_source}{State.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ this.evaluation\ =\ (evaluation\ ==\ \textcolor{keyword}{null})\ ?\ \textcolor{keyword}{null}\ :\ new\ ArrayList<Double>(evaluation);}
+\DoxyCodeLine{00115\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{State_8java_source_l00019}{evaluation}}.
+
+
+
+Referenciado por \mbox{\hyperlink{FactoresPonderados_8java_source_l00029}{problem.\+extension.\+Factores\+Ponderados.\+evaluation\+State()}}, \mbox{\hyperlink{MultiObjetivoPuro_8java_source_l00029}{problem.\+extension.\+Multi\+Objetivo\+Puro.\+evaluation\+State()}}, \mbox{\hyperlink{Strategy_8java_source_l00094}{metaheurictics.\+strategy.\+Strategy.\+execute\+Strategy()}}, \mbox{\hyperlink{EvolutionStrategies_8java_source_l00076}{metaheuristics.\+generators.\+Evolution\+Strategies.\+generate()}}, \mbox{\hyperlink{GeneticAlgorithm_8java_source_l00090}{metaheuristics.\+generators.\+Genetic\+Algorithm.\+generate()}}, \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00220}{metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+get\+List\+State\+Ref()}} y \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00364}{metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+update\+Reference()}}.
+
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classproblem_1_1definition_1_1State_abeaa628078af4804e5e9d93b3de593b5_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classproblem_1_1definition_1_1State_ab802f63ab88415158f9c6cf468b6c8b3}\index{problem.definition.State@{problem.definition.State}!setNumber@{setNumber}}
+\index{setNumber@{setNumber}!problem.definition.State@{problem.definition.State}}
+\doxysubsubsection{\texorpdfstring{setNumber()}{setNumber()}}
+{\footnotesize\ttfamily \label{classproblem_1_1definition_1_1State_ab802f63ab88415158f9c6cf468b6c8b3} 
+void problem.\+definition.\+State.\+set\+Number (\begin{DoxyParamCaption}\item[{int}]{number}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Asignar el identificador numérico al estado. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em number} & nuevo identificador \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{State_8java_source_l00130}{130}} del archivo \mbox{\hyperlink{State_8java_source}{State.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ this.number\ =\ number;}
+\DoxyCodeLine{00132\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{State_8java_source_l00020}{number}}.
+
+
+
+Referenciado por \mbox{\hyperlink{MultiGenerator_8java_source_l00129}{metaheuristics.\+generators.\+Multi\+Generator.\+create\+Instance\+Generators\+BPP()}}, \mbox{\hyperlink{Strategy_8java_source_l00094}{metaheurictics.\+strategy.\+Strategy.\+execute\+Strategy()}}, \mbox{\hyperlink{EvolutionStrategies_8java_source_l00076}{metaheuristics.\+generators.\+Evolution\+Strategies.\+generate()}}, \mbox{\hyperlink{GeneticAlgorithm_8java_source_l00090}{metaheuristics.\+generators.\+Genetic\+Algorithm.\+generate()}} y \mbox{\hyperlink{ProbabilisticSampling_8java_source_l00095}{evolutionary\+\_\+algorithms.\+complement.\+Probabilistic\+Sampling.\+list\+State()}}.
+
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classproblem_1_1definition_1_1State_ab802f63ab88415158f9c6cf468b6c8b3_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classproblem_1_1definition_1_1State_afccaeac3af66cb772e2b3e70758b8fe6}\index{problem.definition.State@{problem.definition.State}!setTypeGenerator@{setTypeGenerator}}
+\index{setTypeGenerator@{setTypeGenerator}!problem.definition.State@{problem.definition.State}}
+\doxysubsubsection{\texorpdfstring{setTypeGenerator()}{setTypeGenerator()}}
+{\footnotesize\ttfamily \label{classproblem_1_1definition_1_1State_afccaeac3af66cb772e2b3e70758b8fe6} 
+void problem.\+definition.\+State.\+set\+Type\+Generator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{Generator\+Type}}}]{type\+Generator}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Establecer el tipo de generador responsable de crear este estado. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em type\+Generator} & tipo de generador \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{State_8java_source_l00094}{94}} del archivo \mbox{\hyperlink{State_8java_source}{State.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ this.typeGenerator\ =\ typeGenerator;}
+\DoxyCodeLine{00096\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{State_8java_source_l00018}{type\+Generator}}.
+
+
+
+Referenciado por \mbox{\hyperlink{MultiGenerator_8java_source_l00129}{metaheuristics.\+generators.\+Multi\+Generator.\+create\+Instance\+Generators\+BPP()}}, \mbox{\hyperlink{Strategy_8java_source_l00094}{metaheurictics.\+strategy.\+Strategy.\+execute\+Strategy()}}, \mbox{\hyperlink{EvolutionStrategies_8java_source_l00076}{metaheuristics.\+generators.\+Evolution\+Strategies.\+generate()}}, \mbox{\hyperlink{GeneticAlgorithm_8java_source_l00090}{metaheuristics.\+generators.\+Genetic\+Algorithm.\+generate()}}, \mbox{\hyperlink{ProbabilisticSampling_8java_source_l00095}{evolutionary\+\_\+algorithms.\+complement.\+Probabilistic\+Sampling.\+list\+State()}} y \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00364}{metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+update\+Reference()}}.
+
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classproblem_1_1definition_1_1State_afccaeac3af66cb772e2b3e70758b8fe6_icgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-variable-members}
+\Hypertarget{classproblem_1_1definition_1_1State_doc-variable-members}
+\doxysubsection{Documentación de datos miembro}
+\Hypertarget{classproblem_1_1definition_1_1State_ad8f438f65cd2b4e47f8634a4706d7ca4}\index{problem.definition.State@{problem.definition.State}!code@{code}}
+\index{code@{code}!problem.definition.State@{problem.definition.State}}
+\doxysubsubsection{\texorpdfstring{code}{code}}
+{\footnotesize\ttfamily \label{classproblem_1_1definition_1_1State_ad8f438f65cd2b4e47f8634a4706d7ca4} 
+Array\+List$<$Object$>$ problem.\+definition.\+State.\+code\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{State_8java_source_l00021}{21}} del archivo \mbox{\hyperlink{State_8java_source}{State.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{State_8java_source_l00068}{get\+Code()}}, \mbox{\hyperlink{State_8java_source_l00059}{State()}} y \mbox{\hyperlink{State_8java_source_l00051}{State()}}.
+
+\Hypertarget{classproblem_1_1definition_1_1State_a282b2052d61ad952dda46310a8e92a09}\index{problem.definition.State@{problem.definition.State}!evaluation@{evaluation}}
+\index{evaluation@{evaluation}!problem.definition.State@{problem.definition.State}}
+\doxysubsubsection{\texorpdfstring{evaluation}{evaluation}}
+{\footnotesize\ttfamily \label{classproblem_1_1definition_1_1State_a282b2052d61ad952dda46310a8e92a09} 
+Array\+List$<$Double$>$ problem.\+definition.\+State.\+evaluation\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{State_8java_source_l00019}{19}} del archivo \mbox{\hyperlink{State_8java_source}{State.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{State_8java_source_l00104}{get\+Evaluation()}} y \mbox{\hyperlink{State_8java_source_l00113}{set\+Evaluation()}}.
+
+\Hypertarget{classproblem_1_1definition_1_1State_ad580b219425de32eb855574094f74848}\index{problem.definition.State@{problem.definition.State}!number@{number}}
+\index{number@{number}!problem.definition.State@{problem.definition.State}}
+\doxysubsubsection{\texorpdfstring{number}{number}}
+{\footnotesize\ttfamily \label{classproblem_1_1definition_1_1State_ad580b219425de32eb855574094f74848} 
+int problem.\+definition.\+State.\+number\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{State_8java_source_l00020}{20}} del archivo \mbox{\hyperlink{State_8java_source}{State.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{State_8java_source_l00122}{get\+Number()}}, \mbox{\hyperlink{State_8java_source_l00130}{set\+Number()}} y \mbox{\hyperlink{State_8java_source_l00030}{State()}}.
+
+\Hypertarget{classproblem_1_1definition_1_1State_a79f46901bd3af4954eb9fc8cc75fe362}\index{problem.definition.State@{problem.definition.State}!typeGenerator@{typeGenerator}}
+\index{typeGenerator@{typeGenerator}!problem.definition.State@{problem.definition.State}}
+\doxysubsubsection{\texorpdfstring{typeGenerator}{typeGenerator}}
+{\footnotesize\ttfamily \label{classproblem_1_1definition_1_1State_a79f46901bd3af4954eb9fc8cc75fe362} 
+\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{Generator\+Type}} problem.\+definition.\+State.\+type\+Generator\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{State_8java_source_l00018}{18}} del archivo \mbox{\hyperlink{State_8java_source}{State.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{State_8java_source_l00086}{get\+Type\+Generator()}}, \mbox{\hyperlink{State_8java_source_l00094}{set\+Type\+Generator()}} y \mbox{\hyperlink{State_8java_source_l00030}{State()}}.
+
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{State_8java}{State.\+java}}\end{DoxyCompactItemize}

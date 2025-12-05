@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="es">
+  <compounddef id="classlocal__search_1_1acceptation__type_1_1AcceptAnyone" kind="class" language="Java" prot="public">
+    <compoundname>local_search::acceptation_type::AcceptAnyone</compoundname>
+    <basecompoundref refid="classlocal__search_1_1acceptation__type_1_1AcceptableCandidate" prot="public" virt="non-virtual">local_search.acceptation_type.AcceptableCandidate</basecompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classlocal__search_1_1acceptation__type_1_1AcceptAnyone_1aa08b618877d2ffed2805e11fbb817921" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Boolean</type>
+        <definition>Boolean local_search.acceptation_type.AcceptAnyone.acceptCandidate</definition>
+        <argsstring>(State stateCurrent, State stateCandidate)</argsstring>
+        <name>acceptCandidate</name>
+        <qualifiedname>local_search.acceptation_type.AcceptAnyone.acceptCandidate</qualifiedname>
+        <reimplements refid="classlocal__search_1_1acceptation__type_1_1AcceptableCandidate_1aa9e62e1d2d213c3828d2491b506d0592">acceptCandidate</reimplements>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>stateCurrent</declname>
+        </param>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>stateCandidate</declname>
+        </param>
+        <briefdescription>
+<para>Decide whether to accept the candidate state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stateCurrent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the current state </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stateCandidate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the candidate state to evaluate </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true always (accept any candidate) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/local_search/acceptation_type/AcceptAnyone.java" line="25" column="16" bodyfile="practica5/src/main/java/local_search/acceptation_type/AcceptAnyone.java" bodystart="25" bodyend="28"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="classlocal__search_1_1acceptation__type_1_1AcceptAnyone" kindref="compound">AcceptAnyone</ref> - Accept any candidate solution. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Simple acceptation strategy that always accepts the candidate solution provided to the local search operator. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>local_search.acceptation_type.AcceptAnyone</label>
+        <link refid="classlocal__search_1_1acceptation__type_1_1AcceptAnyone"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>local_search.acceptation_type.AcceptableCandidate</label>
+        <link refid="classlocal__search_1_1acceptation__type_1_1AcceptableCandidate"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>local_search.acceptation_type.AcceptAnyone</label>
+        <link refid="classlocal__search_1_1acceptation__type_1_1AcceptAnyone"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>local_search.acceptation_type.AcceptableCandidate</label>
+        <link refid="classlocal__search_1_1acceptation__type_1_1AcceptableCandidate"/>
+      </node>
+    </collaborationgraph>
+    <location file="practica5/src/main/java/local_search/acceptation_type/AcceptAnyone.java" line="15" column="7" bodyfile="practica5/src/main/java/local_search/acceptation_type/AcceptAnyone.java" bodystart="15" bodyend="30"/>
+    <listofallmembers>
+      <member refid="classlocal__search_1_1acceptation__type_1_1AcceptAnyone_1aa08b618877d2ffed2805e11fbb817921" prot="public" virt="non-virtual"><scope>local_search::acceptation_type::AcceptAnyone</scope><name>acceptCandidate</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,425 @@
+\doxysection{Referencia de la clase problem.\+extension.\+Metricas\+Multiobjetivo}
+\hypertarget{classproblem_1_1extension_1_1MetricasMultiobjetivo}{}\label{classproblem_1_1extension_1_1MetricasMultiobjetivo}\index{problem.extension.MetricasMultiobjetivo@{problem.extension.MetricasMultiobjetivo}}
+
+
+\doxylink{classproblem_1_1extension_1_1MetricasMultiobjetivo}{Metricas\+Multiobjetivo}.  
+
+
+
+
+Diagrama de colaboración de problem.\+extension.\+Metricas\+Multiobjetivo\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{classproblem_1_1extension_1_1MetricasMultiobjetivo__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classproblem_1_1extension_1_1MetricasMultiobjetivo_a4472830ebe1a6fe8bd33f701316552b1}{Tasa\+Error}} (List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ solutions\+FPcurrent, List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ solutions\+FPtrue)  throws Biff\+Exception, IOException
+\begin{DoxyCompactList}\small\item\em Calcular el porcentaje de soluciones del frente actual que no pertenecen al frente de Pareto verdadero. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classproblem_1_1extension_1_1MetricasMultiobjetivo_a30a03c8819f7191b7bfe09000d33532f}{Distancia\+Generacional}} (List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ solutions\+FPcurrent, List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ solutions\+FPtrue)  throws Biff\+Exception, IOException
+\begin{DoxyCompactList}\small\item\em Distancia\+Generacional. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classproblem_1_1extension_1_1MetricasMultiobjetivo_a5ded050edcc046f49548df1cf0ec7449}{Dispersion}} (Array\+List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ solutions)  throws Biff\+Exception, IOException
+\begin{DoxyCompactList}\small\item\em Dispersion. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classproblem_1_1extension_1_1MetricasMultiobjetivo_abfb87540cf1b3680d692821621a2619c}{Calcular\+Min}} (Array\+List$<$ Double $>$ all\+Metrics)
+\begin{DoxyCompactList}\small\item\em Calcular el valor mínimo de una lista de métricas. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classproblem_1_1extension_1_1MetricasMultiobjetivo_a38ed4658d79ea9d5cfef4bceb7ba5816}{Calcular\+Max}} (Array\+List$<$ Double $>$ all\+Metrics)
+\begin{DoxyCompactList}\small\item\em Calcular el valor máximo de una lista de métricas. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classproblem_1_1extension_1_1MetricasMultiobjetivo_add9c9a821a254397c6a70d4f56363c0a}{Calcular\+Media}} (Array\+List$<$ Double $>$ all\+Metrics)
+\begin{DoxyCompactList}\small\item\em Calcular la media aritmética de una lista de métricas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Métodos privados}
+\begin{DoxyCompactItemize}
+\item 
+boolean \mbox{\hyperlink{classproblem_1_1extension_1_1MetricasMultiobjetivo_a0baaa7dba3706f16de008d747a7548a1}{Contains}} (\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} solA, List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ solutions)
+\begin{DoxyCompactList}\small\item\em Comprueba si una solución (por su vector de evaluación) está en una lista. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+\doxylink{classproblem_1_1extension_1_1MetricasMultiobjetivo}{Metricas\+Multiobjetivo}. 
+
+Conjunto de métricas para evaluar frentes de Pareto en problemas multiobjetivo (error, distancia generacional, dispersión, etc.). 
+
+Definición en la línea \mbox{\hyperlink{MetricasMultiobjetivo_8java_source_l00018}{18}} del archivo \mbox{\hyperlink{MetricasMultiobjetivo_8java_source}{Metricas\+Multiobjetivo.\+java}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{classproblem_1_1extension_1_1MetricasMultiobjetivo_doc-func-members}
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{classproblem_1_1extension_1_1MetricasMultiobjetivo_a38ed4658d79ea9d5cfef4bceb7ba5816}\index{problem.extension.MetricasMultiobjetivo@{problem.extension.MetricasMultiobjetivo}!CalcularMax@{CalcularMax}}
+\index{CalcularMax@{CalcularMax}!problem.extension.MetricasMultiobjetivo@{problem.extension.MetricasMultiobjetivo}}
+\doxysubsubsection{\texorpdfstring{CalcularMax()}{CalcularMax()}}
+{\footnotesize\ttfamily \label{classproblem_1_1extension_1_1MetricasMultiobjetivo_a38ed4658d79ea9d5cfef4bceb7ba5816} 
+double problem.\+extension.\+Metricas\+Multiobjetivo.\+Calcular\+Max (\begin{DoxyParamCaption}\item[{Array\+List$<$ Double $>$}]{all\+Metrics}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Calcular el valor máximo de una lista de métricas. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em all\+Metrics} & lista de métricas \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+valor máximo 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{MetricasMultiobjetivo_8java_source_l00169}{169}} del archivo \mbox{\hyperlink{MetricasMultiobjetivo_8java_source}{Metricas\+Multiobjetivo.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ max\ =\ 0;}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (Iterator<Double>\ iter\ =\ allMetrics.iterator();\ iter.hasNext();)\ \{}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ element\ =\ (Double)\ iter.next();}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(element\ >\ max)\{}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ max\ =\ element;}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ max;}
+\DoxyCodeLine{00178\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classproblem_1_1extension_1_1MetricasMultiobjetivo_add9c9a821a254397c6a70d4f56363c0a}\index{problem.extension.MetricasMultiobjetivo@{problem.extension.MetricasMultiobjetivo}!CalcularMedia@{CalcularMedia}}
+\index{CalcularMedia@{CalcularMedia}!problem.extension.MetricasMultiobjetivo@{problem.extension.MetricasMultiobjetivo}}
+\doxysubsubsection{\texorpdfstring{CalcularMedia()}{CalcularMedia()}}
+{\footnotesize\ttfamily \label{classproblem_1_1extension_1_1MetricasMultiobjetivo_add9c9a821a254397c6a70d4f56363c0a} 
+double problem.\+extension.\+Metricas\+Multiobjetivo.\+Calcular\+Media (\begin{DoxyParamCaption}\item[{Array\+List$<$ Double $>$}]{all\+Metrics}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Calcular la media aritmética de una lista de métricas. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em all\+Metrics} & lista de métricas \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+media 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{MetricasMultiobjetivo_8java_source_l00185}{185}} del archivo \mbox{\hyperlink{MetricasMultiobjetivo_8java_source}{Metricas\+Multiobjetivo.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ sum\ =\ 0;}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (Iterator<Double>\ iter\ =\ allMetrics.iterator();\ iter.hasNext();)\ \{}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ element\ =\ (Double)\ iter.next();}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \ \ \ \ sum\ =\ sum\ +\ element;}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ media\ =\ sum/allMetrics.size();}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ media;}
+\DoxyCodeLine{00193\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classproblem_1_1extension_1_1MetricasMultiobjetivo_abfb87540cf1b3680d692821621a2619c}\index{problem.extension.MetricasMultiobjetivo@{problem.extension.MetricasMultiobjetivo}!CalcularMin@{CalcularMin}}
+\index{CalcularMin@{CalcularMin}!problem.extension.MetricasMultiobjetivo@{problem.extension.MetricasMultiobjetivo}}
+\doxysubsubsection{\texorpdfstring{CalcularMin()}{CalcularMin()}}
+{\footnotesize\ttfamily \label{classproblem_1_1extension_1_1MetricasMultiobjetivo_abfb87540cf1b3680d692821621a2619c} 
+double problem.\+extension.\+Metricas\+Multiobjetivo.\+Calcular\+Min (\begin{DoxyParamCaption}\item[{Array\+List$<$ Double $>$}]{all\+Metrics}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Calcular el valor mínimo de una lista de métricas. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em all\+Metrics} & lista de métricas \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+valor mínimo 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{MetricasMultiobjetivo_8java_source_l00152}{152}} del archivo \mbox{\hyperlink{MetricasMultiobjetivo_8java_source}{Metricas\+Multiobjetivo.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ min\ =\ 1000;}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (Iterator<Double>\ iter\ =\ allMetrics.iterator();\ iter.hasNext();)\ \{}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ element\ =\ (Double)\ iter.next();}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(element\ <\ min)\{}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ min\ =\ element;}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ min;}
+\DoxyCodeLine{00161\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classproblem_1_1extension_1_1MetricasMultiobjetivo_a0baaa7dba3706f16de008d747a7548a1}\index{problem.extension.MetricasMultiobjetivo@{problem.extension.MetricasMultiobjetivo}!Contains@{Contains}}
+\index{Contains@{Contains}!problem.extension.MetricasMultiobjetivo@{problem.extension.MetricasMultiobjetivo}}
+\doxysubsubsection{\texorpdfstring{Contains()}{Contains()}}
+{\footnotesize\ttfamily \label{classproblem_1_1extension_1_1MetricasMultiobjetivo_a0baaa7dba3706f16de008d747a7548a1} 
+boolean problem.\+extension.\+Metricas\+Multiobjetivo.\+Contains (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}}]{solA}{, }\item[{List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$}]{solutions}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Comprueba si una solución (por su vector de evaluación) está en una lista. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em solA} & solución a comprobar \\
+\hline
+{\em solutions} & lista de soluciones \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+true si se encuentra una evaluación idéntica 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{MetricasMultiobjetivo_8java_source_l00135}{135}} del archivo \mbox{\hyperlink{MetricasMultiobjetivo_8java_source}{Metricas\+Multiobjetivo.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ i\ =\ 0;}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{boolean}\ result\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(i<solutions.size()\&\&\ result==\textcolor{keyword}{false})\{}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(solutions.get(i).getEvaluation().equals(solA.getEvaluation()))}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ result=\textcolor{keyword}{true};}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ i++;}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{00145\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{State_8java_source_l00104}{problem.\+definition.\+State.\+get\+Evaluation()}}.
+
+
+
+Referenciado por \mbox{\hyperlink{MetricasMultiobjetivo_8java_source_l00029}{Tasa\+Error()}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classproblem_1_1extension_1_1MetricasMultiobjetivo_a0baaa7dba3706f16de008d747a7548a1_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classproblem_1_1extension_1_1MetricasMultiobjetivo_a0baaa7dba3706f16de008d747a7548a1_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classproblem_1_1extension_1_1MetricasMultiobjetivo_a5ded050edcc046f49548df1cf0ec7449}\index{problem.extension.MetricasMultiobjetivo@{problem.extension.MetricasMultiobjetivo}!Dispersion@{Dispersion}}
+\index{Dispersion@{Dispersion}!problem.extension.MetricasMultiobjetivo@{problem.extension.MetricasMultiobjetivo}}
+\doxysubsubsection{\texorpdfstring{Dispersion()}{Dispersion()}}
+{\footnotesize\ttfamily \label{classproblem_1_1extension_1_1MetricasMultiobjetivo_a5ded050edcc046f49548df1cf0ec7449} 
+double problem.\+extension.\+Metricas\+Multiobjetivo.\+Dispersion (\begin{DoxyParamCaption}\item[{Array\+List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$}]{solutions}{}\end{DoxyParamCaption}) throws Biff\+Exception, IOException\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Dispersion. 
+
+Mide la dispersión (desviación típica) entre las distancias inter-\/soluciones de un frente.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em solutions} & lista de estados que conforman el frente \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+medida de dispersión 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{MetricasMultiobjetivo_8java_source_l00088}{88}} del archivo \mbox{\hyperlink{MetricasMultiobjetivo_8java_source}{Metricas\+Multiobjetivo.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Soluciones\ obtenidas\ con\ la\ ejecución\ del\ algoritmo\ X}}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ LinkedList<Float>\ distancias\ =\ \textcolor{keyword}{new}\ LinkedList<Float>();}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ distancia\ =\ 0;}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ min\ =\ 1000;}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (Iterator<State>\ iter\ =\ solutions.iterator();\ iter.hasNext();)\ \{}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ State\ solutionVO\ =\ (State)\ iter.next();}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ min\ =\ 1000;}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (Iterator<State>\ iterator\ =\ solutions.iterator();\ iterator.hasNext();)\ \{}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ State\ solVO\ =\ (State)\ iterator.next();}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ solutionVO.getEvaluation().size();\ i++)\ \{}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!solutionVO.getEvaluation().equals(solVO.getEvaluation()))\{}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ distancia\ +=\ (solutionVO.getEvaluation().\textcolor{keyword}{get}(i)-\/\ solVO.getEvaluation().get(i));}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\}}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(distancia\ <\ min)\{}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ min\ =\ distancia;}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ distancias.add(Float.valueOf(min));}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Calculando\ las\ media\ de\ las\ distancias\ }}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ sum\ =\ 0;}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (Iterator<Float>\ iter\ =\ distancias.iterator();\ iter.hasNext();)\ \{}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ Float\ dist\ =\ (Float)\ iter.next();}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ sum\ +=\ dist;}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ media\ =\ sum/distancias.size();}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ sumDistancias\ =\ 0;}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (Iterator<Float>\ iter\ =\ distancias.iterator();\ iter.hasNext();)\ \{}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ Float\ dist\ =\ (Float)\ iter.next();}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ sumDistancias\ +=\ Math.pow((media\ -\/\ dist),2);}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Calculando\ la\ dispersion}}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ dispersion\ =\ 0;}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(solutions.size()\ >\ 1)\{}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ dispersion\ =\ Math.sqrt((1.0/(solutions.size()-\/1))*sumDistancias);}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \textcolor{comment}{//System.out.println(dispersion);}}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ dispersion;}
+\DoxyCodeLine{00127\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{State_8java_source_l00104}{problem.\+definition.\+State.\+get\+Evaluation()}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classproblem_1_1extension_1_1MetricasMultiobjetivo_a5ded050edcc046f49548df1cf0ec7449_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classproblem_1_1extension_1_1MetricasMultiobjetivo_a30a03c8819f7191b7bfe09000d33532f}\index{problem.extension.MetricasMultiobjetivo@{problem.extension.MetricasMultiobjetivo}!DistanciaGeneracional@{DistanciaGeneracional}}
+\index{DistanciaGeneracional@{DistanciaGeneracional}!problem.extension.MetricasMultiobjetivo@{problem.extension.MetricasMultiobjetivo}}
+\doxysubsubsection{\texorpdfstring{DistanciaGeneracional()}{DistanciaGeneracional()}}
+{\footnotesize\ttfamily \label{classproblem_1_1extension_1_1MetricasMultiobjetivo_a30a03c8819f7191b7bfe09000d33532f} 
+double problem.\+extension.\+Metricas\+Multiobjetivo.\+Distancia\+Generacional (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$}]{solutions\+FPcurrent}{, }\item[{List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$}]{solutions\+FPtrue}{}\end{DoxyParamCaption}) throws Biff\+Exception, IOException\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Distancia\+Generacional. 
+
+Calcula la distancia media entre los miembros del frente actual y sus puntos más cercanos en el frente verdadero.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em solutions\+FPcurrent} & frente actual \\
+\hline
+{\em solutions\+FPtrue} & frente verdadero \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+distancia agregada normalizada 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{MetricasMultiobjetivo_8java_source_l00053}{53}} del archivo \mbox{\hyperlink{MetricasMultiobjetivo_8java_source}{Metricas\+Multiobjetivo.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ min\ =\ 1000;}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ distancia\ =\ 0;}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ distanciaGeneracional\ =\ 0;}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ solutionsFPcurrent.size();i++)\ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ State\ solutionVO\ =\ solutionsFPcurrent.get(i);}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Calculando\ la\ distancia\ euclideana\ entre\ solutionVO\ y\ el\ miembro\ más\ cercano\ del\ frente\ de\ Pareto\ verdadero}}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ min\ =\ 1000;}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ solutionsFPtrue.size();j++)\ \{\ }
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j2\ =\ 0;\ j2\ <\ solutionVO.getEvaluation().size();\ j2++)\ \{}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ State\ solutionFPV\ =\ solutionsFPtrue.get(j);}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ porq\ elevar\ la\ distancia\ al\ cuadrado}}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ distancia\ +=\ (solutionVO.getEvaluation().\textcolor{keyword}{get}(j2)\ -\/\ solutionFPV.getEvaluation().get(j2))*\ \ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (solutionVO.getEvaluation().\textcolor{keyword}{get}(j2)\ -\/\ solutionFPV.getEvaluation().get(j2));\ \textcolor{comment}{//ceros\ si\ el\ argumento\ es\ el\ cero,\ 1.0\ si\ el\ argumento\ es\ mayor\ que\ el\ cero,\ -\/1.0\ si\ el\ argumento\ está\ menos\ del\ cero}}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(distancia\ <\ min)\{}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ min\ =\ distancia;}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ distanciaGeneracional\ +=\ min;}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ total\ =\ Math.sqrt(distanciaGeneracional)/solutionsFPcurrent.size();}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{comment}{//System.out.println(total);}}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ total;}
+\DoxyCodeLine{00077\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{State_8java_source_l00104}{problem.\+definition.\+State.\+get\+Evaluation()}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classproblem_1_1extension_1_1MetricasMultiobjetivo_a30a03c8819f7191b7bfe09000d33532f_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classproblem_1_1extension_1_1MetricasMultiobjetivo_a4472830ebe1a6fe8bd33f701316552b1}\index{problem.extension.MetricasMultiobjetivo@{problem.extension.MetricasMultiobjetivo}!TasaError@{TasaError}}
+\index{TasaError@{TasaError}!problem.extension.MetricasMultiobjetivo@{problem.extension.MetricasMultiobjetivo}}
+\doxysubsubsection{\texorpdfstring{TasaError()}{TasaError()}}
+{\footnotesize\ttfamily \label{classproblem_1_1extension_1_1MetricasMultiobjetivo_a4472830ebe1a6fe8bd33f701316552b1} 
+double problem.\+extension.\+Metricas\+Multiobjetivo.\+Tasa\+Error (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$}]{solutions\+FPcurrent}{, }\item[{List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$}]{solutions\+FPtrue}{}\end{DoxyParamCaption}) throws Biff\+Exception, IOException\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Calcular el porcentaje de soluciones del frente actual que no pertenecen al frente de Pareto verdadero. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em solutions\+FPcurrent} & frente de Pareto obtenido por el algoritmo \\
+\hline
+{\em solutions\+FPtrue} & frente de Pareto de referencia (verdadero) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+proporción de soluciones incorrectas (0..1) 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{MetricasMultiobjetivo_8java_source_l00029}{29}} del archivo \mbox{\hyperlink{MetricasMultiobjetivo_8java_source}{Metricas\+Multiobjetivo.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ tasaError\ =\ 0;}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ solutionsFPcurrent.size()\ ;\ i++)\ \{\ \textcolor{comment}{//\ frente\ de\ pareto\ actual}}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ State\ solutionVO\ =\ solutionsFPcurrent.get(i);}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!Contains(solutionVO,\ solutionsFPtrue))\{\ \textcolor{comment}{//\ no\ esta\ en\ el\ frente\ de\ pareto\ verdadero\ }}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tasaError++;}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ total\ =\ tasaError/solutionsFPcurrent.size();}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{comment}{//System.out.println(solutionsFP.size()\ +\ "{}/"{}\ +\ solutions.size()\ +\ "{}/"{}\ +\ total);}}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ total;}
+\DoxyCodeLine{00040\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{MetricasMultiobjetivo_8java_source_l00135}{Contains()}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classproblem_1_1extension_1_1MetricasMultiobjetivo_a4472830ebe1a6fe8bd33f701316552b1_cgraph}
+\end{center}
+\end{figure}
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{MetricasMultiobjetivo_8java}{Metricas\+Multiobjetivo.\+java}}\end{DoxyCompactItemize}

@@ -1,0 +1,1599 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="es">
+  <compounddef id="classmetaheurictics_1_1strategy_1_1Strategy" kind="class" language="Java" prot="public">
+    <compoundname>metaheurictics::strategy::Strategy</compoundname>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classmetaheurictics_1_1strategy_1_1Strategy_1a235c3afb5c1d4afe8ebaa1da12cff32e" prot="private" static="yes" mutable="no">
+        <type><ref refid="classmetaheurictics_1_1strategy_1_1Strategy_1ac65d26e08073f5cfc7596577f18b9694" kindref="member">Strategy</ref></type>
+        <definition>Strategy metaheurictics.strategy.Strategy.strategy</definition>
+        <argsstring></argsstring>
+        <name>strategy</name>
+        <qualifiedname>metaheurictics.strategy.Strategy.strategy</qualifiedname>
+        <initializer>= null</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheurictics/strategy/Strategy.java" line="35" column="25" bodyfile="practica5/src/main/java/metaheurictics/strategy/Strategy.java" bodystart="35" bodyend="-1"/>
+        <referencedby refid="classmetaheurictics_1_1strategy_1_1Strategy_1ac4829af561593656b314235f004f0308" compoundref="Strategy_8java" startline="483" endline="486">metaheurictics.strategy.Strategy.destroyExecute</referencedby>
+        <referencedby refid="classmetaheurictics_1_1strategy_1_1Strategy_1ad2641e12c52292930364de6655333aa8" compoundref="Strategy_8java" startline="80" endline="85">metaheurictics.strategy.Strategy.getStrategy</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classmetaheurictics_1_1strategy_1_1Strategy_1af08a0f377eacb28b46d0fcc315b69ad0" prot="private" static="no" mutable="no">
+        <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+        <definition>State metaheurictics.strategy.Strategy.bestState</definition>
+        <argsstring></argsstring>
+        <name>bestState</name>
+        <qualifiedname>metaheurictics.strategy.Strategy.bestState</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheurictics/strategy/Strategy.java" line="36" column="15" bodyfile="practica5/src/main/java/metaheurictics/strategy/Strategy.java" bodystart="36" bodyend="-1"/>
+        <referencedby refid="classmetaheurictics_1_1strategy_1_1Strategy_1af320de8dac2de5a7ec10d373952064d5" compoundref="Strategy_8java" startline="94" endline="282">metaheurictics.strategy.Strategy.executeStrategy</referencedby>
+        <referencedby refid="classmetaheurictics_1_1strategy_1_1Strategy_1a4194b52f17701a8fabfc1265e6b4b267" compoundref="Strategy_8java" startline="342" endline="344">metaheurictics.strategy.Strategy.getBestState</referencedby>
+        <referencedby refid="classmetaheurictics_1_1strategy_1_1Strategy_1a91022422139781e5efd55fe77049bcce" compoundref="Strategy_8java" startline="518" endline="527">metaheurictics.strategy.Strategy.updateRef</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheurictics_1_1strategy_1_1Strategy_1a72e752e037880a0ff45c679bbc553d00" prot="private" static="no" mutable="no">
+        <type><ref refid="classproblem_1_1definition_1_1Problem" kindref="compound">Problem</ref></type>
+        <definition>Problem metaheurictics.strategy.Strategy.problem</definition>
+        <argsstring></argsstring>
+        <name>problem</name>
+        <qualifiedname>metaheurictics.strategy.Strategy.problem</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheurictics/strategy/Strategy.java" line="37" column="17" bodyfile="practica5/src/main/java/metaheurictics/strategy/Strategy.java" bodystart="37" bodyend="-1"/>
+        <referencedby refid="classmetaheurictics_1_1strategy_1_1Strategy_1af320de8dac2de5a7ec10d373952064d5" compoundref="Strategy_8java" startline="94" endline="282">metaheurictics.strategy.Strategy.executeStrategy</referencedby>
+        <referencedby refid="classmetaheurictics_1_1strategy_1_1Strategy_1a4bc6bd95db71e14b1f48c1bfc85f1305" compoundref="Strategy_8java" startline="405" endline="407">metaheurictics.strategy.Strategy.getProblem</referencedby>
+        <referencedby refid="classmetaheurictics_1_1strategy_1_1Strategy_1a2a5bb3ddd64d9f7d7ee9f50da7804850" compoundref="Strategy_8java" startline="413" endline="415">metaheurictics.strategy.Strategy.setProblem</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheurictics_1_1strategy_1_1Strategy_1aba3d7b221051061dd7955d3059ea2272" prot="private" static="no" mutable="no">
+        <type><ref refid="classlocal__search_1_1complement_1_1StopExecute" kindref="compound">StopExecute</ref></type>
+        <definition>StopExecute metaheurictics.strategy.Strategy.stopexecute</definition>
+        <argsstring></argsstring>
+        <name>stopexecute</name>
+        <qualifiedname>metaheurictics.strategy.Strategy.stopexecute</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheurictics/strategy/Strategy.java" line="39" column="21" bodyfile="practica5/src/main/java/metaheurictics/strategy/Strategy.java" bodystart="39" bodyend="-1"/>
+        <referencedby refid="classmetaheurictics_1_1strategy_1_1Strategy_1af320de8dac2de5a7ec10d373952064d5" compoundref="Strategy_8java" startline="94" endline="282">metaheurictics.strategy.Strategy.executeStrategy</referencedby>
+        <referencedby refid="classmetaheurictics_1_1strategy_1_1Strategy_1a1ce64c953a44083a90753c3ffb46d40e" compoundref="Strategy_8java" startline="357" endline="359">metaheurictics.strategy.Strategy.getStopexecute</referencedby>
+        <referencedby refid="classmetaheurictics_1_1strategy_1_1Strategy_1a2f833e91e1f26476659d049362f219ac" compoundref="Strategy_8java" startline="381" endline="383">metaheurictics.strategy.Strategy.setStopexecute</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheurictics_1_1strategy_1_1Strategy_1aeae847a5e9cad6d863212f3e3cf04cbe" prot="private" static="no" mutable="no">
+        <type><ref refid="classlocal__search_1_1complement_1_1UpdateParameter" kindref="compound">UpdateParameter</ref></type>
+        <definition>UpdateParameter metaheurictics.strategy.Strategy.updateparameter</definition>
+        <argsstring></argsstring>
+        <name>updateparameter</name>
+        <qualifiedname>metaheurictics.strategy.Strategy.updateparameter</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheurictics/strategy/Strategy.java" line="40" column="25" bodyfile="practica5/src/main/java/metaheurictics/strategy/Strategy.java" bodystart="40" bodyend="-1"/>
+        <referencedby refid="classmetaheurictics_1_1strategy_1_1Strategy_1a0036f56e2cd146ee5f37a6da30ed415a" compoundref="Strategy_8java" startline="389" endline="391">metaheurictics.strategy.Strategy.getUpdateparameter</referencedby>
+        <referencedby refid="classmetaheurictics_1_1strategy_1_1Strategy_1ac781087326a37b5f9cc1ea135bfc7c82" compoundref="Strategy_8java" startline="397" endline="399">metaheurictics.strategy.Strategy.setUpdateparameter</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheurictics_1_1strategy_1_1Strategy_1afc091846262ceb740b13d949744e8bf7" prot="private" static="no" mutable="no">
+        <type><ref refid="interfacefactory__interface_1_1IFFactoryGenerator" kindref="compound">IFFactoryGenerator</ref></type>
+        <definition>IFFactoryGenerator metaheurictics.strategy.Strategy.ifFactoryGenerator</definition>
+        <argsstring></argsstring>
+        <name>ifFactoryGenerator</name>
+        <qualifiedname>metaheurictics.strategy.Strategy.ifFactoryGenerator</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheurictics/strategy/Strategy.java" line="41" column="28" bodyfile="practica5/src/main/java/metaheurictics/strategy/Strategy.java" bodystart="41" bodyend="-1"/>
+        <referencedby refid="classmetaheurictics_1_1strategy_1_1Strategy_1abc3c1b65673f8757ae414dfd4bf18f97" compoundref="Strategy_8java" startline="332" endline="336">metaheurictics.strategy.Strategy.newGenerator</referencedby>
+        <referencedby refid="classmetaheurictics_1_1strategy_1_1Strategy_1ae5fae0f94a80e56677aa3f7ac77b6d44" compoundref="Strategy_8java" startline="307" endline="325">metaheurictics.strategy.Strategy.update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheurictics_1_1strategy_1_1Strategy_1a537769ff595ae1b51c2035982723be6e" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int metaheurictics.strategy.Strategy.countCurrent</definition>
+        <argsstring></argsstring>
+        <name>countCurrent</name>
+        <qualifiedname>metaheurictics.strategy.Strategy.countCurrent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheurictics/strategy/Strategy.java" line="42" column="13" bodyfile="practica5/src/main/java/metaheurictics/strategy/Strategy.java" bodystart="42" bodyend="-1"/>
+        <referencedby refid="classmetaheurictics_1_1strategy_1_1Strategy_1af320de8dac2de5a7ec10d373952064d5" compoundref="Strategy_8java" startline="94" endline="282">metaheurictics.strategy.Strategy.executeStrategy</referencedby>
+        <referencedby refid="classmetaheurictics_1_1strategy_1_1Strategy_1a6440afde976cb69c01b95d4c41a9ff5c" compoundref="Strategy_8java" startline="471" endline="473">metaheurictics.strategy.Strategy.getCountCurrent</referencedby>
+        <referencedby refid="classmetaheurictics_1_1strategy_1_1Strategy_1a0a7bed828f9d4fb1b29dbda112020b77" compoundref="Strategy_8java" startline="479" endline="481">metaheurictics.strategy.Strategy.setCountCurrent</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheurictics_1_1strategy_1_1Strategy_1a3251f7d633dd233da6de5e84cb49b14b" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int metaheurictics.strategy.Strategy.countMax</definition>
+        <argsstring></argsstring>
+        <name>countMax</name>
+        <qualifiedname>metaheurictics.strategy.Strategy.countMax</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheurictics/strategy/Strategy.java" line="43" column="13" bodyfile="practica5/src/main/java/metaheurictics/strategy/Strategy.java" bodystart="43" bodyend="-1"/>
+        <referencedby refid="classmetaheurictics_1_1strategy_1_1Strategy_1a6d5037c21b9a24975f301ac6aba4dffd" compoundref="Strategy_8java" startline="365" endline="367">metaheurictics.strategy.Strategy.getCountMax</referencedby>
+        <referencedby refid="classmetaheurictics_1_1strategy_1_1Strategy_1a7512cbe68ba46c4d8534f0aff17b5c17" compoundref="Strategy_8java" startline="373" endline="375">metaheurictics.strategy.Strategy.setCountMax</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheurictics_1_1strategy_1_1Strategy_1a86782bca2ad115b47f019513b1e8a389" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int metaheurictics.strategy.Strategy.countPeriodo</definition>
+        <argsstring></argsstring>
+        <name>countPeriodo</name>
+        <qualifiedname>metaheurictics.strategy.Strategy.countPeriodo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheurictics/strategy/Strategy.java" line="66" column="13" bodyfile="practica5/src/main/java/metaheurictics/strategy/Strategy.java" bodystart="66" bodyend="-1"/>
+        <referencedby refid="classmetaheurictics_1_1strategy_1_1Strategy_1af320de8dac2de5a7ec10d373952064d5" compoundref="Strategy_8java" startline="94" endline="282">metaheurictics.strategy.Strategy.executeStrategy</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheurictics_1_1strategy_1_1Strategy_1ab3b8afb295795d6f31000bd5c18700be" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int metaheurictics.strategy.Strategy.periodo</definition>
+        <argsstring></argsstring>
+        <name>periodo</name>
+        <qualifiedname>metaheurictics.strategy.Strategy.periodo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheurictics/strategy/Strategy.java" line="67" column="13" bodyfile="practica5/src/main/java/metaheurictics/strategy/Strategy.java" bodystart="67" bodyend="-1"/>
+        <referencedby refid="classmetaheurictics_1_1strategy_1_1Strategy_1af320de8dac2de5a7ec10d373952064d5" compoundref="Strategy_8java" startline="94" endline="282">metaheurictics.strategy.Strategy.executeStrategy</referencedby>
+        <referencedby refid="classmetaheurictics_1_1strategy_1_1Strategy_1a2f4520e24d31de6e4895bdf4ab2b9502" compoundref="Strategy_8java" startline="284" endline="293">metaheurictics.strategy.Strategy.updateCountGender</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classmetaheurictics_1_1strategy_1_1Strategy_1a72b0b983ab5990ef999037f9c331515a" prot="public" static="no" mutable="no">
+        <type>SortedMap&lt; <ref refid="enummetaheuristics_1_1generators_1_1GeneratorType" kindref="compound">GeneratorType</ref>, <ref refid="classmetaheuristics_1_1generators_1_1Generator" kindref="compound">Generator</ref> &gt;</type>
+        <definition>SortedMap&lt;GeneratorType, Generator&gt; metaheurictics.strategy.Strategy.mapGenerators</definition>
+        <argsstring></argsstring>
+        <name>mapGenerators</name>
+        <qualifiedname>metaheurictics.strategy.Strategy.mapGenerators</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheurictics/strategy/Strategy.java" line="38" column="18" bodyfile="practica5/src/main/java/metaheurictics/strategy/Strategy.java" bodystart="38" bodyend="-1"/>
+        <referencedby refid="classmetaheurictics_1_1strategy_1_1Strategy_1ac70469856a2b6424f29952c0e77eebf8" compoundref="Strategy_8java" startline="421" endline="433">metaheurictics.strategy.Strategy.getListKey</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a951d5d5991b9e676084456258c2c2947" compoundref="DistributionEstimationAlgorithm_8java" startline="189" endline="208">metaheuristics.generators.DistributionEstimationAlgorithm.getListStateRef</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a3c8abb363dd3c13968dca892016f7567" compoundref="EvolutionStrategies_8java" startline="164" endline="183">metaheuristics.generators.EvolutionStrategies.getListStateRef</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a02c8f9088f27ab03a6a6ec65348750b5" compoundref="GeneticAlgorithm_8java" startline="200" endline="221">metaheuristics.generators.GeneticAlgorithm.getListStateRef</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a4a9da4ad8253a7521056fbb306a495a3" compoundref="ParticleSwarmOptimization_8java" startline="220" endline="260">metaheuristics.generators.ParticleSwarmOptimization.getListStateRef</referencedby>
+        <referencedby refid="classmetaheurictics_1_1strategy_1_1Strategy_1a24dc7f53fd6fed09d4db04350f73b1a3" compoundref="Strategy_8java" startline="454" endline="465">metaheurictics.strategy.Strategy.initialize</referencedby>
+        <referencedby refid="classmetaheurictics_1_1strategy_1_1Strategy_1a01adb5013155c7f691f95e8ab59181d0" compoundref="Strategy_8java" startline="438" endline="449">metaheurictics.strategy.Strategy.initializeGenerators</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheurictics_1_1strategy_1_1Strategy_1a2f0ea18b2127e6e38c1d335fed32c7e0" prot="public" static="no" mutable="no">
+        <type><ref refid="classmetaheuristics_1_1generators_1_1Generator" kindref="compound">Generator</ref></type>
+        <definition>Generator metaheurictics.strategy.Strategy.generator</definition>
+        <argsstring></argsstring>
+        <name>generator</name>
+        <qualifiedname>metaheurictics.strategy.Strategy.generator</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheurictics/strategy/Strategy.java" line="44" column="18" bodyfile="practica5/src/main/java/metaheurictics/strategy/Strategy.java" bodystart="44" bodyend="-1"/>
+        <referencedby refid="classmetaheurictics_1_1strategy_1_1Strategy_1af320de8dac2de5a7ec10d373952064d5" compoundref="Strategy_8java" startline="94" endline="282">metaheurictics.strategy.Strategy.executeStrategy</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiGenerator_1a2309ca3d3de82961bbc61d3fb6c893fc" compoundref="MultiGenerator_8java" startline="213" endline="224">metaheuristics.generators.MultiGenerator.generate</referencedby>
+        <referencedby refid="classmetaheurictics_1_1strategy_1_1Strategy_1a24dc7f53fd6fed09d4db04350f73b1a3" compoundref="Strategy_8java" startline="454" endline="465">metaheurictics.strategy.Strategy.initialize</referencedby>
+        <referencedby refid="classmetaheurictics_1_1strategy_1_1Strategy_1a01adb5013155c7f691f95e8ab59181d0" compoundref="Strategy_8java" startline="438" endline="449">metaheurictics.strategy.Strategy.initializeGenerators</referencedby>
+        <referencedby refid="classlocal__search_1_1acceptation__type_1_1Dominance_1ad61c0e3cb6cc4036419cb36758cf3814" compoundref="Dominance_8java" startline="33" endline="75">local_search.acceptation_type.Dominance.listDominance</referencedby>
+        <referencedby refid="classmetaheurictics_1_1strategy_1_1Strategy_1abc3c1b65673f8757ae414dfd4bf18f97" compoundref="Strategy_8java" startline="332" endline="336">metaheurictics.strategy.Strategy.newGenerator</referencedby>
+        <referencedby refid="classlocal__search_1_1complement_1_1UpdateParameter_1aa88a78351c0bc5de77f1ad05bee29e11" compoundref="UpdateParameter_8java" startline="39" endline="61">local_search.complement.UpdateParameter.updateParameter</referencedby>
+        <referencedby refid="classmetaheurictics_1_1strategy_1_1Strategy_1a91022422139781e5efd55fe77049bcce" compoundref="Strategy_8java" startline="518" endline="527">metaheurictics.strategy.Strategy.updateRef</referencedby>
+        <referencedby refid="classmetaheurictics_1_1strategy_1_1Strategy_1a507abefc022ec475c0d5473055adf484" compoundref="Strategy_8java" startline="540" endline="551">metaheurictics.strategy.Strategy.updateRefGenerator</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheurictics_1_1strategy_1_1Strategy_1a1914ff8fe50a63e507d63538cd63e9ea" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double metaheurictics.strategy.Strategy.threshold</definition>
+        <argsstring></argsstring>
+        <name>threshold</name>
+        <qualifiedname>metaheurictics.strategy.Strategy.threshold</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheurictics/strategy/Strategy.java" line="45" column="15" bodyfile="practica5/src/main/java/metaheurictics/strategy/Strategy.java" bodystart="45" bodyend="-1"/>
+        <referencedby refid="classmetaheurictics_1_1strategy_1_1Strategy_1a307eddf8b8d1eadfdce6b89148bd78fb" compoundref="Strategy_8java" startline="492" endline="494">metaheurictics.strategy.Strategy.getThreshold</referencedby>
+        <referencedby refid="classmetaheurictics_1_1strategy_1_1Strategy_1abc89b807d8506e11ef85c41eeb5e1858" compoundref="Strategy_8java" startline="500" endline="502">metaheurictics.strategy.Strategy.setThreshold</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheurictics_1_1strategy_1_1Strategy_1a6079f1c09fe81506e05976037911be31" prot="public" static="no" mutable="no">
+        <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+        <definition>List&lt;State&gt; metaheurictics.strategy.Strategy.listStates</definition>
+        <argsstring></argsstring>
+        <name>listStates</name>
+        <qualifiedname>metaheurictics.strategy.Strategy.listStates</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheurictics/strategy/Strategy.java" line="47" column="13" bodyfile="practica5/src/main/java/metaheurictics/strategy/Strategy.java" bodystart="47" bodyend="-1"/>
+        <referencedby refid="classmetaheurictics_1_1strategy_1_1Strategy_1af320de8dac2de5a7ec10d373952064d5" compoundref="Strategy_8java" startline="94" endline="282">metaheurictics.strategy.Strategy.executeStrategy</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiGenerator_1ada4833a51b39d1372e2c050448bbab6c" compoundref="MultiGenerator_8java" startline="90" endline="124">metaheuristics.generators.MultiGenerator.initializeGenerators</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheurictics_1_1strategy_1_1Strategy_1ad3a183f63a0c3c4b25957baa9040eaec" prot="public" static="no" mutable="no">
+        <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+        <definition>List&lt;State&gt; metaheurictics.strategy.Strategy.listBest</definition>
+        <argsstring></argsstring>
+        <name>listBest</name>
+        <qualifiedname>metaheurictics.strategy.Strategy.listBest</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheurictics/strategy/Strategy.java" line="48" column="13" bodyfile="practica5/src/main/java/metaheurictics/strategy/Strategy.java" bodystart="48" bodyend="-1"/>
+        <referencedby refid="classmetaheurictics_1_1strategy_1_1Strategy_1af320de8dac2de5a7ec10d373952064d5" compoundref="Strategy_8java" startline="94" endline="282">metaheurictics.strategy.Strategy.executeStrategy</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheurictics_1_1strategy_1_1Strategy_1aa572e7d90e24bae70ea47a31fee298f4" prot="public" static="no" mutable="no">
+        <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+        <definition>List&lt;State&gt; metaheurictics.strategy.Strategy.listRefPoblacFinal</definition>
+        <argsstring></argsstring>
+        <name>listRefPoblacFinal</name>
+        <qualifiedname>metaheurictics.strategy.Strategy.listRefPoblacFinal</qualifiedname>
+        <initializer>= new ArrayList&lt;<ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref>&gt; ()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheurictics/strategy/Strategy.java" line="49" column="13" bodyfile="practica5/src/main/java/metaheurictics/strategy/Strategy.java" bodystart="49" bodyend="-1"/>
+        <referencedby refid="classlocal__search_1_1acceptation__type_1_1AcceptMulticase_1a526e452510b7eebe59af4dde0c59b337" compoundref="AcceptMulticase_8java" startline="34" endline="103">local_search.acceptation_type.AcceptMulticase.acceptCandidate</referencedby>
+        <referencedby refid="classlocal__search_1_1acceptation__type_1_1AcceptNotDominated_1a05fe7b0385dfafe7701f6a4e9b2b80d2" compoundref="AcceptNotDominated_8java" startline="28" endline="50">local_search.acceptation_type.AcceptNotDominated.acceptCandidate</referencedby>
+        <referencedby refid="classlocal__search_1_1acceptation__type_1_1AcceptNotDominatedTabu_1a3182ac113bddb89bb3ea7af704b38835" compoundref="AcceptNotDominatedTabu_8java" startline="27" endline="40">local_search.acceptation_type.AcceptNotDominatedTabu.acceptCandidate</referencedby>
+        <referencedby refid="classmetaheurictics_1_1strategy_1_1Strategy_1af320de8dac2de5a7ec10d373952064d5" compoundref="Strategy_8java" startline="94" endline="282">metaheurictics.strategy.Strategy.executeStrategy</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a35ed16f3af3c7fdcbff8165d9674cc9a" compoundref="MultiobjectiveHillClimbingDistance_8java" startline="87" endline="137">metaheuristics.generators.MultiobjectiveHillClimbingDistance.updateReference</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingRestart_1ab3716a950049b1d77c4374efd355aa14" compoundref="MultiobjectiveHillClimbingRestart_8java" startline="83" endline="133">metaheuristics.generators.MultiobjectiveHillClimbingRestart.updateReference</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheurictics_1_1strategy_1_1Strategy_1a5ac9ccf79296d15b1a44d119c1f1fc6e" prot="public" static="no" mutable="no">
+        <type><ref refid="classlocal__search_1_1acceptation__type_1_1Dominance" kindref="compound">Dominance</ref></type>
+        <definition>Dominance metaheurictics.strategy.Strategy.notDominated</definition>
+        <argsstring></argsstring>
+        <name>notDominated</name>
+        <qualifiedname>metaheurictics.strategy.Strategy.notDominated</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheurictics/strategy/Strategy.java" line="50" column="18" bodyfile="practica5/src/main/java/metaheurictics/strategy/Strategy.java" bodystart="50" bodyend="-1"/>
+        <referencedby refid="classmetaheurictics_1_1strategy_1_1Strategy_1af320de8dac2de5a7ec10d373952064d5" compoundref="Strategy_8java" startline="94" endline="282">metaheurictics.strategy.Strategy.executeStrategy</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheurictics_1_1strategy_1_1Strategy_1a4e698ca86e2842c70099dadd560e7578" prot="public" static="no" mutable="no">
+        <type>boolean</type>
+        <definition>boolean metaheurictics.strategy.Strategy.saveListStates</definition>
+        <argsstring></argsstring>
+        <name>saveListStates</name>
+        <qualifiedname>metaheurictics.strategy.Strategy.saveListStates</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheurictics/strategy/Strategy.java" line="53" column="16" bodyfile="practica5/src/main/java/metaheurictics/strategy/Strategy.java" bodystart="53" bodyend="-1"/>
+        <referencedby refid="classmetaheurictics_1_1strategy_1_1Strategy_1af320de8dac2de5a7ec10d373952064d5" compoundref="Strategy_8java" startline="94" endline="282">metaheurictics.strategy.Strategy.executeStrategy</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheurictics_1_1strategy_1_1Strategy_1a077d2cdfe76bd31661ca024e339a4c98" prot="public" static="no" mutable="no">
+        <type>boolean</type>
+        <definition>boolean metaheurictics.strategy.Strategy.saveListBestStates</definition>
+        <argsstring></argsstring>
+        <name>saveListBestStates</name>
+        <qualifiedname>metaheurictics.strategy.Strategy.saveListBestStates</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheurictics/strategy/Strategy.java" line="54" column="16" bodyfile="practica5/src/main/java/metaheurictics/strategy/Strategy.java" bodystart="54" bodyend="-1"/>
+        <referencedby refid="classmetaheurictics_1_1strategy_1_1Strategy_1af320de8dac2de5a7ec10d373952064d5" compoundref="Strategy_8java" startline="94" endline="282">metaheurictics.strategy.Strategy.executeStrategy</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheurictics_1_1strategy_1_1Strategy_1ad7c438a82bc4f08ad239b3bc56320bca" prot="public" static="no" mutable="no">
+        <type>boolean</type>
+        <definition>boolean metaheurictics.strategy.Strategy.saveFreneParetoMonoObjetivo</definition>
+        <argsstring></argsstring>
+        <name>saveFreneParetoMonoObjetivo</name>
+        <qualifiedname>metaheurictics.strategy.Strategy.saveFreneParetoMonoObjetivo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheurictics/strategy/Strategy.java" line="55" column="16" bodyfile="practica5/src/main/java/metaheurictics/strategy/Strategy.java" bodystart="55" bodyend="-1"/>
+        <referencedby refid="classmetaheurictics_1_1strategy_1_1Strategy_1af320de8dac2de5a7ec10d373952064d5" compoundref="Strategy_8java" startline="94" endline="282">metaheurictics.strategy.Strategy.executeStrategy</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheurictics_1_1strategy_1_1Strategy_1a3a4ef09902bbbfec07102446f7eb2809" prot="public" static="no" mutable="no">
+        <type>boolean</type>
+        <definition>boolean metaheurictics.strategy.Strategy.calculateTime</definition>
+        <argsstring></argsstring>
+        <name>calculateTime</name>
+        <qualifiedname>metaheurictics.strategy.Strategy.calculateTime</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheurictics/strategy/Strategy.java" line="56" column="16" bodyfile="practica5/src/main/java/metaheurictics/strategy/Strategy.java" bodystart="56" bodyend="-1"/>
+        <referencedby refid="classmetaheurictics_1_1strategy_1_1Strategy_1af320de8dac2de5a7ec10d373952064d5" compoundref="Strategy_8java" startline="94" endline="282">metaheurictics.strategy.Strategy.executeStrategy</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheurictics_1_1strategy_1_1Strategy_1ab111e2ebd50ff83f126ef6f5201f9283" prot="public" static="no" mutable="no">
+        <type>float[]</type>
+        <definition>float [] metaheurictics.strategy.Strategy.listOfflineError</definition>
+        <argsstring></argsstring>
+        <name>listOfflineError</name>
+        <qualifiedname>metaheurictics.strategy.Strategy.listOfflineError</qualifiedname>
+        <initializer>= new float[100]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheurictics/strategy/Strategy.java" line="63" column="14" bodyfile="practica5/src/main/java/metaheurictics/strategy/Strategy.java" bodystart="63" bodyend="-1"/>
+        <referencedby refid="classmetaheurictics_1_1strategy_1_1Strategy_1a6d8f615b37de120cbf16eac6f1b6e721" compoundref="Strategy_8java" startline="509" endline="512">metaheurictics.strategy.Strategy.calculateOffLinePerformance</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheurictics_1_1strategy_1_1Strategy_1ab22b49ea4c8e68c8d35f392bcc4f8ded" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int metaheurictics.strategy.Strategy.countPeriodChange</definition>
+        <argsstring></argsstring>
+        <name>countPeriodChange</name>
+        <qualifiedname>metaheurictics.strategy.Strategy.countPeriodChange</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheurictics/strategy/Strategy.java" line="64" column="12" bodyfile="practica5/src/main/java/metaheurictics/strategy/Strategy.java" bodystart="64" bodyend="-1"/>
+        <referencedby refid="classmetaheurictics_1_1strategy_1_1Strategy_1a6d8f615b37de120cbf16eac6f1b6e721" compoundref="Strategy_8java" startline="509" endline="512">metaheurictics.strategy.Strategy.calculateOffLinePerformance</referencedby>
+        <referencedby refid="classmetaheurictics_1_1strategy_1_1Strategy_1af320de8dac2de5a7ec10d373952064d5" compoundref="Strategy_8java" startline="94" endline="282">metaheurictics.strategy.Strategy.executeStrategy</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheurictics_1_1strategy_1_1Strategy_1abea8b81eeed176475070dac996fe9b6c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int metaheurictics.strategy.Strategy.countChange</definition>
+        <argsstring></argsstring>
+        <name>countChange</name>
+        <qualifiedname>metaheurictics.strategy.Strategy.countChange</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheurictics/strategy/Strategy.java" line="65" column="12" bodyfile="practica5/src/main/java/metaheurictics/strategy/Strategy.java" bodystart="65" bodyend="-1"/>
+        <referencedby refid="classmetaheurictics_1_1strategy_1_1Strategy_1af320de8dac2de5a7ec10d373952064d5" compoundref="Strategy_8java" startline="94" endline="282">metaheurictics.strategy.Strategy.executeStrategy</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="package-attrib">
+      <memberdef kind="variable" id="classmetaheurictics_1_1strategy_1_1Strategy_1afbeb580f6bf107dd0b6d128e86a4764c" prot="package" static="no" mutable="no">
+        <type>long</type>
+        <definition>long metaheurictics.strategy.Strategy.initialTime</definition>
+        <argsstring></argsstring>
+        <name>initialTime</name>
+        <qualifiedname>metaheurictics.strategy.Strategy.initialTime</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheurictics/strategy/Strategy.java" line="59" column="6" bodyfile="practica5/src/main/java/metaheurictics/strategy/Strategy.java" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheurictics_1_1strategy_1_1Strategy_1a1af21013ce25ff84657e281635b481c7" prot="package" static="no" mutable="no">
+        <type>long</type>
+        <definition>long metaheurictics.strategy.Strategy.finalTime</definition>
+        <argsstring></argsstring>
+        <name>finalTime</name>
+        <qualifiedname>metaheurictics.strategy.Strategy.finalTime</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheurictics/strategy/Strategy.java" line="60" column="6" bodyfile="practica5/src/main/java/metaheurictics/strategy/Strategy.java" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheurictics_1_1strategy_1_1Strategy_1a98a7b4be6d8c731b7f1dcfcde571a5d5" prot="package" static="no" mutable="no">
+        <type>long</type>
+        <definition>long metaheurictics.strategy.Strategy.timeExecute</definition>
+        <argsstring></argsstring>
+        <name>timeExecute</name>
+        <qualifiedname>metaheurictics.strategy.Strategy.timeExecute</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheurictics/strategy/Strategy.java" line="61" column="6" bodyfile="practica5/src/main/java/metaheurictics/strategy/Strategy.java" bodystart="61" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classmetaheurictics_1_1strategy_1_1Strategy_1ac65d26e08073f5cfc7596577f18b9694" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>metaheurictics.strategy.Strategy.Strategy</definition>
+        <argsstring>()</argsstring>
+        <name>Strategy</name>
+        <qualifiedname>metaheurictics.strategy.Strategy.Strategy</qualifiedname>
+        <briefdescription>
+<para><ref refid="classmetaheurictics_1_1strategy_1_1Strategy" kindref="compound">Strategy</ref> - method constructor of <ref refid="classmetaheurictics_1_1strategy_1_1Strategy" kindref="compound">Strategy</ref> singleton. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheurictics/strategy/Strategy.java" line="73" column="9" bodyfile="practica5/src/main/java/metaheurictics/strategy/Strategy.java" bodystart="73" bodyend="75"/>
+        <referencedby refid="classmetaheurictics_1_1strategy_1_1Strategy_1ad2641e12c52292930364de6655333aa8" compoundref="Strategy_8java" startline="80" endline="85">metaheurictics.strategy.Strategy.getStrategy</referencedby>
+        <referencedby refid="classmetaheurictics_1_1strategy_1_1Strategy_1ae5fae0f94a80e56677aa3f7ac77b6d44" compoundref="Strategy_8java" startline="307" endline="325">metaheurictics.strategy.Strategy.update</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classmetaheurictics_1_1strategy_1_1Strategy_1ad2641e12c52292930364de6655333aa8" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classmetaheurictics_1_1strategy_1_1Strategy_1ac65d26e08073f5cfc7596577f18b9694" kindref="member">Strategy</ref></type>
+        <definition>static Strategy metaheurictics.strategy.Strategy.getStrategy</definition>
+        <argsstring>()</argsstring>
+        <name>getStrategy</name>
+        <qualifiedname>metaheurictics.strategy.Strategy.getStrategy</qualifiedname>
+        <briefdescription>
+<para>getStrategy - getter of <ref refid="classmetaheurictics_1_1strategy_1_1Strategy" kindref="compound">Strategy</ref> singleton instance </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="classmetaheurictics_1_1strategy_1_1Strategy" kindref="compound">Strategy</ref> instance </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheurictics/strategy/Strategy.java" line="80" column="24" bodyfile="practica5/src/main/java/metaheurictics/strategy/Strategy.java" bodystart="80" bodyend="85"/>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1ac65d26e08073f5cfc7596577f18b9694" compoundref="Strategy_8java" startline="73" endline="75">metaheurictics.strategy.Strategy.Strategy</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1a235c3afb5c1d4afe8ebaa1da12cff32e" compoundref="Strategy_8java" startline="35">metaheurictics.strategy.Strategy.strategy</references>
+        <referencedby refid="classlocal__search_1_1acceptation__type_1_1AcceptBest_1a0ecd99df90a9818e14ddf8908cc38626" compoundref="AcceptBest_8java" startline="38" endline="55">local_search.acceptation_type.AcceptBest.acceptCandidate</referencedby>
+        <referencedby refid="classlocal__search_1_1acceptation__type_1_1AcceptMulticase_1a526e452510b7eebe59af4dde0c59b337" compoundref="AcceptMulticase_8java" startline="34" endline="103">local_search.acceptation_type.AcceptMulticase.acceptCandidate</referencedby>
+        <referencedby refid="classlocal__search_1_1acceptation__type_1_1AcceptNotBad_1a06c25a1ad9093849dc090b67effe8654" compoundref="AcceptNotBad_8java" startline="28" endline="46">local_search.acceptation_type.AcceptNotBad.acceptCandidate</referencedby>
+        <referencedby refid="classlocal__search_1_1acceptation__type_1_1AcceptNotBadT_1ab913b2e75ae2c8a85091ba229f13d123" compoundref="AcceptNotBadT_8java" startline="45" endline="66">local_search.acceptation_type.AcceptNotBadT.acceptCandidate</referencedby>
+        <referencedby refid="classlocal__search_1_1acceptation__type_1_1AcceptNotBadU_1aae18a93b424add171ea18e79645977c7" compoundref="AcceptNotBadU_8java" startline="38" endline="55">local_search.acceptation_type.AcceptNotBadU.acceptCandidate</referencedby>
+        <referencedby refid="classlocal__search_1_1acceptation__type_1_1AcceptNotDominated_1a05fe7b0385dfafe7701f6a4e9b2b80d2" compoundref="AcceptNotDominated_8java" startline="28" endline="50">local_search.acceptation_type.AcceptNotDominated.acceptCandidate</referencedby>
+        <referencedby refid="classlocal__search_1_1acceptation__type_1_1AcceptNotDominatedTabu_1a3182ac113bddb89bb3ea7af704b38835" compoundref="AcceptNotDominatedTabu_8java" startline="27" endline="40">local_search.acceptation_type.AcceptNotDominatedTabu.acceptCandidate</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiGenerator_1a21767d34c374a65dd29196459273ff34" compoundref="MultiGenerator_8java" startline="129" endline="147">metaheuristics.generators.MultiGenerator.createInstanceGeneratorsBPP</referencedby>
+        <referencedby refid="classevolutionary__algorithms_1_1complement_1_1OnePointCrossover_1a6d644b471de305b6508b2b647edc76d1" compoundref="OnePointCrossover_8java" startline="32" endline="62">evolutionary_algorithms.complement.OnePointCrossover.crossover</referencedby>
+        <referencedby refid="classlocal__search_1_1acceptation__type_1_1Dominance_1a0dafd58be8365a22956f59417841a2d8" compoundref="Dominance_8java" startline="87" endline="118">local_search.acceptation_type.Dominance.dominance</referencedby>
+        <referencedby refid="classproblem_1_1extension_1_1FactoresPonderados_1a935d426d08fbf69af9ea5fe2196692bc" compoundref="FactoresPonderados_8java" startline="29" endline="63">problem.extension.FactoresPonderados.evaluationState</referencedby>
+        <referencedby refid="classproblem_1_1extension_1_1MultiObjetivoPuro_1aaac35db96f3f750b6f5349243c39d122" compoundref="MultiObjetivoPuro_8java" startline="29" endline="58">problem.extension.MultiObjetivoPuro.evaluationState</referencedby>
+        <referencedby refid="classevolutionary__algorithms_1_1complement_1_1AIOMutation_1a3c9193b63cc517d48761bfddc3c0374b" compoundref="AIOMutation_8java" startline="85" endline="89">evolutionary_algorithms.complement.AIOMutation.fillPath</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1aec9a3560a4a9aa2e60eeaf289ea18b3c" compoundref="ParticleSwarmOptimization_8java" startline="403" endline="418">metaheuristics.generators.ParticleSwarmOptimization.gBestInicial</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a5d496021c3310be8abbc218d4bc63baa" compoundref="DistributionEstimationAlgorithm_8java" startline="95" endline="117">metaheuristics.generators.DistributionEstimationAlgorithm.generate</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a5a222a42cc69a782b603004f2ca501d0" compoundref="EvolutionStrategies_8java" startline="76" endline="94">metaheuristics.generators.EvolutionStrategies.generate</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1afa69278cc4f87d309326773aeab7b6da" compoundref="GeneticAlgorithm_8java" startline="90" endline="125">metaheuristics.generators.GeneticAlgorithm.generate</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1HillClimbing_1abcb16309481537b632ff4ece07534f97" compoundref="HillClimbing_8java" startline="72" endline="77">metaheuristics.generators.HillClimbing.generate</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a03effb92915e2642b7d87763987a43ae" compoundref="HillClimbingRestart_8java" startline="73" endline="85">metaheuristics.generators.HillClimbingRestart.generate</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1af2ac27e167ad69093379e30a9dcf1955" compoundref="LimitThreshold_8java" startline="93" endline="97">metaheuristics.generators.LimitThreshold.generate</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_1a79d89f831f827fff6db6e9757c88f9a0" compoundref="MultiCaseSimulatedAnnealing_8java" startline="90" endline="95">metaheuristics.generators.MultiCaseSimulatedAnnealing.generate</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiGenerator_1a2309ca3d3de82961bbc61d3fb6c893fc" compoundref="MultiGenerator_8java" startline="213" endline="224">metaheuristics.generators.MultiGenerator.generate</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a10e8509749f9e10954b1ca7174e00103" compoundref="MultiobjectiveHillClimbingDistance_8java" startline="68" endline="72">metaheuristics.generators.MultiobjectiveHillClimbingDistance.generate</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingRestart_1aab0d9cf35c21f476056c9167679b565f" compoundref="MultiobjectiveHillClimbingRestart_8java" startline="71" endline="75">metaheuristics.generators.MultiobjectiveHillClimbingRestart.generate</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiobjectiveStochasticHillClimbing_1a4bdaba8339058a9132146ca79d88d19d" compoundref="MultiobjectiveStochasticHillClimbing_8java" startline="55" endline="59">metaheuristics.generators.MultiobjectiveStochasticHillClimbing.generate</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a719352455b19c8fc2244a4d7387db236" compoundref="MultiobjectiveTabuSearch_8java" startline="91" endline="97">metaheuristics.generators.MultiobjectiveTabuSearch.generate</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1RandomSearch_1ad7023836b94dd23bffd78ab7b9915551" compoundref="RandomSearch_8java" startline="66" endline="72">metaheuristics.generators.RandomSearch.generate</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a42465a5f9da3ff282afbd8cae9603274" compoundref="SimulatedAnnealing_8java" startline="118" endline="122">metaheuristics.generators.SimulatedAnnealing.generate</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1TabuSearch_1a960394b27d55ada10842a94184aa39b4" compoundref="TabuSearch_8java" startline="95" endline="99">metaheuristics.generators.TabuSearch.generate</referencedby>
+        <referencedby refid="classproblem__operators_1_1MutationOperator_1adc581cf1337e53458e6695aec007028b" compoundref="MutationOperator_8java" startline="32" endline="47">problem_operators.MutationOperator.generatedNewState</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a951d5d5991b9e676084456258c2c2947" compoundref="DistributionEstimationAlgorithm_8java" startline="189" endline="208">metaheuristics.generators.DistributionEstimationAlgorithm.getListStateRef</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a3c8abb363dd3c13968dca892016f7567" compoundref="EvolutionStrategies_8java" startline="164" endline="183">metaheuristics.generators.EvolutionStrategies.getListStateRef</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a02c8f9088f27ab03a6a6ec65348750b5" compoundref="GeneticAlgorithm_8java" startline="200" endline="221">metaheuristics.generators.GeneticAlgorithm.getListStateRef</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a4a9da4ad8253a7521056fbb306a495a3" compoundref="ParticleSwarmOptimization_8java" startline="220" endline="260">metaheuristics.generators.ParticleSwarmOptimization.getListStateRef</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a8087863b6c6a820fdf5c9b6aa3bc151c" compoundref="DistributionEstimationAlgorithm_8java" startline="124" endline="139">metaheuristics.generators.DistributionEstimationAlgorithm.getReference</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a9afcff28506375af6f405467990e7b36" compoundref="EvolutionStrategies_8java" startline="101" endline="119">metaheuristics.generators.EvolutionStrategies.getReference</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a7bff79adbecc5510d4294dbc617eb8b4" compoundref="GeneticAlgorithm_8java" startline="132" endline="150">metaheuristics.generators.GeneticAlgorithm.getReference</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1HillClimbing_1af34d8991af9ef04c0d8355040e5f2611" compoundref="HillClimbing_8java" startline="48" endline="64">metaheuristics.generators.HillClimbing.HillClimbing</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1aa506be31a40c309915296132624ee47e" compoundref="HillClimbingRestart_8java" startline="47" endline="64">metaheuristics.generators.HillClimbingRestart.HillClimbingRestart</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a2b35916a7fef7ecc1ae9c6f4c571a6d1" compoundref="ParticleSwarmOptimization_8java" startline="173" endline="195">metaheuristics.generators.ParticleSwarmOptimization.inicialiceLBest</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiGenerator_1ada4833a51b39d1372e2c050448bbab6c" compoundref="MultiGenerator_8java" startline="90" endline="124">metaheuristics.generators.MultiGenerator.initializeGenerators</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1aed9ff52ca66ef9bb47e893daa27f819c" compoundref="LimitThreshold_8java" startline="64" endline="86">metaheuristics.generators.LimitThreshold.LimitThreshold</referencedby>
+        <referencedby refid="classlocal__search_1_1acceptation__type_1_1Dominance_1ad61c0e3cb6cc4036419cb36758cf3814" compoundref="Dominance_8java" startline="33" endline="75">local_search.acceptation_type.Dominance.listDominance</referencedby>
+        <referencedby refid="classevolutionary__algorithms_1_1complement_1_1ProbabilisticSampling_1a034f2039f6c915edd8b074acaeca25b7" compoundref="ProbabilisticSampling_8java" startline="95" endline="105">evolutionary_algorithms.complement.ProbabilisticSampling.listState</referencedby>
+        <referencedby refid="classevolutionary__algorithms_1_1complement_1_1AIOMutation_1a182dacf4bb3046d61563d6bd5f31e156" compoundref="AIOMutation_8java" startline="31" endline="60">evolutionary_algorithms.complement.AIOMutation.mutation</referencedby>
+        <referencedby refid="classevolutionary__algorithms_1_1complement_1_1OnePointMutation_1a58178e28b21fd4559c38db00003e1bb0" compoundref="OnePointMutation_8java" startline="28" endline="37">evolutionary_algorithms.complement.OnePointMutation.mutation</referencedby>
+        <referencedby refid="classevolutionary__algorithms_1_1complement_1_1TowPointsMutation_1aba8bc136aacf5eafcd9e73d032218e16" compoundref="TowPointsMutation_8java" startline="20" endline="28">evolutionary_algorithms.complement.TowPointsMutation.mutation</referencedby>
+        <referencedby refid="classevolutionary__algorithms_1_1complement_1_1SteadyStateReplace_1a1283c4f4d8b9bbe5ae5dc4916934c8a9" compoundref="SteadyStateReplace_8java" startline="22" endline="57">evolutionary_algorithms.complement.SteadyStateReplace.replace</referencedby>
+        <referencedby refid="classevolutionary__algorithms_1_1complement_1_1ProbabilisticSampling_1a985f07b42905655bfaffb59b10f3471e" compoundref="ProbabilisticSampling_8java" startline="33" endline="87">evolutionary_algorithms.complement.ProbabilisticSampling.sampling</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiGenerator_1afef1d16b774c4e86135d2fc38d0dbed7" compoundref="MultiGenerator_8java" startline="302" endline="321">metaheuristics.generators.MultiGenerator.searchState</referencedby>
+        <referencedby refid="classevolutionary__algorithms_1_1complement_1_1TruncationSelection_1ab59a8422f18ba171cb70b680c84eaac1" compoundref="TruncationSelection_8java" startline="62" endline="76">evolutionary_algorithms.complement.TruncationSelection.selection</referencedby>
+        <referencedby refid="classlocal__search_1_1candidate__type_1_1CandidateValue_1a77505d8ed443552afa435f51d0222d75" compoundref="CandidateValue_8java" startline="74" endline="97">local_search.candidate_type.CandidateValue.stateCandidate</referencedby>
+        <referencedby refid="classlocal__search_1_1candidate__type_1_1NotDominatedCandidate_1a8f08ece6519709427b4917712b805159" compoundref="NotDominatedCandidate_8java" startline="27" endline="53">local_search.candidate_type.NotDominatedCandidate.stateSearch</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1TabuSearch_1ad0157e54c7cc9736d0cfc1785a3f65bf" compoundref="TabuSearch_8java" startline="65" endline="87">metaheuristics.generators.TabuSearch.TabuSearch</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiGenerator_1a9bca4abee16ba939d1aca80ac395a130" compoundref="MultiGenerator_8java" startline="413" endline="427">metaheuristics.generators.MultiGenerator.updateAwardImp</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiGenerator_1ab3417c34a00f079f67eed485ceeb8f1f" compoundref="MultiGenerator_8java" startline="393" endline="407">metaheuristics.generators.MultiGenerator.updateAwardSC</referencedby>
+        <referencedby refid="classlocal__search_1_1complement_1_1UpdateParameter_1aa88a78351c0bc5de77f1ad05bee29e11" compoundref="UpdateParameter_8java" startline="39" endline="61">local_search.complement.UpdateParameter.updateParameter</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a35ed16f3af3c7fdcbff8165d9674cc9a" compoundref="MultiobjectiveHillClimbingDistance_8java" startline="87" endline="137">metaheuristics.generators.MultiobjectiveHillClimbingDistance.updateReference</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingRestart_1ab3716a950049b1d77c4374efd355aa14" compoundref="MultiobjectiveHillClimbingRestart_8java" startline="83" endline="133">metaheuristics.generators.MultiobjectiveHillClimbingRestart.updateReference</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1Particle_1a8a8a33dd0ab1d3352d36b239d5c11beb" compoundref="Particle_8java" startline="203" endline="222">metaheuristics.generators.Particle.updateReference</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1abc5a8dcdf9ff7418f4084002e383b860" compoundref="ParticleSwarmOptimization_8java" startline="364" endline="395">metaheuristics.generators.ParticleSwarmOptimization.updateReference</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1Particle_1acfc132343407756e7b016506963b7984" compoundref="Particle_8java" startline="127" endline="157">metaheuristics.generators.Particle.UpdateVelocity</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheurictics_1_1strategy_1_1Strategy_1ac4829af561593656b314235f004f0308" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void metaheurictics.strategy.Strategy.destroyExecute</definition>
+        <argsstring>()</argsstring>
+        <name>destroyExecute</name>
+        <qualifiedname>metaheurictics.strategy.Strategy.destroyExecute</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheurictics/strategy/Strategy.java" line="483" column="20" bodyfile="practica5/src/main/java/metaheurictics/strategy/Strategy.java" bodystart="483" bodyend="486"/>
+        <references refid="classmetaheuristics_1_1generators_1_1RandomSearch_1ab7be9a87a0cb3de1e17f14e79a0b32ce" compoundref="RandomSearch_8java" startline="36">metaheuristics.generators.RandomSearch.listStateReference</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1a235c3afb5c1d4afe8ebaa1da12cff32e" compoundref="Strategy_8java" startline="35">metaheurictics.strategy.Strategy.strategy</references>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmetaheurictics_1_1strategy_1_1Strategy_1af320de8dac2de5a7ec10d373952064d5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheurictics.strategy.Strategy.executeStrategy</definition>
+        <argsstring>(int countmaxIterations, int countIterationsChange, int operatornumber, GeneratorType generatorType)</argsstring>
+        <name>executeStrategy</name>
+        <qualifiedname>metaheurictics.strategy.Strategy.executeStrategy</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>countmaxIterations</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>countIterationsChange</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>operatornumber</declname>
+        </param>
+        <param>
+          <type><ref refid="enummetaheuristics_1_1generators_1_1GeneratorType" kindref="compound">GeneratorType</ref></type>
+          <declname>generatorType</declname>
+        </param>
+        <exceptions> throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException</exceptions>
+        <briefdescription>
+<para>executeStrategy - method to execute the strategy. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>countmaxIterations</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>countIterationsChange</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>operatornumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>generatorType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>run - method to grant privileged permission for reflective access to non-public clone() <simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheurictics/strategy/Strategy.java" line="94" column="13" bodyfile="practica5/src/main/java/metaheurictics/strategy/Strategy.java" bodystart="94" bodyend="282"/>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1af08a0f377eacb28b46d0fcc315b69ad0" compoundref="Strategy_8java" startline="36">metaheurictics.strategy.Strategy.bestState</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1a6d8f615b37de120cbf16eac6f1b6e721" compoundref="Strategy_8java" startline="509" endline="512">metaheurictics.strategy.Strategy.calculateOffLinePerformance</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1a3a4ef09902bbbfec07102446f7eb2809" compoundref="Strategy_8java" startline="56">metaheurictics.strategy.Strategy.calculateTime</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1abea8b81eeed176475070dac996fe9b6c" compoundref="Strategy_8java" startline="65">metaheurictics.strategy.Strategy.countChange</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1a537769ff595ae1b51c2035982723be6e" compoundref="Strategy_8java" startline="42">metaheurictics.strategy.Strategy.countCurrent</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1ab22b49ea4c8e68c8d35f392bcc4f8ded" compoundref="Strategy_8java" startline="64">metaheurictics.strategy.Strategy.countPeriodChange</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1a86782bca2ad115b47f019513b1e8a389" compoundref="Strategy_8java" startline="66">metaheurictics.strategy.Strategy.countPeriodo</references>
+        <references refid="classmetaheuristics_1_1generators_1_1Generator_1a06f6f7622b9ce32590eadbdf6bf962b5">metaheuristics.generators.Generator.generate</references>
+        <references refid="classmetaheuristics_1_1generators_1_1MultiGenerator_1a2309ca3d3de82961bbc61d3fb6c893fc" compoundref="MultiGenerator_8java" startline="213" endline="224">metaheuristics.generators.MultiGenerator.generate</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1a2f0ea18b2127e6e38c1d335fed32c7e0" compoundref="Strategy_8java" startline="44">metaheurictics.strategy.Strategy.generator</references>
+        <references refid="classproblem_1_1definition_1_1State_1a226ea6fab8e7060cf131edfdb245a6fa" compoundref="State_8java" startline="104" endline="106">problem.definition.State.getEvaluation</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1a4bc6bd95db71e14b1f48c1bfc85f1305" compoundref="Strategy_8java" startline="405" endline="407">metaheurictics.strategy.Strategy.getProblem</references>
+        <references refid="classmetaheuristics_1_1generators_1_1MultiGenerator_1a7e6b4c2a4a6ef326d191a2da93f97d67" compoundref="MultiGenerator_8java" startline="241" endline="244">metaheuristics.generators.MultiGenerator.getReferenceList</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1a24dc7f53fd6fed09d4db04350f73b1a3" compoundref="Strategy_8java" startline="454" endline="465">metaheurictics.strategy.Strategy.initialize</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1a01adb5013155c7f691f95e8ab59181d0" compoundref="Strategy_8java" startline="438" endline="449">metaheurictics.strategy.Strategy.initializeGenerators</references>
+        <references refid="classmetaheuristics_1_1generators_1_1MultiGenerator_1ada4833a51b39d1372e2c050448bbab6c" compoundref="MultiGenerator_8java" startline="90" endline="124">metaheuristics.generators.MultiGenerator.initializeGenerators</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1ad3a183f63a0c3c4b25957baa9040eaec" compoundref="Strategy_8java" startline="48">metaheurictics.strategy.Strategy.listBest</references>
+        <references refid="classmetaheuristics_1_1generators_1_1MultiGenerator_1aeff68b1b8549a0b8ca24e7ad05774dee" compoundref="MultiGenerator_8java" startline="26">metaheuristics.generators.MultiGenerator.listGeneratedPP</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1aa572e7d90e24bae70ea47a31fee298f4" compoundref="Strategy_8java" startline="49">metaheurictics.strategy.Strategy.listRefPoblacFinal</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1a6079f1c09fe81506e05976037911be31" compoundref="Strategy_8java" startline="47">metaheurictics.strategy.Strategy.listStates</references>
+        <references refid="enumproblem_1_1definition_1_1Problem_1_1ProblemType_1aa55383c4cb9a71cfeabc7f715ee0cd6e" compoundref="Problem_8java" startline="29">problem.definition.Problem.ProblemType.Maximizar</references>
+        <references refid="enumproblem_1_1definition_1_1Problem_1_1ProblemType_1aa1a15967abb927b9b6038c0a0af5fa18" compoundref="Problem_8java" startline="29">problem.definition.Problem.ProblemType.Minimizar</references>
+        <references refid="enummetaheuristics_1_1generators_1_1GeneratorType_1a58f3ace536f94b1de916edb89629c4be" compoundref="GeneratorType_8java" startline="9">metaheuristics.generators.GeneratorType.MultiGenerator</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1abc3c1b65673f8757ae414dfd4bf18f97" compoundref="Strategy_8java" startline="332" endline="336">metaheurictics.strategy.Strategy.newGenerator</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1a5ac9ccf79296d15b1a44d119c1f1fc6e" compoundref="Strategy_8java" startline="50">metaheurictics.strategy.Strategy.notDominated</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1ab3b8afb295795d6f31000bd5c18700be" compoundref="Strategy_8java" startline="67">metaheurictics.strategy.Strategy.periodo</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1a72e752e037880a0ff45c679bbc553d00" compoundref="Strategy_8java" startline="37">metaheurictics.strategy.Strategy.problem</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1ad7c438a82bc4f08ad239b3bc56320bca" compoundref="Strategy_8java" startline="55">metaheurictics.strategy.Strategy.saveFreneParetoMonoObjetivo</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1a077d2cdfe76bd31661ca024e339a4c98" compoundref="Strategy_8java" startline="54">metaheurictics.strategy.Strategy.saveListBestStates</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1a4e698ca86e2842c70099dadd560e7578" compoundref="Strategy_8java" startline="53">metaheurictics.strategy.Strategy.saveListStates</references>
+        <references refid="classproblem_1_1definition_1_1State_1abeaa628078af4804e5e9d93b3de593b5" compoundref="State_8java" startline="113" endline="115">problem.definition.State.setEvaluation</references>
+        <references refid="classproblem_1_1definition_1_1State_1ab802f63ab88415158f9c6cf468b6c8b3" compoundref="State_8java" startline="130" endline="132">problem.definition.State.setNumber</references>
+        <references refid="classproblem_1_1definition_1_1Problem_1afa1cbf017b0c64122fb2db7e4e7df2a2" compoundref="Problem_8java" startline="88" endline="90">problem.definition.Problem.setState</references>
+        <references refid="classproblem_1_1definition_1_1State_1afccaeac3af66cb772e2b3e70758b8fe6" compoundref="State_8java" startline="94" endline="96">problem.definition.State.setTypeGenerator</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1aba3d7b221051061dd7955d3059ea2272" compoundref="Strategy_8java" startline="39">metaheurictics.strategy.Strategy.stopexecute</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1ae5fae0f94a80e56677aa3f7ac77b6d44" compoundref="Strategy_8java" startline="307" endline="325">metaheurictics.strategy.Strategy.update</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1a2f4520e24d31de6e4895bdf4ab2b9502" compoundref="Strategy_8java" startline="284" endline="293">metaheurictics.strategy.Strategy.updateCountGender</references>
+        <references refid="classlocal__search_1_1complement_1_1UpdateParameter_1aa88a78351c0bc5de77f1ad05bee29e11" compoundref="UpdateParameter_8java" startline="39" endline="61">local_search.complement.UpdateParameter.updateParameter</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1a91022422139781e5efd55fe77049bcce" compoundref="Strategy_8java" startline="518" endline="527">metaheurictics.strategy.Strategy.updateRef</references>
+        <references refid="classmetaheuristics_1_1generators_1_1MultiGenerator_1a4064a096c203ec6b538929af5bd8d0d7" compoundref="MultiGenerator_8java" startline="276" endline="284">metaheuristics.generators.MultiGenerator.updateReference</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1aa65b766626141e9b647a42c0056a4798" compoundref="Strategy_8java" startline="298" endline="304">metaheurictics.strategy.Strategy.updateWeight</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheurictics_1_1strategy_1_1Strategy_1a2f4520e24d31de6e4895bdf4ab2b9502" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheurictics.strategy.Strategy.updateCountGender</definition>
+        <argsstring>()</argsstring>
+        <name>updateCountGender</name>
+        <qualifiedname>metaheurictics.strategy.Strategy.updateCountGender</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheurictics/strategy/Strategy.java" line="284" column="13" bodyfile="practica5/src/main/java/metaheurictics/strategy/Strategy.java" bodystart="284" bodyend="293"/>
+        <references refid="classmetaheuristics_1_1generators_1_1Generator_1a43815f3944c514ba3156b0e68482befa" compoundref="Generator_8java" startline="38">metaheuristics.generators.Generator.countBetterGender</references>
+        <references refid="classmetaheuristics_1_1generators_1_1Generator_1a3c0145210385b6257c8fc20cac1f830a" compoundref="Generator_8java" startline="37">metaheuristics.generators.Generator.countGender</references>
+        <references refid="classmetaheuristics_1_1generators_1_1Generator_1ac5bace71f51c16b611ede3ed53263473">metaheuristics.generators.Generator.getListCountBetterGender</references>
+        <references refid="classmetaheuristics_1_1generators_1_1Generator_1ac5d6d45ee8017fb87d80aa952edfc34e">metaheuristics.generators.Generator.getListCountGender</references>
+        <references refid="classmetaheuristics_1_1generators_1_1MultiGenerator_1ab331905baebb433340e05d19e174340b" compoundref="MultiGenerator_8java" startline="161" endline="164">metaheuristics.generators.MultiGenerator.getListGenerators</references>
+        <references refid="classmetaheuristics_1_1generators_1_1Generator_1a5a123306b43c42d28cd1d6e17f8067a5">metaheuristics.generators.Generator.getType</references>
+        <references refid="enummetaheuristics_1_1generators_1_1GeneratorType_1a58f3ace536f94b1de916edb89629c4be" compoundref="GeneratorType_8java" startline="9">metaheuristics.generators.GeneratorType.MultiGenerator</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1ab3b8afb295795d6f31000bd5c18700be" compoundref="Strategy_8java" startline="67">metaheurictics.strategy.Strategy.periodo</references>
+        <referencedby refid="classmetaheurictics_1_1strategy_1_1Strategy_1af320de8dac2de5a7ec10d373952064d5" compoundref="Strategy_8java" startline="94" endline="282">metaheurictics.strategy.Strategy.executeStrategy</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheurictics_1_1strategy_1_1Strategy_1aa65b766626141e9b647a42c0056a4798" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheurictics.strategy.Strategy.updateWeight</definition>
+        <argsstring>()</argsstring>
+        <name>updateWeight</name>
+        <qualifiedname>metaheurictics.strategy.Strategy.updateWeight</qualifiedname>
+        <briefdescription>
+<para>updateWeight - method to update the weight of the generators. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheurictics/strategy/Strategy.java" line="298" column="13" bodyfile="practica5/src/main/java/metaheurictics/strategy/Strategy.java" bodystart="298" bodyend="304"/>
+        <references refid="classmetaheuristics_1_1generators_1_1MultiGenerator_1ab331905baebb433340e05d19e174340b" compoundref="MultiGenerator_8java" startline="161" endline="164">metaheuristics.generators.MultiGenerator.getListGenerators</references>
+        <references refid="classmetaheuristics_1_1generators_1_1Generator_1a5a123306b43c42d28cd1d6e17f8067a5">metaheuristics.generators.Generator.getType</references>
+        <references refid="enummetaheuristics_1_1generators_1_1GeneratorType_1a58f3ace536f94b1de916edb89629c4be" compoundref="GeneratorType_8java" startline="9">metaheuristics.generators.GeneratorType.MultiGenerator</references>
+        <references refid="classmetaheuristics_1_1generators_1_1Generator_1a8b3c66b57b4c739666989fbce667eb40">metaheuristics.generators.Generator.setWeight</references>
+        <referencedby refid="classmetaheurictics_1_1strategy_1_1Strategy_1af320de8dac2de5a7ec10d373952064d5" compoundref="Strategy_8java" startline="94" endline="282">metaheurictics.strategy.Strategy.executeStrategy</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheurictics_1_1strategy_1_1Strategy_1ae5fae0f94a80e56677aa3f7ac77b6d44" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheurictics.strategy.Strategy.update</definition>
+        <argsstring>(Integer countIterationsCurrent)</argsstring>
+        <name>update</name>
+        <qualifiedname>metaheurictics.strategy.Strategy.update</qualifiedname>
+        <param>
+          <type>Integer</type>
+          <declname>countIterationsCurrent</declname>
+        </param>
+        <exceptions> throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheurictics/strategy/Strategy.java" line="307" column="13" bodyfile="practica5/src/main/java/metaheurictics/strategy/Strategy.java" bodystart="307" bodyend="325"/>
+        <references refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a15b9c3d9f7da69124b58dd08aca096dc" compoundref="DistributionEstimationAlgorithm_8java" startline="48">metaheuristics.generators.DistributionEstimationAlgorithm.countRef</references>
+        <references refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1ab1e6d7d7bb0c21bd90f5ddd5532dcb3b" compoundref="EvolutionStrategies_8java" startline="41">metaheuristics.generators.EvolutionStrategies.countRef</references>
+        <references refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a63b97c344354be3ca7bca194acbb2fee" compoundref="GeneticAlgorithm_8java" startline="55">metaheuristics.generators.GeneticAlgorithm.countRef</references>
+        <references refid="enummetaheuristics_1_1generators_1_1GeneratorType_1aad36814ee53c9a9c502a5fbe48e1d018" compoundref="GeneratorType_8java" startline="8">metaheuristics.generators.GeneratorType.DistributionEstimationAlgorithm</references>
+        <references refid="enummetaheuristics_1_1generators_1_1GeneratorType_1afc90843afb31f8fd742441578f70e188" compoundref="GeneratorType_8java" startline="8">metaheuristics.generators.GeneratorType.EvolutionStrategies</references>
+        <references refid="enummetaheuristics_1_1generators_1_1GeneratorType_1aa7d0ed047362b79a1bbe2a29837ddbe3" compoundref="GeneratorType_8java" startline="8">metaheuristics.generators.GeneratorType.GeneticAlgorithm</references>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a8a448ceb59a38faaa4d964e5c31510ee" compoundref="ParticleSwarmOptimization_8java" startline="344" endline="346">metaheuristics.generators.ParticleSwarmOptimization.getCountRef</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1afc091846262ceb740b13d949744e8bf7" compoundref="Strategy_8java" startline="41">metaheurictics.strategy.Strategy.ifFactoryGenerator</references>
+        <references refid="enummetaheuristics_1_1generators_1_1GeneratorType_1a9ccda4111f489a1155ac573295ffb747" compoundref="GeneratorType_8java" startline="8">metaheuristics.generators.GeneratorType.ParticleSwarmOptimization</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1ac65d26e08073f5cfc7596577f18b9694" compoundref="Strategy_8java" startline="73" endline="75">metaheurictics.strategy.Strategy.Strategy</references>
+        <referencedby refid="classmetaheurictics_1_1strategy_1_1Strategy_1af320de8dac2de5a7ec10d373952064d5" compoundref="Strategy_8java" startline="94" endline="282">metaheurictics.strategy.Strategy.executeStrategy</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheurictics_1_1strategy_1_1Strategy_1abc3c1b65673f8757ae414dfd4bf18f97" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classmetaheuristics_1_1generators_1_1Generator" kindref="compound">Generator</ref></type>
+        <definition>Generator metaheurictics.strategy.Strategy.newGenerator</definition>
+        <argsstring>(GeneratorType Generatortype)</argsstring>
+        <name>newGenerator</name>
+        <qualifiedname>metaheurictics.strategy.Strategy.newGenerator</qualifiedname>
+        <param>
+          <type><ref refid="enummetaheuristics_1_1generators_1_1GeneratorType" kindref="compound">GeneratorType</ref></type>
+          <declname>Generatortype</declname>
+        </param>
+        <exceptions> throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException </exceptions>
+        <briefdescription>
+<para>newGenerator - method to create a new generator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Generatortype</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>return a <ref refid="classmetaheuristics_1_1generators_1_1Generator" kindref="compound">Generator</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheurictics/strategy/Strategy.java" line="332" column="18" bodyfile="practica5/src/main/java/metaheurictics/strategy/Strategy.java" bodystart="332" bodyend="336"/>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1a2f0ea18b2127e6e38c1d335fed32c7e0" compoundref="Strategy_8java" startline="44">metaheurictics.strategy.Strategy.generator</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1afc091846262ceb740b13d949744e8bf7" compoundref="Strategy_8java" startline="41">metaheurictics.strategy.Strategy.ifFactoryGenerator</references>
+        <referencedby refid="classmetaheurictics_1_1strategy_1_1Strategy_1af320de8dac2de5a7ec10d373952064d5" compoundref="Strategy_8java" startline="94" endline="282">metaheurictics.strategy.Strategy.executeStrategy</referencedby>
+        <referencedby refid="classmetaheurictics_1_1strategy_1_1Strategy_1a24dc7f53fd6fed09d4db04350f73b1a3" compoundref="Strategy_8java" startline="454" endline="465">metaheurictics.strategy.Strategy.initialize</referencedby>
+        <referencedby refid="classmetaheurictics_1_1strategy_1_1Strategy_1a01adb5013155c7f691f95e8ab59181d0" compoundref="Strategy_8java" startline="438" endline="449">metaheurictics.strategy.Strategy.initializeGenerators</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheurictics_1_1strategy_1_1Strategy_1a4194b52f17701a8fabfc1265e6b4b267" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+        <definition>State metaheurictics.strategy.Strategy.getBestState</definition>
+        <argsstring>()</argsstring>
+        <name>getBestState</name>
+        <qualifiedname>metaheurictics.strategy.Strategy.getBestState</qualifiedname>
+        <briefdescription>
+<para>getBestState - method to get the best state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>return the best state </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheurictics/strategy/Strategy.java" line="342" column="14" bodyfile="practica5/src/main/java/metaheurictics/strategy/Strategy.java" bodystart="342" bodyend="344"/>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1af08a0f377eacb28b46d0fcc315b69ad0" compoundref="Strategy_8java" startline="36">metaheurictics.strategy.Strategy.bestState</references>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiGenerator_1afef1d16b774c4e86135d2fc38d0dbed7" compoundref="MultiGenerator_8java" startline="302" endline="321">metaheuristics.generators.MultiGenerator.searchState</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheurictics_1_1strategy_1_1Strategy_1aef162976b610a8d30ab537af9face3b4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheurictics.strategy.Strategy.setBestState</definition>
+        <argsstring>(State besState)</argsstring>
+        <name>setBestState</name>
+        <qualifiedname>metaheurictics.strategy.Strategy.setBestState</qualifiedname>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>besState</declname>
+        </param>
+        <briefdescription>
+<para>setBestState - method to set the best state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>besState</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheurictics/strategy/Strategy.java" line="350" column="13" bodyfile="practica5/src/main/java/metaheurictics/strategy/Strategy.java" bodystart="350" bodyend="352"/>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheurictics_1_1strategy_1_1Strategy_1a1ce64c953a44083a90753c3ffb46d40e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classlocal__search_1_1complement_1_1StopExecute" kindref="compound">StopExecute</ref></type>
+        <definition>StopExecute metaheurictics.strategy.Strategy.getStopexecute</definition>
+        <argsstring>()</argsstring>
+        <name>getStopexecute</name>
+        <qualifiedname>metaheurictics.strategy.Strategy.getStopexecute</qualifiedname>
+        <briefdescription>
+<para>getStopexecute - method to get the stop execute. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>return the stop execute </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheurictics/strategy/Strategy.java" line="357" column="20" bodyfile="practica5/src/main/java/metaheurictics/strategy/Strategy.java" bodystart="357" bodyend="359"/>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1aba3d7b221051061dd7955d3059ea2272" compoundref="Strategy_8java" startline="39">metaheurictics.strategy.Strategy.stopexecute</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheurictics_1_1strategy_1_1Strategy_1a6d5037c21b9a24975f301ac6aba4dffd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int metaheurictics.strategy.Strategy.getCountMax</definition>
+        <argsstring>()</argsstring>
+        <name>getCountMax</name>
+        <qualifiedname>metaheurictics.strategy.Strategy.getCountMax</qualifiedname>
+        <briefdescription>
+<para>getCountMax - method to get the maximum count. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>return the maximum count </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheurictics/strategy/Strategy.java" line="365" column="12" bodyfile="practica5/src/main/java/metaheurictics/strategy/Strategy.java" bodystart="365" bodyend="367"/>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1a3251f7d633dd233da6de5e84cb49b14b" compoundref="Strategy_8java" startline="43">metaheurictics.strategy.Strategy.countMax</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheurictics_1_1strategy_1_1Strategy_1a7512cbe68ba46c4d8534f0aff17b5c17" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheurictics.strategy.Strategy.setCountMax</definition>
+        <argsstring>(int countMax)</argsstring>
+        <name>setCountMax</name>
+        <qualifiedname>metaheurictics.strategy.Strategy.setCountMax</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>countMax</declname>
+        </param>
+        <briefdescription>
+<para>setCountMax - method to set the maximum count. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>countMax</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheurictics/strategy/Strategy.java" line="373" column="13" bodyfile="practica5/src/main/java/metaheurictics/strategy/Strategy.java" bodystart="373" bodyend="375"/>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1a3251f7d633dd233da6de5e84cb49b14b" compoundref="Strategy_8java" startline="43">metaheurictics.strategy.Strategy.countMax</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheurictics_1_1strategy_1_1Strategy_1a2f833e91e1f26476659d049362f219ac" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheurictics.strategy.Strategy.setStopexecute</definition>
+        <argsstring>(StopExecute stopexecute)</argsstring>
+        <name>setStopexecute</name>
+        <qualifiedname>metaheurictics.strategy.Strategy.setStopexecute</qualifiedname>
+        <param>
+          <type><ref refid="classlocal__search_1_1complement_1_1StopExecute" kindref="compound">StopExecute</ref></type>
+          <declname>stopexecute</declname>
+        </param>
+        <briefdescription>
+<para>setStopexecute - method to set the stop execute. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stopexecute</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheurictics/strategy/Strategy.java" line="381" column="13" bodyfile="practica5/src/main/java/metaheurictics/strategy/Strategy.java" bodystart="381" bodyend="383"/>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1aba3d7b221051061dd7955d3059ea2272" compoundref="Strategy_8java" startline="39">metaheurictics.strategy.Strategy.stopexecute</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheurictics_1_1strategy_1_1Strategy_1a0036f56e2cd146ee5f37a6da30ed415a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classlocal__search_1_1complement_1_1UpdateParameter" kindref="compound">UpdateParameter</ref></type>
+        <definition>UpdateParameter metaheurictics.strategy.Strategy.getUpdateparameter</definition>
+        <argsstring>()</argsstring>
+        <name>getUpdateparameter</name>
+        <qualifiedname>metaheurictics.strategy.Strategy.getUpdateparameter</qualifiedname>
+        <briefdescription>
+<para>getUpdateparameter - method to get the update parameter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>return the update parameter </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheurictics/strategy/Strategy.java" line="389" column="24" bodyfile="practica5/src/main/java/metaheurictics/strategy/Strategy.java" bodystart="389" bodyend="391"/>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1aeae847a5e9cad6d863212f3e3cf04cbe" compoundref="Strategy_8java" startline="40">metaheurictics.strategy.Strategy.updateparameter</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheurictics_1_1strategy_1_1Strategy_1ac781087326a37b5f9cc1ea135bfc7c82" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheurictics.strategy.Strategy.setUpdateparameter</definition>
+        <argsstring>(UpdateParameter updateparameter)</argsstring>
+        <name>setUpdateparameter</name>
+        <qualifiedname>metaheurictics.strategy.Strategy.setUpdateparameter</qualifiedname>
+        <param>
+          <type><ref refid="classlocal__search_1_1complement_1_1UpdateParameter" kindref="compound">UpdateParameter</ref></type>
+          <declname>updateparameter</declname>
+        </param>
+        <briefdescription>
+<para>setUpdateparameter - method to set the update parameter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>updateparameter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheurictics/strategy/Strategy.java" line="397" column="13" bodyfile="practica5/src/main/java/metaheurictics/strategy/Strategy.java" bodystart="397" bodyend="399"/>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1aeae847a5e9cad6d863212f3e3cf04cbe" compoundref="Strategy_8java" startline="40">metaheurictics.strategy.Strategy.updateparameter</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheurictics_1_1strategy_1_1Strategy_1a4bc6bd95db71e14b1f48c1bfc85f1305" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classproblem_1_1definition_1_1Problem" kindref="compound">Problem</ref></type>
+        <definition>Problem metaheurictics.strategy.Strategy.getProblem</definition>
+        <argsstring>()</argsstring>
+        <name>getProblem</name>
+        <qualifiedname>metaheurictics.strategy.Strategy.getProblem</qualifiedname>
+        <briefdescription>
+<para>getProblem - method to get the problem. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>return the problem </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheurictics/strategy/Strategy.java" line="405" column="16" bodyfile="practica5/src/main/java/metaheurictics/strategy/Strategy.java" bodystart="405" bodyend="407"/>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1a72e752e037880a0ff45c679bbc553d00" compoundref="Strategy_8java" startline="37">metaheurictics.strategy.Strategy.problem</references>
+        <referencedby refid="classlocal__search_1_1acceptation__type_1_1AcceptBest_1a0ecd99df90a9818e14ddf8908cc38626" compoundref="AcceptBest_8java" startline="38" endline="55">local_search.acceptation_type.AcceptBest.acceptCandidate</referencedby>
+        <referencedby refid="classlocal__search_1_1acceptation__type_1_1AcceptNotBad_1a06c25a1ad9093849dc090b67effe8654" compoundref="AcceptNotBad_8java" startline="28" endline="46">local_search.acceptation_type.AcceptNotBad.acceptCandidate</referencedby>
+        <referencedby refid="classlocal__search_1_1acceptation__type_1_1AcceptNotBadT_1ab913b2e75ae2c8a85091ba229f13d123" compoundref="AcceptNotBadT_8java" startline="45" endline="66">local_search.acceptation_type.AcceptNotBadT.acceptCandidate</referencedby>
+        <referencedby refid="classlocal__search_1_1acceptation__type_1_1AcceptNotBadU_1aae18a93b424add171ea18e79645977c7" compoundref="AcceptNotBadU_8java" startline="38" endline="55">local_search.acceptation_type.AcceptNotBadU.acceptCandidate</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiGenerator_1a21767d34c374a65dd29196459273ff34" compoundref="MultiGenerator_8java" startline="129" endline="147">metaheuristics.generators.MultiGenerator.createInstanceGeneratorsBPP</referencedby>
+        <referencedby refid="classevolutionary__algorithms_1_1complement_1_1OnePointCrossover_1a6d644b471de305b6508b2b647edc76d1" compoundref="OnePointCrossover_8java" startline="32" endline="62">evolutionary_algorithms.complement.OnePointCrossover.crossover</referencedby>
+        <referencedby refid="classlocal__search_1_1acceptation__type_1_1Dominance_1a0dafd58be8365a22956f59417841a2d8" compoundref="Dominance_8java" startline="87" endline="118">local_search.acceptation_type.Dominance.dominance</referencedby>
+        <referencedby refid="classproblem_1_1extension_1_1FactoresPonderados_1a935d426d08fbf69af9ea5fe2196692bc" compoundref="FactoresPonderados_8java" startline="29" endline="63">problem.extension.FactoresPonderados.evaluationState</referencedby>
+        <referencedby refid="classproblem_1_1extension_1_1MultiObjetivoPuro_1aaac35db96f3f750b6f5349243c39d122" compoundref="MultiObjetivoPuro_8java" startline="29" endline="58">problem.extension.MultiObjetivoPuro.evaluationState</referencedby>
+        <referencedby refid="classmetaheurictics_1_1strategy_1_1Strategy_1af320de8dac2de5a7ec10d373952064d5" compoundref="Strategy_8java" startline="94" endline="282">metaheurictics.strategy.Strategy.executeStrategy</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1aec9a3560a4a9aa2e60eeaf289ea18b3c" compoundref="ParticleSwarmOptimization_8java" startline="403" endline="418">metaheuristics.generators.ParticleSwarmOptimization.gBestInicial</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a5d496021c3310be8abbc218d4bc63baa" compoundref="DistributionEstimationAlgorithm_8java" startline="95" endline="117">metaheuristics.generators.DistributionEstimationAlgorithm.generate</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a5a222a42cc69a782b603004f2ca501d0" compoundref="EvolutionStrategies_8java" startline="76" endline="94">metaheuristics.generators.EvolutionStrategies.generate</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1afa69278cc4f87d309326773aeab7b6da" compoundref="GeneticAlgorithm_8java" startline="90" endline="125">metaheuristics.generators.GeneticAlgorithm.generate</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1HillClimbing_1abcb16309481537b632ff4ece07534f97" compoundref="HillClimbing_8java" startline="72" endline="77">metaheuristics.generators.HillClimbing.generate</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a03effb92915e2642b7d87763987a43ae" compoundref="HillClimbingRestart_8java" startline="73" endline="85">metaheuristics.generators.HillClimbingRestart.generate</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1af2ac27e167ad69093379e30a9dcf1955" compoundref="LimitThreshold_8java" startline="93" endline="97">metaheuristics.generators.LimitThreshold.generate</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_1a79d89f831f827fff6db6e9757c88f9a0" compoundref="MultiCaseSimulatedAnnealing_8java" startline="90" endline="95">metaheuristics.generators.MultiCaseSimulatedAnnealing.generate</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a10e8509749f9e10954b1ca7174e00103" compoundref="MultiobjectiveHillClimbingDistance_8java" startline="68" endline="72">metaheuristics.generators.MultiobjectiveHillClimbingDistance.generate</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingRestart_1aab0d9cf35c21f476056c9167679b565f" compoundref="MultiobjectiveHillClimbingRestart_8java" startline="71" endline="75">metaheuristics.generators.MultiobjectiveHillClimbingRestart.generate</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiobjectiveStochasticHillClimbing_1a4bdaba8339058a9132146ca79d88d19d" compoundref="MultiobjectiveStochasticHillClimbing_8java" startline="55" endline="59">metaheuristics.generators.MultiobjectiveStochasticHillClimbing.generate</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a719352455b19c8fc2244a4d7387db236" compoundref="MultiobjectiveTabuSearch_8java" startline="91" endline="97">metaheuristics.generators.MultiobjectiveTabuSearch.generate</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1RandomSearch_1ad7023836b94dd23bffd78ab7b9915551" compoundref="RandomSearch_8java" startline="66" endline="72">metaheuristics.generators.RandomSearch.generate</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a42465a5f9da3ff282afbd8cae9603274" compoundref="SimulatedAnnealing_8java" startline="118" endline="122">metaheuristics.generators.SimulatedAnnealing.generate</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1TabuSearch_1a960394b27d55ada10842a94184aa39b4" compoundref="TabuSearch_8java" startline="95" endline="99">metaheuristics.generators.TabuSearch.generate</referencedby>
+        <referencedby refid="classproblem__operators_1_1MutationOperator_1adc581cf1337e53458e6695aec007028b" compoundref="MutationOperator_8java" startline="32" endline="47">problem_operators.MutationOperator.generatedNewState</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a8087863b6c6a820fdf5c9b6aa3bc151c" compoundref="DistributionEstimationAlgorithm_8java" startline="124" endline="139">metaheuristics.generators.DistributionEstimationAlgorithm.getReference</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a9afcff28506375af6f405467990e7b36" compoundref="EvolutionStrategies_8java" startline="101" endline="119">metaheuristics.generators.EvolutionStrategies.getReference</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a7bff79adbecc5510d4294dbc617eb8b4" compoundref="GeneticAlgorithm_8java" startline="132" endline="150">metaheuristics.generators.GeneticAlgorithm.getReference</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1HillClimbing_1af34d8991af9ef04c0d8355040e5f2611" compoundref="HillClimbing_8java" startline="48" endline="64">metaheuristics.generators.HillClimbing.HillClimbing</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1aa506be31a40c309915296132624ee47e" compoundref="HillClimbingRestart_8java" startline="47" endline="64">metaheuristics.generators.HillClimbingRestart.HillClimbingRestart</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a2b35916a7fef7ecc1ae9c6f4c571a6d1" compoundref="ParticleSwarmOptimization_8java" startline="173" endline="195">metaheuristics.generators.ParticleSwarmOptimization.inicialiceLBest</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiGenerator_1ada4833a51b39d1372e2c050448bbab6c" compoundref="MultiGenerator_8java" startline="90" endline="124">metaheuristics.generators.MultiGenerator.initializeGenerators</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1aed9ff52ca66ef9bb47e893daa27f819c" compoundref="LimitThreshold_8java" startline="64" endline="86">metaheuristics.generators.LimitThreshold.LimitThreshold</referencedby>
+        <referencedby refid="classevolutionary__algorithms_1_1complement_1_1AIOMutation_1a182dacf4bb3046d61563d6bd5f31e156" compoundref="AIOMutation_8java" startline="31" endline="60">evolutionary_algorithms.complement.AIOMutation.mutation</referencedby>
+        <referencedby refid="classevolutionary__algorithms_1_1complement_1_1OnePointMutation_1a58178e28b21fd4559c38db00003e1bb0" compoundref="OnePointMutation_8java" startline="28" endline="37">evolutionary_algorithms.complement.OnePointMutation.mutation</referencedby>
+        <referencedby refid="classevolutionary__algorithms_1_1complement_1_1TowPointsMutation_1aba8bc136aacf5eafcd9e73d032218e16" compoundref="TowPointsMutation_8java" startline="20" endline="28">evolutionary_algorithms.complement.TowPointsMutation.mutation</referencedby>
+        <referencedby refid="classevolutionary__algorithms_1_1complement_1_1SteadyStateReplace_1a1283c4f4d8b9bbe5ae5dc4916934c8a9" compoundref="SteadyStateReplace_8java" startline="22" endline="57">evolutionary_algorithms.complement.SteadyStateReplace.replace</referencedby>
+        <referencedby refid="classevolutionary__algorithms_1_1complement_1_1ProbabilisticSampling_1a985f07b42905655bfaffb59b10f3471e" compoundref="ProbabilisticSampling_8java" startline="33" endline="87">evolutionary_algorithms.complement.ProbabilisticSampling.sampling</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiGenerator_1afef1d16b774c4e86135d2fc38d0dbed7" compoundref="MultiGenerator_8java" startline="302" endline="321">metaheuristics.generators.MultiGenerator.searchState</referencedby>
+        <referencedby refid="classevolutionary__algorithms_1_1complement_1_1TruncationSelection_1ab59a8422f18ba171cb70b680c84eaac1" compoundref="TruncationSelection_8java" startline="62" endline="76">evolutionary_algorithms.complement.TruncationSelection.selection</referencedby>
+        <referencedby refid="classlocal__search_1_1candidate__type_1_1CandidateValue_1a77505d8ed443552afa435f51d0222d75" compoundref="CandidateValue_8java" startline="74" endline="97">local_search.candidate_type.CandidateValue.stateCandidate</referencedby>
+        <referencedby refid="classlocal__search_1_1candidate__type_1_1NotDominatedCandidate_1a8f08ece6519709427b4917712b805159" compoundref="NotDominatedCandidate_8java" startline="27" endline="53">local_search.candidate_type.NotDominatedCandidate.stateSearch</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1TabuSearch_1ad0157e54c7cc9736d0cfc1785a3f65bf" compoundref="TabuSearch_8java" startline="65" endline="87">metaheuristics.generators.TabuSearch.TabuSearch</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a35ed16f3af3c7fdcbff8165d9674cc9a" compoundref="MultiobjectiveHillClimbingDistance_8java" startline="87" endline="137">metaheuristics.generators.MultiobjectiveHillClimbingDistance.updateReference</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingRestart_1ab3716a950049b1d77c4374efd355aa14" compoundref="MultiobjectiveHillClimbingRestart_8java" startline="83" endline="133">metaheuristics.generators.MultiobjectiveHillClimbingRestart.updateReference</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1Particle_1a8a8a33dd0ab1d3352d36b239d5c11beb" compoundref="Particle_8java" startline="203" endline="222">metaheuristics.generators.Particle.updateReference</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1abc5a8dcdf9ff7418f4084002e383b860" compoundref="ParticleSwarmOptimization_8java" startline="364" endline="395">metaheuristics.generators.ParticleSwarmOptimization.updateReference</referencedby>
+        <referencedby refid="classmetaheurictics_1_1strategy_1_1Strategy_1a507abefc022ec475c0d5473055adf484" compoundref="Strategy_8java" startline="540" endline="551">metaheurictics.strategy.Strategy.updateRefGenerator</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheurictics_1_1strategy_1_1Strategy_1a2a5bb3ddd64d9f7d7ee9f50da7804850" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheurictics.strategy.Strategy.setProblem</definition>
+        <argsstring>(Problem problem)</argsstring>
+        <name>setProblem</name>
+        <qualifiedname>metaheurictics.strategy.Strategy.setProblem</qualifiedname>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1Problem" kindref="compound">Problem</ref></type>
+          <declname>problem</declname>
+        </param>
+        <briefdescription>
+<para>setProblem - method to set the problem. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>problem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheurictics/strategy/Strategy.java" line="413" column="13" bodyfile="practica5/src/main/java/metaheurictics/strategy/Strategy.java" bodystart="413" bodyend="415"/>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1a72e752e037880a0ff45c679bbc553d00" compoundref="Strategy_8java" startline="37">metaheurictics.strategy.Strategy.problem</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheurictics_1_1strategy_1_1Strategy_1ac70469856a2b6424f29952c0e77eebf8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ArrayList&lt; String &gt;</type>
+        <definition>ArrayList&lt; String &gt; metaheurictics.strategy.Strategy.getListKey</definition>
+        <argsstring>()</argsstring>
+        <name>getListKey</name>
+        <qualifiedname>metaheurictics.strategy.Strategy.getListKey</qualifiedname>
+        <briefdescription>
+<para>getListKey - method to get the list of keys. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>return the list of keys </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheurictics/strategy/Strategy.java" line="421" column="18" bodyfile="practica5/src/main/java/metaheurictics/strategy/Strategy.java" bodystart="421" bodyend="433"/>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1a72b0b983ab5990ef999037f9c331515a" compoundref="Strategy_8java" startline="38">metaheurictics.strategy.Strategy.mapGenerators</references>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a951d5d5991b9e676084456258c2c2947" compoundref="DistributionEstimationAlgorithm_8java" startline="189" endline="208">metaheuristics.generators.DistributionEstimationAlgorithm.getListStateRef</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a3c8abb363dd3c13968dca892016f7567" compoundref="EvolutionStrategies_8java" startline="164" endline="183">metaheuristics.generators.EvolutionStrategies.getListStateRef</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a02c8f9088f27ab03a6a6ec65348750b5" compoundref="GeneticAlgorithm_8java" startline="200" endline="221">metaheuristics.generators.GeneticAlgorithm.getListStateRef</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a4a9da4ad8253a7521056fbb306a495a3" compoundref="ParticleSwarmOptimization_8java" startline="220" endline="260">metaheuristics.generators.ParticleSwarmOptimization.getListStateRef</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheurictics_1_1strategy_1_1Strategy_1a01adb5013155c7f691f95e8ab59181d0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheurictics.strategy.Strategy.initializeGenerators</definition>
+        <argsstring>()</argsstring>
+        <name>initializeGenerators</name>
+        <qualifiedname>metaheurictics.strategy.Strategy.initializeGenerators</qualifiedname>
+        <exceptions> throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException </exceptions>
+        <briefdescription>
+<para>initializeGenerators - method to initialize the generators. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheurictics/strategy/Strategy.java" line="438" column="13" bodyfile="practica5/src/main/java/metaheurictics/strategy/Strategy.java" bodystart="438" bodyend="449"/>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1a2f0ea18b2127e6e38c1d335fed32c7e0" compoundref="Strategy_8java" startline="44">metaheurictics.strategy.Strategy.generator</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1a72b0b983ab5990ef999037f9c331515a" compoundref="Strategy_8java" startline="38">metaheurictics.strategy.Strategy.mapGenerators</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1abc3c1b65673f8757ae414dfd4bf18f97" compoundref="Strategy_8java" startline="332" endline="336">metaheurictics.strategy.Strategy.newGenerator</references>
+        <referencedby refid="classmetaheurictics_1_1strategy_1_1Strategy_1af320de8dac2de5a7ec10d373952064d5" compoundref="Strategy_8java" startline="94" endline="282">metaheurictics.strategy.Strategy.executeStrategy</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheurictics_1_1strategy_1_1Strategy_1a24dc7f53fd6fed09d4db04350f73b1a3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheurictics.strategy.Strategy.initialize</definition>
+        <argsstring>()</argsstring>
+        <name>initialize</name>
+        <qualifiedname>metaheurictics.strategy.Strategy.initialize</qualifiedname>
+        <exceptions> throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException </exceptions>
+        <briefdescription>
+<para>initialize - method to initialize the generators. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheurictics/strategy/Strategy.java" line="454" column="13" bodyfile="practica5/src/main/java/metaheurictics/strategy/Strategy.java" bodystart="454" bodyend="465"/>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1a2f0ea18b2127e6e38c1d335fed32c7e0" compoundref="Strategy_8java" startline="44">metaheurictics.strategy.Strategy.generator</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1a72b0b983ab5990ef999037f9c331515a" compoundref="Strategy_8java" startline="38">metaheurictics.strategy.Strategy.mapGenerators</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1abc3c1b65673f8757ae414dfd4bf18f97" compoundref="Strategy_8java" startline="332" endline="336">metaheurictics.strategy.Strategy.newGenerator</references>
+        <referencedby refid="classmetaheurictics_1_1strategy_1_1Strategy_1af320de8dac2de5a7ec10d373952064d5" compoundref="Strategy_8java" startline="94" endline="282">metaheurictics.strategy.Strategy.executeStrategy</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheurictics_1_1strategy_1_1Strategy_1a6440afde976cb69c01b95d4c41a9ff5c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int metaheurictics.strategy.Strategy.getCountCurrent</definition>
+        <argsstring>()</argsstring>
+        <name>getCountCurrent</name>
+        <qualifiedname>metaheurictics.strategy.Strategy.getCountCurrent</qualifiedname>
+        <briefdescription>
+<para>getCountCurrent - method to get the current count. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>return the current count </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheurictics/strategy/Strategy.java" line="471" column="12" bodyfile="practica5/src/main/java/metaheurictics/strategy/Strategy.java" bodystart="471" bodyend="473"/>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1a537769ff595ae1b51c2035982723be6e" compoundref="Strategy_8java" startline="42">metaheurictics.strategy.Strategy.countCurrent</references>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a03effb92915e2642b7d87763987a43ae" compoundref="HillClimbingRestart_8java" startline="73" endline="85">metaheuristics.generators.HillClimbingRestart.generate</referencedby>
+        <referencedby refid="classevolutionary__algorithms_1_1complement_1_1ProbabilisticSampling_1a034f2039f6c915edd8b074acaeca25b7" compoundref="ProbabilisticSampling_8java" startline="95" endline="105">evolutionary_algorithms.complement.ProbabilisticSampling.listState</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiGenerator_1a9bca4abee16ba939d1aca80ac395a130" compoundref="MultiGenerator_8java" startline="413" endline="427">metaheuristics.generators.MultiGenerator.updateAwardImp</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiGenerator_1ab3417c34a00f079f67eed485ceeb8f1f" compoundref="MultiGenerator_8java" startline="393" endline="407">metaheuristics.generators.MultiGenerator.updateAwardSC</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheurictics_1_1strategy_1_1Strategy_1a0a7bed828f9d4fb1b29dbda112020b77" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheurictics.strategy.Strategy.setCountCurrent</definition>
+        <argsstring>(int countCurrent)</argsstring>
+        <name>setCountCurrent</name>
+        <qualifiedname>metaheurictics.strategy.Strategy.setCountCurrent</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>countCurrent</declname>
+        </param>
+        <briefdescription>
+<para>setCountCurrent - method to set the current count. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>countCurrent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheurictics/strategy/Strategy.java" line="479" column="13" bodyfile="practica5/src/main/java/metaheurictics/strategy/Strategy.java" bodystart="479" bodyend="481"/>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1a537769ff595ae1b51c2035982723be6e" compoundref="Strategy_8java" startline="42">metaheurictics.strategy.Strategy.countCurrent</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheurictics_1_1strategy_1_1Strategy_1a307eddf8b8d1eadfdce6b89148bd78fb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double metaheurictics.strategy.Strategy.getThreshold</definition>
+        <argsstring>()</argsstring>
+        <name>getThreshold</name>
+        <qualifiedname>metaheurictics.strategy.Strategy.getThreshold</qualifiedname>
+        <briefdescription>
+<para>getThreshold - method to get the threshold. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>return the threshold </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheurictics/strategy/Strategy.java" line="492" column="15" bodyfile="practica5/src/main/java/metaheurictics/strategy/Strategy.java" bodystart="492" bodyend="494"/>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1a1914ff8fe50a63e507d63538cd63e9ea" compoundref="Strategy_8java" startline="45">metaheurictics.strategy.Strategy.threshold</references>
+        <referencedby refid="classlocal__search_1_1acceptation__type_1_1AcceptNotBadU_1aae18a93b424add171ea18e79645977c7" compoundref="AcceptNotBadU_8java" startline="38" endline="55">local_search.acceptation_type.AcceptNotBadU.acceptCandidate</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheurictics_1_1strategy_1_1Strategy_1abc89b807d8506e11ef85c41eeb5e1858" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheurictics.strategy.Strategy.setThreshold</definition>
+        <argsstring>(double threshold)</argsstring>
+        <name>setThreshold</name>
+        <qualifiedname>metaheurictics.strategy.Strategy.setThreshold</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>threshold</declname>
+        </param>
+        <briefdescription>
+<para>setThreshold - method to set the threshold. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>threshold</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheurictics/strategy/Strategy.java" line="500" column="13" bodyfile="practica5/src/main/java/metaheurictics/strategy/Strategy.java" bodystart="500" bodyend="502"/>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1a1914ff8fe50a63e507d63538cd63e9ea" compoundref="Strategy_8java" startline="45">metaheurictics.strategy.Strategy.threshold</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheurictics_1_1strategy_1_1Strategy_1a6d8f615b37de120cbf16eac6f1b6e721" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheurictics.strategy.Strategy.calculateOffLinePerformance</definition>
+        <argsstring>(float sumMax, int countOff)</argsstring>
+        <name>calculateOffLinePerformance</name>
+        <qualifiedname>metaheurictics.strategy.Strategy.calculateOffLinePerformance</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>sumMax</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>countOff</declname>
+        </param>
+        <briefdescription>
+<para>calculateOffLinePerformance - method to calculate the offline performance. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sumMax</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>countOff</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheurictics/strategy/Strategy.java" line="509" column="13" bodyfile="practica5/src/main/java/metaheurictics/strategy/Strategy.java" bodystart="509" bodyend="512"/>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1ab22b49ea4c8e68c8d35f392bcc4f8ded" compoundref="Strategy_8java" startline="64">metaheurictics.strategy.Strategy.countPeriodChange</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1ab111e2ebd50ff83f126ef6f5201f9283" compoundref="Strategy_8java" startline="63">metaheurictics.strategy.Strategy.listOfflineError</references>
+        <referencedby refid="classmetaheurictics_1_1strategy_1_1Strategy_1af320de8dac2de5a7ec10d373952064d5" compoundref="Strategy_8java" startline="94" endline="282">metaheurictics.strategy.Strategy.executeStrategy</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheurictics_1_1strategy_1_1Strategy_1a91022422139781e5efd55fe77049bcce" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheurictics.strategy.Strategy.updateRef</definition>
+        <argsstring>(GeneratorType generatorType)</argsstring>
+        <name>updateRef</name>
+        <qualifiedname>metaheurictics.strategy.Strategy.updateRef</qualifiedname>
+        <param>
+          <type><ref refid="enummetaheuristics_1_1generators_1_1GeneratorType" kindref="compound">GeneratorType</ref></type>
+          <declname>generatorType</declname>
+        </param>
+        <briefdescription>
+<para>updateRef - method to update the reference. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>generatorType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheurictics/strategy/Strategy.java" line="518" column="13" bodyfile="practica5/src/main/java/metaheurictics/strategy/Strategy.java" bodystart="518" bodyend="527"/>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1af08a0f377eacb28b46d0fcc315b69ad0" compoundref="Strategy_8java" startline="36">metaheurictics.strategy.Strategy.bestState</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1a2f0ea18b2127e6e38c1d335fed32c7e0" compoundref="Strategy_8java" startline="44">metaheurictics.strategy.Strategy.generator</references>
+        <references refid="classmetaheuristics_1_1generators_1_1MultiGenerator_1af1c553546060e95f2cfb9df584f1b599" compoundref="MultiGenerator_8java" startline="28">metaheuristics.generators.MultiGenerator.listStateReference</references>
+        <references refid="enummetaheuristics_1_1generators_1_1GeneratorType_1a58f3ace536f94b1de916edb89629c4be" compoundref="GeneratorType_8java" startline="9">metaheuristics.generators.GeneratorType.MultiGenerator</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1a507abefc022ec475c0d5473055adf484" compoundref="Strategy_8java" startline="540" endline="551">metaheurictics.strategy.Strategy.updateRefGenerator</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1a1a969707e4659afea6bc6ee7479e9e65" compoundref="Strategy_8java" startline="531" endline="535">metaheurictics.strategy.Strategy.updateRefMultiG</references>
+        <referencedby refid="classmetaheurictics_1_1strategy_1_1Strategy_1af320de8dac2de5a7ec10d373952064d5" compoundref="Strategy_8java" startline="94" endline="282">metaheurictics.strategy.Strategy.executeStrategy</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheurictics_1_1strategy_1_1Strategy_1a1a969707e4659afea6bc6ee7479e9e65" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheurictics.strategy.Strategy.updateRefMultiG</definition>
+        <argsstring>()</argsstring>
+        <name>updateRefMultiG</name>
+        <qualifiedname>metaheurictics.strategy.Strategy.updateRefMultiG</qualifiedname>
+        <briefdescription>
+<para>updateRefMultiG - method to update the reference for multi-generators. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheurictics/strategy/Strategy.java" line="531" column="13" bodyfile="practica5/src/main/java/metaheurictics/strategy/Strategy.java" bodystart="531" bodyend="535"/>
+        <references refid="classmetaheuristics_1_1generators_1_1MultiGenerator_1ab331905baebb433340e05d19e174340b" compoundref="MultiGenerator_8java" startline="161" endline="164">metaheuristics.generators.MultiGenerator.getListGenerators</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1a507abefc022ec475c0d5473055adf484" compoundref="Strategy_8java" startline="540" endline="551">metaheurictics.strategy.Strategy.updateRefGenerator</references>
+        <referencedby refid="classmetaheurictics_1_1strategy_1_1Strategy_1a91022422139781e5efd55fe77049bcce" compoundref="Strategy_8java" startline="518" endline="527">metaheurictics.strategy.Strategy.updateRef</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheurictics_1_1strategy_1_1Strategy_1a507abefc022ec475c0d5473055adf484" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheurictics.strategy.Strategy.updateRefGenerator</definition>
+        <argsstring>(Generator generator)</argsstring>
+        <name>updateRefGenerator</name>
+        <qualifiedname>metaheurictics.strategy.Strategy.updateRefGenerator</qualifiedname>
+        <param>
+          <type><ref refid="classmetaheuristics_1_1generators_1_1Generator" kindref="compound">Generator</ref></type>
+          <declname>generator</declname>
+        </param>
+        <briefdescription>
+<para>updateRefGenerator - method to update the reference for generators. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>generator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheurictics/strategy/Strategy.java" line="540" column="13" bodyfile="practica5/src/main/java/metaheurictics/strategy/Strategy.java" bodystart="540" bodyend="551"/>
+        <references refid="enummetaheuristics_1_1generators_1_1GeneratorType_1aad36814ee53c9a9c502a5fbe48e1d018" compoundref="GeneratorType_8java" startline="8">metaheuristics.generators.GeneratorType.DistributionEstimationAlgorithm</references>
+        <references refid="enummetaheuristics_1_1generators_1_1GeneratorType_1afc90843afb31f8fd742441578f70e188" compoundref="GeneratorType_8java" startline="8">metaheuristics.generators.GeneratorType.EvolutionStrategies</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1a2f0ea18b2127e6e38c1d335fed32c7e0" compoundref="Strategy_8java" startline="44">metaheurictics.strategy.Strategy.generator</references>
+        <references refid="enummetaheuristics_1_1generators_1_1GeneratorType_1aa7d0ed047362b79a1bbe2a29837ddbe3" compoundref="GeneratorType_8java" startline="8">metaheuristics.generators.GeneratorType.GeneticAlgorithm</references>
+        <references refid="classproblem_1_1definition_1_1Problem_1a1427b83a226c7a174deee23925af14e4" compoundref="Problem_8java" startline="57" endline="59">problem.definition.Problem.getFunction</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1a4bc6bd95db71e14b1f48c1bfc85f1305" compoundref="Strategy_8java" startline="405" endline="407">metaheurictics.strategy.Strategy.getProblem</references>
+        <references refid="enummetaheuristics_1_1generators_1_1GeneratorType_1a2b1ac0dff3bb2c5c1486cc0e234afe9e" compoundref="GeneratorType_8java" startline="7">metaheuristics.generators.GeneratorType.HillClimbing</references>
+        <references refid="enummetaheuristics_1_1generators_1_1GeneratorType_1a6923135e50535f5ec9b1ba1e9b8c7107" compoundref="GeneratorType_8java" startline="7">metaheuristics.generators.GeneratorType.RandomSearch</references>
+        <references refid="enummetaheuristics_1_1generators_1_1GeneratorType_1ad1eaf4a28c6bc787131e2badd38b2f8d" compoundref="GeneratorType_8java" startline="7">metaheuristics.generators.GeneratorType.SimulatedAnnealing</references>
+        <references refid="enummetaheuristics_1_1generators_1_1GeneratorType_1a35b152adcd5d695fdb37492228eb24fc" compoundref="GeneratorType_8java" startline="7">metaheuristics.generators.GeneratorType.TabuSearch</references>
+        <referencedby refid="classmetaheurictics_1_1strategy_1_1Strategy_1a91022422139781e5efd55fe77049bcce" compoundref="Strategy_8java" startline="518" endline="527">metaheurictics.strategy.Strategy.updateRef</referencedby>
+        <referencedby refid="classmetaheurictics_1_1strategy_1_1Strategy_1a1a969707e4659afea6bc6ee7479e9e65" compoundref="Strategy_8java" startline="531" endline="535">metaheurictics.strategy.Strategy.updateRefMultiG</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="classmetaheurictics_1_1strategy_1_1Strategy" kindref="compound">Strategy</ref> -. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="4">
+        <label>Cloneable</label>
+      </node>
+      <node id="14">
+        <label>factory_interface.IFFactoryGenerator</label>
+        <link refid="interfacefactory__interface_1_1IFFactoryGenerator"/>
+      </node>
+      <node id="11">
+        <label>factory_interface.IFFactorySolutionMethod</label>
+        <link refid="interfacefactory__interface_1_1IFFactorySolutionMethod"/>
+      </node>
+      <node id="16">
+        <label>local_search.acceptation_type.Dominance</label>
+        <link refid="classlocal__search_1_1acceptation__type_1_1Dominance"/>
+      </node>
+      <node id="12">
+        <label>local_search.complement.StopExecute</label>
+        <link refid="classlocal__search_1_1complement_1_1StopExecute"/>
+      </node>
+      <node id="13">
+        <label>local_search.complement.UpdateParameter</label>
+        <link refid="classlocal__search_1_1complement_1_1UpdateParameter"/>
+        <childnode refid="14" relation="usage">
+          <edgelabel>-ifFactoryGenerator</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>metaheurictics.strategy.Strategy</label>
+        <link refid="classmetaheurictics_1_1strategy_1_1Strategy"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-strategy</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-bestState</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>-problem</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>-stopexecute</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>-updateparameter</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>-ifFactoryGenerator</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>+generator</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>+notDominated</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>metaheurictics.strategy.Strategy</label>
+        <link refid="classmetaheurictics_1_1strategy_1_1Strategy"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-strategy</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-bestState</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>-problem</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>-stopexecute</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>-updateparameter</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>-ifFactoryGenerator</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>+generator</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>+notDominated</edgelabel>
+        </childnode>
+      </node>
+      <node id="15">
+        <label>metaheuristics.generators.Generator</label>
+        <link refid="classmetaheuristics_1_1generators_1_1Generator"/>
+      </node>
+      <node id="5">
+        <label>metaheuristics.generators.GeneratorType</label>
+        <link refid="enummetaheuristics_1_1generators_1_1GeneratorType"/>
+      </node>
+      <node id="8">
+        <label>problem.definition.Codification</label>
+        <link refid="classproblem_1_1definition_1_1Codification"/>
+      </node>
+      <node id="9">
+        <label>problem.definition.Operator</label>
+        <link refid="classproblem_1_1definition_1_1Operator"/>
+      </node>
+      <node id="6">
+        <label>problem.definition.Problem</label>
+        <link refid="classproblem_1_1definition_1_1Problem"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-state</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>-typeProblem</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>-codification</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>-operator</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>-typeSolutionMethod</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>-factorySolutionMethod</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>problem.definition.Problem.ProblemType</label>
+        <link refid="enumproblem_1_1definition_1_1Problem_1_1ProblemType"/>
+      </node>
+      <node id="3">
+        <label>problem.definition.State</label>
+        <link refid="classproblem_1_1definition_1_1State"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>#typeGenerator</edgelabel>
+        </childnode>
+      </node>
+      <node id="10">
+        <label>problem.extension.TypeSolutionMethod</label>
+        <link refid="enumproblem_1_1extension_1_1TypeSolutionMethod"/>
+      </node>
+    </collaborationgraph>
+    <location file="practica5/src/main/java/metaheurictics/strategy/Strategy.java" line="33" column="7" bodyfile="practica5/src/main/java/metaheurictics/strategy/Strategy.java" bodystart="33" bodyend="553"/>
+    <listofallmembers>
+      <member refid="classmetaheurictics_1_1strategy_1_1Strategy_1af08a0f377eacb28b46d0fcc315b69ad0" prot="private" virt="non-virtual"><scope>metaheurictics::strategy::Strategy</scope><name>bestState</name></member>
+      <member refid="classmetaheurictics_1_1strategy_1_1Strategy_1a6d8f615b37de120cbf16eac6f1b6e721" prot="public" virt="non-virtual"><scope>metaheurictics::strategy::Strategy</scope><name>calculateOffLinePerformance</name></member>
+      <member refid="classmetaheurictics_1_1strategy_1_1Strategy_1a3a4ef09902bbbfec07102446f7eb2809" prot="public" virt="non-virtual"><scope>metaheurictics::strategy::Strategy</scope><name>calculateTime</name></member>
+      <member refid="classmetaheurictics_1_1strategy_1_1Strategy_1abea8b81eeed176475070dac996fe9b6c" prot="public" virt="non-virtual"><scope>metaheurictics::strategy::Strategy</scope><name>countChange</name></member>
+      <member refid="classmetaheurictics_1_1strategy_1_1Strategy_1a537769ff595ae1b51c2035982723be6e" prot="private" virt="non-virtual"><scope>metaheurictics::strategy::Strategy</scope><name>countCurrent</name></member>
+      <member refid="classmetaheurictics_1_1strategy_1_1Strategy_1a3251f7d633dd233da6de5e84cb49b14b" prot="private" virt="non-virtual"><scope>metaheurictics::strategy::Strategy</scope><name>countMax</name></member>
+      <member refid="classmetaheurictics_1_1strategy_1_1Strategy_1ab22b49ea4c8e68c8d35f392bcc4f8ded" prot="public" virt="non-virtual"><scope>metaheurictics::strategy::Strategy</scope><name>countPeriodChange</name></member>
+      <member refid="classmetaheurictics_1_1strategy_1_1Strategy_1a86782bca2ad115b47f019513b1e8a389" prot="private" virt="non-virtual"><scope>metaheurictics::strategy::Strategy</scope><name>countPeriodo</name></member>
+      <member refid="classmetaheurictics_1_1strategy_1_1Strategy_1ac4829af561593656b314235f004f0308" prot="public" virt="non-virtual"><scope>metaheurictics::strategy::Strategy</scope><name>destroyExecute</name></member>
+      <member refid="classmetaheurictics_1_1strategy_1_1Strategy_1af320de8dac2de5a7ec10d373952064d5" prot="public" virt="non-virtual"><scope>metaheurictics::strategy::Strategy</scope><name>executeStrategy</name></member>
+      <member refid="classmetaheurictics_1_1strategy_1_1Strategy_1a1af21013ce25ff84657e281635b481c7" prot="package" virt="non-virtual"><scope>metaheurictics::strategy::Strategy</scope><name>finalTime</name></member>
+      <member refid="classmetaheurictics_1_1strategy_1_1Strategy_1a2f0ea18b2127e6e38c1d335fed32c7e0" prot="public" virt="non-virtual"><scope>metaheurictics::strategy::Strategy</scope><name>generator</name></member>
+      <member refid="classmetaheurictics_1_1strategy_1_1Strategy_1a4194b52f17701a8fabfc1265e6b4b267" prot="public" virt="non-virtual"><scope>metaheurictics::strategy::Strategy</scope><name>getBestState</name></member>
+      <member refid="classmetaheurictics_1_1strategy_1_1Strategy_1a6440afde976cb69c01b95d4c41a9ff5c" prot="public" virt="non-virtual"><scope>metaheurictics::strategy::Strategy</scope><name>getCountCurrent</name></member>
+      <member refid="classmetaheurictics_1_1strategy_1_1Strategy_1a6d5037c21b9a24975f301ac6aba4dffd" prot="public" virt="non-virtual"><scope>metaheurictics::strategy::Strategy</scope><name>getCountMax</name></member>
+      <member refid="classmetaheurictics_1_1strategy_1_1Strategy_1ac70469856a2b6424f29952c0e77eebf8" prot="public" virt="non-virtual"><scope>metaheurictics::strategy::Strategy</scope><name>getListKey</name></member>
+      <member refid="classmetaheurictics_1_1strategy_1_1Strategy_1a4bc6bd95db71e14b1f48c1bfc85f1305" prot="public" virt="non-virtual"><scope>metaheurictics::strategy::Strategy</scope><name>getProblem</name></member>
+      <member refid="classmetaheurictics_1_1strategy_1_1Strategy_1a1ce64c953a44083a90753c3ffb46d40e" prot="public" virt="non-virtual"><scope>metaheurictics::strategy::Strategy</scope><name>getStopexecute</name></member>
+      <member refid="classmetaheurictics_1_1strategy_1_1Strategy_1ad2641e12c52292930364de6655333aa8" prot="public" virt="non-virtual"><scope>metaheurictics::strategy::Strategy</scope><name>getStrategy</name></member>
+      <member refid="classmetaheurictics_1_1strategy_1_1Strategy_1a307eddf8b8d1eadfdce6b89148bd78fb" prot="public" virt="non-virtual"><scope>metaheurictics::strategy::Strategy</scope><name>getThreshold</name></member>
+      <member refid="classmetaheurictics_1_1strategy_1_1Strategy_1a0036f56e2cd146ee5f37a6da30ed415a" prot="public" virt="non-virtual"><scope>metaheurictics::strategy::Strategy</scope><name>getUpdateparameter</name></member>
+      <member refid="classmetaheurictics_1_1strategy_1_1Strategy_1afc091846262ceb740b13d949744e8bf7" prot="private" virt="non-virtual"><scope>metaheurictics::strategy::Strategy</scope><name>ifFactoryGenerator</name></member>
+      <member refid="classmetaheurictics_1_1strategy_1_1Strategy_1a24dc7f53fd6fed09d4db04350f73b1a3" prot="public" virt="non-virtual"><scope>metaheurictics::strategy::Strategy</scope><name>initialize</name></member>
+      <member refid="classmetaheurictics_1_1strategy_1_1Strategy_1a01adb5013155c7f691f95e8ab59181d0" prot="public" virt="non-virtual"><scope>metaheurictics::strategy::Strategy</scope><name>initializeGenerators</name></member>
+      <member refid="classmetaheurictics_1_1strategy_1_1Strategy_1afbeb580f6bf107dd0b6d128e86a4764c" prot="package" virt="non-virtual"><scope>metaheurictics::strategy::Strategy</scope><name>initialTime</name></member>
+      <member refid="classmetaheurictics_1_1strategy_1_1Strategy_1ad3a183f63a0c3c4b25957baa9040eaec" prot="public" virt="non-virtual"><scope>metaheurictics::strategy::Strategy</scope><name>listBest</name></member>
+      <member refid="classmetaheurictics_1_1strategy_1_1Strategy_1ab111e2ebd50ff83f126ef6f5201f9283" prot="public" virt="non-virtual"><scope>metaheurictics::strategy::Strategy</scope><name>listOfflineError</name></member>
+      <member refid="classmetaheurictics_1_1strategy_1_1Strategy_1aa572e7d90e24bae70ea47a31fee298f4" prot="public" virt="non-virtual"><scope>metaheurictics::strategy::Strategy</scope><name>listRefPoblacFinal</name></member>
+      <member refid="classmetaheurictics_1_1strategy_1_1Strategy_1a6079f1c09fe81506e05976037911be31" prot="public" virt="non-virtual"><scope>metaheurictics::strategy::Strategy</scope><name>listStates</name></member>
+      <member refid="classmetaheurictics_1_1strategy_1_1Strategy_1a72b0b983ab5990ef999037f9c331515a" prot="public" virt="non-virtual"><scope>metaheurictics::strategy::Strategy</scope><name>mapGenerators</name></member>
+      <member refid="classmetaheurictics_1_1strategy_1_1Strategy_1abc3c1b65673f8757ae414dfd4bf18f97" prot="public" virt="non-virtual"><scope>metaheurictics::strategy::Strategy</scope><name>newGenerator</name></member>
+      <member refid="classmetaheurictics_1_1strategy_1_1Strategy_1a5ac9ccf79296d15b1a44d119c1f1fc6e" prot="public" virt="non-virtual"><scope>metaheurictics::strategy::Strategy</scope><name>notDominated</name></member>
+      <member refid="classmetaheurictics_1_1strategy_1_1Strategy_1ab3b8afb295795d6f31000bd5c18700be" prot="private" virt="non-virtual"><scope>metaheurictics::strategy::Strategy</scope><name>periodo</name></member>
+      <member refid="classmetaheurictics_1_1strategy_1_1Strategy_1a72e752e037880a0ff45c679bbc553d00" prot="private" virt="non-virtual"><scope>metaheurictics::strategy::Strategy</scope><name>problem</name></member>
+      <member refid="classmetaheurictics_1_1strategy_1_1Strategy_1ad7c438a82bc4f08ad239b3bc56320bca" prot="public" virt="non-virtual"><scope>metaheurictics::strategy::Strategy</scope><name>saveFreneParetoMonoObjetivo</name></member>
+      <member refid="classmetaheurictics_1_1strategy_1_1Strategy_1a077d2cdfe76bd31661ca024e339a4c98" prot="public" virt="non-virtual"><scope>metaheurictics::strategy::Strategy</scope><name>saveListBestStates</name></member>
+      <member refid="classmetaheurictics_1_1strategy_1_1Strategy_1a4e698ca86e2842c70099dadd560e7578" prot="public" virt="non-virtual"><scope>metaheurictics::strategy::Strategy</scope><name>saveListStates</name></member>
+      <member refid="classmetaheurictics_1_1strategy_1_1Strategy_1aef162976b610a8d30ab537af9face3b4" prot="public" virt="non-virtual"><scope>metaheurictics::strategy::Strategy</scope><name>setBestState</name></member>
+      <member refid="classmetaheurictics_1_1strategy_1_1Strategy_1a0a7bed828f9d4fb1b29dbda112020b77" prot="public" virt="non-virtual"><scope>metaheurictics::strategy::Strategy</scope><name>setCountCurrent</name></member>
+      <member refid="classmetaheurictics_1_1strategy_1_1Strategy_1a7512cbe68ba46c4d8534f0aff17b5c17" prot="public" virt="non-virtual"><scope>metaheurictics::strategy::Strategy</scope><name>setCountMax</name></member>
+      <member refid="classmetaheurictics_1_1strategy_1_1Strategy_1a2a5bb3ddd64d9f7d7ee9f50da7804850" prot="public" virt="non-virtual"><scope>metaheurictics::strategy::Strategy</scope><name>setProblem</name></member>
+      <member refid="classmetaheurictics_1_1strategy_1_1Strategy_1a2f833e91e1f26476659d049362f219ac" prot="public" virt="non-virtual"><scope>metaheurictics::strategy::Strategy</scope><name>setStopexecute</name></member>
+      <member refid="classmetaheurictics_1_1strategy_1_1Strategy_1abc89b807d8506e11ef85c41eeb5e1858" prot="public" virt="non-virtual"><scope>metaheurictics::strategy::Strategy</scope><name>setThreshold</name></member>
+      <member refid="classmetaheurictics_1_1strategy_1_1Strategy_1ac781087326a37b5f9cc1ea135bfc7c82" prot="public" virt="non-virtual"><scope>metaheurictics::strategy::Strategy</scope><name>setUpdateparameter</name></member>
+      <member refid="classmetaheurictics_1_1strategy_1_1Strategy_1aba3d7b221051061dd7955d3059ea2272" prot="private" virt="non-virtual"><scope>metaheurictics::strategy::Strategy</scope><name>stopexecute</name></member>
+      <member refid="classmetaheurictics_1_1strategy_1_1Strategy_1ac65d26e08073f5cfc7596577f18b9694" prot="private" virt="non-virtual"><scope>metaheurictics::strategy::Strategy</scope><name>Strategy</name></member>
+      <member refid="classmetaheurictics_1_1strategy_1_1Strategy_1a235c3afb5c1d4afe8ebaa1da12cff32e" prot="private" virt="non-virtual"><scope>metaheurictics::strategy::Strategy</scope><name>strategy</name></member>
+      <member refid="classmetaheurictics_1_1strategy_1_1Strategy_1a1914ff8fe50a63e507d63538cd63e9ea" prot="public" virt="non-virtual"><scope>metaheurictics::strategy::Strategy</scope><name>threshold</name></member>
+      <member refid="classmetaheurictics_1_1strategy_1_1Strategy_1a98a7b4be6d8c731b7f1dcfcde571a5d5" prot="package" virt="non-virtual"><scope>metaheurictics::strategy::Strategy</scope><name>timeExecute</name></member>
+      <member refid="classmetaheurictics_1_1strategy_1_1Strategy_1ae5fae0f94a80e56677aa3f7ac77b6d44" prot="public" virt="non-virtual"><scope>metaheurictics::strategy::Strategy</scope><name>update</name></member>
+      <member refid="classmetaheurictics_1_1strategy_1_1Strategy_1a2f4520e24d31de6e4895bdf4ab2b9502" prot="public" virt="non-virtual"><scope>metaheurictics::strategy::Strategy</scope><name>updateCountGender</name></member>
+      <member refid="classmetaheurictics_1_1strategy_1_1Strategy_1aeae847a5e9cad6d863212f3e3cf04cbe" prot="private" virt="non-virtual"><scope>metaheurictics::strategy::Strategy</scope><name>updateparameter</name></member>
+      <member refid="classmetaheurictics_1_1strategy_1_1Strategy_1a91022422139781e5efd55fe77049bcce" prot="public" virt="non-virtual"><scope>metaheurictics::strategy::Strategy</scope><name>updateRef</name></member>
+      <member refid="classmetaheurictics_1_1strategy_1_1Strategy_1a507abefc022ec475c0d5473055adf484" prot="public" virt="non-virtual"><scope>metaheurictics::strategy::Strategy</scope><name>updateRefGenerator</name></member>
+      <member refid="classmetaheurictics_1_1strategy_1_1Strategy_1a1a969707e4659afea6bc6ee7479e9e65" prot="public" virt="non-virtual"><scope>metaheurictics::strategy::Strategy</scope><name>updateRefMultiG</name></member>
+      <member refid="classmetaheurictics_1_1strategy_1_1Strategy_1aa65b766626141e9b647a42c0056a4798" prot="public" virt="non-virtual"><scope>metaheurictics::strategy::Strategy</scope><name>updateWeight</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

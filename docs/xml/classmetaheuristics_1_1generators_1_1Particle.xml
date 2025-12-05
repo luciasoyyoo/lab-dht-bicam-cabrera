@@ -1,0 +1,862 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="es">
+  <compounddef id="classmetaheuristics_1_1generators_1_1Particle" kind="class" language="Java" prot="public">
+    <compoundname>metaheuristics::generators::Particle</compoundname>
+    <basecompoundref refid="classmetaheuristics_1_1generators_1_1Generator" prot="public" virt="non-virtual">metaheuristics.generators.Generator</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1Particle_1ac3ace0a70b52edbf96d5925e46fcd420" prot="private" static="no" mutable="no">
+        <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+        <definition>State metaheuristics.generators.Particle.statePBest</definition>
+        <argsstring></argsstring>
+        <name>statePBest</name>
+        <qualifiedname>metaheuristics.generators.Particle.statePBest</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/Particle.java" line="18" column="15" bodyfile="practica5/src/main/java/metaheuristics/generators/Particle.java" bodystart="18" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1Particle_1ae73e3ec5cb0c62c033a28c502b05c243" compoundref="Particle_8java" startline="66" endline="68">metaheuristics.generators.Particle.getStatePBest</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1Particle_1a2bcad653ae834df9f3242b75972a4e43" compoundref="Particle_8java" startline="39" endline="44">metaheuristics.generators.Particle.Particle</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1Particle_1ab6280c7ef3a2d4898f25517ffcba8d53" compoundref="Particle_8java" startline="74" endline="76">metaheuristics.generators.Particle.setStatePBest</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1Particle_1a8a8a33dd0ab1d3352d36b239d5c11beb" compoundref="Particle_8java" startline="203" endline="222">metaheuristics.generators.Particle.updateReference</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1Particle_1a4d222dd12e7086c625de03c7d35bf909" prot="private" static="no" mutable="no">
+        <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+        <definition>State metaheuristics.generators.Particle.stateActual</definition>
+        <argsstring></argsstring>
+        <name>stateActual</name>
+        <qualifiedname>metaheuristics.generators.Particle.stateActual</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/Particle.java" line="19" column="15" bodyfile="practica5/src/main/java/metaheuristics/generators/Particle.java" bodystart="19" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1Particle_1a2208c6b0ed77df08e2b80bdc75095359" compoundref="Particle_8java" startline="82" endline="84">metaheuristics.generators.Particle.getStateActual</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1Particle_1a2bcad653ae834df9f3242b75972a4e43" compoundref="Particle_8java" startline="39" endline="44">metaheuristics.generators.Particle.Particle</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1Particle_1abdb874dd079ba7e259cd8702370baa48" compoundref="Particle_8java" startline="90" endline="92">metaheuristics.generators.Particle.setStateActual</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1Particle_1a2b55cd9e4995053b3c90009e8f9bfc5d" compoundref="Particle_8java" startline="164" endline="188">metaheuristics.generators.Particle.UpdateCode</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1Particle_1a8a8a33dd0ab1d3352d36b239d5c11beb" compoundref="Particle_8java" startline="203" endline="222">metaheuristics.generators.Particle.updateReference</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1Particle_1a8ed4bebd5b92729b240f105705c31b19" prot="private" static="no" mutable="no">
+        <type>ArrayList&lt; Object &gt;</type>
+        <definition>ArrayList&lt;Object&gt; metaheuristics.generators.Particle.velocity</definition>
+        <argsstring></argsstring>
+        <name>velocity</name>
+        <qualifiedname>metaheuristics.generators.Particle.velocity</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/Particle.java" line="20" column="19" bodyfile="practica5/src/main/java/metaheuristics/generators/Particle.java" bodystart="20" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1Particle_1a4d39d153e84e0c8f558fe4c9d2e1a62b" compoundref="Particle_8java" startline="50" endline="52">metaheuristics.generators.Particle.getVelocity</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1Particle_1a2bcad653ae834df9f3242b75972a4e43" compoundref="Particle_8java" startline="39" endline="44">metaheuristics.generators.Particle.Particle</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1Particle_1afd5da2cbdadc6839a6bc0fa889905b13" compoundref="Particle_8java" startline="58" endline="60">metaheuristics.generators.Particle.setVelocity</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1Particle_1acfc132343407756e7b016506963b7984" compoundref="Particle_8java" startline="127" endline="157">metaheuristics.generators.Particle.UpdateVelocity</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1Particle_1a24355b57fa206820a3b519e8f65ebc4a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>metaheuristics.generators.Particle.Particle</definition>
+        <argsstring>()</argsstring>
+        <name>Particle</name>
+        <qualifiedname>metaheuristics.generators.Particle.Particle</qualifiedname>
+        <briefdescription>
+<para><ref refid="classmetaheuristics_1_1generators_1_1Particle" kindref="compound">Particle</ref> - method constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/Particle.java" line="26" column="8" bodyfile="practica5/src/main/java/metaheuristics/generators/Particle.java" bodystart="26" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1Particle_1a2bcad653ae834df9f3242b75972a4e43" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>metaheuristics.generators.Particle.Particle</definition>
+        <argsstring>(State statePBest, State stateActual, ArrayList&lt; Object &gt; velocity)</argsstring>
+        <name>Particle</name>
+        <qualifiedname>metaheuristics.generators.Particle.Particle</qualifiedname>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>statePBest</declname>
+        </param>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>stateActual</declname>
+        </param>
+        <param>
+          <type>ArrayList&lt; Object &gt;</type>
+          <declname>velocity</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="classmetaheuristics_1_1generators_1_1Particle" kindref="compound">Particle</ref> - method constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>statePBest</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stateActual</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>velocity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/Particle.java" line="39" column="8" bodyfile="practica5/src/main/java/metaheuristics/generators/Particle.java" bodystart="39" bodyend="44"/>
+        <references refid="classmetaheuristics_1_1generators_1_1Particle_1a4d222dd12e7086c625de03c7d35bf909" compoundref="Particle_8java" startline="19">metaheuristics.generators.Particle.stateActual</references>
+        <references refid="classmetaheuristics_1_1generators_1_1Particle_1ac3ace0a70b52edbf96d5925e46fcd420" compoundref="Particle_8java" startline="18">metaheuristics.generators.Particle.statePBest</references>
+        <references refid="classmetaheuristics_1_1generators_1_1Particle_1a8ed4bebd5b92729b240f105705c31b19" compoundref="Particle_8java" startline="20">metaheuristics.generators.Particle.velocity</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1Particle_1a4d39d153e84e0c8f558fe4c9d2e1a62b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ArrayList&lt; Object &gt;</type>
+        <definition>ArrayList&lt; Object &gt; metaheuristics.generators.Particle.getVelocity</definition>
+        <argsstring>()</argsstring>
+        <name>getVelocity</name>
+        <qualifiedname>metaheuristics.generators.Particle.getVelocity</qualifiedname>
+        <briefdescription>
+<para>getVelocity - get the velocity of the particle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the velocity of the particle </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/Particle.java" line="50" column="18" bodyfile="practica5/src/main/java/metaheuristics/generators/Particle.java" bodystart="50" bodyend="52"/>
+        <references refid="classmetaheuristics_1_1generators_1_1Particle_1a8ed4bebd5b92729b240f105705c31b19" compoundref="Particle_8java" startline="20">metaheuristics.generators.Particle.velocity</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1Particle_1afd5da2cbdadc6839a6bc0fa889905b13" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheuristics.generators.Particle.setVelocity</definition>
+        <argsstring>(ArrayList&lt; Object &gt; velocity)</argsstring>
+        <name>setVelocity</name>
+        <qualifiedname>metaheuristics.generators.Particle.setVelocity</qualifiedname>
+        <param>
+          <type>ArrayList&lt; Object &gt;</type>
+          <declname>velocity</declname>
+        </param>
+        <briefdescription>
+<para>setVelocity - set the velocity of the particle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>velocity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the velocity to set </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/Particle.java" line="58" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/Particle.java" bodystart="58" bodyend="60"/>
+        <references refid="classmetaheuristics_1_1generators_1_1Particle_1a8ed4bebd5b92729b240f105705c31b19" compoundref="Particle_8java" startline="20">metaheuristics.generators.Particle.velocity</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1Particle_1ae73e3ec5cb0c62c033a28c502b05c243" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+        <definition>State metaheuristics.generators.Particle.getStatePBest</definition>
+        <argsstring>()</argsstring>
+        <name>getStatePBest</name>
+        <qualifiedname>metaheuristics.generators.Particle.getStatePBest</qualifiedname>
+        <briefdescription>
+<para>getStatePBest - get the personal best state of the particle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the personal best state of the particle </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/Particle.java" line="66" column="14" bodyfile="practica5/src/main/java/metaheuristics/generators/Particle.java" bodystart="66" bodyend="68"/>
+        <references refid="classmetaheuristics_1_1generators_1_1Particle_1ac3ace0a70b52edbf96d5925e46fcd420" compoundref="Particle_8java" startline="18">metaheuristics.generators.Particle.statePBest</references>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1abc5a8dcdf9ff7418f4084002e383b860" compoundref="ParticleSwarmOptimization_8java" startline="364" endline="395">metaheuristics.generators.ParticleSwarmOptimization.updateReference</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1Particle_1ab6280c7ef3a2d4898f25517ffcba8d53" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheuristics.generators.Particle.setStatePBest</definition>
+        <argsstring>(State statePBest)</argsstring>
+        <name>setStatePBest</name>
+        <qualifiedname>metaheuristics.generators.Particle.setStatePBest</qualifiedname>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>statePBest</declname>
+        </param>
+        <briefdescription>
+<para>setStatePBest - set the personal best state of the particle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>statePBest</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the personal best state to set </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/Particle.java" line="74" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/Particle.java" bodystart="74" bodyend="76"/>
+        <references refid="classmetaheuristics_1_1generators_1_1Particle_1ac3ace0a70b52edbf96d5925e46fcd420" compoundref="Particle_8java" startline="18">metaheuristics.generators.Particle.statePBest</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1Particle_1a2208c6b0ed77df08e2b80bdc75095359" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+        <definition>State metaheuristics.generators.Particle.getStateActual</definition>
+        <argsstring>()</argsstring>
+        <name>getStateActual</name>
+        <qualifiedname>metaheuristics.generators.Particle.getStateActual</qualifiedname>
+        <briefdescription>
+<para>getStateActual - get the current state of the particle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the current state of the particle </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/Particle.java" line="82" column="14" bodyfile="practica5/src/main/java/metaheuristics/generators/Particle.java" bodystart="82" bodyend="84"/>
+        <references refid="classmetaheuristics_1_1generators_1_1Particle_1a4d222dd12e7086c625de03c7d35bf909" compoundref="Particle_8java" startline="19">metaheuristics.generators.Particle.stateActual</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1Particle_1abdb874dd079ba7e259cd8702370baa48" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheuristics.generators.Particle.setStateActual</definition>
+        <argsstring>(State stateActual)</argsstring>
+        <name>setStateActual</name>
+        <qualifiedname>metaheuristics.generators.Particle.setStateActual</qualifiedname>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>stateActual</declname>
+        </param>
+        <briefdescription>
+<para>setStateActual - set the current state of the particle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stateActual</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the current state to set </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/Particle.java" line="90" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/Particle.java" bodystart="90" bodyend="92"/>
+        <references refid="classmetaheuristics_1_1generators_1_1Particle_1a4d222dd12e7086c625de03c7d35bf909" compoundref="Particle_8java" startline="19">metaheuristics.generators.Particle.stateActual</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1Particle_1a0c716340cbccf5c27c6b587b96d0b596" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+        <definition>State metaheuristics.generators.Particle.generate</definition>
+        <argsstring>(Integer operatornumber)</argsstring>
+        <name>generate</name>
+        <qualifiedname>metaheuristics.generators.Particle.generate</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1a06f6f7622b9ce32590eadbdf6bf962b5">generate</reimplements>
+        <param>
+          <type>Integer</type>
+          <declname>operatornumber</declname>
+        </param>
+        <exceptions> throws IllegalArgumentException, SecurityException, 			ClassNotFoundException, InstantiationException, 			IllegalAccessException, InvocationTargetException, 			NoSuchMethodException </exceptions>
+        <briefdescription>
+<para>generate - generate a new state for the particle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>operatornumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>IllegalArgumentException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>SecurityException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ClassNotFoundException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>InstantiationException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>IllegalAccessException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>InvocationTargetException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>NoSuchMethodException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/Particle.java" line="106" column="14" bodyfile="practica5/src/main/java/metaheuristics/generators/Particle.java" bodystart="106" bodyend="118"/>
+        <references refid="classproblem_1_1definition_1_1State_1ab15765262a6e1cc7661c51cbcf0e7785" compoundref="State_8java" startline="77" endline="79">problem.definition.State.setCode</references>
+        <references refid="classmetaheuristics_1_1generators_1_1Particle_1a2b55cd9e4995053b3c90009e8f9bfc5d" compoundref="Particle_8java" startline="164" endline="188">metaheuristics.generators.Particle.UpdateCode</references>
+        <references refid="classmetaheuristics_1_1generators_1_1Particle_1acfc132343407756e7b016506963b7984" compoundref="Particle_8java" startline="127" endline="157">metaheuristics.generators.Particle.UpdateVelocity</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1Particle_1a8a8a33dd0ab1d3352d36b239d5c11beb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheuristics.generators.Particle.updateReference</definition>
+        <argsstring>(State stateCandidate, Integer countIterationsCurrent)</argsstring>
+        <name>updateReference</name>
+        <qualifiedname>metaheuristics.generators.Particle.updateReference</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1aa1c5878953f2111221b21cb9b1e6cc9f">updateReference</reimplements>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>stateCandidate</declname>
+        </param>
+        <param>
+          <type>Integer</type>
+          <declname>countIterationsCurrent</declname>
+        </param>
+        <exceptions> throws IllegalArgumentException, 			SecurityException, ClassNotFoundException, InstantiationException, 			IllegalAccessException, InvocationTargetException, 			NoSuchMethodException </exceptions>
+        <briefdescription>
+<para>updateReference - update the reference state and the personal best state of the particle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stateCandidate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>countIterationsCurrent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>IllegalArgumentException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>SecurityException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ClassNotFoundException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>InstantiationException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>IllegalAccessException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>InvocationTargetException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>NoSuchMethodException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/Particle.java" line="203" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/Particle.java" bodystart="203" bodyend="222"/>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1a4bc6bd95db71e14b1f48c1bfc85f1305" compoundref="Strategy_8java" startline="405" endline="407">metaheurictics.strategy.Strategy.getProblem</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1ad2641e12c52292930364de6655333aa8" compoundref="Strategy_8java" startline="80" endline="85">metaheurictics.strategy.Strategy.getStrategy</references>
+        <references refid="classproblem_1_1definition_1_1Problem_1ad6f38df755179e22ffe487ba4a5c8021" compoundref="Problem_8java" startline="97" endline="99">problem.definition.Problem.getTypeProblem</references>
+        <references refid="enumproblem_1_1definition_1_1Problem_1_1ProblemType_1aa55383c4cb9a71cfeabc7f715ee0cd6e" compoundref="Problem_8java" startline="29">problem.definition.Problem.ProblemType.Maximizar</references>
+        <references refid="classmetaheuristics_1_1generators_1_1Particle_1a4d222dd12e7086c625de03c7d35bf909" compoundref="Particle_8java" startline="19">metaheuristics.generators.Particle.stateActual</references>
+        <references refid="classmetaheuristics_1_1generators_1_1Particle_1ac3ace0a70b52edbf96d5925e46fcd420" compoundref="Particle_8java" startline="18">metaheuristics.generators.Particle.statePBest</references>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1abc5a8dcdf9ff7418f4084002e383b860" compoundref="ParticleSwarmOptimization_8java" startline="364" endline="395">metaheuristics.generators.ParticleSwarmOptimization.updateReference</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1Particle_1a53ebefe17cac18b12d48d4f8ccd51eba" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+        <definition>State metaheuristics.generators.Particle.getReference</definition>
+        <argsstring>()</argsstring>
+        <name>getReference</name>
+        <qualifiedname>metaheuristics.generators.Particle.getReference</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1aa56dd45a45776f6023b9f74179cc6384">getReference</reimplements>
+        <briefdescription>
+<para>getReference - get the reference state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>reference state </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/Particle.java" line="229" column="14" bodyfile="practica5/src/main/java/metaheuristics/generators/Particle.java" bodystart="229" bodyend="232"/>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1Particle_1a88c49fdd37fef41c38d7ac4aec35d15c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheuristics.generators.Particle.setInitialReference</definition>
+        <argsstring>(State stateInitialRef)</argsstring>
+        <name>setInitialReference</name>
+        <qualifiedname>metaheuristics.generators.Particle.setInitialReference</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1aa9f7c4c983705f843b8fcc81e4aa8ba4">setInitialReference</reimplements>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>stateInitialRef</declname>
+        </param>
+        <briefdescription>
+<para>setInitialReference - set the initial reference state for the particle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stateInitialRef</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/Particle.java" line="239" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/Particle.java" bodystart="239" bodyend="242"/>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1Particle_1aa9ac8fb8fb1c8794ff598461b7473c5c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="enummetaheuristics_1_1generators_1_1GeneratorType" kindref="compound">GeneratorType</ref></type>
+        <definition>GeneratorType metaheuristics.generators.Particle.getType</definition>
+        <argsstring>()</argsstring>
+        <name>getType</name>
+        <qualifiedname>metaheuristics.generators.Particle.getType</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1a5a123306b43c42d28cd1d6e17f8067a5">getType</reimplements>
+        <briefdescription>
+<para>getType - get the type of the generator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>return the type of the generator </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/Particle.java" line="249" column="22" bodyfile="practica5/src/main/java/metaheuristics/generators/Particle.java" bodystart="249" bodyend="252"/>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1Particle_1a7d37225aa866b6ac5ea18bcf4031cc18" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+        <definition>List&lt; State &gt; metaheuristics.generators.Particle.getReferenceList</definition>
+        <argsstring>()</argsstring>
+        <name>getReferenceList</name>
+        <qualifiedname>metaheuristics.generators.Particle.getReferenceList</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1ae168237b306de55fe4d6dfda75c7cd13">getReferenceList</reimplements>
+        <briefdescription>
+<para>getReferenceList - get the list of reference states. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>list of reference states </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/Particle.java" line="259" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/Particle.java" bodystart="259" bodyend="262"/>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1Particle_1a3d68da3423ad9fcf1cedc905dfcba1f9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+        <definition>List&lt; State &gt; metaheuristics.generators.Particle.getSonList</definition>
+        <argsstring>()</argsstring>
+        <name>getSonList</name>
+        <qualifiedname>metaheuristics.generators.Particle.getSonList</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1aee09d724c1b3040e7a7ad0b64e341c96">getSonList</reimplements>
+        <briefdescription>
+<para>getSonList - get the list of son states. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>list of son states </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/Particle.java" line="269" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/Particle.java" bodystart="269" bodyend="272"/>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1Particle_1a72847262dd09c89d6445eef9410d0517" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean metaheuristics.generators.Particle.awardUpdateREF</definition>
+        <argsstring>(State stateCandidate)</argsstring>
+        <name>awardUpdateREF</name>
+        <qualifiedname>metaheuristics.generators.Particle.awardUpdateREF</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1a3513d3953ecc97683f38bcb662b74b9b">awardUpdateREF</reimplements>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>stateCandidate</declname>
+        </param>
+        <briefdescription>
+<para>awardUpdateREF - award the update of the reference state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stateCandidate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>return true if the reference state was updated, false otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/Particle.java" line="280" column="16" bodyfile="practica5/src/main/java/metaheuristics/generators/Particle.java" bodystart="280" bodyend="283"/>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1Particle_1a10fc7e67d22c152246a0de74b4f0c5e3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheuristics.generators.Particle.setWeight</definition>
+        <argsstring>(float weight)</argsstring>
+        <name>setWeight</name>
+        <qualifiedname>metaheuristics.generators.Particle.setWeight</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1a8b3c66b57b4c739666989fbce667eb40">setWeight</reimplements>
+        <param>
+          <type>float</type>
+          <declname>weight</declname>
+        </param>
+        <briefdescription>
+<para>setWeight - set the weight of the particle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>weight</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/Particle.java" line="290" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/Particle.java" bodystart="290" bodyend="293"/>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1Particle_1acd575095868ddd1c81452bdd09fb7a54" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float metaheuristics.generators.Particle.getWeight</definition>
+        <argsstring>()</argsstring>
+        <name>getWeight</name>
+        <qualifiedname>metaheuristics.generators.Particle.getWeight</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1a64f2b824081c7af593bf9aa8eabf2c9e">getWeight</reimplements>
+        <briefdescription>
+<para>getWeight - get the weight of the particle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>return the weight of the particle </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/Particle.java" line="300" column="14" bodyfile="practica5/src/main/java/metaheuristics/generators/Particle.java" bodystart="300" bodyend="303"/>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1Particle_1a9c934efbd2a96bafa16a04e149e759aa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float[]</type>
+        <definition>float[] metaheuristics.generators.Particle.getTrace</definition>
+        <argsstring>()</argsstring>
+        <name>getTrace</name>
+        <qualifiedname>metaheuristics.generators.Particle.getTrace</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1a75d7f30dd2cb3f92475db8525ac7c6e7">getTrace</reimplements>
+        <briefdescription>
+<para>getTrace - get the trace of the particle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>return the trace of the particle </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/Particle.java" line="310" column="14" bodyfile="practica5/src/main/java/metaheuristics/generators/Particle.java" bodystart="310" bodyend="313"/>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1Particle_1a905df3e3e8bc835c68e02fc9cf20ea93" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int[]</type>
+        <definition>int[] metaheuristics.generators.Particle.getListCountBetterGender</definition>
+        <argsstring>()</argsstring>
+        <name>getListCountBetterGender</name>
+        <qualifiedname>metaheuristics.generators.Particle.getListCountBetterGender</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1ac5bace71f51c16b611ede3ed53263473">getListCountBetterGender</reimplements>
+        <briefdescription>
+<para>getListCountBetterGender - get the list of counts of better genders. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>list of counts of better genders </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/Particle.java" line="320" column="12" bodyfile="practica5/src/main/java/metaheuristics/generators/Particle.java" bodystart="320" bodyend="323"/>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1Particle_1abe7d91e6ddbe9f54e11fee6333d03700" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int[]</type>
+        <definition>int[] metaheuristics.generators.Particle.getListCountGender</definition>
+        <argsstring>()</argsstring>
+        <name>getListCountGender</name>
+        <qualifiedname>metaheuristics.generators.Particle.getListCountGender</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1ac5d6d45ee8017fb87d80aa952edfc34e">getListCountGender</reimplements>
+        <briefdescription>
+<para>getListCountGender - get the list of counts of genders. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>list of counts of genders </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/Particle.java" line="330" column="12" bodyfile="practica5/src/main/java/metaheuristics/generators/Particle.java" bodystart="330" bodyend="333"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1Particle_1acfc132343407756e7b016506963b7984" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ArrayList&lt; Object &gt;</type>
+        <definition>ArrayList&lt; Object &gt; metaheuristics.generators.Particle.UpdateVelocity</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateVelocity</name>
+        <qualifiedname>metaheuristics.generators.Particle.UpdateVelocity</qualifiedname>
+        <briefdescription>
+<para>Uses ThreadLocalRandom for algorithmic (non-cryptographic) randomness. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This RNG updates particle velocity and is not security-sensitive. Suppress Sonar hotspot S2245 for this usage. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/Particle.java" line="127" column="19" bodyfile="practica5/src/main/java/metaheuristics/generators/Particle.java" bodystart="127" bodyend="157"/>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a12c12b70f5c84e0f06027adbe4db63f1" compoundref="ParticleSwarmOptimization_8java" startline="114" endline="114">metaheuristics.generators.ParticleSwarmOptimization.getCountCurrentIterPSO</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1ad2641e12c52292930364de6655333aa8" compoundref="Strategy_8java" startline="80" endline="85">metaheurictics.strategy.Strategy.getStrategy</references>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a4a53547ab8ca6aa61df72a02a76e3e80" compoundref="ParticleSwarmOptimization_8java" startline="71">metaheuristics.generators.ParticleSwarmOptimization.learning1</references>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1afcbf94cbccaf2d2654fac058793cc173" compoundref="ParticleSwarmOptimization_8java" startline="71">metaheuristics.generators.ParticleSwarmOptimization.learning2</references>
+        <references refid="classmetaheuristics_1_1generators_1_1Particle_1acfc132343407756e7b016506963b7984" compoundref="Particle_8java" startline="127" endline="157">metaheuristics.generators.Particle.UpdateVelocity</references>
+        <references refid="classmetaheuristics_1_1generators_1_1Particle_1a8ed4bebd5b92729b240f105705c31b19" compoundref="Particle_8java" startline="20">metaheuristics.generators.Particle.velocity</references>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a920f572bad5f93b03c3347356f7c2bc4" compoundref="ParticleSwarmOptimization_8java" startline="69">metaheuristics.generators.ParticleSwarmOptimization.wmax</references>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a25ee209144e81a8a9b36dda74df290c1" compoundref="ParticleSwarmOptimization_8java" startline="70">metaheuristics.generators.ParticleSwarmOptimization.wmin</references>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1Particle_1a0c716340cbccf5c27c6b587b96d0b596" compoundref="Particle_8java" startline="106" endline="118">metaheuristics.generators.Particle.generate</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1Particle_1acfc132343407756e7b016506963b7984" compoundref="Particle_8java" startline="127" endline="157">metaheuristics.generators.Particle.UpdateVelocity</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1Particle_1a2b55cd9e4995053b3c90009e8f9bfc5d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ArrayList&lt; Object &gt;</type>
+        <definition>ArrayList&lt; Object &gt; metaheuristics.generators.Particle.UpdateCode</definition>
+        <argsstring>(ArrayList&lt; Object &gt; actualVelocity)</argsstring>
+        <name>UpdateCode</name>
+        <qualifiedname>metaheuristics.generators.Particle.UpdateCode</qualifiedname>
+        <param>
+          <type>ArrayList&lt; Object &gt;</type>
+          <declname>actualVelocity</declname>
+        </param>
+        <briefdescription>
+<para>Uses ThreadLocalRandom for algorithmic (non-cryptographic) randomness when computing binary code updates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Not security-sensitive; suppress S2245. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/Particle.java" line="164" column="19" bodyfile="practica5/src/main/java/metaheuristics/generators/Particle.java" bodystart="164" bodyend="188"/>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a45a990b27b172338c10931d135b88b7f" compoundref="ParticleSwarmOptimization_8java" startline="73">metaheuristics.generators.ParticleSwarmOptimization.binary</references>
+        <references refid="classmetaheuristics_1_1generators_1_1Particle_1a4d222dd12e7086c625de03c7d35bf909" compoundref="Particle_8java" startline="19">metaheuristics.generators.Particle.stateActual</references>
+        <references refid="classmetaheuristics_1_1generators_1_1Particle_1a2b55cd9e4995053b3c90009e8f9bfc5d" compoundref="Particle_8java" startline="164" endline="188">metaheuristics.generators.Particle.UpdateCode</references>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1Particle_1a0c716340cbccf5c27c6b587b96d0b596" compoundref="Particle_8java" startline="106" endline="118">metaheuristics.generators.Particle.generate</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1Particle_1a2b55cd9e4995053b3c90009e8f9bfc5d" compoundref="Particle_8java" startline="164" endline="188">metaheuristics.generators.Particle.UpdateCode</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="classmetaheuristics_1_1generators_1_1Particle" kindref="compound">Particle</ref> - class that represents a particle in the <ref refid="classmetaheuristics_1_1generators_1_1Particle" kindref="compound">Particle</ref> Swarm Optimization algorithm. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>metaheuristics.generators.Particle</label>
+        <link refid="classmetaheuristics_1_1generators_1_1Particle"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>metaheuristics.generators.Generator</label>
+        <link refid="classmetaheuristics_1_1generators_1_1Generator"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4">
+        <label>Cloneable</label>
+      </node>
+      <node id="1">
+        <label>metaheuristics.generators.Particle</label>
+        <link refid="classmetaheuristics_1_1generators_1_1Particle"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-stateActual</edgelabel>
+          <edgelabel>-statePBest</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>metaheuristics.generators.Generator</label>
+        <link refid="classmetaheuristics_1_1generators_1_1Generator"/>
+      </node>
+      <node id="5">
+        <label>metaheuristics.generators.GeneratorType</label>
+        <link refid="enummetaheuristics_1_1generators_1_1GeneratorType"/>
+      </node>
+      <node id="3">
+        <label>problem.definition.State</label>
+        <link refid="classproblem_1_1definition_1_1State"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>#typeGenerator</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="practica5/src/main/java/metaheuristics/generators/Particle.java" line="16" column="7" bodyfile="practica5/src/main/java/metaheuristics/generators/Particle.java" bodystart="16" bodyend="335"/>
+    <listofallmembers>
+      <member refid="classmetaheuristics_1_1generators_1_1Particle_1a72847262dd09c89d6445eef9410d0517" prot="public" virt="non-virtual"><scope>metaheuristics::generators::Particle</scope><name>awardUpdateREF</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1Generator_1a43815f3944c514ba3156b0e68482befa" prot="public" virt="non-virtual"><scope>metaheuristics::generators::Particle</scope><name>countBetterGender</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1Generator_1a3c0145210385b6257c8fc20cac1f830a" prot="public" virt="non-virtual"><scope>metaheuristics::generators::Particle</scope><name>countGender</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1Particle_1a0c716340cbccf5c27c6b587b96d0b596" prot="public" virt="non-virtual"><scope>metaheuristics::generators::Particle</scope><name>generate</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1Particle_1a905df3e3e8bc835c68e02fc9cf20ea93" prot="public" virt="non-virtual"><scope>metaheuristics::generators::Particle</scope><name>getListCountBetterGender</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1Particle_1abe7d91e6ddbe9f54e11fee6333d03700" prot="public" virt="non-virtual"><scope>metaheuristics::generators::Particle</scope><name>getListCountGender</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1Particle_1a53ebefe17cac18b12d48d4f8ccd51eba" prot="public" virt="non-virtual"><scope>metaheuristics::generators::Particle</scope><name>getReference</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1Particle_1a7d37225aa866b6ac5ea18bcf4031cc18" prot="public" virt="non-virtual"><scope>metaheuristics::generators::Particle</scope><name>getReferenceList</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1Particle_1a3d68da3423ad9fcf1cedc905dfcba1f9" prot="public" virt="non-virtual"><scope>metaheuristics::generators::Particle</scope><name>getSonList</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1Particle_1a2208c6b0ed77df08e2b80bdc75095359" prot="public" virt="non-virtual"><scope>metaheuristics::generators::Particle</scope><name>getStateActual</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1Particle_1ae73e3ec5cb0c62c033a28c502b05c243" prot="public" virt="non-virtual"><scope>metaheuristics::generators::Particle</scope><name>getStatePBest</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1Particle_1a9c934efbd2a96bafa16a04e149e759aa" prot="public" virt="non-virtual"><scope>metaheuristics::generators::Particle</scope><name>getTrace</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1Particle_1aa9ac8fb8fb1c8794ff598461b7473c5c" prot="public" virt="non-virtual"><scope>metaheuristics::generators::Particle</scope><name>getType</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1Particle_1a4d39d153e84e0c8f558fe4c9d2e1a62b" prot="public" virt="non-virtual"><scope>metaheuristics::generators::Particle</scope><name>getVelocity</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1Particle_1acd575095868ddd1c81452bdd09fb7a54" prot="public" virt="non-virtual"><scope>metaheuristics::generators::Particle</scope><name>getWeight</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1Particle_1a24355b57fa206820a3b519e8f65ebc4a" prot="public" virt="non-virtual"><scope>metaheuristics::generators::Particle</scope><name>Particle</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1Particle_1a2bcad653ae834df9f3242b75972a4e43" prot="public" virt="non-virtual"><scope>metaheuristics::generators::Particle</scope><name>Particle</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1Particle_1a88c49fdd37fef41c38d7ac4aec35d15c" prot="public" virt="non-virtual"><scope>metaheuristics::generators::Particle</scope><name>setInitialReference</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1Particle_1abdb874dd079ba7e259cd8702370baa48" prot="public" virt="non-virtual"><scope>metaheuristics::generators::Particle</scope><name>setStateActual</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1Particle_1ab6280c7ef3a2d4898f25517ffcba8d53" prot="public" virt="non-virtual"><scope>metaheuristics::generators::Particle</scope><name>setStatePBest</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1Particle_1afd5da2cbdadc6839a6bc0fa889905b13" prot="public" virt="non-virtual"><scope>metaheuristics::generators::Particle</scope><name>setVelocity</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1Particle_1a10fc7e67d22c152246a0de74b4f0c5e3" prot="public" virt="non-virtual"><scope>metaheuristics::generators::Particle</scope><name>setWeight</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1Particle_1a4d222dd12e7086c625de03c7d35bf909" prot="private" virt="non-virtual"><scope>metaheuristics::generators::Particle</scope><name>stateActual</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1Particle_1ac3ace0a70b52edbf96d5925e46fcd420" prot="private" virt="non-virtual"><scope>metaheuristics::generators::Particle</scope><name>statePBest</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1Particle_1a2b55cd9e4995053b3c90009e8f9bfc5d" prot="private" virt="non-virtual"><scope>metaheuristics::generators::Particle</scope><name>UpdateCode</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1Particle_1a8a8a33dd0ab1d3352d36b239d5c11beb" prot="public" virt="non-virtual"><scope>metaheuristics::generators::Particle</scope><name>updateReference</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1Particle_1acfc132343407756e7b016506963b7984" prot="private" virt="non-virtual"><scope>metaheuristics::generators::Particle</scope><name>UpdateVelocity</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1Particle_1a8ed4bebd5b92729b240f105705c31b19" prot="private" virt="non-virtual"><scope>metaheuristics::generators::Particle</scope><name>velocity</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

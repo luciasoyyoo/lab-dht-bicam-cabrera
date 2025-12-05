@@ -1,0 +1,957 @@
+\doxysection{Referencia de la clase metaheuristics.\+generators.\+Multiobjective\+Tabu\+Search}
+\hypertarget{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch}{}\label{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch}\index{metaheuristics.generators.MultiobjectiveTabuSearch@{metaheuristics.generators.MultiobjectiveTabuSearch}}
+
+
+\doxylink{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch}{Multiobjective\+Tabu\+Search} -\/ class that implements the Multiobjective Tabu Search metaheuristic.  
+
+
+
+
+Diagrama de herencia de metaheuristics.\+generators.\+Multiobjective\+Tabu\+Search
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagrama de colaboración de metaheuristics.\+generators.\+Multiobjective\+Tabu\+Search\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_ae279b2ed418314d15e6c56b842c20e23}{get\+State\+Reference\+TS}} ()
+\begin{DoxyCompactList}\small\item\em get\+State\+Reference\+TS -\/ get the reference state for Tabu Search. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_acfded8b29215bc85064637d868cf3917}{set\+State\+Reference\+TS}} (\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_af0997147df854712548011b247a5f174}{state\+Reference\+TS}})
+\begin{DoxyCompactList}\small\item\em set\+State\+Reference\+TS -\/ set the reference state for Tabu Search. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{Generator\+Type}} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_a6988226dc64befc6c8f6959085929efc}{get\+Type\+Generator}} ()
+\begin{DoxyCompactList}\small\item\em get\+Type\+Generator -\/ get the type of the generator. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_a754ffcf3508a256e16fbf626048da0ce}{set\+Type\+Generator}} (\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{Generator\+Type}} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_ab5623431c4358f5f3293c4c5e23a7992}{type\+Generator}})
+\begin{DoxyCompactList}\small\item\em set\+Type\+Generator -\/ set the type of the generator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_a34d8bdaed4d57911bd7bde63157c8703}{Multiobjective\+Tabu\+Search}} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch}{Multiobjective\+Tabu\+Search} -\/ class that implements the Multiobjective Tabu Search metaheuristic. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_a719352455b19c8fc2244a4d7387db236}{generate}} (Integer operatornumber)  throws Illegal\+Argument\+Exception, Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception, Illegal\+Access\+Exception, Invocation\+Target\+Exception, No\+Such\+Method\+Exception 
+\begin{DoxyCompactList}\small\item\em generate -\/ generate a new state based on the operator number. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_a5e7f4e1f1fb436f2fb9c1770b90ee253}{update\+Reference}} (\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} state\+Candidate, Integer count\+Iterations\+Current)  throws Illegal\+Argument\+Exception, Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception, Illegal\+Access\+Exception, Invocation\+Target\+Exception, No\+Such\+Method\+Exception 
+\begin{DoxyCompactList}\small\item\em update\+Reference -\/ update the reference state and the list of visited states. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{Generator\+Type}} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_ade7cc640bcb709edaa015682155aaac2}{get\+Type}} ()
+\begin{DoxyCompactList}\small\item\em get\+Type -\/ get the type of the generator. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_a3ca25be7ef0c28d3ba6e26473972d887}{get\+Reference\+List}} ()
+\begin{DoxyCompactList}\small\item\em get\+Reference\+List -\/ get the list of reference states. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_ae22ff41cdbe5f2f7cb370a03ed24c477}{get\+Reference}} ()
+\begin{DoxyCompactList}\small\item\em get\+Reference -\/ get the reference state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_a6c25c3204b4e4fc62ae1fb0a5806a3ed}{set\+Initial\+Reference}} (\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} state\+Initial\+Ref)
+\begin{DoxyCompactList}\small\item\em set\+Initial\+Reference -\/ set the initial reference state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_af0e27b06643d94b9e37a7004af55a58a}{set\+State\+Ref}} (\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} state\+Ref)
+\begin{DoxyCompactList}\small\item\em set\+State\+Ref -\/ set the reference state. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_a1c0f71e47e5f6b6e6669866ac8892f24}{get\+Son\+List}} ()
+\begin{DoxyCompactList}\small\item\em get\+Son\+List -\/ get the list of child states. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_a8f5e5b2afaea89a98a1a05a3b192d23c}{set\+Type\+Candidate}} (\mbox{\hyperlink{enumlocal__search_1_1candidate__type_1_1CandidateType}{Candidate\+Type}} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_a97da542e1d41a93fb2af3b9deee60fdc}{type\+Candidate}})
+\begin{DoxyCompactList}\small\item\em set\+Type\+Candidate -\/ set the type of candidate. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_a3a2df89fb924f93a84d2579afa9a30e7}{award\+Update\+REF}} (\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} state\+Candidate)
+\begin{DoxyCompactList}\small\item\em award\+Update\+REF -\/ award the update of the reference state. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_a646763accfdf08b677e0e41773747517}{get\+Weight}} ()
+\begin{DoxyCompactList}\small\item\em get\+Weight -\/ get the weight of the solution. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_a04e6d1cc450203864d6e022db854e3bb}{set\+Weight}} (float \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_aa4607bb225547e49d5202adfb63b0c9a}{weight}})
+\begin{DoxyCompactList}\small\item\em set\+Weight -\/ set the weight of the generator. \end{DoxyCompactList}\item 
+int\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_a9fc33be2953363e41d8bfe1b9e59d2c3}{get\+List\+Count\+Better\+Gender}} ()
+\begin{DoxyCompactList}\small\item\em get\+List\+Count\+Better\+Gender -\/ get the list of counts of better solutions by gender. \end{DoxyCompactList}\item 
+int\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_ab32b15614e2605a9de9730ff419f8676}{get\+List\+Count\+Gender}} ()
+\begin{DoxyCompactList}\small\item\em get\+List\+Count\+Gender -\/ get the list of counts of solutions by gender. \end{DoxyCompactList}\item 
+float\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_a0201b91c6b86834fcaee559a20a100e6}{get\+Trace}} ()
+\begin{DoxyCompactList}\small\item\em get\+Trace -\/ get the trace of the solution. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1CandidateValue}{Candidate\+Value}} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_ac1077518972d0de6f6cdb4669a5c32b8}{candidatevalue}}
+\item 
+\mbox{\hyperlink{enumlocal__search_1_1acceptation__type_1_1AcceptType}{Accept\+Type}} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_a09c4a34396dafd514a3b43c86f368d0f}{type\+Acceptation}}
+\item 
+\mbox{\hyperlink{enumlocal__search_1_1complement_1_1StrategyType}{Strategy\+Type}} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_a048690a51992d1a585cb0c36064252f1}{strategy}}
+\item 
+\mbox{\hyperlink{enumlocal__search_1_1candidate__type_1_1CandidateType}{Candidate\+Type}} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_a97da542e1d41a93fb2af3b9deee60fdc}{type\+Candidate}}
+\item 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_af0997147df854712548011b247a5f174}{state\+Reference\+TS}}
+\item 
+\mbox{\hyperlink{interfacefactory__interface_1_1IFFactoryAcceptCandidate}{IFFactory\+Accept\+Candidate}} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_aa71ff0be1f4f97b95dd7780c2b0b40be}{ifaccept\+Candidate}}
+\item 
+\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{Generator\+Type}} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_ab5623431c4358f5f3293c4c5e23a7992}{type\+Generator}}
+\item 
+List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_a9222859138dedf83000373b31f226829}{list\+State\+Reference}} = new Array\+List$<$\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}$>$()
+\item 
+float \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_aa4607bb225547e49d5202adfb63b0c9a}{weight}}
+\item 
+List$<$ Float $>$ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_a5e668cca34188f2c6c03e2951fe0b100}{list\+Trace}} = new Array\+List$<$Float$>$()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Otros miembros heredados}
+\doxysubsection*{Atributos públicos heredados de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator}{metaheuristics.\+generators.\+Generator}}}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a3c0145210385b6257c8fc20cac1f830a}{count\+Gender}}
+\item 
+int \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a43815f3944c514ba3156b0e68482befa}{count\+Better\+Gender}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+\doxylink{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch}{Multiobjective\+Tabu\+Search} -\/ class that implements the Multiobjective Tabu Search metaheuristic. 
+
+Definición en la línea \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00025}{25}} del archivo \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source}{Multiobjective\+Tabu\+Search.\+java}}.
+
+
+
+\label{doc-constructors}
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_doc-constructors}
+\doxysubsection{Documentación de constructores y destructores}
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_a34d8bdaed4d57911bd7bde63157c8703}\index{metaheuristics.generators.MultiobjectiveTabuSearch@{metaheuristics.generators.MultiobjectiveTabuSearch}!MultiobjectiveTabuSearch@{MultiobjectiveTabuSearch}}
+\index{MultiobjectiveTabuSearch@{MultiobjectiveTabuSearch}!metaheuristics.generators.MultiobjectiveTabuSearch@{metaheuristics.generators.MultiobjectiveTabuSearch}}
+\doxysubsubsection{\texorpdfstring{MultiobjectiveTabuSearch()}{MultiobjectiveTabuSearch()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_a34d8bdaed4d57911bd7bde63157c8703} 
+metaheuristics.\+generators.\+Multiobjective\+Tabu\+Search.\+Multiobjective\+Tabu\+Search (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxylink{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch}{Multiobjective\+Tabu\+Search} -\/ class that implements the Multiobjective Tabu Search metaheuristic. 
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00073}{73}} del archivo \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source}{Multiobjective\+Tabu\+Search.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ super();}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ this.typeAcceptation\ =\ AcceptType.AcceptNotDominatedTabu;}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ this.strategy\ =\ StrategyType.TABU;}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{comment}{//\ Use\ problem\ API\ directly\ when\ needed;\ avoid\ unused\ local\ variable}}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ this.typeCandidate\ =\ CandidateType.RandomCandidate;}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ this.candidatevalue\ =\ \textcolor{keyword}{new}\ CandidateValue();}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ this.typeGenerator\ =\ GeneratorType.MultiobjectiveTabuSearch;}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ this.weight\ =\ 50;}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ listTrace.add(weight);}
+\DoxyCodeLine{00083\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{AcceptType_8java_source_l00015}{local\+\_\+search.\+acceptation\+\_\+type.\+Accept\+Type.\+Accept\+Not\+Dominated\+Tabu}}, \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00036}{list\+Trace}}, \mbox{\hyperlink{GeneratorType_8java_source_l00010}{metaheuristics.\+generators.\+Generator\+Type.\+Multiobjective\+Tabu\+Search}}, \mbox{\hyperlink{CandidateType_8java_source_l00020}{local\+\_\+search.\+candidate\+\_\+type.\+Candidate\+Type.\+Random\+Candidate}}, \mbox{\hyperlink{StrategyType_8java_source_l00016}{local\+\_\+search.\+complement.\+Strategy\+Type.\+TABU}} y \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00035}{weight}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_doc-func-members}
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_a3a2df89fb924f93a84d2579afa9a30e7}\index{metaheuristics.generators.MultiobjectiveTabuSearch@{metaheuristics.generators.MultiobjectiveTabuSearch}!awardUpdateREF@{awardUpdateREF}}
+\index{awardUpdateREF@{awardUpdateREF}!metaheuristics.generators.MultiobjectiveTabuSearch@{metaheuristics.generators.MultiobjectiveTabuSearch}}
+\doxysubsubsection{\texorpdfstring{awardUpdateREF()}{awardUpdateREF()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_a3a2df89fb924f93a84d2579afa9a30e7} 
+boolean metaheuristics.\+generators.\+Multiobjective\+Tabu\+Search.\+award\+Update\+REF (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}}]{state\+Candidate}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+award\+Update\+REF -\/ award the update of the reference state. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em state\+Candidate} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+return true if the reference state was updated, false otherwise 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a3513d3953ecc97683f38bcb662b74b9b}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00212}{212}} del archivo \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source}{Multiobjective\+Tabu\+Search.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00215\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_a719352455b19c8fc2244a4d7387db236}\index{metaheuristics.generators.MultiobjectiveTabuSearch@{metaheuristics.generators.MultiobjectiveTabuSearch}!generate@{generate}}
+\index{generate@{generate}!metaheuristics.generators.MultiobjectiveTabuSearch@{metaheuristics.generators.MultiobjectiveTabuSearch}}
+\doxysubsubsection{\texorpdfstring{generate()}{generate()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_a719352455b19c8fc2244a4d7387db236} 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} metaheuristics.\+generators.\+Multiobjective\+Tabu\+Search.\+generate (\begin{DoxyParamCaption}\item[{Integer}]{operatornumber}{}\end{DoxyParamCaption}) throws Illegal\+Argument\+Exception, Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception, Illegal\+Access\+Exception, Invocation\+Target\+Exception, No\+Such\+Method\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+generate -\/ generate a new state based on the operator number. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em operatornumber} & the operator number to use for generating the state \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+the generated state 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a06f6f7622b9ce32590eadbdf6bf962b5}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00091}{91}} del archivo \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source}{Multiobjective\+Tabu\+Search.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Devuelve\ la\ lista\ de\ soluciones\ no\ dominadas\ de\ todos\ los\ vecinos\ posibles\ de\ stateReferenceTS\ que\ no\ se\ encuentran\ en\ la\ lista\ Tabu}}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ List<State>\ neighborhood\ =\ Strategy.getStrategy().getProblem().getOperator().generatedNewState(stateReferenceTS,\ operatornumber);}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Se\ escoge\ uno\ aleatoriamente\ como\ vecino\ con\ RandomCandidate}}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ State\ statecandidate\ =\ candidatevalue.stateCandidate(stateReferenceTS,\ typeCandidate,\ strategy,\ operatornumber,\ neighborhood);}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ statecandidate;}
+\DoxyCodeLine{00097\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00027}{candidatevalue}}, \mbox{\hyperlink{classproblem_1_1definition_1_1Operator_a5b6625843e73d938f9235985bf966b34}{problem.\+definition.\+Operator.\+generated\+New\+State()}}, \mbox{\hyperlink{Problem_8java_source_l00131}{problem.\+definition.\+Problem.\+get\+Operator()}}, \mbox{\hyperlink{Strategy_8java_source_l00405}{metaheurictics.\+strategy.\+Strategy.\+get\+Problem()}}, \mbox{\hyperlink{Strategy_8java_source_l00080}{metaheurictics.\+strategy.\+Strategy.\+get\+Strategy()}}, \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00031}{state\+Reference\+TS}}, \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00029}{strategy}} y \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00030}{type\+Candidate}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_a719352455b19c8fc2244a4d7387db236_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_a9fc33be2953363e41d8bfe1b9e59d2c3}\index{metaheuristics.generators.MultiobjectiveTabuSearch@{metaheuristics.generators.MultiobjectiveTabuSearch}!getListCountBetterGender@{getListCountBetterGender}}
+\index{getListCountBetterGender@{getListCountBetterGender}!metaheuristics.generators.MultiobjectiveTabuSearch@{metaheuristics.generators.MultiobjectiveTabuSearch}}
+\doxysubsubsection{\texorpdfstring{getListCountBetterGender()}{getListCountBetterGender()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_a9fc33be2953363e41d8bfe1b9e59d2c3} 
+int\mbox{[}$\,$\mbox{]} metaheuristics.\+generators.\+Multiobjective\+Tabu\+Search.\+get\+List\+Count\+Better\+Gender (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+List\+Count\+Better\+Gender -\/ get the list of counts of better solutions by gender. 
+
+\begin{DoxyReturn}{Devuelve}
+the list of counts of better solutions by gender 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_ac5bace71f51c16b611ede3ed53263473}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00242}{242}} del archivo \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source}{Multiobjective\+Tabu\+Search.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ This\ generator\ doesn't\ maintain\ listCount\ arrays;\ return\ empty\ array\ to\ avoid\ nulls}}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[0];}
+\DoxyCodeLine{00246\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_ab32b15614e2605a9de9730ff419f8676}\index{metaheuristics.generators.MultiobjectiveTabuSearch@{metaheuristics.generators.MultiobjectiveTabuSearch}!getListCountGender@{getListCountGender}}
+\index{getListCountGender@{getListCountGender}!metaheuristics.generators.MultiobjectiveTabuSearch@{metaheuristics.generators.MultiobjectiveTabuSearch}}
+\doxysubsubsection{\texorpdfstring{getListCountGender()}{getListCountGender()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_ab32b15614e2605a9de9730ff419f8676} 
+int\mbox{[}$\,$\mbox{]} metaheuristics.\+generators.\+Multiobjective\+Tabu\+Search.\+get\+List\+Count\+Gender (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+List\+Count\+Gender -\/ get the list of counts of solutions by gender. 
+
+\begin{DoxyReturn}{Devuelve}
+the list of counts of solutions by gender 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_ac5d6d45ee8017fb87d80aa952edfc34e}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00253}{253}} del archivo \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source}{Multiobjective\+Tabu\+Search.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ This\ generator\ doesn't\ maintain\ listCount\ arrays;\ return\ empty\ array\ to\ avoid\ nulls}}
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[0];}
+\DoxyCodeLine{00257\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_ae22ff41cdbe5f2f7cb370a03ed24c477}\index{metaheuristics.generators.MultiobjectiveTabuSearch@{metaheuristics.generators.MultiobjectiveTabuSearch}!getReference@{getReference}}
+\index{getReference@{getReference}!metaheuristics.generators.MultiobjectiveTabuSearch@{metaheuristics.generators.MultiobjectiveTabuSearch}}
+\doxysubsubsection{\texorpdfstring{getReference()}{getReference()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_ae22ff41cdbe5f2f7cb370a03ed24c477} 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} metaheuristics.\+generators.\+Multiobjective\+Tabu\+Search.\+get\+Reference (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Reference -\/ get the reference state. 
+
+\begin{DoxyReturn}{Devuelve}
+the reference state 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_aa56dd45a45776f6023b9f74179cc6384}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00167}{167}} del archivo \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source}{Multiobjective\+Tabu\+Search.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ stateReferenceTS;}
+\DoxyCodeLine{00169\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00031}{state\+Reference\+TS}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_a3ca25be7ef0c28d3ba6e26473972d887}\index{metaheuristics.generators.MultiobjectiveTabuSearch@{metaheuristics.generators.MultiobjectiveTabuSearch}!getReferenceList@{getReferenceList}}
+\index{getReferenceList@{getReferenceList}!metaheuristics.generators.MultiobjectiveTabuSearch@{metaheuristics.generators.MultiobjectiveTabuSearch}}
+\doxysubsubsection{\texorpdfstring{getReferenceList()}{getReferenceList()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_a3ca25be7ef0c28d3ba6e26473972d887} 
+List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ metaheuristics.\+generators.\+Multiobjective\+Tabu\+Search.\+get\+Reference\+List (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Reference\+List -\/ get the list of reference states. 
+
+\begin{DoxyReturn}{Devuelve}
+the list of reference states 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_ae168237b306de55fe4d6dfda75c7cd13}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00157}{157}} del archivo \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source}{Multiobjective\+Tabu\+Search.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ listStateReference.add(stateReferenceTS);}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ listStateReference;}
+\DoxyCodeLine{00160\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00034}{list\+State\+Reference}} y \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00031}{state\+Reference\+TS}}.
+
+
+
+Referenciado por \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00105}{update\+Reference()}}.
+
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_a3ca25be7ef0c28d3ba6e26473972d887_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_a1c0f71e47e5f6b6e6669866ac8892f24}\index{metaheuristics.generators.MultiobjectiveTabuSearch@{metaheuristics.generators.MultiobjectiveTabuSearch}!getSonList@{getSonList}}
+\index{getSonList@{getSonList}!metaheuristics.generators.MultiobjectiveTabuSearch@{metaheuristics.generators.MultiobjectiveTabuSearch}}
+\doxysubsubsection{\texorpdfstring{getSonList()}{getSonList()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_a1c0f71e47e5f6b6e6669866ac8892f24} 
+List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ metaheuristics.\+generators.\+Multiobjective\+Tabu\+Search.\+get\+Son\+List (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Son\+List -\/ get the list of child states. 
+
+\begin{DoxyReturn}{Devuelve}
+the list of child states 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_aee09d724c1b3040e7a7ad0b64e341c96}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00193}{193}} del archivo \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source}{Multiobjective\+Tabu\+Search.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00196\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_ae279b2ed418314d15e6c56b842c20e23}\index{metaheuristics.generators.MultiobjectiveTabuSearch@{metaheuristics.generators.MultiobjectiveTabuSearch}!getStateReferenceTS@{getStateReferenceTS}}
+\index{getStateReferenceTS@{getStateReferenceTS}!metaheuristics.generators.MultiobjectiveTabuSearch@{metaheuristics.generators.MultiobjectiveTabuSearch}}
+\doxysubsubsection{\texorpdfstring{getStateReferenceTS()}{getStateReferenceTS()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_ae279b2ed418314d15e6c56b842c20e23} 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} metaheuristics.\+generators.\+Multiobjective\+Tabu\+Search.\+get\+State\+Reference\+TS (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+State\+Reference\+TS -\/ get the reference state for Tabu Search. 
+
+\begin{DoxyReturn}{Devuelve}
+the reference state for Tabu Search 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00042}{42}} del archivo \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source}{Multiobjective\+Tabu\+Search.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ stateReferenceTS;}
+\DoxyCodeLine{00044\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00031}{state\+Reference\+TS}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_a0201b91c6b86834fcaee559a20a100e6}\index{metaheuristics.generators.MultiobjectiveTabuSearch@{metaheuristics.generators.MultiobjectiveTabuSearch}!getTrace@{getTrace}}
+\index{getTrace@{getTrace}!metaheuristics.generators.MultiobjectiveTabuSearch@{metaheuristics.generators.MultiobjectiveTabuSearch}}
+\doxysubsubsection{\texorpdfstring{getTrace()}{getTrace()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_a0201b91c6b86834fcaee559a20a100e6} 
+float\mbox{[}$\,$\mbox{]} metaheuristics.\+generators.\+Multiobjective\+Tabu\+Search.\+get\+Trace (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Trace -\/ get the trace of the solution. 
+
+\begin{DoxyReturn}{Devuelve}
+the trace of the solution 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a75d7f30dd2cb3f92475db8525ac7c6e7}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00264}{264}} del archivo \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source}{Multiobjective\+Tabu\+Search.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00265\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{00266\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this.listTrace\ ==\ \textcolor{keyword}{null})\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{float}[0];}
+\DoxyCodeLine{00267\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}[]\ arr\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{float}[this.listTrace.size()];}
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ this.listTrace.size();\ i++)\ \{}
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ \ \ \ \ Float\ v\ =\ this.listTrace.get(i);}
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \ \ \ \ arr[i]\ =\ (v\ ==\ \textcolor{keyword}{null})\ ?\ 0f\ :\ v.floatValue();}
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ arr;}
+\DoxyCodeLine{00273\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_ade7cc640bcb709edaa015682155aaac2}\index{metaheuristics.generators.MultiobjectiveTabuSearch@{metaheuristics.generators.MultiobjectiveTabuSearch}!getType@{getType}}
+\index{getType@{getType}!metaheuristics.generators.MultiobjectiveTabuSearch@{metaheuristics.generators.MultiobjectiveTabuSearch}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_ade7cc640bcb709edaa015682155aaac2} 
+\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{Generator\+Type}} metaheuristics.\+generators.\+Multiobjective\+Tabu\+Search.\+get\+Type (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Type -\/ get the type of the generator. 
+
+\begin{DoxyReturn}{Devuelve}
+the type of the generator 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a5a123306b43c42d28cd1d6e17f8067a5}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00148}{148}} del archivo \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source}{Multiobjective\+Tabu\+Search.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this.typeGenerator;}
+\DoxyCodeLine{00150\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_a6988226dc64befc6c8f6959085929efc}\index{metaheuristics.generators.MultiobjectiveTabuSearch@{metaheuristics.generators.MultiobjectiveTabuSearch}!getTypeGenerator@{getTypeGenerator}}
+\index{getTypeGenerator@{getTypeGenerator}!metaheuristics.generators.MultiobjectiveTabuSearch@{metaheuristics.generators.MultiobjectiveTabuSearch}}
+\doxysubsubsection{\texorpdfstring{getTypeGenerator()}{getTypeGenerator()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_a6988226dc64befc6c8f6959085929efc} 
+\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{Generator\+Type}} metaheuristics.\+generators.\+Multiobjective\+Tabu\+Search.\+get\+Type\+Generator (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Type\+Generator -\/ get the type of the generator. 
+
+\begin{DoxyReturn}{Devuelve}
+the type of the generator 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00058}{58}} del archivo \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source}{Multiobjective\+Tabu\+Search.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ typeGenerator;}
+\DoxyCodeLine{00060\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00033}{type\+Generator}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_a646763accfdf08b677e0e41773747517}\index{metaheuristics.generators.MultiobjectiveTabuSearch@{metaheuristics.generators.MultiobjectiveTabuSearch}!getWeight@{getWeight}}
+\index{getWeight@{getWeight}!metaheuristics.generators.MultiobjectiveTabuSearch@{metaheuristics.generators.MultiobjectiveTabuSearch}}
+\doxysubsubsection{\texorpdfstring{getWeight()}{getWeight()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_a646763accfdf08b677e0e41773747517} 
+float metaheuristics.\+generators.\+Multiobjective\+Tabu\+Search.\+get\+Weight (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Weight -\/ get the weight of the solution. 
+
+\begin{DoxyReturn}{Devuelve}
+the weight of the solution 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a64f2b824081c7af593bf9aa8eabf2c9e}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00222}{222}} del archivo \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source}{Multiobjective\+Tabu\+Search.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this.weight;}
+\DoxyCodeLine{00225\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_a6c25c3204b4e4fc62ae1fb0a5806a3ed}\index{metaheuristics.generators.MultiobjectiveTabuSearch@{metaheuristics.generators.MultiobjectiveTabuSearch}!setInitialReference@{setInitialReference}}
+\index{setInitialReference@{setInitialReference}!metaheuristics.generators.MultiobjectiveTabuSearch@{metaheuristics.generators.MultiobjectiveTabuSearch}}
+\doxysubsubsection{\texorpdfstring{setInitialReference()}{setInitialReference()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_a6c25c3204b4e4fc62ae1fb0a5806a3ed} 
+void metaheuristics.\+generators.\+Multiobjective\+Tabu\+Search.\+set\+Initial\+Reference (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}}]{state\+Initial\+Ref}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+set\+Initial\+Reference -\/ set the initial reference state. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em state\+Initial\+Ref} & the initial reference state to set \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_aa9f7c4c983705f843b8fcc81e4aa8ba4}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00176}{176}} del archivo \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source}{Multiobjective\+Tabu\+Search.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ this.stateReferenceTS\ =\ stateInitialRef;}
+\DoxyCodeLine{00178\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_af0e27b06643d94b9e37a7004af55a58a}\index{metaheuristics.generators.MultiobjectiveTabuSearch@{metaheuristics.generators.MultiobjectiveTabuSearch}!setStateRef@{setStateRef}}
+\index{setStateRef@{setStateRef}!metaheuristics.generators.MultiobjectiveTabuSearch@{metaheuristics.generators.MultiobjectiveTabuSearch}}
+\doxysubsubsection{\texorpdfstring{setStateRef()}{setStateRef()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_af0e27b06643d94b9e37a7004af55a58a} 
+void metaheuristics.\+generators.\+Multiobjective\+Tabu\+Search.\+set\+State\+Ref (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}}]{state\+Ref}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+set\+State\+Ref -\/ set the reference state. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em state\+Ref} & \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00184}{184}} del archivo \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source}{Multiobjective\+Tabu\+Search.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ this.stateReferenceTS\ =\ stateRef;}
+\DoxyCodeLine{00186\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_acfded8b29215bc85064637d868cf3917}\index{metaheuristics.generators.MultiobjectiveTabuSearch@{metaheuristics.generators.MultiobjectiveTabuSearch}!setStateReferenceTS@{setStateReferenceTS}}
+\index{setStateReferenceTS@{setStateReferenceTS}!metaheuristics.generators.MultiobjectiveTabuSearch@{metaheuristics.generators.MultiobjectiveTabuSearch}}
+\doxysubsubsection{\texorpdfstring{setStateReferenceTS()}{setStateReferenceTS()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_acfded8b29215bc85064637d868cf3917} 
+void metaheuristics.\+generators.\+Multiobjective\+Tabu\+Search.\+set\+State\+Reference\+TS (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}}]{state\+Reference\+TS}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+set\+State\+Reference\+TS -\/ set the reference state for Tabu Search. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em state\+Reference\+TS} & \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00050}{50}} del archivo \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source}{Multiobjective\+Tabu\+Search.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ this.stateReferenceTS\ =\ stateReferenceTS;}
+\DoxyCodeLine{00052\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00031}{state\+Reference\+TS}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_a8f5e5b2afaea89a98a1a05a3b192d23c}\index{metaheuristics.generators.MultiobjectiveTabuSearch@{metaheuristics.generators.MultiobjectiveTabuSearch}!setTypeCandidate@{setTypeCandidate}}
+\index{setTypeCandidate@{setTypeCandidate}!metaheuristics.generators.MultiobjectiveTabuSearch@{metaheuristics.generators.MultiobjectiveTabuSearch}}
+\doxysubsubsection{\texorpdfstring{setTypeCandidate()}{setTypeCandidate()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_a8f5e5b2afaea89a98a1a05a3b192d23c} 
+void metaheuristics.\+generators.\+Multiobjective\+Tabu\+Search.\+set\+Type\+Candidate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{enumlocal__search_1_1candidate__type_1_1CandidateType}{Candidate\+Type}}}]{type\+Candidate}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+set\+Type\+Candidate -\/ set the type of candidate. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em type\+Candidate} & the type of candidate to set \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00202}{202}} del archivo \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source}{Multiobjective\+Tabu\+Search.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ this.typeCandidate\ =\ typeCandidate;}
+\DoxyCodeLine{00204\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00030}{type\+Candidate}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_a754ffcf3508a256e16fbf626048da0ce}\index{metaheuristics.generators.MultiobjectiveTabuSearch@{metaheuristics.generators.MultiobjectiveTabuSearch}!setTypeGenerator@{setTypeGenerator}}
+\index{setTypeGenerator@{setTypeGenerator}!metaheuristics.generators.MultiobjectiveTabuSearch@{metaheuristics.generators.MultiobjectiveTabuSearch}}
+\doxysubsubsection{\texorpdfstring{setTypeGenerator()}{setTypeGenerator()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_a754ffcf3508a256e16fbf626048da0ce} 
+void metaheuristics.\+generators.\+Multiobjective\+Tabu\+Search.\+set\+Type\+Generator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{Generator\+Type}}}]{type\+Generator}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+set\+Type\+Generator -\/ set the type of the generator. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em type\+Generator} & \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00066}{66}} del archivo \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source}{Multiobjective\+Tabu\+Search.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ this.typeGenerator\ =\ typeGenerator;}
+\DoxyCodeLine{00068\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00033}{type\+Generator}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_a04e6d1cc450203864d6e022db854e3bb}\index{metaheuristics.generators.MultiobjectiveTabuSearch@{metaheuristics.generators.MultiobjectiveTabuSearch}!setWeight@{setWeight}}
+\index{setWeight@{setWeight}!metaheuristics.generators.MultiobjectiveTabuSearch@{metaheuristics.generators.MultiobjectiveTabuSearch}}
+\doxysubsubsection{\texorpdfstring{setWeight()}{setWeight()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_a04e6d1cc450203864d6e022db854e3bb} 
+void metaheuristics.\+generators.\+Multiobjective\+Tabu\+Search.\+set\+Weight (\begin{DoxyParamCaption}\item[{float}]{weight}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+set\+Weight -\/ set the weight of the generator. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em weight} & the weight to set \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a8b3c66b57b4c739666989fbce667eb40}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00232}{232}} del archivo \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source}{Multiobjective\+Tabu\+Search.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ this.weight\ =\ weight;}
+\DoxyCodeLine{00235\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00035}{weight}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_a5e7f4e1f1fb436f2fb9c1770b90ee253}\index{metaheuristics.generators.MultiobjectiveTabuSearch@{metaheuristics.generators.MultiobjectiveTabuSearch}!updateReference@{updateReference}}
+\index{updateReference@{updateReference}!metaheuristics.generators.MultiobjectiveTabuSearch@{metaheuristics.generators.MultiobjectiveTabuSearch}}
+\doxysubsubsection{\texorpdfstring{updateReference()}{updateReference()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_a5e7f4e1f1fb436f2fb9c1770b90ee253} 
+void metaheuristics.\+generators.\+Multiobjective\+Tabu\+Search.\+update\+Reference (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}}]{state\+Candidate}{, }\item[{Integer}]{count\+Iterations\+Current}{}\end{DoxyParamCaption}) throws Illegal\+Argument\+Exception, Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception, Illegal\+Access\+Exception, Invocation\+Target\+Exception, No\+Such\+Method\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+update\+Reference -\/ update the reference state and the list of visited states. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em state\+Candidate} & \\
+\hline
+{\em count\+Iterations\+Current} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_aa1c5878953f2111221b21cb9b1e6cc9f}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00105}{105}} del archivo \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source}{Multiobjective\+Tabu\+Search.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ ifacceptCandidate\ =\ \textcolor{keyword}{new}\ FactoryAcceptCandidate();}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ AcceptableCandidate\ candidate\ =\ ifacceptCandidate.createAcceptCandidate(typeAcceptation);}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ Boolean\ acept\ =\ candidate.acceptCandidate(stateReferenceTS,\ stateCandidate);}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(acept.equals(\textcolor{keyword}{true}))}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ stateReferenceTS\ =\ stateCandidate;}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (strategy.equals(StrategyType.TABU)\ \&\&\ acept.equals(\textcolor{keyword}{true}))\ \{}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (TabuSolutions.listTabu.size()\ <\ TabuSolutions.maxelements)\ \{}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Boolean\ find\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ count\ =\ 0;}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ ((TabuSolutions.listTabu.size()\ >\ count)\ \&\&\ (find.equals(\textcolor{keyword}{false})))\ \{}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (TabuSolutions.listTabu.get(count).equals(stateCandidate))\ \{}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ find\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ count++;}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (find.equals(\textcolor{keyword}{false}))\ \{}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ TabuSolutions.listTabu.add(stateCandidate);}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ TabuSolutions.listTabu.remove(0);}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Boolean\ find\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ count\ =\ 0;}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (TabuSolutions.listTabu.size()\ >\ count\ \&\&\ find.equals(\textcolor{keyword}{false}))\ \{}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (TabuSolutions.listTabu.get(count).equals(stateCandidate))\ \{}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ find\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ count++;}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (find.equals(\textcolor{keyword}{false}))\ \{}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ TabuSolutions.listTabu.add(stateCandidate);}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00139\ \ \ \ \ \}}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ getReferenceList();}
+\DoxyCodeLine{00141\ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1AcceptableCandidate_aa9e62e1d2d213c3828d2491b506d0592}{local\+\_\+search.\+acceptation\+\_\+type.\+Acceptable\+Candidate.\+accept\+Candidate()}}, \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00157}{get\+Reference\+List()}}, \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00032}{ifaccept\+Candidate}}, \mbox{\hyperlink{TabuSolutions_8java_source_l00019}{local\+\_\+search.\+complement.\+Tabu\+Solutions.\+list\+Tabu}}, \mbox{\hyperlink{TabuSolutions_8java_source_l00022}{local\+\_\+search.\+complement.\+Tabu\+Solutions.\+maxelements}}, \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00031}{state\+Reference\+TS}}, \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00029}{strategy}}, \mbox{\hyperlink{StrategyType_8java_source_l00016}{local\+\_\+search.\+complement.\+Strategy\+Type.\+TABU}} y \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00028}{type\+Acceptation}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_a5e7f4e1f1fb436f2fb9c1770b90ee253_cgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-variable-members}
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_doc-variable-members}
+\doxysubsection{Documentación de datos miembro}
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_ac1077518972d0de6f6cdb4669a5c32b8}\index{metaheuristics.generators.MultiobjectiveTabuSearch@{metaheuristics.generators.MultiobjectiveTabuSearch}!candidatevalue@{candidatevalue}}
+\index{candidatevalue@{candidatevalue}!metaheuristics.generators.MultiobjectiveTabuSearch@{metaheuristics.generators.MultiobjectiveTabuSearch}}
+\doxysubsubsection{\texorpdfstring{candidatevalue}{candidatevalue}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_ac1077518972d0de6f6cdb4669a5c32b8} 
+\mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1CandidateValue}{Candidate\+Value}} metaheuristics.\+generators.\+Multiobjective\+Tabu\+Search.\+candidatevalue\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00027}{27}} del archivo \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source}{Multiobjective\+Tabu\+Search.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00091}{generate()}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_aa71ff0be1f4f97b95dd7780c2b0b40be}\index{metaheuristics.generators.MultiobjectiveTabuSearch@{metaheuristics.generators.MultiobjectiveTabuSearch}!ifacceptCandidate@{ifacceptCandidate}}
+\index{ifacceptCandidate@{ifacceptCandidate}!metaheuristics.generators.MultiobjectiveTabuSearch@{metaheuristics.generators.MultiobjectiveTabuSearch}}
+\doxysubsubsection{\texorpdfstring{ifacceptCandidate}{ifacceptCandidate}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_aa71ff0be1f4f97b95dd7780c2b0b40be} 
+\mbox{\hyperlink{interfacefactory__interface_1_1IFFactoryAcceptCandidate}{IFFactory\+Accept\+Candidate}} metaheuristics.\+generators.\+Multiobjective\+Tabu\+Search.\+ifaccept\+Candidate\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00032}{32}} del archivo \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source}{Multiobjective\+Tabu\+Search.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00105}{update\+Reference()}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_a9222859138dedf83000373b31f226829}\index{metaheuristics.generators.MultiobjectiveTabuSearch@{metaheuristics.generators.MultiobjectiveTabuSearch}!listStateReference@{listStateReference}}
+\index{listStateReference@{listStateReference}!metaheuristics.generators.MultiobjectiveTabuSearch@{metaheuristics.generators.MultiobjectiveTabuSearch}}
+\doxysubsubsection{\texorpdfstring{listStateReference}{listStateReference}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_a9222859138dedf83000373b31f226829} 
+List$<$\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}$>$ metaheuristics.\+generators.\+Multiobjective\+Tabu\+Search.\+list\+State\+Reference = new Array\+List$<$\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}$>$()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00034}{34}} del archivo \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source}{Multiobjective\+Tabu\+Search.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00157}{get\+Reference\+List()}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_a5e668cca34188f2c6c03e2951fe0b100}\index{metaheuristics.generators.MultiobjectiveTabuSearch@{metaheuristics.generators.MultiobjectiveTabuSearch}!listTrace@{listTrace}}
+\index{listTrace@{listTrace}!metaheuristics.generators.MultiobjectiveTabuSearch@{metaheuristics.generators.MultiobjectiveTabuSearch}}
+\doxysubsubsection{\texorpdfstring{listTrace}{listTrace}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_a5e668cca34188f2c6c03e2951fe0b100} 
+List$<$Float$>$ metaheuristics.\+generators.\+Multiobjective\+Tabu\+Search.\+list\+Trace = new Array\+List$<$Float$>$()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00036}{36}} del archivo \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source}{Multiobjective\+Tabu\+Search.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00073}{Multiobjective\+Tabu\+Search()}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_af0997147df854712548011b247a5f174}\index{metaheuristics.generators.MultiobjectiveTabuSearch@{metaheuristics.generators.MultiobjectiveTabuSearch}!stateReferenceTS@{stateReferenceTS}}
+\index{stateReferenceTS@{stateReferenceTS}!metaheuristics.generators.MultiobjectiveTabuSearch@{metaheuristics.generators.MultiobjectiveTabuSearch}}
+\doxysubsubsection{\texorpdfstring{stateReferenceTS}{stateReferenceTS}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_af0997147df854712548011b247a5f174} 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} metaheuristics.\+generators.\+Multiobjective\+Tabu\+Search.\+state\+Reference\+TS\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00031}{31}} del archivo \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source}{Multiobjective\+Tabu\+Search.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00091}{generate()}}, \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00167}{get\+Reference()}}, \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00157}{get\+Reference\+List()}}, \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00042}{get\+State\+Reference\+TS()}}, \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00050}{set\+State\+Reference\+TS()}} y \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00105}{update\+Reference()}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_a048690a51992d1a585cb0c36064252f1}\index{metaheuristics.generators.MultiobjectiveTabuSearch@{metaheuristics.generators.MultiobjectiveTabuSearch}!strategy@{strategy}}
+\index{strategy@{strategy}!metaheuristics.generators.MultiobjectiveTabuSearch@{metaheuristics.generators.MultiobjectiveTabuSearch}}
+\doxysubsubsection{\texorpdfstring{strategy}{strategy}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_a048690a51992d1a585cb0c36064252f1} 
+\mbox{\hyperlink{enumlocal__search_1_1complement_1_1StrategyType}{Strategy\+Type}} metaheuristics.\+generators.\+Multiobjective\+Tabu\+Search.\+strategy\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00029}{29}} del archivo \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source}{Multiobjective\+Tabu\+Search.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00091}{generate()}} y \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00105}{update\+Reference()}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_a09c4a34396dafd514a3b43c86f368d0f}\index{metaheuristics.generators.MultiobjectiveTabuSearch@{metaheuristics.generators.MultiobjectiveTabuSearch}!typeAcceptation@{typeAcceptation}}
+\index{typeAcceptation@{typeAcceptation}!metaheuristics.generators.MultiobjectiveTabuSearch@{metaheuristics.generators.MultiobjectiveTabuSearch}}
+\doxysubsubsection{\texorpdfstring{typeAcceptation}{typeAcceptation}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_a09c4a34396dafd514a3b43c86f368d0f} 
+\mbox{\hyperlink{enumlocal__search_1_1acceptation__type_1_1AcceptType}{Accept\+Type}} metaheuristics.\+generators.\+Multiobjective\+Tabu\+Search.\+type\+Acceptation\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00028}{28}} del archivo \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source}{Multiobjective\+Tabu\+Search.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00105}{update\+Reference()}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_a97da542e1d41a93fb2af3b9deee60fdc}\index{metaheuristics.generators.MultiobjectiveTabuSearch@{metaheuristics.generators.MultiobjectiveTabuSearch}!typeCandidate@{typeCandidate}}
+\index{typeCandidate@{typeCandidate}!metaheuristics.generators.MultiobjectiveTabuSearch@{metaheuristics.generators.MultiobjectiveTabuSearch}}
+\doxysubsubsection{\texorpdfstring{typeCandidate}{typeCandidate}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_a97da542e1d41a93fb2af3b9deee60fdc} 
+\mbox{\hyperlink{enumlocal__search_1_1candidate__type_1_1CandidateType}{Candidate\+Type}} metaheuristics.\+generators.\+Multiobjective\+Tabu\+Search.\+type\+Candidate\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00030}{30}} del archivo \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source}{Multiobjective\+Tabu\+Search.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00091}{generate()}} y \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00202}{set\+Type\+Candidate()}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_ab5623431c4358f5f3293c4c5e23a7992}\index{metaheuristics.generators.MultiobjectiveTabuSearch@{metaheuristics.generators.MultiobjectiveTabuSearch}!typeGenerator@{typeGenerator}}
+\index{typeGenerator@{typeGenerator}!metaheuristics.generators.MultiobjectiveTabuSearch@{metaheuristics.generators.MultiobjectiveTabuSearch}}
+\doxysubsubsection{\texorpdfstring{typeGenerator}{typeGenerator}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_ab5623431c4358f5f3293c4c5e23a7992} 
+\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{Generator\+Type}} metaheuristics.\+generators.\+Multiobjective\+Tabu\+Search.\+type\+Generator\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00033}{33}} del archivo \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source}{Multiobjective\+Tabu\+Search.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00058}{get\+Type\+Generator()}} y \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00066}{set\+Type\+Generator()}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_aa4607bb225547e49d5202adfb63b0c9a}\index{metaheuristics.generators.MultiobjectiveTabuSearch@{metaheuristics.generators.MultiobjectiveTabuSearch}!weight@{weight}}
+\index{weight@{weight}!metaheuristics.generators.MultiobjectiveTabuSearch@{metaheuristics.generators.MultiobjectiveTabuSearch}}
+\doxysubsubsection{\texorpdfstring{weight}{weight}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_aa4607bb225547e49d5202adfb63b0c9a} 
+float metaheuristics.\+generators.\+Multiobjective\+Tabu\+Search.\+weight\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00035}{35}} del archivo \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source}{Multiobjective\+Tabu\+Search.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00073}{Multiobjective\+Tabu\+Search()}} y \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00232}{set\+Weight()}}.
+
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{MultiobjectiveTabuSearch_8java}{Multiobjective\+Tabu\+Search.\+java}}\end{DoxyCompactItemize}

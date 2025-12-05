@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="es">
+  <compounddef id="classevolutionary__algorithms_1_1complement_1_1Crossover" kind="class" language="Java" prot="public" abstract="yes">
+    <compoundname>evolutionary_algorithms::complement::Crossover</compoundname>
+    <derivedcompoundref refid="classevolutionary__algorithms_1_1complement_1_1OnePointCrossover" prot="public" virt="non-virtual">evolutionary_algorithms.complement.OnePointCrossover</derivedcompoundref>
+    <derivedcompoundref refid="classevolutionary__algorithms_1_1complement_1_1UniformCrossover" prot="public" virt="non-virtual">evolutionary_algorithms.complement.UniformCrossover</derivedcompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classevolutionary__algorithms_1_1complement_1_1Crossover_1a77155266e5646a87bcd427189938cc32" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>abstract <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+        <definition>abstract State evolutionary_algorithms.complement.Crossover.crossover</definition>
+        <argsstring>(State father1, State father2, double PC)</argsstring>
+        <name>crossover</name>
+        <qualifiedname>evolutionary_algorithms.complement.Crossover.crossover</qualifiedname>
+        <reimplementedby refid="classevolutionary__algorithms_1_1complement_1_1OnePointCrossover_1a6d644b471de305b6508b2b647edc76d1">crossover</reimplementedby>
+        <reimplementedby refid="classevolutionary__algorithms_1_1complement_1_1UniformCrossover_1a54eb36b06a9e409253360eb9cd76f774">crossover</reimplementedby>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>father1</declname>
+        </param>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>father2</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>PC</declname>
+        </param>
+        <briefdescription>
+<para>crossover - applies the crossover operation to two parent states. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>father1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>father2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>PC</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns the offspring resulting from the crossover between father1 and father2 </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/evolutionary_algorithms/complement/Crossover.java" line="17" column="23"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1afa69278cc4f87d309326773aeab7b6da" compoundref="GeneticAlgorithm_8java" startline="90" endline="125">metaheuristics.generators.GeneticAlgorithm.generate</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="classevolutionary__algorithms_1_1complement_1_1Crossover" kindref="compound">Crossover</ref> - applies the crossover operation to two parent states. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>evolutionary_algorithms.complement.Crossover</label>
+        <link refid="classevolutionary__algorithms_1_1complement_1_1Crossover"/>
+      </node>
+      <node id="2">
+        <label>evolutionary_algorithms.complement.OnePointCrossover</label>
+        <link refid="classevolutionary__algorithms_1_1complement_1_1OnePointCrossover"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>evolutionary_algorithms.complement.UniformCrossover</label>
+        <link refid="classevolutionary__algorithms_1_1complement_1_1UniformCrossover"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>evolutionary_algorithms.complement.Crossover</label>
+        <link refid="classevolutionary__algorithms_1_1complement_1_1Crossover"/>
+      </node>
+    </collaborationgraph>
+    <location file="practica5/src/main/java/evolutionary_algorithms/complement/Crossover.java" line="9" column="17" bodyfile="practica5/src/main/java/evolutionary_algorithms/complement/Crossover.java" bodystart="9" bodyend="18"/>
+    <listofallmembers>
+      <member refid="classevolutionary__algorithms_1_1complement_1_1Crossover_1a77155266e5646a87bcd427189938cc32" prot="public" virt="non-virtual"><scope>evolutionary_algorithms::complement::Crossover</scope><name>crossover</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,44 @@
+\doxysection{Greater\+Candidate.\+java}
+\hypertarget{GreaterCandidate_8java_source}{}\label{GreaterCandidate_8java_source}\index{GreaterCandidate.java@{GreaterCandidate.java}}
+\mbox{\hyperlink{GreaterCandidate_8java}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{GreaterCandidate_8java_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{GreaterCandidate_8java_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{GreaterCandidate_8java_source_l00005}00005\ \textcolor{keyword}{package\ }local\_search.candidate\_type;}
+\DoxyCodeLine{\Hypertarget{GreaterCandidate_8java_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{GreaterCandidate_8java_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{GreaterCandidate_8java_source_l00008}00008\ \textcolor{keyword}{import}\ java.lang.reflect.InvocationTargetException;}
+\DoxyCodeLine{\Hypertarget{GreaterCandidate_8java_source_l00009}00009\ \textcolor{keyword}{import}\ java.util.List;}
+\DoxyCodeLine{\Hypertarget{GreaterCandidate_8java_source_l00010}00010\ \textcolor{keyword}{import}\ java.util.concurrent.ThreadLocalRandom;}
+\DoxyCodeLine{\Hypertarget{GreaterCandidate_8java_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{GreaterCandidate_8java_source_l00012}00012\ \textcolor{keyword}{import}\ problem.definition.State;}
+\DoxyCodeLine{\Hypertarget{GreaterCandidate_8java_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{GreaterCandidate_8java_source_l00021}\mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1GreaterCandidate}{00021}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1GreaterCandidate}{GreaterCandidate}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1SearchCandidate}{SearchCandidate}}\ \{}
+\DoxyCodeLine{\Hypertarget{GreaterCandidate_8java_source_l00022}00022\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{GreaterCandidate_8java_source_l00028}00028\ \ \ \ \ @SuppressWarnings(\textcolor{stringliteral}{"{}squid:S2245"{}})}
+\DoxyCodeLine{\Hypertarget{GreaterCandidate_8java_source_l00029}00029\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{GreaterCandidate_8java_source_l00037}\mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1GreaterCandidate_a2d2d47efc889cca9b440e64746b67f46}{00037}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ \mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1GreaterCandidate_a2d2d47efc889cca9b440e64746b67f46}{stateSearch}}(List<State>\ listNeighborhood)\ \textcolor{keywordflow}{throws}\ IllegalArgumentException,\ SecurityException,\ ClassNotFoundException,\ InstantiationException,\ IllegalAccessException,\ InvocationTargetException,\ NoSuchMethodException\ \{}
+\DoxyCodeLine{\Hypertarget{GreaterCandidate_8java_source_l00038}00038\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ stateGreater\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{GreaterCandidate_8java_source_l00039}00039\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(listNeighborhood.size()\ >\ 1)\{}
+\DoxyCodeLine{\Hypertarget{GreaterCandidate_8java_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ counter\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{GreaterCandidate_8java_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ currentCount\ =\ listNeighborhood.get(0).getEvaluation().get(0);}
+\DoxyCodeLine{\Hypertarget{GreaterCandidate_8java_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 1;\ i\ <\ listNeighborhood.size();\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{GreaterCandidate_8java_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ counter\ =\ listNeighborhood.get(i).getEvaluation().get(0);}
+\DoxyCodeLine{\Hypertarget{GreaterCandidate_8java_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (counter\ >\ currentCount)\ \{}
+\DoxyCodeLine{\Hypertarget{GreaterCandidate_8java_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ currentCount\ =\ counter;}
+\DoxyCodeLine{\Hypertarget{GreaterCandidate_8java_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ stateGreater\ =\ listNeighborhood.get(i);}
+\DoxyCodeLine{\Hypertarget{GreaterCandidate_8java_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GreaterCandidate_8java_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ counter\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{GreaterCandidate_8java_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GreaterCandidate_8java_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(stateGreater\ ==\ \textcolor{keyword}{null})\{}
+\DoxyCodeLine{\Hypertarget{GreaterCandidate_8java_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ bound\ is\ listNeighborhood.size()\ -\/\ 1\ (>=1\ since\ size>1)}}
+\DoxyCodeLine{\Hypertarget{GreaterCandidate_8java_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ pos\ =\ ThreadLocalRandom.current().nextInt(listNeighborhood.size()\ -\/\ 1);}
+\DoxyCodeLine{\Hypertarget{GreaterCandidate_8java_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ stateGreater\ =\ listNeighborhood.get(pos);}
+\DoxyCodeLine{\Hypertarget{GreaterCandidate_8java_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GreaterCandidate_8java_source_l00055}00055\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GreaterCandidate_8java_source_l00056}00056\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ stateGreater\ =\ listNeighborhood.get(0);}
+\DoxyCodeLine{\Hypertarget{GreaterCandidate_8java_source_l00057}00057\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ stateGreater;}
+\DoxyCodeLine{\Hypertarget{GreaterCandidate_8java_source_l00058}00058\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GreaterCandidate_8java_source_l00059}00059\ \}}
+
+\end{DoxyCode}

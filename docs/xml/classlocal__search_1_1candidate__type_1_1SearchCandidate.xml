@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="es">
+  <compounddef id="classlocal__search_1_1candidate__type_1_1SearchCandidate" kind="class" language="Java" prot="public" abstract="yes">
+    <compoundname>local_search::candidate_type::SearchCandidate</compoundname>
+    <derivedcompoundref refid="classlocal__search_1_1candidate__type_1_1GreaterCandidate" prot="public" virt="non-virtual">local_search.candidate_type.GreaterCandidate</derivedcompoundref>
+    <derivedcompoundref refid="classlocal__search_1_1candidate__type_1_1NotDominatedCandidate" prot="public" virt="non-virtual">local_search.candidate_type.NotDominatedCandidate</derivedcompoundref>
+    <derivedcompoundref refid="classlocal__search_1_1candidate__type_1_1RandomCandidate" prot="public" virt="non-virtual">local_search.candidate_type.RandomCandidate</derivedcompoundref>
+    <derivedcompoundref refid="classlocal__search_1_1candidate__type_1_1SmallerCandidate" prot="public" virt="non-virtual">local_search.candidate_type.SmallerCandidate</derivedcompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classlocal__search_1_1candidate__type_1_1SearchCandidate_1a0f10adc1526fb08f54427c50734f8abf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>abstract <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+        <definition>abstract State local_search.candidate_type.SearchCandidate.stateSearch</definition>
+        <argsstring>(List&lt; State &gt; listNeighborhood)</argsstring>
+        <name>stateSearch</name>
+        <qualifiedname>local_search.candidate_type.SearchCandidate.stateSearch</qualifiedname>
+        <reimplementedby refid="classlocal__search_1_1candidate__type_1_1GreaterCandidate_1a2d2d47efc889cca9b440e64746b67f46">stateSearch</reimplementedby>
+        <reimplementedby refid="classlocal__search_1_1candidate__type_1_1NotDominatedCandidate_1a8f08ece6519709427b4917712b805159">stateSearch</reimplementedby>
+        <reimplementedby refid="classlocal__search_1_1candidate__type_1_1RandomCandidate_1a66efbf984c90ee02f81608b3621220a9">stateSearch</reimplementedby>
+        <reimplementedby refid="classlocal__search_1_1candidate__type_1_1SmallerCandidate_1a69eb3c75ce366bc050c117fa764b82be">stateSearch</reimplementedby>
+        <param>
+          <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+          <declname>listNeighborhood</declname>
+        </param>
+        <exceptions> throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException </exceptions>
+        <briefdescription>
+<para>Choose a candidate state from the provided neighborhood. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>listNeighborhood</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the list of neighboring States to choose from </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>chosen <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>ReflectiveOperationException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when reflective operations fail </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/local_search/candidate_type/SearchCandidate.java" line="28" column="23"/>
+        <referencedby refid="classlocal__search_1_1candidate__type_1_1CandidateValue_1a77505d8ed443552afa435f51d0222d75" compoundref="CandidateValue_8java" startline="74" endline="97">local_search.candidate_type.CandidateValue.stateCandidate</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="classlocal__search_1_1candidate__type_1_1SearchCandidate" kindref="compound">SearchCandidate</ref> - abstract base class for candidate selection strategies. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Concrete subclasses implement <computeroutput><ref refid="classlocal__search_1_1candidate__type_1_1SearchCandidate_1a0f10adc1526fb08f54427c50734f8abf" kindref="member">stateSearch</ref></computeroutput> to select a candidate <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> from a provided neighborhood. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>local_search.candidate_type.SearchCandidate</label>
+        <link refid="classlocal__search_1_1candidate__type_1_1SearchCandidate"/>
+      </node>
+      <node id="2">
+        <label>local_search.candidate_type.GreaterCandidate</label>
+        <link refid="classlocal__search_1_1candidate__type_1_1GreaterCandidate"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>local_search.candidate_type.NotDominatedCandidate</label>
+        <link refid="classlocal__search_1_1candidate__type_1_1NotDominatedCandidate"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>local_search.candidate_type.RandomCandidate</label>
+        <link refid="classlocal__search_1_1candidate__type_1_1RandomCandidate"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>local_search.candidate_type.SmallerCandidate</label>
+        <link refid="classlocal__search_1_1candidate__type_1_1SmallerCandidate"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>local_search.candidate_type.SearchCandidate</label>
+        <link refid="classlocal__search_1_1candidate__type_1_1SearchCandidate"/>
+      </node>
+    </collaborationgraph>
+    <location file="practica5/src/main/java/local_search/candidate_type/SearchCandidate.java" line="19" column="17" bodyfile="practica5/src/main/java/local_search/candidate_type/SearchCandidate.java" bodystart="19" bodyend="29"/>
+    <listofallmembers>
+      <member refid="classlocal__search_1_1candidate__type_1_1SearchCandidate_1a0f10adc1526fb08f54427c50734f8abf" prot="public" virt="non-virtual"><scope>local_search::candidate_type::SearchCandidate</scope><name>stateSearch</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

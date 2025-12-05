@@ -1,0 +1,256 @@
+\doxysection{Referencia de la clase evolutionary\+\_\+algorithms.\+complement.\+AIOMutation}
+\hypertarget{classevolutionary__algorithms_1_1complement_1_1AIOMutation}{}\label{classevolutionary__algorithms_1_1complement_1_1AIOMutation}\index{evolutionary\_algorithms.complement.AIOMutation@{evolutionary\_algorithms.complement.AIOMutation}}
+
+
+\doxylink{classevolutionary__algorithms_1_1complement_1_1AIOMutation}{AIOMutation} -\/ applies the \doxylink{classevolutionary__algorithms_1_1complement_1_1AIOMutation}{AIOMutation} to the state.  
+
+
+
+
+Diagrama de herencia de evolutionary\+\_\+algorithms.\+complement.\+AIOMutation
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=277pt]{classevolutionary__algorithms_1_1complement_1_1AIOMutation__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagrama de colaboración de evolutionary\+\_\+algorithms.\+complement.\+AIOMutation\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=277pt]{classevolutionary__algorithms_1_1complement_1_1AIOMutation__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1AIOMutation_a182dacf4bb3046d61563d6bd5f31e156}{mutation}} (\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} state, double PM)
+\begin{DoxyCompactList}\small\item\em mutation -\/ applies the mutation to the state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1AIOMutation_aa07dddb2b2b0291e997a7ea1608529df}{sorted\+Path\+Value}} (\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} state)
+\begin{DoxyCompactList}\small\item\em sorted\+Path\+Value -\/ sorts the path values based on the state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Métodos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1AIOMutation_a3c9193b63cc517d48761bfddc3c0374b}{fill\+Path}} ()
+\begin{DoxyCompactList}\small\item\em fill\+Path -\/ fills the path with the variable indices. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static final List$<$ Object $>$ \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1AIOMutation_a9a96b76b0765c424bbd13232667ca22a}{path}} = Collections.\+synchronized\+List(new Array\+List$<$Object$>$())
+\begin{DoxyCompactList}\small\item\em path -\/ stores the path of the TSP problem. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+\doxylink{classevolutionary__algorithms_1_1complement_1_1AIOMutation}{AIOMutation} -\/ applies the \doxylink{classevolutionary__algorithms_1_1complement_1_1AIOMutation}{AIOMutation} to the state. 
+
+Definición en la línea \mbox{\hyperlink{AIOMutation_8java_source_l00017}{17}} del archivo \mbox{\hyperlink{AIOMutation_8java_source}{AIOMutation.\+java}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{classevolutionary__algorithms_1_1complement_1_1AIOMutation_doc-func-members}
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{classevolutionary__algorithms_1_1complement_1_1AIOMutation_a3c9193b63cc517d48761bfddc3c0374b}\index{evolutionary\_algorithms.complement.AIOMutation@{evolutionary\_algorithms.complement.AIOMutation}!fillPath@{fillPath}}
+\index{fillPath@{fillPath}!evolutionary\_algorithms.complement.AIOMutation@{evolutionary\_algorithms.complement.AIOMutation}}
+\doxysubsubsection{\texorpdfstring{fillPath()}{fillPath()}}
+{\footnotesize\ttfamily \label{classevolutionary__algorithms_1_1complement_1_1AIOMutation_a3c9193b63cc517d48761bfddc3c0374b} 
+void evolutionary\+\_\+algorithms.\+complement.\+AIOMutation.\+fill\+Path (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+fill\+Path -\/ fills the path with the variable indices. 
+
+
+
+Definición en la línea \mbox{\hyperlink{AIOMutation_8java_source_l00085}{85}} del archivo \mbox{\hyperlink{AIOMutation_8java_source}{AIOMutation.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ k\ =\ 0;\ k\ <\ Strategy.getStrategy().getProblem().getCodification().getVariableCount();\ k++)\{}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ path.add(k);}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00089\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{Strategy_8java_source_l00080}{metaheurictics.\+strategy.\+Strategy.\+get\+Strategy()}} y \mbox{\hyperlink{AIOMutation_8java_source_l00022}{path}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classevolutionary__algorithms_1_1complement_1_1AIOMutation_a3c9193b63cc517d48761bfddc3c0374b_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classevolutionary__algorithms_1_1complement_1_1AIOMutation_a182dacf4bb3046d61563d6bd5f31e156}\index{evolutionary\_algorithms.complement.AIOMutation@{evolutionary\_algorithms.complement.AIOMutation}!mutation@{mutation}}
+\index{mutation@{mutation}!evolutionary\_algorithms.complement.AIOMutation@{evolutionary\_algorithms.complement.AIOMutation}}
+\doxysubsubsection{\texorpdfstring{mutation()}{mutation()}}
+{\footnotesize\ttfamily \label{classevolutionary__algorithms_1_1complement_1_1AIOMutation_a182dacf4bb3046d61563d6bd5f31e156} 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} evolutionary\+\_\+algorithms.\+complement.\+AIOMutation.\+mutation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}}]{state}{, }\item[{double}]{PM}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+mutation -\/ applies the mutation to the state. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em state} & \\
+\hline
+{\em PM} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1Mutation_a027da26e5a49d8ca908b03acffebb226}{evolutionary\+\_\+algorithms.\+complement.\+Mutation}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{AIOMutation_8java_source_l00031}{31}} del archivo \mbox{\hyperlink{AIOMutation_8java_source}{AIOMutation.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ key\ =\ Strategy.getStrategy().getProblem().getCodification().getAleatoryKey();\ \textcolor{comment}{//seleccionar\ aleatoriamente\ una\ ciudad}}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ key1\ =\ 0;}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{boolean}\ found\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (found\ ==\ \textcolor{keyword}{false})\{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ key1\ =\ Strategy.getStrategy().getProblem().getCodification().getAleatoryKey();}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(key1\ !=\ key)}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ found\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ sortedPathValue(state);}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ p1\ =\ 0;}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ p2\ =\ 0;}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(key\ >\ key1)\{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ p2\ =\ key;}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ p1\ =\ key1;}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ p1\ =\ key;}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ p2\ =\ key1;}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ length\ =\ (p2\ -\/\ p1)\ /\ 2;}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 1;\ i\ <=\ length\ +\ 1;\ i++)\ \{}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ tempC\ =\ ((TSPState)\ state.getCode().\textcolor{keyword}{get}(p1\ +\ i\ -\/\ 1)).getIdCity();}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ ((TSPState)state.getCode().\textcolor{keyword}{get}(p1\ +\ i\ -\/\ 1)).setIdCity(((TSPState)state.getCode().get(p2\ -\/\ i\ +\ 1)).getIdCity());}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ ((TSPState)state.getCode().\textcolor{keyword}{get}(p2\ -\/\ i\ +\ 1)).setIdCity(tempC);}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ path.clear();}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ state;}
+\DoxyCodeLine{00060\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{classproblem_1_1definition_1_1Codification_a01a0c8247d76d4c4c32c7f3e51c2d5f8}{problem.\+definition.\+Codification.\+get\+Aleatory\+Key()}}, \mbox{\hyperlink{State_8java_source_l00068}{problem.\+definition.\+State.\+get\+Code()}}, \mbox{\hyperlink{Problem_8java_source_l00114}{problem.\+definition.\+Problem.\+get\+Codification()}}, \mbox{\hyperlink{Strategy_8java_source_l00405}{metaheurictics.\+strategy.\+Strategy.\+get\+Problem()}}, \mbox{\hyperlink{Strategy_8java_source_l00080}{metaheurictics.\+strategy.\+Strategy.\+get\+Strategy()}}, \mbox{\hyperlink{AIOMutation_8java_source_l00022}{path}} y \mbox{\hyperlink{AIOMutation_8java_source_l00066}{sorted\+Path\+Value()}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classevolutionary__algorithms_1_1complement_1_1AIOMutation_a182dacf4bb3046d61563d6bd5f31e156_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classevolutionary__algorithms_1_1complement_1_1AIOMutation_aa07dddb2b2b0291e997a7ea1608529df}\index{evolutionary\_algorithms.complement.AIOMutation@{evolutionary\_algorithms.complement.AIOMutation}!sortedPathValue@{sortedPathValue}}
+\index{sortedPathValue@{sortedPathValue}!evolutionary\_algorithms.complement.AIOMutation@{evolutionary\_algorithms.complement.AIOMutation}}
+\doxysubsubsection{\texorpdfstring{sortedPathValue()}{sortedPathValue()}}
+{\footnotesize\ttfamily \label{classevolutionary__algorithms_1_1complement_1_1AIOMutation_aa07dddb2b2b0291e997a7ea1608529df} 
+void evolutionary\+\_\+algorithms.\+complement.\+AIOMutation.\+sorted\+Path\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}}]{state}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+sorted\+Path\+Value -\/ sorts the path values based on the state. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em state} & \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{AIOMutation_8java_source_l00066}{66}} del archivo \mbox{\hyperlink{AIOMutation_8java_source}{AIOMutation.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ k\ =\ 0;\ k\ <\ state.getCode().size();\ k++)\{}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ path.add(\ state.getCode().get(k));}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 1;\ i\ <\ path.size();\ i++)\{}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ i;\ j++)\{}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Integer\ data1\ =\ ((TSPState)state.getCode().\textcolor{keyword}{get}(i)).getValue();}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Integer\ data2\ =\ ((TSPState)state.getCode().\textcolor{keyword}{get}(j)).getValue();}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(data1\ <\ data2)\{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ state.getCode().add(j,\ state.getCode().remove(i));}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ path.add(j,\ path.remove(i));}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00080\ \ \ \ \ }
+\DoxyCodeLine{00081\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{State_8java_source_l00068}{problem.\+definition.\+State.\+get\+Code()}} y \mbox{\hyperlink{AIOMutation_8java_source_l00022}{path}}.
+
+
+
+Referenciado por \mbox{\hyperlink{AIOMutation_8java_source_l00031}{mutation()}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classevolutionary__algorithms_1_1complement_1_1AIOMutation_aa07dddb2b2b0291e997a7ea1608529df_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classevolutionary__algorithms_1_1complement_1_1AIOMutation_aa07dddb2b2b0291e997a7ea1608529df_icgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-variable-members}
+\Hypertarget{classevolutionary__algorithms_1_1complement_1_1AIOMutation_doc-variable-members}
+\doxysubsection{Documentación de datos miembro}
+\Hypertarget{classevolutionary__algorithms_1_1complement_1_1AIOMutation_a9a96b76b0765c424bbd13232667ca22a}\index{evolutionary\_algorithms.complement.AIOMutation@{evolutionary\_algorithms.complement.AIOMutation}!path@{path}}
+\index{path@{path}!evolutionary\_algorithms.complement.AIOMutation@{evolutionary\_algorithms.complement.AIOMutation}}
+\doxysubsubsection{\texorpdfstring{path}{path}}
+{\footnotesize\ttfamily \label{classevolutionary__algorithms_1_1complement_1_1AIOMutation_a9a96b76b0765c424bbd13232667ca22a} 
+final List$<$Object$>$ evolutionary\+\_\+algorithms.\+complement.\+AIOMutation.\+path = Collections.\+synchronized\+List(new Array\+List$<$Object$>$())\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+path -\/ stores the path of the TSP problem. 
+
+
+
+Definición en la línea \mbox{\hyperlink{AIOMutation_8java_source_l00022}{22}} del archivo \mbox{\hyperlink{AIOMutation_8java_source}{AIOMutation.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{AIOMutation_8java_source_l00085}{fill\+Path()}}, \mbox{\hyperlink{AIOMutation_8java_source_l00031}{mutation()}} y \mbox{\hyperlink{AIOMutation_8java_source_l00066}{sorted\+Path\+Value()}}.
+
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{AIOMutation_8java}{AIOMutation.\+java}}\end{DoxyCompactItemize}

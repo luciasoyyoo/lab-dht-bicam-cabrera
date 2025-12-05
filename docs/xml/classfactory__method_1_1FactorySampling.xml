@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="es">
+  <compounddef id="classfactory__method_1_1FactorySampling" kind="class" language="Java" prot="public">
+    <compoundname>factory_method::FactorySampling</compoundname>
+    <basecompoundref refid="interfacefactory__interface_1_1IFFSampling" prot="public" virt="non-virtual">factory_interface.IFFSampling</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classfactory__method_1_1FactorySampling_1ac0ddd9e1c0a87bbd729f7e65e495b258" prot="private" static="no" mutable="no">
+        <type><ref refid="classevolutionary__algorithms_1_1complement_1_1Sampling" kindref="compound">Sampling</ref></type>
+        <definition>Sampling factory_method.FactorySampling.sampling</definition>
+        <argsstring></argsstring>
+        <name>sampling</name>
+        <qualifiedname>factory_method.FactorySampling.sampling</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/factory_method/FactorySampling.java" line="17" column="22" bodyfile="practica5/src/main/java/factory_method/FactorySampling.java" bodystart="17" bodyend="-1"/>
+        <referencedby refid="classfactory__method_1_1FactorySampling_1a33a535d67935fdd077359930be8c125d" compoundref="FactorySampling_8java" startline="23" endline="28">factory_method.FactorySampling.createSampling</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classfactory__method_1_1FactorySampling_1a33a535d67935fdd077359930be8c125d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classevolutionary__algorithms_1_1complement_1_1Sampling" kindref="compound">Sampling</ref></type>
+        <definition>Sampling factory_method.FactorySampling.createSampling</definition>
+        <argsstring>(SamplingType typesampling)</argsstring>
+        <name>createSampling</name>
+        <qualifiedname>factory_method.FactorySampling.createSampling</qualifiedname>
+        <reimplements refid="interfacefactory__interface_1_1IFFSampling_1a0ad830470c6482d155ba7e11e32f756b">createSampling</reimplements>
+        <param>
+          <type><ref refid="enumevolutionary__algorithms_1_1complement_1_1SamplingType" kindref="compound">SamplingType</ref></type>
+          <declname>typesampling</declname>
+        </param>
+        <exceptions> throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException </exceptions>
+        <briefdescription>
+<para>createSampling - Creates an instance of <ref refid="classevolutionary__algorithms_1_1complement_1_1Sampling" kindref="compound">Sampling</ref> based on the provided <ref refid="enumevolutionary__algorithms_1_1complement_1_1SamplingType" kindref="compound">SamplingType</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>typesampling</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns an instance of <ref refid="classevolutionary__algorithms_1_1complement_1_1Sampling" kindref="compound">Sampling</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/factory_method/FactorySampling.java" line="23" column="17" bodyfile="practica5/src/main/java/factory_method/FactorySampling.java" bodystart="23" bodyend="28"/>
+        <references refid="classfactory__method_1_1FactoryLoader_1a4e61ffc7038a082277d67e3e59cdb859" compoundref="FactoryLoader_8java" startline="21" endline="28">factory_method.FactoryLoader.getInstance</references>
+        <references refid="classfactory__method_1_1FactorySampling_1ac0ddd9e1c0a87bbd729f7e65e495b258" compoundref="FactorySampling_8java" startline="17">factory_method.FactorySampling.sampling</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="classfactory__method_1_1FactorySampling" kindref="compound">FactorySampling</ref> - Class responsible for creating sampling strategies. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>factory_interface.IFFSampling</label>
+        <link refid="interfacefactory__interface_1_1IFFSampling"/>
+      </node>
+      <node id="1">
+        <label>factory_method.FactorySampling</label>
+        <link refid="classfactory__method_1_1FactorySampling"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>evolutionary_algorithms.complement.Sampling</label>
+        <link refid="classevolutionary__algorithms_1_1complement_1_1Sampling"/>
+      </node>
+      <node id="2">
+        <label>factory_interface.IFFSampling</label>
+        <link refid="interfacefactory__interface_1_1IFFSampling"/>
+      </node>
+      <node id="1">
+        <label>factory_method.FactorySampling</label>
+        <link refid="classfactory__method_1_1FactorySampling"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-sampling</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="practica5/src/main/java/factory_method/FactorySampling.java" line="16" column="7" bodyfile="practica5/src/main/java/factory_method/FactorySampling.java" bodystart="16" bodyend="29"/>
+    <listofallmembers>
+      <member refid="classfactory__method_1_1FactorySampling_1a33a535d67935fdd077359930be8c125d" prot="public" virt="non-virtual"><scope>factory_method::FactorySampling</scope><name>createSampling</name></member>
+      <member refid="classfactory__method_1_1FactorySampling_1ac0ddd9e1c0a87bbd729f7e65e495b258" prot="private" virt="non-virtual"><scope>factory_method::FactorySampling</scope><name>sampling</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

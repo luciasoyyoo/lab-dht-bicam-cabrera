@@ -1,0 +1,324 @@
+\doxysection{Referencia de la clase local\+\_\+search.\+candidate\+\_\+type.\+Candidate\+Value}
+\hypertarget{classlocal__search_1_1candidate__type_1_1CandidateValue}{}\label{classlocal__search_1_1candidate__type_1_1CandidateValue}\index{local\_search.candidate\_type.CandidateValue@{local\_search.candidate\_type.CandidateValue}}
+
+
+\doxylink{classlocal__search_1_1candidate__type_1_1CandidateValue}{Candidate\+Value} -\/ Factory/wrapper for creating and using \doxylink{classlocal__search_1_1candidate__type_1_1SearchCandidate}{Search\+Candidate} selection strategies.  
+
+
+
+
+Diagrama de colaboración de local\+\_\+search.\+candidate\+\_\+type.\+Candidate\+Value\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlocal__search_1_1candidate__type_1_1CandidateValue__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1CandidateValue_a0b569242170a94ec76659efea622f402}{Candidate\+Value}} ()
+\item 
+\mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1SearchCandidate}{Search\+Candidate}} \mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1CandidateValue_ab02441a95d5abedea3a2c82bf9c5d457}{new\+Search\+Candidate}} (\mbox{\hyperlink{enumlocal__search_1_1candidate__type_1_1CandidateType}{Candidate\+Type}} typecandidate)  throws Illegal\+Argument\+Exception, Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception, Illegal\+Access\+Exception, Invocation\+Target\+Exception, No\+Such\+Method\+Exception 
+\begin{DoxyCompactList}\small\item\em Create a new \doxylink{classlocal__search_1_1candidate__type_1_1SearchCandidate}{Search\+Candidate} instance for the provided candidate type. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} \mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1CandidateValue_a77505d8ed443552afa435f51d0222d75}{state\+Candidate}} (\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} state\+Current, \mbox{\hyperlink{enumlocal__search_1_1candidate__type_1_1CandidateType}{Candidate\+Type}} type\+Candidate, \mbox{\hyperlink{enumlocal__search_1_1complement_1_1StrategyType}{Strategy\+Type}} strategy, Integer operatornumber, List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ neighborhood)  throws Illegal\+Argument\+Exception, Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception, Illegal\+Access\+Exception, Invocation\+Target\+Exception, No\+Such\+Method\+Exception
+\begin{DoxyCompactList}\small\item\em Choose a candidate state from the provided neighborhood according to the specified candidate selection type and strategy. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classlocal__search_1_1complement_1_1TabuSolutions}{Tabu\+Solutions}} \mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1CandidateValue_ae334fe4b4bc2211c5120d905d3114762}{get\+Tabusolution}} ()
+\begin{DoxyCompactList}\small\item\em Get the currently stored tabu solutions helper instance. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1CandidateValue_a142eb7bff2e5f3312d0277152f803d1a}{set\+Tabusolution}} (\mbox{\hyperlink{classlocal__search_1_1complement_1_1TabuSolutions}{Tabu\+Solutions}} \mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1CandidateValue_a050cc90f7786e4825e7ca09e20492ebb}{tabusolution}})
+\begin{DoxyCompactList}\small\item\em Set the \doxylink{classlocal__search_1_1complement_1_1TabuSolutions}{Tabu\+Solutions} helper used by this \doxylink{classlocal__search_1_1candidate__type_1_1CandidateValue}{Candidate\+Value}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interfacefactory__interface_1_1IFFactoryCandidate}{IFFactory\+Candidate}} \mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1CandidateValue_a7ec51b9213b57e19f65fa0d7c24a2e67}{if\+Factory}}
+\item 
+\mbox{\hyperlink{classlocal__search_1_1complement_1_1TabuSolutions}{Tabu\+Solutions}} \mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1CandidateValue_a050cc90f7786e4825e7ca09e20492ebb}{tabusolution}}
+\item 
+\mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1SearchCandidate}{Search\+Candidate}} \mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1CandidateValue_a7b05c8a6d8af9170fc422b78c9af5b64}{searchcandidate}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+\doxylink{classlocal__search_1_1candidate__type_1_1CandidateValue}{Candidate\+Value} -\/ Factory/wrapper for creating and using \doxylink{classlocal__search_1_1candidate__type_1_1SearchCandidate}{Search\+Candidate} selection strategies. 
+
+Responsible for creating concrete \doxylink{classlocal__search_1_1candidate__type_1_1SearchCandidate}{Search\+Candidate} implementations (via factories), filtering neighborhoods using tabu lists and returning candidate states chosen by the selected strategy. 
+
+Definición en la línea \mbox{\hyperlink{CandidateValue_8java_source_l00029}{29}} del archivo \mbox{\hyperlink{CandidateValue_8java_source}{Candidate\+Value.\+java}}.
+
+
+
+\label{doc-constructors}
+\Hypertarget{classlocal__search_1_1candidate__type_1_1CandidateValue_doc-constructors}
+\doxysubsection{Documentación de constructores y destructores}
+\Hypertarget{classlocal__search_1_1candidate__type_1_1CandidateValue_a0b569242170a94ec76659efea622f402}\index{local\_search.candidate\_type.CandidateValue@{local\_search.candidate\_type.CandidateValue}!CandidateValue@{CandidateValue}}
+\index{CandidateValue@{CandidateValue}!local\_search.candidate\_type.CandidateValue@{local\_search.candidate\_type.CandidateValue}}
+\doxysubsubsection{\texorpdfstring{CandidateValue()}{CandidateValue()}}
+{\footnotesize\ttfamily \label{classlocal__search_1_1candidate__type_1_1CandidateValue_a0b569242170a94ec76659efea622f402} 
+local\+\_\+search.\+candidate\+\_\+type.\+Candidate\+Value.\+Candidate\+Value (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{CandidateValue_8java_source_l00040}{40}} del archivo \mbox{\hyperlink{CandidateValue_8java_source}{Candidate\+Value.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00040\ \{\}}
+
+\end{DoxyCode}
+
+
+\label{doc-func-members}
+\Hypertarget{classlocal__search_1_1candidate__type_1_1CandidateValue_doc-func-members}
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{classlocal__search_1_1candidate__type_1_1CandidateValue_ae334fe4b4bc2211c5120d905d3114762}\index{local\_search.candidate\_type.CandidateValue@{local\_search.candidate\_type.CandidateValue}!getTabusolution@{getTabusolution}}
+\index{getTabusolution@{getTabusolution}!local\_search.candidate\_type.CandidateValue@{local\_search.candidate\_type.CandidateValue}}
+\doxysubsubsection{\texorpdfstring{getTabusolution()}{getTabusolution()}}
+{\footnotesize\ttfamily \label{classlocal__search_1_1candidate__type_1_1CandidateValue_ae334fe4b4bc2211c5120d905d3114762} 
+\mbox{\hyperlink{classlocal__search_1_1complement_1_1TabuSolutions}{Tabu\+Solutions}} local\+\_\+search.\+candidate\+\_\+type.\+Candidate\+Value.\+get\+Tabusolution (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the currently stored tabu solutions helper instance. 
+
+\begin{DoxyReturn}{Devuelve}
+\doxylink{classlocal__search_1_1complement_1_1TabuSolutions}{Tabu\+Solutions} manager used for neighborhood filtering 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{CandidateValue_8java_source_l00104}{104}} del archivo \mbox{\hyperlink{CandidateValue_8java_source}{Candidate\+Value.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ tabusolution;}
+\DoxyCodeLine{00106\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{CandidateValue_8java_source_l00036}{tabusolution}}.
+
+\Hypertarget{classlocal__search_1_1candidate__type_1_1CandidateValue_ab02441a95d5abedea3a2c82bf9c5d457}\index{local\_search.candidate\_type.CandidateValue@{local\_search.candidate\_type.CandidateValue}!newSearchCandidate@{newSearchCandidate}}
+\index{newSearchCandidate@{newSearchCandidate}!local\_search.candidate\_type.CandidateValue@{local\_search.candidate\_type.CandidateValue}}
+\doxysubsubsection{\texorpdfstring{newSearchCandidate()}{newSearchCandidate()}}
+{\footnotesize\ttfamily \label{classlocal__search_1_1candidate__type_1_1CandidateValue_ab02441a95d5abedea3a2c82bf9c5d457} 
+\mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1SearchCandidate}{Search\+Candidate}} local\+\_\+search.\+candidate\+\_\+type.\+Candidate\+Value.\+new\+Search\+Candidate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{enumlocal__search_1_1candidate__type_1_1CandidateType}{Candidate\+Type}}}]{typecandidate}{}\end{DoxyParamCaption}) throws Illegal\+Argument\+Exception, Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception, Illegal\+Access\+Exception, Invocation\+Target\+Exception, No\+Such\+Method\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Create a new \doxylink{classlocal__search_1_1candidate__type_1_1SearchCandidate}{Search\+Candidate} instance for the provided candidate type. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em typecandidate} & the enum value describing which concrete \doxylink{classlocal__search_1_1candidate__type_1_1SearchCandidate}{Search\+Candidate} to create \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+a new \doxylink{classlocal__search_1_1candidate__type_1_1SearchCandidate}{Search\+Candidate} instance 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em Reflective\+Operation\+Exception} & when the factory cannot create the class \\
+\hline
+\end{DoxyExceptions}
+
+
+Definición en la línea \mbox{\hyperlink{CandidateValue_8java_source_l00052}{52}} del archivo \mbox{\hyperlink{CandidateValue_8java_source}{Candidate\+Value.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ ifFactory\ =\ \textcolor{keyword}{new}\ FactoryCandidate();}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ searchcandidate\ =\ ifFactory.createSearchCandidate(typecandidate);}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ searchcandidate;}
+\DoxyCodeLine{00056\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{CandidateValue_8java_source_l00032}{if\+Factory}} y \mbox{\hyperlink{CandidateValue_8java_source_l00038}{searchcandidate}}.
+
+
+
+Referenciado por \mbox{\hyperlink{CandidateValue_8java_source_l00074}{state\+Candidate()}}.
+
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlocal__search_1_1candidate__type_1_1CandidateValue_ab02441a95d5abedea3a2c82bf9c5d457_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classlocal__search_1_1candidate__type_1_1CandidateValue_a142eb7bff2e5f3312d0277152f803d1a}\index{local\_search.candidate\_type.CandidateValue@{local\_search.candidate\_type.CandidateValue}!setTabusolution@{setTabusolution}}
+\index{setTabusolution@{setTabusolution}!local\_search.candidate\_type.CandidateValue@{local\_search.candidate\_type.CandidateValue}}
+\doxysubsubsection{\texorpdfstring{setTabusolution()}{setTabusolution()}}
+{\footnotesize\ttfamily \label{classlocal__search_1_1candidate__type_1_1CandidateValue_a142eb7bff2e5f3312d0277152f803d1a} 
+void local\+\_\+search.\+candidate\+\_\+type.\+Candidate\+Value.\+set\+Tabusolution (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlocal__search_1_1complement_1_1TabuSolutions}{Tabu\+Solutions}}}]{tabusolution}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the \doxylink{classlocal__search_1_1complement_1_1TabuSolutions}{Tabu\+Solutions} helper used by this \doxylink{classlocal__search_1_1candidate__type_1_1CandidateValue}{Candidate\+Value}. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em tabusolution} & \doxylink{classlocal__search_1_1complement_1_1TabuSolutions}{Tabu\+Solutions} instance to use for neighborhood filtering \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{CandidateValue_8java_source_l00113}{113}} del archivo \mbox{\hyperlink{CandidateValue_8java_source}{Candidate\+Value.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ this.tabusolution\ =\ tabusolution;}
+\DoxyCodeLine{00115\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{CandidateValue_8java_source_l00036}{tabusolution}}.
+
+\Hypertarget{classlocal__search_1_1candidate__type_1_1CandidateValue_a77505d8ed443552afa435f51d0222d75}\index{local\_search.candidate\_type.CandidateValue@{local\_search.candidate\_type.CandidateValue}!stateCandidate@{stateCandidate}}
+\index{stateCandidate@{stateCandidate}!local\_search.candidate\_type.CandidateValue@{local\_search.candidate\_type.CandidateValue}}
+\doxysubsubsection{\texorpdfstring{stateCandidate()}{stateCandidate()}}
+{\footnotesize\ttfamily \label{classlocal__search_1_1candidate__type_1_1CandidateValue_a77505d8ed443552afa435f51d0222d75} 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} local\+\_\+search.\+candidate\+\_\+type.\+Candidate\+Value.\+state\+Candidate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}}]{state\+Current}{, }\item[{\mbox{\hyperlink{enumlocal__search_1_1candidate__type_1_1CandidateType}{Candidate\+Type}}}]{type\+Candidate}{, }\item[{\mbox{\hyperlink{enumlocal__search_1_1complement_1_1StrategyType}{Strategy\+Type}}}]{strategy}{, }\item[{Integer}]{operatornumber}{, }\item[{List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$}]{neighborhood}{}\end{DoxyParamCaption}) throws Illegal\+Argument\+Exception, Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception, Illegal\+Access\+Exception, Invocation\+Target\+Exception, No\+Such\+Method\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Choose a candidate state from the provided neighborhood according to the specified candidate selection type and strategy. 
+
+If the \doxylink{enumlocal__search_1_1complement_1_1StrategyType}{Strategy\+Type} is TABU, the neighborhood is first filtered through the tabu list. On exception the method will attempt to regenerate the neighborhood via the strategy\textquotesingle{}s problem operator and retry.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em state\+Current} & the current state \\
+\hline
+{\em type\+Candidate} & which candidate selection strategy to use \\
+\hline
+{\em strategy} & the local search strategy type (e.\+g. TABU) \\
+\hline
+{\em operatornumber} & operator index used to generate new states if needed \\
+\hline
+{\em neighborhood} & list of neighbor states to select from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+the chosen candidate state 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em Reflective\+Operation\+Exception} & when factory/reflective creation fails \\
+\hline
+\end{DoxyExceptions}
+
+
+Definición en la línea \mbox{\hyperlink{CandidateValue_8java_source_l00074}{74}} del archivo \mbox{\hyperlink{CandidateValue_8java_source}{Candidate\+Value.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Problem\ problem\ =\ ExecuteGenerator.getExecuteGenerator().getProblem();}}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ State\ stateCandidate;}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ List<State>\ auxList\ =\ \textcolor{keyword}{new}\ ArrayList<State>();}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ neighborhood.size();\ i++)\ \{}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ auxList.add(neighborhood.get(i));}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ this.tabusolution\ =\ \textcolor{keyword}{new}\ TabuSolutions();}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (strategy.equals(StrategyType.TABU))\ \{}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ auxList\ =\ this.tabusolution.filterNeighborhood(auxList);}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (Exception\ e)\ \{}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Strategy\ strategys\ =\ Strategy.getStrategy();}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(strategys.getProblem()!=\textcolor{keyword}{null})\{}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ neighborhood\ =\ strategys.getProblem().getOperator().generatedNewState(neighborhood.get(0),\ operatornumber);}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ stateCandidate(stateCurrent,\ typeCandidate,\ strategy,\ operatornumber,\ neighborhood);}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ SearchCandidate\ searchCand\ =\ newSearchCandidate(typeCandidate);}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ stateCandidate\ =\ searchCand.stateSearch(auxList);}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ stateCandidate;}
+\DoxyCodeLine{00097\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{TabuSolutions_8java_source_l00036}{local\+\_\+search.\+complement.\+Tabu\+Solutions.\+filter\+Neighborhood()}}, \mbox{\hyperlink{classproblem_1_1definition_1_1Operator_a5b6625843e73d938f9235985bf966b34}{problem.\+definition.\+Operator.\+generated\+New\+State()}}, \mbox{\hyperlink{Problem_8java_source_l00131}{problem.\+definition.\+Problem.\+get\+Operator()}}, \mbox{\hyperlink{Strategy_8java_source_l00405}{metaheurictics.\+strategy.\+Strategy.\+get\+Problem()}}, \mbox{\hyperlink{Strategy_8java_source_l00080}{metaheurictics.\+strategy.\+Strategy.\+get\+Strategy()}}, \mbox{\hyperlink{CandidateValue_8java_source_l00052}{new\+Search\+Candidate()}}, \mbox{\hyperlink{CandidateValue_8java_source_l00074}{state\+Candidate()}}, \mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1SearchCandidate_a0f10adc1526fb08f54427c50734f8abf}{local\+\_\+search.\+candidate\+\_\+type.\+Search\+Candidate.\+state\+Search()}} y \mbox{\hyperlink{StrategyType_8java_source_l00016}{local\+\_\+search.\+complement.\+Strategy\+Type.\+TABU}}.
+
+
+
+Referenciado por \mbox{\hyperlink{CandidateValue_8java_source_l00074}{state\+Candidate()}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlocal__search_1_1candidate__type_1_1CandidateValue_a77505d8ed443552afa435f51d0222d75_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=280pt]{classlocal__search_1_1candidate__type_1_1CandidateValue_a77505d8ed443552afa435f51d0222d75_icgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-variable-members}
+\Hypertarget{classlocal__search_1_1candidate__type_1_1CandidateValue_doc-variable-members}
+\doxysubsection{Documentación de datos miembro}
+\Hypertarget{classlocal__search_1_1candidate__type_1_1CandidateValue_a7ec51b9213b57e19f65fa0d7c24a2e67}\index{local\_search.candidate\_type.CandidateValue@{local\_search.candidate\_type.CandidateValue}!ifFactory@{ifFactory}}
+\index{ifFactory@{ifFactory}!local\_search.candidate\_type.CandidateValue@{local\_search.candidate\_type.CandidateValue}}
+\doxysubsubsection{\texorpdfstring{ifFactory}{ifFactory}}
+{\footnotesize\ttfamily \label{classlocal__search_1_1candidate__type_1_1CandidateValue_a7ec51b9213b57e19f65fa0d7c24a2e67} 
+\mbox{\hyperlink{interfacefactory__interface_1_1IFFactoryCandidate}{IFFactory\+Candidate}} local\+\_\+search.\+candidate\+\_\+type.\+Candidate\+Value.\+if\+Factory\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{CandidateValue_8java_source_l00032}{32}} del archivo \mbox{\hyperlink{CandidateValue_8java_source}{Candidate\+Value.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{CandidateValue_8java_source_l00052}{new\+Search\+Candidate()}}.
+
+\Hypertarget{classlocal__search_1_1candidate__type_1_1CandidateValue_a7b05c8a6d8af9170fc422b78c9af5b64}\index{local\_search.candidate\_type.CandidateValue@{local\_search.candidate\_type.CandidateValue}!searchcandidate@{searchcandidate}}
+\index{searchcandidate@{searchcandidate}!local\_search.candidate\_type.CandidateValue@{local\_search.candidate\_type.CandidateValue}}
+\doxysubsubsection{\texorpdfstring{searchcandidate}{searchcandidate}}
+{\footnotesize\ttfamily \label{classlocal__search_1_1candidate__type_1_1CandidateValue_a7b05c8a6d8af9170fc422b78c9af5b64} 
+\mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1SearchCandidate}{Search\+Candidate}} local\+\_\+search.\+candidate\+\_\+type.\+Candidate\+Value.\+searchcandidate\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{CandidateValue_8java_source_l00038}{38}} del archivo \mbox{\hyperlink{CandidateValue_8java_source}{Candidate\+Value.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{CandidateValue_8java_source_l00052}{new\+Search\+Candidate()}}.
+
+\Hypertarget{classlocal__search_1_1candidate__type_1_1CandidateValue_a050cc90f7786e4825e7ca09e20492ebb}\index{local\_search.candidate\_type.CandidateValue@{local\_search.candidate\_type.CandidateValue}!tabusolution@{tabusolution}}
+\index{tabusolution@{tabusolution}!local\_search.candidate\_type.CandidateValue@{local\_search.candidate\_type.CandidateValue}}
+\doxysubsubsection{\texorpdfstring{tabusolution}{tabusolution}}
+{\footnotesize\ttfamily \label{classlocal__search_1_1candidate__type_1_1CandidateValue_a050cc90f7786e4825e7ca09e20492ebb} 
+\mbox{\hyperlink{classlocal__search_1_1complement_1_1TabuSolutions}{Tabu\+Solutions}} local\+\_\+search.\+candidate\+\_\+type.\+Candidate\+Value.\+tabusolution\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{CandidateValue_8java_source_l00036}{36}} del archivo \mbox{\hyperlink{CandidateValue_8java_source}{Candidate\+Value.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{CandidateValue_8java_source_l00104}{get\+Tabusolution()}} y \mbox{\hyperlink{CandidateValue_8java_source_l00113}{set\+Tabusolution()}}.
+
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{CandidateValue_8java}{Candidate\+Value.\+java}}\end{DoxyCompactItemize}

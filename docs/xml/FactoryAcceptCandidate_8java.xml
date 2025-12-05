@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="es">
+  <compounddef id="FactoryAcceptCandidate_8java" kind="file" language="Java">
+    <compoundname>FactoryAcceptCandidate.java</compoundname>
+    <includes local="no">java.lang.reflect.InvocationTargetException</includes>
+    <includes local="no">local_search.acceptation_type.AcceptType</includes>
+    <includes local="no">local_search.acceptation_type.AcceptableCandidate</includes>
+    <includes local="no">factory_interface.IFFactoryAcceptCandidate</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>FactoryAcceptCandidate.java</label>
+        <link refid="FactoryAcceptCandidate_8java"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>factory_interface.IFFactoryAcceptCandidate</label>
+      </node>
+      <node id="2">
+        <label>java.lang.reflect.InvocationTargetException</label>
+      </node>
+      <node id="3">
+        <label>local_search.acceptation_type.AcceptType</label>
+      </node>
+      <node id="4">
+        <label>local_search.acceptation_type.AcceptableCandidate</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classfactory__method_1_1FactoryAcceptCandidate" prot="public">factory_method::FactoryAcceptCandidate</innerclass>
+    <innernamespace refid="namespacefactory__method">factory_method</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="namespacefactory__method" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">package<sp/></highlight><highlight class="normal">factory_method;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>java.lang.reflect.InvocationTargetException;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>local_search.acceptation_type.AcceptType;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>local_search.acceptation_type.AcceptableCandidate;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/><ref refid="namespacefactory__interface" kindref="compound">factory_interface</ref>.<ref refid="interfacefactory__interface_1_1IFFactoryAcceptCandidate" kindref="compound">IFFactoryAcceptCandidate</ref>;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="classfactory__method_1_1FactoryAcceptCandidate" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classfactory__method_1_1FactoryAcceptCandidate" kindref="compound">FactoryAcceptCandidate</ref><sp/></highlight><highlight class="keyword">implements</highlight><highlight class="normal"><sp/><ref refid="interfacefactory__interface_1_1IFFactoryAcceptCandidate" kindref="compound">IFFactoryAcceptCandidate</ref>{</highlight></codeline>
+<codeline lineno="22" refid="classfactory__method_1_1FactoryAcceptCandidate_1af59d291c10bc117fb9735e3eea857652" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/><ref refid="classlocal__search_1_1acceptation__type_1_1AcceptableCandidate" kindref="compound">AcceptableCandidate</ref><sp/><ref refid="classfactory__method_1_1FactoryAcceptCandidate_1af59d291c10bc117fb9735e3eea857652" kindref="member">acceptCandidate</ref>;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="29" refid="classfactory__method_1_1FactoryAcceptCandidate_1a3f5e82869758bc8a38c9ffdf56f44455" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classlocal__search_1_1acceptation__type_1_1AcceptableCandidate" kindref="compound">AcceptableCandidate</ref><sp/><ref refid="classfactory__method_1_1FactoryAcceptCandidate_1a3f5e82869758bc8a38c9ffdf56f44455" kindref="member">createAcceptCandidate</ref>(<sp/><ref refid="enumlocal__search_1_1acceptation__type_1_1AcceptType" kindref="compound">AcceptType</ref><sp/>typeacceptation<sp/>)<sp/></highlight><highlight class="keywordflow">throws</highlight><highlight class="normal"><sp/>IllegalArgumentException,<sp/>SecurityException,<sp/>ClassNotFoundException,<sp/>InstantiationException,<sp/>IllegalAccessException,<sp/>InvocationTargetException,<sp/>NoSuchMethodException{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>String<sp/>className<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;local_search.acceptation_type.&quot;</highlight><highlight class="normal"><sp/>+<sp/>typeacceptation.toString();</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfactory__method_1_1FactoryAcceptCandidate_1af59d291c10bc117fb9735e3eea857652" kindref="member">acceptCandidate</ref><sp/>=<sp/>(<ref refid="classlocal__search_1_1acceptation__type_1_1AcceptableCandidate" kindref="compound">AcceptableCandidate</ref>)<sp/><ref refid="classfactory__method_1_1FactoryLoader" kindref="compound">FactoryLoader</ref>.<ref refid="classfactory__method_1_1FactoryLoader_1a4e61ffc7038a082277d67e3e59cdb859" kindref="member">getInstance</ref>(className);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classfactory__method_1_1FactoryAcceptCandidate_1af59d291c10bc117fb9735e3eea857652" kindref="member">acceptCandidate</ref>;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="practica5/src/main/java/factory_method/FactoryAcceptCandidate.java"/>
+  </compounddef>
+</doxygen>

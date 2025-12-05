@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="es">
+  <compounddef id="classlocal__search_1_1acceptation__type_1_1AcceptMulticase" kind="class" language="Java" prot="public">
+    <compoundname>local_search::acceptation_type::AcceptMulticase</compoundname>
+    <basecompoundref refid="classlocal__search_1_1acceptation__type_1_1AcceptableCandidate" prot="public" virt="non-virtual">local_search.acceptation_type.AcceptableCandidate</basecompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classlocal__search_1_1acceptation__type_1_1AcceptMulticase_1a526e452510b7eebe59af4dde0c59b337" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Boolean</type>
+        <definition>Boolean local_search.acceptation_type.AcceptMulticase.acceptCandidate</definition>
+        <argsstring>(State stateCurrent, State stateCandidate)</argsstring>
+        <name>acceptCandidate</name>
+        <qualifiedname>local_search.acceptation_type.AcceptMulticase.acceptCandidate</qualifiedname>
+        <reimplements refid="classlocal__search_1_1acceptation__type_1_1AcceptableCandidate_1aa9e62e1d2d213c3828d2491b506d0592">acceptCandidate</reimplements>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>stateCurrent</declname>
+        </param>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>stateCandidate</declname>
+        </param>
+        <briefdescription>
+<para>Uses ThreadLocalRandom for algorithmic (non-cryptographic) randomness. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This RNG is used to decide whether a mutation occurs in the evolutionary algorithm and is not used for security-sensitive purposes. Suppress Sonar security hotspot S2245 for this usage. Evaluate a candidate for acceptance using dominance, rank and probabilistic criteria.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stateCurrent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the current state </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stateCandidate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the candidate state </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the candidate should be accepted, false otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/local_search/acceptation_type/AcceptMulticase.java" line="34" column="16" bodyfile="practica5/src/main/java/local_search/acceptation_type/AcceptMulticase.java" bodystart="34" bodyend="103"/>
+        <references refid="classproblem_1_1definition_1_1State_1a113f6883a1f6bd20eea2da09a0adc5c3" compoundref="State_8java" startline="142" endline="154">problem.definition.State.clone</references>
+        <references refid="classlocal__search_1_1acceptation__type_1_1Dominance_1a0dafd58be8365a22956f59417841a2d8" compoundref="Dominance_8java" startline="87" endline="118">local_search.acceptation_type.Dominance.dominance</references>
+        <references refid="classlocal__search_1_1acceptation__type_1_1AcceptMulticase_1a054b2c0dc802d3ac4e003b4bd763b48f" compoundref="AcceptMulticase_8java" startline="106" endline="115">local_search.acceptation_type.AcceptMulticase.dominanceCounter</references>
+        <references refid="classlocal__search_1_1acceptation__type_1_1AcceptMulticase_1a9f30e2b41f460cc8992f1e33136a14cc" compoundref="AcceptMulticase_8java" startline="117" endline="128">local_search.acceptation_type.AcceptMulticase.dominanceRank</references>
+        <references refid="classproblem_1_1definition_1_1State_1a226ea6fab8e7060cf131edfdb245a6fa" compoundref="State_8java" startline="104" endline="106">problem.definition.State.getEvaluation</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1ad2641e12c52292930364de6655333aa8" compoundref="Strategy_8java" startline="80" endline="85">metaheurictics.strategy.Strategy.getStrategy</references>
+        <references refid="classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_1af8e07e094004ed50e59c401e8ba0d1bf" compoundref="MultiCaseSimulatedAnnealing_8java" startline="59" endline="61">metaheuristics.generators.MultiCaseSimulatedAnnealing.getTinitial</references>
+        <references refid="classlocal__search_1_1acceptation__type_1_1Dominance_1ad61c0e3cb6cc4036419cb36758cf3814" compoundref="Dominance_8java" startline="33" endline="75">local_search.acceptation_type.Dominance.listDominance</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1aa572e7d90e24bae70ea47a31fee298f4" compoundref="Strategy_8java" startline="49">metaheurictics.strategy.Strategy.listRefPoblacFinal</references>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classlocal__search_1_1acceptation__type_1_1AcceptMulticase_1a054b2c0dc802d3ac4e003b4bd763b48f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int local_search.acceptation_type.AcceptMulticase.dominanceCounter</definition>
+        <argsstring>(State stateCandidate, List&lt; State &gt; list)</argsstring>
+        <name>dominanceCounter</name>
+        <qualifiedname>local_search.acceptation_type.AcceptMulticase.dominanceCounter</qualifiedname>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>stateCandidate</declname>
+        </param>
+        <param>
+          <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+          <declname>list</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/local_search/acceptation_type/AcceptMulticase.java" line="106" column="13" bodyfile="practica5/src/main/java/local_search/acceptation_type/AcceptMulticase.java" bodystart="106" bodyend="115"/>
+        <references refid="classlocal__search_1_1acceptation__type_1_1Dominance_1a0dafd58be8365a22956f59417841a2d8" compoundref="Dominance_8java" startline="87" endline="118">local_search.acceptation_type.Dominance.dominance</references>
+        <referencedby refid="classlocal__search_1_1acceptation__type_1_1AcceptMulticase_1a526e452510b7eebe59af4dde0c59b337" compoundref="AcceptMulticase_8java" startline="34" endline="103">local_search.acceptation_type.AcceptMulticase.acceptCandidate</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classlocal__search_1_1acceptation__type_1_1AcceptMulticase_1a9f30e2b41f460cc8992f1e33136a14cc" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int local_search.acceptation_type.AcceptMulticase.dominanceRank</definition>
+        <argsstring>(State stateCandidate, List&lt; State &gt; list)</argsstring>
+        <name>dominanceRank</name>
+        <qualifiedname>local_search.acceptation_type.AcceptMulticase.dominanceRank</qualifiedname>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>stateCandidate</declname>
+        </param>
+        <param>
+          <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+          <declname>list</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/local_search/acceptation_type/AcceptMulticase.java" line="117" column="13" bodyfile="practica5/src/main/java/local_search/acceptation_type/AcceptMulticase.java" bodystart="117" bodyend="128"/>
+        <references refid="classlocal__search_1_1acceptation__type_1_1Dominance_1a0dafd58be8365a22956f59417841a2d8" compoundref="Dominance_8java" startline="87" endline="118">local_search.acceptation_type.Dominance.dominance</references>
+        <referencedby refid="classlocal__search_1_1acceptation__type_1_1AcceptMulticase_1a526e452510b7eebe59af4dde0c59b337" compoundref="AcceptMulticase_8java" startline="34" endline="103">local_search.acceptation_type.AcceptMulticase.acceptCandidate</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="classlocal__search_1_1acceptation__type_1_1AcceptMulticase" kindref="compound">AcceptMulticase</ref> - Multi-case acceptation strategy for multiobjective algorithms. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Decides whether to accept a candidate state based on dominance, rank and simulated annealing like probabilities. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>local_search.acceptation_type.AcceptMulticase</label>
+        <link refid="classlocal__search_1_1acceptation__type_1_1AcceptMulticase"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>local_search.acceptation_type.AcceptableCandidate</label>
+        <link refid="classlocal__search_1_1acceptation__type_1_1AcceptableCandidate"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>local_search.acceptation_type.AcceptMulticase</label>
+        <link refid="classlocal__search_1_1acceptation__type_1_1AcceptMulticase"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>local_search.acceptation_type.AcceptableCandidate</label>
+        <link refid="classlocal__search_1_1acceptation__type_1_1AcceptableCandidate"/>
+      </node>
+    </collaborationgraph>
+    <location file="practica5/src/main/java/local_search/acceptation_type/AcceptMulticase.java" line="17" column="7" bodyfile="practica5/src/main/java/local_search/acceptation_type/AcceptMulticase.java" bodystart="17" bodyend="130"/>
+    <listofallmembers>
+      <member refid="classlocal__search_1_1acceptation__type_1_1AcceptMulticase_1a526e452510b7eebe59af4dde0c59b337" prot="public" virt="non-virtual"><scope>local_search::acceptation_type::AcceptMulticase</scope><name>acceptCandidate</name></member>
+      <member refid="classlocal__search_1_1acceptation__type_1_1AcceptMulticase_1a054b2c0dc802d3ac4e003b4bd763b48f" prot="private" virt="non-virtual"><scope>local_search::acceptation_type::AcceptMulticase</scope><name>dominanceCounter</name></member>
+      <member refid="classlocal__search_1_1acceptation__type_1_1AcceptMulticase_1a9f30e2b41f460cc8992f1e33136a14cc" prot="private" virt="non-virtual"><scope>local_search::acceptation_type::AcceptMulticase</scope><name>dominanceRank</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

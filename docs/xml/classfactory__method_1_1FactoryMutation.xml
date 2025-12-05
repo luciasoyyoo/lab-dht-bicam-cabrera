@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="es">
+  <compounddef id="classfactory__method_1_1FactoryMutation" kind="class" language="Java" prot="public">
+    <compoundname>factory_method::FactoryMutation</compoundname>
+    <basecompoundref refid="interfacefactory__interface_1_1IFFactoryMutation" prot="public" virt="non-virtual">factory_interface.IFFactoryMutation</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classfactory__method_1_1FactoryMutation_1a7d87e3f6822ba4140b218c111e30e9bf" prot="private" static="no" mutable="no">
+        <type><ref refid="classevolutionary__algorithms_1_1complement_1_1Mutation" kindref="compound">Mutation</ref></type>
+        <definition>Mutation factory_method.FactoryMutation.mutation</definition>
+        <argsstring></argsstring>
+        <name>mutation</name>
+        <qualifiedname>factory_method.FactoryMutation.mutation</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/factory_method/FactoryMutation.java" line="17" column="18" bodyfile="practica5/src/main/java/factory_method/FactoryMutation.java" bodystart="17" bodyend="-1"/>
+        <referencedby refid="classfactory__method_1_1FactoryMutation_1a70de79a5c1ec804bfd636c2da3da13b3" compoundref="FactoryMutation_8java" startline="24" endline="29">factory_method.FactoryMutation.createMutation</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classfactory__method_1_1FactoryMutation_1a70de79a5c1ec804bfd636c2da3da13b3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classevolutionary__algorithms_1_1complement_1_1Mutation" kindref="compound">Mutation</ref></type>
+        <definition>Mutation factory_method.FactoryMutation.createMutation</definition>
+        <argsstring>(MutationType typeMutation)</argsstring>
+        <name>createMutation</name>
+        <qualifiedname>factory_method.FactoryMutation.createMutation</qualifiedname>
+        <reimplements refid="interfacefactory__interface_1_1IFFactoryMutation_1a4122752fb264b4fa3257c4bc0570a358">createMutation</reimplements>
+        <param>
+          <type><ref refid="enumevolutionary__algorithms_1_1complement_1_1MutationType" kindref="compound">MutationType</ref></type>
+          <declname>typeMutation</declname>
+        </param>
+        <exceptions> throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException </exceptions>
+        <briefdescription>
+<para>createMutation - Creates an instance of <ref refid="classevolutionary__algorithms_1_1complement_1_1Mutation" kindref="compound">Mutation</ref> based on the provided <ref refid="enumevolutionary__algorithms_1_1complement_1_1MutationType" kindref="compound">MutationType</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>typeMutation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns an instance of <ref refid="classevolutionary__algorithms_1_1complement_1_1Mutation" kindref="compound">Mutation</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/factory_method/FactoryMutation.java" line="24" column="17" bodyfile="practica5/src/main/java/factory_method/FactoryMutation.java" bodystart="24" bodyend="29"/>
+        <references refid="classfactory__method_1_1FactoryLoader_1a4e61ffc7038a082277d67e3e59cdb859" compoundref="FactoryLoader_8java" startline="21" endline="28">factory_method.FactoryLoader.getInstance</references>
+        <references refid="classfactory__method_1_1FactoryMutation_1a7d87e3f6822ba4140b218c111e30e9bf" compoundref="FactoryMutation_8java" startline="17">factory_method.FactoryMutation.mutation</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="classfactory__method_1_1FactoryMutation" kindref="compound">FactoryMutation</ref> - Class responsible for creating mutation strategies. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>factory_interface.IFFactoryMutation</label>
+        <link refid="interfacefactory__interface_1_1IFFactoryMutation"/>
+      </node>
+      <node id="1">
+        <label>factory_method.FactoryMutation</label>
+        <link refid="classfactory__method_1_1FactoryMutation"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>evolutionary_algorithms.complement.Mutation</label>
+        <link refid="classevolutionary__algorithms_1_1complement_1_1Mutation"/>
+      </node>
+      <node id="2">
+        <label>factory_interface.IFFactoryMutation</label>
+        <link refid="interfacefactory__interface_1_1IFFactoryMutation"/>
+      </node>
+      <node id="1">
+        <label>factory_method.FactoryMutation</label>
+        <link refid="classfactory__method_1_1FactoryMutation"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-mutation</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="practica5/src/main/java/factory_method/FactoryMutation.java" line="16" column="7" bodyfile="practica5/src/main/java/factory_method/FactoryMutation.java" bodystart="16" bodyend="30"/>
+    <listofallmembers>
+      <member refid="classfactory__method_1_1FactoryMutation_1a70de79a5c1ec804bfd636c2da3da13b3" prot="public" virt="non-virtual"><scope>factory_method::FactoryMutation</scope><name>createMutation</name></member>
+      <member refid="classfactory__method_1_1FactoryMutation_1a7d87e3f6822ba4140b218c111e30e9bf" prot="private" virt="non-virtual"><scope>factory_method::FactoryMutation</scope><name>mutation</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

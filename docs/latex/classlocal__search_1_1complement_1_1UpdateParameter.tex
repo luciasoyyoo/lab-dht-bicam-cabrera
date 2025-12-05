@@ -1,0 +1,145 @@
+\doxysection{Referencia de la clase local\+\_\+search.\+complement.\+Update\+Parameter}
+\hypertarget{classlocal__search_1_1complement_1_1UpdateParameter}{}\label{classlocal__search_1_1complement_1_1UpdateParameter}\index{local\_search.complement.UpdateParameter@{local\_search.complement.UpdateParameter}}
+
+
+\doxylink{classlocal__search_1_1complement_1_1UpdateParameter}{Update\+Parameter} -\/ utility that updates generator parameters during search.  
+
+
+
+
+Diagrama de colaboración de local\+\_\+search.\+complement.\+Update\+Parameter\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{classlocal__search_1_1complement_1_1UpdateParameter__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Métodos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static Integer \mbox{\hyperlink{classlocal__search_1_1complement_1_1UpdateParameter_aa88a78351c0bc5de77f1ad05bee29e11}{update\+Parameter}} (Integer count\+Iterations\+Current)  throws Illegal\+Argument\+Exception, Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception, Illegal\+Access\+Exception, Invocation\+Target\+Exception, No\+Such\+Method\+Exception 
+\begin{DoxyCompactList}\small\item\em Increment the provided iteration counter and, when thresholds for different generators are reached, replace the \doxylink{classmetaheurictics_1_1strategy_1_1Strategy}{Strategy}\textquotesingle{}s generator with the corresponding implementation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos estáticos privados}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{interfacefactory__interface_1_1IFFactoryGenerator}{IFFactory\+Generator}} \mbox{\hyperlink{classlocal__search_1_1complement_1_1UpdateParameter_ad048d2f483314001ca573c5cff6395c2}{if\+Factory\+Generator}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+\doxylink{classlocal__search_1_1complement_1_1UpdateParameter}{Update\+Parameter} -\/ utility that updates generator parameters during search. 
+
+Responsible for incrementing an iteration counter and switching the active generator implementation in the global \doxylink{classmetaheurictics_1_1strategy_1_1Strategy}{Strategy} when certain iteration thresholds are reached. 
+
+Definición en la línea \mbox{\hyperlink{UpdateParameter_8java_source_l00023}{23}} del archivo \mbox{\hyperlink{UpdateParameter_8java_source}{Update\+Parameter.\+java}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{classlocal__search_1_1complement_1_1UpdateParameter_doc-func-members}
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{classlocal__search_1_1complement_1_1UpdateParameter_aa88a78351c0bc5de77f1ad05bee29e11}\index{local\_search.complement.UpdateParameter@{local\_search.complement.UpdateParameter}!updateParameter@{updateParameter}}
+\index{updateParameter@{updateParameter}!local\_search.complement.UpdateParameter@{local\_search.complement.UpdateParameter}}
+\doxysubsubsection{\texorpdfstring{updateParameter()}{updateParameter()}}
+{\footnotesize\ttfamily \label{classlocal__search_1_1complement_1_1UpdateParameter_aa88a78351c0bc5de77f1ad05bee29e11} 
+Integer local\+\_\+search.\+complement.\+Update\+Parameter.\+update\+Parameter (\begin{DoxyParamCaption}\item[{Integer}]{count\+Iterations\+Current}{}\end{DoxyParamCaption}) throws Illegal\+Argument\+Exception, Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception, Illegal\+Access\+Exception, Invocation\+Target\+Exception, No\+Such\+Method\+Exception\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Increment the provided iteration counter and, when thresholds for different generators are reached, replace the \doxylink{classmetaheurictics_1_1strategy_1_1Strategy}{Strategy}\textquotesingle{}s generator with the corresponding implementation. 
+
+Common use\+: called at each iteration to advance the count and rotate the generator when configured counts are reached.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em count\+Iterations\+Current} & current iteration counter \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+incremented iteration counter 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em Reflective\+Operation\+Exception} & when reflective generator creation fails \\
+\hline
+\end{DoxyExceptions}
+
+
+Definición en la línea \mbox{\hyperlink{UpdateParameter_8java_source_l00039}{39}} del archivo \mbox{\hyperlink{UpdateParameter_8java_source}{Update\+Parameter.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\textcolor{comment}{//HashMap<String,\ Object>\ map,\ }}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ countIterationsCurrent\ =\ countIterationsCurrent\ +\ 1;}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ Here\ update\ parameter\ for\ update\ and\ change\ generator.}}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(countIterationsCurrent.equals(GeneticAlgorithm.countRef\ -\/\ 1))\{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ ifFactoryGenerator\ =\ \textcolor{keyword}{new}\ FactoryGenerator();}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ Strategy.getStrategy().generator\ =\ ifFactoryGenerator.createGenerator(GeneratorType.GeneticAlgorithm);}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(countIterationsCurrent.equals(EvolutionStrategies.countRef\ -\/\ 1))\{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ifFactoryGenerator\ =\ \textcolor{keyword}{new}\ FactoryGenerator();}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Strategy.getStrategy().generator\ =\ ifFactoryGenerator.createGenerator(GeneratorType.EvolutionStrategies);}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(countIterationsCurrent.equals(DistributionEstimationAlgorithm.countRef\ -\/\ 1))\{}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ifFactoryGenerator\ =\ \textcolor{keyword}{new}\ FactoryGenerator();}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Strategy.getStrategy().generator\ =\ ifFactoryGenerator.createGenerator(GeneratorType.DistributionEstimationAlgorithm);}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(countIterationsCurrent.equals(ParticleSwarmOptimization.getCountRef()\ -\/\ 1))\{}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ifFactoryGenerator\ =\ \textcolor{keyword}{new}\ FactoryGenerator();}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Strategy.getStrategy().generator\ =\ ifFactoryGenerator.createGenerator(GeneratorType.ParticleSwarmOptimization);}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ countIterationsCurrent;}
+\DoxyCodeLine{00061\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{DistributionEstimationAlgorithm_8java_source_l00048}{metaheuristics.\+generators.\+Distribution\+Estimation\+Algorithm.\+count\+Ref}}, \mbox{\hyperlink{EvolutionStrategies_8java_source_l00041}{metaheuristics.\+generators.\+Evolution\+Strategies.\+count\+Ref}}, \mbox{\hyperlink{GeneticAlgorithm_8java_source_l00055}{metaheuristics.\+generators.\+Genetic\+Algorithm.\+count\+Ref}}, \mbox{\hyperlink{GeneratorType_8java_source_l00008}{metaheuristics.\+generators.\+Generator\+Type.\+Distribution\+Estimation\+Algorithm}}, \mbox{\hyperlink{GeneratorType_8java_source_l00008}{metaheuristics.\+generators.\+Generator\+Type.\+Evolution\+Strategies}}, \mbox{\hyperlink{Strategy_8java_source_l00044}{metaheurictics.\+strategy.\+Strategy.\+generator}}, \mbox{\hyperlink{GeneratorType_8java_source_l00008}{metaheuristics.\+generators.\+Generator\+Type.\+Genetic\+Algorithm}}, \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00344}{metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+get\+Count\+Ref()}}, \mbox{\hyperlink{Strategy_8java_source_l00080}{metaheurictics.\+strategy.\+Strategy.\+get\+Strategy()}}, \mbox{\hyperlink{UpdateParameter_8java_source_l00025}{if\+Factory\+Generator}} y \mbox{\hyperlink{GeneratorType_8java_source_l00008}{metaheuristics.\+generators.\+Generator\+Type.\+Particle\+Swarm\+Optimization}}.
+
+
+
+Referenciado por \mbox{\hyperlink{Strategy_8java_source_l00094}{metaheurictics.\+strategy.\+Strategy.\+execute\+Strategy()}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlocal__search_1_1complement_1_1UpdateParameter_aa88a78351c0bc5de77f1ad05bee29e11_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlocal__search_1_1complement_1_1UpdateParameter_aa88a78351c0bc5de77f1ad05bee29e11_icgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-variable-members}
+\Hypertarget{classlocal__search_1_1complement_1_1UpdateParameter_doc-variable-members}
+\doxysubsection{Documentación de datos miembro}
+\Hypertarget{classlocal__search_1_1complement_1_1UpdateParameter_ad048d2f483314001ca573c5cff6395c2}\index{local\_search.complement.UpdateParameter@{local\_search.complement.UpdateParameter}!ifFactoryGenerator@{ifFactoryGenerator}}
+\index{ifFactoryGenerator@{ifFactoryGenerator}!local\_search.complement.UpdateParameter@{local\_search.complement.UpdateParameter}}
+\doxysubsubsection{\texorpdfstring{ifFactoryGenerator}{ifFactoryGenerator}}
+{\footnotesize\ttfamily \label{classlocal__search_1_1complement_1_1UpdateParameter_ad048d2f483314001ca573c5cff6395c2} 
+\mbox{\hyperlink{interfacefactory__interface_1_1IFFactoryGenerator}{IFFactory\+Generator}} local\+\_\+search.\+complement.\+Update\+Parameter.\+if\+Factory\+Generator\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{UpdateParameter_8java_source_l00025}{25}} del archivo \mbox{\hyperlink{UpdateParameter_8java_source}{Update\+Parameter.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{UpdateParameter_8java_source_l00039}{update\+Parameter()}}.
+
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{UpdateParameter_8java}{Update\+Parameter.\+java}}\end{DoxyCompactItemize}

@@ -1,0 +1,168 @@
+\doxysection{Limit\+Threshold.\+java}
+\hypertarget{LimitThreshold_8java_source}{}\label{LimitThreshold_8java_source}\index{LimitThreshold.java@{LimitThreshold.java}}
+\mbox{\hyperlink{LimitThreshold_8java}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00001}00001\ \textcolor{keyword}{package\ }metaheuristics.generators;}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00003}00003\ \textcolor{keyword}{import}\ java.lang.reflect.InvocationTargetException;}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00004}00004\ \textcolor{keyword}{import}\ java.util.List;}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00005}00005\ \textcolor{keyword}{import}\ java.util.Arrays;}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00008}00008\ \textcolor{keyword}{import}\ local\_search.acceptation\_type.AcceptType;}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00009}00009\ \textcolor{keyword}{import}\ local\_search.acceptation\_type.AcceptableCandidate;}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00010}00010\ \textcolor{keyword}{import}\ local\_search.candidate\_type.CandidateType;}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00011}00011\ \textcolor{keyword}{import}\ local\_search.candidate\_type.CandidateValue;}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00012}00012\ \textcolor{keyword}{import}\ local\_search.complement.StrategyType;}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00013}00013\ \textcolor{keyword}{import}\ metaheurictics.strategy.Strategy;}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00015}00015\ \textcolor{keyword}{import}\ problem.definition.Problem;}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00016}00016\ \textcolor{keyword}{import}\ problem.definition.State;}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00017}00017\ \textcolor{keyword}{import}\ problem.definition.Problem.ProblemType;}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00021}00021\ \textcolor{keyword}{import}\ factory\_interface.IFFactoryAcceptCandidate;}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00022}00022\ \textcolor{keyword}{import}\ factory\_method.FactoryAcceptCandidate;}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00028}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold}{00028}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_aed9ff52ca66ef9bb47e893daa27f819c}{LimitThreshold}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator}{Generator}}\{}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00029}00029\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00030}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_a8de640dccf8fbbb2939fd99300824f83}{00030}}\ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1CandidateValue}{CandidateValue}}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_a8de640dccf8fbbb2939fd99300824f83}{candidatevalue}};}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00031}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_a01b5a352c85678089d9ffb36e9ad194b}{00031}}\ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{enumlocal__search_1_1acceptation__type_1_1AcceptType}{AcceptType}}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_a01b5a352c85678089d9ffb36e9ad194b}{typeAcceptation}};}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00032}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_a6937fd0de12562783fa0c65cec27aaf3}{00032}}\ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{enumlocal__search_1_1complement_1_1StrategyType}{StrategyType}}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_a6937fd0de12562783fa0c65cec27aaf3}{strategy}};}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00033}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_a2622c44d8b1279642668df5933b4db73}{00033}}\ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{enumlocal__search_1_1candidate__type_1_1CandidateType}{CandidateType}}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_a2622c44d8b1279642668df5933b4db73}{typeCandidate}};}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00034}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_a918667f403a9499aa7c9ff5d43077cb8}{00034}}\ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_a918667f403a9499aa7c9ff5d43077cb8}{stateReferenceLT}};}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00035}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_a5ef646af57248b1d00c64c80d0e1734c}{00035}}\ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{interfacefactory__interface_1_1IFFactoryAcceptCandidate}{IFFactoryAcceptCandidate}}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_a5ef646af57248b1d00c64c80d0e1734c}{ifacceptCandidate}};}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00036}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_a04f6a8113008c70ba9db211a1785d01d}{00036}}\ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{GeneratorType}}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_a04f6a8113008c70ba9db211a1785d01d}{typeGenerator}};}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00037}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_abee112e06031970c3d0e204ee85dd3ac}{00037}}\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_abee112e06031970c3d0e204ee85dd3ac}{weight}};}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00038}00038\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00039}00039\ \ \ \ \ \textcolor{comment}{//problemas\ dinamicos}}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00040}00040\ \ \ \ \ \textcolor{comment}{//problemas\ dinamicos:\ use\ instance\ fields\ from\ Generator\ (countGender,\ countBetterGender)}}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00041}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_acd21d216be875ea8dbf479edbc256fb5}{00041}}\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}[]\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_acd21d216be875ea8dbf479edbc256fb5}{listCountBetterGender}}\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[10];}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00042}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_a3f67694dc1f9bb655c1b8b8a7654c3fb}{00042}}\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}[]\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_a3f67694dc1f9bb655c1b8b8a7654c3fb}{listCountGender}}\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[10];}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00043}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_a53828a560c7c9e40a74f1f7b133ac34e}{00043}}\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{float}[]\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_a53828a560c7c9e40a74f1f7b133ac34e}{listTrace}}\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{float}[1200000];}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00044}00044\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00049}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_a6afc908f2de8507b181968175449c0cc}{00049}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{GeneratorType}}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_a6afc908f2de8507b181968175449c0cc}{getTypeGenerator}}()\ \{}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00050}00050\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_a04f6a8113008c70ba9db211a1785d01d}{typeGenerator}};}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00051}00051\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00057}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_ab9f14ff4d97b19cc4219f2560fe36c54}{00057}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_ab9f14ff4d97b19cc4219f2560fe36c54}{setTypeGenerator}}(\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{GeneratorType}}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_a04f6a8113008c70ba9db211a1785d01d}{typeGenerator}})\ \{}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00058}00058\ \ \ \ \ \ \ \ \ this.typeGenerator\ =\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_a04f6a8113008c70ba9db211a1785d01d}{typeGenerator}};}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00059}00059\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00064}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_aed9ff52ca66ef9bb47e893daa27f819c}{00064}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_aed9ff52ca66ef9bb47e893daa27f819c}{LimitThreshold}}()\ \{}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00065}00065\ \ \ \ \ \ \ \ \ super();}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00066}00066\ \ \ \ \ \ \ \ \ this.typeAcceptation\ =\ \mbox{\hyperlink{enumlocal__search_1_1acceptation__type_1_1AcceptType}{AcceptType}}.\mbox{\hyperlink{enumlocal__search_1_1acceptation__type_1_1AcceptType_a654e7f0a28a2166635686e85f6c2410c}{AcceptNotBadU}};}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00067}00067\ \ \ \ \ \ \ \ \ this.strategy\ =\ \mbox{\hyperlink{enumlocal__search_1_1complement_1_1StrategyType}{StrategyType}}.\mbox{\hyperlink{enumlocal__search_1_1complement_1_1StrategyType_a6319a2518e93ad757c398fb858df8c9e}{NORMAL}};}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00069}00069\ }
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00070}00070\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classproblem_1_1definition_1_1Problem}{Problem}}\ problem\ =\ \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy}{Strategy}}.\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_ad2641e12c52292930364de6655333aa8}{getStrategy}}().\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_a4bc6bd95db71e14b1f48c1bfc85f1305}{getProblem}}();}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00072}00072\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(problem.getTypeProblem().equals(\mbox{\hyperlink{enumproblem_1_1definition_1_1Problem_1_1ProblemType}{ProblemType}}.\mbox{\hyperlink{enumproblem_1_1definition_1_1Problem_1_1ProblemType_aa55383c4cb9a71cfeabc7f715ee0cd6e}{Maximizar}}))\ \{}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ this.typeCandidate\ =\ \mbox{\hyperlink{enumlocal__search_1_1candidate__type_1_1CandidateType}{CandidateType}}.\mbox{\hyperlink{enumlocal__search_1_1candidate__type_1_1CandidateType_a10a1f7a483a38c8c3911ff48e588faef}{GreaterCandidate}};}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00074}00074\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00075}00075\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ this.typeCandidate\ =\ \mbox{\hyperlink{enumlocal__search_1_1candidate__type_1_1CandidateType}{CandidateType}}.\mbox{\hyperlink{enumlocal__search_1_1candidate__type_1_1CandidateType_a83d72037a210a5d2146a2690a6a956e9}{SmallerCandidate}};}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00077}00077\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00078}00078\ }
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00079}00079\ \ \ \ \ \ \ \ \ this.candidatevalue\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1CandidateValue}{CandidateValue}}();}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00080}00080\ \ \ \ \ \ \ \ \ this.typeGenerator\ =\ \mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{GeneratorType}}.\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType_a67701bca73b1d45dcfb2fbd70e31b6d5}{LimitThreshold}};}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00081}00081\ \ \ \ \ \ \ \ \ this.weight\ =\ (float)\ 50.0;}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00082}00082\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_a53828a560c7c9e40a74f1f7b133ac34e}{listTrace}}[0]\ =\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_abee112e06031970c3d0e204ee85dd3ac}{weight}};}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00083}00083\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_acd21d216be875ea8dbf479edbc256fb5}{listCountBetterGender}}[0]\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00084}00084\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_a3f67694dc1f9bb655c1b8b8a7654c3fb}{listCountGender}}[0]\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00086}00086\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00087}00087\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00093}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_af2ac27e167ad69093379e30a9dcf1955}{00093}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_af2ac27e167ad69093379e30a9dcf1955}{generate}}(Integer\ operatornumber)\ \textcolor{keywordflow}{throws}\ IllegalArgumentException,\ SecurityException,\ ClassNotFoundException,\ InstantiationException,\ IllegalAccessException,\ InvocationTargetException,\ NoSuchMethodException\ \{}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00094}00094\ \ \ \ \ \ \ \ \ List<State>\ neighborhood\ =\ \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy}{Strategy}}.\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_ad2641e12c52292930364de6655333aa8}{getStrategy}}().\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_a4bc6bd95db71e14b1f48c1bfc85f1305}{getProblem}}().\mbox{\hyperlink{classproblem_1_1definition_1_1Problem_a4cd649edb8862f21af171491cb9b9386}{getOperator}}().\mbox{\hyperlink{classproblem_1_1definition_1_1Operator_a5b6625843e73d938f9235985bf966b34}{generatedNewState}}(\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_a918667f403a9499aa7c9ff5d43077cb8}{stateReferenceLT}},\ operatornumber);}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00095}00095\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ statecandidate\ =\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_a8de640dccf8fbbb2939fd99300824f83}{candidatevalue}}.stateCandidate(\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_a918667f403a9499aa7c9ff5d43077cb8}{stateReferenceLT}},\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_a2622c44d8b1279642668df5933b4db73}{typeCandidate}},\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_a6937fd0de12562783fa0c65cec27aaf3}{strategy}},\ operatornumber,\ neighborhood);}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00096}00096\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ statecandidate;}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00097}00097\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00098}00098\ }
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00099}00099\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00105}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_a74c3d66b7aba895e95facbced3cac70f}{00105}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_a74c3d66b7aba895e95facbced3cac70f}{updateReference}}(\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ stateCandidate,\ Integer\ countIterationsCurrent)\ \textcolor{keywordflow}{throws}\ IllegalArgumentException,\ SecurityException,\ ClassNotFoundException,\ InstantiationException,\ IllegalAccessException,\ InvocationTargetException,\ NoSuchMethodException\ \{}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00106}00106\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_a5ef646af57248b1d00c64c80d0e1734c}{ifacceptCandidate}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classfactory__method_1_1FactoryAcceptCandidate}{FactoryAcceptCandidate}}();}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00107}00107\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1AcceptableCandidate}{AcceptableCandidate}}\ candidate\ =\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_a5ef646af57248b1d00c64c80d0e1734c}{ifacceptCandidate}}.createAcceptCandidate(\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_a01b5a352c85678089d9ffb36e9ad194b}{typeAcceptation}});}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00108}00108\ \ \ \ \ \ \ \ \ Boolean\ accept\ =\ candidate.\mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1AcceptableCandidate_aa9e62e1d2d213c3828d2491b506d0592}{acceptCandidate}}(\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_a918667f403a9499aa7c9ff5d43077cb8}{stateReferenceLT}}\ ,\ stateCandidate);}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00109}00109\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(accept.equals(\textcolor{keyword}{true}))\{}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_a918667f403a9499aa7c9ff5d43077cb8}{stateReferenceLT}}\ =\ stateCandidate;}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00111}00111\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00112}00112\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00113}00113\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00114}00114\ }
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00115}00115\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00120}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_a677121a3422f5f63b35057d1fbdbe22e}{00120}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_a677121a3422f5f63b35057d1fbdbe22e}{getReference}}()\ \{}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00121}00121\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_a918667f403a9499aa7c9ff5d43077cb8}{stateReferenceLT}};}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00122}00122\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00123}00123\ }
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00128}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_ae1a9d64d4a4220f5e99a21b7962b219f}{00128}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_ae1a9d64d4a4220f5e99a21b7962b219f}{setStateRef}}(\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ stateRef)\ \{}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00129}00129\ \ \ \ \ \ \ \ \ this.stateReferenceLT\ =\ stateRef;}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00130}00130\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00131}00131\ }
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00132}00132\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00137}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_a76fd122b2147aa598df1414732f62001}{00137}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_a76fd122b2147aa598df1414732f62001}{setInitialReference}}(\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ stateInitialRef)\ \{}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00138}00138\ \ \ \ \ \ \ \ \ this.stateReferenceLT\ =\ stateInitialRef;}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00139}00139\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00140}00140\ }
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00141}00141\ }
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00142}00142\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00147}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_a716e77810e2bbc6c72c975314029e168}{00147}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{GeneratorType}}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_a716e77810e2bbc6c72c975314029e168}{getType}}()\ \{}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00148}00148\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this.typeGenerator;}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00149}00149\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00150}00150\ }
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00151}00151\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00156}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_aa1bb91cb7aa4956d44487d0acf2066c1}{00156}}\ \ \ \ \ \textcolor{keyword}{public}\ List<State>\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_aa1bb91cb7aa4956d44487d0acf2066c1}{getReferenceList}}()\ \{}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00157}00157\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00158}00158\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00159}00159\ }
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00160}00160\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00165}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_afe588006bfb32514f23e50da61b1e0a7}{00165}}\ \ \ \ \ \textcolor{keyword}{public}\ List<State>\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_afe588006bfb32514f23e50da61b1e0a7}{getSonList}}()\ \{}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00166}00166\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00167}00167\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00168}00168\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00169}00169\ }
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00174}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_a9d8e138e7a9a4e1a00ff0260b677affb}{00174}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_a9d8e138e7a9a4e1a00ff0260b677affb}{setTypeCandidate}}(\mbox{\hyperlink{enumlocal__search_1_1candidate__type_1_1CandidateType}{CandidateType}}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_a2622c44d8b1279642668df5933b4db73}{typeCandidate}})\{}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00175}00175\ \ \ \ \ \ \ \ \ this.typeCandidate\ =\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_a2622c44d8b1279642668df5933b4db73}{typeCandidate}};}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00176}00176\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00177}00177\ }
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00178}00178\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00184}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_ae31f7d76b6ee0c2520a648dd633fb82a}{00184}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{boolean}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_ae31f7d76b6ee0c2520a648dd633fb82a}{awardUpdateREF}}(\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ stateCandidate)\ \{}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00185}00185\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00186}00186\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00187}00187\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00188}00188\ }
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00193}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_a6b7bf930711a043f746384b80cfa867a}{00193}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_a6b7bf930711a043f746384b80cfa867a}{getWeight}}()\ \{}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00194}00194\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00195}00195\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this.weight;}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00196}00196\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00197}00197\ }
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00198}00198\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00203}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_a789fadcd73af2861e3719a1e17029949}{00203}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_a789fadcd73af2861e3719a1e17029949}{setWeight}}(\textcolor{keywordtype}{float}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_abee112e06031970c3d0e204ee85dd3ac}{weight}})\ \{}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00204}00204\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00205}00205\ \ \ \ \ \ \ \ \ this.weight\ =\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_abee112e06031970c3d0e204ee85dd3ac}{weight}};}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00206}00206\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00207}00207\ }
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00208}00208\ }
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00209}00209\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00214}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_a0017345434c5e714ff22fee916c7aac6}{00214}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}[]\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_a0017345434c5e714ff22fee916c7aac6}{getListCountBetterGender}}()\ \{}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00215}00215\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00216}00216\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (this.listCountBetterGender\ ==\ \textcolor{keyword}{null})\ ?\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[0]\ :\ Arrays.copyOf(this.listCountBetterGender,\ this.listCountBetterGender.length);}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00217}00217\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00218}00218\ }
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00219}00219\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00224}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_adf6905af1e88d74c5760aa59e6bd3250}{00224}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}[]\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_adf6905af1e88d74c5760aa59e6bd3250}{getListCountGender}}()\ \{}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00225}00225\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00226}00226\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (this.listCountGender\ ==\ \textcolor{keyword}{null})\ ?\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[0]\ :\ Arrays.copyOf(this.listCountGender,\ this.listCountGender.length);}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00227}00227\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00228}00228\ }
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00229}00229\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00234}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_a9ede5fad8f945fb984d5d966b544b81f}{00234}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}[]\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1LimitThreshold_a9ede5fad8f945fb984d5d966b544b81f}{getTrace}}()\ \{}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00235}00235\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00236}00236\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (this.listTrace\ ==\ \textcolor{keyword}{null})\ ?\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{float}[0]\ :\ Arrays.copyOf(this.listTrace,\ this.listTrace.length);}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00237}00237\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00238}00238\ }
+\DoxyCodeLine{\Hypertarget{LimitThreshold_8java_source_l00239}00239\ \}}
+
+\end{DoxyCode}

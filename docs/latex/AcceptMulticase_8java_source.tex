@@ -1,0 +1,116 @@
+\doxysection{Accept\+Multicase.\+java}
+\hypertarget{AcceptMulticase_8java_source}{}\label{AcceptMulticase_8java_source}\index{AcceptMulticase.java@{AcceptMulticase.java}}
+\mbox{\hyperlink{AcceptMulticase_8java}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00001}00001\ \textcolor{keyword}{package\ }local\_search.acceptation\_type;}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00003}00003\ \textcolor{keyword}{import}\ metaheuristics.generators.*;}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00004}00004\ \textcolor{keyword}{import}\ metaheurictics.strategy.*;}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00006}00006\ \textcolor{keyword}{import}\ java.util.List;}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00007}00007\ \textcolor{keyword}{import}\ java.util.concurrent.ThreadLocalRandom;}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00009}00009\ \textcolor{keyword}{import}\ problem.definition.State;}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00017}\mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1AcceptMulticase}{00017}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1AcceptMulticase}{AcceptMulticase}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1AcceptableCandidate}{AcceptableCandidate}}\ \{}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00024}00024\ \ \ \ \ @SuppressWarnings(\textcolor{stringliteral}{"{}squid:S2245"{}})}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00025}00025\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00034}\mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1AcceptMulticase_a526e452510b7eebe59af4dde0c59b337}{00034}}\ \ \ \ \ \textcolor{keyword}{public}\ Boolean\ \mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1AcceptMulticase_a526e452510b7eebe59af4dde0c59b337}{acceptCandidate}}(\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ stateCurrent,\ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ stateCandidate)\ \{}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00035}00035\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00036}00036\ \ \ \ \ \ \ \ \ Boolean\ accept\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00037}00037\ \ \ \ \ \ \ \ \ List<State>\ list\ =\ \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy}{Strategy}}.\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_ad2641e12c52292930364de6655333aa8}{getStrategy}}().\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_aa572e7d90e24bae70ea47a31fee298f4}{listRefPoblacFinal}};}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00038}00038\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00039}00039\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(list.size()\ ==\ 0)\{}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ list.add(stateCurrent.\mbox{\hyperlink{classproblem_1_1definition_1_1State_a113f6883a1f6bd20eea2da09a0adc5c3}{clone}}());}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00041}00041\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00042}00042\ \ \ \ \ Double\ T\ =\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing}{MultiCaseSimulatedAnnealing}}.\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_af8e07e094004ed50e59c401e8ba0d1bf}{getTinitial}}();}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ pAccept\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00044}00044\ \ \ \ \ \textcolor{comment}{//\ use\ ThreadLocalRandom\ to\ avoid\ creating\ a\ new\ Random\ instance\ on\ each\ call}}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00045}00045\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1Dominance}{Dominance}}\ dominance=\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1Dominance}{Dominance}}();}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00046}00046\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Verificando\ si\ la\ soluci{\ucr}n\ candidata\ domina\ a\ la\ soluci{\ucr}n\ actual}}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00047}00047\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Si\ la\ soluci{\ucr}n\ candidata\ domina\ a\ la\ soluci{\ucr}n\ actual}}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00048}00048\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(dominance.\mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1Dominance_a0dafd58be8365a22956f59417841a2d8}{dominance}}(stateCandidate,\ stateCurrent)\ ==\ \textcolor{keyword}{true})\{}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Se\ asigna\ como\ soluci{\ucr}n\ actual\ la\ soluci{\ucr}n\ candidata\ con\ probabilidad\ 1}}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ pAccept\ =\ 1;\ }
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00051}00051\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00052}00052\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(dominance.\mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1Dominance_a0dafd58be8365a22956f59417841a2d8}{dominance}}(stateCandidate,\ stateCurrent)==\ \textcolor{keyword}{false})\{\ }
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1AcceptMulticase_a054b2c0dc802d3ac4e003b4bd763b48f}{dominanceCounter}}(stateCandidate,\ list)\ >\ 0)\{}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pAccept\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(\mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1AcceptMulticase_a9f30e2b41f460cc8992f1e33136a14cc}{dominanceRank}}(stateCandidate,\ list)\ ==\ 0)\{}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pAccept\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(\mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1AcceptMulticase_a9f30e2b41f460cc8992f1e33136a14cc}{dominanceRank}}(stateCandidate,\ list)\ <\ \mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1AcceptMulticase_a9f30e2b41f460cc8992f1e33136a14cc}{dominanceRank}}(stateCurrent,\ list))\{}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pAccept\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(\mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1AcceptMulticase_a9f30e2b41f460cc8992f1e33136a14cc}{dominanceRank}}(stateCandidate,\ list)\ ==\ \mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1AcceptMulticase_a9f30e2b41f460cc8992f1e33136a14cc}{dominanceRank}}(stateCurrent,\ list))\{}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Calculando\ la\ probabilidad\ de\ aceptaci{\ucr}n}}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ List<Double>\ evaluations\ =\ stateCurrent.\mbox{\hyperlink{classproblem_1_1definition_1_1State_a226ea6fab8e7060cf131edfdb245a6fa}{getEvaluation}}();}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ total\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ evaluations.size()-\/1;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Double\ evalA\ =\ evaluations.get(i);}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Double\ evalB\ =\ stateCandidate.\mbox{\hyperlink{classproblem_1_1definition_1_1State_a226ea6fab8e7060cf131edfdb245a6fa}{getEvaluation}}().get(i);}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (evalA\ !=\ 0\ \&\&\ evalB\ !=\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ total\ +=\ (evalA\ -\/\ evalB)/((evalA\ +\ evalB)/2);}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \ \ }
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pAccept\ =\ Math.exp(-\/(1-\/total)/T);}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1AcceptMulticase_a9f30e2b41f460cc8992f1e33136a14cc}{dominanceRank}}(stateCandidate,\ list)\ >\ \mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1AcceptMulticase_a9f30e2b41f460cc8992f1e33136a14cc}{dominanceRank}}(stateCurrent,\ list)\ \&\&\ \mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1AcceptMulticase_a9f30e2b41f460cc8992f1e33136a14cc}{dominanceRank}}(stateCurrent,\ list)!=\ 0)\{}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ avoid\ integer\ division\ -\/>\ compute\ ranks\ once\ and\ use\ floating\ point\ division}}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ rankCandidate\ =\ \mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1AcceptMulticase_a9f30e2b41f460cc8992f1e33136a14cc}{dominanceRank}}(stateCandidate,\ list);}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ rankCurrent\ =\ \mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1AcceptMulticase_a9f30e2b41f460cc8992f1e33136a14cc}{dominanceRank}}(stateCurrent,\ list);}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ value\ =\ (rankCurrent\ ==\ 0)\ ?\ 0f\ :\ ((float)\ rankCandidate)\ /\ ((\textcolor{keywordtype}{float})\ rankCurrent);}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pAccept\ =\ Math.exp(-\/((\textcolor{keywordtype}{double})value+1.0)/T);}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Calculando\ la\ probabilidad\ de\ aceptaci{\ucr}n}}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ List<Double>\ evaluations\ =\ stateCurrent.\mbox{\hyperlink{classproblem_1_1definition_1_1State_a226ea6fab8e7060cf131edfdb245a6fa}{getEvaluation}}();}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ total\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ evaluations.size()-\/1;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Double\ evalA\ =\ evaluations.get(i);}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Double\ evalB\ =\ stateCandidate.\mbox{\hyperlink{classproblem_1_1definition_1_1State_a226ea6fab8e7060cf131edfdb245a6fa}{getEvaluation}}().get(i);}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (evalA\ !=\ 0\ \&\&\ evalB\ !=\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ total\ +=\ (evalA\ -\/\ evalB)/((evalA\ +\ evalB)/2);}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pAccept\ =\ Math.exp(-\/(1-\/total)/T);}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00095}00095\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00096}00096\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Generar\ un\ n{\ucr}mero\ aleatorio}}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}((ThreadLocalRandom.current().nextFloat())\ <\ pAccept)\{}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Don't\ assign\ to\ the\ parameter\ reference\ (dead\ store).\ The\ caller\ should\ handle\ state\ updates.}}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Verificando\ que\ la\ soluci{\ucr}n\ candidata\ domina\ a\ alguna\ de\ las\ soluciones}}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ accept\ =\ dominance.\mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1Dominance_ad61c0e3cb6cc4036419cb36758cf3814}{listDominance}}(stateCandidate,\ list);}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00101}00101\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00102}00102\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ accept;}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00103}00103\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00104}00104\ }
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00105}00105\ }
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00106}\mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1AcceptMulticase_a054b2c0dc802d3ac4e003b4bd763b48f}{00106}}\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1AcceptMulticase_a054b2c0dc802d3ac4e003b4bd763b48f}{dominanceCounter}}(\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ stateCandidate,\ List<State>\ list)\ \{\ \textcolor{comment}{//chequea\ el\ n{\ucr}mero\ de\ soluciones\ de\ Pareto\ que\ son\ dominados\ por\ la\ nueva\ soluci{\ucr}n}}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00107}00107\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ counter\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00108}00108\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ list.size();\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ solution\ =\ list.get(i);}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1Dominance}{Dominance}}\ dominance\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1Dominance}{Dominance}}();}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(dominance.\mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1Dominance_a0dafd58be8365a22956f59417841a2d8}{dominance}}(stateCandidate,\ solution)\ ==\ \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ counter++;}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00113}00113\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00114}00114\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ counter;}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00115}00115\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00116}00116\ }
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00117}\mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1AcceptMulticase_a9f30e2b41f460cc8992f1e33136a14cc}{00117}}\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1AcceptMulticase_a9f30e2b41f460cc8992f1e33136a14cc}{dominanceRank}}(\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ stateCandidate,\ List<State>\ list)\ \{\ \textcolor{comment}{//calculando\ el\ n{\ucr}mero\ de\ soluciones\ en\ el\ conjunto\ de\ Pareto\ que\ dominan\ a\ la\ soluci{\ucr}n}}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00118}00118\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ rank\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00119}00119\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ list.size();\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00120}00120\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ solution\ =\ list.get(i);}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00121}00121\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1Dominance}{Dominance}}\ dominance\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1Dominance}{Dominance}}();}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00122}00122\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(dominance.\mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1Dominance_a0dafd58be8365a22956f59417841a2d8}{dominance}}(solution,\ stateCandidate)\ ==\ \textcolor{keyword}{true})\{}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00123}00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ rank++;}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00124}00124\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00125}00125\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00126}00126\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00127}00127\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ rank;}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00128}00128\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00129}00129\ }
+\DoxyCodeLine{\Hypertarget{AcceptMulticase_8java_source_l00130}00130\ \}}
+
+\end{DoxyCode}

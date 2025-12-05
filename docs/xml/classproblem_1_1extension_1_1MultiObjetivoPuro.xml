@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="es">
+  <compounddef id="classproblem_1_1extension_1_1MultiObjetivoPuro" kind="class" language="Java" prot="public">
+    <compoundname>problem::extension::MultiObjetivoPuro</compoundname>
+    <basecompoundref refid="classproblem_1_1extension_1_1SolutionMethod" prot="public" virt="non-virtual">problem.extension.SolutionMethod</basecompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classproblem_1_1extension_1_1MultiObjetivoPuro_1aaac35db96f3f750b6f5349243c39d122" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void problem.extension.MultiObjetivoPuro.evaluationState</definition>
+        <argsstring>(State state)</argsstring>
+        <name>evaluationState</name>
+        <qualifiedname>problem.extension.MultiObjetivoPuro.evaluationState</qualifiedname>
+        <reimplements refid="classproblem_1_1extension_1_1SolutionMethod_1ae31d6d6000b9043bdee5e2d79fd2a628">evaluationState</reimplements>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>evaluationState </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Rellena la lista de evaluaciones del estado con los valores correspondientes a cada función objetivo, adaptando según si la función o el problema es de maximizar/minimizar.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>estado a evaluar </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/problem/extension/MultiObjetivoPuro.java" line="29" column="13" bodyfile="practica5/src/main/java/problem/extension/MultiObjetivoPuro.java" bodystart="29" bodyend="58"/>
+        <references refid="classproblem_1_1definition_1_1ObjetiveFunction_1ac67bc734733fdfc29d3b282255e2de98">problem.definition.ObjetiveFunction.Evaluation</references>
+        <references refid="classproblem_1_1definition_1_1Problem_1a1427b83a226c7a174deee23925af14e4" compoundref="Problem_8java" startline="57" endline="59">problem.definition.Problem.getFunction</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1a4bc6bd95db71e14b1f48c1bfc85f1305" compoundref="Strategy_8java" startline="405" endline="407">metaheurictics.strategy.Strategy.getProblem</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1ad2641e12c52292930364de6655333aa8" compoundref="Strategy_8java" startline="80" endline="85">metaheurictics.strategy.Strategy.getStrategy</references>
+        <references refid="classproblem_1_1definition_1_1ObjetiveFunction_1a546c39d702df1ab99f2babbf994adbe0" compoundref="ObjetiveFunction_8java" startline="40" endline="42">problem.definition.ObjetiveFunction.getTypeProblem</references>
+        <references refid="classproblem_1_1definition_1_1Problem_1ad6f38df755179e22ffe487ba4a5c8021" compoundref="Problem_8java" startline="97" endline="99">problem.definition.Problem.getTypeProblem</references>
+        <references refid="enumproblem_1_1definition_1_1Problem_1_1ProblemType_1aa55383c4cb9a71cfeabc7f715ee0cd6e" compoundref="Problem_8java" startline="29">problem.definition.Problem.ProblemType.Maximizar</references>
+        <references refid="classproblem_1_1definition_1_1State_1abeaa628078af4804e5e9d93b3de593b5" compoundref="State_8java" startline="113" endline="115">problem.definition.State.setEvaluation</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="classproblem_1_1extension_1_1MultiObjetivoPuro" kindref="compound">MultiObjetivoPuro</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Método de evaluación multiobjetivo puro: calcula el vector de evaluaciones sin agregación (mantiene cada función objetivo por separado). </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>problem.extension.MultiObjetivoPuro</label>
+        <link refid="classproblem_1_1extension_1_1MultiObjetivoPuro"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>problem.extension.SolutionMethod</label>
+        <link refid="classproblem_1_1extension_1_1SolutionMethod"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>problem.extension.MultiObjetivoPuro</label>
+        <link refid="classproblem_1_1extension_1_1MultiObjetivoPuro"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>problem.extension.SolutionMethod</label>
+        <link refid="classproblem_1_1extension_1_1SolutionMethod"/>
+      </node>
+    </collaborationgraph>
+    <location file="practica5/src/main/java/problem/extension/MultiObjetivoPuro.java" line="17" column="7" bodyfile="practica5/src/main/java/problem/extension/MultiObjetivoPuro.java" bodystart="17" bodyend="60"/>
+    <listofallmembers>
+      <member refid="classproblem_1_1extension_1_1MultiObjetivoPuro_1aaac35db96f3f750b6f5349243c39d122" prot="public" virt="non-virtual"><scope>problem::extension::MultiObjetivoPuro</scope><name>evaluationState</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

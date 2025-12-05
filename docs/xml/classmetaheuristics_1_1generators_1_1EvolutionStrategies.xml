@@ -1,0 +1,935 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="es">
+  <compounddef id="classmetaheuristics_1_1generators_1_1EvolutionStrategies" kind="class" language="Java" prot="public">
+    <compoundname>metaheuristics::generators::EvolutionStrategies</compoundname>
+    <basecompoundref refid="classmetaheuristics_1_1generators_1_1Generator" prot="public" virt="non-virtual">metaheuristics.generators.Generator</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a89500c96cacc133b2c953f6966575db8" prot="private" static="no" mutable="no">
+        <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+        <definition>State metaheuristics.generators.EvolutionStrategies.stateReferenceES</definition>
+        <argsstring></argsstring>
+        <name>stateReferenceES</name>
+        <qualifiedname>metaheuristics.generators.EvolutionStrategies.stateReferenceES</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" line="31" column="15" bodyfile="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" bodystart="31" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a9afcff28506375af6f405467990e7b36" compoundref="EvolutionStrategies_8java" startline="101" endline="119">metaheuristics.generators.EvolutionStrategies.getReference</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a54ec1d6708dac0906642b4f8bbd98217" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+        <definition>List&lt;State&gt; metaheuristics.generators.EvolutionStrategies.listStateReference</definition>
+        <argsstring></argsstring>
+        <name>listStateReference</name>
+        <qualifiedname>metaheuristics.generators.EvolutionStrategies.listStateReference</qualifiedname>
+        <initializer>= new ArrayList&lt;<ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref>&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" line="32" column="14" bodyfile="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" bodystart="32" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a5a222a42cc69a782b603004f2ca501d0" compoundref="EvolutionStrategies_8java" startline="76" endline="94">metaheuristics.generators.EvolutionStrategies.generate</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a3c8abb363dd3c13968dca892016f7567" compoundref="EvolutionStrategies_8java" startline="164" endline="183">metaheuristics.generators.EvolutionStrategies.getListStateRef</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1aeee6044d098aea09fe4ae0a5fab61365" compoundref="EvolutionStrategies_8java" startline="189" endline="191">metaheuristics.generators.EvolutionStrategies.getListStateReference</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a9afcff28506375af6f405467990e7b36" compoundref="EvolutionStrategies_8java" startline="101" endline="119">metaheuristics.generators.EvolutionStrategies.getReference</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1abd5b4e2f2108b98c34283ea0683f50be" compoundref="EvolutionStrategies_8java" startline="222" endline="229">metaheuristics.generators.EvolutionStrategies.getReferenceList</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a0790c98945a483cc4e8a6bbba551f8ed" compoundref="EvolutionStrategies_8java" startline="197" endline="199">metaheuristics.generators.EvolutionStrategies.setListStateReference</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1ae37dff5bcc1931755d2d78ad3c047c99" compoundref="EvolutionStrategies_8java" startline="153" endline="158">metaheuristics.generators.EvolutionStrategies.updateReference</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a3931b67b6de66df93e91120a038f4f3c" prot="private" static="no" mutable="no">
+        <type><ref refid="interfacefactory__interface_1_1IFFactoryFatherSelection" kindref="compound">IFFactoryFatherSelection</ref></type>
+        <definition>IFFactoryFatherSelection metaheuristics.generators.EvolutionStrategies.iffatherselection</definition>
+        <argsstring></argsstring>
+        <name>iffatherselection</name>
+        <qualifiedname>metaheuristics.generators.EvolutionStrategies.iffatherselection</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" line="33" column="34" bodyfile="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" bodystart="33" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a5a222a42cc69a782b603004f2ca501d0" compoundref="EvolutionStrategies_8java" startline="76" endline="94">metaheuristics.generators.EvolutionStrategies.generate</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a3a6289aa814302b2cb6f7618bc799167" prot="private" static="no" mutable="no">
+        <type><ref refid="interfacefactory__interface_1_1IFFactoryMutation" kindref="compound">IFFactoryMutation</ref></type>
+        <definition>IFFactoryMutation metaheuristics.generators.EvolutionStrategies.iffactorymutation</definition>
+        <argsstring></argsstring>
+        <name>iffactorymutation</name>
+        <qualifiedname>metaheuristics.generators.EvolutionStrategies.iffactorymutation</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" line="34" column="27" bodyfile="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" bodystart="34" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a5a222a42cc69a782b603004f2ca501d0" compoundref="EvolutionStrategies_8java" startline="76" endline="94">metaheuristics.generators.EvolutionStrategies.generate</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a9444478e0653dfb8e9ff61948a99e050" prot="private" static="no" mutable="no">
+        <type><ref refid="interfacefactory__interface_1_1IFFactoryReplace" kindref="compound">IFFactoryReplace</ref></type>
+        <definition>IFFactoryReplace metaheuristics.generators.EvolutionStrategies.iffreplace</definition>
+        <argsstring></argsstring>
+        <name>iffreplace</name>
+        <qualifiedname>metaheuristics.generators.EvolutionStrategies.iffreplace</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" line="35" column="26" bodyfile="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" bodystart="35" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1ae37dff5bcc1931755d2d78ad3c047c99" compoundref="EvolutionStrategies_8java" startline="153" endline="158">metaheuristics.generators.EvolutionStrategies.updateReference</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a4fbf87f6e925665a335353a0d25a407a" prot="private" static="no" mutable="no">
+        <type><ref refid="enummetaheuristics_1_1generators_1_1GeneratorType" kindref="compound">GeneratorType</ref></type>
+        <definition>GeneratorType metaheuristics.generators.EvolutionStrategies.generatorType</definition>
+        <argsstring></argsstring>
+        <name>generatorType</name>
+        <qualifiedname>metaheuristics.generators.EvolutionStrategies.generatorType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" line="36" column="23" bodyfile="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" bodystart="36" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1ab62ce67fa9bf50e84b3b8a90dcb8f1b0" compoundref="EvolutionStrategies_8java" startline="134" endline="136">metaheuristics.generators.EvolutionStrategies.getType</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1ae474b442e50ca9504e0506bf17f4a307" compoundref="EvolutionStrategies_8java" startline="205" endline="207">metaheuristics.generators.EvolutionStrategies.getTypeGenerator</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a50fc38308b22f39762b419a607f7d710" compoundref="EvolutionStrategies_8java" startline="213" endline="215">metaheuristics.generators.EvolutionStrategies.setTypeGenerator</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a361ab2afb0634be8c18158ce2d510b4d" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float metaheuristics.generators.EvolutionStrategies.weight</definition>
+        <argsstring></argsstring>
+        <name>weight</name>
+        <qualifiedname>metaheuristics.generators.EvolutionStrategies.weight</qualifiedname>
+        <initializer>= 50</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" line="43" column="15" bodyfile="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" bodystart="43" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a5c0b9885ec725b8bf69a994401bd7cac" compoundref="EvolutionStrategies_8java" startline="267" endline="270">metaheuristics.generators.EvolutionStrategies.setWeight</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a6b7b4d829e0365cf2c1f498bcf1007bf" prot="private" static="no" mutable="no">
+        <type>int[]</type>
+        <definition>int [] metaheuristics.generators.EvolutionStrategies.listCountBetterGender</definition>
+        <argsstring></argsstring>
+        <name>listCountBetterGender</name>
+        <qualifiedname>metaheuristics.generators.EvolutionStrategies.listCountBetterGender</qualifiedname>
+        <initializer>= new int[10]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" line="47" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" bodystart="47" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a8f310ee9c548a0520bea2eb8c04e35aa" compoundref="EvolutionStrategies_8java" startline="54" endline="62">metaheuristics.generators.EvolutionStrategies.EvolutionStrategies</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a054703def8fe6a5c059b92c9b1db1a05" prot="private" static="no" mutable="no">
+        <type>int[]</type>
+        <definition>int [] metaheuristics.generators.EvolutionStrategies.listCountGender</definition>
+        <argsstring></argsstring>
+        <name>listCountGender</name>
+        <qualifiedname>metaheuristics.generators.EvolutionStrategies.listCountGender</qualifiedname>
+        <initializer>= new int[10]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" line="48" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" bodystart="48" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a8f310ee9c548a0520bea2eb8c04e35aa" compoundref="EvolutionStrategies_8java" startline="54" endline="62">metaheuristics.generators.EvolutionStrategies.EvolutionStrategies</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a1bd7555ae1c704212ee1f6048b7739b0" prot="private" static="no" mutable="no">
+        <type>float[]</type>
+        <definition>float [] metaheuristics.generators.EvolutionStrategies.listTrace</definition>
+        <argsstring></argsstring>
+        <name>listTrace</name>
+        <qualifiedname>metaheuristics.generators.EvolutionStrategies.listTrace</qualifiedname>
+        <initializer>= new float[1200000]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" line="49" column="15" bodyfile="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" bodystart="49" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a8f310ee9c548a0520bea2eb8c04e35aa" compoundref="EvolutionStrategies_8java" startline="54" endline="62">metaheuristics.generators.EvolutionStrategies.EvolutionStrategies</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1ae3c3aba87d9267290d90f81012cd2987" prot="public" static="yes" mutable="no">
+        <type>final double</type>
+        <definition>final double metaheuristics.generators.EvolutionStrategies.PM</definition>
+        <argsstring></argsstring>
+        <name>PM</name>
+        <qualifiedname>metaheuristics.generators.EvolutionStrategies.PM</qualifiedname>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" line="37" column="28" bodyfile="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" bodystart="37" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a5a222a42cc69a782b603004f2ca501d0" compoundref="EvolutionStrategies_8java" startline="76" endline="94">metaheuristics.generators.EvolutionStrategies.generate</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a32f025cef82d1636e0d4ce4dd883e921" prot="public" static="yes" mutable="no">
+        <type>final <ref refid="enumevolutionary__algorithms_1_1complement_1_1MutationType" kindref="compound">MutationType</ref></type>
+        <definition>final MutationType metaheuristics.generators.EvolutionStrategies.mutationType</definition>
+        <argsstring></argsstring>
+        <name>mutationType</name>
+        <qualifiedname>metaheuristics.generators.EvolutionStrategies.mutationType</qualifiedname>
+        <initializer>= <ref refid="enumevolutionary__algorithms_1_1complement_1_1MutationType_1a9eecb09b30290f19a1cab8a1264c1625" kindref="member">MutationType.OnePointMutation</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" line="38" column="34" bodyfile="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" bodystart="38" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a5a222a42cc69a782b603004f2ca501d0" compoundref="EvolutionStrategies_8java" startline="76" endline="94">metaheuristics.generators.EvolutionStrategies.generate</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a442b186378d1999d4fda1254d53f34a3" prot="public" static="yes" mutable="no">
+        <type>final <ref refid="enumevolutionary__algorithms_1_1complement_1_1ReplaceType" kindref="compound">ReplaceType</ref></type>
+        <definition>final ReplaceType metaheuristics.generators.EvolutionStrategies.replaceType</definition>
+        <argsstring></argsstring>
+        <name>replaceType</name>
+        <qualifiedname>metaheuristics.generators.EvolutionStrategies.replaceType</qualifiedname>
+        <initializer>= <ref refid="enumevolutionary__algorithms_1_1complement_1_1ReplaceType_1add8d19fe300f2768faa2a51f56ccf7ed" kindref="member">ReplaceType.GenerationalReplace</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" line="39" column="33" bodyfile="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" bodystart="39" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1ae37dff5bcc1931755d2d78ad3c047c99" compoundref="EvolutionStrategies_8java" startline="153" endline="158">metaheuristics.generators.EvolutionStrategies.updateReference</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a576682a631046ff6781624a3ec2d9a87" prot="public" static="yes" mutable="no">
+        <type>final <ref refid="enumevolutionary__algorithms_1_1complement_1_1SelectionType" kindref="compound">SelectionType</ref></type>
+        <definition>final SelectionType metaheuristics.generators.EvolutionStrategies.selectionType</definition>
+        <argsstring></argsstring>
+        <name>selectionType</name>
+        <qualifiedname>metaheuristics.generators.EvolutionStrategies.selectionType</qualifiedname>
+        <initializer>= <ref refid="enumevolutionary__algorithms_1_1complement_1_1SelectionType_1a122c944398d78db6354b4320bc68b256" kindref="member">SelectionType.TruncationSelection</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" line="40" column="35" bodyfile="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" bodystart="40" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a5a222a42cc69a782b603004f2ca501d0" compoundref="EvolutionStrategies_8java" startline="76" endline="94">metaheuristics.generators.EvolutionStrategies.generate</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1ab1e6d7d7bb0c21bd90f5ddd5532dcb3b" prot="public" static="yes" mutable="no">
+        <type>final int</type>
+        <definition>final int metaheuristics.generators.EvolutionStrategies.countRef</definition>
+        <argsstring></argsstring>
+        <name>countRef</name>
+        <qualifiedname>metaheuristics.generators.EvolutionStrategies.countRef</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" line="41" column="25" bodyfile="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" bodystart="41" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiGenerator_1a21767d34c374a65dd29196459273ff34" compoundref="MultiGenerator_8java" startline="129" endline="147">metaheuristics.generators.MultiGenerator.createInstanceGeneratorsBPP</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1RandomSearch_1ad7023836b94dd23bffd78ab7b9915551" compoundref="RandomSearch_8java" startline="66" endline="72">metaheuristics.generators.RandomSearch.generate</referencedby>
+        <referencedby refid="classmetaheurictics_1_1strategy_1_1Strategy_1ae5fae0f94a80e56677aa3f7ac77b6d44" compoundref="Strategy_8java" startline="307" endline="325">metaheurictics.strategy.Strategy.update</referencedby>
+        <referencedby refid="classlocal__search_1_1complement_1_1UpdateParameter_1aa88a78351c0bc5de77f1ad05bee29e11" compoundref="UpdateParameter_8java" startline="39" endline="61">local_search.complement.UpdateParameter.updateParameter</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1ab0816f8ead85a1543990acb1e75820cc" prot="public" static="yes" mutable="no">
+        <type>final int</type>
+        <definition>final int metaheuristics.generators.EvolutionStrategies.truncation</definition>
+        <argsstring></argsstring>
+        <name>truncation</name>
+        <qualifiedname>metaheuristics.generators.EvolutionStrategies.truncation</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" line="42" column="25" bodyfile="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" bodystart="42" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a5a222a42cc69a782b603004f2ca501d0" compoundref="EvolutionStrategies_8java" startline="76" endline="94">metaheuristics.generators.EvolutionStrategies.generate</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a8f310ee9c548a0520bea2eb8c04e35aa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>metaheuristics.generators.EvolutionStrategies.EvolutionStrategies</definition>
+        <argsstring>()</argsstring>
+        <name>EvolutionStrategies</name>
+        <qualifiedname>metaheuristics.generators.EvolutionStrategies.EvolutionStrategies</qualifiedname>
+        <briefdescription>
+<para><ref refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies" kindref="compound">EvolutionStrategies</ref> - method to create an instance of <ref refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies" kindref="compound">EvolutionStrategies</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" line="54" column="8" bodyfile="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" bodystart="54" bodyend="62"/>
+        <references refid="enummetaheuristics_1_1generators_1_1GeneratorType_1afc90843afb31f8fd742441578f70e188" compoundref="GeneratorType_8java" startline="8">metaheuristics.generators.GeneratorType.EvolutionStrategies</references>
+        <references refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a3c8abb363dd3c13968dca892016f7567" compoundref="EvolutionStrategies_8java" startline="164" endline="183">metaheuristics.generators.EvolutionStrategies.getListStateRef</references>
+        <references refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a6b7b4d829e0365cf2c1f498bcf1007bf" compoundref="EvolutionStrategies_8java" startline="47">metaheuristics.generators.EvolutionStrategies.listCountBetterGender</references>
+        <references refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a054703def8fe6a5c059b92c9b1db1a05" compoundref="EvolutionStrategies_8java" startline="48">metaheuristics.generators.EvolutionStrategies.listCountGender</references>
+        <references refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a1bd7555ae1c704212ee1f6048b7739b0" compoundref="EvolutionStrategies_8java" startline="49">metaheuristics.generators.EvolutionStrategies.listTrace</references>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a3c8abb363dd3c13968dca892016f7567" compoundref="EvolutionStrategies_8java" startline="164" endline="183">metaheuristics.generators.EvolutionStrategies.getListStateRef</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a5a222a42cc69a782b603004f2ca501d0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+        <definition>State metaheuristics.generators.EvolutionStrategies.generate</definition>
+        <argsstring>(Integer operatornumber)</argsstring>
+        <name>generate</name>
+        <qualifiedname>metaheuristics.generators.EvolutionStrategies.generate</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1a06f6f7622b9ce32590eadbdf6bf962b5">generate</reimplements>
+        <param>
+          <type>Integer</type>
+          <declname>operatornumber</declname>
+        </param>
+        <exceptions> throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException,	NoSuchMethodException </exceptions>
+        <briefdescription>
+<para>Uses ThreadLocalRandom for algorithmic (non-cryptographic) randomness. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This RNG is used to decide whether a mutation occurs in the evolutionary algorithm and is not used for security-sensitive purposes. Suppress Sonar security hotspot S2245 for this usage. generate - method to generate a new state. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>operatornumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns the generated state. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" line="76" column="14" bodyfile="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" bodystart="76" bodyend="94"/>
+        <references refid="classproblem_1_1definition_1_1State_1aaf14fa8466c945ff5e134028c6c259f8" compoundref="State_8java" startline="161" endline="163">problem.definition.State.getCopy</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1a4bc6bd95db71e14b1f48c1bfc85f1305" compoundref="Strategy_8java" startline="405" endline="407">metaheurictics.strategy.Strategy.getProblem</references>
+        <references refid="classproblem_1_1definition_1_1Problem_1ad685c1f6c1edba96aa5082d1fdf8bb35" compoundref="Problem_8java" startline="79" endline="81">problem.definition.Problem.getState</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1ad2641e12c52292930364de6655333aa8" compoundref="Strategy_8java" startline="80" endline="85">metaheurictics.strategy.Strategy.getStrategy</references>
+        <references refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a3a6289aa814302b2cb6f7618bc799167" compoundref="EvolutionStrategies_8java" startline="34">metaheuristics.generators.EvolutionStrategies.iffactorymutation</references>
+        <references refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a3931b67b6de66df93e91120a038f4f3c" compoundref="EvolutionStrategies_8java" startline="33">metaheuristics.generators.EvolutionStrategies.iffatherselection</references>
+        <references refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a54ec1d6708dac0906642b4f8bbd98217" compoundref="EvolutionStrategies_8java" startline="32">metaheuristics.generators.EvolutionStrategies.listStateReference</references>
+        <references refid="classevolutionary__algorithms_1_1complement_1_1Mutation_1a027da26e5a49d8ca908b03acffebb226">evolutionary_algorithms.complement.Mutation.mutation</references>
+        <references refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a32f025cef82d1636e0d4ce4dd883e921" compoundref="EvolutionStrategies_8java" startline="38">metaheuristics.generators.EvolutionStrategies.mutationType</references>
+        <references refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1ae3c3aba87d9267290d90f81012cd2987" compoundref="EvolutionStrategies_8java" startline="37">metaheuristics.generators.EvolutionStrategies.PM</references>
+        <references refid="classevolutionary__algorithms_1_1complement_1_1FatherSelection_1aa6e6bd01ac639141a67815fb65f7c831">evolutionary_algorithms.complement.FatherSelection.selection</references>
+        <references refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a576682a631046ff6781624a3ec2d9a87" compoundref="EvolutionStrategies_8java" startline="40">metaheuristics.generators.EvolutionStrategies.selectionType</references>
+        <references refid="classproblem_1_1definition_1_1State_1ab15765262a6e1cc7661c51cbcf0e7785" compoundref="State_8java" startline="77" endline="79">problem.definition.State.setCode</references>
+        <references refid="classproblem_1_1definition_1_1State_1abeaa628078af4804e5e9d93b3de593b5" compoundref="State_8java" startline="113" endline="115">problem.definition.State.setEvaluation</references>
+        <references refid="classproblem_1_1definition_1_1State_1ab802f63ab88415158f9c6cf468b6c8b3" compoundref="State_8java" startline="130" endline="132">problem.definition.State.setNumber</references>
+        <references refid="classproblem_1_1definition_1_1State_1afccaeac3af66cb772e2b3e70758b8fe6" compoundref="State_8java" startline="94" endline="96">problem.definition.State.setTypeGenerator</references>
+        <references refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1ab0816f8ead85a1543990acb1e75820cc" compoundref="EvolutionStrategies_8java" startline="42">metaheuristics.generators.EvolutionStrategies.truncation</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a9afcff28506375af6f405467990e7b36" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+        <definition>State metaheuristics.generators.EvolutionStrategies.getReference</definition>
+        <argsstring>()</argsstring>
+        <name>getReference</name>
+        <qualifiedname>metaheuristics.generators.EvolutionStrategies.getReference</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1aa56dd45a45776f6023b9f74179cc6384">getReference</reimplements>
+        <briefdescription>
+<para>getReference - method to get the current reference state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>returns the current reference state. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" line="101" column="14" bodyfile="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" bodystart="101" bodyend="119"/>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1a4bc6bd95db71e14b1f48c1bfc85f1305" compoundref="Strategy_8java" startline="405" endline="407">metaheurictics.strategy.Strategy.getProblem</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1ad2641e12c52292930364de6655333aa8" compoundref="Strategy_8java" startline="80" endline="85">metaheurictics.strategy.Strategy.getStrategy</references>
+        <references refid="classproblem_1_1definition_1_1Problem_1ad6f38df755179e22ffe487ba4a5c8021" compoundref="Problem_8java" startline="97" endline="99">problem.definition.Problem.getTypeProblem</references>
+        <references refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a54ec1d6708dac0906642b4f8bbd98217" compoundref="EvolutionStrategies_8java" startline="32">metaheuristics.generators.EvolutionStrategies.listStateReference</references>
+        <references refid="enumproblem_1_1definition_1_1Problem_1_1ProblemType_1aa55383c4cb9a71cfeabc7f715ee0cd6e" compoundref="Problem_8java" startline="29">problem.definition.Problem.ProblemType.Maximizar</references>
+        <references refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a89500c96cacc133b2c953f6966575db8" compoundref="EvolutionStrategies_8java" startline="31">metaheuristics.generators.EvolutionStrategies.stateReferenceES</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a9ecbbd5184eaeb033bdea2fa056ed5fc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheuristics.generators.EvolutionStrategies.setStateRef</definition>
+        <argsstring>(State stateRef)</argsstring>
+        <name>setStateRef</name>
+        <qualifiedname>metaheuristics.generators.EvolutionStrategies.setStateRef</qualifiedname>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>stateRef</declname>
+        </param>
+        <briefdescription>
+<para>setStateRef - method to set the current reference state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stateRef</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" line="125" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" bodystart="125" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1ab62ce67fa9bf50e84b3b8a90dcb8f1b0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="enummetaheuristics_1_1generators_1_1GeneratorType" kindref="compound">GeneratorType</ref></type>
+        <definition>GeneratorType metaheuristics.generators.EvolutionStrategies.getType</definition>
+        <argsstring>()</argsstring>
+        <name>getType</name>
+        <qualifiedname>metaheuristics.generators.EvolutionStrategies.getType</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1a5a123306b43c42d28cd1d6e17f8067a5">getType</reimplements>
+        <briefdescription>
+<para>getType - method to get the generator type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>returns the generator type. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" line="134" column="22" bodyfile="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" bodystart="134" bodyend="136"/>
+        <references refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a4fbf87f6e925665a335353a0d25a407a" compoundref="EvolutionStrategies_8java" startline="36">metaheuristics.generators.EvolutionStrategies.generatorType</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1affd4957ba20b037dc14101d2b36efb00" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheuristics.generators.EvolutionStrategies.setInitialReference</definition>
+        <argsstring>(State stateInitialRef)</argsstring>
+        <name>setInitialReference</name>
+        <qualifiedname>metaheuristics.generators.EvolutionStrategies.setInitialReference</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1aa9f7c4c983705f843b8fcc81e4aa8ba4">setInitialReference</reimplements>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>stateInitialRef</declname>
+        </param>
+        <briefdescription>
+<para>setInitialReference - method to set the initial reference state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stateInitialRef</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" line="143" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" bodystart="143" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1ae37dff5bcc1931755d2d78ad3c047c99" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheuristics.generators.EvolutionStrategies.updateReference</definition>
+        <argsstring>(State stateCandidate, Integer countIterationsCurrent)</argsstring>
+        <name>updateReference</name>
+        <qualifiedname>metaheuristics.generators.EvolutionStrategies.updateReference</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1aa1c5878953f2111221b21cb9b1e6cc9f">updateReference</reimplements>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>stateCandidate</declname>
+        </param>
+        <param>
+          <type>Integer</type>
+          <declname>countIterationsCurrent</declname>
+        </param>
+        <exceptions> throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException </exceptions>
+        <briefdescription>
+<para>updateReference - method to update the reference state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stateCandidate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>countIterationsCurrent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" line="153" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" bodystart="153" bodyend="158"/>
+        <references refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a9444478e0653dfb8e9ff61948a99e050" compoundref="EvolutionStrategies_8java" startline="35">metaheuristics.generators.EvolutionStrategies.iffreplace</references>
+        <references refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a54ec1d6708dac0906642b4f8bbd98217" compoundref="EvolutionStrategies_8java" startline="32">metaheuristics.generators.EvolutionStrategies.listStateReference</references>
+        <references refid="classevolutionary__algorithms_1_1complement_1_1Replace_1aac9402083a696d23ca0d97540d3951e5">evolutionary_algorithms.complement.Replace.replace</references>
+        <references refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a442b186378d1999d4fda1254d53f34a3" compoundref="EvolutionStrategies_8java" startline="39">metaheuristics.generators.EvolutionStrategies.replaceType</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a3c8abb363dd3c13968dca892016f7567" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+        <definition>List&lt; State &gt; metaheuristics.generators.EvolutionStrategies.getListStateRef</definition>
+        <argsstring>()</argsstring>
+        <name>getListStateRef</name>
+        <qualifiedname>metaheuristics.generators.EvolutionStrategies.getListStateRef</qualifiedname>
+        <briefdescription>
+<para>getListStateRef - method to get the list of reference states. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>returns the list of reference states. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" line="164" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" bodystart="164" bodyend="183"/>
+        <references refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a8f310ee9c548a0520bea2eb8c04e35aa" compoundref="EvolutionStrategies_8java" startline="54" endline="62">metaheuristics.generators.EvolutionStrategies.EvolutionStrategies</references>
+        <references refid="enummetaheuristics_1_1generators_1_1GeneratorType_1afc90843afb31f8fd742441578f70e188" compoundref="GeneratorType_8java" startline="8">metaheuristics.generators.GeneratorType.EvolutionStrategies</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1ac70469856a2b6424f29952c0e77eebf8" compoundref="Strategy_8java" startline="421" endline="433">metaheurictics.strategy.Strategy.getListKey</references>
+        <references refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1aeee6044d098aea09fe4ae0a5fab61365" compoundref="EvolutionStrategies_8java" startline="189" endline="191">metaheuristics.generators.EvolutionStrategies.getListStateReference</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1ad2641e12c52292930364de6655333aa8" compoundref="Strategy_8java" startline="80" endline="85">metaheurictics.strategy.Strategy.getStrategy</references>
+        <references refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a54ec1d6708dac0906642b4f8bbd98217" compoundref="EvolutionStrategies_8java" startline="32">metaheuristics.generators.EvolutionStrategies.listStateReference</references>
+        <references refid="classmetaheuristics_1_1generators_1_1RandomSearch_1ab7be9a87a0cb3de1e17f14e79a0b32ce" compoundref="RandomSearch_8java" startline="36">metaheuristics.generators.RandomSearch.listStateReference</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1a72b0b983ab5990ef999037f9c331515a" compoundref="Strategy_8java" startline="38">metaheurictics.strategy.Strategy.mapGenerators</references>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a8f310ee9c548a0520bea2eb8c04e35aa" compoundref="EvolutionStrategies_8java" startline="54" endline="62">metaheuristics.generators.EvolutionStrategies.EvolutionStrategies</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1aeee6044d098aea09fe4ae0a5fab61365" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+        <definition>List&lt; State &gt; metaheuristics.generators.EvolutionStrategies.getListStateReference</definition>
+        <argsstring>()</argsstring>
+        <name>getListStateReference</name>
+        <qualifiedname>metaheuristics.generators.EvolutionStrategies.getListStateReference</qualifiedname>
+        <briefdescription>
+<para>getListStateReference - method to get the list of reference states. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>returns the list of reference states. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" line="189" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" bodystart="189" bodyend="191"/>
+        <references refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a54ec1d6708dac0906642b4f8bbd98217" compoundref="EvolutionStrategies_8java" startline="32">metaheuristics.generators.EvolutionStrategies.listStateReference</references>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a3c8abb363dd3c13968dca892016f7567" compoundref="EvolutionStrategies_8java" startline="164" endline="183">metaheuristics.generators.EvolutionStrategies.getListStateRef</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a0790c98945a483cc4e8a6bbba551f8ed" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheuristics.generators.EvolutionStrategies.setListStateReference</definition>
+        <argsstring>(List&lt; State &gt; listStateReference)</argsstring>
+        <name>setListStateReference</name>
+        <qualifiedname>metaheuristics.generators.EvolutionStrategies.setListStateReference</qualifiedname>
+        <param>
+          <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+          <declname>listStateReference</declname>
+        </param>
+        <briefdescription>
+<para>setListStateReference - method to set the list of reference states. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>listStateReference</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" line="197" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" bodystart="197" bodyend="199"/>
+        <references refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a54ec1d6708dac0906642b4f8bbd98217" compoundref="EvolutionStrategies_8java" startline="32">metaheuristics.generators.EvolutionStrategies.listStateReference</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1ae474b442e50ca9504e0506bf17f4a307" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="enummetaheuristics_1_1generators_1_1GeneratorType" kindref="compound">GeneratorType</ref></type>
+        <definition>GeneratorType metaheuristics.generators.EvolutionStrategies.getTypeGenerator</definition>
+        <argsstring>()</argsstring>
+        <name>getTypeGenerator</name>
+        <qualifiedname>metaheuristics.generators.EvolutionStrategies.getTypeGenerator</qualifiedname>
+        <briefdescription>
+<para>getTypeGenerator - method to get the generator type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>returns the generator type. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" line="205" column="22" bodyfile="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" bodystart="205" bodyend="207"/>
+        <references refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a4fbf87f6e925665a335353a0d25a407a" compoundref="EvolutionStrategies_8java" startline="36">metaheuristics.generators.EvolutionStrategies.generatorType</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a50fc38308b22f39762b419a607f7d710" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheuristics.generators.EvolutionStrategies.setTypeGenerator</definition>
+        <argsstring>(GeneratorType generatorType)</argsstring>
+        <name>setTypeGenerator</name>
+        <qualifiedname>metaheuristics.generators.EvolutionStrategies.setTypeGenerator</qualifiedname>
+        <param>
+          <type><ref refid="enummetaheuristics_1_1generators_1_1GeneratorType" kindref="compound">GeneratorType</ref></type>
+          <declname>generatorType</declname>
+        </param>
+        <briefdescription>
+<para>setTypeGenerator - method to set the generator type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>generatorType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" line="213" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" bodystart="213" bodyend="215"/>
+        <references refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a4fbf87f6e925665a335353a0d25a407a" compoundref="EvolutionStrategies_8java" startline="36">metaheuristics.generators.EvolutionStrategies.generatorType</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1abd5b4e2f2108b98c34283ea0683f50be" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+        <definition>List&lt; State &gt; metaheuristics.generators.EvolutionStrategies.getReferenceList</definition>
+        <argsstring>()</argsstring>
+        <name>getReferenceList</name>
+        <qualifiedname>metaheuristics.generators.EvolutionStrategies.getReferenceList</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1ae168237b306de55fe4d6dfda75c7cd13">getReferenceList</reimplements>
+        <briefdescription>
+<para>getReferenceList - method to get the list of reference states. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>returns the list of reference states. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" line="222" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" bodystart="222" bodyend="229"/>
+        <references refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a54ec1d6708dac0906642b4f8bbd98217" compoundref="EvolutionStrategies_8java" startline="32">metaheuristics.generators.EvolutionStrategies.listStateReference</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a9ecdfbc5aff9098d7e662cb446ce9931" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+        <definition>List&lt; State &gt; metaheuristics.generators.EvolutionStrategies.getSonList</definition>
+        <argsstring>()</argsstring>
+        <name>getSonList</name>
+        <qualifiedname>metaheuristics.generators.EvolutionStrategies.getSonList</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1aee09d724c1b3040e7a7ad0b64e341c96">getSonList</reimplements>
+        <briefdescription>
+<para>getSonList - method to get the list of son states. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>returns the list of son states. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" line="236" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" bodystart="236" bodyend="239"/>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a9950997b85c0c60dc5ed24589534cb45" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean metaheuristics.generators.EvolutionStrategies.awardUpdateREF</definition>
+        <argsstring>(State stateCandidate)</argsstring>
+        <name>awardUpdateREF</name>
+        <qualifiedname>metaheuristics.generators.EvolutionStrategies.awardUpdateREF</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1a3513d3953ecc97683f38bcb662b74b9b">awardUpdateREF</reimplements>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>stateCandidate</declname>
+        </param>
+        <briefdescription>
+<para>awardUpdateREF - method to award the update of the reference state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stateCandidate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns true if the update is awarded, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" line="247" column="16" bodyfile="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" bodystart="247" bodyend="250"/>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a5a900cbf01546a850e9eb34cf640c12a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float metaheuristics.generators.EvolutionStrategies.getWeight</definition>
+        <argsstring>()</argsstring>
+        <name>getWeight</name>
+        <qualifiedname>metaheuristics.generators.EvolutionStrategies.getWeight</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1a64f2b824081c7af593bf9aa8eabf2c9e">getWeight</reimplements>
+        <briefdescription>
+<para>getWeight - method to get the weight. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>returns the weight. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" line="257" column="14" bodyfile="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" bodystart="257" bodyend="260"/>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a5c0b9885ec725b8bf69a994401bd7cac" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheuristics.generators.EvolutionStrategies.setWeight</definition>
+        <argsstring>(float weight)</argsstring>
+        <name>setWeight</name>
+        <qualifiedname>metaheuristics.generators.EvolutionStrategies.setWeight</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1a8b3c66b57b4c739666989fbce667eb40">setWeight</reimplements>
+        <param>
+          <type>float</type>
+          <declname>weight</declname>
+        </param>
+        <briefdescription>
+<para>setWeight - method to set the weight. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>weight</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" line="267" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" bodystart="267" bodyend="270"/>
+        <references refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a361ab2afb0634be8c18158ce2d510b4d" compoundref="EvolutionStrategies_8java" startline="43">metaheuristics.generators.EvolutionStrategies.weight</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1afca72f5f78dd05e4b1a9ecf23afd53a5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int[]</type>
+        <definition>int[] metaheuristics.generators.EvolutionStrategies.getListCountBetterGender</definition>
+        <argsstring>()</argsstring>
+        <name>getListCountBetterGender</name>
+        <qualifiedname>metaheuristics.generators.EvolutionStrategies.getListCountBetterGender</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1ac5bace71f51c16b611ede3ed53263473">getListCountBetterGender</reimplements>
+        <briefdescription>
+<para>getListCountBetterGender - method to get the list of count better gender. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" line="277" column="12" bodyfile="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" bodystart="277" bodyend="280"/>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a017929e51c91768c1a6f4a45b78527b3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int[]</type>
+        <definition>int[] metaheuristics.generators.EvolutionStrategies.getListCountGender</definition>
+        <argsstring>()</argsstring>
+        <name>getListCountGender</name>
+        <qualifiedname>metaheuristics.generators.EvolutionStrategies.getListCountGender</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1ac5d6d45ee8017fb87d80aa952edfc34e">getListCountGender</reimplements>
+        <briefdescription>
+<para>getListCountGender - method to get the list of count gender. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>returns the list of count gender. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" line="287" column="12" bodyfile="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" bodystart="287" bodyend="290"/>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a4a43d4985c7599c8a495f4694066e7b2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float[]</type>
+        <definition>float[] metaheuristics.generators.EvolutionStrategies.getTrace</definition>
+        <argsstring>()</argsstring>
+        <name>getTrace</name>
+        <qualifiedname>metaheuristics.generators.EvolutionStrategies.getTrace</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1a75d7f30dd2cb3f92475db8525ac7c6e7">getTrace</reimplements>
+        <briefdescription>
+<para>getTrace - method to get the trace. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>returns the trace. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" line="297" column="14" bodyfile="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" bodystart="297" bodyend="300"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies" kindref="compound">EvolutionStrategies</ref> - class that implements the Evolution Strategies generator. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>metaheuristics.generators.EvolutionStrategies</label>
+        <link refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>metaheuristics.generators.Generator</label>
+        <link refid="classmetaheuristics_1_1generators_1_1Generator"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4">
+        <label>Cloneable</label>
+      </node>
+      <node id="9">
+        <label>evolutionary_algorithms.complement.MutationType</label>
+        <link refid="enumevolutionary__algorithms_1_1complement_1_1MutationType"/>
+      </node>
+      <node id="10">
+        <label>evolutionary_algorithms.complement.ReplaceType</label>
+        <link refid="enumevolutionary__algorithms_1_1complement_1_1ReplaceType"/>
+      </node>
+      <node id="11">
+        <label>evolutionary_algorithms.complement.SelectionType</label>
+        <link refid="enumevolutionary__algorithms_1_1complement_1_1SelectionType"/>
+      </node>
+      <node id="6">
+        <label>factory_interface.IFFactoryFatherSelection</label>
+        <link refid="interfacefactory__interface_1_1IFFactoryFatherSelection"/>
+      </node>
+      <node id="7">
+        <label>factory_interface.IFFactoryMutation</label>
+        <link refid="interfacefactory__interface_1_1IFFactoryMutation"/>
+      </node>
+      <node id="8">
+        <label>factory_interface.IFFactoryReplace</label>
+        <link refid="interfacefactory__interface_1_1IFFactoryReplace"/>
+      </node>
+      <node id="1">
+        <label>metaheuristics.generators.EvolutionStrategies</label>
+        <link refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-stateReferenceES</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>-iffatherselection</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>-iffactorymutation</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>-iffreplace</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>-generatorType</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>+mutationType</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>+replaceType</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>+selectionType</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>metaheuristics.generators.Generator</label>
+        <link refid="classmetaheuristics_1_1generators_1_1Generator"/>
+      </node>
+      <node id="5">
+        <label>metaheuristics.generators.GeneratorType</label>
+        <link refid="enummetaheuristics_1_1generators_1_1GeneratorType"/>
+      </node>
+      <node id="3">
+        <label>problem.definition.State</label>
+        <link refid="classproblem_1_1definition_1_1State"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>#typeGenerator</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" line="29" column="7" bodyfile="practica5/src/main/java/metaheuristics/generators/EvolutionStrategies.java" bodystart="29" bodyend="302"/>
+    <listofallmembers>
+      <member refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a9950997b85c0c60dc5ed24589534cb45" prot="public" virt="non-virtual"><scope>metaheuristics::generators::EvolutionStrategies</scope><name>awardUpdateREF</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1Generator_1a43815f3944c514ba3156b0e68482befa" prot="public" virt="non-virtual"><scope>metaheuristics::generators::EvolutionStrategies</scope><name>countBetterGender</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1Generator_1a3c0145210385b6257c8fc20cac1f830a" prot="public" virt="non-virtual"><scope>metaheuristics::generators::EvolutionStrategies</scope><name>countGender</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1ab1e6d7d7bb0c21bd90f5ddd5532dcb3b" prot="public" virt="non-virtual"><scope>metaheuristics::generators::EvolutionStrategies</scope><name>countRef</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a8f310ee9c548a0520bea2eb8c04e35aa" prot="public" virt="non-virtual"><scope>metaheuristics::generators::EvolutionStrategies</scope><name>EvolutionStrategies</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a5a222a42cc69a782b603004f2ca501d0" prot="public" virt="non-virtual"><scope>metaheuristics::generators::EvolutionStrategies</scope><name>generate</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a4fbf87f6e925665a335353a0d25a407a" prot="private" virt="non-virtual"><scope>metaheuristics::generators::EvolutionStrategies</scope><name>generatorType</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1afca72f5f78dd05e4b1a9ecf23afd53a5" prot="public" virt="non-virtual"><scope>metaheuristics::generators::EvolutionStrategies</scope><name>getListCountBetterGender</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a017929e51c91768c1a6f4a45b78527b3" prot="public" virt="non-virtual"><scope>metaheuristics::generators::EvolutionStrategies</scope><name>getListCountGender</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a3c8abb363dd3c13968dca892016f7567" prot="public" virt="non-virtual"><scope>metaheuristics::generators::EvolutionStrategies</scope><name>getListStateRef</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1aeee6044d098aea09fe4ae0a5fab61365" prot="public" virt="non-virtual"><scope>metaheuristics::generators::EvolutionStrategies</scope><name>getListStateReference</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a9afcff28506375af6f405467990e7b36" prot="public" virt="non-virtual"><scope>metaheuristics::generators::EvolutionStrategies</scope><name>getReference</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1abd5b4e2f2108b98c34283ea0683f50be" prot="public" virt="non-virtual"><scope>metaheuristics::generators::EvolutionStrategies</scope><name>getReferenceList</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a9ecdfbc5aff9098d7e662cb446ce9931" prot="public" virt="non-virtual"><scope>metaheuristics::generators::EvolutionStrategies</scope><name>getSonList</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a4a43d4985c7599c8a495f4694066e7b2" prot="public" virt="non-virtual"><scope>metaheuristics::generators::EvolutionStrategies</scope><name>getTrace</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1ab62ce67fa9bf50e84b3b8a90dcb8f1b0" prot="public" virt="non-virtual"><scope>metaheuristics::generators::EvolutionStrategies</scope><name>getType</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1ae474b442e50ca9504e0506bf17f4a307" prot="public" virt="non-virtual"><scope>metaheuristics::generators::EvolutionStrategies</scope><name>getTypeGenerator</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a5a900cbf01546a850e9eb34cf640c12a" prot="public" virt="non-virtual"><scope>metaheuristics::generators::EvolutionStrategies</scope><name>getWeight</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a3a6289aa814302b2cb6f7618bc799167" prot="private" virt="non-virtual"><scope>metaheuristics::generators::EvolutionStrategies</scope><name>iffactorymutation</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a3931b67b6de66df93e91120a038f4f3c" prot="private" virt="non-virtual"><scope>metaheuristics::generators::EvolutionStrategies</scope><name>iffatherselection</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a9444478e0653dfb8e9ff61948a99e050" prot="private" virt="non-virtual"><scope>metaheuristics::generators::EvolutionStrategies</scope><name>iffreplace</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a6b7b4d829e0365cf2c1f498bcf1007bf" prot="private" virt="non-virtual"><scope>metaheuristics::generators::EvolutionStrategies</scope><name>listCountBetterGender</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a054703def8fe6a5c059b92c9b1db1a05" prot="private" virt="non-virtual"><scope>metaheuristics::generators::EvolutionStrategies</scope><name>listCountGender</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a54ec1d6708dac0906642b4f8bbd98217" prot="private" virt="non-virtual"><scope>metaheuristics::generators::EvolutionStrategies</scope><name>listStateReference</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a1bd7555ae1c704212ee1f6048b7739b0" prot="private" virt="non-virtual"><scope>metaheuristics::generators::EvolutionStrategies</scope><name>listTrace</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a32f025cef82d1636e0d4ce4dd883e921" prot="public" virt="non-virtual"><scope>metaheuristics::generators::EvolutionStrategies</scope><name>mutationType</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1ae3c3aba87d9267290d90f81012cd2987" prot="public" virt="non-virtual"><scope>metaheuristics::generators::EvolutionStrategies</scope><name>PM</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a442b186378d1999d4fda1254d53f34a3" prot="public" virt="non-virtual"><scope>metaheuristics::generators::EvolutionStrategies</scope><name>replaceType</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a576682a631046ff6781624a3ec2d9a87" prot="public" virt="non-virtual"><scope>metaheuristics::generators::EvolutionStrategies</scope><name>selectionType</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1affd4957ba20b037dc14101d2b36efb00" prot="public" virt="non-virtual"><scope>metaheuristics::generators::EvolutionStrategies</scope><name>setInitialReference</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a0790c98945a483cc4e8a6bbba551f8ed" prot="public" virt="non-virtual"><scope>metaheuristics::generators::EvolutionStrategies</scope><name>setListStateReference</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a9ecbbd5184eaeb033bdea2fa056ed5fc" prot="public" virt="non-virtual"><scope>metaheuristics::generators::EvolutionStrategies</scope><name>setStateRef</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a50fc38308b22f39762b419a607f7d710" prot="public" virt="non-virtual"><scope>metaheuristics::generators::EvolutionStrategies</scope><name>setTypeGenerator</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a5c0b9885ec725b8bf69a994401bd7cac" prot="public" virt="non-virtual"><scope>metaheuristics::generators::EvolutionStrategies</scope><name>setWeight</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a89500c96cacc133b2c953f6966575db8" prot="private" virt="non-virtual"><scope>metaheuristics::generators::EvolutionStrategies</scope><name>stateReferenceES</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1ab0816f8ead85a1543990acb1e75820cc" prot="public" virt="non-virtual"><scope>metaheuristics::generators::EvolutionStrategies</scope><name>truncation</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1ae37dff5bcc1931755d2d78ad3c047c99" prot="public" virt="non-virtual"><scope>metaheuristics::generators::EvolutionStrategies</scope><name>updateReference</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a361ab2afb0634be8c18158ce2d510b4d" prot="private" virt="non-virtual"><scope>metaheuristics::generators::EvolutionStrategies</scope><name>weight</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,39 @@
+\doxysection{Accept\+Not\+Bad\+U.\+java}
+\hypertarget{AcceptNotBadU_8java_source}{}\label{AcceptNotBadU_8java_source}\index{AcceptNotBadU.java@{AcceptNotBadU.java}}
+\mbox{\hyperlink{AcceptNotBadU_8java}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{AcceptNotBadU_8java_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{AcceptNotBadU_8java_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{AcceptNotBadU_8java_source_l00005}00005\ \textcolor{keyword}{package\ }local\_search.acceptation\_type;}
+\DoxyCodeLine{\Hypertarget{AcceptNotBadU_8java_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{AcceptNotBadU_8java_source_l00007}00007\ \textcolor{keyword}{import}\ java.lang.reflect.InvocationTargetException;}
+\DoxyCodeLine{\Hypertarget{AcceptNotBadU_8java_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{AcceptNotBadU_8java_source_l00009}00009\ \textcolor{keyword}{import}\ metaheurictics.strategy.Strategy;}
+\DoxyCodeLine{\Hypertarget{AcceptNotBadU_8java_source_l00010}00010\ \textcolor{keyword}{import}\ problem.definition.Problem;}
+\DoxyCodeLine{\Hypertarget{AcceptNotBadU_8java_source_l00011}00011\ \textcolor{keyword}{import}\ problem.definition.State;}
+\DoxyCodeLine{\Hypertarget{AcceptNotBadU_8java_source_l00012}00012\ \textcolor{keyword}{import}\ problem.definition.Problem.ProblemType;}
+\DoxyCodeLine{\Hypertarget{AcceptNotBadU_8java_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{AcceptNotBadU_8java_source_l00021}\mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1AcceptNotBadU}{00021}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1AcceptNotBadU}{AcceptNotBadU}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1AcceptableCandidate}{AcceptableCandidate}}\{}
+\DoxyCodeLine{\Hypertarget{AcceptNotBadU_8java_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{AcceptNotBadU_8java_source_l00023}00023\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{AcceptNotBadU_8java_source_l00038}\mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1AcceptNotBadU_aae18a93b424add171ea18e79645977c7}{00038}}\ \ \ \ \ \textcolor{keyword}{public}\ Boolean\ \mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1AcceptNotBadU_aae18a93b424add171ea18e79645977c7}{acceptCandidate}}(\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ stateCurrent,\ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ stateCandidate)\ \textcolor{keywordflow}{throws}\ IllegalArgumentException,\ SecurityException,\ ClassNotFoundException,\ InstantiationException,\ IllegalAccessException,\ InvocationTargetException,\ NoSuchMethodException\ \{}
+\DoxyCodeLine{\Hypertarget{AcceptNotBadU_8java_source_l00039}00039\ \ \ \ \ \ \ \ \ Boolean\ accept\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{AcceptNotBadU_8java_source_l00040}00040\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classproblem_1_1definition_1_1Problem}{Problem}}\ problem\ =\ \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy}{Strategy}}.\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_ad2641e12c52292930364de6655333aa8}{getStrategy}}().\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_a4bc6bd95db71e14b1f48c1bfc85f1305}{getProblem}}();}
+\DoxyCodeLine{\Hypertarget{AcceptNotBadU_8java_source_l00041}00041\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (problem.getTypeProblem().equals(\mbox{\hyperlink{enumproblem_1_1definition_1_1Problem_1_1ProblemType}{ProblemType}}.\mbox{\hyperlink{enumproblem_1_1definition_1_1Problem_1_1ProblemType_aa55383c4cb9a71cfeabc7f715ee0cd6e}{Maximizar}}))\ \{}
+\DoxyCodeLine{\Hypertarget{AcceptNotBadU_8java_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ Double\ result\ =\ stateCurrent.getEvaluation().get(0)\ -\/\ stateCandidate.getEvaluation().get(0);}
+\DoxyCodeLine{\Hypertarget{AcceptNotBadU_8java_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (result\ <\ \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy}{Strategy}}.\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_ad2641e12c52292930364de6655333aa8}{getStrategy}}().\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_a307eddf8b8d1eadfdce6b89148bd78fb}{getThreshold}}())}
+\DoxyCodeLine{\Hypertarget{AcceptNotBadU_8java_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ accept\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{AcceptNotBadU_8java_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{AcceptNotBadU_8java_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ accept\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{AcceptNotBadU_8java_source_l00047}00047\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{AcceptNotBadU_8java_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ Double\ result\_min\ =\ stateCurrent.getEvaluation().get(0)\ -\/\ stateCandidate.getEvaluation().get(0);}
+\DoxyCodeLine{\Hypertarget{AcceptNotBadU_8java_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (result\_min\ >\ \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy}{Strategy}}.\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_ad2641e12c52292930364de6655333aa8}{getStrategy}}().\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_a307eddf8b8d1eadfdce6b89148bd78fb}{getThreshold}}())}
+\DoxyCodeLine{\Hypertarget{AcceptNotBadU_8java_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ accept\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{AcceptNotBadU_8java_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{AcceptNotBadU_8java_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ accept\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{AcceptNotBadU_8java_source_l00053}00053\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AcceptNotBadU_8java_source_l00054}00054\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ accept;}
+\DoxyCodeLine{\Hypertarget{AcceptNotBadU_8java_source_l00055}00055\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AcceptNotBadU_8java_source_l00056}00056\ \}}
+
+\end{DoxyCode}

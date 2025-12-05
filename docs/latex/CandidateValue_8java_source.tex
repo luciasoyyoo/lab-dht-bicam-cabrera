@@ -1,0 +1,78 @@
+\doxysection{Candidate\+Value.\+java}
+\hypertarget{CandidateValue_8java_source}{}\label{CandidateValue_8java_source}\index{CandidateValue.java@{CandidateValue.java}}
+\mbox{\hyperlink{CandidateValue_8java}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00005}00005\ \textcolor{keyword}{package\ }local\_search.candidate\_type;}
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00007}00007\ \textcolor{keyword}{import}\ java.lang.reflect.InvocationTargetException;}
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00008}00008\ \textcolor{keyword}{import}\ java.util.ArrayList;}
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00009}00009\ \textcolor{keyword}{import}\ java.util.List;}
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00011}00011\ \textcolor{keyword}{import}\ problem.definition.State;}
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00013}00013\ \textcolor{keyword}{import}\ local\_search.complement.StrategyType;}
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00014}00014\ \textcolor{keyword}{import}\ local\_search.complement.TabuSolutions;}
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00015}00015\ \textcolor{keyword}{import}\ metaheurictics.strategy.Strategy;}
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00017}00017\ \textcolor{comment}{//import\ ceis.grial.problem.Problem;}}
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00018}00018\ \textcolor{keyword}{import}\ factory\_interface.IFFactoryCandidate;}
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00019}00019\ \textcolor{keyword}{import}\ factory\_method.FactoryCandidate;}
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00029}\mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1CandidateValue}{00029}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1CandidateValue_a0b569242170a94ec76659efea622f402}{CandidateValue}}\ \{}
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00032}\mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1CandidateValue_a7ec51b9213b57e19f65fa0d7c24a2e67}{00032}}\ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{interfacefactory__interface_1_1IFFactoryCandidate}{IFFactoryCandidate}}\ \mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1CandidateValue_a7ec51b9213b57e19f65fa0d7c24a2e67}{ifFactory}};}
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00034}00034\ \ \ \ \ \textcolor{comment}{//\ strategy\ and\ typecand\ fields\ were\ unused;\ removed\ to\ avoid\ SpotBugs\ unread-\/field\ warnings.}}
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00036}\mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1CandidateValue_a050cc90f7786e4825e7ca09e20492ebb}{00036}}\ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{classlocal__search_1_1complement_1_1TabuSolutions}{TabuSolutions}}\ \mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1CandidateValue_a050cc90f7786e4825e7ca09e20492ebb}{tabusolution}};}
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00038}\mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1CandidateValue_a7b05c8a6d8af9170fc422b78c9af5b64}{00038}}\ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1SearchCandidate}{SearchCandidate}}\ \mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1CandidateValue_a7b05c8a6d8af9170fc422b78c9af5b64}{searchcandidate}};}
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00040}\mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1CandidateValue_a0b569242170a94ec76659efea622f402}{00040}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1CandidateValue_a0b569242170a94ec76659efea622f402}{CandidateValue}}()\{\}}
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00042}00042\ \ \ \ \ \textcolor{comment}{//\ Keep\ a\ no-\/arg\ constructor;\ parameterized\ constructor\ was\ removed\ because\ its\ fields\ were\ unused.}}
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00052}\mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1CandidateValue_ab02441a95d5abedea3a2c82bf9c5d457}{00052}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1SearchCandidate}{SearchCandidate}}\ \mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1CandidateValue_ab02441a95d5abedea3a2c82bf9c5d457}{newSearchCandidate}}(\mbox{\hyperlink{enumlocal__search_1_1candidate__type_1_1CandidateType}{CandidateType}}\ typecandidate)\ \textcolor{keywordflow}{throws}\ IllegalArgumentException,\ SecurityException,\ ClassNotFoundException,\ InstantiationException,\ IllegalAccessException,\ InvocationTargetException,\ NoSuchMethodException\ \{}
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00053}00053\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1CandidateValue_a7ec51b9213b57e19f65fa0d7c24a2e67}{ifFactory}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classfactory__method_1_1FactoryCandidate}{FactoryCandidate}}();}
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00054}00054\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1CandidateValue_a7b05c8a6d8af9170fc422b78c9af5b64}{searchcandidate}}\ =\ \mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1CandidateValue_a7ec51b9213b57e19f65fa0d7c24a2e67}{ifFactory}}.createSearchCandidate(typecandidate);}
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00055}00055\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1CandidateValue_a7b05c8a6d8af9170fc422b78c9af5b64}{searchcandidate}};}
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00056}00056\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00074}\mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1CandidateValue_a77505d8ed443552afa435f51d0222d75}{00074}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ \mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1CandidateValue_a77505d8ed443552afa435f51d0222d75}{stateCandidate}}(\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ stateCurrent,\ \mbox{\hyperlink{enumlocal__search_1_1candidate__type_1_1CandidateType}{CandidateType}}\ typeCandidate,\ \mbox{\hyperlink{enumlocal__search_1_1complement_1_1StrategyType}{StrategyType}}\ strategy,\ Integer\ operatornumber,\ List<State>\ neighborhood)\ \textcolor{keywordflow}{throws}\ IllegalArgumentException,\ SecurityException,\ ClassNotFoundException,\ InstantiationException,\ IllegalAccessException,\ InvocationTargetException,\ NoSuchMethodException\{}
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00075}00075\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Problem\ problem\ =\ ExecuteGenerator.getExecuteGenerator().getProblem();}}
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00076}00076\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ \mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1CandidateValue_a77505d8ed443552afa435f51d0222d75}{stateCandidate}};}
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00077}00077\ \ \ \ \ \ \ \ \ List<State>\ auxList\ =\ \textcolor{keyword}{new}\ ArrayList<State>();}
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00078}00078\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ neighborhood.size();\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ auxList.add(neighborhood.get(i));}
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00080}00080\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00081}00081\ \ \ \ \ \ \ \ \ this.tabusolution\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classlocal__search_1_1complement_1_1TabuSolutions}{TabuSolutions}}();}
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00082}00082\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (strategy.equals(\mbox{\hyperlink{enumlocal__search_1_1complement_1_1StrategyType}{StrategyType}}.\mbox{\hyperlink{enumlocal__search_1_1complement_1_1StrategyType_ac0c34198bb10ffedf05b8be68f72c170}{TABU}}))\ \{}
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ auxList\ =\ this.tabusolution.\mbox{\hyperlink{classlocal__search_1_1complement_1_1TabuSolutions_abe7521e1b6c8ca96a3a6b5b63cd08c48}{filterNeighborhood}}(auxList);}
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (Exception\ e)\ \{}
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy}{Strategy}}\ strategys\ =\ \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy}{Strategy}}.\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_ad2641e12c52292930364de6655333aa8}{getStrategy}}();}
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(strategys.\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_a4bc6bd95db71e14b1f48c1bfc85f1305}{getProblem}}()!=\textcolor{keyword}{null})\{}
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ neighborhood\ =\ strategys.\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_a4bc6bd95db71e14b1f48c1bfc85f1305}{getProblem}}().\mbox{\hyperlink{classproblem_1_1definition_1_1Problem_a4cd649edb8862f21af171491cb9b9386}{getOperator}}().\mbox{\hyperlink{classproblem_1_1definition_1_1Operator_a5b6625843e73d938f9235985bf966b34}{generatedNewState}}(neighborhood.get(0),\ operatornumber);}
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1CandidateValue_a77505d8ed443552afa435f51d0222d75}{stateCandidate}}(stateCurrent,\ typeCandidate,\ strategy,\ operatornumber,\ neighborhood);}
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00093}00093\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00094}00094\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1SearchCandidate}{SearchCandidate}}\ searchCand\ =\ \mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1CandidateValue_ab02441a95d5abedea3a2c82bf9c5d457}{newSearchCandidate}}(typeCandidate);}
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00095}00095\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1CandidateValue_a77505d8ed443552afa435f51d0222d75}{stateCandidate}}\ =\ searchCand.\mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1SearchCandidate_a0f10adc1526fb08f54427c50734f8abf}{stateSearch}}(auxList);}
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00096}00096\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1CandidateValue_a77505d8ed443552afa435f51d0222d75}{stateCandidate}};}
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00097}00097\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00098}00098\ }
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00104}\mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1CandidateValue_ae334fe4b4bc2211c5120d905d3114762}{00104}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classlocal__search_1_1complement_1_1TabuSolutions}{TabuSolutions}}\ \mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1CandidateValue_ae334fe4b4bc2211c5120d905d3114762}{getTabusolution}}()\ \{}
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00105}00105\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1CandidateValue_a050cc90f7786e4825e7ca09e20492ebb}{tabusolution}};}
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00106}00106\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00107}00107\ }
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00113}\mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1CandidateValue_a142eb7bff2e5f3312d0277152f803d1a}{00113}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1CandidateValue_a142eb7bff2e5f3312d0277152f803d1a}{setTabusolution}}(\mbox{\hyperlink{classlocal__search_1_1complement_1_1TabuSolutions}{TabuSolutions}}\ \mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1CandidateValue_a050cc90f7786e4825e7ca09e20492ebb}{tabusolution}})\ \{}
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00114}00114\ \ \ \ \ \ \ \ \ this.tabusolution\ =\ \mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1CandidateValue_a050cc90f7786e4825e7ca09e20492ebb}{tabusolution}};}
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00115}00115\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CandidateValue_8java_source_l00116}00116\ \}}
+
+\end{DoxyCode}

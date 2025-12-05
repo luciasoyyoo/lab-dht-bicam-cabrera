@@ -1,0 +1,103 @@
+\doxysection{Referencia de la clase local\+\_\+search.\+candidate\+\_\+type.\+Smaller\+Candidate}
+\hypertarget{classlocal__search_1_1candidate__type_1_1SmallerCandidate}{}\label{classlocal__search_1_1candidate__type_1_1SmallerCandidate}\index{local\_search.candidate\_type.SmallerCandidate@{local\_search.candidate\_type.SmallerCandidate}}
+
+
+\doxylink{classlocal__search_1_1candidate__type_1_1SmallerCandidate}{Smaller\+Candidate} -\/ choose the neighbor with the smallest evaluation.  
+
+
+
+
+Diagrama de herencia de local\+\_\+search.\+candidate\+\_\+type.\+Smaller\+Candidate
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{classlocal__search_1_1candidate__type_1_1SmallerCandidate__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagrama de colaboración de local\+\_\+search.\+candidate\+\_\+type.\+Smaller\+Candidate\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{classlocal__search_1_1candidate__type_1_1SmallerCandidate__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} \mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1SmallerCandidate_a69eb3c75ce366bc050c117fa764b82be}{state\+Search}} (List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ list\+Neighborhood)  throws Illegal\+Argument\+Exception, Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception, Illegal\+Access\+Exception, Invocation\+Target\+Exception, No\+Such\+Method\+Exception 
+\begin{DoxyCompactList}\small\item\em Select the smallest neighbor from the list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+\doxylink{classlocal__search_1_1candidate__type_1_1SmallerCandidate}{Smaller\+Candidate} -\/ choose the neighbor with the smallest evaluation. 
+
+Scans the provided neighborhood and returns the state with the smallest primary objective value. 
+
+Definición en la línea \mbox{\hyperlink{SmallerCandidate_8java_source_l00019}{19}} del archivo \mbox{\hyperlink{SmallerCandidate_8java_source}{Smaller\+Candidate.\+java}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{classlocal__search_1_1candidate__type_1_1SmallerCandidate_doc-func-members}
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{classlocal__search_1_1candidate__type_1_1SmallerCandidate_a69eb3c75ce366bc050c117fa764b82be}\index{local\_search.candidate\_type.SmallerCandidate@{local\_search.candidate\_type.SmallerCandidate}!stateSearch@{stateSearch}}
+\index{stateSearch@{stateSearch}!local\_search.candidate\_type.SmallerCandidate@{local\_search.candidate\_type.SmallerCandidate}}
+\doxysubsubsection{\texorpdfstring{stateSearch()}{stateSearch()}}
+{\footnotesize\ttfamily \label{classlocal__search_1_1candidate__type_1_1SmallerCandidate_a69eb3c75ce366bc050c117fa764b82be} 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} local\+\_\+search.\+candidate\+\_\+type.\+Smaller\+Candidate.\+state\+Search (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$}]{list\+Neighborhood}{}\end{DoxyParamCaption}) throws Illegal\+Argument\+Exception, Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception, Illegal\+Access\+Exception, Invocation\+Target\+Exception, No\+Such\+Method\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Select the smallest neighbor from the list. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em list\+Neighborhood} & list of neighbor states \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+the neighbor with the smallest evaluation (primary objective) 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em Reflective\+Operation\+Exception} & propagated from potential evaluations \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplementado de \mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1SearchCandidate_a0f10adc1526fb08f54427c50734f8abf}{local\+\_\+search.\+candidate\+\_\+type.\+Search\+Candidate}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{SmallerCandidate_8java_source_l00029}{29}} del archivo \mbox{\hyperlink{SmallerCandidate_8java_source}{Smaller\+Candidate.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ State\ stateSmaller\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(listNeighborhood.size()\ >\ 1)\{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ counter\ =\ 0;}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ currentCount\ =\ listNeighborhood.get(0).getEvaluation().get(0);}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 1;\ i\ <\ listNeighborhood.size();\ i++)\ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ counter\ =\ listNeighborhood.get(i).getEvaluation().get(0);}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (counter\ <\ currentCount)\ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ currentCount\ =\ counter;}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ stateSmaller\ =\ listNeighborhood.get(i);}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ counter\ =\ 0;}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ stateSmaller\ =\ listNeighborhood.get(0);}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ stateSmaller;}
+\DoxyCodeLine{00045\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{SmallerCandidate_8java}{Smaller\+Candidate.\+java}}\end{DoxyCompactItemize}

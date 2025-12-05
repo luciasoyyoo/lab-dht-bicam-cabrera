@@ -1,0 +1,45 @@
+\doxysection{Uniform\+Crossover.\+java}
+\hypertarget{UniformCrossover_8java_source}{}\label{UniformCrossover_8java_source}\index{UniformCrossover.java@{UniformCrossover.java}}
+\mbox{\hyperlink{UniformCrossover_8java}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{UniformCrossover_8java_source_l00001}00001\ \textcolor{keyword}{package\ }evolutionary\_algorithms.complement;}
+\DoxyCodeLine{\Hypertarget{UniformCrossover_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{UniformCrossover_8java_source_l00003}00003\ \textcolor{keyword}{import}\ metaheurictics.strategy.Strategy;}
+\DoxyCodeLine{\Hypertarget{UniformCrossover_8java_source_l00004}00004\ \textcolor{keyword}{import}\ java.util.concurrent.ThreadLocalRandom;}
+\DoxyCodeLine{\Hypertarget{UniformCrossover_8java_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{UniformCrossover_8java_source_l00006}00006\ \textcolor{keyword}{import}\ problem.definition.State;}
+\DoxyCodeLine{\Hypertarget{UniformCrossover_8java_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{UniformCrossover_8java_source_l00011}\mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1UniformCrossover}{00011}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1UniformCrossover}{UniformCrossover}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1Crossover}{Crossover}}\ \{}
+\DoxyCodeLine{\Hypertarget{UniformCrossover_8java_source_l00012}00012\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{UniformCrossover_8java_source_l00019}00019\ \ \ \ \ @SuppressWarnings(\textcolor{stringliteral}{"{}squid:S2245"{}})}
+\DoxyCodeLine{\Hypertarget{UniformCrossover_8java_source_l00025}\mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1UniformCrossover_aa99dc616ac6ca6cd4ee926b275736cb0}{00025}}\ \ \ \ \ public\ \textcolor{keywordtype}{int}[]\ \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1UniformCrossover_aa99dc616ac6ca6cd4ee926b275736cb0}{mascara}}(\textcolor{keywordtype}{int}\ length)\{}
+\DoxyCodeLine{\Hypertarget{UniformCrossover_8java_source_l00026}00026\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}[]\ \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1UniformCrossover_aa99dc616ac6ca6cd4ee926b275736cb0}{mascara}}\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[length];}
+\DoxyCodeLine{\Hypertarget{UniformCrossover_8java_source_l00027}00027\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1UniformCrossover_aa99dc616ac6ca6cd4ee926b275736cb0}{mascara}}.length;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{UniformCrossover_8java_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ value\ =\ ThreadLocalRandom.current().nextInt(2);}
+\DoxyCodeLine{\Hypertarget{UniformCrossover_8java_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1UniformCrossover_aa99dc616ac6ca6cd4ee926b275736cb0}{mascara}}[i]\ =\ value;}
+\DoxyCodeLine{\Hypertarget{UniformCrossover_8java_source_l00030}00030\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{UniformCrossover_8java_source_l00031}00031\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1UniformCrossover_aa99dc616ac6ca6cd4ee926b275736cb0}{mascara}};}
+\DoxyCodeLine{\Hypertarget{UniformCrossover_8java_source_l00032}00032\ \ \ \ \ \}\ \ \ }
+\DoxyCodeLine{\Hypertarget{UniformCrossover_8java_source_l00033}00033\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{UniformCrossover_8java_source_l00034}00034\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{UniformCrossover_8java_source_l00042}\mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1UniformCrossover_a54eb36b06a9e409253360eb9cd76f774}{00042}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1UniformCrossover_a54eb36b06a9e409253360eb9cd76f774}{crossover}}(\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ father1,\ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ father2,\ \textcolor{keywordtype}{double}\ PC)\ \{}
+\DoxyCodeLine{\Hypertarget{UniformCrossover_8java_source_l00043}00043\ \ \ \ \ \ \ \ \ Object\ value;}
+\DoxyCodeLine{\Hypertarget{UniformCrossover_8java_source_l00044}00044\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ state\ =\ (\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}})\ father1.\mbox{\hyperlink{classproblem_1_1definition_1_1State_aaf14fa8466c945ff5e134028c6c259f8}{getCopy}}();}
+\DoxyCodeLine{\Hypertarget{UniformCrossover_8java_source_l00045}00045\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}[]\ \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1UniformCrossover_aa99dc616ac6ca6cd4ee926b275736cb0}{mascara}}\ =\ \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1UniformCrossover_aa99dc616ac6ca6cd4ee926b275736cb0}{mascara}}(father1.\mbox{\hyperlink{classproblem_1_1definition_1_1State_a2e75b6f2bedb2107478ecd1e8e681418}{getCode}}().size());}
+\DoxyCodeLine{\Hypertarget{UniformCrossover_8java_source_l00046}00046\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ k\ =\ 0;\ k\ <\ \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1UniformCrossover_aa99dc616ac6ca6cd4ee926b275736cb0}{mascara}}.length;\ k++)\ \{}
+\DoxyCodeLine{\Hypertarget{UniformCrossover_8java_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1UniformCrossover_aa99dc616ac6ca6cd4ee926b275736cb0}{mascara}}[k]\ ==\ 1)\{}
+\DoxyCodeLine{\Hypertarget{UniformCrossover_8java_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ value\ =\ father1.\mbox{\hyperlink{classproblem_1_1definition_1_1State_a2e75b6f2bedb2107478ecd1e8e681418}{getCode}}().get(k);}
+\DoxyCodeLine{\Hypertarget{UniformCrossover_8java_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ state.\mbox{\hyperlink{classproblem_1_1definition_1_1State_a2e75b6f2bedb2107478ecd1e8e681418}{getCode}}().set(k,\ value);}
+\DoxyCodeLine{\Hypertarget{UniformCrossover_8java_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{UniformCrossover_8java_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{UniformCrossover_8java_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1UniformCrossover_aa99dc616ac6ca6cd4ee926b275736cb0}{mascara}}[k]\ ==\ 0)\{}
+\DoxyCodeLine{\Hypertarget{UniformCrossover_8java_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ value\ =\ father2.\mbox{\hyperlink{classproblem_1_1definition_1_1State_a2e75b6f2bedb2107478ecd1e8e681418}{getCode}}().get(k);\ \ }
+\DoxyCodeLine{\Hypertarget{UniformCrossover_8java_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ state.\mbox{\hyperlink{classproblem_1_1definition_1_1State_a2e75b6f2bedb2107478ecd1e8e681418}{getCode}}().set(k,\ value);}
+\DoxyCodeLine{\Hypertarget{UniformCrossover_8java_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{UniformCrossover_8java_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{UniformCrossover_8java_source_l00057}00057\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{UniformCrossover_8java_source_l00058}00058\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ state;}
+\DoxyCodeLine{\Hypertarget{UniformCrossover_8java_source_l00059}00059\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{UniformCrossover_8java_source_l00060}00060\ \}}
+
+\end{DoxyCode}

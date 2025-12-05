@@ -1,0 +1,126 @@
+\doxysection{Referencia de la clase evolutionary\+\_\+algorithms.\+complement.\+One\+Point\+Crossover}
+\hypertarget{classevolutionary__algorithms_1_1complement_1_1OnePointCrossover}{}\label{classevolutionary__algorithms_1_1complement_1_1OnePointCrossover}\index{evolutionary\_algorithms.complement.OnePointCrossover@{evolutionary\_algorithms.complement.OnePointCrossover}}
+
+
+\doxylink{classevolutionary__algorithms_1_1complement_1_1OnePointCrossover}{One\+Point\+Crossover} -\/ applies the one-\/point crossover operator.  
+
+
+
+
+Diagrama de herencia de evolutionary\+\_\+algorithms.\+complement.\+One\+Point\+Crossover
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=277pt]{classevolutionary__algorithms_1_1complement_1_1OnePointCrossover__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagrama de colaboración de evolutionary\+\_\+algorithms.\+complement.\+One\+Point\+Crossover\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=277pt]{classevolutionary__algorithms_1_1complement_1_1OnePointCrossover__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1OnePointCrossover_a6d644b471de305b6508b2b647edc76d1}{crossover}} (\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} father1, \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} father2, double PC)
+\begin{DoxyCompactList}\small\item\em Uses Thread\+Local\+Random for algorithmic (non-\/cryptographic) randomness. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+\doxylink{classevolutionary__algorithms_1_1complement_1_1OnePointCrossover}{One\+Point\+Crossover} -\/ applies the one-\/point crossover operator. 
+
+Definición en la línea \mbox{\hyperlink{OnePointCrossover_8java_source_l00015}{15}} del archivo \mbox{\hyperlink{OnePointCrossover_8java_source}{One\+Point\+Crossover.\+java}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{classevolutionary__algorithms_1_1complement_1_1OnePointCrossover_doc-func-members}
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{classevolutionary__algorithms_1_1complement_1_1OnePointCrossover_a6d644b471de305b6508b2b647edc76d1}\index{evolutionary\_algorithms.complement.OnePointCrossover@{evolutionary\_algorithms.complement.OnePointCrossover}!crossover@{crossover}}
+\index{crossover@{crossover}!evolutionary\_algorithms.complement.OnePointCrossover@{evolutionary\_algorithms.complement.OnePointCrossover}}
+\doxysubsubsection{\texorpdfstring{crossover()}{crossover()}}
+{\footnotesize\ttfamily \label{classevolutionary__algorithms_1_1complement_1_1OnePointCrossover_a6d644b471de305b6508b2b647edc76d1} 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} evolutionary\+\_\+algorithms.\+complement.\+One\+Point\+Crossover.\+crossover (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}}]{father1}{, }\item[{\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}}]{father2}{, }\item[{double}]{PC}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Uses Thread\+Local\+Random for algorithmic (non-\/cryptographic) randomness. 
+
+This RNG is used for evolutionary algorithm operations (crossover point, selection between children, etc.) and is not used for security-\/sensitive purposes. Therefore we suppress the Sonar security hotspot S2245 here. crossover -\/ applies the crossover operation to two parent states. 
+\begin{DoxyParams}{Parámetros}
+{\em father1} & \\
+\hline
+{\em father2} & \\
+\hline
+{\em PC} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+returns the offspring resulting from the crossover between father1 and father2 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1Crossover_a77155266e5646a87bcd427189938cc32}{evolutionary\+\_\+algorithms.\+complement.\+Crossover}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{OnePointCrossover_8java_source_l00032}{32}} del archivo \mbox{\hyperlink{OnePointCrossover_8java_source}{One\+Point\+Crossover.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ State\ newInd\ =\ (State)\ father1.getCopy();}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ List<Object>\ ind1\ =\ \textcolor{keyword}{new}\ ArrayList<Object>();}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ List<Object>\ ind2\ =\ \textcolor{keyword}{new}\ ArrayList<Object>();}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ number\ =\ ThreadLocalRandom.current().nextDouble();\ \textcolor{comment}{//\ thread-\/safe,\ [0.0,\ 1.0)}}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(number\ <=\ PC)\{}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//llenar\ los\ valores\ de\ cada\ hijo}}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ bound\ =\ Strategy.getStrategy().getProblem().getCodification().getVariableCount();}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ pos\ =\ (bound\ >\ 0)\ ?\ ThreadLocalRandom.current().nextInt(bound)\ :\ 0;}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ father1.getCode().size();\ i++)\ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i\ <=\ pos)\{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ind1.add(father1.getCode().get(i));}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ind2.add(father2.getCode().get(i));}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ind1.add(father2.getCode().get(i));}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ind2.add(father1.getCode().get(i));}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//generar\ un\ numero\ aleatorio\ 0\ o\ 1,\ si\ es\ 0\ me\ quedo\ con\ ind1\ si\ es\ 1\ con\ ind2.}}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ random\ =\ ThreadLocalRandom.current().nextInt(2);}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(random\ ==\ 0)}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ newInd.setCode((ArrayList<Object>)\ ind1);}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ newInd.setCode((ArrayList<Object>)\ ind2);\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ newInd;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00062\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{State_8java_source_l00068}{problem.\+definition.\+State.\+get\+Code()}}, \mbox{\hyperlink{Problem_8java_source_l00114}{problem.\+definition.\+Problem.\+get\+Codification()}}, \mbox{\hyperlink{State_8java_source_l00161}{problem.\+definition.\+State.\+get\+Copy()}}, \mbox{\hyperlink{Strategy_8java_source_l00405}{metaheurictics.\+strategy.\+Strategy.\+get\+Problem()}}, \mbox{\hyperlink{Strategy_8java_source_l00080}{metaheurictics.\+strategy.\+Strategy.\+get\+Strategy()}}, \mbox{\hyperlink{classproblem_1_1definition_1_1Codification_a3fadfa69736eedaf89c53863dd6ddc6d}{problem.\+definition.\+Codification.\+get\+Variable\+Count()}} y \mbox{\hyperlink{State_8java_source_l00077}{problem.\+definition.\+State.\+set\+Code()}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classevolutionary__algorithms_1_1complement_1_1OnePointCrossover_a6d644b471de305b6508b2b647edc76d1_cgraph}
+\end{center}
+\end{figure}
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{OnePointCrossover_8java}{One\+Point\+Crossover.\+java}}\end{DoxyCompactItemize}

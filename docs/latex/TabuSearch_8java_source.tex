@@ -1,0 +1,199 @@
+\doxysection{Tabu\+Search.\+java}
+\hypertarget{TabuSearch_8java_source}{}\label{TabuSearch_8java_source}\index{TabuSearch.java@{TabuSearch.java}}
+\mbox{\hyperlink{TabuSearch_8java}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00001}00001\ \textcolor{keyword}{package\ }metaheuristics.generators;}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00003}00003\ \textcolor{keyword}{import}\ java.lang.reflect.InvocationTargetException;}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00004}00004\ \textcolor{keyword}{import}\ java.util.ArrayList;}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00005}00005\ \textcolor{keyword}{import}\ java.util.List;}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00006}00006\ \textcolor{keyword}{import}\ java.util.Arrays;}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00008}00008\ \textcolor{keyword}{import}\ local\_search.acceptation\_type.AcceptType;}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00009}00009\ \textcolor{keyword}{import}\ local\_search.acceptation\_type.AcceptableCandidate;}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00010}00010\ \textcolor{keyword}{import}\ local\_search.candidate\_type.CandidateType;}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00011}00011\ \textcolor{keyword}{import}\ local\_search.candidate\_type.CandidateValue;}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00012}00012\ \textcolor{keyword}{import}\ local\_search.complement.StrategyType;}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00013}00013\ \textcolor{keyword}{import}\ local\_search.complement.TabuSolutions;}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00014}00014\ \textcolor{keyword}{import}\ metaheurictics.strategy.Strategy;}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00016}00016\ \textcolor{keyword}{import}\ problem.definition.Problem;}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00017}00017\ \textcolor{keyword}{import}\ problem.definition.State;}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00018}00018\ \textcolor{keyword}{import}\ problem.definition.Problem.ProblemType;}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00022}00022\ \textcolor{keyword}{import}\ factory\_interface.IFFactoryAcceptCandidate;}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00023}00023\ \textcolor{keyword}{import}\ factory\_method.FactoryAcceptCandidate;}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00028}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch}{00028}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_ad0157e54c7cc9736d0cfc1785a3f65bf}{TabuSearch}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator}{Generator}}\ \{}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00030}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_a31d63307aa195061e188c7723c4a33f7}{00030}}\ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1CandidateValue}{CandidateValue}}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_a31d63307aa195061e188c7723c4a33f7}{candidatevalue}};}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00031}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_afff3deea8e2f9e0edca22f21f8ff5856}{00031}}\ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{enumlocal__search_1_1acceptation__type_1_1AcceptType}{AcceptType}}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_afff3deea8e2f9e0edca22f21f8ff5856}{typeAcceptation}};}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00032}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_ae47364d69ae1f46aacca49de6dd7b3b9}{00032}}\ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{enumlocal__search_1_1complement_1_1StrategyType}{StrategyType}}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_ae47364d69ae1f46aacca49de6dd7b3b9}{strategy}};}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00033}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_ade3c6897851f8b12cc446cc7eeef4354}{00033}}\ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{enumlocal__search_1_1candidate__type_1_1CandidateType}{CandidateType}}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_ade3c6897851f8b12cc446cc7eeef4354}{typeCandidate}};}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00034}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_a4c8bb4f31daa880c2a864f198bc58e4f}{00034}}\ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_a4c8bb4f31daa880c2a864f198bc58e4f}{stateReferenceTS}};}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00035}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_a9cce5e426fbdd081c7ecd1f1dbcbdf25}{00035}}\ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{interfacefactory__interface_1_1IFFactoryAcceptCandidate}{IFFactoryAcceptCandidate}}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_a9cce5e426fbdd081c7ecd1f1dbcbdf25}{ifacceptCandidate}};}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00036}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_a976bc147b738e91a7b245424208ea510}{00036}}\ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{GeneratorType}}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_a976bc147b738e91a7b245424208ea510}{typeGenerator}};}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00037}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_a9dcb165b751d73d8d5b0817c5b4290cc}{00037}}\ \ \ \ \ \textcolor{keyword}{private}\ List<State>\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_a9dcb165b751d73d8d5b0817c5b4290cc}{listStateReference}}\ =\ \textcolor{keyword}{new}\ ArrayList<State>();}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00038}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_a18c862379e9c0da8496b6e1dee6ea5f7}{00038}}\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_a18c862379e9c0da8496b6e1dee6ea5f7}{weight}};}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00039}00039\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00040}00040\ \ \ \ \ \textcolor{comment}{//problemas\ dinamicos:\ use\ instance\ fields\ from\ Generator\ (countGender,\ countBetterGender)}}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00041}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_a9d1d860d8496cc16392eb4e86f4db8dd}{00041}}\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}[]\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_a9d1d860d8496cc16392eb4e86f4db8dd}{listCountBetterGender}}\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[10];}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00042}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_aadb7222432c87f8c7d3e49541af74e3e}{00042}}\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}[]\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_aadb7222432c87f8c7d3e49541af74e3e}{listCountGender}}\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[10];}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00043}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_a8c9a0a34d4ea513261aff246068b490e}{00043}}\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{float}[]\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_a8c9a0a34d4ea513261aff246068b490e}{listTrace}}\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{float}[1200000];}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00050}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_a6f3c2a118b89b335ccdf87ed881a7fc4}{00050}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{GeneratorType}}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_a6f3c2a118b89b335ccdf87ed881a7fc4}{getTypeGenerator}}()\ \{}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00051}00051\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_a976bc147b738e91a7b245424208ea510}{typeGenerator}};}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00052}00052\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00058}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_ab9330d706d7d48afbdc6595ba717130f}{00058}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_ab9330d706d7d48afbdc6595ba717130f}{setTypeGenerator}}(\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{GeneratorType}}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_a976bc147b738e91a7b245424208ea510}{typeGenerator}})\ \{}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00059}00059\ \ \ \ \ \ \ \ \ this.typeGenerator\ =\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_a976bc147b738e91a7b245424208ea510}{typeGenerator}};}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00060}00060\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00065}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_ad0157e54c7cc9736d0cfc1785a3f65bf}{00065}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_ad0157e54c7cc9736d0cfc1785a3f65bf}{TabuSearch}}()\ \{}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00066}00066\ \ \ \ \ \ \ \ \ super();}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00067}00067\ \ \ \ \ \ \ \ \ this.typeAcceptation\ =\ \mbox{\hyperlink{enumlocal__search_1_1acceptation__type_1_1AcceptType}{AcceptType}}.\mbox{\hyperlink{enumlocal__search_1_1acceptation__type_1_1AcceptType_a809f4fc0d597cbbca39ee7d6e9141aaa}{AcceptAnyone}};}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00068}00068\ \ \ \ \ \ \ \ \ this.strategy\ =\ \mbox{\hyperlink{enumlocal__search_1_1complement_1_1StrategyType}{StrategyType}}.\mbox{\hyperlink{enumlocal__search_1_1complement_1_1StrategyType_ac0c34198bb10ffedf05b8be68f72c170}{TABU}};}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00069}00069\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00070}00070\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00071}00071\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classproblem_1_1definition_1_1Problem}{Problem}}\ problem\ =\ \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy}{Strategy}}.\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_ad2641e12c52292930364de6655333aa8}{getStrategy}}().\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_a4bc6bd95db71e14b1f48c1bfc85f1305}{getProblem}}();}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00073}00073\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(problem.getTypeProblem().equals(\mbox{\hyperlink{enumproblem_1_1definition_1_1Problem_1_1ProblemType}{ProblemType}}.\mbox{\hyperlink{enumproblem_1_1definition_1_1Problem_1_1ProblemType_aa55383c4cb9a71cfeabc7f715ee0cd6e}{Maximizar}}))\ \{}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ this.typeCandidate\ =\ \mbox{\hyperlink{enumlocal__search_1_1candidate__type_1_1CandidateType}{CandidateType}}.\mbox{\hyperlink{enumlocal__search_1_1candidate__type_1_1CandidateType_a10a1f7a483a38c8c3911ff48e588faef}{GreaterCandidate}};}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00075}00075\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00076}00076\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ this.typeCandidate\ =\ \mbox{\hyperlink{enumlocal__search_1_1candidate__type_1_1CandidateType}{CandidateType}}.\mbox{\hyperlink{enumlocal__search_1_1candidate__type_1_1CandidateType_a83d72037a210a5d2146a2690a6a956e9}{SmallerCandidate}};}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00078}00078\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00079}00079\ }
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00080}00080\ \ \ \ \ \ \ \ \ this.candidatevalue\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1CandidateValue}{CandidateValue}}();}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00081}00081\ \ \ \ \ \ \ \ \ this.typeGenerator\ =\ \mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{GeneratorType}}.\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType_a35b152adcd5d695fdb37492228eb24fc}{TabuSearch}};}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00082}00082\ \ \ \ \ \ \ \ \ this.weight\ =\ 50;}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00083}00083\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_a8c9a0a34d4ea513261aff246068b490e}{listTrace}}[0]\ =\ this.weight;}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00084}00084\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_a9d1d860d8496cc16392eb4e86f4db8dd}{listCountBetterGender}}[0]\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00085}00085\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_aadb7222432c87f8c7d3e49541af74e3e}{listCountGender}}[0]\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00086}00086\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00087}00087\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00088}00088\ }
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00089}00089\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00095}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_a960394b27d55ada10842a94184aa39b4}{00095}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_a960394b27d55ada10842a94184aa39b4}{generate}}(Integer\ operatornumber)\ \textcolor{keywordflow}{throws}\ IllegalArgumentException,\ SecurityException,\ ClassNotFoundException,\ InstantiationException,\ IllegalAccessException,\ InvocationTargetException,\ NoSuchMethodException\ \{}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00096}00096\ \ \ \ \ \ \ \ \ List<State>\ neighborhood\ =\ \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy}{Strategy}}.\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_ad2641e12c52292930364de6655333aa8}{getStrategy}}().\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_a4bc6bd95db71e14b1f48c1bfc85f1305}{getProblem}}().\mbox{\hyperlink{classproblem_1_1definition_1_1Problem_a4cd649edb8862f21af171491cb9b9386}{getOperator}}().\mbox{\hyperlink{classproblem_1_1definition_1_1Operator_a5b6625843e73d938f9235985bf966b34}{generatedNewState}}(\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_a4c8bb4f31daa880c2a864f198bc58e4f}{stateReferenceTS}},\ operatornumber);}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00097}00097\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ statecandidate\ =\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_a31d63307aa195061e188c7723c4a33f7}{candidatevalue}}.stateCandidate(\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_a4c8bb4f31daa880c2a864f198bc58e4f}{stateReferenceTS}},\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_ade3c6897851f8b12cc446cc7eeef4354}{typeCandidate}},\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_ae47364d69ae1f46aacca49de6dd7b3b9}{strategy}},\ operatornumber,\ neighborhood);}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00098}00098\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ statecandidate;}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00099}00099\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00100}00100\ }
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00101}00101\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00106}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_ada5be4a7b947390cc70ad6b9bf33d412}{00106}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_ada5be4a7b947390cc70ad6b9bf33d412}{getReference}}()\ \{}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00107}00107\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_a4c8bb4f31daa880c2a864f198bc58e4f}{stateReferenceTS}};}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00108}00108\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00109}00109\ }
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00110}00110\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00115}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_a934077931cd4880ed942a42af6ab195f}{00115}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_a934077931cd4880ed942a42af6ab195f}{setInitialReference}}(\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ stateInitialRef)\ \{}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00116}00116\ \ \ \ \ \ \ \ \ this.stateReferenceTS\ =\ stateInitialRef;}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00117}00117\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00118}00118\ }
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00123}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_a989071f26389ac8286a7b9cf6b86d845}{00123}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_a989071f26389ac8286a7b9cf6b86d845}{setStateRef}}(\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ stateRef)\ \{}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00124}00124\ \ \ \ \ \ \ \ \ this.stateReferenceTS\ =\ stateRef;}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00125}00125\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00126}00126\ }
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00127}00127\ \ \ \ \ @Override\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00133}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_a8e5310bc24ca49dccb985a122173936c}{00133}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_a8e5310bc24ca49dccb985a122173936c}{updateReference}}(\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ stateCandidate,\ Integer\ countIterationsCurrent)\textcolor{keywordflow}{throws}\ IllegalArgumentException,\ SecurityException,\ ClassNotFoundException,\ InstantiationException,\ IllegalAccessException,\ InvocationTargetException,\ NoSuchMethodException\ \{}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00134}00134\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_a9cce5e426fbdd081c7ecd1f1dbcbdf25}{ifacceptCandidate}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classfactory__method_1_1FactoryAcceptCandidate}{FactoryAcceptCandidate}}();}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00135}00135\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1AcceptableCandidate}{AcceptableCandidate}}\ candidate\ =\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_a9cce5e426fbdd081c7ecd1f1dbcbdf25}{ifacceptCandidate}}.createAcceptCandidate(\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_afff3deea8e2f9e0edca22f21f8ff5856}{typeAcceptation}});}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00136}00136\ \ \ \ \ \ \ \ \ Boolean\ acept\ =\ candidate.\mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1AcceptableCandidate_aa9e62e1d2d213c3828d2491b506d0592}{acceptCandidate}}(\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_a4c8bb4f31daa880c2a864f198bc58e4f}{stateReferenceTS}},\ stateCandidate);}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00137}00137\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(acept.equals(\textcolor{keyword}{true}))}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00138}00138\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_a4c8bb4f31daa880c2a864f198bc58e4f}{stateReferenceTS}}\ =\ stateCandidate;}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00139}00139\ }
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00140}00140\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_ae47364d69ae1f46aacca49de6dd7b3b9}{strategy}}.equals(\mbox{\hyperlink{enumlocal__search_1_1complement_1_1StrategyType}{StrategyType}}.\mbox{\hyperlink{enumlocal__search_1_1complement_1_1StrategyType_ac0c34198bb10ffedf05b8be68f72c170}{TABU}})\ \&\&\ acept.equals(\textcolor{keyword}{true}))\ \{}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00141}00141\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classlocal__search_1_1complement_1_1TabuSolutions}{TabuSolutions}}.\mbox{\hyperlink{classlocal__search_1_1complement_1_1TabuSolutions_ad602469482bab1bd52b03ef738bd7907}{listTabu}}.size()\ <\ \mbox{\hyperlink{classlocal__search_1_1complement_1_1TabuSolutions}{TabuSolutions}}.\mbox{\hyperlink{classlocal__search_1_1complement_1_1TabuSolutions_a294b3167e2976e63e7264c619e756d82}{maxelements}})\ \{}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00142}00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Boolean\ find\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00143}00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ count\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ ((\mbox{\hyperlink{classlocal__search_1_1complement_1_1TabuSolutions}{TabuSolutions}}.\mbox{\hyperlink{classlocal__search_1_1complement_1_1TabuSolutions_ad602469482bab1bd52b03ef738bd7907}{listTabu}}.size()\ >\ count)\ \&\&\ (find.equals(\textcolor{keyword}{false})))\ \{}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00145}00145\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((\mbox{\hyperlink{classlocal__search_1_1complement_1_1TabuSolutions}{TabuSolutions}}.\mbox{\hyperlink{classlocal__search_1_1complement_1_1TabuSolutions_ad602469482bab1bd52b03ef738bd7907}{listTabu}}.get(count).Comparator(stateCandidate))==\textcolor{keyword}{true})\ \{}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00146}00146\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ find\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00147}00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00148}00148\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ count++;}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00149}00149\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00150}00150\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (find.equals(\textcolor{keyword}{false}))\ \{}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00151}00151\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlocal__search_1_1complement_1_1TabuSolutions}{TabuSolutions}}.\mbox{\hyperlink{classlocal__search_1_1complement_1_1TabuSolutions_ad602469482bab1bd52b03ef738bd7907}{listTabu}}.add(stateCandidate);}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00152}00152\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00153}00153\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00154}00154\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlocal__search_1_1complement_1_1TabuSolutions}{TabuSolutions}}.\mbox{\hyperlink{classlocal__search_1_1complement_1_1TabuSolutions_ad602469482bab1bd52b03ef738bd7907}{listTabu}}.remove(0);}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00155}00155\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Boolean\ find\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00156}00156\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ count\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00157}00157\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{classlocal__search_1_1complement_1_1TabuSolutions}{TabuSolutions}}.\mbox{\hyperlink{classlocal__search_1_1complement_1_1TabuSolutions_ad602469482bab1bd52b03ef738bd7907}{listTabu}}.size()\ >\ count\ \&\&\ find.equals(\textcolor{keyword}{false}))\ \{}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00158}00158\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((\mbox{\hyperlink{classlocal__search_1_1complement_1_1TabuSolutions}{TabuSolutions}}.\mbox{\hyperlink{classlocal__search_1_1complement_1_1TabuSolutions_ad602469482bab1bd52b03ef738bd7907}{listTabu}}.get(count).Comparator(stateCandidate))==\textcolor{keyword}{true})\ \{}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00159}00159\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ find\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00160}00160\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00161}00161\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ count++;}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00162}00162\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00163}00163\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (find.equals(\textcolor{keyword}{false}))\ \{}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00164}00164\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlocal__search_1_1complement_1_1TabuSolutions}{TabuSolutions}}.\mbox{\hyperlink{classlocal__search_1_1complement_1_1TabuSolutions_ad602469482bab1bd52b03ef738bd7907}{listTabu}}.add(stateCandidate);}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00165}00165\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00166}00166\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00167}00167\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00168}00168\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00169}00169\ }
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00170}00170\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00175}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_ad36e2583d8edb47cc2e8dae351ff3a1a}{00175}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{GeneratorType}}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_ad36e2583d8edb47cc2e8dae351ff3a1a}{getType}}()\ \{}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00176}00176\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this.typeGenerator;}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00177}00177\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00178}00178\ }
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00179}00179\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00184}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_aab7acb152f577f48ee9a0f29b01e3689}{00184}}\ \ \ \ \ \textcolor{keyword}{public}\ List<State>\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_aab7acb152f577f48ee9a0f29b01e3689}{getReferenceList}}()\ \{}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00185}00185\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_a9dcb165b751d73d8d5b0817c5b4290cc}{listStateReference}}.add(\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_a4c8bb4f31daa880c2a864f198bc58e4f}{stateReferenceTS}});}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00186}00186\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ ArrayList<State>(\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_a9dcb165b751d73d8d5b0817c5b4290cc}{listStateReference}});}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00187}00187\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00188}00188\ }
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00189}00189\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00194}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_acc567d162eb376a317f3d8eae95420a1}{00194}}\ \ \ \ \ \textcolor{keyword}{public}\ List<State>\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_acc567d162eb376a317f3d8eae95420a1}{getSonList}}()\ \{}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00195}00195\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00196}00196\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00197}00197\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00198}00198\ }
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00203}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_a9c28686a2db567c3c4484d6065dcd04a}{00203}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_a9c28686a2db567c3c4484d6065dcd04a}{setTypeCandidate}}(\mbox{\hyperlink{enumlocal__search_1_1candidate__type_1_1CandidateType}{CandidateType}}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_ade3c6897851f8b12cc446cc7eeef4354}{typeCandidate}})\{}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00204}00204\ \ \ \ \ \ \ \ \ this.typeCandidate\ =\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_ade3c6897851f8b12cc446cc7eeef4354}{typeCandidate}};}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00205}00205\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00206}00206\ }
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00207}00207\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00213}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_adc6c6a8184388aafc9d143d63ca7ffde}{00213}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{boolean}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_adc6c6a8184388aafc9d143d63ca7ffde}{awardUpdateREF}}(\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ stateCandidate)\ \{}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00214}00214\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00215}00215\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00216}00216\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00217}00217\ }
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00222}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_a8a29d1741aaafb540e647ffda3d690e6}{00222}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_a8a29d1741aaafb540e647ffda3d690e6}{getWeight}}()\ \{}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00223}00223\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00224}00224\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this.weight;}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00225}00225\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00226}00226\ }
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00227}00227\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00232}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_a87599bb3ca19dda7107a5ae796531f4d}{00232}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_a87599bb3ca19dda7107a5ae796531f4d}{setWeight}}(\textcolor{keywordtype}{float}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_a18c862379e9c0da8496b6e1dee6ea5f7}{weight}})\ \{}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00233}00233\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00234}00234\ \ \ \ \ \ \ \ \ this.weight\ =\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_a18c862379e9c0da8496b6e1dee6ea5f7}{weight}};}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00235}00235\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00236}00236\ }
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00237}00237\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00242}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_ac5abb641df2c61b9c1aa4911ae69fb75}{00242}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}[]\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_ac5abb641df2c61b9c1aa4911ae69fb75}{getListCountBetterGender}}()\ \{}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00243}00243\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00244}00244\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (this.listCountBetterGender\ ==\ \textcolor{keyword}{null})\ ?\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[0]\ :\ Arrays.copyOf(this.listCountBetterGender,\ this.listCountBetterGender.length);}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00245}00245\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00246}00246\ }
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00247}00247\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00252}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_aa15df7ff1b01b2b9997ad2b8ca39d3aa}{00252}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}[]\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_aa15df7ff1b01b2b9997ad2b8ca39d3aa}{getListCountGender}}()\ \{}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00253}00253\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00254}00254\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (this.listCountGender\ ==\ \textcolor{keyword}{null})\ ?\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[0]\ :\ Arrays.copyOf(this.listCountGender,\ this.listCountGender.length);}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00255}00255\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00256}00256\ }
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00257}00257\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00262}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_add5beec981c395092cd1101d8aa66850}{00262}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}[]\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1TabuSearch_add5beec981c395092cd1101d8aa66850}{getTrace}}()\ \{}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00263}00263\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00264}00264\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (this.listTrace\ ==\ \textcolor{keyword}{null})\ ?\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{float}[0]\ :\ Arrays.copyOf(this.listTrace,\ this.listTrace.length);}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00265}00265\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00266}00266\ }
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00267}00267\ \}}
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00268}00268\ }
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00269}00269\ }
+\DoxyCodeLine{\Hypertarget{TabuSearch_8java_source_l00270}00270\ }
+
+\end{DoxyCode}

@@ -1,0 +1,1848 @@
+\doxysection{Referencia de la clase metaheurictics.\+strategy.\+Strategy}
+\hypertarget{classmetaheurictics_1_1strategy_1_1Strategy}{}\label{classmetaheurictics_1_1strategy_1_1Strategy}\index{metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}}
+
+
+\doxylink{classmetaheurictics_1_1strategy_1_1Strategy}{Strategy} -\/.  
+
+
+
+
+Diagrama de colaboración de metaheurictics.\+strategy.\+Strategy\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheurictics_1_1strategy_1_1Strategy__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_af320de8dac2de5a7ec10d373952064d5}{execute\+Strategy}} (int countmax\+Iterations, int count\+Iterations\+Change, int operatornumber, \mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{Generator\+Type}} generator\+Type)  throws Illegal\+Argument\+Exception, Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception, Illegal\+Access\+Exception, Invocation\+Target\+Exception, No\+Such\+Method\+Exception
+\begin{DoxyCompactList}\small\item\em execute\+Strategy -\/ method to execute the strategy. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_a2f4520e24d31de6e4895bdf4ab2b9502}{update\+Count\+Gender}} ()
+\item 
+void \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_aa65b766626141e9b647a42c0056a4798}{update\+Weight}} ()
+\begin{DoxyCompactList}\small\item\em update\+Weight -\/ method to update the weight of the generators. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_ae5fae0f94a80e56677aa3f7ac77b6d44}{update}} (Integer count\+Iterations\+Current)  throws Illegal\+Argument\+Exception, Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception, Illegal\+Access\+Exception, Invocation\+Target\+Exception, No\+Such\+Method\+Exception 
+\item 
+\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator}{Generator}} \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_abc3c1b65673f8757ae414dfd4bf18f97}{new\+Generator}} (\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{Generator\+Type}} Generatortype)  throws Illegal\+Argument\+Exception, Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception, Illegal\+Access\+Exception, Invocation\+Target\+Exception, No\+Such\+Method\+Exception 
+\begin{DoxyCompactList}\small\item\em new\+Generator -\/ method to create a new generator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_a4194b52f17701a8fabfc1265e6b4b267}{get\+Best\+State}} ()
+\begin{DoxyCompactList}\small\item\em get\+Best\+State -\/ method to get the best state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_aef162976b610a8d30ab537af9face3b4}{set\+Best\+State}} (\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} bes\+State)
+\begin{DoxyCompactList}\small\item\em set\+Best\+State -\/ method to set the best state. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classlocal__search_1_1complement_1_1StopExecute}{Stop\+Execute}} \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_a1ce64c953a44083a90753c3ffb46d40e}{get\+Stopexecute}} ()
+\begin{DoxyCompactList}\small\item\em get\+Stopexecute -\/ method to get the stop execute. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_a6d5037c21b9a24975f301ac6aba4dffd}{get\+Count\+Max}} ()
+\begin{DoxyCompactList}\small\item\em get\+Count\+Max -\/ method to get the maximum count. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_a7512cbe68ba46c4d8534f0aff17b5c17}{set\+Count\+Max}} (int \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_a3251f7d633dd233da6de5e84cb49b14b}{count\+Max}})
+\begin{DoxyCompactList}\small\item\em set\+Count\+Max -\/ method to set the maximum count. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_a2f833e91e1f26476659d049362f219ac}{set\+Stopexecute}} (\mbox{\hyperlink{classlocal__search_1_1complement_1_1StopExecute}{Stop\+Execute}} \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_aba3d7b221051061dd7955d3059ea2272}{stopexecute}})
+\begin{DoxyCompactList}\small\item\em set\+Stopexecute -\/ method to set the stop execute. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classlocal__search_1_1complement_1_1UpdateParameter}{Update\+Parameter}} \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_a0036f56e2cd146ee5f37a6da30ed415a}{get\+Updateparameter}} ()
+\begin{DoxyCompactList}\small\item\em get\+Updateparameter -\/ method to get the update parameter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_ac781087326a37b5f9cc1ea135bfc7c82}{set\+Updateparameter}} (\mbox{\hyperlink{classlocal__search_1_1complement_1_1UpdateParameter}{Update\+Parameter}} \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_aeae847a5e9cad6d863212f3e3cf04cbe}{updateparameter}})
+\begin{DoxyCompactList}\small\item\em set\+Updateparameter -\/ method to set the update parameter. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classproblem_1_1definition_1_1Problem}{Problem}} \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_a4bc6bd95db71e14b1f48c1bfc85f1305}{get\+Problem}} ()
+\begin{DoxyCompactList}\small\item\em get\+Problem -\/ method to get the problem. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_a2a5bb3ddd64d9f7d7ee9f50da7804850}{set\+Problem}} (\mbox{\hyperlink{classproblem_1_1definition_1_1Problem}{Problem}} \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_a72e752e037880a0ff45c679bbc553d00}{problem}})
+\begin{DoxyCompactList}\small\item\em set\+Problem -\/ method to set the problem. \end{DoxyCompactList}\item 
+Array\+List$<$ String $>$ \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_ac70469856a2b6424f29952c0e77eebf8}{get\+List\+Key}} ()
+\begin{DoxyCompactList}\small\item\em get\+List\+Key -\/ method to get the list of keys. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_a01adb5013155c7f691f95e8ab59181d0}{initialize\+Generators}} ()  throws Illegal\+Argument\+Exception, Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception, Illegal\+Access\+Exception, Invocation\+Target\+Exception, No\+Such\+Method\+Exception 
+\begin{DoxyCompactList}\small\item\em initialize\+Generators -\/ method to initialize the generators. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_a24dc7f53fd6fed09d4db04350f73b1a3}{initialize}} ()  throws Illegal\+Argument\+Exception, Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception, Illegal\+Access\+Exception, Invocation\+Target\+Exception, No\+Such\+Method\+Exception 
+\begin{DoxyCompactList}\small\item\em initialize -\/ method to initialize the generators. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_a6440afde976cb69c01b95d4c41a9ff5c}{get\+Count\+Current}} ()
+\begin{DoxyCompactList}\small\item\em get\+Count\+Current -\/ method to get the current count. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_a0a7bed828f9d4fb1b29dbda112020b77}{set\+Count\+Current}} (int \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_a537769ff595ae1b51c2035982723be6e}{count\+Current}})
+\begin{DoxyCompactList}\small\item\em set\+Count\+Current -\/ method to set the current count. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_a307eddf8b8d1eadfdce6b89148bd78fb}{get\+Threshold}} ()
+\begin{DoxyCompactList}\small\item\em get\+Threshold -\/ method to get the threshold. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_abc89b807d8506e11ef85c41eeb5e1858}{set\+Threshold}} (double \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_a1914ff8fe50a63e507d63538cd63e9ea}{threshold}})
+\begin{DoxyCompactList}\small\item\em set\+Threshold -\/ method to set the threshold. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_a6d8f615b37de120cbf16eac6f1b6e721}{calculate\+Off\+Line\+Performance}} (float sum\+Max, int count\+Off)
+\begin{DoxyCompactList}\small\item\em calculate\+Off\+Line\+Performance -\/ method to calculate the offline performance. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_a91022422139781e5efd55fe77049bcce}{update\+Ref}} (\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{Generator\+Type}} generator\+Type)
+\begin{DoxyCompactList}\small\item\em update\+Ref -\/ method to update the reference. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_a1a969707e4659afea6bc6ee7479e9e65}{update\+Ref\+MultiG}} ()
+\begin{DoxyCompactList}\small\item\em update\+Ref\+MultiG -\/ method to update the reference for multi-\/generators. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_a507abefc022ec475c0d5473055adf484}{update\+Ref\+Generator}} (\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator}{Generator}} \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_a2f0ea18b2127e6e38c1d335fed32c7e0}{generator}})
+\begin{DoxyCompactList}\small\item\em update\+Ref\+Generator -\/ method to update the reference for generators. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Métodos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_ac65d26e08073f5cfc7596577f18b9694}{Strategy}} \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_ad2641e12c52292930364de6655333aa8}{get\+Strategy}} ()
+\begin{DoxyCompactList}\small\item\em get\+Strategy -\/ getter of \doxylink{classmetaheurictics_1_1strategy_1_1Strategy}{Strategy} singleton instance \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_ac4829af561593656b314235f004f0308}{destroy\+Execute}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos públicos}
+\begin{DoxyCompactItemize}
+\item 
+Sorted\+Map$<$ \mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{Generator\+Type}}, \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator}{Generator}} $>$ \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_a72b0b983ab5990ef999037f9c331515a}{map\+Generators}}
+\item 
+\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator}{Generator}} \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_a2f0ea18b2127e6e38c1d335fed32c7e0}{generator}}
+\item 
+double \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_a1914ff8fe50a63e507d63538cd63e9ea}{threshold}}
+\item 
+List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_a6079f1c09fe81506e05976037911be31}{list\+States}}
+\item 
+List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_ad3a183f63a0c3c4b25957baa9040eaec}{list\+Best}}
+\item 
+List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_aa572e7d90e24bae70ea47a31fee298f4}{list\+Ref\+Poblac\+Final}} = new Array\+List$<$\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}$>$ ()
+\item 
+\mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1Dominance}{Dominance}} \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_a5ac9ccf79296d15b1a44d119c1f1fc6e}{not\+Dominated}}
+\item 
+boolean \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_a4e698ca86e2842c70099dadd560e7578}{save\+List\+States}}
+\item 
+boolean \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_a077d2cdfe76bd31661ca024e339a4c98}{save\+List\+Best\+States}}
+\item 
+boolean \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_ad7c438a82bc4f08ad239b3bc56320bca}{save\+Frene\+Pareto\+Mono\+Objetivo}}
+\item 
+boolean \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_a3a4ef09902bbbfec07102446f7eb2809}{calculate\+Time}}
+\item 
+float\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_ab111e2ebd50ff83f126ef6f5201f9283}{list\+Offline\+Error}} = new float\mbox{[}100\mbox{]}
+\item 
+int \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_ab22b49ea4c8e68c8d35f392bcc4f8ded}{count\+Period\+Change}} = 0
+\item 
+int \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_abea8b81eeed176475070dac996fe9b6c}{count\+Change}} = 0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Métodos privados}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_ac65d26e08073f5cfc7596577f18b9694}{Strategy}} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{classmetaheurictics_1_1strategy_1_1Strategy}{Strategy} -\/ method constructor of \doxylink{classmetaheurictics_1_1strategy_1_1Strategy}{Strategy} singleton. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_af08a0f377eacb28b46d0fcc315b69ad0}{best\+State}}
+\item 
+\mbox{\hyperlink{classproblem_1_1definition_1_1Problem}{Problem}} \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_a72e752e037880a0ff45c679bbc553d00}{problem}}
+\item 
+\mbox{\hyperlink{classlocal__search_1_1complement_1_1StopExecute}{Stop\+Execute}} \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_aba3d7b221051061dd7955d3059ea2272}{stopexecute}}
+\item 
+\mbox{\hyperlink{classlocal__search_1_1complement_1_1UpdateParameter}{Update\+Parameter}} \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_aeae847a5e9cad6d863212f3e3cf04cbe}{updateparameter}}
+\item 
+\mbox{\hyperlink{interfacefactory__interface_1_1IFFactoryGenerator}{IFFactory\+Generator}} \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_afc091846262ceb740b13d949744e8bf7}{if\+Factory\+Generator}}
+\item 
+int \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_a537769ff595ae1b51c2035982723be6e}{count\+Current}}
+\item 
+int \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_a3251f7d633dd233da6de5e84cb49b14b}{count\+Max}}
+\item 
+int \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_a86782bca2ad115b47f019513b1e8a389}{count\+Periodo}}
+\item 
+int \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_ab3b8afb295795d6f31000bd5c18700be}{periodo}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos estáticos privados}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_ac65d26e08073f5cfc7596577f18b9694}{Strategy}} \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_a235c3afb5c1d4afe8ebaa1da12cff32e}{strategy}} = null
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+\doxylink{classmetaheurictics_1_1strategy_1_1Strategy}{Strategy} -\/. 
+
+Definición en la línea \mbox{\hyperlink{Strategy_8java_source_l00033}{33}} del archivo \mbox{\hyperlink{Strategy_8java_source}{Strategy.\+java}}.
+
+
+
+\label{doc-constructors}
+\Hypertarget{classmetaheurictics_1_1strategy_1_1Strategy_doc-constructors}
+\doxysubsection{Documentación de constructores y destructores}
+\Hypertarget{classmetaheurictics_1_1strategy_1_1Strategy_ac65d26e08073f5cfc7596577f18b9694}\index{metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}!Strategy@{Strategy}}
+\index{Strategy@{Strategy}!metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}}
+\doxysubsubsection{\texorpdfstring{Strategy()}{Strategy()}}
+{\footnotesize\ttfamily \label{classmetaheurictics_1_1strategy_1_1Strategy_ac65d26e08073f5cfc7596577f18b9694} 
+metaheurictics.\+strategy.\+Strategy.\+Strategy (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+\doxylink{classmetaheurictics_1_1strategy_1_1Strategy}{Strategy} -\/ method constructor of \doxylink{classmetaheurictics_1_1strategy_1_1Strategy}{Strategy} singleton. 
+
+
+
+Definición en la línea \mbox{\hyperlink{Strategy_8java_source_l00073}{73}} del archivo \mbox{\hyperlink{Strategy_8java_source}{Strategy.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ super();}
+\DoxyCodeLine{00075\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referenciado por \mbox{\hyperlink{Strategy_8java_source_l00080}{get\+Strategy()}} y \mbox{\hyperlink{Strategy_8java_source_l00307}{update()}}.
+
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classmetaheurictics_1_1strategy_1_1Strategy_ac65d26e08073f5cfc7596577f18b9694_icgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-func-members}
+\Hypertarget{classmetaheurictics_1_1strategy_1_1Strategy_doc-func-members}
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{classmetaheurictics_1_1strategy_1_1Strategy_a6d8f615b37de120cbf16eac6f1b6e721}\index{metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}!calculateOffLinePerformance@{calculateOffLinePerformance}}
+\index{calculateOffLinePerformance@{calculateOffLinePerformance}!metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}}
+\doxysubsubsection{\texorpdfstring{calculateOffLinePerformance()}{calculateOffLinePerformance()}}
+{\footnotesize\ttfamily \label{classmetaheurictics_1_1strategy_1_1Strategy_a6d8f615b37de120cbf16eac6f1b6e721} 
+void metaheurictics.\+strategy.\+Strategy.\+calculate\+Off\+Line\+Performance (\begin{DoxyParamCaption}\item[{float}]{sum\+Max}{, }\item[{int}]{count\+Off}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+calculate\+Off\+Line\+Performance -\/ method to calculate the offline performance. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em sum\+Max} & \\
+\hline
+{\em count\+Off} & \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{Strategy_8java_source_l00509}{509}} del archivo \mbox{\hyperlink{Strategy_8java_source}{Strategy.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00509\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00510\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ off\ =\ sumMax\ /\ countPeriodChange;}
+\DoxyCodeLine{00511\ \ \ \ \ \ \ \ \ listOfflineError[countOff]\ =\ off;}
+\DoxyCodeLine{00512\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{Strategy_8java_source_l00064}{count\+Period\+Change}} y \mbox{\hyperlink{Strategy_8java_source_l00063}{list\+Offline\+Error}}.
+
+
+
+Referenciado por \mbox{\hyperlink{Strategy_8java_source_l00094}{execute\+Strategy()}}.
+
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheurictics_1_1strategy_1_1Strategy_a6d8f615b37de120cbf16eac6f1b6e721_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmetaheurictics_1_1strategy_1_1Strategy_ac4829af561593656b314235f004f0308}\index{metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}!destroyExecute@{destroyExecute}}
+\index{destroyExecute@{destroyExecute}!metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}}
+\doxysubsubsection{\texorpdfstring{destroyExecute()}{destroyExecute()}}
+{\footnotesize\ttfamily \label{classmetaheurictics_1_1strategy_1_1Strategy_ac4829af561593656b314235f004f0308} 
+void metaheurictics.\+strategy.\+Strategy.\+destroy\+Execute (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{Strategy_8java_source_l00483}{483}} del archivo \mbox{\hyperlink{Strategy_8java_source}{Strategy.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00483\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00484\ \ \ \ \ \ \ \ \ strategy\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00485\ \ \ \ \ \ \ \ \ RandomSearch.listStateReference.clear();}
+\DoxyCodeLine{00486\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{RandomSearch_8java_source_l00036}{metaheuristics.\+generators.\+Random\+Search.\+list\+State\+Reference}} y \mbox{\hyperlink{Strategy_8java_source_l00035}{strategy}}.
+
+\Hypertarget{classmetaheurictics_1_1strategy_1_1Strategy_af320de8dac2de5a7ec10d373952064d5}\index{metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}!executeStrategy@{executeStrategy}}
+\index{executeStrategy@{executeStrategy}!metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}}
+\doxysubsubsection{\texorpdfstring{executeStrategy()}{executeStrategy()}}
+{\footnotesize\ttfamily \label{classmetaheurictics_1_1strategy_1_1Strategy_af320de8dac2de5a7ec10d373952064d5} 
+void metaheurictics.\+strategy.\+Strategy.\+execute\+Strategy (\begin{DoxyParamCaption}\item[{int}]{countmax\+Iterations}{, }\item[{int}]{count\+Iterations\+Change}{, }\item[{int}]{operatornumber}{, }\item[{\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{Generator\+Type}}}]{generator\+Type}{}\end{DoxyParamCaption}) throws Illegal\+Argument\+Exception, Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception, Illegal\+Access\+Exception, Invocation\+Target\+Exception, No\+Such\+Method\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+execute\+Strategy -\/ method to execute the strategy. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em countmax\+Iterations} & \\
+\hline
+{\em count\+Iterations\+Change} & \\
+\hline
+{\em operatornumber} & \\
+\hline
+{\em generator\+Type} & \\
+\hline
+\end{DoxyParams}
+run -\/ method to grant privileged permission for reflective access to non-\/public clone() \begin{DoxyReturn}{Devuelve}
+
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{Strategy_8java_source_l00094}{94}} del archivo \mbox{\hyperlink{Strategy_8java_source}{Strategy.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ si\ se\ quiere\ calcular\ el\ tiempo\ de\ ejecucion\ del\ un\ algoritmo}}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(calculateTime\ ==\ \textcolor{keyword}{true})\{}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ initialTime\ =\ System.currentTimeMillis();}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ this.countMax\ =\ countmaxIterations;\ \textcolor{comment}{//\ max\ cantidad\ de\ iteraciones}}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \textcolor{comment}{//generar\ estado\ inicial\ de\ la\ estrategia}}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ Generator\ randomInitial\ =\ \textcolor{keyword}{new}\ RandomSearch();}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ State\ initialState\ =\ randomInitial.generate(operatornumber);}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ problem.Evaluate(initialState);\ \textcolor{comment}{//evaluar\ ese\ estado}}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ initialState.setTypeGenerator(generatorType);}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ getProblem().setState(initialState);}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \textcolor{comment}{//si\ se\ va\ a\ salvar\ la\ lista\ de\ estados\ generados,\ adicionar\ el\ estado}}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(saveListStates\ ==\ \ \textcolor{keyword}{true})\{}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ listStates\ =\ \textcolor{keyword}{new}\ ArrayList<State>();\ \textcolor{comment}{//list\ de\ estados\ generados}}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ listStates.add(initialState);}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \textcolor{comment}{//si\ se\ va\ a\ salvar\ la\ lista\ de\ mejores\ soluciones\ encontradas\ en\ cada\ iteracion}}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(saveListBestStates\ ==\ \textcolor{keyword}{true})\{}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ listBest\ =\ \textcolor{keyword}{new}\ ArrayList<State>();\ \textcolor{comment}{//\ list\ de\ mejores\ estados\ encontrados}}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ listBest.add(initialState);}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(saveFreneParetoMonoObjetivo\ ==\ \textcolor{keyword}{true})\{}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ notDominated\ =\ \textcolor{keyword}{new}\ Dominance();}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ crear\ el\ generador\ a\ ejecutar}}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ generator\ =\ newGenerator(generatorType);}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ generator.setInitialReference(initialState);}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ bestState\ =\ initialState;}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ countCurrent\ =\ 0;}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ listRefPoblacFinal\ =\ \textcolor{keyword}{new}\ ArrayList<State>();}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ MultiGenerator\ multiGenerator\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ countPeriodChange\ =\ countIterationsChange;}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ countChange\ =\ countIterationsChange;}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ countPeriodo\ =\ countIterationsChange\ /\ 10;\ \textcolor{comment}{//cantidad\ de\ iteraciones\ de\ un\ periodo\ }}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \textcolor{comment}{//verificar\ que\ es\ portafolio\ e\ inicializar\ los\ generadores\ del\ portafolio}}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(generatorType.equals(GeneratorType.MultiGenerator))\{}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ initializeGenerators();}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ MultiGenerator.initializeGenerators();}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ MultiGenerator.listGeneratedPP.clear();}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ create\ a\ clone\ of\ the\ MultiGenerator\ using\ reflection\ to\ access\ protected\ clone()}}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{final}\ java.lang.reflect.Method\ cloneMethod\ =\ generator.getClass().getDeclaredMethod(\textcolor{stringliteral}{"{}clone"{}});}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Grant\ privileged\ permission\ for\ reflective\ access\ to\ non-\/public\ clone()}}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ AccessController.doPrivileged(\textcolor{keyword}{new}\ PrivilegedAction<Void>()\ \{}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Void\ run()\ \{}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cloneMethod.setAccessible(\textcolor{keyword}{true});}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ multiGenerator\ =\ (MultiGenerator)\ cloneMethod.invoke(generator);}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (Exception\ e)\ \{}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ RuntimeException(\textcolor{stringliteral}{"{}Failed\ to\ clone\ MultiGenerator"{}},\ e);}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ initialize();\ \textcolor{comment}{//crea\ el\ mapa\ de\ generadores}}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ update(countCurrent);}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ sumMax\ =\ 0;\ \textcolor{comment}{//\ suma\ acumulativa\ para\ almacenar\ la\ evaluacion\ de\ la\ mejor\ solucion\ encotrada\ y\ calcular\ el\ OfflinePerformance}}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ countOff\ =\ 0;\ \textcolor{comment}{//\ variable\ par\ contar\ los\ OfflinePerformance\ que\ se\ van\ salvando\ en\ el\ arreglo}}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \textcolor{comment}{//ciclio\ de\ ejecuci{\ucr}n\ del\ algoritmo}}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (!stopexecute.stopIterations(countCurrent,\ countmaxIterations))\{}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//si\ se\ detecta\ un\ cambio}}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(countCurrent\ ==\ countChange)\{}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//calcular\ offlinePerformance}}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ calculateOffLinePerformance(sumMax,\ countOff);}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ countOff++;}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sumMax\ =\ 0;}
+\DoxyCodeLine{00166\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ countIterationsChange\ =\ countIterationsChange\ +\ countPeriodChange;\ //\ actualizar\ la\ cantidad\ de\ iteraciones}}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//actualizar\ la\ referencia\ luego\ de\ un\ cambio}}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ updateRef(generatorType);}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ countChange\ =\ countChange\ +\ countPeriodChange;}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//generar\ un\ nuevo\ candidato\ en\ la\ iteracion,\ dependiendo\ del\ generador}}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ State\ stateCandidate\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(generatorType.equals(GeneratorType.MultiGenerator))\{}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(countPeriodo\ ==\ countCurrent)\{}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ updateCountGender();}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ countPeriodo\ =\ countPeriodo\ +\ countPeriodChange\ /\ 10;}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ periodo\ =\ 0;}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MultiGenerator.activeGenerator.countBetterGender\ =\ 0;}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ updateWeight();\textcolor{comment}{//actualizar\ el\ peso\ de\ los\ generadores\ si\ se\ reinician\ cuando\ ocurre\ un\ cambio}}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//generar\ el\ estado\ candidato\ de\ la\ iteraci{\ucr}n}}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ stateCandidate\ =\ multiGenerator.generate(operatornumber);}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ problem.Evaluate(stateCandidate);}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ stateCandidate.setEvaluation(stateCandidate.getEvaluation());}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ stateCandidate.setNumber(countCurrent);}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ stateCandidate.setTypeGenerator(generatorType);}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ multiGenerator.updateReference(stateCandidate,\ countCurrent);}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ stateCandidate\ =\ generator.generate(operatornumber);}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ problem.Evaluate(stateCandidate);}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ stateCandidate.setEvaluation(stateCandidate.getEvaluation());}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ stateCandidate.setNumber(countCurrent);}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ stateCandidate.setTypeGenerator(generatorType);}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ generator.updateReference(stateCandidate,\ countCurrent);}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(saveListStates\ ==\ \ \textcolor{keyword}{true})\{}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ listStates.add(stateCandidate);}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00198\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ listStates.add(stateCandidate);}}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//actualizar\ el\ mejor\ estado\ encontrado\ solo\ tiene\ sentido\ para\ algoritmos\ monoobjetivos}}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//actualizar\ el\ mejor\ estado\ encontrado\ solo\ tiene\ sentido\ para\ algoritmos\ monoobjetivos}}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((getProblem().getTypeProblem().equals(ProblemType.Maximizar))\ \&\&\ bestState.getEvaluation().get(bestState.getEvaluation().size()\ -\/\ 1)\ <\ stateCandidate.getEvaluation().get(bestState.getEvaluation().size()\ -\/\ 1))\ \{}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ bestState\ =\ stateCandidate;}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((problem.getTypeProblem().equals(ProblemType.Minimizar))\ \&\&\ bestState.getEvaluation().get(bestState.getEvaluation().size()\ -\/\ 1)\ >\ stateCandidate.getEvaluation().get(bestState.getEvaluation().size()\ -\/\ 1))\ \{}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ bestState\ =\ stateCandidate;}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println("{}Evaluacion:\ "{}+\ bestState.getEvaluation());}}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(saveListBestStates\ ==\ \textcolor{keyword}{true})\{}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ listBest.add(bestState);}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sumMax\ =\ (float)\ (sumMax\ +\ bestState.getEvaluation().get(0));}
+\DoxyCodeLine{00214\ }
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ no\ ha\ ocurrido\ un\ cambio}}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ State\ stateCandidate\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(generatorType.equals(GeneratorType.MultiGenerator))\{}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(countPeriodo\ ==\ countCurrent)\{}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ updateCountGender();}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ countPeriodo\ =\ countPeriodo\ +\ countPeriodChange\ /\ 10;}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ periodo++;}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MultiGenerator.activeGenerator.countBetterGender\ =\ 0;}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ stateCandidate\ =\ multiGenerator.generate(operatornumber);}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ problem.Evaluate(stateCandidate);}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ stateCandidate.setEvaluation(stateCandidate.getEvaluation());}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ stateCandidate.setNumber(countCurrent);}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ stateCandidate.setTypeGenerator(generatorType);}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ multiGenerator.updateReference(stateCandidate,\ countCurrent);}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//generar\ estado\ candidato\ y\ evaluar\ si\ es\ aceptado\ o\ no\ }}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ stateCandidate\ =\ generator.generate(operatornumber);}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ problem.Evaluate(stateCandidate);}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ stateCandidate.setEvaluation(stateCandidate.getEvaluation());}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ stateCandidate.setNumber(countCurrent);}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ stateCandidate.setTypeGenerator(generatorType);}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ generator.updateReference(stateCandidate,\ countCurrent);\ \textcolor{comment}{//\ actualizar\ la\ referencia\ del\ estado}}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(saveListStates\ ==\ \ \textcolor{keyword}{true})\{}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ listStates.add(stateCandidate);}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(saveFreneParetoMonoObjetivo\ ==\ \textcolor{keyword}{true})\{}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ notDominated.listDominance(stateCandidate,\ listRefPoblacFinal);}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ countCurrent\ =\ UpdateParameter.updateParameter(countCurrent);}
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//actualizar\ el\ mejor\ estado\ encontrado\ solo\ tiene\ sentido\ para\ algoritmos\ monoobjetivos}}
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((getProblem().getTypeProblem().equals(ProblemType.Maximizar))\ \&\&\ bestState.getEvaluation().get(bestState.getEvaluation().size()\ -\/\ 1)\ <\ stateCandidate.getEvaluation().get(bestState.getEvaluation().size()\ -\/\ 1))\ \{}
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ bestState\ =\ stateCandidate;}
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((problem.getTypeProblem().equals(ProblemType.Minimizar))\ \&\&\ bestState.getEvaluation().get(bestState.getEvaluation().size()\ -\/\ 1)\ >\ stateCandidate.getEvaluation().get(bestState.getEvaluation().size()\ -\/\ 1))\ \{}
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ bestState\ =\ stateCandidate;}
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println("{}Evaluacion:\ "{}+\ bestState.getEvaluation());}}
+\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(saveListBestStates\ ==\ \textcolor{keyword}{true})\{}
+\DoxyCodeLine{00258\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ listBest.add(bestState);}
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00260\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sumMax\ =\ (float)\ (sumMax\ +\ bestState.getEvaluation().get(0));}
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00262\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ System.out.println("{}Iteracion:\ "{}\ +\ countCurrent);}}
+\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ \textcolor{comment}{//calcular\ tiempo\ final}}
+\DoxyCodeLine{00265\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(calculateTime\ ==\ \textcolor{keyword}{true})\{}
+\DoxyCodeLine{00266\ \ \ \ \ \ \ \ \ \ \ \ \ finalTime\ =\ System.currentTimeMillis();}
+\DoxyCodeLine{00267\ \ \ \ \ \ \ \ \ \ \ \ \ timeExecute\ =\ finalTime\ -\/\ initialTime;}
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}El\ tiempo\ de\ ejecucion:\ "{}}\ +\ timeExecute);}
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(generatorType.equals(GeneratorType.MultiGenerator))\{}
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \ \ \ \ listBest\ =\ \textcolor{keyword}{new}\ ArrayList<State>(multiGenerator.getReferenceList());}
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//calcular\ offlinePerformance}}
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ \ \ \ \ calculateOffLinePerformance(sumMax,\ countOff);}
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(countPeriodo\ ==\ countCurrent)\{}
+\DoxyCodeLine{00275\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ updateCountGender();}
+\DoxyCodeLine{00276\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00278\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ \ \ \ \ listBest\ =\ \textcolor{keyword}{new}\ ArrayList<State>(generator.getReferenceList());}
+\DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ \ \ \ \ calculateOffLinePerformance(sumMax,\ countOff);}
+\DoxyCodeLine{00281\ \ \ \ \ \ \ \ \ \}\ }
+\DoxyCodeLine{00282\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{Strategy_8java_source_l00036}{best\+State}}, \mbox{\hyperlink{Strategy_8java_source_l00509}{calculate\+Off\+Line\+Performance()}}, \mbox{\hyperlink{Strategy_8java_source_l00056}{calculate\+Time}}, \mbox{\hyperlink{Strategy_8java_source_l00065}{count\+Change}}, \mbox{\hyperlink{Strategy_8java_source_l00042}{count\+Current}}, \mbox{\hyperlink{Strategy_8java_source_l00064}{count\+Period\+Change}}, \mbox{\hyperlink{Strategy_8java_source_l00066}{count\+Periodo}}, \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a06f6f7622b9ce32590eadbdf6bf962b5}{metaheuristics.\+generators.\+Generator.\+generate()}}, \mbox{\hyperlink{MultiGenerator_8java_source_l00213}{metaheuristics.\+generators.\+Multi\+Generator.\+generate()}}, \mbox{\hyperlink{Strategy_8java_source_l00044}{generator}}, \mbox{\hyperlink{State_8java_source_l00104}{problem.\+definition.\+State.\+get\+Evaluation()}}, \mbox{\hyperlink{Strategy_8java_source_l00405}{get\+Problem()}}, \mbox{\hyperlink{MultiGenerator_8java_source_l00241}{metaheuristics.\+generators.\+Multi\+Generator.\+get\+Reference\+List()}}, \mbox{\hyperlink{Strategy_8java_source_l00454}{initialize()}}, \mbox{\hyperlink{Strategy_8java_source_l00438}{initialize\+Generators()}}, \mbox{\hyperlink{MultiGenerator_8java_source_l00090}{metaheuristics.\+generators.\+Multi\+Generator.\+initialize\+Generators()}}, \mbox{\hyperlink{Strategy_8java_source_l00048}{list\+Best}}, \mbox{\hyperlink{MultiGenerator_8java_source_l00026}{metaheuristics.\+generators.\+Multi\+Generator.\+list\+Generated\+PP}}, \mbox{\hyperlink{Strategy_8java_source_l00049}{list\+Ref\+Poblac\+Final}}, \mbox{\hyperlink{Strategy_8java_source_l00047}{list\+States}}, \mbox{\hyperlink{Problem_8java_source_l00029}{problem.\+definition.\+Problem.\+Problem\+Type.\+Maximizar}}, \mbox{\hyperlink{Problem_8java_source_l00029}{problem.\+definition.\+Problem.\+Problem\+Type.\+Minimizar}}, \mbox{\hyperlink{GeneratorType_8java_source_l00009}{metaheuristics.\+generators.\+Generator\+Type.\+Multi\+Generator}}, \mbox{\hyperlink{Strategy_8java_source_l00332}{new\+Generator()}}, \mbox{\hyperlink{Strategy_8java_source_l00050}{not\+Dominated}}, \mbox{\hyperlink{Strategy_8java_source_l00067}{periodo}}, \mbox{\hyperlink{Strategy_8java_source_l00037}{problem}}, \mbox{\hyperlink{Strategy_8java_source_l00055}{save\+Frene\+Pareto\+Mono\+Objetivo}}, \mbox{\hyperlink{Strategy_8java_source_l00054}{save\+List\+Best\+States}}, \mbox{\hyperlink{Strategy_8java_source_l00053}{save\+List\+States}}, \mbox{\hyperlink{State_8java_source_l00113}{problem.\+definition.\+State.\+set\+Evaluation()}}, \mbox{\hyperlink{State_8java_source_l00130}{problem.\+definition.\+State.\+set\+Number()}}, \mbox{\hyperlink{Problem_8java_source_l00088}{problem.\+definition.\+Problem.\+set\+State()}}, \mbox{\hyperlink{State_8java_source_l00094}{problem.\+definition.\+State.\+set\+Type\+Generator()}}, \mbox{\hyperlink{Strategy_8java_source_l00039}{stopexecute}}, \mbox{\hyperlink{Strategy_8java_source_l00307}{update()}}, \mbox{\hyperlink{Strategy_8java_source_l00284}{update\+Count\+Gender()}}, \mbox{\hyperlink{UpdateParameter_8java_source_l00039}{local\+\_\+search.\+complement.\+Update\+Parameter.\+update\+Parameter()}}, \mbox{\hyperlink{Strategy_8java_source_l00518}{update\+Ref()}}, \mbox{\hyperlink{MultiGenerator_8java_source_l00276}{metaheuristics.\+generators.\+Multi\+Generator.\+update\+Reference()}} y \mbox{\hyperlink{Strategy_8java_source_l00298}{update\+Weight()}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheurictics_1_1strategy_1_1Strategy_af320de8dac2de5a7ec10d373952064d5_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmetaheurictics_1_1strategy_1_1Strategy_a4194b52f17701a8fabfc1265e6b4b267}\index{metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}!getBestState@{getBestState}}
+\index{getBestState@{getBestState}!metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}}
+\doxysubsubsection{\texorpdfstring{getBestState()}{getBestState()}}
+{\footnotesize\ttfamily \label{classmetaheurictics_1_1strategy_1_1Strategy_a4194b52f17701a8fabfc1265e6b4b267} 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} metaheurictics.\+strategy.\+Strategy.\+get\+Best\+State (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Best\+State -\/ method to get the best state. 
+
+\begin{DoxyReturn}{Devuelve}
+return the best state 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{Strategy_8java_source_l00342}{342}} del archivo \mbox{\hyperlink{Strategy_8java_source}{Strategy.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00342\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00343\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ bestState;}
+\DoxyCodeLine{00344\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{Strategy_8java_source_l00036}{best\+State}}.
+
+
+
+Referenciado por \mbox{\hyperlink{MultiGenerator_8java_source_l00302}{metaheuristics.\+generators.\+Multi\+Generator.\+search\+State()}}.
+
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheurictics_1_1strategy_1_1Strategy_a4194b52f17701a8fabfc1265e6b4b267_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmetaheurictics_1_1strategy_1_1Strategy_a6440afde976cb69c01b95d4c41a9ff5c}\index{metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}!getCountCurrent@{getCountCurrent}}
+\index{getCountCurrent@{getCountCurrent}!metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}}
+\doxysubsubsection{\texorpdfstring{getCountCurrent()}{getCountCurrent()}}
+{\footnotesize\ttfamily \label{classmetaheurictics_1_1strategy_1_1Strategy_a6440afde976cb69c01b95d4c41a9ff5c} 
+int metaheurictics.\+strategy.\+Strategy.\+get\+Count\+Current (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Count\+Current -\/ method to get the current count. 
+
+\begin{DoxyReturn}{Devuelve}
+return the current count 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{Strategy_8java_source_l00471}{471}} del archivo \mbox{\hyperlink{Strategy_8java_source}{Strategy.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00471\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00472\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ countCurrent;}
+\DoxyCodeLine{00473\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{Strategy_8java_source_l00042}{count\+Current}}.
+
+
+
+Referenciado por \mbox{\hyperlink{HillClimbingRestart_8java_source_l00073}{metaheuristics.\+generators.\+Hill\+Climbing\+Restart.\+generate()}}, \mbox{\hyperlink{ProbabilisticSampling_8java_source_l00095}{evolutionary\+\_\+algorithms.\+complement.\+Probabilistic\+Sampling.\+list\+State()}}, \mbox{\hyperlink{MultiGenerator_8java_source_l00413}{metaheuristics.\+generators.\+Multi\+Generator.\+update\+Award\+Imp()}} y \mbox{\hyperlink{MultiGenerator_8java_source_l00393}{metaheuristics.\+generators.\+Multi\+Generator.\+update\+Award\+SC()}}.
+
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheurictics_1_1strategy_1_1Strategy_a6440afde976cb69c01b95d4c41a9ff5c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmetaheurictics_1_1strategy_1_1Strategy_a6d5037c21b9a24975f301ac6aba4dffd}\index{metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}!getCountMax@{getCountMax}}
+\index{getCountMax@{getCountMax}!metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}}
+\doxysubsubsection{\texorpdfstring{getCountMax()}{getCountMax()}}
+{\footnotesize\ttfamily \label{classmetaheurictics_1_1strategy_1_1Strategy_a6d5037c21b9a24975f301ac6aba4dffd} 
+int metaheurictics.\+strategy.\+Strategy.\+get\+Count\+Max (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Count\+Max -\/ method to get the maximum count. 
+
+\begin{DoxyReturn}{Devuelve}
+return the maximum count 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{Strategy_8java_source_l00365}{365}} del archivo \mbox{\hyperlink{Strategy_8java_source}{Strategy.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00365\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00366\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ countMax;}
+\DoxyCodeLine{00367\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{Strategy_8java_source_l00043}{count\+Max}}.
+
+\Hypertarget{classmetaheurictics_1_1strategy_1_1Strategy_ac70469856a2b6424f29952c0e77eebf8}\index{metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}!getListKey@{getListKey}}
+\index{getListKey@{getListKey}!metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}}
+\doxysubsubsection{\texorpdfstring{getListKey()}{getListKey()}}
+{\footnotesize\ttfamily \label{classmetaheurictics_1_1strategy_1_1Strategy_ac70469856a2b6424f29952c0e77eebf8} 
+Array\+List$<$ String $>$ metaheurictics.\+strategy.\+Strategy.\+get\+List\+Key (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+List\+Key -\/ method to get the list of keys. 
+
+\begin{DoxyReturn}{Devuelve}
+return the list of keys 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{Strategy_8java_source_l00421}{421}} del archivo \mbox{\hyperlink{Strategy_8java_source}{Strategy.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00421\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00422\ \ \ \ \ \ \ \ \ ArrayList<String>\ listKeys\ =\ \textcolor{keyword}{new}\ ArrayList<String>();}
+\DoxyCodeLine{00423\ \ \ \ \ \ \ \ \ String\ key\ =\ mapGenerators.keySet().toString();}
+\DoxyCodeLine{00424\ \ \ \ \ \ \ \ \ String\ returnString\ =\ key.substring(1,\ key.length()\ -\/\ 1);}
+\DoxyCodeLine{00425\ \ \ \ \ \ \ \ \ returnString\ =\ returnString\ +\ \textcolor{stringliteral}{"{},\ "{}};}
+\DoxyCodeLine{00426\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ countKey\ =\ mapGenerators.size();}
+\DoxyCodeLine{00427\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ countKey;\ i++)\ \{}
+\DoxyCodeLine{00428\ \ \ \ \ \ \ \ \ \ \ \ \ String\ r\ =\ returnString.substring(0,\ returnString.indexOf(\textcolor{charliteral}{','}));}
+\DoxyCodeLine{00429\ \ \ \ \ \ \ \ \ \ \ \ \ returnString\ =\ returnString.substring(returnString.indexOf(\textcolor{charliteral}{','})\ +\ 2);}
+\DoxyCodeLine{00430\ \ \ \ \ \ \ \ \ \ \ \ \ listKeys.add(r);}
+\DoxyCodeLine{00431\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00432\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ listKeys;}
+\DoxyCodeLine{00433\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{Strategy_8java_source_l00038}{map\+Generators}}.
+
+
+
+Referenciado por \mbox{\hyperlink{DistributionEstimationAlgorithm_8java_source_l00189}{metaheuristics.\+generators.\+Distribution\+Estimation\+Algorithm.\+get\+List\+State\+Ref()}}, \mbox{\hyperlink{EvolutionStrategies_8java_source_l00164}{metaheuristics.\+generators.\+Evolution\+Strategies.\+get\+List\+State\+Ref()}}, \mbox{\hyperlink{GeneticAlgorithm_8java_source_l00200}{metaheuristics.\+generators.\+Genetic\+Algorithm.\+get\+List\+State\+Ref()}} y \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00220}{metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+get\+List\+State\+Ref()}}.
+
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheurictics_1_1strategy_1_1Strategy_ac70469856a2b6424f29952c0e77eebf8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmetaheurictics_1_1strategy_1_1Strategy_a4bc6bd95db71e14b1f48c1bfc85f1305}\index{metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}!getProblem@{getProblem}}
+\index{getProblem@{getProblem}!metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}}
+\doxysubsubsection{\texorpdfstring{getProblem()}{getProblem()}}
+{\footnotesize\ttfamily \label{classmetaheurictics_1_1strategy_1_1Strategy_a4bc6bd95db71e14b1f48c1bfc85f1305} 
+\mbox{\hyperlink{classproblem_1_1definition_1_1Problem}{Problem}} metaheurictics.\+strategy.\+Strategy.\+get\+Problem (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Problem -\/ method to get the problem. 
+
+\begin{DoxyReturn}{Devuelve}
+return the problem 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{Strategy_8java_source_l00405}{405}} del archivo \mbox{\hyperlink{Strategy_8java_source}{Strategy.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00405\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00406\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ problem;}
+\DoxyCodeLine{00407\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{Strategy_8java_source_l00037}{problem}}.
+
+
+
+Referenciado por \mbox{\hyperlink{AcceptBest_8java_source_l00038}{local\+\_\+search.\+acceptation\+\_\+type.\+Accept\+Best.\+accept\+Candidate()}}, \mbox{\hyperlink{AcceptNotBad_8java_source_l00028}{local\+\_\+search.\+acceptation\+\_\+type.\+Accept\+Not\+Bad.\+accept\+Candidate()}}, \mbox{\hyperlink{AcceptNotBadT_8java_source_l00045}{local\+\_\+search.\+acceptation\+\_\+type.\+Accept\+Not\+Bad\+T.\+accept\+Candidate()}}, \mbox{\hyperlink{AcceptNotBadU_8java_source_l00038}{local\+\_\+search.\+acceptation\+\_\+type.\+Accept\+Not\+Bad\+U.\+accept\+Candidate()}}, \mbox{\hyperlink{MultiGenerator_8java_source_l00129}{metaheuristics.\+generators.\+Multi\+Generator.\+create\+Instance\+Generators\+BPP()}}, \mbox{\hyperlink{OnePointCrossover_8java_source_l00032}{evolutionary\+\_\+algorithms.\+complement.\+One\+Point\+Crossover.\+crossover()}}, \mbox{\hyperlink{Dominance_8java_source_l00087}{local\+\_\+search.\+acceptation\+\_\+type.\+Dominance.\+dominance()}}, \mbox{\hyperlink{FactoresPonderados_8java_source_l00029}{problem.\+extension.\+Factores\+Ponderados.\+evaluation\+State()}}, \mbox{\hyperlink{MultiObjetivoPuro_8java_source_l00029}{problem.\+extension.\+Multi\+Objetivo\+Puro.\+evaluation\+State()}}, \mbox{\hyperlink{Strategy_8java_source_l00094}{execute\+Strategy()}}, \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00403}{metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+g\+Best\+Inicial()}}, \mbox{\hyperlink{DistributionEstimationAlgorithm_8java_source_l00095}{metaheuristics.\+generators.\+Distribution\+Estimation\+Algorithm.\+generate()}}, \mbox{\hyperlink{EvolutionStrategies_8java_source_l00076}{metaheuristics.\+generators.\+Evolution\+Strategies.\+generate()}}, \mbox{\hyperlink{GeneticAlgorithm_8java_source_l00090}{metaheuristics.\+generators.\+Genetic\+Algorithm.\+generate()}}, \mbox{\hyperlink{HillClimbing_8java_source_l00072}{metaheuristics.\+generators.\+Hill\+Climbing.\+generate()}}, \mbox{\hyperlink{HillClimbingRestart_8java_source_l00073}{metaheuristics.\+generators.\+Hill\+Climbing\+Restart.\+generate()}}, \mbox{\hyperlink{LimitThreshold_8java_source_l00093}{metaheuristics.\+generators.\+Limit\+Threshold.\+generate()}}, \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00090}{metaheuristics.\+generators.\+Multi\+Case\+Simulated\+Annealing.\+generate()}}, \mbox{\hyperlink{MultiobjectiveHillClimbingDistance_8java_source_l00068}{metaheuristics.\+generators.\+Multiobjective\+Hill\+Climbing\+Distance.\+generate()}}, \mbox{\hyperlink{MultiobjectiveHillClimbingRestart_8java_source_l00071}{metaheuristics.\+generators.\+Multiobjective\+Hill\+Climbing\+Restart.\+generate()}}, \mbox{\hyperlink{MultiobjectiveStochasticHillClimbing_8java_source_l00055}{metaheuristics.\+generators.\+Multiobjective\+Stochastic\+Hill\+Climbing.\+generate()}}, \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00091}{metaheuristics.\+generators.\+Multiobjective\+Tabu\+Search.\+generate()}}, \mbox{\hyperlink{RandomSearch_8java_source_l00066}{metaheuristics.\+generators.\+Random\+Search.\+generate()}}, \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00118}{metaheuristics.\+generators.\+Simulated\+Annealing.\+generate()}}, \mbox{\hyperlink{TabuSearch_8java_source_l00095}{metaheuristics.\+generators.\+Tabu\+Search.\+generate()}}, \mbox{\hyperlink{MutationOperator_8java_source_l00032}{problem\+\_\+operators.\+Mutation\+Operator.\+generated\+New\+State()}}, \mbox{\hyperlink{DistributionEstimationAlgorithm_8java_source_l00124}{metaheuristics.\+generators.\+Distribution\+Estimation\+Algorithm.\+get\+Reference()}}, \mbox{\hyperlink{EvolutionStrategies_8java_source_l00101}{metaheuristics.\+generators.\+Evolution\+Strategies.\+get\+Reference()}}, \mbox{\hyperlink{GeneticAlgorithm_8java_source_l00132}{metaheuristics.\+generators.\+Genetic\+Algorithm.\+get\+Reference()}}, \mbox{\hyperlink{HillClimbing_8java_source_l00048}{metaheuristics.\+generators.\+Hill\+Climbing.\+Hill\+Climbing()}}, \mbox{\hyperlink{HillClimbingRestart_8java_source_l00047}{metaheuristics.\+generators.\+Hill\+Climbing\+Restart.\+Hill\+Climbing\+Restart()}}, \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00173}{metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+inicialice\+LBest()}}, \mbox{\hyperlink{MultiGenerator_8java_source_l00090}{metaheuristics.\+generators.\+Multi\+Generator.\+initialize\+Generators()}}, \mbox{\hyperlink{LimitThreshold_8java_source_l00064}{metaheuristics.\+generators.\+Limit\+Threshold.\+Limit\+Threshold()}}, \mbox{\hyperlink{AIOMutation_8java_source_l00031}{evolutionary\+\_\+algorithms.\+complement.\+AIOMutation.\+mutation()}}, \mbox{\hyperlink{OnePointMutation_8java_source_l00028}{evolutionary\+\_\+algorithms.\+complement.\+One\+Point\+Mutation.\+mutation()}}, \mbox{\hyperlink{TowPointsMutation_8java_source_l00020}{evolutionary\+\_\+algorithms.\+complement.\+Tow\+Points\+Mutation.\+mutation()}}, \mbox{\hyperlink{SteadyStateReplace_8java_source_l00022}{evolutionary\+\_\+algorithms.\+complement.\+Steady\+State\+Replace.\+replace()}}, \mbox{\hyperlink{ProbabilisticSampling_8java_source_l00033}{evolutionary\+\_\+algorithms.\+complement.\+Probabilistic\+Sampling.\+sampling()}}, \mbox{\hyperlink{MultiGenerator_8java_source_l00302}{metaheuristics.\+generators.\+Multi\+Generator.\+search\+State()}}, \mbox{\hyperlink{TruncationSelection_8java_source_l00062}{evolutionary\+\_\+algorithms.\+complement.\+Truncation\+Selection.\+selection()}}, \mbox{\hyperlink{CandidateValue_8java_source_l00074}{local\+\_\+search.\+candidate\+\_\+type.\+Candidate\+Value.\+state\+Candidate()}}, \mbox{\hyperlink{NotDominatedCandidate_8java_source_l00027}{local\+\_\+search.\+candidate\+\_\+type.\+Not\+Dominated\+Candidate.\+state\+Search()}}, \mbox{\hyperlink{TabuSearch_8java_source_l00065}{metaheuristics.\+generators.\+Tabu\+Search.\+Tabu\+Search()}}, \mbox{\hyperlink{MultiobjectiveHillClimbingDistance_8java_source_l00087}{metaheuristics.\+generators.\+Multiobjective\+Hill\+Climbing\+Distance.\+update\+Reference()}}, \mbox{\hyperlink{MultiobjectiveHillClimbingRestart_8java_source_l00083}{metaheuristics.\+generators.\+Multiobjective\+Hill\+Climbing\+Restart.\+update\+Reference()}}, \mbox{\hyperlink{Particle_8java_source_l00203}{metaheuristics.\+generators.\+Particle.\+update\+Reference()}}, \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00364}{metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+update\+Reference()}} y \mbox{\hyperlink{Strategy_8java_source_l00540}{update\+Ref\+Generator()}}.
+
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classmetaheurictics_1_1strategy_1_1Strategy_a4bc6bd95db71e14b1f48c1bfc85f1305_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmetaheurictics_1_1strategy_1_1Strategy_a1ce64c953a44083a90753c3ffb46d40e}\index{metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}!getStopexecute@{getStopexecute}}
+\index{getStopexecute@{getStopexecute}!metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}}
+\doxysubsubsection{\texorpdfstring{getStopexecute()}{getStopexecute()}}
+{\footnotesize\ttfamily \label{classmetaheurictics_1_1strategy_1_1Strategy_a1ce64c953a44083a90753c3ffb46d40e} 
+\mbox{\hyperlink{classlocal__search_1_1complement_1_1StopExecute}{Stop\+Execute}} metaheurictics.\+strategy.\+Strategy.\+get\+Stopexecute (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Stopexecute -\/ method to get the stop execute. 
+
+\begin{DoxyReturn}{Devuelve}
+return the stop execute 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{Strategy_8java_source_l00357}{357}} del archivo \mbox{\hyperlink{Strategy_8java_source}{Strategy.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00357\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00358\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ stopexecute;}
+\DoxyCodeLine{00359\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{Strategy_8java_source_l00039}{stopexecute}}.
+
+\Hypertarget{classmetaheurictics_1_1strategy_1_1Strategy_ad2641e12c52292930364de6655333aa8}\index{metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}!getStrategy@{getStrategy}}
+\index{getStrategy@{getStrategy}!metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}}
+\doxysubsubsection{\texorpdfstring{getStrategy()}{getStrategy()}}
+{\footnotesize\ttfamily \label{classmetaheurictics_1_1strategy_1_1Strategy_ad2641e12c52292930364de6655333aa8} 
+\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_ac65d26e08073f5cfc7596577f18b9694}{Strategy}} metaheurictics.\+strategy.\+Strategy.\+get\+Strategy (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+get\+Strategy -\/ getter of \doxylink{classmetaheurictics_1_1strategy_1_1Strategy}{Strategy} singleton instance 
+
+\begin{DoxyReturn}{Devuelve}
+\doxylink{classmetaheurictics_1_1strategy_1_1Strategy}{Strategy} instance 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{Strategy_8java_source_l00080}{80}} del archivo \mbox{\hyperlink{Strategy_8java_source}{Strategy.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (strategy\ ==\ \textcolor{keyword}{null})\ \{}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ strategy\ =\ \textcolor{keyword}{new}\ Strategy();}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ strategy;}
+\DoxyCodeLine{00085\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{Strategy_8java_source_l00073}{Strategy()}} y \mbox{\hyperlink{Strategy_8java_source_l00035}{strategy}}.
+
+
+
+Referenciado por \mbox{\hyperlink{AcceptBest_8java_source_l00038}{local\+\_\+search.\+acceptation\+\_\+type.\+Accept\+Best.\+accept\+Candidate()}}, \mbox{\hyperlink{AcceptMulticase_8java_source_l00034}{local\+\_\+search.\+acceptation\+\_\+type.\+Accept\+Multicase.\+accept\+Candidate()}}, \mbox{\hyperlink{AcceptNotBad_8java_source_l00028}{local\+\_\+search.\+acceptation\+\_\+type.\+Accept\+Not\+Bad.\+accept\+Candidate()}}, \mbox{\hyperlink{AcceptNotBadT_8java_source_l00045}{local\+\_\+search.\+acceptation\+\_\+type.\+Accept\+Not\+Bad\+T.\+accept\+Candidate()}}, \mbox{\hyperlink{AcceptNotBadU_8java_source_l00038}{local\+\_\+search.\+acceptation\+\_\+type.\+Accept\+Not\+Bad\+U.\+accept\+Candidate()}}, \mbox{\hyperlink{AcceptNotDominated_8java_source_l00028}{local\+\_\+search.\+acceptation\+\_\+type.\+Accept\+Not\+Dominated.\+accept\+Candidate()}}, \mbox{\hyperlink{AcceptNotDominatedTabu_8java_source_l00027}{local\+\_\+search.\+acceptation\+\_\+type.\+Accept\+Not\+Dominated\+Tabu.\+accept\+Candidate()}}, \mbox{\hyperlink{MultiGenerator_8java_source_l00129}{metaheuristics.\+generators.\+Multi\+Generator.\+create\+Instance\+Generators\+BPP()}}, \mbox{\hyperlink{OnePointCrossover_8java_source_l00032}{evolutionary\+\_\+algorithms.\+complement.\+One\+Point\+Crossover.\+crossover()}}, \mbox{\hyperlink{Dominance_8java_source_l00087}{local\+\_\+search.\+acceptation\+\_\+type.\+Dominance.\+dominance()}}, \mbox{\hyperlink{FactoresPonderados_8java_source_l00029}{problem.\+extension.\+Factores\+Ponderados.\+evaluation\+State()}}, \mbox{\hyperlink{MultiObjetivoPuro_8java_source_l00029}{problem.\+extension.\+Multi\+Objetivo\+Puro.\+evaluation\+State()}}, \mbox{\hyperlink{AIOMutation_8java_source_l00085}{evolutionary\+\_\+algorithms.\+complement.\+AIOMutation.\+fill\+Path()}}, \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00403}{metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+g\+Best\+Inicial()}}, \mbox{\hyperlink{DistributionEstimationAlgorithm_8java_source_l00095}{metaheuristics.\+generators.\+Distribution\+Estimation\+Algorithm.\+generate()}}, \mbox{\hyperlink{EvolutionStrategies_8java_source_l00076}{metaheuristics.\+generators.\+Evolution\+Strategies.\+generate()}}, \mbox{\hyperlink{GeneticAlgorithm_8java_source_l00090}{metaheuristics.\+generators.\+Genetic\+Algorithm.\+generate()}}, \mbox{\hyperlink{HillClimbing_8java_source_l00072}{metaheuristics.\+generators.\+Hill\+Climbing.\+generate()}}, \mbox{\hyperlink{HillClimbingRestart_8java_source_l00073}{metaheuristics.\+generators.\+Hill\+Climbing\+Restart.\+generate()}}, \mbox{\hyperlink{LimitThreshold_8java_source_l00093}{metaheuristics.\+generators.\+Limit\+Threshold.\+generate()}}, \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00090}{metaheuristics.\+generators.\+Multi\+Case\+Simulated\+Annealing.\+generate()}}, \mbox{\hyperlink{MultiGenerator_8java_source_l00213}{metaheuristics.\+generators.\+Multi\+Generator.\+generate()}}, \mbox{\hyperlink{MultiobjectiveHillClimbingDistance_8java_source_l00068}{metaheuristics.\+generators.\+Multiobjective\+Hill\+Climbing\+Distance.\+generate()}}, \mbox{\hyperlink{MultiobjectiveHillClimbingRestart_8java_source_l00071}{metaheuristics.\+generators.\+Multiobjective\+Hill\+Climbing\+Restart.\+generate()}}, \mbox{\hyperlink{MultiobjectiveStochasticHillClimbing_8java_source_l00055}{metaheuristics.\+generators.\+Multiobjective\+Stochastic\+Hill\+Climbing.\+generate()}}, \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00091}{metaheuristics.\+generators.\+Multiobjective\+Tabu\+Search.\+generate()}}, \mbox{\hyperlink{RandomSearch_8java_source_l00066}{metaheuristics.\+generators.\+Random\+Search.\+generate()}}, \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00118}{metaheuristics.\+generators.\+Simulated\+Annealing.\+generate()}}, \mbox{\hyperlink{TabuSearch_8java_source_l00095}{metaheuristics.\+generators.\+Tabu\+Search.\+generate()}}, \mbox{\hyperlink{MutationOperator_8java_source_l00032}{problem\+\_\+operators.\+Mutation\+Operator.\+generated\+New\+State()}}, \mbox{\hyperlink{DistributionEstimationAlgorithm_8java_source_l00189}{metaheuristics.\+generators.\+Distribution\+Estimation\+Algorithm.\+get\+List\+State\+Ref()}}, \mbox{\hyperlink{EvolutionStrategies_8java_source_l00164}{metaheuristics.\+generators.\+Evolution\+Strategies.\+get\+List\+State\+Ref()}}, \mbox{\hyperlink{GeneticAlgorithm_8java_source_l00200}{metaheuristics.\+generators.\+Genetic\+Algorithm.\+get\+List\+State\+Ref()}}, \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00220}{metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+get\+List\+State\+Ref()}}, \mbox{\hyperlink{DistributionEstimationAlgorithm_8java_source_l00124}{metaheuristics.\+generators.\+Distribution\+Estimation\+Algorithm.\+get\+Reference()}}, \mbox{\hyperlink{EvolutionStrategies_8java_source_l00101}{metaheuristics.\+generators.\+Evolution\+Strategies.\+get\+Reference()}}, \mbox{\hyperlink{GeneticAlgorithm_8java_source_l00132}{metaheuristics.\+generators.\+Genetic\+Algorithm.\+get\+Reference()}}, \mbox{\hyperlink{HillClimbing_8java_source_l00048}{metaheuristics.\+generators.\+Hill\+Climbing.\+Hill\+Climbing()}}, \mbox{\hyperlink{HillClimbingRestart_8java_source_l00047}{metaheuristics.\+generators.\+Hill\+Climbing\+Restart.\+Hill\+Climbing\+Restart()}}, \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00173}{metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+inicialice\+LBest()}}, \mbox{\hyperlink{MultiGenerator_8java_source_l00090}{metaheuristics.\+generators.\+Multi\+Generator.\+initialize\+Generators()}}, \mbox{\hyperlink{LimitThreshold_8java_source_l00064}{metaheuristics.\+generators.\+Limit\+Threshold.\+Limit\+Threshold()}}, \mbox{\hyperlink{Dominance_8java_source_l00033}{local\+\_\+search.\+acceptation\+\_\+type.\+Dominance.\+list\+Dominance()}}, \mbox{\hyperlink{ProbabilisticSampling_8java_source_l00095}{evolutionary\+\_\+algorithms.\+complement.\+Probabilistic\+Sampling.\+list\+State()}}, \mbox{\hyperlink{AIOMutation_8java_source_l00031}{evolutionary\+\_\+algorithms.\+complement.\+AIOMutation.\+mutation()}}, \mbox{\hyperlink{OnePointMutation_8java_source_l00028}{evolutionary\+\_\+algorithms.\+complement.\+One\+Point\+Mutation.\+mutation()}}, \mbox{\hyperlink{TowPointsMutation_8java_source_l00020}{evolutionary\+\_\+algorithms.\+complement.\+Tow\+Points\+Mutation.\+mutation()}}, \mbox{\hyperlink{SteadyStateReplace_8java_source_l00022}{evolutionary\+\_\+algorithms.\+complement.\+Steady\+State\+Replace.\+replace()}}, \mbox{\hyperlink{ProbabilisticSampling_8java_source_l00033}{evolutionary\+\_\+algorithms.\+complement.\+Probabilistic\+Sampling.\+sampling()}}, \mbox{\hyperlink{MultiGenerator_8java_source_l00302}{metaheuristics.\+generators.\+Multi\+Generator.\+search\+State()}}, \mbox{\hyperlink{TruncationSelection_8java_source_l00062}{evolutionary\+\_\+algorithms.\+complement.\+Truncation\+Selection.\+selection()}}, \mbox{\hyperlink{CandidateValue_8java_source_l00074}{local\+\_\+search.\+candidate\+\_\+type.\+Candidate\+Value.\+state\+Candidate()}}, \mbox{\hyperlink{NotDominatedCandidate_8java_source_l00027}{local\+\_\+search.\+candidate\+\_\+type.\+Not\+Dominated\+Candidate.\+state\+Search()}}, \mbox{\hyperlink{TabuSearch_8java_source_l00065}{metaheuristics.\+generators.\+Tabu\+Search.\+Tabu\+Search()}}, \mbox{\hyperlink{MultiGenerator_8java_source_l00413}{metaheuristics.\+generators.\+Multi\+Generator.\+update\+Award\+Imp()}}, \mbox{\hyperlink{MultiGenerator_8java_source_l00393}{metaheuristics.\+generators.\+Multi\+Generator.\+update\+Award\+SC()}}, \mbox{\hyperlink{UpdateParameter_8java_source_l00039}{local\+\_\+search.\+complement.\+Update\+Parameter.\+update\+Parameter()}}, \mbox{\hyperlink{MultiobjectiveHillClimbingDistance_8java_source_l00087}{metaheuristics.\+generators.\+Multiobjective\+Hill\+Climbing\+Distance.\+update\+Reference()}}, \mbox{\hyperlink{MultiobjectiveHillClimbingRestart_8java_source_l00083}{metaheuristics.\+generators.\+Multiobjective\+Hill\+Climbing\+Restart.\+update\+Reference()}}, \mbox{\hyperlink{Particle_8java_source_l00203}{metaheuristics.\+generators.\+Particle.\+update\+Reference()}}, \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00364}{metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+update\+Reference()}} y \mbox{\hyperlink{Particle_8java_source_l00127}{metaheuristics.\+generators.\+Particle.\+Update\+Velocity()}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheurictics_1_1strategy_1_1Strategy_ad2641e12c52292930364de6655333aa8_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmetaheurictics_1_1strategy_1_1Strategy_a307eddf8b8d1eadfdce6b89148bd78fb}\index{metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}!getThreshold@{getThreshold}}
+\index{getThreshold@{getThreshold}!metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}}
+\doxysubsubsection{\texorpdfstring{getThreshold()}{getThreshold()}}
+{\footnotesize\ttfamily \label{classmetaheurictics_1_1strategy_1_1Strategy_a307eddf8b8d1eadfdce6b89148bd78fb} 
+double metaheurictics.\+strategy.\+Strategy.\+get\+Threshold (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Threshold -\/ method to get the threshold. 
+
+\begin{DoxyReturn}{Devuelve}
+return the threshold 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{Strategy_8java_source_l00492}{492}} del archivo \mbox{\hyperlink{Strategy_8java_source}{Strategy.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00492\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00493\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ threshold;}
+\DoxyCodeLine{00494\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{Strategy_8java_source_l00045}{threshold}}.
+
+
+
+Referenciado por \mbox{\hyperlink{AcceptNotBadU_8java_source_l00038}{local\+\_\+search.\+acceptation\+\_\+type.\+Accept\+Not\+Bad\+U.\+accept\+Candidate()}}.
+
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheurictics_1_1strategy_1_1Strategy_a307eddf8b8d1eadfdce6b89148bd78fb_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmetaheurictics_1_1strategy_1_1Strategy_a0036f56e2cd146ee5f37a6da30ed415a}\index{metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}!getUpdateparameter@{getUpdateparameter}}
+\index{getUpdateparameter@{getUpdateparameter}!metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}}
+\doxysubsubsection{\texorpdfstring{getUpdateparameter()}{getUpdateparameter()}}
+{\footnotesize\ttfamily \label{classmetaheurictics_1_1strategy_1_1Strategy_a0036f56e2cd146ee5f37a6da30ed415a} 
+\mbox{\hyperlink{classlocal__search_1_1complement_1_1UpdateParameter}{Update\+Parameter}} metaheurictics.\+strategy.\+Strategy.\+get\+Updateparameter (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Updateparameter -\/ method to get the update parameter. 
+
+\begin{DoxyReturn}{Devuelve}
+return the update parameter 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{Strategy_8java_source_l00389}{389}} del archivo \mbox{\hyperlink{Strategy_8java_source}{Strategy.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00389\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00390\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ updateparameter;}
+\DoxyCodeLine{00391\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{Strategy_8java_source_l00040}{updateparameter}}.
+
+\Hypertarget{classmetaheurictics_1_1strategy_1_1Strategy_a24dc7f53fd6fed09d4db04350f73b1a3}\index{metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}!initialize@{initialize}}
+\index{initialize@{initialize}!metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily \label{classmetaheurictics_1_1strategy_1_1Strategy_a24dc7f53fd6fed09d4db04350f73b1a3} 
+void metaheurictics.\+strategy.\+Strategy.\+initialize (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) throws Illegal\+Argument\+Exception, Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception, Illegal\+Access\+Exception, Invocation\+Target\+Exception, No\+Such\+Method\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+initialize -\/ method to initialize the generators. 
+
+
+
+Definición en la línea \mbox{\hyperlink{Strategy_8java_source_l00454}{454}} del archivo \mbox{\hyperlink{Strategy_8java_source}{Strategy.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00454\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00455\ \ \ \ \ \ \ \ \ List<GeneratorType>\ listType\ =\ \textcolor{keyword}{new}\ ArrayList<GeneratorType>();}
+\DoxyCodeLine{00456\ \ \ \ \ \ \ \ \ this.mapGenerators\ =\ \textcolor{keyword}{new}\ TreeMap<GeneratorType,\ Generator>();}
+\DoxyCodeLine{00457\ \ \ \ \ \ \ \ \ GeneratorType\ type[]=\ GeneratorType.values();}
+\DoxyCodeLine{00458\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (GeneratorType\ generator\ :\ type)\ \{}
+\DoxyCodeLine{00459\ \ \ \ \ \ \ \ \ \ \ \ \ listType.add(generator);}
+\DoxyCodeLine{00460\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00461\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ listType.size();\ i++)\ \{}
+\DoxyCodeLine{00462\ \ \ \ \ \ \ \ \ \ \ \ \ Generator\ generator\ =\ newGenerator(listType.get(i));}
+\DoxyCodeLine{00463\ \ \ \ \ \ \ \ \ \ \ \ \ mapGenerators.put(listType.get(i),\ generator);}
+\DoxyCodeLine{00464\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00465\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{Strategy_8java_source_l00044}{generator}}, \mbox{\hyperlink{Strategy_8java_source_l00038}{map\+Generators}} y \mbox{\hyperlink{Strategy_8java_source_l00332}{new\+Generator()}}.
+
+
+
+Referenciado por \mbox{\hyperlink{Strategy_8java_source_l00094}{execute\+Strategy()}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheurictics_1_1strategy_1_1Strategy_a24dc7f53fd6fed09d4db04350f73b1a3_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheurictics_1_1strategy_1_1Strategy_a24dc7f53fd6fed09d4db04350f73b1a3_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmetaheurictics_1_1strategy_1_1Strategy_a01adb5013155c7f691f95e8ab59181d0}\index{metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}!initializeGenerators@{initializeGenerators}}
+\index{initializeGenerators@{initializeGenerators}!metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}}
+\doxysubsubsection{\texorpdfstring{initializeGenerators()}{initializeGenerators()}}
+{\footnotesize\ttfamily \label{classmetaheurictics_1_1strategy_1_1Strategy_a01adb5013155c7f691f95e8ab59181d0} 
+void metaheurictics.\+strategy.\+Strategy.\+initialize\+Generators (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) throws Illegal\+Argument\+Exception, Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception, Illegal\+Access\+Exception, Invocation\+Target\+Exception, No\+Such\+Method\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+initialize\+Generators -\/ method to initialize the generators. 
+
+
+
+Definición en la línea \mbox{\hyperlink{Strategy_8java_source_l00438}{438}} del archivo \mbox{\hyperlink{Strategy_8java_source}{Strategy.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00438\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00439\ \ \ \ \ \ \ \ \ List<GeneratorType>\ listType\ =\ \textcolor{keyword}{new}\ ArrayList<GeneratorType>();}
+\DoxyCodeLine{00440\ \ \ \ \ \ \ \ \ this.mapGenerators\ =\ \textcolor{keyword}{new}\ TreeMap<GeneratorType,\ Generator>();}
+\DoxyCodeLine{00441\ \ \ \ \ \ \ \ \ GeneratorType\ type[]=\ GeneratorType.values();}
+\DoxyCodeLine{00442\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (GeneratorType\ generator\ :\ type)\ \{}
+\DoxyCodeLine{00443\ \ \ \ \ \ \ \ \ \ \ \ \ listType.add(generator);}
+\DoxyCodeLine{00444\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00445\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ listType.size();\ i++)\ \{}
+\DoxyCodeLine{00446\ \ \ \ \ \ \ \ \ \ \ \ \ Generator\ generator\ =\ newGenerator(listType.get(i));}
+\DoxyCodeLine{00447\ \ \ \ \ \ \ \ \ \ \ \ \ mapGenerators.put(listType.get(i),\ generator);}
+\DoxyCodeLine{00448\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00449\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{Strategy_8java_source_l00044}{generator}}, \mbox{\hyperlink{Strategy_8java_source_l00038}{map\+Generators}} y \mbox{\hyperlink{Strategy_8java_source_l00332}{new\+Generator()}}.
+
+
+
+Referenciado por \mbox{\hyperlink{Strategy_8java_source_l00094}{execute\+Strategy()}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheurictics_1_1strategy_1_1Strategy_a01adb5013155c7f691f95e8ab59181d0_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheurictics_1_1strategy_1_1Strategy_a01adb5013155c7f691f95e8ab59181d0_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmetaheurictics_1_1strategy_1_1Strategy_abc3c1b65673f8757ae414dfd4bf18f97}\index{metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}!newGenerator@{newGenerator}}
+\index{newGenerator@{newGenerator}!metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}}
+\doxysubsubsection{\texorpdfstring{newGenerator()}{newGenerator()}}
+{\footnotesize\ttfamily \label{classmetaheurictics_1_1strategy_1_1Strategy_abc3c1b65673f8757ae414dfd4bf18f97} 
+\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator}{Generator}} metaheurictics.\+strategy.\+Strategy.\+new\+Generator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{Generator\+Type}}}]{Generatortype}{}\end{DoxyParamCaption}) throws Illegal\+Argument\+Exception, Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception, Illegal\+Access\+Exception, Invocation\+Target\+Exception, No\+Such\+Method\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+new\+Generator -\/ method to create a new generator. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Generatortype} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+return a \doxylink{classmetaheuristics_1_1generators_1_1Generator}{Generator} 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{Strategy_8java_source_l00332}{332}} del archivo \mbox{\hyperlink{Strategy_8java_source}{Strategy.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00332\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00333\ \ \ \ \ \ \ \ \ ifFactoryGenerator\ =\ \textcolor{keyword}{new}\ FactoryGenerator();}
+\DoxyCodeLine{00334\ \ \ \ \ \ \ \ \ Generator\ generator\ =\ ifFactoryGenerator.createGenerator(Generatortype);}
+\DoxyCodeLine{00335\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ generator;}
+\DoxyCodeLine{00336\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{Strategy_8java_source_l00044}{generator}} y \mbox{\hyperlink{Strategy_8java_source_l00041}{if\+Factory\+Generator}}.
+
+
+
+Referenciado por \mbox{\hyperlink{Strategy_8java_source_l00094}{execute\+Strategy()}}, \mbox{\hyperlink{Strategy_8java_source_l00454}{initialize()}} y \mbox{\hyperlink{Strategy_8java_source_l00438}{initialize\+Generators()}}.
+
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheurictics_1_1strategy_1_1Strategy_abc3c1b65673f8757ae414dfd4bf18f97_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmetaheurictics_1_1strategy_1_1Strategy_aef162976b610a8d30ab537af9face3b4}\index{metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}!setBestState@{setBestState}}
+\index{setBestState@{setBestState}!metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}}
+\doxysubsubsection{\texorpdfstring{setBestState()}{setBestState()}}
+{\footnotesize\ttfamily \label{classmetaheurictics_1_1strategy_1_1Strategy_aef162976b610a8d30ab537af9face3b4} 
+void metaheurictics.\+strategy.\+Strategy.\+set\+Best\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}}]{bes\+State}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+set\+Best\+State -\/ method to set the best state. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em bes\+State} & \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{Strategy_8java_source_l00350}{350}} del archivo \mbox{\hyperlink{Strategy_8java_source}{Strategy.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00350\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00351\ \ \ \ \ \ \ \ \ this.bestState\ =\ besState;}
+\DoxyCodeLine{00352\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classmetaheurictics_1_1strategy_1_1Strategy_a0a7bed828f9d4fb1b29dbda112020b77}\index{metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}!setCountCurrent@{setCountCurrent}}
+\index{setCountCurrent@{setCountCurrent}!metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}}
+\doxysubsubsection{\texorpdfstring{setCountCurrent()}{setCountCurrent()}}
+{\footnotesize\ttfamily \label{classmetaheurictics_1_1strategy_1_1Strategy_a0a7bed828f9d4fb1b29dbda112020b77} 
+void metaheurictics.\+strategy.\+Strategy.\+set\+Count\+Current (\begin{DoxyParamCaption}\item[{int}]{count\+Current}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+set\+Count\+Current -\/ method to set the current count. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em count\+Current} & \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{Strategy_8java_source_l00479}{479}} del archivo \mbox{\hyperlink{Strategy_8java_source}{Strategy.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00479\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00480\ \ \ \ \ \ \ \ \ this.countCurrent\ =\ countCurrent;}
+\DoxyCodeLine{00481\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{Strategy_8java_source_l00042}{count\+Current}}.
+
+\Hypertarget{classmetaheurictics_1_1strategy_1_1Strategy_a7512cbe68ba46c4d8534f0aff17b5c17}\index{metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}!setCountMax@{setCountMax}}
+\index{setCountMax@{setCountMax}!metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}}
+\doxysubsubsection{\texorpdfstring{setCountMax()}{setCountMax()}}
+{\footnotesize\ttfamily \label{classmetaheurictics_1_1strategy_1_1Strategy_a7512cbe68ba46c4d8534f0aff17b5c17} 
+void metaheurictics.\+strategy.\+Strategy.\+set\+Count\+Max (\begin{DoxyParamCaption}\item[{int}]{count\+Max}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+set\+Count\+Max -\/ method to set the maximum count. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em count\+Max} & \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{Strategy_8java_source_l00373}{373}} del archivo \mbox{\hyperlink{Strategy_8java_source}{Strategy.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00373\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00374\ \ \ \ \ \ \ \ \ this.countMax\ =\ countMax;}
+\DoxyCodeLine{00375\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{Strategy_8java_source_l00043}{count\+Max}}.
+
+\Hypertarget{classmetaheurictics_1_1strategy_1_1Strategy_a2a5bb3ddd64d9f7d7ee9f50da7804850}\index{metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}!setProblem@{setProblem}}
+\index{setProblem@{setProblem}!metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}}
+\doxysubsubsection{\texorpdfstring{setProblem()}{setProblem()}}
+{\footnotesize\ttfamily \label{classmetaheurictics_1_1strategy_1_1Strategy_a2a5bb3ddd64d9f7d7ee9f50da7804850} 
+void metaheurictics.\+strategy.\+Strategy.\+set\+Problem (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classproblem_1_1definition_1_1Problem}{Problem}}}]{problem}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+set\+Problem -\/ method to set the problem. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em problem} & \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{Strategy_8java_source_l00413}{413}} del archivo \mbox{\hyperlink{Strategy_8java_source}{Strategy.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00413\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00414\ \ \ \ \ \ \ \ \ this.problem\ =\ problem;}
+\DoxyCodeLine{00415\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{Strategy_8java_source_l00037}{problem}}.
+
+\Hypertarget{classmetaheurictics_1_1strategy_1_1Strategy_a2f833e91e1f26476659d049362f219ac}\index{metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}!setStopexecute@{setStopexecute}}
+\index{setStopexecute@{setStopexecute}!metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}}
+\doxysubsubsection{\texorpdfstring{setStopexecute()}{setStopexecute()}}
+{\footnotesize\ttfamily \label{classmetaheurictics_1_1strategy_1_1Strategy_a2f833e91e1f26476659d049362f219ac} 
+void metaheurictics.\+strategy.\+Strategy.\+set\+Stopexecute (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlocal__search_1_1complement_1_1StopExecute}{Stop\+Execute}}}]{stopexecute}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+set\+Stopexecute -\/ method to set the stop execute. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em stopexecute} & \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{Strategy_8java_source_l00381}{381}} del archivo \mbox{\hyperlink{Strategy_8java_source}{Strategy.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00381\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00382\ \ \ \ \ \ \ \ \ this.stopexecute\ =\ stopexecute;}
+\DoxyCodeLine{00383\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{Strategy_8java_source_l00039}{stopexecute}}.
+
+\Hypertarget{classmetaheurictics_1_1strategy_1_1Strategy_abc89b807d8506e11ef85c41eeb5e1858}\index{metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}!setThreshold@{setThreshold}}
+\index{setThreshold@{setThreshold}!metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}}
+\doxysubsubsection{\texorpdfstring{setThreshold()}{setThreshold()}}
+{\footnotesize\ttfamily \label{classmetaheurictics_1_1strategy_1_1Strategy_abc89b807d8506e11ef85c41eeb5e1858} 
+void metaheurictics.\+strategy.\+Strategy.\+set\+Threshold (\begin{DoxyParamCaption}\item[{double}]{threshold}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+set\+Threshold -\/ method to set the threshold. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em threshold} & \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{Strategy_8java_source_l00500}{500}} del archivo \mbox{\hyperlink{Strategy_8java_source}{Strategy.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00500\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00501\ \ \ \ \ \ \ \ \ this.threshold\ =\ threshold;}
+\DoxyCodeLine{00502\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{Strategy_8java_source_l00045}{threshold}}.
+
+\Hypertarget{classmetaheurictics_1_1strategy_1_1Strategy_ac781087326a37b5f9cc1ea135bfc7c82}\index{metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}!setUpdateparameter@{setUpdateparameter}}
+\index{setUpdateparameter@{setUpdateparameter}!metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}}
+\doxysubsubsection{\texorpdfstring{setUpdateparameter()}{setUpdateparameter()}}
+{\footnotesize\ttfamily \label{classmetaheurictics_1_1strategy_1_1Strategy_ac781087326a37b5f9cc1ea135bfc7c82} 
+void metaheurictics.\+strategy.\+Strategy.\+set\+Updateparameter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlocal__search_1_1complement_1_1UpdateParameter}{Update\+Parameter}}}]{updateparameter}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+set\+Updateparameter -\/ method to set the update parameter. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em updateparameter} & \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{Strategy_8java_source_l00397}{397}} del archivo \mbox{\hyperlink{Strategy_8java_source}{Strategy.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00397\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00398\ \ \ \ \ \ \ \ \ this.updateparameter\ =\ updateparameter;}
+\DoxyCodeLine{00399\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{Strategy_8java_source_l00040}{updateparameter}}.
+
+\Hypertarget{classmetaheurictics_1_1strategy_1_1Strategy_ae5fae0f94a80e56677aa3f7ac77b6d44}\index{metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}!update@{update}}
+\index{update@{update}!metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{classmetaheurictics_1_1strategy_1_1Strategy_ae5fae0f94a80e56677aa3f7ac77b6d44} 
+void metaheurictics.\+strategy.\+Strategy.\+update (\begin{DoxyParamCaption}\item[{Integer}]{count\+Iterations\+Current}{}\end{DoxyParamCaption}) throws Illegal\+Argument\+Exception, Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception, Illegal\+Access\+Exception, Invocation\+Target\+Exception, No\+Such\+Method\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{Strategy_8java_source_l00307}{307}} del archivo \mbox{\hyperlink{Strategy_8java_source}{Strategy.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00307\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\textcolor{comment}{//HashMap<String,\ Object>\ map,\ }}
+\DoxyCodeLine{00308\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ \ \ \ \ Here\ update\ parameter\ for\ update\ and\ change\ generator.}}
+\DoxyCodeLine{00309\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(countIterationsCurrent.equals(GeneticAlgorithm.countRef\ -\/\ 1))\{}
+\DoxyCodeLine{00310\ \ \ \ \ \ \ \ \ \ \ \ \ ifFactoryGenerator\ =\ \textcolor{keyword}{new}\ FactoryGenerator();}
+\DoxyCodeLine{00311\ \ \ \ \ \ \ \ \ \ \ \ \ Strategy.getStrategy().generator\ =\ ifFactoryGenerator.createGenerator(GeneratorType.GeneticAlgorithm);}
+\DoxyCodeLine{00312\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00313\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(countIterationsCurrent.equals(EvolutionStrategies.countRef\ -\/\ 1))\{}
+\DoxyCodeLine{00314\ \ \ \ \ \ \ \ \ \ \ \ \ ifFactoryGenerator\ =\ \textcolor{keyword}{new}\ FactoryGenerator();}
+\DoxyCodeLine{00315\ \ \ \ \ \ \ \ \ \ \ \ \ Strategy.getStrategy().generator\ =\ ifFactoryGenerator.createGenerator(GeneratorType.EvolutionStrategies);}
+\DoxyCodeLine{00316\ \ \ \ \ \ \ \ \ \}\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00317\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(countIterationsCurrent.equals(DistributionEstimationAlgorithm.countRef\ -\/\ 1))\{}
+\DoxyCodeLine{00318\ \ \ \ \ \ \ \ \ \ \ \ \ ifFactoryGenerator\ =\ \textcolor{keyword}{new}\ FactoryGenerator();}
+\DoxyCodeLine{00319\ \ \ \ \ \ \ \ \ \ \ \ \ Strategy.getStrategy().generator\ =\ ifFactoryGenerator.createGenerator(GeneratorType.DistributionEstimationAlgorithm);}
+\DoxyCodeLine{00320\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00321\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(countIterationsCurrent.equals(ParticleSwarmOptimization.getCountRef()\ -\/\ 1))\{}
+\DoxyCodeLine{00322\ \ \ \ \ \ \ \ \ \ \ \ \ ifFactoryGenerator\ =\ \textcolor{keyword}{new}\ FactoryGenerator();}
+\DoxyCodeLine{00323\ \ \ \ \ \ \ \ \ \ \ \ \ Strategy.getStrategy().generator\ =\ ifFactoryGenerator.createGenerator(GeneratorType.ParticleSwarmOptimization);}
+\DoxyCodeLine{00324\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00325\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{DistributionEstimationAlgorithm_8java_source_l00048}{metaheuristics.\+generators.\+Distribution\+Estimation\+Algorithm.\+count\+Ref}}, \mbox{\hyperlink{EvolutionStrategies_8java_source_l00041}{metaheuristics.\+generators.\+Evolution\+Strategies.\+count\+Ref}}, \mbox{\hyperlink{GeneticAlgorithm_8java_source_l00055}{metaheuristics.\+generators.\+Genetic\+Algorithm.\+count\+Ref}}, \mbox{\hyperlink{GeneratorType_8java_source_l00008}{metaheuristics.\+generators.\+Generator\+Type.\+Distribution\+Estimation\+Algorithm}}, \mbox{\hyperlink{GeneratorType_8java_source_l00008}{metaheuristics.\+generators.\+Generator\+Type.\+Evolution\+Strategies}}, \mbox{\hyperlink{GeneratorType_8java_source_l00008}{metaheuristics.\+generators.\+Generator\+Type.\+Genetic\+Algorithm}}, \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00344}{metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+get\+Count\+Ref()}}, \mbox{\hyperlink{Strategy_8java_source_l00041}{if\+Factory\+Generator}}, \mbox{\hyperlink{GeneratorType_8java_source_l00008}{metaheuristics.\+generators.\+Generator\+Type.\+Particle\+Swarm\+Optimization}} y \mbox{\hyperlink{Strategy_8java_source_l00073}{Strategy()}}.
+
+
+
+Referenciado por \mbox{\hyperlink{Strategy_8java_source_l00094}{execute\+Strategy()}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheurictics_1_1strategy_1_1Strategy_ae5fae0f94a80e56677aa3f7ac77b6d44_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheurictics_1_1strategy_1_1Strategy_ae5fae0f94a80e56677aa3f7ac77b6d44_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmetaheurictics_1_1strategy_1_1Strategy_a2f4520e24d31de6e4895bdf4ab2b9502}\index{metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}!updateCountGender@{updateCountGender}}
+\index{updateCountGender@{updateCountGender}!metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}}
+\doxysubsubsection{\texorpdfstring{updateCountGender()}{updateCountGender()}}
+{\footnotesize\ttfamily \label{classmetaheurictics_1_1strategy_1_1Strategy_a2f4520e24d31de6e4895bdf4ab2b9502} 
+void metaheurictics.\+strategy.\+Strategy.\+update\+Count\+Gender (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{Strategy_8java_source_l00284}{284}} del archivo \mbox{\hyperlink{Strategy_8java_source}{Strategy.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00284\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \textcolor{comment}{//\ actualizar\ la\ cantidad\ de\ mejoras\ y\ cantidad\ de\ veces\ que\ se\ uso\ un\ generador\ en\ un\ periodo\ dado}}
+\DoxyCodeLine{00285\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ MultiGenerator.getListGenerators().length;\ i++)\ \{}
+\DoxyCodeLine{00286\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!MultiGenerator.getListGenerators()[i].getType().equals(GeneratorType.MultiGenerator)\ )\{}
+\DoxyCodeLine{00287\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MultiGenerator.getListGenerators()[i].getListCountGender()[periodo]\ =\ MultiGenerator.getListGenerators()[i].countGender\ +\ MultiGenerator.getListGenerators()[i].getListCountGender()[periodo];}
+\DoxyCodeLine{00288\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MultiGenerator.getListGenerators()[i].getListCountBetterGender()[periodo]\ =\ MultiGenerator.getListGenerators()[i].countBetterGender\ +\ MultiGenerator.getListGenerators()[i].getListCountBetterGender()[periodo];}
+\DoxyCodeLine{00289\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MultiGenerator.getListGenerators()[i].countGender\ =\ 0;}
+\DoxyCodeLine{00290\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MultiGenerator.getListGenerators()[i].countBetterGender\ =\ 0;}
+\DoxyCodeLine{00291\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00292\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00293\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{Generator_8java_source_l00038}{metaheuristics.\+generators.\+Generator.\+count\+Better\+Gender}}, \mbox{\hyperlink{Generator_8java_source_l00037}{metaheuristics.\+generators.\+Generator.\+count\+Gender}}, \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_ac5bace71f51c16b611ede3ed53263473}{metaheuristics.\+generators.\+Generator.\+get\+List\+Count\+Better\+Gender()}}, \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_ac5d6d45ee8017fb87d80aa952edfc34e}{metaheuristics.\+generators.\+Generator.\+get\+List\+Count\+Gender()}}, \mbox{\hyperlink{MultiGenerator_8java_source_l00161}{metaheuristics.\+generators.\+Multi\+Generator.\+get\+List\+Generators()}}, \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a5a123306b43c42d28cd1d6e17f8067a5}{metaheuristics.\+generators.\+Generator.\+get\+Type()}}, \mbox{\hyperlink{GeneratorType_8java_source_l00009}{metaheuristics.\+generators.\+Generator\+Type.\+Multi\+Generator}} y \mbox{\hyperlink{Strategy_8java_source_l00067}{periodo}}.
+
+
+
+Referenciado por \mbox{\hyperlink{Strategy_8java_source_l00094}{execute\+Strategy()}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheurictics_1_1strategy_1_1Strategy_a2f4520e24d31de6e4895bdf4ab2b9502_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheurictics_1_1strategy_1_1Strategy_a2f4520e24d31de6e4895bdf4ab2b9502_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmetaheurictics_1_1strategy_1_1Strategy_a91022422139781e5efd55fe77049bcce}\index{metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}!updateRef@{updateRef}}
+\index{updateRef@{updateRef}!metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}}
+\doxysubsubsection{\texorpdfstring{updateRef()}{updateRef()}}
+{\footnotesize\ttfamily \label{classmetaheurictics_1_1strategy_1_1Strategy_a91022422139781e5efd55fe77049bcce} 
+void metaheurictics.\+strategy.\+Strategy.\+update\+Ref (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{Generator\+Type}}}]{generator\+Type}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+update\+Ref -\/ method to update the reference. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em generator\+Type} & \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{Strategy_8java_source_l00518}{518}} del archivo \mbox{\hyperlink{Strategy_8java_source}{Strategy.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00518\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00519\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(generatorType.equals(GeneratorType.MultiGenerator))\{}
+\DoxyCodeLine{00520\ \ \ \ \ \ \ \ \ \ \ \ \ updateRefMultiG();}
+\DoxyCodeLine{00521\ \ \ \ \ \ \ \ \ \ \ \ \ bestState\ =\ MultiGenerator.listStateReference.get(\ MultiGenerator.listStateReference.size()\ -\/\ 1);}
+\DoxyCodeLine{00522\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00523\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00524\ \ \ \ \ \ \ \ \ \ \ \ \ updateRefGenerator(generator);}
+\DoxyCodeLine{00525\ \ \ \ \ \ \ \ \ \ \ \ \ bestState\ =\ generator.getReference();}
+\DoxyCodeLine{00526\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00527\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{Strategy_8java_source_l00036}{best\+State}}, \mbox{\hyperlink{Strategy_8java_source_l00044}{generator}}, \mbox{\hyperlink{MultiGenerator_8java_source_l00028}{metaheuristics.\+generators.\+Multi\+Generator.\+list\+State\+Reference}}, \mbox{\hyperlink{GeneratorType_8java_source_l00009}{metaheuristics.\+generators.\+Generator\+Type.\+Multi\+Generator}}, \mbox{\hyperlink{Strategy_8java_source_l00540}{update\+Ref\+Generator()}} y \mbox{\hyperlink{Strategy_8java_source_l00531}{update\+Ref\+Multi\+G()}}.
+
+
+
+Referenciado por \mbox{\hyperlink{Strategy_8java_source_l00094}{execute\+Strategy()}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheurictics_1_1strategy_1_1Strategy_a91022422139781e5efd55fe77049bcce_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheurictics_1_1strategy_1_1Strategy_a91022422139781e5efd55fe77049bcce_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmetaheurictics_1_1strategy_1_1Strategy_a507abefc022ec475c0d5473055adf484}\index{metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}!updateRefGenerator@{updateRefGenerator}}
+\index{updateRefGenerator@{updateRefGenerator}!metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}}
+\doxysubsubsection{\texorpdfstring{updateRefGenerator()}{updateRefGenerator()}}
+{\footnotesize\ttfamily \label{classmetaheurictics_1_1strategy_1_1Strategy_a507abefc022ec475c0d5473055adf484} 
+void metaheurictics.\+strategy.\+Strategy.\+update\+Ref\+Generator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator}{Generator}}}]{generator}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+update\+Ref\+Generator -\/ method to update the reference for generators. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em generator} & \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{Strategy_8java_source_l00540}{540}} del archivo \mbox{\hyperlink{Strategy_8java_source}{Strategy.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00540\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00541\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(generator.getType().equals(GeneratorType.HillClimbing)\ ||\ generator.getType().equals(GeneratorType.TabuSearch)\ ||\ generator.getType().equals(GeneratorType.RandomSearch)\ ||\ generator.getType().equals(GeneratorType.SimulatedAnnealing))\{}
+\DoxyCodeLine{00542\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ evaluation\ =\ getProblem().getFunction().get(0).Evaluation(generator.getReference());}
+\DoxyCodeLine{00543\ \ \ \ \ \ \ \ \ \ \ \ \ generator.getReference().getEvaluation().set(0,\ evaluation);}
+\DoxyCodeLine{00544\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00545\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(generator.getType().equals(GeneratorType.GeneticAlgorithm)\ ||\ generator.getType().equals(GeneratorType.DistributionEstimationAlgorithm)\ ||\ generator.getType().equals(GeneratorType.EvolutionStrategies))\{}
+\DoxyCodeLine{00546\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ generator.getReferenceList().size();\ j++)\ \{}
+\DoxyCodeLine{00547\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ evaluation\ =\ getProblem().getFunction().get(0).Evaluation(generator.getReferenceList().get(j));}
+\DoxyCodeLine{00548\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ generator.getReferenceList().get(j).getEvaluation().set(0,\ evaluation);}
+\DoxyCodeLine{00549\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00550\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00551\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{GeneratorType_8java_source_l00008}{metaheuristics.\+generators.\+Generator\+Type.\+Distribution\+Estimation\+Algorithm}}, \mbox{\hyperlink{GeneratorType_8java_source_l00008}{metaheuristics.\+generators.\+Generator\+Type.\+Evolution\+Strategies}}, \mbox{\hyperlink{Strategy_8java_source_l00044}{generator}}, \mbox{\hyperlink{GeneratorType_8java_source_l00008}{metaheuristics.\+generators.\+Generator\+Type.\+Genetic\+Algorithm}}, \mbox{\hyperlink{Problem_8java_source_l00057}{problem.\+definition.\+Problem.\+get\+Function()}}, \mbox{\hyperlink{Strategy_8java_source_l00405}{get\+Problem()}}, \mbox{\hyperlink{GeneratorType_8java_source_l00007}{metaheuristics.\+generators.\+Generator\+Type.\+Hill\+Climbing}}, \mbox{\hyperlink{GeneratorType_8java_source_l00007}{metaheuristics.\+generators.\+Generator\+Type.\+Random\+Search}}, \mbox{\hyperlink{GeneratorType_8java_source_l00007}{metaheuristics.\+generators.\+Generator\+Type.\+Simulated\+Annealing}} y \mbox{\hyperlink{GeneratorType_8java_source_l00007}{metaheuristics.\+generators.\+Generator\+Type.\+Tabu\+Search}}.
+
+
+
+Referenciado por \mbox{\hyperlink{Strategy_8java_source_l00518}{update\+Ref()}} y \mbox{\hyperlink{Strategy_8java_source_l00531}{update\+Ref\+Multi\+G()}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheurictics_1_1strategy_1_1Strategy_a507abefc022ec475c0d5473055adf484_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheurictics_1_1strategy_1_1Strategy_a507abefc022ec475c0d5473055adf484_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmetaheurictics_1_1strategy_1_1Strategy_a1a969707e4659afea6bc6ee7479e9e65}\index{metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}!updateRefMultiG@{updateRefMultiG}}
+\index{updateRefMultiG@{updateRefMultiG}!metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}}
+\doxysubsubsection{\texorpdfstring{updateRefMultiG()}{updateRefMultiG()}}
+{\footnotesize\ttfamily \label{classmetaheurictics_1_1strategy_1_1Strategy_a1a969707e4659afea6bc6ee7479e9e65} 
+void metaheurictics.\+strategy.\+Strategy.\+update\+Ref\+MultiG (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+update\+Ref\+MultiG -\/ method to update the reference for multi-\/generators. 
+
+
+
+Definición en la línea \mbox{\hyperlink{Strategy_8java_source_l00531}{531}} del archivo \mbox{\hyperlink{Strategy_8java_source}{Strategy.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00531\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00532\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ MultiGenerator.getListGenerators().length;\ i++)\ \{}
+\DoxyCodeLine{00533\ \ \ \ \ \ \ \ \ \ \ \ \ updateRefGenerator(MultiGenerator.getListGenerators()[i]);}
+\DoxyCodeLine{00534\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00535\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{MultiGenerator_8java_source_l00161}{metaheuristics.\+generators.\+Multi\+Generator.\+get\+List\+Generators()}} y \mbox{\hyperlink{Strategy_8java_source_l00540}{update\+Ref\+Generator()}}.
+
+
+
+Referenciado por \mbox{\hyperlink{Strategy_8java_source_l00518}{update\+Ref()}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheurictics_1_1strategy_1_1Strategy_a1a969707e4659afea6bc6ee7479e9e65_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheurictics_1_1strategy_1_1Strategy_a1a969707e4659afea6bc6ee7479e9e65_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmetaheurictics_1_1strategy_1_1Strategy_aa65b766626141e9b647a42c0056a4798}\index{metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}!updateWeight@{updateWeight}}
+\index{updateWeight@{updateWeight}!metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}}
+\doxysubsubsection{\texorpdfstring{updateWeight()}{updateWeight()}}
+{\footnotesize\ttfamily \label{classmetaheurictics_1_1strategy_1_1Strategy_aa65b766626141e9b647a42c0056a4798} 
+void metaheurictics.\+strategy.\+Strategy.\+update\+Weight (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+update\+Weight -\/ method to update the weight of the generators. 
+
+
+
+Definición en la línea \mbox{\hyperlink{Strategy_8java_source_l00298}{298}} del archivo \mbox{\hyperlink{Strategy_8java_source}{Strategy.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00298\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00299\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ MultiGenerator.getListGenerators().length;\ i++)\ \{}
+\DoxyCodeLine{00300\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!MultiGenerator.getListGenerators()[i].getType().equals(GeneratorType.MultiGenerator))\{}
+\DoxyCodeLine{00301\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MultiGenerator.getListGenerators()[i].setWeight((\textcolor{keywordtype}{float})\ 50.0);}
+\DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00303\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00304\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{MultiGenerator_8java_source_l00161}{metaheuristics.\+generators.\+Multi\+Generator.\+get\+List\+Generators()}}, \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a5a123306b43c42d28cd1d6e17f8067a5}{metaheuristics.\+generators.\+Generator.\+get\+Type()}}, \mbox{\hyperlink{GeneratorType_8java_source_l00009}{metaheuristics.\+generators.\+Generator\+Type.\+Multi\+Generator}} y \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a8b3c66b57b4c739666989fbce667eb40}{metaheuristics.\+generators.\+Generator.\+set\+Weight()}}.
+
+
+
+Referenciado por \mbox{\hyperlink{Strategy_8java_source_l00094}{execute\+Strategy()}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheurictics_1_1strategy_1_1Strategy_aa65b766626141e9b647a42c0056a4798_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheurictics_1_1strategy_1_1Strategy_aa65b766626141e9b647a42c0056a4798_icgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-variable-members}
+\Hypertarget{classmetaheurictics_1_1strategy_1_1Strategy_doc-variable-members}
+\doxysubsection{Documentación de datos miembro}
+\Hypertarget{classmetaheurictics_1_1strategy_1_1Strategy_af08a0f377eacb28b46d0fcc315b69ad0}\index{metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}!bestState@{bestState}}
+\index{bestState@{bestState}!metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}}
+\doxysubsubsection{\texorpdfstring{bestState}{bestState}}
+{\footnotesize\ttfamily \label{classmetaheurictics_1_1strategy_1_1Strategy_af08a0f377eacb28b46d0fcc315b69ad0} 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} metaheurictics.\+strategy.\+Strategy.\+best\+State\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{Strategy_8java_source_l00036}{36}} del archivo \mbox{\hyperlink{Strategy_8java_source}{Strategy.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{Strategy_8java_source_l00094}{execute\+Strategy()}}, \mbox{\hyperlink{Strategy_8java_source_l00342}{get\+Best\+State()}} y \mbox{\hyperlink{Strategy_8java_source_l00518}{update\+Ref()}}.
+
+\Hypertarget{classmetaheurictics_1_1strategy_1_1Strategy_a3a4ef09902bbbfec07102446f7eb2809}\index{metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}!calculateTime@{calculateTime}}
+\index{calculateTime@{calculateTime}!metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}}
+\doxysubsubsection{\texorpdfstring{calculateTime}{calculateTime}}
+{\footnotesize\ttfamily \label{classmetaheurictics_1_1strategy_1_1Strategy_a3a4ef09902bbbfec07102446f7eb2809} 
+boolean metaheurictics.\+strategy.\+Strategy.\+calculate\+Time}
+
+
+
+Definición en la línea \mbox{\hyperlink{Strategy_8java_source_l00056}{56}} del archivo \mbox{\hyperlink{Strategy_8java_source}{Strategy.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{Strategy_8java_source_l00094}{execute\+Strategy()}}.
+
+\Hypertarget{classmetaheurictics_1_1strategy_1_1Strategy_abea8b81eeed176475070dac996fe9b6c}\index{metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}!countChange@{countChange}}
+\index{countChange@{countChange}!metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}}
+\doxysubsubsection{\texorpdfstring{countChange}{countChange}}
+{\footnotesize\ttfamily \label{classmetaheurictics_1_1strategy_1_1Strategy_abea8b81eeed176475070dac996fe9b6c} 
+int metaheurictics.\+strategy.\+Strategy.\+count\+Change = 0}
+
+
+
+Definición en la línea \mbox{\hyperlink{Strategy_8java_source_l00065}{65}} del archivo \mbox{\hyperlink{Strategy_8java_source}{Strategy.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{Strategy_8java_source_l00094}{execute\+Strategy()}}.
+
+\Hypertarget{classmetaheurictics_1_1strategy_1_1Strategy_a537769ff595ae1b51c2035982723be6e}\index{metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}!countCurrent@{countCurrent}}
+\index{countCurrent@{countCurrent}!metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}}
+\doxysubsubsection{\texorpdfstring{countCurrent}{countCurrent}}
+{\footnotesize\ttfamily \label{classmetaheurictics_1_1strategy_1_1Strategy_a537769ff595ae1b51c2035982723be6e} 
+int metaheurictics.\+strategy.\+Strategy.\+count\+Current\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{Strategy_8java_source_l00042}{42}} del archivo \mbox{\hyperlink{Strategy_8java_source}{Strategy.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{Strategy_8java_source_l00094}{execute\+Strategy()}}, \mbox{\hyperlink{Strategy_8java_source_l00471}{get\+Count\+Current()}} y \mbox{\hyperlink{Strategy_8java_source_l00479}{set\+Count\+Current()}}.
+
+\Hypertarget{classmetaheurictics_1_1strategy_1_1Strategy_a3251f7d633dd233da6de5e84cb49b14b}\index{metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}!countMax@{countMax}}
+\index{countMax@{countMax}!metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}}
+\doxysubsubsection{\texorpdfstring{countMax}{countMax}}
+{\footnotesize\ttfamily \label{classmetaheurictics_1_1strategy_1_1Strategy_a3251f7d633dd233da6de5e84cb49b14b} 
+int metaheurictics.\+strategy.\+Strategy.\+count\+Max\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{Strategy_8java_source_l00043}{43}} del archivo \mbox{\hyperlink{Strategy_8java_source}{Strategy.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{Strategy_8java_source_l00365}{get\+Count\+Max()}} y \mbox{\hyperlink{Strategy_8java_source_l00373}{set\+Count\+Max()}}.
+
+\Hypertarget{classmetaheurictics_1_1strategy_1_1Strategy_ab22b49ea4c8e68c8d35f392bcc4f8ded}\index{metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}!countPeriodChange@{countPeriodChange}}
+\index{countPeriodChange@{countPeriodChange}!metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}}
+\doxysubsubsection{\texorpdfstring{countPeriodChange}{countPeriodChange}}
+{\footnotesize\ttfamily \label{classmetaheurictics_1_1strategy_1_1Strategy_ab22b49ea4c8e68c8d35f392bcc4f8ded} 
+int metaheurictics.\+strategy.\+Strategy.\+count\+Period\+Change = 0}
+
+
+
+Definición en la línea \mbox{\hyperlink{Strategy_8java_source_l00064}{64}} del archivo \mbox{\hyperlink{Strategy_8java_source}{Strategy.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{Strategy_8java_source_l00509}{calculate\+Off\+Line\+Performance()}} y \mbox{\hyperlink{Strategy_8java_source_l00094}{execute\+Strategy()}}.
+
+\Hypertarget{classmetaheurictics_1_1strategy_1_1Strategy_a86782bca2ad115b47f019513b1e8a389}\index{metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}!countPeriodo@{countPeriodo}}
+\index{countPeriodo@{countPeriodo}!metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}}
+\doxysubsubsection{\texorpdfstring{countPeriodo}{countPeriodo}}
+{\footnotesize\ttfamily \label{classmetaheurictics_1_1strategy_1_1Strategy_a86782bca2ad115b47f019513b1e8a389} 
+int metaheurictics.\+strategy.\+Strategy.\+count\+Periodo\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{Strategy_8java_source_l00066}{66}} del archivo \mbox{\hyperlink{Strategy_8java_source}{Strategy.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{Strategy_8java_source_l00094}{execute\+Strategy()}}.
+
+\Hypertarget{classmetaheurictics_1_1strategy_1_1Strategy_a2f0ea18b2127e6e38c1d335fed32c7e0}\index{metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}!generator@{generator}}
+\index{generator@{generator}!metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}}
+\doxysubsubsection{\texorpdfstring{generator}{generator}}
+{\footnotesize\ttfamily \label{classmetaheurictics_1_1strategy_1_1Strategy_a2f0ea18b2127e6e38c1d335fed32c7e0} 
+\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator}{Generator}} metaheurictics.\+strategy.\+Strategy.\+generator}
+
+
+
+Definición en la línea \mbox{\hyperlink{Strategy_8java_source_l00044}{44}} del archivo \mbox{\hyperlink{Strategy_8java_source}{Strategy.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{Strategy_8java_source_l00094}{execute\+Strategy()}}, \mbox{\hyperlink{MultiGenerator_8java_source_l00213}{metaheuristics.\+generators.\+Multi\+Generator.\+generate()}}, \mbox{\hyperlink{Strategy_8java_source_l00454}{initialize()}}, \mbox{\hyperlink{Strategy_8java_source_l00438}{initialize\+Generators()}}, \mbox{\hyperlink{Dominance_8java_source_l00033}{local\+\_\+search.\+acceptation\+\_\+type.\+Dominance.\+list\+Dominance()}}, \mbox{\hyperlink{Strategy_8java_source_l00332}{new\+Generator()}}, \mbox{\hyperlink{UpdateParameter_8java_source_l00039}{local\+\_\+search.\+complement.\+Update\+Parameter.\+update\+Parameter()}}, \mbox{\hyperlink{Strategy_8java_source_l00518}{update\+Ref()}} y \mbox{\hyperlink{Strategy_8java_source_l00540}{update\+Ref\+Generator()}}.
+
+\Hypertarget{classmetaheurictics_1_1strategy_1_1Strategy_afc091846262ceb740b13d949744e8bf7}\index{metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}!ifFactoryGenerator@{ifFactoryGenerator}}
+\index{ifFactoryGenerator@{ifFactoryGenerator}!metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}}
+\doxysubsubsection{\texorpdfstring{ifFactoryGenerator}{ifFactoryGenerator}}
+{\footnotesize\ttfamily \label{classmetaheurictics_1_1strategy_1_1Strategy_afc091846262ceb740b13d949744e8bf7} 
+\mbox{\hyperlink{interfacefactory__interface_1_1IFFactoryGenerator}{IFFactory\+Generator}} metaheurictics.\+strategy.\+Strategy.\+if\+Factory\+Generator\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{Strategy_8java_source_l00041}{41}} del archivo \mbox{\hyperlink{Strategy_8java_source}{Strategy.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{Strategy_8java_source_l00332}{new\+Generator()}} y \mbox{\hyperlink{Strategy_8java_source_l00307}{update()}}.
+
+\Hypertarget{classmetaheurictics_1_1strategy_1_1Strategy_ad3a183f63a0c3c4b25957baa9040eaec}\index{metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}!listBest@{listBest}}
+\index{listBest@{listBest}!metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}}
+\doxysubsubsection{\texorpdfstring{listBest}{listBest}}
+{\footnotesize\ttfamily \label{classmetaheurictics_1_1strategy_1_1Strategy_ad3a183f63a0c3c4b25957baa9040eaec} 
+List$<$\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}$>$ metaheurictics.\+strategy.\+Strategy.\+list\+Best}
+
+
+
+Definición en la línea \mbox{\hyperlink{Strategy_8java_source_l00048}{48}} del archivo \mbox{\hyperlink{Strategy_8java_source}{Strategy.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{Strategy_8java_source_l00094}{execute\+Strategy()}}.
+
+\Hypertarget{classmetaheurictics_1_1strategy_1_1Strategy_ab111e2ebd50ff83f126ef6f5201f9283}\index{metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}!listOfflineError@{listOfflineError}}
+\index{listOfflineError@{listOfflineError}!metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}}
+\doxysubsubsection{\texorpdfstring{listOfflineError}{listOfflineError}}
+{\footnotesize\ttfamily \label{classmetaheurictics_1_1strategy_1_1Strategy_ab111e2ebd50ff83f126ef6f5201f9283} 
+float \mbox{[}$\,$\mbox{]} metaheurictics.\+strategy.\+Strategy.\+list\+Offline\+Error = new float\mbox{[}100\mbox{]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{Strategy_8java_source_l00063}{63}} del archivo \mbox{\hyperlink{Strategy_8java_source}{Strategy.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{Strategy_8java_source_l00509}{calculate\+Off\+Line\+Performance()}}.
+
+\Hypertarget{classmetaheurictics_1_1strategy_1_1Strategy_aa572e7d90e24bae70ea47a31fee298f4}\index{metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}!listRefPoblacFinal@{listRefPoblacFinal}}
+\index{listRefPoblacFinal@{listRefPoblacFinal}!metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}}
+\doxysubsubsection{\texorpdfstring{listRefPoblacFinal}{listRefPoblacFinal}}
+{\footnotesize\ttfamily \label{classmetaheurictics_1_1strategy_1_1Strategy_aa572e7d90e24bae70ea47a31fee298f4} 
+List$<$\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}$>$ metaheurictics.\+strategy.\+Strategy.\+list\+Ref\+Poblac\+Final = new Array\+List$<$\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}$>$ ()}
+
+
+
+Definición en la línea \mbox{\hyperlink{Strategy_8java_source_l00049}{49}} del archivo \mbox{\hyperlink{Strategy_8java_source}{Strategy.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{AcceptMulticase_8java_source_l00034}{local\+\_\+search.\+acceptation\+\_\+type.\+Accept\+Multicase.\+accept\+Candidate()}}, \mbox{\hyperlink{AcceptNotDominated_8java_source_l00028}{local\+\_\+search.\+acceptation\+\_\+type.\+Accept\+Not\+Dominated.\+accept\+Candidate()}}, \mbox{\hyperlink{AcceptNotDominatedTabu_8java_source_l00027}{local\+\_\+search.\+acceptation\+\_\+type.\+Accept\+Not\+Dominated\+Tabu.\+accept\+Candidate()}}, \mbox{\hyperlink{Strategy_8java_source_l00094}{execute\+Strategy()}}, \mbox{\hyperlink{MultiobjectiveHillClimbingDistance_8java_source_l00087}{metaheuristics.\+generators.\+Multiobjective\+Hill\+Climbing\+Distance.\+update\+Reference()}} y \mbox{\hyperlink{MultiobjectiveHillClimbingRestart_8java_source_l00083}{metaheuristics.\+generators.\+Multiobjective\+Hill\+Climbing\+Restart.\+update\+Reference()}}.
+
+\Hypertarget{classmetaheurictics_1_1strategy_1_1Strategy_a6079f1c09fe81506e05976037911be31}\index{metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}!listStates@{listStates}}
+\index{listStates@{listStates}!metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}}
+\doxysubsubsection{\texorpdfstring{listStates}{listStates}}
+{\footnotesize\ttfamily \label{classmetaheurictics_1_1strategy_1_1Strategy_a6079f1c09fe81506e05976037911be31} 
+List$<$\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}$>$ metaheurictics.\+strategy.\+Strategy.\+list\+States}
+
+
+
+Definición en la línea \mbox{\hyperlink{Strategy_8java_source_l00047}{47}} del archivo \mbox{\hyperlink{Strategy_8java_source}{Strategy.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{Strategy_8java_source_l00094}{execute\+Strategy()}} y \mbox{\hyperlink{MultiGenerator_8java_source_l00090}{metaheuristics.\+generators.\+Multi\+Generator.\+initialize\+Generators()}}.
+
+\Hypertarget{classmetaheurictics_1_1strategy_1_1Strategy_a72b0b983ab5990ef999037f9c331515a}\index{metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}!mapGenerators@{mapGenerators}}
+\index{mapGenerators@{mapGenerators}!metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}}
+\doxysubsubsection{\texorpdfstring{mapGenerators}{mapGenerators}}
+{\footnotesize\ttfamily \label{classmetaheurictics_1_1strategy_1_1Strategy_a72b0b983ab5990ef999037f9c331515a} 
+Sorted\+Map$<$\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{Generator\+Type}}, \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator}{Generator}}$>$ metaheurictics.\+strategy.\+Strategy.\+map\+Generators}
+
+
+
+Definición en la línea \mbox{\hyperlink{Strategy_8java_source_l00038}{38}} del archivo \mbox{\hyperlink{Strategy_8java_source}{Strategy.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{Strategy_8java_source_l00421}{get\+List\+Key()}}, \mbox{\hyperlink{DistributionEstimationAlgorithm_8java_source_l00189}{metaheuristics.\+generators.\+Distribution\+Estimation\+Algorithm.\+get\+List\+State\+Ref()}}, \mbox{\hyperlink{EvolutionStrategies_8java_source_l00164}{metaheuristics.\+generators.\+Evolution\+Strategies.\+get\+List\+State\+Ref()}}, \mbox{\hyperlink{GeneticAlgorithm_8java_source_l00200}{metaheuristics.\+generators.\+Genetic\+Algorithm.\+get\+List\+State\+Ref()}}, \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00220}{metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+get\+List\+State\+Ref()}}, \mbox{\hyperlink{Strategy_8java_source_l00454}{initialize()}} y \mbox{\hyperlink{Strategy_8java_source_l00438}{initialize\+Generators()}}.
+
+\Hypertarget{classmetaheurictics_1_1strategy_1_1Strategy_a5ac9ccf79296d15b1a44d119c1f1fc6e}\index{metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}!notDominated@{notDominated}}
+\index{notDominated@{notDominated}!metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}}
+\doxysubsubsection{\texorpdfstring{notDominated}{notDominated}}
+{\footnotesize\ttfamily \label{classmetaheurictics_1_1strategy_1_1Strategy_a5ac9ccf79296d15b1a44d119c1f1fc6e} 
+\mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1Dominance}{Dominance}} metaheurictics.\+strategy.\+Strategy.\+not\+Dominated}
+
+
+
+Definición en la línea \mbox{\hyperlink{Strategy_8java_source_l00050}{50}} del archivo \mbox{\hyperlink{Strategy_8java_source}{Strategy.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{Strategy_8java_source_l00094}{execute\+Strategy()}}.
+
+\Hypertarget{classmetaheurictics_1_1strategy_1_1Strategy_ab3b8afb295795d6f31000bd5c18700be}\index{metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}!periodo@{periodo}}
+\index{periodo@{periodo}!metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}}
+\doxysubsubsection{\texorpdfstring{periodo}{periodo}}
+{\footnotesize\ttfamily \label{classmetaheurictics_1_1strategy_1_1Strategy_ab3b8afb295795d6f31000bd5c18700be} 
+int metaheurictics.\+strategy.\+Strategy.\+periodo\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{Strategy_8java_source_l00067}{67}} del archivo \mbox{\hyperlink{Strategy_8java_source}{Strategy.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{Strategy_8java_source_l00094}{execute\+Strategy()}} y \mbox{\hyperlink{Strategy_8java_source_l00284}{update\+Count\+Gender()}}.
+
+\Hypertarget{classmetaheurictics_1_1strategy_1_1Strategy_a72e752e037880a0ff45c679bbc553d00}\index{metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}!problem@{problem}}
+\index{problem@{problem}!metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}}
+\doxysubsubsection{\texorpdfstring{problem}{problem}}
+{\footnotesize\ttfamily \label{classmetaheurictics_1_1strategy_1_1Strategy_a72e752e037880a0ff45c679bbc553d00} 
+\mbox{\hyperlink{classproblem_1_1definition_1_1Problem}{Problem}} metaheurictics.\+strategy.\+Strategy.\+problem\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{Strategy_8java_source_l00037}{37}} del archivo \mbox{\hyperlink{Strategy_8java_source}{Strategy.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{Strategy_8java_source_l00094}{execute\+Strategy()}}, \mbox{\hyperlink{Strategy_8java_source_l00405}{get\+Problem()}} y \mbox{\hyperlink{Strategy_8java_source_l00413}{set\+Problem()}}.
+
+\Hypertarget{classmetaheurictics_1_1strategy_1_1Strategy_ad7c438a82bc4f08ad239b3bc56320bca}\index{metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}!saveFreneParetoMonoObjetivo@{saveFreneParetoMonoObjetivo}}
+\index{saveFreneParetoMonoObjetivo@{saveFreneParetoMonoObjetivo}!metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}}
+\doxysubsubsection{\texorpdfstring{saveFreneParetoMonoObjetivo}{saveFreneParetoMonoObjetivo}}
+{\footnotesize\ttfamily \label{classmetaheurictics_1_1strategy_1_1Strategy_ad7c438a82bc4f08ad239b3bc56320bca} 
+boolean metaheurictics.\+strategy.\+Strategy.\+save\+Frene\+Pareto\+Mono\+Objetivo}
+
+
+
+Definición en la línea \mbox{\hyperlink{Strategy_8java_source_l00055}{55}} del archivo \mbox{\hyperlink{Strategy_8java_source}{Strategy.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{Strategy_8java_source_l00094}{execute\+Strategy()}}.
+
+\Hypertarget{classmetaheurictics_1_1strategy_1_1Strategy_a077d2cdfe76bd31661ca024e339a4c98}\index{metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}!saveListBestStates@{saveListBestStates}}
+\index{saveListBestStates@{saveListBestStates}!metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}}
+\doxysubsubsection{\texorpdfstring{saveListBestStates}{saveListBestStates}}
+{\footnotesize\ttfamily \label{classmetaheurictics_1_1strategy_1_1Strategy_a077d2cdfe76bd31661ca024e339a4c98} 
+boolean metaheurictics.\+strategy.\+Strategy.\+save\+List\+Best\+States}
+
+
+
+Definición en la línea \mbox{\hyperlink{Strategy_8java_source_l00054}{54}} del archivo \mbox{\hyperlink{Strategy_8java_source}{Strategy.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{Strategy_8java_source_l00094}{execute\+Strategy()}}.
+
+\Hypertarget{classmetaheurictics_1_1strategy_1_1Strategy_a4e698ca86e2842c70099dadd560e7578}\index{metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}!saveListStates@{saveListStates}}
+\index{saveListStates@{saveListStates}!metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}}
+\doxysubsubsection{\texorpdfstring{saveListStates}{saveListStates}}
+{\footnotesize\ttfamily \label{classmetaheurictics_1_1strategy_1_1Strategy_a4e698ca86e2842c70099dadd560e7578} 
+boolean metaheurictics.\+strategy.\+Strategy.\+save\+List\+States}
+
+
+
+Definición en la línea \mbox{\hyperlink{Strategy_8java_source_l00053}{53}} del archivo \mbox{\hyperlink{Strategy_8java_source}{Strategy.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{Strategy_8java_source_l00094}{execute\+Strategy()}}.
+
+\Hypertarget{classmetaheurictics_1_1strategy_1_1Strategy_aba3d7b221051061dd7955d3059ea2272}\index{metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}!stopexecute@{stopexecute}}
+\index{stopexecute@{stopexecute}!metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}}
+\doxysubsubsection{\texorpdfstring{stopexecute}{stopexecute}}
+{\footnotesize\ttfamily \label{classmetaheurictics_1_1strategy_1_1Strategy_aba3d7b221051061dd7955d3059ea2272} 
+\mbox{\hyperlink{classlocal__search_1_1complement_1_1StopExecute}{Stop\+Execute}} metaheurictics.\+strategy.\+Strategy.\+stopexecute\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{Strategy_8java_source_l00039}{39}} del archivo \mbox{\hyperlink{Strategy_8java_source}{Strategy.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{Strategy_8java_source_l00094}{execute\+Strategy()}}, \mbox{\hyperlink{Strategy_8java_source_l00357}{get\+Stopexecute()}} y \mbox{\hyperlink{Strategy_8java_source_l00381}{set\+Stopexecute()}}.
+
+\Hypertarget{classmetaheurictics_1_1strategy_1_1Strategy_a235c3afb5c1d4afe8ebaa1da12cff32e}\index{metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}!strategy@{strategy}}
+\index{strategy@{strategy}!metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}}
+\doxysubsubsection{\texorpdfstring{strategy}{strategy}}
+{\footnotesize\ttfamily \label{classmetaheurictics_1_1strategy_1_1Strategy_a235c3afb5c1d4afe8ebaa1da12cff32e} 
+\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_ac65d26e08073f5cfc7596577f18b9694}{Strategy}} metaheurictics.\+strategy.\+Strategy.\+strategy = null\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{Strategy_8java_source_l00035}{35}} del archivo \mbox{\hyperlink{Strategy_8java_source}{Strategy.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{Strategy_8java_source_l00483}{destroy\+Execute()}} y \mbox{\hyperlink{Strategy_8java_source_l00080}{get\+Strategy()}}.
+
+\Hypertarget{classmetaheurictics_1_1strategy_1_1Strategy_a1914ff8fe50a63e507d63538cd63e9ea}\index{metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}!threshold@{threshold}}
+\index{threshold@{threshold}!metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}}
+\doxysubsubsection{\texorpdfstring{threshold}{threshold}}
+{\footnotesize\ttfamily \label{classmetaheurictics_1_1strategy_1_1Strategy_a1914ff8fe50a63e507d63538cd63e9ea} 
+double metaheurictics.\+strategy.\+Strategy.\+threshold}
+
+
+
+Definición en la línea \mbox{\hyperlink{Strategy_8java_source_l00045}{45}} del archivo \mbox{\hyperlink{Strategy_8java_source}{Strategy.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{Strategy_8java_source_l00492}{get\+Threshold()}} y \mbox{\hyperlink{Strategy_8java_source_l00500}{set\+Threshold()}}.
+
+\Hypertarget{classmetaheurictics_1_1strategy_1_1Strategy_aeae847a5e9cad6d863212f3e3cf04cbe}\index{metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}!updateparameter@{updateparameter}}
+\index{updateparameter@{updateparameter}!metaheurictics.strategy.Strategy@{metaheurictics.strategy.Strategy}}
+\doxysubsubsection{\texorpdfstring{updateparameter}{updateparameter}}
+{\footnotesize\ttfamily \label{classmetaheurictics_1_1strategy_1_1Strategy_aeae847a5e9cad6d863212f3e3cf04cbe} 
+\mbox{\hyperlink{classlocal__search_1_1complement_1_1UpdateParameter}{Update\+Parameter}} metaheurictics.\+strategy.\+Strategy.\+updateparameter\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{Strategy_8java_source_l00040}{40}} del archivo \mbox{\hyperlink{Strategy_8java_source}{Strategy.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{Strategy_8java_source_l00389}{get\+Updateparameter()}} y \mbox{\hyperlink{Strategy_8java_source_l00397}{set\+Updateparameter()}}.
+
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Strategy_8java}{Strategy.\+java}}\end{DoxyCompactItemize}

@@ -1,0 +1,27 @@
+\doxysection{Factory\+Sampling.\+java}
+\hypertarget{FactorySampling_8java_source}{}\label{FactorySampling_8java_source}\index{FactorySampling.java@{FactorySampling.java}}
+\mbox{\hyperlink{FactorySampling_8java}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{FactorySampling_8java_source_l00001}00001\ \textcolor{keyword}{package\ }factory\_method;}
+\DoxyCodeLine{\Hypertarget{FactorySampling_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{FactorySampling_8java_source_l00003}00003\ \textcolor{keyword}{import}\ java.lang.reflect.InvocationTargetException;}
+\DoxyCodeLine{\Hypertarget{FactorySampling_8java_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{FactorySampling_8java_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{FactorySampling_8java_source_l00006}00006\ \textcolor{keyword}{import}\ evolutionary\_algorithms.complement.Sampling;}
+\DoxyCodeLine{\Hypertarget{FactorySampling_8java_source_l00007}00007\ \textcolor{keyword}{import}\ evolutionary\_algorithms.complement.SamplingType;}
+\DoxyCodeLine{\Hypertarget{FactorySampling_8java_source_l00008}00008\ \textcolor{keyword}{import}\ factory\_interface.IFFSampling;}
+\DoxyCodeLine{\Hypertarget{FactorySampling_8java_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{FactorySampling_8java_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{FactorySampling_8java_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{FactorySampling_8java_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{FactorySampling_8java_source_l00016}\mbox{\hyperlink{classfactory__method_1_1FactorySampling}{00016}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classfactory__method_1_1FactorySampling}{FactorySampling}}\ \textcolor{keyword}{implements}\ \mbox{\hyperlink{interfacefactory__interface_1_1IFFSampling}{IFFSampling}}\ \{}
+\DoxyCodeLine{\Hypertarget{FactorySampling_8java_source_l00017}\mbox{\hyperlink{classfactory__method_1_1FactorySampling_ac0ddd9e1c0a87bbd729f7e65e495b258}{00017}}\ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1Sampling}{Sampling}}\ \mbox{\hyperlink{classfactory__method_1_1FactorySampling_ac0ddd9e1c0a87bbd729f7e65e495b258}{sampling}};}
+\DoxyCodeLine{\Hypertarget{FactorySampling_8java_source_l00023}\mbox{\hyperlink{classfactory__method_1_1FactorySampling_a33a535d67935fdd077359930be8c125d}{00023}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1Sampling}{Sampling}}\ \mbox{\hyperlink{classfactory__method_1_1FactorySampling_a33a535d67935fdd077359930be8c125d}{createSampling}}(\mbox{\hyperlink{enumevolutionary__algorithms_1_1complement_1_1SamplingType}{SamplingType}}\ typesampling)\ \textcolor{keywordflow}{throws}\ IllegalArgumentException,\ SecurityException,\ ClassNotFoundException,\ InstantiationException,\ IllegalAccessException,\ InvocationTargetException,\ NoSuchMethodException\ \{}
+\DoxyCodeLine{\Hypertarget{FactorySampling_8java_source_l00024}00024\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{FactorySampling_8java_source_l00025}00025\ \ \ \ \ \ \ \ \ String\ className\ =\ \textcolor{stringliteral}{"{}evolutionary\_algorithms.complement."{}}\ +\ typesampling.toString();}
+\DoxyCodeLine{\Hypertarget{FactorySampling_8java_source_l00026}00026\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classfactory__method_1_1FactorySampling_ac0ddd9e1c0a87bbd729f7e65e495b258}{sampling}}\ =\ (\mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1Sampling}{Sampling}})\ \mbox{\hyperlink{classfactory__method_1_1FactoryLoader}{FactoryLoader}}.\mbox{\hyperlink{classfactory__method_1_1FactoryLoader_a4e61ffc7038a082277d67e3e59cdb859}{getInstance}}(className);}
+\DoxyCodeLine{\Hypertarget{FactorySampling_8java_source_l00027}00027\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classfactory__method_1_1FactorySampling_ac0ddd9e1c0a87bbd729f7e65e495b258}{sampling}};}
+\DoxyCodeLine{\Hypertarget{FactorySampling_8java_source_l00028}00028\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{FactorySampling_8java_source_l00029}00029\ \}}
+
+\end{DoxyCode}

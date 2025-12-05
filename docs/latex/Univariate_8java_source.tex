@@ -1,0 +1,70 @@
+\doxysection{Univariate.\+java}
+\hypertarget{Univariate_8java_source}{}\label{Univariate_8java_source}\index{Univariate.java@{Univariate.java}}
+\mbox{\hyperlink{Univariate_8java}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Univariate_8java_source_l00001}00001\ \textcolor{keyword}{package\ }evolutionary\_algorithms.complement;}
+\DoxyCodeLine{\Hypertarget{Univariate_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{Univariate_8java_source_l00003}00003\ \textcolor{keyword}{import}\ java.util.ArrayList;}
+\DoxyCodeLine{\Hypertarget{Univariate_8java_source_l00004}00004\ \textcolor{keyword}{import}\ java.util.List;}
+\DoxyCodeLine{\Hypertarget{Univariate_8java_source_l00005}00005\ \textcolor{keyword}{import}\ java.util.SortedMap;}
+\DoxyCodeLine{\Hypertarget{Univariate_8java_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{Univariate_8java_source_l00007}00007\ \textcolor{keyword}{import}\ problem.definition.State;}
+\DoxyCodeLine{\Hypertarget{Univariate_8java_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{Univariate_8java_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{Univariate_8java_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{Univariate_8java_source_l00014}\mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1Univariate}{00014}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1Univariate}{Univariate}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1Distribution}{Distribution}}\ \{}
+\DoxyCodeLine{\Hypertarget{Univariate_8java_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{Univariate_8java_source_l00016}00016\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{Univariate_8java_source_l00022}\mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1Univariate_a4732278fca14312bc399c1d313384e26}{00022}}\ \ \ \ \ \textcolor{keyword}{public}\ List<Probability>\ \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1Univariate_a4732278fca14312bc399c1d313384e26}{distribution}}(List<State>\ fathers)\ \{}
+\DoxyCodeLine{\Hypertarget{Univariate_8java_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{Univariate_8java_source_l00024}00024\ \ \ \ \ \ \ \ \ List<Probability>\ ListProbability\ =\ \textcolor{keyword}{new}\ ArrayList<Probability>();}
+\DoxyCodeLine{\Hypertarget{Univariate_8java_source_l00025}00025\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ cantV\ =\ fathers.get(0).getCode().size();}
+\DoxyCodeLine{\Hypertarget{Univariate_8java_source_l00026}00026\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ cantV;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{Univariate_8java_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}[]\ values\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[fathers.size()];}
+\DoxyCodeLine{\Hypertarget{Univariate_8java_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//llenar\ los\ valores\ de\ cada\ variable}}
+\DoxyCodeLine{\Hypertarget{Univariate_8java_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ fathers.size();\ j++)\{}
+\DoxyCodeLine{\Hypertarget{Univariate_8java_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ values[j]\ =\ (Integer)\ fathers.get(j).getCode().get(i);}
+\DoxyCodeLine{\Hypertarget{Univariate_8java_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Univariate_8java_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//para\ cada\ valor\ contar\ la\ cantidad\ de\ veces\ que\ se\ repite}}
+\DoxyCodeLine{\Hypertarget{Univariate_8java_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ k\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{Univariate_8java_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (k\ <\ values.length)\ \{}
+\DoxyCodeLine{\Hypertarget{Univariate_8java_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ count\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{Univariate_8java_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(values[k]\ !=\ -\/1)\{}
+\DoxyCodeLine{\Hypertarget{Univariate_8java_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ l\ =\ k;}
+\DoxyCodeLine{\Hypertarget{Univariate_8java_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ temp\ =\ values[k];}
+\DoxyCodeLine{\Hypertarget{Univariate_8java_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (l\ <\ values.length)\ \{}
+\DoxyCodeLine{\Hypertarget{Univariate_8java_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(temp\ ==\ values[l])\{}
+\DoxyCodeLine{\Hypertarget{Univariate_8java_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ count++;}
+\DoxyCodeLine{\Hypertarget{Univariate_8java_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ values[l]\ =\ -\/1;}
+\DoxyCodeLine{\Hypertarget{Univariate_8java_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Univariate_8java_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ l++;\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Univariate_8java_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Univariate_8java_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1Probability}{Probability}}\ probability\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1Probability}{Probability}}();}
+\DoxyCodeLine{\Hypertarget{Univariate_8java_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ prob\ =\ count\ /\ values.length;}
+\DoxyCodeLine{\Hypertarget{Univariate_8java_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ probability.\mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1Probability_a04ce04dece9d7d855f8be232c0525a1f}{setKey}}(i);}
+\DoxyCodeLine{\Hypertarget{Univariate_8java_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ probability.\mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1Probability_a13127768f8691e579517b1506c029c5c}{setValue}}(temp);}
+\DoxyCodeLine{\Hypertarget{Univariate_8java_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ probability.\mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1Probability_a7fa716c2c4f973759793ae6c4b48eaf0}{setProbability}}(prob);}
+\DoxyCodeLine{\Hypertarget{Univariate_8java_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ListProbability.add(probability);}
+\DoxyCodeLine{\Hypertarget{Univariate_8java_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Univariate_8java_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ k++;}
+\DoxyCodeLine{\Hypertarget{Univariate_8java_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Univariate_8java_source_l00055}00055\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Univariate_8java_source_l00056}00056\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ListProbability;}
+\DoxyCodeLine{\Hypertarget{Univariate_8java_source_l00057}00057\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Univariate_8java_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{Univariate_8java_source_l00065}\mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1Univariate_afa13e9ef6e898434b0c99d846e9eac80}{00065}}\ \ \ \ \ \textcolor{keyword}{public}\ List<String>\ \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1Univariate_afa13e9ef6e898434b0c99d846e9eac80}{getListKey}}(SortedMap<String,\ Object>\ map)\{}
+\DoxyCodeLine{\Hypertarget{Univariate_8java_source_l00066}00066\ \ \ \ \ \ \ \ \ List<String>\ listKey\ =\ \textcolor{keyword}{new}\ ArrayList<String>();}
+\DoxyCodeLine{\Hypertarget{Univariate_8java_source_l00067}00067\ \ \ \ \ \ \ \ \ String\ key\ =\ map.keySet().toString();}
+\DoxyCodeLine{\Hypertarget{Univariate_8java_source_l00068}00068\ \ \ \ \ \ \ \ \ String\ returnString\ =\ key.substring(1,\ key.length()\ -\/\ 1);}
+\DoxyCodeLine{\Hypertarget{Univariate_8java_source_l00069}00069\ \ \ \ \ \ \ \ \ returnString\ =\ returnString\ +\ \textcolor{stringliteral}{"{},\ "{}};}
+\DoxyCodeLine{\Hypertarget{Univariate_8java_source_l00070}00070\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ countKey\ =\ map.size();}
+\DoxyCodeLine{\Hypertarget{Univariate_8java_source_l00071}00071\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ countKey;\ j++)\ \{}
+\DoxyCodeLine{\Hypertarget{Univariate_8java_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ String\ r\ =\ returnString.substring(0,\ returnString.indexOf(\textcolor{charliteral}{','}));}
+\DoxyCodeLine{\Hypertarget{Univariate_8java_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ returnString\ =\ returnString.substring(returnString.indexOf(\textcolor{charliteral}{','})+2);}
+\DoxyCodeLine{\Hypertarget{Univariate_8java_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ listKey.add(r);}
+\DoxyCodeLine{\Hypertarget{Univariate_8java_source_l00075}00075\ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Univariate_8java_source_l00076}00076\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ listKey;}
+\DoxyCodeLine{\Hypertarget{Univariate_8java_source_l00077}00077\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Univariate_8java_source_l00078}00078\ \}}
+
+\end{DoxyCode}

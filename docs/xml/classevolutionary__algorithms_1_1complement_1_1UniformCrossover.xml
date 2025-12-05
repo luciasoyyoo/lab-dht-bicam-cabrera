@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="es">
+  <compounddef id="classevolutionary__algorithms_1_1complement_1_1UniformCrossover" kind="class" language="Java" prot="public">
+    <compoundname>evolutionary_algorithms::complement::UniformCrossover</compoundname>
+    <basecompoundref refid="classevolutionary__algorithms_1_1complement_1_1Crossover" prot="public" virt="non-virtual">evolutionary_algorithms.complement.Crossover</basecompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classevolutionary__algorithms_1_1complement_1_1UniformCrossover_1aa99dc616ac6ca6cd4ee926b275736cb0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int[]</type>
+        <definition>int[] evolutionary_algorithms.complement.UniformCrossover.mascara</definition>
+        <argsstring>(int length)</argsstring>
+        <name>mascara</name>
+        <qualifiedname>evolutionary_algorithms.complement.UniformCrossover.mascara</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+<para>Uses ThreadLocalRandom for algorithmic (non-cryptographic) randomness. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This RNG is used for evolutionary algorithm operations (crossover point, selection between children, etc.) and is not used for security-sensitive purposes. Therefore we suppress the Sonar security hotspot S2245 here. mascara - applies uniform crossover strategy. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns the generated mask for crossover. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/evolutionary_algorithms/complement/UniformCrossover.java" line="25" column="12" bodyfile="practica5/src/main/java/evolutionary_algorithms/complement/UniformCrossover.java" bodystart="25" bodyend="32"/>
+        <references refid="classevolutionary__algorithms_1_1complement_1_1UniformCrossover_1aa99dc616ac6ca6cd4ee926b275736cb0" compoundref="UniformCrossover_8java" startline="25" endline="32">evolutionary_algorithms.complement.UniformCrossover.mascara</references>
+        <referencedby refid="classevolutionary__algorithms_1_1complement_1_1UniformCrossover_1a54eb36b06a9e409253360eb9cd76f774" compoundref="UniformCrossover_8java" startline="42" endline="59">evolutionary_algorithms.complement.UniformCrossover.crossover</referencedby>
+        <referencedby refid="classevolutionary__algorithms_1_1complement_1_1UniformCrossover_1aa99dc616ac6ca6cd4ee926b275736cb0" compoundref="UniformCrossover_8java" startline="25" endline="32">evolutionary_algorithms.complement.UniformCrossover.mascara</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classevolutionary__algorithms_1_1complement_1_1UniformCrossover_1a54eb36b06a9e409253360eb9cd76f774" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+        <definition>State evolutionary_algorithms.complement.UniformCrossover.crossover</definition>
+        <argsstring>(State father1, State father2, double PC)</argsstring>
+        <name>crossover</name>
+        <qualifiedname>evolutionary_algorithms.complement.UniformCrossover.crossover</qualifiedname>
+        <reimplements refid="classevolutionary__algorithms_1_1complement_1_1Crossover_1a77155266e5646a87bcd427189938cc32">crossover</reimplements>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>father1</declname>
+        </param>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>father2</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>PC</declname>
+        </param>
+        <briefdescription>
+<para>crossover - applies uniform crossover strategy. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>father1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>father2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>PC</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns the offspring state after crossover. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/evolutionary_algorithms/complement/UniformCrossover.java" line="42" column="14" bodyfile="practica5/src/main/java/evolutionary_algorithms/complement/UniformCrossover.java" bodystart="42" bodyend="59"/>
+        <references refid="classproblem_1_1definition_1_1State_1a2e75b6f2bedb2107478ecd1e8e681418" compoundref="State_8java" startline="68" endline="70">problem.definition.State.getCode</references>
+        <references refid="classproblem_1_1definition_1_1State_1aaf14fa8466c945ff5e134028c6c259f8" compoundref="State_8java" startline="161" endline="163">problem.definition.State.getCopy</references>
+        <references refid="classevolutionary__algorithms_1_1complement_1_1UniformCrossover_1aa99dc616ac6ca6cd4ee926b275736cb0" compoundref="UniformCrossover_8java" startline="25" endline="32">evolutionary_algorithms.complement.UniformCrossover.mascara</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="classevolutionary__algorithms_1_1complement_1_1UniformCrossover" kindref="compound">UniformCrossover</ref> - complements uniform crossover strategy. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>evolutionary_algorithms.complement.UniformCrossover</label>
+        <link refid="classevolutionary__algorithms_1_1complement_1_1UniformCrossover"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>evolutionary_algorithms.complement.Crossover</label>
+        <link refid="classevolutionary__algorithms_1_1complement_1_1Crossover"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>evolutionary_algorithms.complement.UniformCrossover</label>
+        <link refid="classevolutionary__algorithms_1_1complement_1_1UniformCrossover"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>evolutionary_algorithms.complement.Crossover</label>
+        <link refid="classevolutionary__algorithms_1_1complement_1_1Crossover"/>
+      </node>
+    </collaborationgraph>
+    <location file="practica5/src/main/java/evolutionary_algorithms/complement/UniformCrossover.java" line="11" column="7" bodyfile="practica5/src/main/java/evolutionary_algorithms/complement/UniformCrossover.java" bodystart="11" bodyend="60"/>
+    <listofallmembers>
+      <member refid="classevolutionary__algorithms_1_1complement_1_1UniformCrossover_1a54eb36b06a9e409253360eb9cd76f774" prot="public" virt="non-virtual"><scope>evolutionary_algorithms::complement::UniformCrossover</scope><name>crossover</name></member>
+      <member refid="classevolutionary__algorithms_1_1complement_1_1UniformCrossover_1aa99dc616ac6ca6cd4ee926b275736cb0" prot="public" virt="non-virtual"><scope>evolutionary_algorithms::complement::UniformCrossover</scope><name>mascara</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,1527 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="es">
+  <compounddef id="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization" kind="class" language="Java" prot="public">
+    <compoundname>metaheuristics::generators::ParticleSwarmOptimization</compoundname>
+    <basecompoundref refid="classmetaheuristics_1_1generators_1_1Generator" prot="public" virt="non-virtual">metaheuristics.generators.Generator</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a84f1604d94af7fb5a200176a4c245b15" prot="private" static="no" mutable="no">
+        <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+        <definition>State metaheuristics.generators.ParticleSwarmOptimization.stateReferencePSO</definition>
+        <argsstring></argsstring>
+        <name>stateReferencePSO</name>
+        <qualifiedname>metaheuristics.generators.ParticleSwarmOptimization.stateReferencePSO</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" line="21" column="15" bodyfile="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" bodystart="21" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a4e9ec463f3058721220c4c28c99a42e7" compoundref="ParticleSwarmOptimization_8java" startline="268" endline="270">metaheuristics.generators.ParticleSwarmOptimization.getStateReferencePSO</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1af0007f3368bc26e13509697f13b8bd8f" compoundref="ParticleSwarmOptimization_8java" startline="280" endline="282">metaheuristics.generators.ParticleSwarmOptimization.setStateReferencePSO</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a488b113859866aa90ed7f71dea741024" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+        <definition>List&lt;State&gt; metaheuristics.generators.ParticleSwarmOptimization.listStateReference</definition>
+        <argsstring></argsstring>
+        <name>listStateReference</name>
+        <qualifiedname>metaheuristics.generators.ParticleSwarmOptimization.listStateReference</qualifiedname>
+        <initializer>= new ArrayList&lt;<ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref>&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" line="22" column="14" bodyfile="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" bodystart="22" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a64d44fa65b23051d69ab0d4d14e0f162" compoundref="ParticleSwarmOptimization_8java" startline="448" endline="450">metaheuristics.generators.ParticleSwarmOptimization.getReferenceList</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a672badc4745b5b9327dcc920fb195c8a" compoundref="ParticleSwarmOptimization_8java" startline="302" endline="304">metaheuristics.generators.ParticleSwarmOptimization.setListStateReference</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1abc5a8dcdf9ff7418f4084002e383b860" compoundref="ParticleSwarmOptimization_8java" startline="364" endline="395">metaheuristics.generators.ParticleSwarmOptimization.updateReference</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a4635b77d518d93e48c436213dc8d3601" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="classmetaheuristics_1_1generators_1_1Particle" kindref="compound">Particle</ref> &gt;</type>
+        <definition>List&lt;Particle&gt; metaheuristics.generators.ParticleSwarmOptimization.listParticle</definition>
+        <argsstring></argsstring>
+        <name>listParticle</name>
+        <qualifiedname>metaheuristics.generators.ParticleSwarmOptimization.listParticle</qualifiedname>
+        <initializer>=  new ArrayList&lt;<ref refid="classmetaheuristics_1_1generators_1_1Particle" kindref="compound">Particle</ref>&gt; ()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" line="23" column="14" bodyfile="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" bodystart="23" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a4bab770550c31f12b11de2585086936a" compoundref="ParticleSwarmOptimization_8java" startline="157" endline="164">metaheuristics.generators.ParticleSwarmOptimization.generate</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a754377431c7fa3de15b4e81fd7f79f6f" compoundref="ParticleSwarmOptimization_8java" startline="311" endline="313">metaheuristics.generators.ParticleSwarmOptimization.getListParticle</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a2b35916a7fef7ecc1ae9c6f4c571a6d1" compoundref="ParticleSwarmOptimization_8java" startline="173" endline="195">metaheuristics.generators.ParticleSwarmOptimization.inicialiceLBest</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a58823d3000e36d540bd20800e0636a88" compoundref="ParticleSwarmOptimization_8java" startline="132" endline="147">metaheuristics.generators.ParticleSwarmOptimization.ParticleSwarmOptimization</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a8e0fe5cf94eb84b09d75c6e270bf60de" compoundref="ParticleSwarmOptimization_8java" startline="321" endline="324">metaheuristics.generators.ParticleSwarmOptimization.setListParticle</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1abc5a8dcdf9ff7418f4084002e383b860" compoundref="ParticleSwarmOptimization_8java" startline="364" endline="395">metaheuristics.generators.ParticleSwarmOptimization.updateReference</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a87ec4603a4779481939b402eb8e02089" prot="private" static="no" mutable="no">
+        <type><ref refid="enummetaheuristics_1_1generators_1_1GeneratorType" kindref="compound">GeneratorType</ref></type>
+        <definition>GeneratorType metaheuristics.generators.ParticleSwarmOptimization.generatorType</definition>
+        <argsstring></argsstring>
+        <name>generatorType</name>
+        <qualifiedname>metaheuristics.generators.ParticleSwarmOptimization.generatorType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" line="24" column="23" bodyfile="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" bodystart="24" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a6f553e35a4929a626db8c0e3a038eaf5" compoundref="ParticleSwarmOptimization_8java" startline="331" endline="333">metaheuristics.generators.ParticleSwarmOptimization.getGeneratorType</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a71987dfaef5ebd055f958f9ca186953f" compoundref="ParticleSwarmOptimization_8java" startline="438" endline="440">metaheuristics.generators.ParticleSwarmOptimization.getType</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a5855f4db41982beb1b0ef27a4b44742d" compoundref="ParticleSwarmOptimization_8java" startline="340" endline="342">metaheuristics.generators.ParticleSwarmOptimization.setGeneratorType</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a4a4f8987c2b64eb8e5728e9abe354c58" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float metaheuristics.generators.ParticleSwarmOptimization.weight</definition>
+        <argsstring></argsstring>
+        <name>weight</name>
+        <qualifiedname>metaheuristics.generators.ParticleSwarmOptimization.weight</qualifiedname>
+        <initializer>= 50</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" line="68" column="15" bodyfile="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" bodystart="68" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1aec94a0a6dc5331c35a59a3be0078be9f" compoundref="ParticleSwarmOptimization_8java" startline="495" endline="497">metaheuristics.generators.ParticleSwarmOptimization.getWeight</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a58823d3000e36d540bd20800e0636a88" compoundref="ParticleSwarmOptimization_8java" startline="132" endline="147">metaheuristics.generators.ParticleSwarmOptimization.ParticleSwarmOptimization</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1af200d1e3621dea6a34960f8ffbbefa8c" compoundref="ParticleSwarmOptimization_8java" startline="485" endline="487">metaheuristics.generators.ParticleSwarmOptimization.setWeight</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1ac4fe1e87c6489d682099ca0e22e7d0f8" prot="private" static="no" mutable="no">
+        <type>int[]</type>
+        <definition>int [] metaheuristics.generators.ParticleSwarmOptimization.listCountBetterGender</definition>
+        <argsstring></argsstring>
+        <name>listCountBetterGender</name>
+        <qualifiedname>metaheuristics.generators.ParticleSwarmOptimization.listCountBetterGender</qualifiedname>
+        <initializer>= new int[10]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" line="120" column="17" bodyfile="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" bodystart="120" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1ac6bc6fa2d1b14049ea3a1a5f0c26b4b5" compoundref="ParticleSwarmOptimization_8java" startline="506" endline="508">metaheuristics.generators.ParticleSwarmOptimization.getListCountBetterGender</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a58823d3000e36d540bd20800e0636a88" compoundref="ParticleSwarmOptimization_8java" startline="132" endline="147">metaheuristics.generators.ParticleSwarmOptimization.ParticleSwarmOptimization</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1aaedf6d547a9fd8128fb12898bcacc3fe" prot="private" static="no" mutable="no">
+        <type>int[]</type>
+        <definition>int [] metaheuristics.generators.ParticleSwarmOptimization.listCountGender</definition>
+        <argsstring></argsstring>
+        <name>listCountGender</name>
+        <qualifiedname>metaheuristics.generators.ParticleSwarmOptimization.listCountGender</qualifiedname>
+        <initializer>= new int[10]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" line="121" column="17" bodyfile="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" bodystart="121" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a4015ce46c4c0b78825daa8a263a5ac56" compoundref="ParticleSwarmOptimization_8java" startline="516" endline="518">metaheuristics.generators.ParticleSwarmOptimization.getListCountGender</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a58823d3000e36d540bd20800e0636a88" compoundref="ParticleSwarmOptimization_8java" startline="132" endline="147">metaheuristics.generators.ParticleSwarmOptimization.ParticleSwarmOptimization</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a3436d8147038325c0726224894038433" prot="private" static="no" mutable="no">
+        <type>float[]</type>
+        <definition>float [] metaheuristics.generators.ParticleSwarmOptimization.listTrace</definition>
+        <argsstring></argsstring>
+        <name>listTrace</name>
+        <qualifiedname>metaheuristics.generators.ParticleSwarmOptimization.listTrace</qualifiedname>
+        <initializer>= new float[1200000]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" line="122" column="19" bodyfile="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" bodystart="122" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a6e3b617f60a8f8ff0d3f3e5e000996fb" compoundref="ParticleSwarmOptimization_8java" startline="527" endline="529">metaheuristics.generators.ParticleSwarmOptimization.getTrace</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a58823d3000e36d540bd20800e0636a88" compoundref="ParticleSwarmOptimization_8java" startline="132" endline="147">metaheuristics.generators.ParticleSwarmOptimization.ParticleSwarmOptimization</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="package-static-attrib">
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a29c7d99df446a2bf178c8e9ffc963a4f" prot="package" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int metaheuristics.generators.ParticleSwarmOptimization.countParticle</definition>
+        <argsstring></argsstring>
+        <name>countParticle</name>
+        <qualifiedname>metaheuristics.generators.ParticleSwarmOptimization.countParticle</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" line="25" column="12" bodyfile="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1af62b47f08a2cb5157b18ef72f69c3aaf" prot="package" static="yes" mutable="no">
+        <type>double</type>
+        <definition>double metaheuristics.generators.ParticleSwarmOptimization.constriction</definition>
+        <argsstring></argsstring>
+        <name>constriction</name>
+        <qualifiedname>metaheuristics.generators.ParticleSwarmOptimization.constriction</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" line="72" column="15" bodyfile="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a8c4f8b7e4c2b5bf26916121df43b6002" prot="package" static="yes" mutable="no">
+        <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref>[]</type>
+        <definition>State [] metaheuristics.generators.ParticleSwarmOptimization.lBest</definition>
+        <argsstring></argsstring>
+        <name>lBest</name>
+        <qualifiedname>metaheuristics.generators.ParticleSwarmOptimization.lBest</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" line="74" column="14" bodyfile="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a6ca52dc27ceda8553bae2021e0a7bb81" prot="package" static="yes" mutable="no">
+        <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+        <definition>State metaheuristics.generators.ParticleSwarmOptimization.gBest</definition>
+        <argsstring></argsstring>
+        <name>gBest</name>
+        <qualifiedname>metaheuristics.generators.ParticleSwarmOptimization.gBest</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" line="75" column="14" bodyfile="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a1624017c12a2f31e26d4b6d2c9e44d4e" prot="package" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int metaheuristics.generators.ParticleSwarmOptimization.countCurrentIterPSO</definition>
+        <argsstring></argsstring>
+        <name>countCurrentIterPSO</name>
+        <qualifiedname>metaheuristics.generators.ParticleSwarmOptimization.countCurrentIterPSO</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" line="76" column="12" bodyfile="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" bodystart="76" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1ac2df5a730f09652ea6303fde195de727" prot="private" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int metaheuristics.generators.ParticleSwarmOptimization.coutSwarm</definition>
+        <argsstring></argsstring>
+        <name>coutSwarm</name>
+        <qualifiedname>metaheuristics.generators.ParticleSwarmOptimization.coutSwarm</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" line="30" column="20" bodyfile="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" bodystart="30" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a52383fab169358bf7971311c7ed8f207" compoundref="ParticleSwarmOptimization_8java" startline="35" endline="37">metaheuristics.generators.ParticleSwarmOptimization.getCoutSwarm</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a2b35916a7fef7ecc1ae9c6f4c571a6d1" compoundref="ParticleSwarmOptimization_8java" startline="173" endline="195">metaheuristics.generators.ParticleSwarmOptimization.inicialiceLBest</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a58823d3000e36d540bd20800e0636a88" compoundref="ParticleSwarmOptimization_8java" startline="132" endline="147">metaheuristics.generators.ParticleSwarmOptimization.ParticleSwarmOptimization</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a4a7e8784ece74feb38646a5535f13699" compoundref="ParticleSwarmOptimization_8java" startline="61" endline="66">metaheuristics.generators.ParticleSwarmOptimization.setCountParticleBySwarm</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a0b98342174ad9b19e199a0cf1c85950e" compoundref="ParticleSwarmOptimization_8java" startline="42" endline="47">metaheuristics.generators.ParticleSwarmOptimization.setCoutSwarm</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1aeac78dea881f9fd22d59194fb42efd79" prot="private" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int metaheuristics.generators.ParticleSwarmOptimization.countParticleBySwarm</definition>
+        <argsstring></argsstring>
+        <name>countParticleBySwarm</name>
+        <qualifiedname>metaheuristics.generators.ParticleSwarmOptimization.countParticleBySwarm</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" line="49" column="20" bodyfile="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" bodystart="49" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a8df765e1194a606605e5eefa5c136010" compoundref="ParticleSwarmOptimization_8java" startline="54" endline="56">metaheuristics.generators.ParticleSwarmOptimization.getCountParticleBySwarm</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a2b35916a7fef7ecc1ae9c6f4c571a6d1" compoundref="ParticleSwarmOptimization_8java" startline="173" endline="195">metaheuristics.generators.ParticleSwarmOptimization.inicialiceLBest</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a4a7e8784ece74feb38646a5535f13699" compoundref="ParticleSwarmOptimization_8java" startline="61" endline="66">metaheuristics.generators.ParticleSwarmOptimization.setCountParticleBySwarm</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a0b98342174ad9b19e199a0cf1c85950e" compoundref="ParticleSwarmOptimization_8java" startline="42" endline="47">metaheuristics.generators.ParticleSwarmOptimization.setCoutSwarm</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1abc5a8dcdf9ff7418f4084002e383b860" compoundref="ParticleSwarmOptimization_8java" startline="364" endline="395">metaheuristics.generators.ParticleSwarmOptimization.updateReference</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1ac7ebf8d9c7ccd1f23c38eea79ea50ad4" prot="private" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int metaheuristics.generators.ParticleSwarmOptimization.countRef</definition>
+        <argsstring></argsstring>
+        <name>countRef</name>
+        <qualifiedname>metaheuristics.generators.ParticleSwarmOptimization.countRef</qualifiedname>
+        <initializer>= <ref refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1ac2df5a730f09652ea6303fde195de727" kindref="member">coutSwarm</ref> * <ref refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1aeac78dea881f9fd22d59194fb42efd79" kindref="member">countParticleBySwarm</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" line="67" column="20" bodyfile="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" bodystart="67" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a4bab770550c31f12b11de2585086936a" compoundref="ParticleSwarmOptimization_8java" startline="157" endline="164">metaheuristics.generators.ParticleSwarmOptimization.generate</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a8a448ceb59a38faaa4d964e5c31510ee" compoundref="ParticleSwarmOptimization_8java" startline="344" endline="346">metaheuristics.generators.ParticleSwarmOptimization.getCountRef</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a4a9da4ad8253a7521056fbb306a495a3" compoundref="ParticleSwarmOptimization_8java" startline="220" endline="260">metaheuristics.generators.ParticleSwarmOptimization.getListStateRef</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a443250bb3b7fb34f1a2a3ba062cb3311" compoundref="ParticleSwarmOptimization_8java" startline="348" endline="350">metaheuristics.generators.ParticleSwarmOptimization.setCountRef</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a920f572bad5f93b03c3347356f7c2bc4" prot="public" static="yes" mutable="no">
+        <type>final double</type>
+        <definition>final double metaheuristics.generators.ParticleSwarmOptimization.wmax</definition>
+        <argsstring></argsstring>
+        <name>wmax</name>
+        <qualifiedname>metaheuristics.generators.ParticleSwarmOptimization.wmax</qualifiedname>
+        <initializer>= 0.9</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" line="69" column="28" bodyfile="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" bodystart="69" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1Particle_1acfc132343407756e7b016506963b7984" compoundref="Particle_8java" startline="127" endline="157">metaheuristics.generators.Particle.UpdateVelocity</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a25ee209144e81a8a9b36dda74df290c1" prot="public" static="yes" mutable="no">
+        <type>final double</type>
+        <definition>final double metaheuristics.generators.ParticleSwarmOptimization.wmin</definition>
+        <argsstring></argsstring>
+        <name>wmin</name>
+        <qualifiedname>metaheuristics.generators.ParticleSwarmOptimization.wmin</qualifiedname>
+        <initializer>= 0.2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" line="70" column="28" bodyfile="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" bodystart="70" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1Particle_1acfc132343407756e7b016506963b7984" compoundref="Particle_8java" startline="127" endline="157">metaheuristics.generators.Particle.UpdateVelocity</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a4a53547ab8ca6aa61df72a02a76e3e80" prot="public" static="yes" mutable="no">
+        <type>final int</type>
+        <definition>final int metaheuristics.generators.ParticleSwarmOptimization.learning1</definition>
+        <argsstring></argsstring>
+        <name>learning1</name>
+        <qualifiedname>metaheuristics.generators.ParticleSwarmOptimization.learning1</qualifiedname>
+        <initializer>= 2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" line="71" column="25" bodyfile="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" bodystart="71" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1Particle_1acfc132343407756e7b016506963b7984" compoundref="Particle_8java" startline="127" endline="157">metaheuristics.generators.Particle.UpdateVelocity</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1afcbf94cbccaf2d2654fac058793cc173" prot="public" static="yes" mutable="no">
+        <type>final int</type>
+        <definition>final int metaheuristics.generators.ParticleSwarmOptimization.learning2</definition>
+        <argsstring></argsstring>
+        <name>learning2</name>
+        <qualifiedname>metaheuristics.generators.ParticleSwarmOptimization.learning2</qualifiedname>
+        <initializer>= 2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" line="71" column="36" bodyfile="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" bodystart="71" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1Particle_1acfc132343407756e7b016506963b7984" compoundref="Particle_8java" startline="127" endline="157">metaheuristics.generators.Particle.UpdateVelocity</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a45a990b27b172338c10931d135b88b7f" prot="public" static="yes" mutable="no">
+        <type>final boolean</type>
+        <definition>final boolean metaheuristics.generators.ParticleSwarmOptimization.binary</definition>
+        <argsstring></argsstring>
+        <name>binary</name>
+        <qualifiedname>metaheuristics.generators.ParticleSwarmOptimization.binary</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" line="73" column="29" bodyfile="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" bodystart="73" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1Particle_1a2b55cd9e4995053b3c90009e8f9bfc5d" compoundref="Particle_8java" startline="164" endline="188">metaheuristics.generators.Particle.UpdateCode</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a52383fab169358bf7971311c7ed8f207" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int metaheuristics.generators.ParticleSwarmOptimization.getCoutSwarm</definition>
+        <argsstring>()</argsstring>
+        <name>getCoutSwarm</name>
+        <qualifiedname>metaheuristics.generators.ParticleSwarmOptimization.getCoutSwarm</qualifiedname>
+        <briefdescription>
+<para>getCoutSwarm - get the number of swarms. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>return the number of swarms </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" line="35" column="19" bodyfile="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" bodystart="35" bodyend="37"/>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1ac2df5a730f09652ea6303fde195de727" compoundref="ParticleSwarmOptimization_8java" startline="30">metaheuristics.generators.ParticleSwarmOptimization.coutSwarm</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a0b98342174ad9b19e199a0cf1c85950e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void metaheuristics.generators.ParticleSwarmOptimization.setCoutSwarm</definition>
+        <argsstring>(int v)</argsstring>
+        <name>setCoutSwarm</name>
+        <qualifiedname>metaheuristics.generators.ParticleSwarmOptimization.setCoutSwarm</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+<para>setCoutSwarm - set the number of swarms. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the number of swarms to set </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" line="42" column="20" bodyfile="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" bodystart="42" bodyend="47"/>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1aeac78dea881f9fd22d59194fb42efd79" compoundref="ParticleSwarmOptimization_8java" startline="49">metaheuristics.generators.ParticleSwarmOptimization.countParticleBySwarm</references>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1ac2df5a730f09652ea6303fde195de727" compoundref="ParticleSwarmOptimization_8java" startline="30">metaheuristics.generators.ParticleSwarmOptimization.coutSwarm</references>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a443250bb3b7fb34f1a2a3ba062cb3311" compoundref="ParticleSwarmOptimization_8java" startline="348" endline="350">metaheuristics.generators.ParticleSwarmOptimization.setCountRef</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a8df765e1194a606605e5eefa5c136010" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int metaheuristics.generators.ParticleSwarmOptimization.getCountParticleBySwarm</definition>
+        <argsstring>()</argsstring>
+        <name>getCountParticleBySwarm</name>
+        <qualifiedname>metaheuristics.generators.ParticleSwarmOptimization.getCountParticleBySwarm</qualifiedname>
+        <briefdescription>
+<para>getCountParticleBySwarm - get the number of particles per swarm. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the number of particles per swarm </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" line="54" column="19" bodyfile="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" bodystart="54" bodyend="56"/>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1aeac78dea881f9fd22d59194fb42efd79" compoundref="ParticleSwarmOptimization_8java" startline="49">metaheuristics.generators.ParticleSwarmOptimization.countParticleBySwarm</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a4a7e8784ece74feb38646a5535f13699" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void metaheuristics.generators.ParticleSwarmOptimization.setCountParticleBySwarm</definition>
+        <argsstring>(int v)</argsstring>
+        <name>setCountParticleBySwarm</name>
+        <qualifiedname>metaheuristics.generators.ParticleSwarmOptimization.setCountParticleBySwarm</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+<para>setCountParticleBySwarm - set the number of particles per swarm. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the number of particles per swarm to set </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" line="61" column="20" bodyfile="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" bodystart="61" bodyend="66"/>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1aeac78dea881f9fd22d59194fb42efd79" compoundref="ParticleSwarmOptimization_8java" startline="49">metaheuristics.generators.ParticleSwarmOptimization.countParticleBySwarm</references>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1ac2df5a730f09652ea6303fde195de727" compoundref="ParticleSwarmOptimization_8java" startline="30">metaheuristics.generators.ParticleSwarmOptimization.coutSwarm</references>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a443250bb3b7fb34f1a2a3ba062cb3311" compoundref="ParticleSwarmOptimization_8java" startline="348" endline="350">metaheuristics.generators.ParticleSwarmOptimization.setCountRef</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a0e7dc7ca80c456a71f0fa4f660b33086" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref>[]</type>
+        <definition>static State[] metaheuristics.generators.ParticleSwarmOptimization.getLBest</definition>
+        <argsstring>()</argsstring>
+        <name>getLBest</name>
+        <qualifiedname>metaheuristics.generators.ParticleSwarmOptimization.getLBest</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" line="80" column="21" bodyfile="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" bodystart="80" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a9452e8ce9fd5587e4bac1eadf10addbb" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void metaheuristics.generators.ParticleSwarmOptimization.setLBest</definition>
+        <argsstring>(State[] arr)</argsstring>
+        <name>setLBest</name>
+        <qualifiedname>metaheuristics.generators.ParticleSwarmOptimization.setLBest</qualifiedname>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref>[]</type>
+          <declname>arr</declname>
+        </param>
+        <briefdescription>
+<para>setLBest - set the local best array. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>arr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" line="92" column="20" bodyfile="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" bodystart="92" bodyend="101"/>
+        <references refid="classproblem_1_1definition_1_1State_1a113f6883a1f6bd20eea2da09a0adc5c3" compoundref="State_8java" startline="142" endline="154">problem.definition.State.clone</references>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a58823d3000e36d540bd20800e0636a88" compoundref="ParticleSwarmOptimization_8java" startline="132" endline="147">metaheuristics.generators.ParticleSwarmOptimization.ParticleSwarmOptimization</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a2d0fa32b6e465a69309d1061aa8c63f6" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void metaheuristics.generators.ParticleSwarmOptimization.setLBestAt</definition>
+        <argsstring>(int idx, State s)</argsstring>
+        <name>setLBestAt</name>
+        <qualifiedname>metaheuristics.generators.ParticleSwarmOptimization.setLBestAt</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>idx</declname>
+        </param>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>setLBest - set the local best at index. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>idx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" line="107" column="20" bodyfile="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" bodystart="107" bodyend="111"/>
+        <references refid="classproblem_1_1definition_1_1State_1a113f6883a1f6bd20eea2da09a0adc5c3" compoundref="State_8java" startline="142" endline="154">problem.definition.State.clone</references>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1abc5a8dcdf9ff7418f4084002e383b860" compoundref="ParticleSwarmOptimization_8java" startline="364" endline="395">metaheuristics.generators.ParticleSwarmOptimization.updateReference</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1abd10eb844626b27fb592eee9f353725c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+        <definition>static State metaheuristics.generators.ParticleSwarmOptimization.getGBest</definition>
+        <argsstring>()</argsstring>
+        <name>getGBest</name>
+        <qualifiedname>metaheuristics.generators.ParticleSwarmOptimization.getGBest</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" line="112" column="21" bodyfile="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" bodystart="112" bodyend="112"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1abc5a8dcdf9ff7418f4084002e383b860" compoundref="ParticleSwarmOptimization_8java" startline="364" endline="395">metaheuristics.generators.ParticleSwarmOptimization.updateReference</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a842a4536ebfc5c89c2e21286fa70ed5e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void metaheuristics.generators.ParticleSwarmOptimization.setGBest</definition>
+        <argsstring>(State s)</argsstring>
+        <name>setGBest</name>
+        <qualifiedname>metaheuristics.generators.ParticleSwarmOptimization.setGBest</qualifiedname>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" line="113" column="20" bodyfile="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" bodystart="113" bodyend="113"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a58823d3000e36d540bd20800e0636a88" compoundref="ParticleSwarmOptimization_8java" startline="132" endline="147">metaheuristics.generators.ParticleSwarmOptimization.ParticleSwarmOptimization</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1abc5a8dcdf9ff7418f4084002e383b860" compoundref="ParticleSwarmOptimization_8java" startline="364" endline="395">metaheuristics.generators.ParticleSwarmOptimization.updateReference</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a12c12b70f5c84e0f06027adbe4db63f1" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int metaheuristics.generators.ParticleSwarmOptimization.getCountCurrentIterPSO</definition>
+        <argsstring>()</argsstring>
+        <name>getCountCurrentIterPSO</name>
+        <qualifiedname>metaheuristics.generators.ParticleSwarmOptimization.getCountCurrentIterPSO</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" line="114" column="19" bodyfile="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" bodystart="114" bodyend="114"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1abc5a8dcdf9ff7418f4084002e383b860" compoundref="ParticleSwarmOptimization_8java" startline="364" endline="395">metaheuristics.generators.ParticleSwarmOptimization.updateReference</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1Particle_1acfc132343407756e7b016506963b7984" compoundref="Particle_8java" startline="127" endline="157">metaheuristics.generators.Particle.UpdateVelocity</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a5a73eed9252828f08c61e6f6f4d82ac6" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void metaheuristics.generators.ParticleSwarmOptimization.setCountCurrentIterPSO</definition>
+        <argsstring>(int v)</argsstring>
+        <name>setCountCurrentIterPSO</name>
+        <qualifiedname>metaheuristics.generators.ParticleSwarmOptimization.setCountCurrentIterPSO</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" line="115" column="20" bodyfile="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" bodystart="115" bodyend="115"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a58823d3000e36d540bd20800e0636a88" compoundref="ParticleSwarmOptimization_8java" startline="132" endline="147">metaheuristics.generators.ParticleSwarmOptimization.ParticleSwarmOptimization</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1abc5a8dcdf9ff7418f4084002e383b860" compoundref="ParticleSwarmOptimization_8java" startline="364" endline="395">metaheuristics.generators.ParticleSwarmOptimization.updateReference</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a9d7f0796fac17cb2d4fe19a9f9960ae4" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int metaheuristics.generators.ParticleSwarmOptimization.getCountParticle</definition>
+        <argsstring>()</argsstring>
+        <name>getCountParticle</name>
+        <qualifiedname>metaheuristics.generators.ParticleSwarmOptimization.getCountParticle</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" line="116" column="19" bodyfile="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" bodystart="116" bodyend="116"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a4bab770550c31f12b11de2585086936a" compoundref="ParticleSwarmOptimization_8java" startline="157" endline="164">metaheuristics.generators.ParticleSwarmOptimization.generate</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a2b35916a7fef7ecc1ae9c6f4c571a6d1" compoundref="ParticleSwarmOptimization_8java" startline="173" endline="195">metaheuristics.generators.ParticleSwarmOptimization.inicialiceLBest</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1abc5a8dcdf9ff7418f4084002e383b860" compoundref="ParticleSwarmOptimization_8java" startline="364" endline="395">metaheuristics.generators.ParticleSwarmOptimization.updateReference</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1aa554d5dbe993b4817d3895806e7dd063" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void metaheuristics.generators.ParticleSwarmOptimization.setCountParticle</definition>
+        <argsstring>(int v)</argsstring>
+        <name>setCountParticle</name>
+        <qualifiedname>metaheuristics.generators.ParticleSwarmOptimization.setCountParticle</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" line="117" column="20" bodyfile="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" bodystart="117" bodyend="117"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a4bab770550c31f12b11de2585086936a" compoundref="ParticleSwarmOptimization_8java" startline="157" endline="164">metaheuristics.generators.ParticleSwarmOptimization.generate</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a2b35916a7fef7ecc1ae9c6f4c571a6d1" compoundref="ParticleSwarmOptimization_8java" startline="173" endline="195">metaheuristics.generators.ParticleSwarmOptimization.inicialiceLBest</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a58823d3000e36d540bd20800e0636a88" compoundref="ParticleSwarmOptimization_8java" startline="132" endline="147">metaheuristics.generators.ParticleSwarmOptimization.ParticleSwarmOptimization</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1abc5a8dcdf9ff7418f4084002e383b860" compoundref="ParticleSwarmOptimization_8java" startline="364" endline="395">metaheuristics.generators.ParticleSwarmOptimization.updateReference</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a8a448ceb59a38faaa4d964e5c31510ee" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int metaheuristics.generators.ParticleSwarmOptimization.getCountRef</definition>
+        <argsstring>()</argsstring>
+        <name>getCountRef</name>
+        <qualifiedname>metaheuristics.generators.ParticleSwarmOptimization.getCountRef</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" line="344" column="19" bodyfile="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" bodystart="344" bodyend="346"/>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1ac7ebf8d9c7ccd1f23c38eea79ea50ad4" compoundref="ParticleSwarmOptimization_8java" startline="67">metaheuristics.generators.ParticleSwarmOptimization.countRef</references>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1RandomSearch_1ad7023836b94dd23bffd78ab7b9915551" compoundref="RandomSearch_8java" startline="66" endline="72">metaheuristics.generators.RandomSearch.generate</referencedby>
+        <referencedby refid="classmetaheurictics_1_1strategy_1_1Strategy_1ae5fae0f94a80e56677aa3f7ac77b6d44" compoundref="Strategy_8java" startline="307" endline="325">metaheurictics.strategy.Strategy.update</referencedby>
+        <referencedby refid="classlocal__search_1_1complement_1_1UpdateParameter_1aa88a78351c0bc5de77f1ad05bee29e11" compoundref="UpdateParameter_8java" startline="39" endline="61">local_search.complement.UpdateParameter.updateParameter</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a443250bb3b7fb34f1a2a3ba062cb3311" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void metaheuristics.generators.ParticleSwarmOptimization.setCountRef</definition>
+        <argsstring>(int countRef)</argsstring>
+        <name>setCountRef</name>
+        <qualifiedname>metaheuristics.generators.ParticleSwarmOptimization.setCountRef</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>countRef</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" line="348" column="20" bodyfile="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" bodystart="348" bodyend="350"/>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1ac7ebf8d9c7ccd1f23c38eea79ea50ad4" compoundref="ParticleSwarmOptimization_8java" startline="67">metaheuristics.generators.ParticleSwarmOptimization.countRef</references>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a4a7e8784ece74feb38646a5535f13699" compoundref="ParticleSwarmOptimization_8java" startline="61" endline="66">metaheuristics.generators.ParticleSwarmOptimization.setCountParticleBySwarm</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a0b98342174ad9b19e199a0cf1c85950e" compoundref="ParticleSwarmOptimization_8java" startline="42" endline="47">metaheuristics.generators.ParticleSwarmOptimization.setCoutSwarm</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a58823d3000e36d540bd20800e0636a88" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>metaheuristics.generators.ParticleSwarmOptimization.ParticleSwarmOptimization</definition>
+        <argsstring>()</argsstring>
+        <name>ParticleSwarmOptimization</name>
+        <qualifiedname>metaheuristics.generators.ParticleSwarmOptimization.ParticleSwarmOptimization</qualifiedname>
+        <briefdescription>
+<para>Create a new <ref refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization" kindref="compound">ParticleSwarmOptimization</ref> instance. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The constructor initializes internal arrays and sets default values for weights, counters and generators. It intentionally does not perform expensive operations; heavy initialization is deferred to <computeroutput><ref refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a4a9da4ad8253a7521056fbb306a495a3" kindref="member">getListStateRef()</ref></computeroutput> when needed. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" line="132" column="8" bodyfile="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" bodystart="132" bodyend="147"/>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1ac2df5a730f09652ea6303fde195de727" compoundref="ParticleSwarmOptimization_8java" startline="30">metaheuristics.generators.ParticleSwarmOptimization.coutSwarm</references>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1aec9a3560a4a9aa2e60eeaf289ea18b3c" compoundref="ParticleSwarmOptimization_8java" startline="403" endline="418">metaheuristics.generators.ParticleSwarmOptimization.gBestInicial</references>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a4a9da4ad8253a7521056fbb306a495a3" compoundref="ParticleSwarmOptimization_8java" startline="220" endline="260">metaheuristics.generators.ParticleSwarmOptimization.getListStateRef</references>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a2b35916a7fef7ecc1ae9c6f4c571a6d1" compoundref="ParticleSwarmOptimization_8java" startline="173" endline="195">metaheuristics.generators.ParticleSwarmOptimization.inicialiceLBest</references>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1ac4fe1e87c6489d682099ca0e22e7d0f8" compoundref="ParticleSwarmOptimization_8java" startline="120">metaheuristics.generators.ParticleSwarmOptimization.listCountBetterGender</references>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1aaedf6d547a9fd8128fb12898bcacc3fe" compoundref="ParticleSwarmOptimization_8java" startline="121">metaheuristics.generators.ParticleSwarmOptimization.listCountGender</references>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a4635b77d518d93e48c436213dc8d3601" compoundref="ParticleSwarmOptimization_8java" startline="23">metaheuristics.generators.ParticleSwarmOptimization.listParticle</references>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a3436d8147038325c0726224894038433" compoundref="ParticleSwarmOptimization_8java" startline="122">metaheuristics.generators.ParticleSwarmOptimization.listTrace</references>
+        <references refid="enummetaheuristics_1_1generators_1_1GeneratorType_1a9ccda4111f489a1155ac573295ffb747" compoundref="GeneratorType_8java" startline="8">metaheuristics.generators.GeneratorType.ParticleSwarmOptimization</references>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a5a73eed9252828f08c61e6f6f4d82ac6" compoundref="ParticleSwarmOptimization_8java" startline="115" endline="115">metaheuristics.generators.ParticleSwarmOptimization.setCountCurrentIterPSO</references>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1aa554d5dbe993b4817d3895806e7dd063" compoundref="ParticleSwarmOptimization_8java" startline="117" endline="117">metaheuristics.generators.ParticleSwarmOptimization.setCountParticle</references>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a842a4536ebfc5c89c2e21286fa70ed5e" compoundref="ParticleSwarmOptimization_8java" startline="113" endline="113">metaheuristics.generators.ParticleSwarmOptimization.setGBest</references>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a9452e8ce9fd5587e4bac1eadf10addbb" compoundref="ParticleSwarmOptimization_8java" startline="92" endline="101">metaheuristics.generators.ParticleSwarmOptimization.setLBest</references>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a8e0fe5cf94eb84b09d75c6e270bf60de" compoundref="ParticleSwarmOptimization_8java" startline="321" endline="324">metaheuristics.generators.ParticleSwarmOptimization.setListParticle</references>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a4a4f8987c2b64eb8e5728e9abe354c58" compoundref="ParticleSwarmOptimization_8java" startline="68">metaheuristics.generators.ParticleSwarmOptimization.weight</references>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a4a9da4ad8253a7521056fbb306a495a3" compoundref="ParticleSwarmOptimization_8java" startline="220" endline="260">metaheuristics.generators.ParticleSwarmOptimization.getListStateRef</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a4bab770550c31f12b11de2585086936a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+        <definition>State metaheuristics.generators.ParticleSwarmOptimization.generate</definition>
+        <argsstring>(Integer operatornumber)</argsstring>
+        <name>generate</name>
+        <qualifiedname>metaheuristics.generators.ParticleSwarmOptimization.generate</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1a06f6f7622b9ce32590eadbdf6bf962b5">generate</reimplements>
+        <param>
+          <type>Integer</type>
+          <declname>operatornumber</declname>
+        </param>
+        <exceptions> throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException </exceptions>
+        <briefdescription>
+<para>Generate a new state by advancing the next particle in the swarm. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>operatornumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>unused for PSO (kept for API compatibility) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the newly generated <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> produced by the advanced particle </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>ReflectiveOperationException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>forwarded from nested generator calls </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" line="157" column="14" bodyfile="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" bodystart="157" bodyend="164"/>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1ac7ebf8d9c7ccd1f23c38eea79ea50ad4" compoundref="ParticleSwarmOptimization_8java" startline="67">metaheuristics.generators.ParticleSwarmOptimization.countRef</references>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a9d7f0796fac17cb2d4fe19a9f9960ae4" compoundref="ParticleSwarmOptimization_8java" startline="116" endline="116">metaheuristics.generators.ParticleSwarmOptimization.getCountParticle</references>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a4635b77d518d93e48c436213dc8d3601" compoundref="ParticleSwarmOptimization_8java" startline="23">metaheuristics.generators.ParticleSwarmOptimization.listParticle</references>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1aa554d5dbe993b4817d3895806e7dd063" compoundref="ParticleSwarmOptimization_8java" startline="117" endline="117">metaheuristics.generators.ParticleSwarmOptimization.setCountParticle</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a2b35916a7fef7ecc1ae9c6f4c571a6d1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheuristics.generators.ParticleSwarmOptimization.inicialiceLBest</definition>
+        <argsstring>()</argsstring>
+        <name>inicialiceLBest</name>
+        <qualifiedname>metaheuristics.generators.ParticleSwarmOptimization.inicialiceLBest</qualifiedname>
+        <briefdescription>
+<para>Initialize the local best <javadoccode>lBest</javadoccode> array for each swarm. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The method inspects particle personal-bests within each swarm and selects the best among them according to the problem&apos;s objective type (maximize or minimize). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" line="173" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" bodystart="173" bodyend="195"/>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1aeac78dea881f9fd22d59194fb42efd79" compoundref="ParticleSwarmOptimization_8java" startline="49">metaheuristics.generators.ParticleSwarmOptimization.countParticleBySwarm</references>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1ac2df5a730f09652ea6303fde195de727" compoundref="ParticleSwarmOptimization_8java" startline="30">metaheuristics.generators.ParticleSwarmOptimization.coutSwarm</references>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a9d7f0796fac17cb2d4fe19a9f9960ae4" compoundref="ParticleSwarmOptimization_8java" startline="116" endline="116">metaheuristics.generators.ParticleSwarmOptimization.getCountParticle</references>
+        <references refid="classproblem_1_1definition_1_1State_1a226ea6fab8e7060cf131edfdb245a6fa" compoundref="State_8java" startline="104" endline="106">problem.definition.State.getEvaluation</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1a4bc6bd95db71e14b1f48c1bfc85f1305" compoundref="Strategy_8java" startline="405" endline="407">metaheurictics.strategy.Strategy.getProblem</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1ad2641e12c52292930364de6655333aa8" compoundref="Strategy_8java" startline="80" endline="85">metaheurictics.strategy.Strategy.getStrategy</references>
+        <references refid="classproblem_1_1definition_1_1Problem_1ad6f38df755179e22ffe487ba4a5c8021" compoundref="Problem_8java" startline="97" endline="99">problem.definition.Problem.getTypeProblem</references>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a4635b77d518d93e48c436213dc8d3601" compoundref="ParticleSwarmOptimization_8java" startline="23">metaheuristics.generators.ParticleSwarmOptimization.listParticle</references>
+        <references refid="enumproblem_1_1definition_1_1Problem_1_1ProblemType_1aa55383c4cb9a71cfeabc7f715ee0cd6e" compoundref="Problem_8java" startline="29">problem.definition.Problem.ProblemType.Maximizar</references>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1aa554d5dbe993b4817d3895806e7dd063" compoundref="ParticleSwarmOptimization_8java" startline="117" endline="117">metaheuristics.generators.ParticleSwarmOptimization.setCountParticle</references>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a58823d3000e36d540bd20800e0636a88" compoundref="ParticleSwarmOptimization_8java" startline="132" endline="147">metaheuristics.generators.ParticleSwarmOptimization.ParticleSwarmOptimization</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a2764712d1d2ba2259d0562f78e669977" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+        <definition>State metaheuristics.generators.ParticleSwarmOptimization.getReference</definition>
+        <argsstring>()</argsstring>
+        <name>getReference</name>
+        <qualifiedname>metaheuristics.generators.ParticleSwarmOptimization.getReference</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1aa56dd45a45776f6023b9f74179cc6384">getReference</reimplements>
+        <briefdescription>
+<para>Return the single reference state used by single-reference generators. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>PSO manages multiple references (per-swarm and global), so this method returns <javadoccode>null</javadoccode> by design in the current implementation.</para>
+<para><simplesect kind="return"><para>null in this PSO implementation </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" line="207" column="14" bodyfile="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" bodystart="207" bodyend="209"/>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a4e9ec463f3058721220c4c28c99a42e7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+        <definition>State metaheuristics.generators.ParticleSwarmOptimization.getStateReferencePSO</definition>
+        <argsstring>()</argsstring>
+        <name>getStateReferencePSO</name>
+        <qualifiedname>metaheuristics.generators.ParticleSwarmOptimization.getStateReferencePSO</qualifiedname>
+        <briefdescription>
+<para>Return the PSO-specific reference state used by some helpers. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>stored stateReferencePSO (may be null) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" line="268" column="14" bodyfile="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" bodystart="268" bodyend="270"/>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a84f1604d94af7fb5a200176a4c245b15" compoundref="ParticleSwarmOptimization_8java" startline="21">metaheuristics.generators.ParticleSwarmOptimization.stateReferencePSO</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1af0007f3368bc26e13509697f13b8bd8f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheuristics.generators.ParticleSwarmOptimization.setStateReferencePSO</definition>
+        <argsstring>(State stateReferencePSO)</argsstring>
+        <name>setStateReferencePSO</name>
+        <qualifiedname>metaheuristics.generators.ParticleSwarmOptimization.setStateReferencePSO</qualifiedname>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>stateReferencePSO</declname>
+        </param>
+        <briefdescription>
+<para>Set the PSO-specific reference state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>A defensive copy is not performed because <computeroutput><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></computeroutput> provides its own copy/clone methods; callers should clone if they want isolation.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stateReferencePSO</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the state to store as PSO reference </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" line="280" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" bodystart="280" bodyend="282"/>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a84f1604d94af7fb5a200176a4c245b15" compoundref="ParticleSwarmOptimization_8java" startline="21">metaheuristics.generators.ParticleSwarmOptimization.stateReferencePSO</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a82c7ce280bc0e520f17466e4c147bea4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="classmetaheuristics_1_1generators_1_1Particle" kindref="compound">Particle</ref> &gt;</type>
+        <definition>List&lt; Particle &gt; metaheuristics.generators.ParticleSwarmOptimization.getListStateReference</definition>
+        <argsstring>()</argsstring>
+        <name>getListStateReference</name>
+        <qualifiedname>metaheuristics.generators.ParticleSwarmOptimization.getListStateReference</qualifiedname>
+        <briefdescription>
+<para>Return the current list of particles used internally. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The returned list is the internal storage reference; callers that need mutability isolation should copy it.</para>
+<para><simplesect kind="return"><para>internal list of particles </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" line="292" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" bodystart="292" bodyend="294"/>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a754377431c7fa3de15b4e81fd7f79f6f" compoundref="ParticleSwarmOptimization_8java" startline="311" endline="313">metaheuristics.generators.ParticleSwarmOptimization.getListParticle</references>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a4a9da4ad8253a7521056fbb306a495a3" compoundref="ParticleSwarmOptimization_8java" startline="220" endline="260">metaheuristics.generators.ParticleSwarmOptimization.getListStateRef</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a672badc4745b5b9327dcc920fb195c8a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheuristics.generators.ParticleSwarmOptimization.setListStateReference</definition>
+        <argsstring>(List&lt; State &gt; listStateReference)</argsstring>
+        <name>setListStateReference</name>
+        <qualifiedname>metaheuristics.generators.ParticleSwarmOptimization.setListStateReference</qualifiedname>
+        <param>
+          <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+          <declname>listStateReference</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="classevolutionary__algorithms_1_1complement_1_1Replace" kindref="compound">Replace</ref> the internal state reference list. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Provided for API compatibility; most callers should use <computeroutput><ref refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a8e0fe5cf94eb84b09d75c6e270bf60de" kindref="member">setListParticle</ref></computeroutput> instead.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>listStateReference</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new list of states </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" line="302" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" bodystart="302" bodyend="304"/>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a488b113859866aa90ed7f71dea741024" compoundref="ParticleSwarmOptimization_8java" startline="22">metaheuristics.generators.ParticleSwarmOptimization.listStateReference</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a754377431c7fa3de15b4e81fd7f79f6f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="classmetaheuristics_1_1generators_1_1Particle" kindref="compound">Particle</ref> &gt;</type>
+        <definition>List&lt; Particle &gt; metaheuristics.generators.ParticleSwarmOptimization.getListParticle</definition>
+        <argsstring>()</argsstring>
+        <name>getListParticle</name>
+        <qualifiedname>metaheuristics.generators.ParticleSwarmOptimization.getListParticle</qualifiedname>
+        <briefdescription>
+<para>Get the internal particle list. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>internal list of <computeroutput><ref refid="classmetaheuristics_1_1generators_1_1Particle" kindref="compound">Particle</ref></computeroutput> instances </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" line="311" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" bodystart="311" bodyend="313"/>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a4635b77d518d93e48c436213dc8d3601" compoundref="ParticleSwarmOptimization_8java" startline="23">metaheuristics.generators.ParticleSwarmOptimization.listParticle</references>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a4a9da4ad8253a7521056fbb306a495a3" compoundref="ParticleSwarmOptimization_8java" startline="220" endline="260">metaheuristics.generators.ParticleSwarmOptimization.getListStateRef</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a82c7ce280bc0e520f17466e4c147bea4" compoundref="ParticleSwarmOptimization_8java" startline="292" endline="294">metaheuristics.generators.ParticleSwarmOptimization.getListStateReference</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a8e0fe5cf94eb84b09d75c6e270bf60de" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="classmetaheuristics_1_1generators_1_1Particle" kindref="compound">Particle</ref> &gt;</type>
+        <definition>List&lt; Particle &gt; metaheuristics.generators.ParticleSwarmOptimization.setListParticle</definition>
+        <argsstring>(List&lt; Particle &gt; listParticle)</argsstring>
+        <name>setListParticle</name>
+        <qualifiedname>metaheuristics.generators.ParticleSwarmOptimization.setListParticle</qualifiedname>
+        <param>
+          <type>List&lt; <ref refid="classmetaheuristics_1_1generators_1_1Particle" kindref="compound">Particle</ref> &gt;</type>
+          <declname>listParticle</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="classevolutionary__algorithms_1_1complement_1_1Replace" kindref="compound">Replace</ref> the internal particle list and return the newly set list. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>listParticle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>list to install </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the installed list </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" line="321" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" bodystart="321" bodyend="324"/>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a4635b77d518d93e48c436213dc8d3601" compoundref="ParticleSwarmOptimization_8java" startline="23">metaheuristics.generators.ParticleSwarmOptimization.listParticle</references>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a4a9da4ad8253a7521056fbb306a495a3" compoundref="ParticleSwarmOptimization_8java" startline="220" endline="260">metaheuristics.generators.ParticleSwarmOptimization.getListStateRef</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a58823d3000e36d540bd20800e0636a88" compoundref="ParticleSwarmOptimization_8java" startline="132" endline="147">metaheuristics.generators.ParticleSwarmOptimization.ParticleSwarmOptimization</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a6f553e35a4929a626db8c0e3a038eaf5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="enummetaheuristics_1_1generators_1_1GeneratorType" kindref="compound">GeneratorType</ref></type>
+        <definition>GeneratorType metaheuristics.generators.ParticleSwarmOptimization.getGeneratorType</definition>
+        <argsstring>()</argsstring>
+        <name>getGeneratorType</name>
+        <qualifiedname>metaheuristics.generators.ParticleSwarmOptimization.getGeneratorType</qualifiedname>
+        <briefdescription>
+<para>Get the generator type associated with this instance. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>generator type (<ref refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization" kindref="compound">ParticleSwarmOptimization</ref>) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" line="331" column="22" bodyfile="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" bodystart="331" bodyend="333"/>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a87ec4603a4779481939b402eb8e02089" compoundref="ParticleSwarmOptimization_8java" startline="24">metaheuristics.generators.ParticleSwarmOptimization.generatorType</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a5855f4db41982beb1b0ef27a4b44742d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheuristics.generators.ParticleSwarmOptimization.setGeneratorType</definition>
+        <argsstring>(GeneratorType generatorType)</argsstring>
+        <name>setGeneratorType</name>
+        <qualifiedname>metaheuristics.generators.ParticleSwarmOptimization.setGeneratorType</qualifiedname>
+        <param>
+          <type><ref refid="enummetaheuristics_1_1generators_1_1GeneratorType" kindref="compound">GeneratorType</ref></type>
+          <declname>generatorType</declname>
+        </param>
+        <briefdescription>
+<para>Set the generator type for this instance. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>generatorType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>generator type to set </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" line="340" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" bodystart="340" bodyend="342"/>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a87ec4603a4779481939b402eb8e02089" compoundref="ParticleSwarmOptimization_8java" startline="24">metaheuristics.generators.ParticleSwarmOptimization.generatorType</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1abc5a8dcdf9ff7418f4084002e383b860" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheuristics.generators.ParticleSwarmOptimization.updateReference</definition>
+        <argsstring>(State stateCandidate, Integer countIterationsCurrent)</argsstring>
+        <name>updateReference</name>
+        <qualifiedname>metaheuristics.generators.ParticleSwarmOptimization.updateReference</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1aa1c5878953f2111221b21cb9b1e6cc9f">updateReference</reimplements>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>stateCandidate</declname>
+        </param>
+        <param>
+          <type>Integer</type>
+          <declname>countIterationsCurrent</declname>
+        </param>
+        <exceptions> throws IllegalArgumentException,SecurityException, ClassNotFoundException, InstantiationException,IllegalAccessException, InvocationTargetException,NoSuchMethodException </exceptions>
+        <briefdescription>
+<para>Update the PSO internal references based on a newly generated candidate state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method updates the particle personal-bests and possibly the local/global bests depending on the objective.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stateCandidate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>newly generated candidate state </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>countIterationsCurrent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>current iteration counter </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>ReflectiveOperationException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>forwarded from nested calls </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" line="364" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" bodystart="364" bodyend="395"/>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1aeac78dea881f9fd22d59194fb42efd79" compoundref="ParticleSwarmOptimization_8java" startline="49">metaheuristics.generators.ParticleSwarmOptimization.countParticleBySwarm</references>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a12c12b70f5c84e0f06027adbe4db63f1" compoundref="ParticleSwarmOptimization_8java" startline="114" endline="114">metaheuristics.generators.ParticleSwarmOptimization.getCountCurrentIterPSO</references>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a9d7f0796fac17cb2d4fe19a9f9960ae4" compoundref="ParticleSwarmOptimization_8java" startline="116" endline="116">metaheuristics.generators.ParticleSwarmOptimization.getCountParticle</references>
+        <references refid="classproblem_1_1definition_1_1State_1a226ea6fab8e7060cf131edfdb245a6fa" compoundref="State_8java" startline="104" endline="106">problem.definition.State.getEvaluation</references>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1abd10eb844626b27fb592eee9f353725c" compoundref="ParticleSwarmOptimization_8java" startline="112" endline="112">metaheuristics.generators.ParticleSwarmOptimization.getGBest</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1a4bc6bd95db71e14b1f48c1bfc85f1305" compoundref="Strategy_8java" startline="405" endline="407">metaheurictics.strategy.Strategy.getProblem</references>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a64d44fa65b23051d69ab0d4d14e0f162" compoundref="ParticleSwarmOptimization_8java" startline="448" endline="450">metaheuristics.generators.ParticleSwarmOptimization.getReferenceList</references>
+        <references refid="classmetaheuristics_1_1generators_1_1Particle_1ae73e3ec5cb0c62c033a28c502b05c243" compoundref="Particle_8java" startline="66" endline="68">metaheuristics.generators.Particle.getStatePBest</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1ad2641e12c52292930364de6655333aa8" compoundref="Strategy_8java" startline="80" endline="85">metaheurictics.strategy.Strategy.getStrategy</references>
+        <references refid="classproblem_1_1definition_1_1Problem_1ad6f38df755179e22ffe487ba4a5c8021" compoundref="Problem_8java" startline="97" endline="99">problem.definition.Problem.getTypeProblem</references>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a4635b77d518d93e48c436213dc8d3601" compoundref="ParticleSwarmOptimization_8java" startline="23">metaheuristics.generators.ParticleSwarmOptimization.listParticle</references>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a488b113859866aa90ed7f71dea741024" compoundref="ParticleSwarmOptimization_8java" startline="22">metaheuristics.generators.ParticleSwarmOptimization.listStateReference</references>
+        <references refid="enumproblem_1_1definition_1_1Problem_1_1ProblemType_1aa55383c4cb9a71cfeabc7f715ee0cd6e" compoundref="Problem_8java" startline="29">problem.definition.Problem.ProblemType.Maximizar</references>
+        <references refid="classproblem_1_1definition_1_1State_1ab15765262a6e1cc7661c51cbcf0e7785" compoundref="State_8java" startline="77" endline="79">problem.definition.State.setCode</references>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a5a73eed9252828f08c61e6f6f4d82ac6" compoundref="ParticleSwarmOptimization_8java" startline="115" endline="115">metaheuristics.generators.ParticleSwarmOptimization.setCountCurrentIterPSO</references>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1aa554d5dbe993b4817d3895806e7dd063" compoundref="ParticleSwarmOptimization_8java" startline="117" endline="117">metaheuristics.generators.ParticleSwarmOptimization.setCountParticle</references>
+        <references refid="classproblem_1_1definition_1_1State_1abeaa628078af4804e5e9d93b3de593b5" compoundref="State_8java" startline="113" endline="115">problem.definition.State.setEvaluation</references>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a842a4536ebfc5c89c2e21286fa70ed5e" compoundref="ParticleSwarmOptimization_8java" startline="113" endline="113">metaheuristics.generators.ParticleSwarmOptimization.setGBest</references>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a2d0fa32b6e465a69309d1061aa8c63f6" compoundref="ParticleSwarmOptimization_8java" startline="107" endline="111">metaheuristics.generators.ParticleSwarmOptimization.setLBestAt</references>
+        <references refid="classproblem_1_1definition_1_1State_1afccaeac3af66cb772e2b3e70758b8fe6" compoundref="State_8java" startline="94" endline="96">problem.definition.State.setTypeGenerator</references>
+        <references refid="classmetaheuristics_1_1generators_1_1Particle_1a8a8a33dd0ab1d3352d36b239d5c11beb" compoundref="Particle_8java" startline="203" endline="222">metaheuristics.generators.Particle.updateReference</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1aec9a3560a4a9aa2e60eeaf289ea18b3c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+        <definition>State metaheuristics.generators.ParticleSwarmOptimization.gBestInicial</definition>
+        <argsstring>()</argsstring>
+        <name>gBestInicial</name>
+        <qualifiedname>metaheuristics.generators.ParticleSwarmOptimization.gBestInicial</qualifiedname>
+        <briefdescription>
+<para>Compute the initial global best (gBest) from the local bests contained in <javadoccode>lBest</javadoccode>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the best <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> among <javadoccode>lBest</javadoccode> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" line="403" column="14" bodyfile="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" bodystart="403" bodyend="418"/>
+        <references refid="classproblem_1_1definition_1_1State_1a226ea6fab8e7060cf131edfdb245a6fa" compoundref="State_8java" startline="104" endline="106">problem.definition.State.getEvaluation</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1a4bc6bd95db71e14b1f48c1bfc85f1305" compoundref="Strategy_8java" startline="405" endline="407">metaheurictics.strategy.Strategy.getProblem</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1ad2641e12c52292930364de6655333aa8" compoundref="Strategy_8java" startline="80" endline="85">metaheurictics.strategy.Strategy.getStrategy</references>
+        <references refid="classproblem_1_1definition_1_1Problem_1ad6f38df755179e22ffe487ba4a5c8021" compoundref="Problem_8java" startline="97" endline="99">problem.definition.Problem.getTypeProblem</references>
+        <references refid="enumproblem_1_1definition_1_1Problem_1_1ProblemType_1aa55383c4cb9a71cfeabc7f715ee0cd6e" compoundref="Problem_8java" startline="29">problem.definition.Problem.ProblemType.Maximizar</references>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a58823d3000e36d540bd20800e0636a88" compoundref="ParticleSwarmOptimization_8java" startline="132" endline="147">metaheuristics.generators.ParticleSwarmOptimization.ParticleSwarmOptimization</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1aa8fc5294266abb5704de5fb3b70aa0e2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheuristics.generators.ParticleSwarmOptimization.setInitialReference</definition>
+        <argsstring>(State stateInitialRef)</argsstring>
+        <name>setInitialReference</name>
+        <qualifiedname>metaheuristics.generators.ParticleSwarmOptimization.setInitialReference</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1aa9f7c4c983705f843b8fcc81e4aa8ba4">setInitialReference</reimplements>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>stateInitialRef</declname>
+        </param>
+        <briefdescription>
+<para>Set the initial reference(s) for the generator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>PSO uses swarm references and therefore this method is intentionally left as a no-op or to be implemented by callers that bridge different data.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stateInitialRef</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>initial state to use as a reference </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" line="428" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" bodystart="428" bodyend="430"/>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a71987dfaef5ebd055f958f9ca186953f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="enummetaheuristics_1_1generators_1_1GeneratorType" kindref="compound">GeneratorType</ref></type>
+        <definition>GeneratorType metaheuristics.generators.ParticleSwarmOptimization.getType</definition>
+        <argsstring>()</argsstring>
+        <name>getType</name>
+        <qualifiedname>metaheuristics.generators.ParticleSwarmOptimization.getType</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1a5a123306b43c42d28cd1d6e17f8067a5">getType</reimplements>
+        <briefdescription>
+<para>Return the concrete generator type of this generator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the <computeroutput><ref refid="enummetaheuristics_1_1generators_1_1GeneratorType" kindref="compound">GeneratorType</ref></computeroutput> for this generator </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" line="438" column="22" bodyfile="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" bodystart="438" bodyend="440"/>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a87ec4603a4779481939b402eb8e02089" compoundref="ParticleSwarmOptimization_8java" startline="24">metaheuristics.generators.ParticleSwarmOptimization.generatorType</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a64d44fa65b23051d69ab0d4d14e0f162" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+        <definition>List&lt; State &gt; metaheuristics.generators.ParticleSwarmOptimization.getReferenceList</definition>
+        <argsstring>()</argsstring>
+        <name>getReferenceList</name>
+        <qualifiedname>metaheuristics.generators.ParticleSwarmOptimization.getReferenceList</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1ae168237b306de55fe4d6dfda75c7cd13">getReferenceList</reimplements>
+        <briefdescription>
+<para>Return a copy of the list used as reference solutions by PSO. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>copy of internal reference list </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" line="448" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" bodystart="448" bodyend="450"/>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a488b113859866aa90ed7f71dea741024" compoundref="ParticleSwarmOptimization_8java" startline="22">metaheuristics.generators.ParticleSwarmOptimization.listStateReference</references>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1abc5a8dcdf9ff7418f4084002e383b860" compoundref="ParticleSwarmOptimization_8java" startline="364" endline="395">metaheuristics.generators.ParticleSwarmOptimization.updateReference</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a464fc4922d70868c61bb905e6caa3c8e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+        <definition>List&lt; State &gt; metaheuristics.generators.ParticleSwarmOptimization.getSonList</definition>
+        <argsstring>()</argsstring>
+        <name>getSonList</name>
+        <qualifiedname>metaheuristics.generators.ParticleSwarmOptimization.getSonList</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1aee09d724c1b3040e7a7ad0b64e341c96">getSonList</reimplements>
+        <briefdescription>
+<para>Return the currently generated offspring/state list for this generator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>PSO does not maintain a son list in the classical sense and thus returns <javadoccode>null</javadoccode>.</para>
+<para><simplesect kind="return"><para>null for PSO </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" line="460" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" bodystart="460" bodyend="462"/>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a17300bef2e571cecf9428d5768f88dc4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean metaheuristics.generators.ParticleSwarmOptimization.awardUpdateREF</definition>
+        <argsstring>(State stateCandidate)</argsstring>
+        <name>awardUpdateREF</name>
+        <qualifiedname>metaheuristics.generators.ParticleSwarmOptimization.awardUpdateREF</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1a3513d3953ecc97683f38bcb662b74b9b">awardUpdateREF</reimplements>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>stateCandidate</declname>
+        </param>
+        <briefdescription>
+<para>Decide whether the provided candidate should update references. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>PSO uses <javadoccode>updateReference</javadoccode> directly; this helper returns <javadoccode>false</javadoccode> by default and can be implemented if integration requires it.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stateCandidate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>candidate state to evaluate </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><javadoccode>false</javadoccode> by default </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" line="475" column="16" bodyfile="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" bodystart="475" bodyend="477"/>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1af200d1e3621dea6a34960f8ffbbefa8c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheuristics.generators.ParticleSwarmOptimization.setWeight</definition>
+        <argsstring>(float weight)</argsstring>
+        <name>setWeight</name>
+        <qualifiedname>metaheuristics.generators.ParticleSwarmOptimization.setWeight</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1a8b3c66b57b4c739666989fbce667eb40">setWeight</reimplements>
+        <param>
+          <type>float</type>
+          <declname>weight</declname>
+        </param>
+        <briefdescription>
+<para>Set the internal inertia weight used by particle velocity updates. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>weight</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>inertia weight value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" line="485" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" bodystart="485" bodyend="487"/>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a4a4f8987c2b64eb8e5728e9abe354c58" compoundref="ParticleSwarmOptimization_8java" startline="68">metaheuristics.generators.ParticleSwarmOptimization.weight</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1aec94a0a6dc5331c35a59a3be0078be9f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float metaheuristics.generators.ParticleSwarmOptimization.getWeight</definition>
+        <argsstring>()</argsstring>
+        <name>getWeight</name>
+        <qualifiedname>metaheuristics.generators.ParticleSwarmOptimization.getWeight</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1a64f2b824081c7af593bf9aa8eabf2c9e">getWeight</reimplements>
+        <briefdescription>
+<para>Get the current inertia weight used in PSO. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>current weight value </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" line="495" column="14" bodyfile="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" bodystart="495" bodyend="497"/>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a4a4f8987c2b64eb8e5728e9abe354c58" compoundref="ParticleSwarmOptimization_8java" startline="68">metaheuristics.generators.ParticleSwarmOptimization.weight</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1ac6bc6fa2d1b14049ea3a1a5f0c26b4b5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int[]</type>
+        <definition>int[] metaheuristics.generators.ParticleSwarmOptimization.getListCountBetterGender</definition>
+        <argsstring>()</argsstring>
+        <name>getListCountBetterGender</name>
+        <qualifiedname>metaheuristics.generators.ParticleSwarmOptimization.getListCountBetterGender</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1ac5bace71f51c16b611ede3ed53263473">getListCountBetterGender</reimplements>
+        <briefdescription>
+<para>Return a defensive copy of the counters that track how many times a particle improved during a period. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>copy of listCountBetterGender </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" line="506" column="12" bodyfile="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" bodystart="506" bodyend="508"/>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1ac4fe1e87c6489d682099ca0e22e7d0f8" compoundref="ParticleSwarmOptimization_8java" startline="120">metaheuristics.generators.ParticleSwarmOptimization.listCountBetterGender</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a4015ce46c4c0b78825daa8a263a5ac56" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int[]</type>
+        <definition>int[] metaheuristics.generators.ParticleSwarmOptimization.getListCountGender</definition>
+        <argsstring>()</argsstring>
+        <name>getListCountGender</name>
+        <qualifiedname>metaheuristics.generators.ParticleSwarmOptimization.getListCountGender</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1ac5d6d45ee8017fb87d80aa952edfc34e">getListCountGender</reimplements>
+        <briefdescription>
+<para>Return a defensive copy of usage counters per period. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>copy of listCountGender </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" line="516" column="12" bodyfile="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" bodystart="516" bodyend="518"/>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1aaedf6d547a9fd8128fb12898bcacc3fe" compoundref="ParticleSwarmOptimization_8java" startline="121">metaheuristics.generators.ParticleSwarmOptimization.listCountGender</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a6e3b617f60a8f8ff0d3f3e5e000996fb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float[]</type>
+        <definition>float[] metaheuristics.generators.ParticleSwarmOptimization.getTrace</definition>
+        <argsstring>()</argsstring>
+        <name>getTrace</name>
+        <qualifiedname>metaheuristics.generators.ParticleSwarmOptimization.getTrace</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1a75d7f30dd2cb3f92475db8525ac7c6e7">getTrace</reimplements>
+        <briefdescription>
+<para>Return a copy of the internal trace array used for diagnostic information (weights over time, etc.). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>copy of listTrace </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" line="527" column="14" bodyfile="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" bodystart="527" bodyend="529"/>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a3436d8147038325c0726224894038433" compoundref="ParticleSwarmOptimization_8java" startline="122">metaheuristics.generators.ParticleSwarmOptimization.listTrace</references>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a4a9da4ad8253a7521056fbb306a495a3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="classmetaheuristics_1_1generators_1_1Particle" kindref="compound">Particle</ref> &gt;</type>
+        <definition>List&lt; Particle &gt; metaheuristics.generators.ParticleSwarmOptimization.getListStateRef</definition>
+        <argsstring>()</argsstring>
+        <name>getListStateRef</name>
+        <qualifiedname>metaheuristics.generators.ParticleSwarmOptimization.getListStateRef</qualifiedname>
+        <briefdescription>
+<para>Build or return the list of <computeroutput><ref refid="classmetaheuristics_1_1generators_1_1Particle" kindref="compound">Particle</ref></computeroutput> instances used by PSO. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If an existing PSO generator instance has an initialized particle list, that list is reused. Otherwise, states from <computeroutput><ref refid="classmetaheuristics_1_1generators_1_1RandomSearch_1ab7be9a87a0cb3de1e17f14e79a0b32ce" kindref="member">RandomSearch#listStateReference</ref></computeroutput> are converted into particles.</para>
+<para><simplesect kind="return"><para>list of particles representing the swarm population </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" line="220" column="14" bodyfile="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" bodystart="220" bodyend="260"/>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1ac7ebf8d9c7ccd1f23c38eea79ea50ad4" compoundref="ParticleSwarmOptimization_8java" startline="67">metaheuristics.generators.ParticleSwarmOptimization.countRef</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1ac70469856a2b6424f29952c0e77eebf8" compoundref="Strategy_8java" startline="421" endline="433">metaheurictics.strategy.Strategy.getListKey</references>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a754377431c7fa3de15b4e81fd7f79f6f" compoundref="ParticleSwarmOptimization_8java" startline="311" endline="313">metaheuristics.generators.ParticleSwarmOptimization.getListParticle</references>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a82c7ce280bc0e520f17466e4c147bea4" compoundref="ParticleSwarmOptimization_8java" startline="292" endline="294">metaheuristics.generators.ParticleSwarmOptimization.getListStateReference</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1ad2641e12c52292930364de6655333aa8" compoundref="Strategy_8java" startline="80" endline="85">metaheurictics.strategy.Strategy.getStrategy</references>
+        <references refid="classmetaheuristics_1_1generators_1_1RandomSearch_1ab7be9a87a0cb3de1e17f14e79a0b32ce" compoundref="RandomSearch_8java" startline="36">metaheuristics.generators.RandomSearch.listStateReference</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1a72b0b983ab5990ef999037f9c331515a" compoundref="Strategy_8java" startline="38">metaheurictics.strategy.Strategy.mapGenerators</references>
+        <references refid="enummetaheuristics_1_1generators_1_1GeneratorType_1a9ccda4111f489a1155ac573295ffb747" compoundref="GeneratorType_8java" startline="8">metaheuristics.generators.GeneratorType.ParticleSwarmOptimization</references>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a58823d3000e36d540bd20800e0636a88" compoundref="ParticleSwarmOptimization_8java" startline="132" endline="147">metaheuristics.generators.ParticleSwarmOptimization.ParticleSwarmOptimization</references>
+        <references refid="classproblem_1_1definition_1_1State_1ab15765262a6e1cc7661c51cbcf0e7785" compoundref="State_8java" startline="77" endline="79">problem.definition.State.setCode</references>
+        <references refid="classproblem_1_1definition_1_1State_1abeaa628078af4804e5e9d93b3de593b5" compoundref="State_8java" startline="113" endline="115">problem.definition.State.setEvaluation</references>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a8e0fe5cf94eb84b09d75c6e270bf60de" compoundref="ParticleSwarmOptimization_8java" startline="321" endline="324">metaheuristics.generators.ParticleSwarmOptimization.setListParticle</references>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a58823d3000e36d540bd20800e0636a88" compoundref="ParticleSwarmOptimization_8java" startline="132" endline="147">metaheuristics.generators.ParticleSwarmOptimization.ParticleSwarmOptimization</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization" kindref="compound">ParticleSwarmOptimization</ref> - class that implements the <ref refid="classmetaheuristics_1_1generators_1_1Particle" kindref="compound">Particle</ref> Swarm Optimization metaheuristic. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>metaheuristics.generators.ParticleSwarmOptimization</label>
+        <link refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>metaheuristics.generators.Generator</label>
+        <link refid="classmetaheuristics_1_1generators_1_1Generator"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4">
+        <label>Cloneable</label>
+      </node>
+      <node id="1">
+        <label>metaheuristics.generators.ParticleSwarmOptimization</label>
+        <link refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-stateReferencePSO</edgelabel>
+          <edgelabel>~gBest</edgelabel>
+          <edgelabel>~lBest</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>-generatorType</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>metaheuristics.generators.Generator</label>
+        <link refid="classmetaheuristics_1_1generators_1_1Generator"/>
+      </node>
+      <node id="5">
+        <label>metaheuristics.generators.GeneratorType</label>
+        <link refid="enummetaheuristics_1_1generators_1_1GeneratorType"/>
+      </node>
+      <node id="3">
+        <label>problem.definition.State</label>
+        <link refid="classproblem_1_1definition_1_1State"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>#typeGenerator</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" line="19" column="7" bodyfile="practica5/src/main/java/metaheuristics/generators/ParticleSwarmOptimization.java" bodystart="19" bodyend="533"/>
+    <listofallmembers>
+      <member refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a17300bef2e571cecf9428d5768f88dc4" prot="public" virt="non-virtual"><scope>metaheuristics::generators::ParticleSwarmOptimization</scope><name>awardUpdateREF</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a45a990b27b172338c10931d135b88b7f" prot="public" virt="non-virtual"><scope>metaheuristics::generators::ParticleSwarmOptimization</scope><name>binary</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1af62b47f08a2cb5157b18ef72f69c3aaf" prot="package" virt="non-virtual"><scope>metaheuristics::generators::ParticleSwarmOptimization</scope><name>constriction</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1Generator_1a43815f3944c514ba3156b0e68482befa" prot="public" virt="non-virtual"><scope>metaheuristics::generators::ParticleSwarmOptimization</scope><name>countBetterGender</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a1624017c12a2f31e26d4b6d2c9e44d4e" prot="package" virt="non-virtual"><scope>metaheuristics::generators::ParticleSwarmOptimization</scope><name>countCurrentIterPSO</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1Generator_1a3c0145210385b6257c8fc20cac1f830a" prot="public" virt="non-virtual"><scope>metaheuristics::generators::ParticleSwarmOptimization</scope><name>countGender</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a29c7d99df446a2bf178c8e9ffc963a4f" prot="package" virt="non-virtual"><scope>metaheuristics::generators::ParticleSwarmOptimization</scope><name>countParticle</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1aeac78dea881f9fd22d59194fb42efd79" prot="private" virt="non-virtual"><scope>metaheuristics::generators::ParticleSwarmOptimization</scope><name>countParticleBySwarm</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1ac7ebf8d9c7ccd1f23c38eea79ea50ad4" prot="private" virt="non-virtual"><scope>metaheuristics::generators::ParticleSwarmOptimization</scope><name>countRef</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1ac2df5a730f09652ea6303fde195de727" prot="private" virt="non-virtual"><scope>metaheuristics::generators::ParticleSwarmOptimization</scope><name>coutSwarm</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a6ca52dc27ceda8553bae2021e0a7bb81" prot="package" virt="non-virtual"><scope>metaheuristics::generators::ParticleSwarmOptimization</scope><name>gBest</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1aec9a3560a4a9aa2e60eeaf289ea18b3c" prot="public" virt="non-virtual"><scope>metaheuristics::generators::ParticleSwarmOptimization</scope><name>gBestInicial</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a4bab770550c31f12b11de2585086936a" prot="public" virt="non-virtual"><scope>metaheuristics::generators::ParticleSwarmOptimization</scope><name>generate</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a87ec4603a4779481939b402eb8e02089" prot="private" virt="non-virtual"><scope>metaheuristics::generators::ParticleSwarmOptimization</scope><name>generatorType</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a12c12b70f5c84e0f06027adbe4db63f1" prot="public" virt="non-virtual"><scope>metaheuristics::generators::ParticleSwarmOptimization</scope><name>getCountCurrentIterPSO</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a9d7f0796fac17cb2d4fe19a9f9960ae4" prot="public" virt="non-virtual"><scope>metaheuristics::generators::ParticleSwarmOptimization</scope><name>getCountParticle</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a8df765e1194a606605e5eefa5c136010" prot="public" virt="non-virtual"><scope>metaheuristics::generators::ParticleSwarmOptimization</scope><name>getCountParticleBySwarm</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a8a448ceb59a38faaa4d964e5c31510ee" prot="public" virt="non-virtual"><scope>metaheuristics::generators::ParticleSwarmOptimization</scope><name>getCountRef</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a52383fab169358bf7971311c7ed8f207" prot="public" virt="non-virtual"><scope>metaheuristics::generators::ParticleSwarmOptimization</scope><name>getCoutSwarm</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1abd10eb844626b27fb592eee9f353725c" prot="public" virt="non-virtual"><scope>metaheuristics::generators::ParticleSwarmOptimization</scope><name>getGBest</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a6f553e35a4929a626db8c0e3a038eaf5" prot="public" virt="non-virtual"><scope>metaheuristics::generators::ParticleSwarmOptimization</scope><name>getGeneratorType</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a0e7dc7ca80c456a71f0fa4f660b33086" prot="public" virt="non-virtual"><scope>metaheuristics::generators::ParticleSwarmOptimization</scope><name>getLBest</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1ac6bc6fa2d1b14049ea3a1a5f0c26b4b5" prot="public" virt="non-virtual"><scope>metaheuristics::generators::ParticleSwarmOptimization</scope><name>getListCountBetterGender</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a4015ce46c4c0b78825daa8a263a5ac56" prot="public" virt="non-virtual"><scope>metaheuristics::generators::ParticleSwarmOptimization</scope><name>getListCountGender</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a754377431c7fa3de15b4e81fd7f79f6f" prot="public" virt="non-virtual"><scope>metaheuristics::generators::ParticleSwarmOptimization</scope><name>getListParticle</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a4a9da4ad8253a7521056fbb306a495a3" prot="private" virt="non-virtual"><scope>metaheuristics::generators::ParticleSwarmOptimization</scope><name>getListStateRef</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a82c7ce280bc0e520f17466e4c147bea4" prot="public" virt="non-virtual"><scope>metaheuristics::generators::ParticleSwarmOptimization</scope><name>getListStateReference</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a2764712d1d2ba2259d0562f78e669977" prot="public" virt="non-virtual"><scope>metaheuristics::generators::ParticleSwarmOptimization</scope><name>getReference</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a64d44fa65b23051d69ab0d4d14e0f162" prot="public" virt="non-virtual"><scope>metaheuristics::generators::ParticleSwarmOptimization</scope><name>getReferenceList</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a464fc4922d70868c61bb905e6caa3c8e" prot="public" virt="non-virtual"><scope>metaheuristics::generators::ParticleSwarmOptimization</scope><name>getSonList</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a4e9ec463f3058721220c4c28c99a42e7" prot="public" virt="non-virtual"><scope>metaheuristics::generators::ParticleSwarmOptimization</scope><name>getStateReferencePSO</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a6e3b617f60a8f8ff0d3f3e5e000996fb" prot="public" virt="non-virtual"><scope>metaheuristics::generators::ParticleSwarmOptimization</scope><name>getTrace</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a71987dfaef5ebd055f958f9ca186953f" prot="public" virt="non-virtual"><scope>metaheuristics::generators::ParticleSwarmOptimization</scope><name>getType</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1aec94a0a6dc5331c35a59a3be0078be9f" prot="public" virt="non-virtual"><scope>metaheuristics::generators::ParticleSwarmOptimization</scope><name>getWeight</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a2b35916a7fef7ecc1ae9c6f4c571a6d1" prot="public" virt="non-virtual"><scope>metaheuristics::generators::ParticleSwarmOptimization</scope><name>inicialiceLBest</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a8c4f8b7e4c2b5bf26916121df43b6002" prot="package" virt="non-virtual"><scope>metaheuristics::generators::ParticleSwarmOptimization</scope><name>lBest</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a4a53547ab8ca6aa61df72a02a76e3e80" prot="public" virt="non-virtual"><scope>metaheuristics::generators::ParticleSwarmOptimization</scope><name>learning1</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1afcbf94cbccaf2d2654fac058793cc173" prot="public" virt="non-virtual"><scope>metaheuristics::generators::ParticleSwarmOptimization</scope><name>learning2</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1ac4fe1e87c6489d682099ca0e22e7d0f8" prot="private" virt="non-virtual"><scope>metaheuristics::generators::ParticleSwarmOptimization</scope><name>listCountBetterGender</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1aaedf6d547a9fd8128fb12898bcacc3fe" prot="private" virt="non-virtual"><scope>metaheuristics::generators::ParticleSwarmOptimization</scope><name>listCountGender</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a4635b77d518d93e48c436213dc8d3601" prot="private" virt="non-virtual"><scope>metaheuristics::generators::ParticleSwarmOptimization</scope><name>listParticle</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a488b113859866aa90ed7f71dea741024" prot="private" virt="non-virtual"><scope>metaheuristics::generators::ParticleSwarmOptimization</scope><name>listStateReference</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a3436d8147038325c0726224894038433" prot="private" virt="non-virtual"><scope>metaheuristics::generators::ParticleSwarmOptimization</scope><name>listTrace</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a58823d3000e36d540bd20800e0636a88" prot="public" virt="non-virtual"><scope>metaheuristics::generators::ParticleSwarmOptimization</scope><name>ParticleSwarmOptimization</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a5a73eed9252828f08c61e6f6f4d82ac6" prot="public" virt="non-virtual"><scope>metaheuristics::generators::ParticleSwarmOptimization</scope><name>setCountCurrentIterPSO</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1aa554d5dbe993b4817d3895806e7dd063" prot="public" virt="non-virtual"><scope>metaheuristics::generators::ParticleSwarmOptimization</scope><name>setCountParticle</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a4a7e8784ece74feb38646a5535f13699" prot="public" virt="non-virtual"><scope>metaheuristics::generators::ParticleSwarmOptimization</scope><name>setCountParticleBySwarm</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a443250bb3b7fb34f1a2a3ba062cb3311" prot="public" virt="non-virtual"><scope>metaheuristics::generators::ParticleSwarmOptimization</scope><name>setCountRef</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a0b98342174ad9b19e199a0cf1c85950e" prot="public" virt="non-virtual"><scope>metaheuristics::generators::ParticleSwarmOptimization</scope><name>setCoutSwarm</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a842a4536ebfc5c89c2e21286fa70ed5e" prot="public" virt="non-virtual"><scope>metaheuristics::generators::ParticleSwarmOptimization</scope><name>setGBest</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a5855f4db41982beb1b0ef27a4b44742d" prot="public" virt="non-virtual"><scope>metaheuristics::generators::ParticleSwarmOptimization</scope><name>setGeneratorType</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1aa8fc5294266abb5704de5fb3b70aa0e2" prot="public" virt="non-virtual"><scope>metaheuristics::generators::ParticleSwarmOptimization</scope><name>setInitialReference</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a9452e8ce9fd5587e4bac1eadf10addbb" prot="public" virt="non-virtual"><scope>metaheuristics::generators::ParticleSwarmOptimization</scope><name>setLBest</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a2d0fa32b6e465a69309d1061aa8c63f6" prot="public" virt="non-virtual"><scope>metaheuristics::generators::ParticleSwarmOptimization</scope><name>setLBestAt</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a8e0fe5cf94eb84b09d75c6e270bf60de" prot="public" virt="non-virtual"><scope>metaheuristics::generators::ParticleSwarmOptimization</scope><name>setListParticle</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a672badc4745b5b9327dcc920fb195c8a" prot="public" virt="non-virtual"><scope>metaheuristics::generators::ParticleSwarmOptimization</scope><name>setListStateReference</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1af0007f3368bc26e13509697f13b8bd8f" prot="public" virt="non-virtual"><scope>metaheuristics::generators::ParticleSwarmOptimization</scope><name>setStateReferencePSO</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1af200d1e3621dea6a34960f8ffbbefa8c" prot="public" virt="non-virtual"><scope>metaheuristics::generators::ParticleSwarmOptimization</scope><name>setWeight</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a84f1604d94af7fb5a200176a4c245b15" prot="private" virt="non-virtual"><scope>metaheuristics::generators::ParticleSwarmOptimization</scope><name>stateReferencePSO</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1abc5a8dcdf9ff7418f4084002e383b860" prot="public" virt="non-virtual"><scope>metaheuristics::generators::ParticleSwarmOptimization</scope><name>updateReference</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a4a4f8987c2b64eb8e5728e9abe354c58" prot="private" virt="non-virtual"><scope>metaheuristics::generators::ParticleSwarmOptimization</scope><name>weight</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a920f572bad5f93b03c3347356f7c2bc4" prot="public" virt="non-virtual"><scope>metaheuristics::generators::ParticleSwarmOptimization</scope><name>wmax</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a25ee209144e81a8a9b36dda74df290c1" prot="public" virt="non-virtual"><scope>metaheuristics::generators::ParticleSwarmOptimization</scope><name>wmin</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

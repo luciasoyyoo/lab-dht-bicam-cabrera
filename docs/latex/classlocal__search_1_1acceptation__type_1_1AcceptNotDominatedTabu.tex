@@ -1,0 +1,109 @@
+\doxysection{Referencia de la clase local\+\_\+search.\+acceptation\+\_\+type.\+Accept\+Not\+Dominated\+Tabu}
+\hypertarget{classlocal__search_1_1acceptation__type_1_1AcceptNotDominatedTabu}{}\label{classlocal__search_1_1acceptation__type_1_1AcceptNotDominatedTabu}\index{local\_search.acceptation\_type.AcceptNotDominatedTabu@{local\_search.acceptation\_type.AcceptNotDominatedTabu}}
+
+
+\doxylink{classlocal__search_1_1acceptation__type_1_1AcceptNotDominatedTabu}{Accept\+Not\+Dominated\+Tabu} -\/ Acceptation that integrates a tabu-\/like Pareto list.  
+
+
+
+
+Diagrama de herencia de local\+\_\+search.\+acceptation\+\_\+type.\+Accept\+Not\+Dominated\+Tabu
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=247pt]{classlocal__search_1_1acceptation__type_1_1AcceptNotDominatedTabu__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagrama de colaboración de local\+\_\+search.\+acceptation\+\_\+type.\+Accept\+Not\+Dominated\+Tabu\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=247pt]{classlocal__search_1_1acceptation__type_1_1AcceptNotDominatedTabu__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+Boolean \mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1AcceptNotDominatedTabu_a3182ac113bddb89bb3ea7af704b38835}{accept\+Candidate}} (\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} state\+Current, \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} state\+Candidate)
+\begin{DoxyCompactList}\small\item\em Evaluate candidate against the non-\/dominated list and update it. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+\doxylink{classlocal__search_1_1acceptation__type_1_1AcceptNotDominatedTabu}{Accept\+Not\+Dominated\+Tabu} -\/ Acceptation that integrates a tabu-\/like Pareto list. 
+
+Maintains a list of non-\/dominated solutions and checks whether the candidate should be accepted into that list. Intended for tabu-\/like multi-\/objective variants. 
+
+Definición en la línea \mbox{\hyperlink{AcceptNotDominatedTabu_8java_source_l00016}{16}} del archivo \mbox{\hyperlink{AcceptNotDominatedTabu_8java_source}{Accept\+Not\+Dominated\+Tabu.\+java}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{classlocal__search_1_1acceptation__type_1_1AcceptNotDominatedTabu_doc-func-members}
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{classlocal__search_1_1acceptation__type_1_1AcceptNotDominatedTabu_a3182ac113bddb89bb3ea7af704b38835}\index{local\_search.acceptation\_type.AcceptNotDominatedTabu@{local\_search.acceptation\_type.AcceptNotDominatedTabu}!acceptCandidate@{acceptCandidate}}
+\index{acceptCandidate@{acceptCandidate}!local\_search.acceptation\_type.AcceptNotDominatedTabu@{local\_search.acceptation\_type.AcceptNotDominatedTabu}}
+\doxysubsubsection{\texorpdfstring{acceptCandidate()}{acceptCandidate()}}
+{\footnotesize\ttfamily \label{classlocal__search_1_1acceptation__type_1_1AcceptNotDominatedTabu_a3182ac113bddb89bb3ea7af704b38835} 
+Boolean local\+\_\+search.\+acceptation\+\_\+type.\+Accept\+Not\+Dominated\+Tabu.\+accept\+Candidate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}}]{state\+Current}{, }\item[{\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}}]{state\+Candidate}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Evaluate candidate against the non-\/dominated list and update it. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em state\+Current} & the current state \\
+\hline
+{\em state\+Candidate} & the candidate state \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+true if candidate processing succeeded (this method returns true in current implementation), false if not 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1AcceptableCandidate_aa9e62e1d2d213c3828d2491b506d0592}{local\+\_\+search.\+acceptation\+\_\+type.\+Acceptable\+Candidate}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{AcceptNotDominatedTabu_8java_source_l00027}{27}} del archivo \mbox{\hyperlink{AcceptNotDominatedTabu_8java_source}{Accept\+Not\+Dominated\+Tabu.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ List<State>\ list\ =\ Strategy.getStrategy().listRefPoblacFinal;}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ Dominance\ dominance\ =\ \textcolor{keyword}{new}\ Dominance();}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(list.size()\ ==\ 0)\{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ list.add(stateCurrent.clone());}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Verificando\ si\ la\ solución\ candidata\ domina\ a\ alguna\ de\ las\ soluciones\ de\ la\ lista\ de\ soluciones\ no\ dominadas}}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{comment}{//De\ ser\ asi\ se\ eliminan\ de\ la\ lista\ y\ se\ adiciona\ la\ nueva\ solución\ en\ la\ lista}}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{comment}{//De\ lo\ contrario\ no\ se\ adiciona\ la\ solución\ candidata\ a\ la\ lista}}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Si\ fue\ insertada\ en\ la\ lista\ entonces\ la\ solucion\ candidata\ se\ convierte\ en\ solucion\ actual}}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ dominance.listDominance(stateCandidate,\ list);}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00040\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{State_8java_source_l00142}{problem.\+definition.\+State.\+clone()}}, \mbox{\hyperlink{Strategy_8java_source_l00080}{metaheurictics.\+strategy.\+Strategy.\+get\+Strategy()}}, \mbox{\hyperlink{Dominance_8java_source_l00033}{local\+\_\+search.\+acceptation\+\_\+type.\+Dominance.\+list\+Dominance()}} y \mbox{\hyperlink{Strategy_8java_source_l00049}{metaheurictics.\+strategy.\+Strategy.\+list\+Ref\+Poblac\+Final}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlocal__search_1_1acceptation__type_1_1AcceptNotDominatedTabu_a3182ac113bddb89bb3ea7af704b38835_cgraph}
+\end{center}
+\end{figure}
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{AcceptNotDominatedTabu_8java}{Accept\+Not\+Dominated\+Tabu.\+java}}\end{DoxyCompactItemize}

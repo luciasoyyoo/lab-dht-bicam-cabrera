@@ -1,0 +1,834 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="es">
+  <compounddef id="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch" kind="class" language="Java" prot="public">
+    <compoundname>metaheuristics::generators::MultiobjectiveTabuSearch</compoundname>
+    <basecompoundref refid="classmetaheuristics_1_1generators_1_1Generator" prot="public" virt="non-virtual">metaheuristics.generators.Generator</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1ac1077518972d0de6f6cdb4669a5c32b8" prot="private" static="no" mutable="no">
+        <type><ref refid="classlocal__search_1_1candidate__type_1_1CandidateValue" kindref="compound">CandidateValue</ref></type>
+        <definition>CandidateValue metaheuristics.generators.MultiobjectiveTabuSearch.candidatevalue</definition>
+        <argsstring></argsstring>
+        <name>candidatevalue</name>
+        <qualifiedname>metaheuristics.generators.MultiobjectiveTabuSearch.candidatevalue</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/MultiobjectiveTabuSearch.java" line="27" column="24" bodyfile="practica5/src/main/java/metaheuristics/generators/MultiobjectiveTabuSearch.java" bodystart="27" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a719352455b19c8fc2244a4d7387db236" compoundref="MultiobjectiveTabuSearch_8java" startline="91" endline="97">metaheuristics.generators.MultiobjectiveTabuSearch.generate</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a09c4a34396dafd514a3b43c86f368d0f" prot="private" static="no" mutable="no">
+        <type><ref refid="enumlocal__search_1_1acceptation__type_1_1AcceptType" kindref="compound">AcceptType</ref></type>
+        <definition>AcceptType metaheuristics.generators.MultiobjectiveTabuSearch.typeAcceptation</definition>
+        <argsstring></argsstring>
+        <name>typeAcceptation</name>
+        <qualifiedname>metaheuristics.generators.MultiobjectiveTabuSearch.typeAcceptation</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/MultiobjectiveTabuSearch.java" line="28" column="20" bodyfile="practica5/src/main/java/metaheuristics/generators/MultiobjectiveTabuSearch.java" bodystart="28" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a5e7f4e1f1fb436f2fb9c1770b90ee253" compoundref="MultiobjectiveTabuSearch_8java" startline="105" endline="141">metaheuristics.generators.MultiobjectiveTabuSearch.updateReference</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a048690a51992d1a585cb0c36064252f1" prot="private" static="no" mutable="no">
+        <type><ref refid="enumlocal__search_1_1complement_1_1StrategyType" kindref="compound">StrategyType</ref></type>
+        <definition>StrategyType metaheuristics.generators.MultiobjectiveTabuSearch.strategy</definition>
+        <argsstring></argsstring>
+        <name>strategy</name>
+        <qualifiedname>metaheuristics.generators.MultiobjectiveTabuSearch.strategy</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/MultiobjectiveTabuSearch.java" line="29" column="22" bodyfile="practica5/src/main/java/metaheuristics/generators/MultiobjectiveTabuSearch.java" bodystart="29" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a719352455b19c8fc2244a4d7387db236" compoundref="MultiobjectiveTabuSearch_8java" startline="91" endline="97">metaheuristics.generators.MultiobjectiveTabuSearch.generate</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a5e7f4e1f1fb436f2fb9c1770b90ee253" compoundref="MultiobjectiveTabuSearch_8java" startline="105" endline="141">metaheuristics.generators.MultiobjectiveTabuSearch.updateReference</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a97da542e1d41a93fb2af3b9deee60fdc" prot="private" static="no" mutable="no">
+        <type><ref refid="enumlocal__search_1_1candidate__type_1_1CandidateType" kindref="compound">CandidateType</ref></type>
+        <definition>CandidateType metaheuristics.generators.MultiobjectiveTabuSearch.typeCandidate</definition>
+        <argsstring></argsstring>
+        <name>typeCandidate</name>
+        <qualifiedname>metaheuristics.generators.MultiobjectiveTabuSearch.typeCandidate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/MultiobjectiveTabuSearch.java" line="30" column="23" bodyfile="practica5/src/main/java/metaheuristics/generators/MultiobjectiveTabuSearch.java" bodystart="30" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a719352455b19c8fc2244a4d7387db236" compoundref="MultiobjectiveTabuSearch_8java" startline="91" endline="97">metaheuristics.generators.MultiobjectiveTabuSearch.generate</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a8f5e5b2afaea89a98a1a05a3b192d23c" compoundref="MultiobjectiveTabuSearch_8java" startline="202" endline="204">metaheuristics.generators.MultiobjectiveTabuSearch.setTypeCandidate</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1af0997147df854712548011b247a5f174" prot="private" static="no" mutable="no">
+        <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+        <definition>State metaheuristics.generators.MultiobjectiveTabuSearch.stateReferenceTS</definition>
+        <argsstring></argsstring>
+        <name>stateReferenceTS</name>
+        <qualifiedname>metaheuristics.generators.MultiobjectiveTabuSearch.stateReferenceTS</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/MultiobjectiveTabuSearch.java" line="31" column="15" bodyfile="practica5/src/main/java/metaheuristics/generators/MultiobjectiveTabuSearch.java" bodystart="31" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a719352455b19c8fc2244a4d7387db236" compoundref="MultiobjectiveTabuSearch_8java" startline="91" endline="97">metaheuristics.generators.MultiobjectiveTabuSearch.generate</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1ae22ff41cdbe5f2f7cb370a03ed24c477" compoundref="MultiobjectiveTabuSearch_8java" startline="167" endline="169">metaheuristics.generators.MultiobjectiveTabuSearch.getReference</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a3ca25be7ef0c28d3ba6e26473972d887" compoundref="MultiobjectiveTabuSearch_8java" startline="157" endline="160">metaheuristics.generators.MultiobjectiveTabuSearch.getReferenceList</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1ae279b2ed418314d15e6c56b842c20e23" compoundref="MultiobjectiveTabuSearch_8java" startline="42" endline="44">metaheuristics.generators.MultiobjectiveTabuSearch.getStateReferenceTS</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1acfded8b29215bc85064637d868cf3917" compoundref="MultiobjectiveTabuSearch_8java" startline="50" endline="52">metaheuristics.generators.MultiobjectiveTabuSearch.setStateReferenceTS</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a5e7f4e1f1fb436f2fb9c1770b90ee253" compoundref="MultiobjectiveTabuSearch_8java" startline="105" endline="141">metaheuristics.generators.MultiobjectiveTabuSearch.updateReference</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1aa71ff0be1f4f97b95dd7780c2b0b40be" prot="private" static="no" mutable="no">
+        <type><ref refid="interfacefactory__interface_1_1IFFactoryAcceptCandidate" kindref="compound">IFFactoryAcceptCandidate</ref></type>
+        <definition>IFFactoryAcceptCandidate metaheuristics.generators.MultiobjectiveTabuSearch.ifacceptCandidate</definition>
+        <argsstring></argsstring>
+        <name>ifacceptCandidate</name>
+        <qualifiedname>metaheuristics.generators.MultiobjectiveTabuSearch.ifacceptCandidate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/MultiobjectiveTabuSearch.java" line="32" column="38" bodyfile="practica5/src/main/java/metaheuristics/generators/MultiobjectiveTabuSearch.java" bodystart="32" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a5e7f4e1f1fb436f2fb9c1770b90ee253" compoundref="MultiobjectiveTabuSearch_8java" startline="105" endline="141">metaheuristics.generators.MultiobjectiveTabuSearch.updateReference</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1ab5623431c4358f5f3293c4c5e23a7992" prot="private" static="no" mutable="no">
+        <type><ref refid="enummetaheuristics_1_1generators_1_1GeneratorType" kindref="compound">GeneratorType</ref></type>
+        <definition>GeneratorType metaheuristics.generators.MultiobjectiveTabuSearch.typeGenerator</definition>
+        <argsstring></argsstring>
+        <name>typeGenerator</name>
+        <qualifiedname>metaheuristics.generators.MultiobjectiveTabuSearch.typeGenerator</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/MultiobjectiveTabuSearch.java" line="33" column="27" bodyfile="practica5/src/main/java/metaheuristics/generators/MultiobjectiveTabuSearch.java" bodystart="33" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a6988226dc64befc6c8f6959085929efc" compoundref="MultiobjectiveTabuSearch_8java" startline="58" endline="60">metaheuristics.generators.MultiobjectiveTabuSearch.getTypeGenerator</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a754ffcf3508a256e16fbf626048da0ce" compoundref="MultiobjectiveTabuSearch_8java" startline="66" endline="68">metaheuristics.generators.MultiobjectiveTabuSearch.setTypeGenerator</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a9222859138dedf83000373b31f226829" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+        <definition>List&lt;State&gt; metaheuristics.generators.MultiobjectiveTabuSearch.listStateReference</definition>
+        <argsstring></argsstring>
+        <name>listStateReference</name>
+        <qualifiedname>metaheuristics.generators.MultiobjectiveTabuSearch.listStateReference</qualifiedname>
+        <initializer>= new ArrayList&lt;<ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref>&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/MultiobjectiveTabuSearch.java" line="34" column="18" bodyfile="practica5/src/main/java/metaheuristics/generators/MultiobjectiveTabuSearch.java" bodystart="34" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a3ca25be7ef0c28d3ba6e26473972d887" compoundref="MultiobjectiveTabuSearch_8java" startline="157" endline="160">metaheuristics.generators.MultiobjectiveTabuSearch.getReferenceList</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1aa4607bb225547e49d5202adfb63b0c9a" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float metaheuristics.generators.MultiobjectiveTabuSearch.weight</definition>
+        <argsstring></argsstring>
+        <name>weight</name>
+        <qualifiedname>metaheuristics.generators.MultiobjectiveTabuSearch.weight</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/MultiobjectiveTabuSearch.java" line="35" column="19" bodyfile="practica5/src/main/java/metaheuristics/generators/MultiobjectiveTabuSearch.java" bodystart="35" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a34d8bdaed4d57911bd7bde63157c8703" compoundref="MultiobjectiveTabuSearch_8java" startline="73" endline="83">metaheuristics.generators.MultiobjectiveTabuSearch.MultiobjectiveTabuSearch</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a04e6d1cc450203864d6e022db854e3bb" compoundref="MultiobjectiveTabuSearch_8java" startline="232" endline="235">metaheuristics.generators.MultiobjectiveTabuSearch.setWeight</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a5e668cca34188f2c6c03e2951fe0b100" prot="private" static="no" mutable="no">
+        <type>List&lt; Float &gt;</type>
+        <definition>List&lt;Float&gt; metaheuristics.generators.MultiobjectiveTabuSearch.listTrace</definition>
+        <argsstring></argsstring>
+        <name>listTrace</name>
+        <qualifiedname>metaheuristics.generators.MultiobjectiveTabuSearch.listTrace</qualifiedname>
+        <initializer>= new ArrayList&lt;Float&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/MultiobjectiveTabuSearch.java" line="36" column="14" bodyfile="practica5/src/main/java/metaheuristics/generators/MultiobjectiveTabuSearch.java" bodystart="36" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a34d8bdaed4d57911bd7bde63157c8703" compoundref="MultiobjectiveTabuSearch_8java" startline="73" endline="83">metaheuristics.generators.MultiobjectiveTabuSearch.MultiobjectiveTabuSearch</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1ae279b2ed418314d15e6c56b842c20e23" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+        <definition>State metaheuristics.generators.MultiobjectiveTabuSearch.getStateReferenceTS</definition>
+        <argsstring>()</argsstring>
+        <name>getStateReferenceTS</name>
+        <qualifiedname>metaheuristics.generators.MultiobjectiveTabuSearch.getStateReferenceTS</qualifiedname>
+        <briefdescription>
+<para>getStateReferenceTS - get the reference state for Tabu Search. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the reference state for Tabu Search </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/MultiobjectiveTabuSearch.java" line="42" column="18" bodyfile="practica5/src/main/java/metaheuristics/generators/MultiobjectiveTabuSearch.java" bodystart="42" bodyend="44"/>
+        <references refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1af0997147df854712548011b247a5f174" compoundref="MultiobjectiveTabuSearch_8java" startline="31">metaheuristics.generators.MultiobjectiveTabuSearch.stateReferenceTS</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1acfded8b29215bc85064637d868cf3917" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheuristics.generators.MultiobjectiveTabuSearch.setStateReferenceTS</definition>
+        <argsstring>(State stateReferenceTS)</argsstring>
+        <name>setStateReferenceTS</name>
+        <qualifiedname>metaheuristics.generators.MultiobjectiveTabuSearch.setStateReferenceTS</qualifiedname>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>stateReferenceTS</declname>
+        </param>
+        <briefdescription>
+<para>setStateReferenceTS - set the reference state for Tabu Search. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stateReferenceTS</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/MultiobjectiveTabuSearch.java" line="50" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/MultiobjectiveTabuSearch.java" bodystart="50" bodyend="52"/>
+        <references refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1af0997147df854712548011b247a5f174" compoundref="MultiobjectiveTabuSearch_8java" startline="31">metaheuristics.generators.MultiobjectiveTabuSearch.stateReferenceTS</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a6988226dc64befc6c8f6959085929efc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="enummetaheuristics_1_1generators_1_1GeneratorType" kindref="compound">GeneratorType</ref></type>
+        <definition>GeneratorType metaheuristics.generators.MultiobjectiveTabuSearch.getTypeGenerator</definition>
+        <argsstring>()</argsstring>
+        <name>getTypeGenerator</name>
+        <qualifiedname>metaheuristics.generators.MultiobjectiveTabuSearch.getTypeGenerator</qualifiedname>
+        <briefdescription>
+<para>getTypeGenerator - get the type of the generator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the type of the generator </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/MultiobjectiveTabuSearch.java" line="58" column="22" bodyfile="practica5/src/main/java/metaheuristics/generators/MultiobjectiveTabuSearch.java" bodystart="58" bodyend="60"/>
+        <references refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1ab5623431c4358f5f3293c4c5e23a7992" compoundref="MultiobjectiveTabuSearch_8java" startline="33">metaheuristics.generators.MultiobjectiveTabuSearch.typeGenerator</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a754ffcf3508a256e16fbf626048da0ce" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheuristics.generators.MultiobjectiveTabuSearch.setTypeGenerator</definition>
+        <argsstring>(GeneratorType typeGenerator)</argsstring>
+        <name>setTypeGenerator</name>
+        <qualifiedname>metaheuristics.generators.MultiobjectiveTabuSearch.setTypeGenerator</qualifiedname>
+        <param>
+          <type><ref refid="enummetaheuristics_1_1generators_1_1GeneratorType" kindref="compound">GeneratorType</ref></type>
+          <declname>typeGenerator</declname>
+        </param>
+        <briefdescription>
+<para>setTypeGenerator - set the type of the generator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>typeGenerator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/MultiobjectiveTabuSearch.java" line="66" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/MultiobjectiveTabuSearch.java" bodystart="66" bodyend="68"/>
+        <references refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1ab5623431c4358f5f3293c4c5e23a7992" compoundref="MultiobjectiveTabuSearch_8java" startline="33">metaheuristics.generators.MultiobjectiveTabuSearch.typeGenerator</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a34d8bdaed4d57911bd7bde63157c8703" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>metaheuristics.generators.MultiobjectiveTabuSearch.MultiobjectiveTabuSearch</definition>
+        <argsstring>()</argsstring>
+        <name>MultiobjectiveTabuSearch</name>
+        <qualifiedname>metaheuristics.generators.MultiobjectiveTabuSearch.MultiobjectiveTabuSearch</qualifiedname>
+        <briefdescription>
+<para><ref refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch" kindref="compound">MultiobjectiveTabuSearch</ref> - class that implements the Multiobjective Tabu Search metaheuristic. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/MultiobjectiveTabuSearch.java" line="73" column="8" bodyfile="practica5/src/main/java/metaheuristics/generators/MultiobjectiveTabuSearch.java" bodystart="73" bodyend="83"/>
+        <references refid="enumlocal__search_1_1acceptation__type_1_1AcceptType_1a671422b03983faac4a66030015eedb85" compoundref="AcceptType_8java" startline="15">local_search.acceptation_type.AcceptType.AcceptNotDominatedTabu</references>
+        <references refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a5e668cca34188f2c6c03e2951fe0b100" compoundref="MultiobjectiveTabuSearch_8java" startline="36">metaheuristics.generators.MultiobjectiveTabuSearch.listTrace</references>
+        <references refid="enummetaheuristics_1_1generators_1_1GeneratorType_1a7ab22e629b0297ba3442d06ffb613a38" compoundref="GeneratorType_8java" startline="10">metaheuristics.generators.GeneratorType.MultiobjectiveTabuSearch</references>
+        <references refid="enumlocal__search_1_1candidate__type_1_1CandidateType_1a3914a76aec072c9056c8a338449c0532" compoundref="CandidateType_8java" startline="20">local_search.candidate_type.CandidateType.RandomCandidate</references>
+        <references refid="enumlocal__search_1_1complement_1_1StrategyType_1ac0c34198bb10ffedf05b8be68f72c170" compoundref="StrategyType_8java" startline="16">local_search.complement.StrategyType.TABU</references>
+        <references refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1aa4607bb225547e49d5202adfb63b0c9a" compoundref="MultiobjectiveTabuSearch_8java" startline="35">metaheuristics.generators.MultiobjectiveTabuSearch.weight</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a719352455b19c8fc2244a4d7387db236" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+        <definition>State metaheuristics.generators.MultiobjectiveTabuSearch.generate</definition>
+        <argsstring>(Integer operatornumber)</argsstring>
+        <name>generate</name>
+        <qualifiedname>metaheuristics.generators.MultiobjectiveTabuSearch.generate</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1a06f6f7622b9ce32590eadbdf6bf962b5">generate</reimplements>
+        <param>
+          <type>Integer</type>
+          <declname>operatornumber</declname>
+        </param>
+        <exceptions> throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException </exceptions>
+        <briefdescription>
+<para>generate - generate a new state based on the operator number. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>operatornumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the operator number to use for generating the state </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the generated state </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/MultiobjectiveTabuSearch.java" line="91" column="14" bodyfile="practica5/src/main/java/metaheuristics/generators/MultiobjectiveTabuSearch.java" bodystart="91" bodyend="97"/>
+        <references refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1ac1077518972d0de6f6cdb4669a5c32b8" compoundref="MultiobjectiveTabuSearch_8java" startline="27">metaheuristics.generators.MultiobjectiveTabuSearch.candidatevalue</references>
+        <references refid="classproblem_1_1definition_1_1Operator_1a5b6625843e73d938f9235985bf966b34">problem.definition.Operator.generatedNewState</references>
+        <references refid="classproblem_1_1definition_1_1Problem_1a4cd649edb8862f21af171491cb9b9386" compoundref="Problem_8java" startline="131" endline="133">problem.definition.Problem.getOperator</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1a4bc6bd95db71e14b1f48c1bfc85f1305" compoundref="Strategy_8java" startline="405" endline="407">metaheurictics.strategy.Strategy.getProblem</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1ad2641e12c52292930364de6655333aa8" compoundref="Strategy_8java" startline="80" endline="85">metaheurictics.strategy.Strategy.getStrategy</references>
+        <references refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1af0997147df854712548011b247a5f174" compoundref="MultiobjectiveTabuSearch_8java" startline="31">metaheuristics.generators.MultiobjectiveTabuSearch.stateReferenceTS</references>
+        <references refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a048690a51992d1a585cb0c36064252f1" compoundref="MultiobjectiveTabuSearch_8java" startline="29">metaheuristics.generators.MultiobjectiveTabuSearch.strategy</references>
+        <references refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a97da542e1d41a93fb2af3b9deee60fdc" compoundref="MultiobjectiveTabuSearch_8java" startline="30">metaheuristics.generators.MultiobjectiveTabuSearch.typeCandidate</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a5e7f4e1f1fb436f2fb9c1770b90ee253" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheuristics.generators.MultiobjectiveTabuSearch.updateReference</definition>
+        <argsstring>(State stateCandidate, Integer countIterationsCurrent)</argsstring>
+        <name>updateReference</name>
+        <qualifiedname>metaheuristics.generators.MultiobjectiveTabuSearch.updateReference</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1aa1c5878953f2111221b21cb9b1e6cc9f">updateReference</reimplements>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>stateCandidate</declname>
+        </param>
+        <param>
+          <type>Integer</type>
+          <declname>countIterationsCurrent</declname>
+        </param>
+        <exceptions> throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException </exceptions>
+        <briefdescription>
+<para>updateReference - update the reference state and the list of visited states. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stateCandidate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>countIterationsCurrent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/MultiobjectiveTabuSearch.java" line="105" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/MultiobjectiveTabuSearch.java" bodystart="105" bodyend="141"/>
+        <references refid="classlocal__search_1_1acceptation__type_1_1AcceptableCandidate_1aa9e62e1d2d213c3828d2491b506d0592">local_search.acceptation_type.AcceptableCandidate.acceptCandidate</references>
+        <references refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a3ca25be7ef0c28d3ba6e26473972d887" compoundref="MultiobjectiveTabuSearch_8java" startline="157" endline="160">metaheuristics.generators.MultiobjectiveTabuSearch.getReferenceList</references>
+        <references refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1aa71ff0be1f4f97b95dd7780c2b0b40be" compoundref="MultiobjectiveTabuSearch_8java" startline="32">metaheuristics.generators.MultiobjectiveTabuSearch.ifacceptCandidate</references>
+        <references refid="classlocal__search_1_1complement_1_1TabuSolutions_1ad602469482bab1bd52b03ef738bd7907" compoundref="TabuSolutions_8java" startline="19">local_search.complement.TabuSolutions.listTabu</references>
+        <references refid="classlocal__search_1_1complement_1_1TabuSolutions_1a294b3167e2976e63e7264c619e756d82" compoundref="TabuSolutions_8java" startline="22">local_search.complement.TabuSolutions.maxelements</references>
+        <references refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1af0997147df854712548011b247a5f174" compoundref="MultiobjectiveTabuSearch_8java" startline="31">metaheuristics.generators.MultiobjectiveTabuSearch.stateReferenceTS</references>
+        <references refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a048690a51992d1a585cb0c36064252f1" compoundref="MultiobjectiveTabuSearch_8java" startline="29">metaheuristics.generators.MultiobjectiveTabuSearch.strategy</references>
+        <references refid="enumlocal__search_1_1complement_1_1StrategyType_1ac0c34198bb10ffedf05b8be68f72c170" compoundref="StrategyType_8java" startline="16">local_search.complement.StrategyType.TABU</references>
+        <references refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a09c4a34396dafd514a3b43c86f368d0f" compoundref="MultiobjectiveTabuSearch_8java" startline="28">metaheuristics.generators.MultiobjectiveTabuSearch.typeAcceptation</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1ade7cc640bcb709edaa015682155aaac2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="enummetaheuristics_1_1generators_1_1GeneratorType" kindref="compound">GeneratorType</ref></type>
+        <definition>GeneratorType metaheuristics.generators.MultiobjectiveTabuSearch.getType</definition>
+        <argsstring>()</argsstring>
+        <name>getType</name>
+        <qualifiedname>metaheuristics.generators.MultiobjectiveTabuSearch.getType</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1a5a123306b43c42d28cd1d6e17f8067a5">getType</reimplements>
+        <briefdescription>
+<para>getType - get the type of the generator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the type of the generator </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/MultiobjectiveTabuSearch.java" line="148" column="22" bodyfile="practica5/src/main/java/metaheuristics/generators/MultiobjectiveTabuSearch.java" bodystart="148" bodyend="150"/>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a3ca25be7ef0c28d3ba6e26473972d887" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+        <definition>List&lt; State &gt; metaheuristics.generators.MultiobjectiveTabuSearch.getReferenceList</definition>
+        <argsstring>()</argsstring>
+        <name>getReferenceList</name>
+        <qualifiedname>metaheuristics.generators.MultiobjectiveTabuSearch.getReferenceList</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1ae168237b306de55fe4d6dfda75c7cd13">getReferenceList</reimplements>
+        <briefdescription>
+<para>getReferenceList - get the list of reference states. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the list of reference states </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/MultiobjectiveTabuSearch.java" line="157" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/MultiobjectiveTabuSearch.java" bodystart="157" bodyend="160"/>
+        <references refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a9222859138dedf83000373b31f226829" compoundref="MultiobjectiveTabuSearch_8java" startline="34">metaheuristics.generators.MultiobjectiveTabuSearch.listStateReference</references>
+        <references refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1af0997147df854712548011b247a5f174" compoundref="MultiobjectiveTabuSearch_8java" startline="31">metaheuristics.generators.MultiobjectiveTabuSearch.stateReferenceTS</references>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a5e7f4e1f1fb436f2fb9c1770b90ee253" compoundref="MultiobjectiveTabuSearch_8java" startline="105" endline="141">metaheuristics.generators.MultiobjectiveTabuSearch.updateReference</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1ae22ff41cdbe5f2f7cb370a03ed24c477" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+        <definition>State metaheuristics.generators.MultiobjectiveTabuSearch.getReference</definition>
+        <argsstring>()</argsstring>
+        <name>getReference</name>
+        <qualifiedname>metaheuristics.generators.MultiobjectiveTabuSearch.getReference</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1aa56dd45a45776f6023b9f74179cc6384">getReference</reimplements>
+        <briefdescription>
+<para>getReference - get the reference state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the reference state </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/MultiobjectiveTabuSearch.java" line="167" column="14" bodyfile="practica5/src/main/java/metaheuristics/generators/MultiobjectiveTabuSearch.java" bodystart="167" bodyend="169"/>
+        <references refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1af0997147df854712548011b247a5f174" compoundref="MultiobjectiveTabuSearch_8java" startline="31">metaheuristics.generators.MultiobjectiveTabuSearch.stateReferenceTS</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a6c25c3204b4e4fc62ae1fb0a5806a3ed" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheuristics.generators.MultiobjectiveTabuSearch.setInitialReference</definition>
+        <argsstring>(State stateInitialRef)</argsstring>
+        <name>setInitialReference</name>
+        <qualifiedname>metaheuristics.generators.MultiobjectiveTabuSearch.setInitialReference</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1aa9f7c4c983705f843b8fcc81e4aa8ba4">setInitialReference</reimplements>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>stateInitialRef</declname>
+        </param>
+        <briefdescription>
+<para>setInitialReference - set the initial reference state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stateInitialRef</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the initial reference state to set </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/MultiobjectiveTabuSearch.java" line="176" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/MultiobjectiveTabuSearch.java" bodystart="176" bodyend="178"/>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1af0e27b06643d94b9e37a7004af55a58a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheuristics.generators.MultiobjectiveTabuSearch.setStateRef</definition>
+        <argsstring>(State stateRef)</argsstring>
+        <name>setStateRef</name>
+        <qualifiedname>metaheuristics.generators.MultiobjectiveTabuSearch.setStateRef</qualifiedname>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>stateRef</declname>
+        </param>
+        <briefdescription>
+<para>setStateRef - set the reference state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stateRef</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/MultiobjectiveTabuSearch.java" line="184" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/MultiobjectiveTabuSearch.java" bodystart="184" bodyend="186"/>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a1c0f71e47e5f6b6e6669866ac8892f24" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+        <definition>List&lt; State &gt; metaheuristics.generators.MultiobjectiveTabuSearch.getSonList</definition>
+        <argsstring>()</argsstring>
+        <name>getSonList</name>
+        <qualifiedname>metaheuristics.generators.MultiobjectiveTabuSearch.getSonList</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1aee09d724c1b3040e7a7ad0b64e341c96">getSonList</reimplements>
+        <briefdescription>
+<para>getSonList - get the list of child states. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the list of child states </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/MultiobjectiveTabuSearch.java" line="193" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/MultiobjectiveTabuSearch.java" bodystart="193" bodyend="196"/>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a8f5e5b2afaea89a98a1a05a3b192d23c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheuristics.generators.MultiobjectiveTabuSearch.setTypeCandidate</definition>
+        <argsstring>(CandidateType typeCandidate)</argsstring>
+        <name>setTypeCandidate</name>
+        <qualifiedname>metaheuristics.generators.MultiobjectiveTabuSearch.setTypeCandidate</qualifiedname>
+        <param>
+          <type><ref refid="enumlocal__search_1_1candidate__type_1_1CandidateType" kindref="compound">CandidateType</ref></type>
+          <declname>typeCandidate</declname>
+        </param>
+        <briefdescription>
+<para>setTypeCandidate - set the type of candidate. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>typeCandidate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the type of candidate to set </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/MultiobjectiveTabuSearch.java" line="202" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/MultiobjectiveTabuSearch.java" bodystart="202" bodyend="204"/>
+        <references refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a97da542e1d41a93fb2af3b9deee60fdc" compoundref="MultiobjectiveTabuSearch_8java" startline="30">metaheuristics.generators.MultiobjectiveTabuSearch.typeCandidate</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a3a2df89fb924f93a84d2579afa9a30e7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean metaheuristics.generators.MultiobjectiveTabuSearch.awardUpdateREF</definition>
+        <argsstring>(State stateCandidate)</argsstring>
+        <name>awardUpdateREF</name>
+        <qualifiedname>metaheuristics.generators.MultiobjectiveTabuSearch.awardUpdateREF</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1a3513d3953ecc97683f38bcb662b74b9b">awardUpdateREF</reimplements>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>stateCandidate</declname>
+        </param>
+        <briefdescription>
+<para>awardUpdateREF - award the update of the reference state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stateCandidate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>return true if the reference state was updated, false otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/MultiobjectiveTabuSearch.java" line="212" column="16" bodyfile="practica5/src/main/java/metaheuristics/generators/MultiobjectiveTabuSearch.java" bodystart="212" bodyend="215"/>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a646763accfdf08b677e0e41773747517" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float metaheuristics.generators.MultiobjectiveTabuSearch.getWeight</definition>
+        <argsstring>()</argsstring>
+        <name>getWeight</name>
+        <qualifiedname>metaheuristics.generators.MultiobjectiveTabuSearch.getWeight</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1a64f2b824081c7af593bf9aa8eabf2c9e">getWeight</reimplements>
+        <briefdescription>
+<para>getWeight - get the weight of the solution. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the weight of the solution </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/MultiobjectiveTabuSearch.java" line="222" column="14" bodyfile="practica5/src/main/java/metaheuristics/generators/MultiobjectiveTabuSearch.java" bodystart="222" bodyend="225"/>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a04e6d1cc450203864d6e022db854e3bb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheuristics.generators.MultiobjectiveTabuSearch.setWeight</definition>
+        <argsstring>(float weight)</argsstring>
+        <name>setWeight</name>
+        <qualifiedname>metaheuristics.generators.MultiobjectiveTabuSearch.setWeight</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1a8b3c66b57b4c739666989fbce667eb40">setWeight</reimplements>
+        <param>
+          <type>float</type>
+          <declname>weight</declname>
+        </param>
+        <briefdescription>
+<para>setWeight - set the weight of the generator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>weight</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the weight to set </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/MultiobjectiveTabuSearch.java" line="232" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/MultiobjectiveTabuSearch.java" bodystart="232" bodyend="235"/>
+        <references refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1aa4607bb225547e49d5202adfb63b0c9a" compoundref="MultiobjectiveTabuSearch_8java" startline="35">metaheuristics.generators.MultiobjectiveTabuSearch.weight</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a9fc33be2953363e41d8bfe1b9e59d2c3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int[]</type>
+        <definition>int[] metaheuristics.generators.MultiobjectiveTabuSearch.getListCountBetterGender</definition>
+        <argsstring>()</argsstring>
+        <name>getListCountBetterGender</name>
+        <qualifiedname>metaheuristics.generators.MultiobjectiveTabuSearch.getListCountBetterGender</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1ac5bace71f51c16b611ede3ed53263473">getListCountBetterGender</reimplements>
+        <briefdescription>
+<para>getListCountBetterGender - get the list of counts of better solutions by gender. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the list of counts of better solutions by gender </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/MultiobjectiveTabuSearch.java" line="242" column="12" bodyfile="practica5/src/main/java/metaheuristics/generators/MultiobjectiveTabuSearch.java" bodystart="242" bodyend="246"/>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1ab32b15614e2605a9de9730ff419f8676" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int[]</type>
+        <definition>int[] metaheuristics.generators.MultiobjectiveTabuSearch.getListCountGender</definition>
+        <argsstring>()</argsstring>
+        <name>getListCountGender</name>
+        <qualifiedname>metaheuristics.generators.MultiobjectiveTabuSearch.getListCountGender</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1ac5d6d45ee8017fb87d80aa952edfc34e">getListCountGender</reimplements>
+        <briefdescription>
+<para>getListCountGender - get the list of counts of solutions by gender. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the list of counts of solutions by gender </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/MultiobjectiveTabuSearch.java" line="253" column="12" bodyfile="practica5/src/main/java/metaheuristics/generators/MultiobjectiveTabuSearch.java" bodystart="253" bodyend="257"/>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a0201b91c6b86834fcaee559a20a100e6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float[]</type>
+        <definition>float[] metaheuristics.generators.MultiobjectiveTabuSearch.getTrace</definition>
+        <argsstring>()</argsstring>
+        <name>getTrace</name>
+        <qualifiedname>metaheuristics.generators.MultiobjectiveTabuSearch.getTrace</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1a75d7f30dd2cb3f92475db8525ac7c6e7">getTrace</reimplements>
+        <briefdescription>
+<para>getTrace - get the trace of the solution. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the trace of the solution </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/MultiobjectiveTabuSearch.java" line="264" column="14" bodyfile="practica5/src/main/java/metaheuristics/generators/MultiobjectiveTabuSearch.java" bodystart="264" bodyend="273"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch" kindref="compound">MultiobjectiveTabuSearch</ref> - class that implements the Multiobjective Tabu Search metaheuristic. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>metaheuristics.generators.MultiobjectiveTabuSearch</label>
+        <link refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>metaheuristics.generators.Generator</label>
+        <link refid="classmetaheuristics_1_1generators_1_1Generator"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="11">
+        <label>Cloneable</label>
+      </node>
+      <node id="13">
+        <label>factory_interface.IFFactoryAcceptCandidate</label>
+        <link refid="interfacefactory__interface_1_1IFFactoryAcceptCandidate"/>
+      </node>
+      <node id="4">
+        <label>factory_interface.IFFactoryCandidate</label>
+        <link refid="interfacefactory__interface_1_1IFFactoryCandidate"/>
+      </node>
+      <node id="7">
+        <label>local_search.acceptation_type.AcceptType</label>
+        <link refid="enumlocal__search_1_1acceptation__type_1_1AcceptType"/>
+      </node>
+      <node id="9">
+        <label>local_search.candidate_type.CandidateType</label>
+        <link refid="enumlocal__search_1_1candidate__type_1_1CandidateType"/>
+      </node>
+      <node id="3">
+        <label>local_search.candidate_type.CandidateValue</label>
+        <link refid="classlocal__search_1_1candidate__type_1_1CandidateValue"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-ifFactory</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>-tabusolution</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>-searchcandidate</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>local_search.candidate_type.SearchCandidate</label>
+        <link refid="classlocal__search_1_1candidate__type_1_1SearchCandidate"/>
+      </node>
+      <node id="8">
+        <label>local_search.complement.StrategyType</label>
+        <link refid="enumlocal__search_1_1complement_1_1StrategyType"/>
+      </node>
+      <node id="5">
+        <label>local_search.complement.TabuSolutions</label>
+        <link refid="classlocal__search_1_1complement_1_1TabuSolutions"/>
+      </node>
+      <node id="1">
+        <label>metaheuristics.generators.MultiobjectiveTabuSearch</label>
+        <link refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-candidatevalue</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>-typeAcceptation</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>-strategy</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>-typeCandidate</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>-stateReferenceTS</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>-ifacceptCandidate</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>-typeGenerator</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>metaheuristics.generators.Generator</label>
+        <link refid="classmetaheuristics_1_1generators_1_1Generator"/>
+      </node>
+      <node id="12">
+        <label>metaheuristics.generators.GeneratorType</label>
+        <link refid="enummetaheuristics_1_1generators_1_1GeneratorType"/>
+      </node>
+      <node id="10">
+        <label>problem.definition.State</label>
+        <link refid="classproblem_1_1definition_1_1State"/>
+        <childnode refid="11" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>#typeGenerator</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="practica5/src/main/java/metaheuristics/generators/MultiobjectiveTabuSearch.java" line="25" column="7" bodyfile="practica5/src/main/java/metaheuristics/generators/MultiobjectiveTabuSearch.java" bodystart="25" bodyend="275"/>
+    <listofallmembers>
+      <member refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a3a2df89fb924f93a84d2579afa9a30e7" prot="public" virt="non-virtual"><scope>metaheuristics::generators::MultiobjectiveTabuSearch</scope><name>awardUpdateREF</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1ac1077518972d0de6f6cdb4669a5c32b8" prot="private" virt="non-virtual"><scope>metaheuristics::generators::MultiobjectiveTabuSearch</scope><name>candidatevalue</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1Generator_1a43815f3944c514ba3156b0e68482befa" prot="public" virt="non-virtual"><scope>metaheuristics::generators::MultiobjectiveTabuSearch</scope><name>countBetterGender</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1Generator_1a3c0145210385b6257c8fc20cac1f830a" prot="public" virt="non-virtual"><scope>metaheuristics::generators::MultiobjectiveTabuSearch</scope><name>countGender</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a719352455b19c8fc2244a4d7387db236" prot="public" virt="non-virtual"><scope>metaheuristics::generators::MultiobjectiveTabuSearch</scope><name>generate</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a9fc33be2953363e41d8bfe1b9e59d2c3" prot="public" virt="non-virtual"><scope>metaheuristics::generators::MultiobjectiveTabuSearch</scope><name>getListCountBetterGender</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1ab32b15614e2605a9de9730ff419f8676" prot="public" virt="non-virtual"><scope>metaheuristics::generators::MultiobjectiveTabuSearch</scope><name>getListCountGender</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1ae22ff41cdbe5f2f7cb370a03ed24c477" prot="public" virt="non-virtual"><scope>metaheuristics::generators::MultiobjectiveTabuSearch</scope><name>getReference</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a3ca25be7ef0c28d3ba6e26473972d887" prot="public" virt="non-virtual"><scope>metaheuristics::generators::MultiobjectiveTabuSearch</scope><name>getReferenceList</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a1c0f71e47e5f6b6e6669866ac8892f24" prot="public" virt="non-virtual"><scope>metaheuristics::generators::MultiobjectiveTabuSearch</scope><name>getSonList</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1ae279b2ed418314d15e6c56b842c20e23" prot="public" virt="non-virtual"><scope>metaheuristics::generators::MultiobjectiveTabuSearch</scope><name>getStateReferenceTS</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a0201b91c6b86834fcaee559a20a100e6" prot="public" virt="non-virtual"><scope>metaheuristics::generators::MultiobjectiveTabuSearch</scope><name>getTrace</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1ade7cc640bcb709edaa015682155aaac2" prot="public" virt="non-virtual"><scope>metaheuristics::generators::MultiobjectiveTabuSearch</scope><name>getType</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a6988226dc64befc6c8f6959085929efc" prot="public" virt="non-virtual"><scope>metaheuristics::generators::MultiobjectiveTabuSearch</scope><name>getTypeGenerator</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a646763accfdf08b677e0e41773747517" prot="public" virt="non-virtual"><scope>metaheuristics::generators::MultiobjectiveTabuSearch</scope><name>getWeight</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1aa71ff0be1f4f97b95dd7780c2b0b40be" prot="private" virt="non-virtual"><scope>metaheuristics::generators::MultiobjectiveTabuSearch</scope><name>ifacceptCandidate</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a9222859138dedf83000373b31f226829" prot="private" virt="non-virtual"><scope>metaheuristics::generators::MultiobjectiveTabuSearch</scope><name>listStateReference</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a5e668cca34188f2c6c03e2951fe0b100" prot="private" virt="non-virtual"><scope>metaheuristics::generators::MultiobjectiveTabuSearch</scope><name>listTrace</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a34d8bdaed4d57911bd7bde63157c8703" prot="public" virt="non-virtual"><scope>metaheuristics::generators::MultiobjectiveTabuSearch</scope><name>MultiobjectiveTabuSearch</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a6c25c3204b4e4fc62ae1fb0a5806a3ed" prot="public" virt="non-virtual"><scope>metaheuristics::generators::MultiobjectiveTabuSearch</scope><name>setInitialReference</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1af0e27b06643d94b9e37a7004af55a58a" prot="public" virt="non-virtual"><scope>metaheuristics::generators::MultiobjectiveTabuSearch</scope><name>setStateRef</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1acfded8b29215bc85064637d868cf3917" prot="public" virt="non-virtual"><scope>metaheuristics::generators::MultiobjectiveTabuSearch</scope><name>setStateReferenceTS</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a8f5e5b2afaea89a98a1a05a3b192d23c" prot="public" virt="non-virtual"><scope>metaheuristics::generators::MultiobjectiveTabuSearch</scope><name>setTypeCandidate</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a754ffcf3508a256e16fbf626048da0ce" prot="public" virt="non-virtual"><scope>metaheuristics::generators::MultiobjectiveTabuSearch</scope><name>setTypeGenerator</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a04e6d1cc450203864d6e022db854e3bb" prot="public" virt="non-virtual"><scope>metaheuristics::generators::MultiobjectiveTabuSearch</scope><name>setWeight</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1af0997147df854712548011b247a5f174" prot="private" virt="non-virtual"><scope>metaheuristics::generators::MultiobjectiveTabuSearch</scope><name>stateReferenceTS</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a048690a51992d1a585cb0c36064252f1" prot="private" virt="non-virtual"><scope>metaheuristics::generators::MultiobjectiveTabuSearch</scope><name>strategy</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a09c4a34396dafd514a3b43c86f368d0f" prot="private" virt="non-virtual"><scope>metaheuristics::generators::MultiobjectiveTabuSearch</scope><name>typeAcceptation</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a97da542e1d41a93fb2af3b9deee60fdc" prot="private" virt="non-virtual"><scope>metaheuristics::generators::MultiobjectiveTabuSearch</scope><name>typeCandidate</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1ab5623431c4358f5f3293c4c5e23a7992" prot="private" virt="non-virtual"><scope>metaheuristics::generators::MultiobjectiveTabuSearch</scope><name>typeGenerator</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a5e7f4e1f1fb436f2fb9c1770b90ee253" prot="public" virt="non-virtual"><scope>metaheuristics::generators::MultiobjectiveTabuSearch</scope><name>updateReference</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1aa4607bb225547e49d5202adfb63b0c9a" prot="private" virt="non-virtual"><scope>metaheuristics::generators::MultiobjectiveTabuSearch</scope><name>weight</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

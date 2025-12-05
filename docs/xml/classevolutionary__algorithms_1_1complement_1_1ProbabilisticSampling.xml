@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="es">
+  <compounddef id="classevolutionary__algorithms_1_1complement_1_1ProbabilisticSampling" kind="class" language="Java" prot="public">
+    <compoundname>evolutionary_algorithms::complement::ProbabilisticSampling</compoundname>
+    <basecompoundref refid="classevolutionary__algorithms_1_1complement_1_1Sampling" prot="public" virt="non-virtual">evolutionary_algorithms.complement.Sampling</basecompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classevolutionary__algorithms_1_1complement_1_1ProbabilisticSampling_1a985f07b42905655bfaffb59b10f3471e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+        <definition>List&lt; State &gt; evolutionary_algorithms.complement.ProbabilisticSampling.sampling</definition>
+        <argsstring>(List&lt; State &gt; fathers, int countInd)</argsstring>
+        <name>sampling</name>
+        <qualifiedname>evolutionary_algorithms.complement.ProbabilisticSampling.sampling</qualifiedname>
+        <reimplements refid="classevolutionary__algorithms_1_1complement_1_1Sampling_1a6e7058367ab7e7c4758bf37c61a75ba2">sampling</reimplements>
+        <param>
+          <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+          <declname>fathers</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>countInd</declname>
+        </param>
+        <briefdescription>
+<para>Uses ThreadLocalRandom for algorithmic (non-cryptographic) randomness. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This RNG is used for evolutionary algorithm operations (crossover point, selection between children, etc.) and is not used for security-sensitive purposes. Therefore we suppress the Sonar security hotspot S2245 here. sampling - applies probabilistic sampling to select individuals. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fathers</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>countInd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns a list of sampled individuals </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/evolutionary_algorithms/complement/ProbabilisticSampling.java" line="33" column="13" bodyfile="practica5/src/main/java/evolutionary_algorithms/complement/ProbabilisticSampling.java" bodystart="33" bodyend="87"/>
+        <references refid="classproblem_1_1definition_1_1Problem_1a7da2aa6b2a6f00f6f3993e6fdc43e34b" compoundref="Problem_8java" startline="114" endline="116">problem.definition.Problem.getCodification</references>
+        <references refid="classproblem_1_1definition_1_1Problem_1a9a98e419b1fbf5368f68c3894ef733c6" compoundref="Problem_8java" startline="149" endline="151">problem.definition.Problem.getPossibleValue</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1a4bc6bd95db71e14b1f48c1bfc85f1305" compoundref="Strategy_8java" startline="405" endline="407">metaheurictics.strategy.Strategy.getProblem</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1ad2641e12c52292930364de6655333aa8" compoundref="Strategy_8java" startline="80" endline="85">metaheurictics.strategy.Strategy.getStrategy</references>
+        <references refid="classproblem_1_1definition_1_1Codification_1a3fadfa69736eedaf89c53863dd6ddc6d">problem.definition.Codification.getVariableCount</references>
+        <references refid="classevolutionary__algorithms_1_1complement_1_1ProbabilisticSampling_1a034f2039f6c915edd8b074acaeca25b7" compoundref="ProbabilisticSampling_8java" startline="95" endline="105">evolutionary_algorithms.complement.ProbabilisticSampling.listState</references>
+      </memberdef>
+      <memberdef kind="function" id="classevolutionary__algorithms_1_1complement_1_1ProbabilisticSampling_1a034f2039f6c915edd8b074acaeca25b7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+        <definition>List&lt; State &gt; evolutionary_algorithms.complement.ProbabilisticSampling.listState</definition>
+        <argsstring>(int countInd)</argsstring>
+        <name>listState</name>
+        <qualifiedname>evolutionary_algorithms.complement.ProbabilisticSampling.listState</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>countInd</declname>
+        </param>
+        <briefdescription>
+<para>listState - initializes the list of individuals. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>countInd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/evolutionary_algorithms/complement/ProbabilisticSampling.java" line="95" column="13" bodyfile="practica5/src/main/java/evolutionary_algorithms/complement/ProbabilisticSampling.java" bodystart="95" bodyend="105"/>
+        <references refid="enummetaheuristics_1_1generators_1_1GeneratorType_1aad36814ee53c9a9c502a5fbe48e1d018" compoundref="GeneratorType_8java" startline="8">metaheuristics.generators.GeneratorType.DistributionEstimationAlgorithm</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1a6440afde976cb69c01b95d4c41a9ff5c" compoundref="Strategy_8java" startline="471" endline="473">metaheurictics.strategy.Strategy.getCountCurrent</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1ad2641e12c52292930364de6655333aa8" compoundref="Strategy_8java" startline="80" endline="85">metaheurictics.strategy.Strategy.getStrategy</references>
+        <references refid="classproblem_1_1definition_1_1State_1ab15765262a6e1cc7661c51cbcf0e7785" compoundref="State_8java" startline="77" endline="79">problem.definition.State.setCode</references>
+        <references refid="classproblem_1_1definition_1_1State_1ab802f63ab88415158f9c6cf468b6c8b3" compoundref="State_8java" startline="130" endline="132">problem.definition.State.setNumber</references>
+        <references refid="classproblem_1_1definition_1_1State_1afccaeac3af66cb772e2b3e70758b8fe6" compoundref="State_8java" startline="94" endline="96">problem.definition.State.setTypeGenerator</references>
+        <referencedby refid="classevolutionary__algorithms_1_1complement_1_1ProbabilisticSampling_1a985f07b42905655bfaffb59b10f3471e" compoundref="ProbabilisticSampling_8java" startline="33" endline="87">evolutionary_algorithms.complement.ProbabilisticSampling.sampling</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="classevolutionary__algorithms_1_1complement_1_1ProbabilisticSampling" kindref="compound">ProbabilisticSampling</ref> - applies probabilistic sampling to select individuals. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>evolutionary_algorithms.complement.ProbabilisticSampling</label>
+        <link refid="classevolutionary__algorithms_1_1complement_1_1ProbabilisticSampling"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>evolutionary_algorithms.complement.Sampling</label>
+        <link refid="classevolutionary__algorithms_1_1complement_1_1Sampling"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>evolutionary_algorithms.complement.ProbabilisticSampling</label>
+        <link refid="classevolutionary__algorithms_1_1complement_1_1ProbabilisticSampling"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>evolutionary_algorithms.complement.Sampling</label>
+        <link refid="classevolutionary__algorithms_1_1complement_1_1Sampling"/>
+      </node>
+    </collaborationgraph>
+    <location file="practica5/src/main/java/evolutionary_algorithms/complement/ProbabilisticSampling.java" line="17" column="7" bodyfile="practica5/src/main/java/evolutionary_algorithms/complement/ProbabilisticSampling.java" bodystart="17" bodyend="106"/>
+    <listofallmembers>
+      <member refid="classevolutionary__algorithms_1_1complement_1_1ProbabilisticSampling_1a034f2039f6c915edd8b074acaeca25b7" prot="public" virt="non-virtual"><scope>evolutionary_algorithms::complement::ProbabilisticSampling</scope><name>listState</name></member>
+      <member refid="classevolutionary__algorithms_1_1complement_1_1ProbabilisticSampling_1a985f07b42905655bfaffb59b10f3471e" prot="public" virt="non-virtual"><scope>evolutionary_algorithms::complement::ProbabilisticSampling</scope><name>sampling</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

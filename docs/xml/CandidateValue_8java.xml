@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="es">
+  <compounddef id="CandidateValue_8java" kind="file" language="Java">
+    <compoundname>CandidateValue.java</compoundname>
+    <includes local="no">java.lang.reflect.InvocationTargetException</includes>
+    <includes local="no">java.util.ArrayList</includes>
+    <includes local="no">java.util.List</includes>
+    <includes local="no">problem.definition.State</includes>
+    <includes local="no">local_search.complement.StrategyType</includes>
+    <includes local="no">local_search.complement.TabuSolutions</includes>
+    <includes local="no">metaheurictics.strategy.Strategy</includes>
+    <includes local="no">factory_interface.IFFactoryCandidate</includes>
+    <includes local="no">factory_method.FactoryCandidate</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>CandidateValue.java</label>
+        <link refid="CandidateValue_8java"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>factory_interface.IFFactoryCandidate</label>
+      </node>
+      <node id="10">
+        <label>factory_method.FactoryCandidate</label>
+      </node>
+      <node id="2">
+        <label>java.lang.reflect.InvocationTargetException</label>
+      </node>
+      <node id="3">
+        <label>java.util.ArrayList</label>
+      </node>
+      <node id="4">
+        <label>java.util.List</label>
+      </node>
+      <node id="6">
+        <label>local_search.complement.StrategyType</label>
+      </node>
+      <node id="7">
+        <label>local_search.complement.TabuSolutions</label>
+      </node>
+      <node id="8">
+        <label>metaheurictics.strategy.Strategy</label>
+      </node>
+      <node id="5">
+        <label>problem.definition.State</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classlocal__search_1_1candidate__type_1_1CandidateValue" prot="public">local_search::candidate_type::CandidateValue</innerclass>
+    <innernamespace refid="namespacelocal__search_1_1candidate__type">local_search::candidate_type</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">package<sp/></highlight><highlight class="normal">local_search.candidate_type;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>java.lang.reflect.InvocationTargetException;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>java.util.ArrayList;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>java.util.List;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>problem.definition.State;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>local_search.complement.StrategyType;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>local_search.complement.TabuSolutions;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>metaheurictics.strategy.Strategy;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//import<sp/>ceis.grial.problem.Problem;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>factory_interface.IFFactoryCandidate;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>factory_method.FactoryCandidate;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="classlocal__search_1_1candidate__type_1_1CandidateValue" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classlocal__search_1_1candidate__type_1_1CandidateValue_1a0b569242170a94ec76659efea622f402" kindref="member">CandidateValue</ref><sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="classlocal__search_1_1candidate__type_1_1CandidateValue_1a7ec51b9213b57e19f65fa0d7c24a2e67" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/><ref refid="interfacefactory__interface_1_1IFFactoryCandidate" kindref="compound">IFFactoryCandidate</ref><sp/><ref refid="classlocal__search_1_1candidate__type_1_1CandidateValue_1a7ec51b9213b57e19f65fa0d7c24a2e67" kindref="member">ifFactory</ref>;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>strategy<sp/>and<sp/>typecand<sp/>fields<sp/>were<sp/>unused;<sp/>removed<sp/>to<sp/>avoid<sp/>SpotBugs<sp/>unread-field<sp/>warnings.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="classlocal__search_1_1candidate__type_1_1CandidateValue_1a050cc90f7786e4825e7ca09e20492ebb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/><ref refid="classlocal__search_1_1complement_1_1TabuSolutions" kindref="compound">TabuSolutions</ref><sp/><ref refid="classlocal__search_1_1candidate__type_1_1CandidateValue_1a050cc90f7786e4825e7ca09e20492ebb" kindref="member">tabusolution</ref>;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="classlocal__search_1_1candidate__type_1_1CandidateValue_1a7b05c8a6d8af9170fc422b78c9af5b64" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/><ref refid="classlocal__search_1_1candidate__type_1_1SearchCandidate" kindref="compound">SearchCandidate</ref><sp/><ref refid="classlocal__search_1_1candidate__type_1_1CandidateValue_1a7b05c8a6d8af9170fc422b78c9af5b64" kindref="member">searchcandidate</ref>;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="classlocal__search_1_1candidate__type_1_1CandidateValue_1a0b569242170a94ec76659efea622f402" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classlocal__search_1_1candidate__type_1_1CandidateValue_1a0b569242170a94ec76659efea622f402" kindref="member">CandidateValue</ref>(){}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Keep<sp/>a<sp/>no-arg<sp/>constructor;<sp/>parameterized<sp/>constructor<sp/>was<sp/>removed<sp/>because<sp/>its<sp/>fields<sp/>were<sp/>unused.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="classlocal__search_1_1candidate__type_1_1CandidateValue_1ab02441a95d5abedea3a2c82bf9c5d457" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classlocal__search_1_1candidate__type_1_1SearchCandidate" kindref="compound">SearchCandidate</ref><sp/><ref refid="classlocal__search_1_1candidate__type_1_1CandidateValue_1ab02441a95d5abedea3a2c82bf9c5d457" kindref="member">newSearchCandidate</ref>(<ref refid="enumlocal__search_1_1candidate__type_1_1CandidateType" kindref="compound">CandidateType</ref><sp/>typecandidate)<sp/></highlight><highlight class="keywordflow">throws</highlight><highlight class="normal"><sp/>IllegalArgumentException,<sp/>SecurityException,<sp/>ClassNotFoundException,<sp/>InstantiationException,<sp/>IllegalAccessException,<sp/>InvocationTargetException,<sp/>NoSuchMethodException<sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classlocal__search_1_1candidate__type_1_1CandidateValue_1a7ec51b9213b57e19f65fa0d7c24a2e67" kindref="member">ifFactory</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classfactory__method_1_1FactoryCandidate" kindref="compound">FactoryCandidate</ref>();</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classlocal__search_1_1candidate__type_1_1CandidateValue_1a7b05c8a6d8af9170fc422b78c9af5b64" kindref="member">searchcandidate</ref><sp/>=<sp/><ref refid="classlocal__search_1_1candidate__type_1_1CandidateValue_1a7ec51b9213b57e19f65fa0d7c24a2e67" kindref="member">ifFactory</ref>.createSearchCandidate(typecandidate);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classlocal__search_1_1candidate__type_1_1CandidateValue_1a7b05c8a6d8af9170fc422b78c9af5b64" kindref="member">searchcandidate</ref>;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="classlocal__search_1_1candidate__type_1_1CandidateValue_1a77505d8ed443552afa435f51d0222d75" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref><sp/><ref refid="classlocal__search_1_1candidate__type_1_1CandidateValue_1a77505d8ed443552afa435f51d0222d75" kindref="member">stateCandidate</ref>(<ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref><sp/>stateCurrent,<sp/><ref refid="enumlocal__search_1_1candidate__type_1_1CandidateType" kindref="compound">CandidateType</ref><sp/>typeCandidate,<sp/><ref refid="enumlocal__search_1_1complement_1_1StrategyType" kindref="compound">StrategyType</ref><sp/>strategy,<sp/>Integer<sp/>operatornumber,<sp/>List&lt;State&gt;<sp/>neighborhood)<sp/></highlight><highlight class="keywordflow">throws</highlight><highlight class="normal"><sp/>IllegalArgumentException,<sp/>SecurityException,<sp/>ClassNotFoundException,<sp/>InstantiationException,<sp/>IllegalAccessException,<sp/>InvocationTargetException,<sp/>NoSuchMethodException{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Problem<sp/>problem<sp/>=<sp/>ExecuteGenerator.getExecuteGenerator().getProblem();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref><sp/><ref refid="classlocal__search_1_1candidate__type_1_1CandidateValue_1a77505d8ed443552afa435f51d0222d75" kindref="member">stateCandidate</ref>;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>List&lt;State&gt;<sp/>auxList<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>ArrayList&lt;State&gt;();</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>neighborhood.size();<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>auxList.add(neighborhood.get(i));</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.tabusolution<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classlocal__search_1_1complement_1_1TabuSolutions" kindref="compound">TabuSolutions</ref>();</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(strategy.equals(<ref refid="enumlocal__search_1_1complement_1_1StrategyType" kindref="compound">StrategyType</ref>.<ref refid="enumlocal__search_1_1complement_1_1StrategyType_1ac0c34198bb10ffedf05b8be68f72c170" kindref="member">TABU</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>auxList<sp/>=<sp/>this.tabusolution.<ref refid="classlocal__search_1_1complement_1_1TabuSolutions_1abe7521e1b6c8ca96a3a6b5b63cd08c48" kindref="member">filterNeighborhood</ref>(auxList);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal"><sp/>(Exception<sp/>e)<sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmetaheurictics_1_1strategy_1_1Strategy" kindref="compound">Strategy</ref><sp/>strategys<sp/>=<sp/><ref refid="classmetaheurictics_1_1strategy_1_1Strategy" kindref="compound">Strategy</ref>.<ref refid="classmetaheurictics_1_1strategy_1_1Strategy_1ad2641e12c52292930364de6655333aa8" kindref="member">getStrategy</ref>();</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(strategys.<ref refid="classmetaheurictics_1_1strategy_1_1Strategy_1a4bc6bd95db71e14b1f48c1bfc85f1305" kindref="member">getProblem</ref>()!=</highlight><highlight class="keyword">null</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>neighborhood<sp/>=<sp/>strategys.<ref refid="classmetaheurictics_1_1strategy_1_1Strategy_1a4bc6bd95db71e14b1f48c1bfc85f1305" kindref="member">getProblem</ref>().<ref refid="classproblem_1_1definition_1_1Problem_1a4cd649edb8862f21af171491cb9b9386" kindref="member">getOperator</ref>().<ref refid="classproblem_1_1definition_1_1Operator_1a5b6625843e73d938f9235985bf966b34" kindref="member">generatedNewState</ref>(neighborhood.get(0),<sp/>operatornumber);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classlocal__search_1_1candidate__type_1_1CandidateValue_1a77505d8ed443552afa435f51d0222d75" kindref="member">stateCandidate</ref>(stateCurrent,<sp/>typeCandidate,<sp/>strategy,<sp/>operatornumber,<sp/>neighborhood);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classlocal__search_1_1candidate__type_1_1SearchCandidate" kindref="compound">SearchCandidate</ref><sp/>searchCand<sp/>=<sp/><ref refid="classlocal__search_1_1candidate__type_1_1CandidateValue_1ab02441a95d5abedea3a2c82bf9c5d457" kindref="member">newSearchCandidate</ref>(typeCandidate);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classlocal__search_1_1candidate__type_1_1CandidateValue_1a77505d8ed443552afa435f51d0222d75" kindref="member">stateCandidate</ref><sp/>=<sp/>searchCand.<ref refid="classlocal__search_1_1candidate__type_1_1SearchCandidate_1a0f10adc1526fb08f54427c50734f8abf" kindref="member">stateSearch</ref>(auxList);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classlocal__search_1_1candidate__type_1_1CandidateValue_1a77505d8ed443552afa435f51d0222d75" kindref="member">stateCandidate</ref>;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104" refid="classlocal__search_1_1candidate__type_1_1CandidateValue_1ae334fe4b4bc2211c5120d905d3114762" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classlocal__search_1_1complement_1_1TabuSolutions" kindref="compound">TabuSolutions</ref><sp/><ref refid="classlocal__search_1_1candidate__type_1_1CandidateValue_1ae334fe4b4bc2211c5120d905d3114762" kindref="member">getTabusolution</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classlocal__search_1_1candidate__type_1_1CandidateValue_1a050cc90f7786e4825e7ca09e20492ebb" kindref="member">tabusolution</ref>;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113" refid="classlocal__search_1_1candidate__type_1_1CandidateValue_1a142eb7bff2e5f3312d0277152f803d1a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classlocal__search_1_1candidate__type_1_1CandidateValue_1a142eb7bff2e5f3312d0277152f803d1a" kindref="member">setTabusolution</ref>(<ref refid="classlocal__search_1_1complement_1_1TabuSolutions" kindref="compound">TabuSolutions</ref><sp/><ref refid="classlocal__search_1_1candidate__type_1_1CandidateValue_1a050cc90f7786e4825e7ca09e20492ebb" kindref="member">tabusolution</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.tabusolution<sp/>=<sp/><ref refid="classlocal__search_1_1candidate__type_1_1CandidateValue_1a050cc90f7786e4825e7ca09e20492ebb" kindref="member">tabusolution</ref>;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="practica5/src/main/java/local_search/candidate_type/CandidateValue.java"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,118 @@
+\doxysection{Referencia de la clase local\+\_\+search.\+acceptation\+\_\+type.\+Accept\+Not\+Dominated}
+\hypertarget{classlocal__search_1_1acceptation__type_1_1AcceptNotDominated}{}\label{classlocal__search_1_1acceptation__type_1_1AcceptNotDominated}\index{local\_search.acceptation\_type.AcceptNotDominated@{local\_search.acceptation\_type.AcceptNotDominated}}
+
+
+\doxylink{classlocal__search_1_1acceptation__type_1_1AcceptNotDominated}{Accept\+Not\+Dominated} -\/ Accept candidate if it is not dominated by current non-\/dominated set.  
+
+
+
+
+Diagrama de herencia de local\+\_\+search.\+acceptation\+\_\+type.\+Accept\+Not\+Dominated
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=225pt]{classlocal__search_1_1acceptation__type_1_1AcceptNotDominated__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagrama de colaboración de local\+\_\+search.\+acceptation\+\_\+type.\+Accept\+Not\+Dominated\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=225pt]{classlocal__search_1_1acceptation__type_1_1AcceptNotDominated__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+Boolean \mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1AcceptNotDominated_a05fe7b0385dfafe7701f6a4e9b2b80d2}{accept\+Candidate}} (\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} state\+Current, \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} state\+Candidate)
+\begin{DoxyCompactList}\small\item\em Evaluate and accept a candidate based on Pareto dominance against the stored set of non-\/dominated solutions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+\doxylink{classlocal__search_1_1acceptation__type_1_1AcceptNotDominated}{Accept\+Not\+Dominated} -\/ Accept candidate if it is not dominated by current non-\/dominated set. 
+
+Multi-\/objective acceptation strategy that updates and consults a Pareto front (list\+Ref\+Poblac\+Final) to decide acceptance. 
+
+Definición en la línea \mbox{\hyperlink{AcceptNotDominated_8java_source_l00016}{16}} del archivo \mbox{\hyperlink{AcceptNotDominated_8java_source}{Accept\+Not\+Dominated.\+java}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{classlocal__search_1_1acceptation__type_1_1AcceptNotDominated_doc-func-members}
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{classlocal__search_1_1acceptation__type_1_1AcceptNotDominated_a05fe7b0385dfafe7701f6a4e9b2b80d2}\index{local\_search.acceptation\_type.AcceptNotDominated@{local\_search.acceptation\_type.AcceptNotDominated}!acceptCandidate@{acceptCandidate}}
+\index{acceptCandidate@{acceptCandidate}!local\_search.acceptation\_type.AcceptNotDominated@{local\_search.acceptation\_type.AcceptNotDominated}}
+\doxysubsubsection{\texorpdfstring{acceptCandidate()}{acceptCandidate()}}
+{\footnotesize\ttfamily \label{classlocal__search_1_1acceptation__type_1_1AcceptNotDominated_a05fe7b0385dfafe7701f6a4e9b2b80d2} 
+Boolean local\+\_\+search.\+acceptation\+\_\+type.\+Accept\+Not\+Dominated.\+accept\+Candidate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}}]{state\+Current}{, }\item[{\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}}]{state\+Candidate}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Evaluate and accept a candidate based on Pareto dominance against the stored set of non-\/dominated solutions. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em state\+Current} & the current state \\
+\hline
+{\em state\+Candidate} & the candidate state \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+true if candidate should be accepted (becomes part of Pareto set), false otherwise 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1AcceptableCandidate_aa9e62e1d2d213c3828d2491b506d0592}{local\+\_\+search.\+acceptation\+\_\+type.\+Acceptable\+Candidate}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{AcceptNotDominated_8java_source_l00028}{28}} del archivo \mbox{\hyperlink{AcceptNotDominated_8java_source}{Accept\+Not\+Dominated.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ Boolean\ accept\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ Dominance\ dominace\ =\ \textcolor{keyword}{new}\ Dominance();}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(Strategy.getStrategy().listRefPoblacFinal.size()\ ==\ 0)\{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ Strategy.getStrategy().listRefPoblacFinal.add(stateCurrent.clone());}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(dominace.dominance(stateCurrent,\ stateCandidate)==\ \textcolor{keyword}{false})}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Verificando\ si\ la\ solución\ candidata\ domina\ a\ alguna\ de\ las\ soluciones\ de\ la\ lista\ de\ soluciones\ no\ dominadas}}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//De\ ser\ asi\ se\ eliminan\ de\ la\ lista\ y\ se\ adiciona\ la\ nueva\ solución\ en\ la\ lista}}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//De\ lo\ contrario\ no\ se\ adiciona\ la\ solución\ candidata\ a\ la\ lista}}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Si\ fue\ insertada\ en\ la\ lista\ entonces\ la\ solución\ candidata\ se\ convierte\ en\ solución\ actual}}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(dominace.listDominance(stateCandidate,\ Strategy.getStrategy().listRefPoblacFinal)\ ==\ \textcolor{keyword}{true})\{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Se\ pone\ la\ solución\ candidata\ como\ solución\ actual}}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ accept\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ accept\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ accept;}
+\DoxyCodeLine{00050\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{State_8java_source_l00142}{problem.\+definition.\+State.\+clone()}}, \mbox{\hyperlink{Dominance_8java_source_l00087}{local\+\_\+search.\+acceptation\+\_\+type.\+Dominance.\+dominance()}}, \mbox{\hyperlink{Strategy_8java_source_l00080}{metaheurictics.\+strategy.\+Strategy.\+get\+Strategy()}}, \mbox{\hyperlink{Dominance_8java_source_l00033}{local\+\_\+search.\+acceptation\+\_\+type.\+Dominance.\+list\+Dominance()}} y \mbox{\hyperlink{Strategy_8java_source_l00049}{metaheurictics.\+strategy.\+Strategy.\+list\+Ref\+Poblac\+Final}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlocal__search_1_1acceptation__type_1_1AcceptNotDominated_a05fe7b0385dfafe7701f6a4e9b2b80d2_cgraph}
+\end{center}
+\end{figure}
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{AcceptNotDominated_8java}{Accept\+Not\+Dominated.\+java}}\end{DoxyCompactItemize}

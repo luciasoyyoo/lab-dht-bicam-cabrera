@@ -1,0 +1,272 @@
+\doxysection{Referencia de la clase local\+\_\+search.\+acceptation\+\_\+type.\+Accept\+Multicase}
+\hypertarget{classlocal__search_1_1acceptation__type_1_1AcceptMulticase}{}\label{classlocal__search_1_1acceptation__type_1_1AcceptMulticase}\index{local\_search.acceptation\_type.AcceptMulticase@{local\_search.acceptation\_type.AcceptMulticase}}
+
+
+\doxylink{classlocal__search_1_1acceptation__type_1_1AcceptMulticase}{Accept\+Multicase} -\/ Multi-\/case acceptation strategy for multiobjective algorithms.  
+
+
+
+
+Diagrama de herencia de local\+\_\+search.\+acceptation\+\_\+type.\+Accept\+Multicase
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{classlocal__search_1_1acceptation__type_1_1AcceptMulticase__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagrama de colaboración de local\+\_\+search.\+acceptation\+\_\+type.\+Accept\+Multicase\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{classlocal__search_1_1acceptation__type_1_1AcceptMulticase__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+Boolean \mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1AcceptMulticase_a526e452510b7eebe59af4dde0c59b337}{accept\+Candidate}} (\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} state\+Current, \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} state\+Candidate)
+\begin{DoxyCompactList}\small\item\em Uses Thread\+Local\+Random for algorithmic (non-\/cryptographic) randomness. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Métodos privados}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1AcceptMulticase_a054b2c0dc802d3ac4e003b4bd763b48f}{dominance\+Counter}} (\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} state\+Candidate, List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ list)
+\item 
+int \mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1AcceptMulticase_a9f30e2b41f460cc8992f1e33136a14cc}{dominance\+Rank}} (\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} state\+Candidate, List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ list)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+\doxylink{classlocal__search_1_1acceptation__type_1_1AcceptMulticase}{Accept\+Multicase} -\/ Multi-\/case acceptation strategy for multiobjective algorithms. 
+
+Decides whether to accept a candidate state based on dominance, rank and simulated annealing like probabilities. 
+
+Definición en la línea \mbox{\hyperlink{AcceptMulticase_8java_source_l00017}{17}} del archivo \mbox{\hyperlink{AcceptMulticase_8java_source}{Accept\+Multicase.\+java}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{classlocal__search_1_1acceptation__type_1_1AcceptMulticase_doc-func-members}
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{classlocal__search_1_1acceptation__type_1_1AcceptMulticase_a526e452510b7eebe59af4dde0c59b337}\index{local\_search.acceptation\_type.AcceptMulticase@{local\_search.acceptation\_type.AcceptMulticase}!acceptCandidate@{acceptCandidate}}
+\index{acceptCandidate@{acceptCandidate}!local\_search.acceptation\_type.AcceptMulticase@{local\_search.acceptation\_type.AcceptMulticase}}
+\doxysubsubsection{\texorpdfstring{acceptCandidate()}{acceptCandidate()}}
+{\footnotesize\ttfamily \label{classlocal__search_1_1acceptation__type_1_1AcceptMulticase_a526e452510b7eebe59af4dde0c59b337} 
+Boolean local\+\_\+search.\+acceptation\+\_\+type.\+Accept\+Multicase.\+accept\+Candidate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}}]{state\+Current}{, }\item[{\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}}]{state\+Candidate}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Uses Thread\+Local\+Random for algorithmic (non-\/cryptographic) randomness. 
+
+This RNG is used to decide whether a mutation occurs in the evolutionary algorithm and is not used for security-\/sensitive purposes. Suppress Sonar security hotspot S2245 for this usage. Evaluate a candidate for acceptance using dominance, rank and probabilistic criteria.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em state\+Current} & the current state \\
+\hline
+{\em state\+Candidate} & the candidate state \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+true if the candidate should be accepted, false otherwise 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1AcceptableCandidate_aa9e62e1d2d213c3828d2491b506d0592}{local\+\_\+search.\+acceptation\+\_\+type.\+Acceptable\+Candidate}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{AcceptMulticase_8java_source_l00034}{34}} del archivo \mbox{\hyperlink{AcceptMulticase_8java_source}{Accept\+Multicase.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ Boolean\ accept\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ List<State>\ list\ =\ Strategy.getStrategy().listRefPoblacFinal;}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(list.size()\ ==\ 0)\{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ list.add(stateCurrent.\mbox{\hyperlink{classproblem_1_1definition_1_1State_a113f6883a1f6bd20eea2da09a0adc5c3}{clone}}());}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00042\ \ \ \ \ Double\ T\ =\ MultiCaseSimulatedAnnealing.getTinitial();}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ pAccept\ =\ 0;}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{comment}{//\ use\ ThreadLocalRandom\ to\ avoid\ creating\ a\ new\ Random\ instance\ on\ each\ call}}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ Dominance\ dominance=\ \textcolor{keyword}{new}\ Dominance();}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Verificando\ si\ la\ soluci{\ucr}n\ candidata\ domina\ a\ la\ soluci{\ucr}n\ actual}}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Si\ la\ soluci{\ucr}n\ candidata\ domina\ a\ la\ soluci{\ucr}n\ actual}}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(dominance.\mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1Dominance_a0dafd58be8365a22956f59417841a2d8}{dominance}}(stateCandidate,\ stateCurrent)\ ==\ \textcolor{keyword}{true})\{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Se\ asigna\ como\ soluci{\ucr}n\ actual\ la\ soluci{\ucr}n\ candidata\ con\ probabilidad\ 1}}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ pAccept\ =\ 1;\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(dominance.\mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1Dominance_a0dafd58be8365a22956f59417841a2d8}{dominance}}(stateCandidate,\ stateCurrent)==\ \textcolor{keyword}{false})\{\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(dominanceCounter(stateCandidate,\ list)\ >\ 0)\{}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pAccept\ =\ 1;}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(dominanceRank(stateCandidate,\ list)\ ==\ 0)\{}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pAccept\ =\ 1;}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(dominanceRank(stateCandidate,\ list)\ <\ dominanceRank(stateCurrent,\ list))\{}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pAccept\ =\ 1;}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(dominanceRank(stateCandidate,\ list)\ ==\ dominanceRank(stateCurrent,\ list))\{}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Calculando\ la\ probabilidad\ de\ aceptaci{\ucr}n}}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ List<Double>\ evaluations\ =\ stateCurrent.\mbox{\hyperlink{classproblem_1_1definition_1_1State_a226ea6fab8e7060cf131edfdb245a6fa}{getEvaluation}}();}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ total\ =\ 0;}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ evaluations.size()-\/1;\ i++)\ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Double\ evalA\ =\ evaluations.get(i);}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Double\ evalB\ =\ stateCandidate.\mbox{\hyperlink{classproblem_1_1definition_1_1State_a226ea6fab8e7060cf131edfdb245a6fa}{getEvaluation}}().get(i);}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (evalA\ !=\ 0\ \&\&\ evalB\ !=\ 0)\ \{}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ total\ +=\ (evalA\ -\/\ evalB)/((evalA\ +\ evalB)/2);}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \ \ }
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pAccept\ =\ Math.exp(-\/(1-\/total)/T);}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (dominanceRank(stateCandidate,\ list)\ >\ dominanceRank(stateCurrent,\ list)\ \&\&\ dominanceRank(stateCurrent,\ list)!=\ 0)\{}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ avoid\ integer\ division\ -\/>\ compute\ ranks\ once\ and\ use\ floating\ point\ division}}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ rankCandidate\ =\ dominanceRank(stateCandidate,\ list);}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ rankCurrent\ =\ dominanceRank(stateCurrent,\ list);}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ value\ =\ (rankCurrent\ ==\ 0)\ ?\ 0f\ :\ ((float)\ rankCandidate)\ /\ ((float)\ rankCurrent);}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pAccept\ =\ Math.exp(-\/((\textcolor{keywordtype}{double})value+1.0)/T);}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Calculando\ la\ probabilidad\ de\ aceptaci{\ucr}n}}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ List<Double>\ evaluations\ =\ stateCurrent.\mbox{\hyperlink{classproblem_1_1definition_1_1State_a226ea6fab8e7060cf131edfdb245a6fa}{getEvaluation}}();}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ total\ =\ 0;}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ evaluations.size()-\/1;\ i++)\ \{}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Double\ evalA\ =\ evaluations.get(i);}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Double\ evalB\ =\ stateCandidate.\mbox{\hyperlink{classproblem_1_1definition_1_1State_a226ea6fab8e7060cf131edfdb245a6fa}{getEvaluation}}().get(i);}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (evalA\ !=\ 0\ \&\&\ evalB\ !=\ 0)\ \{}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ total\ +=\ (evalA\ -\/\ evalB)/((evalA\ +\ evalB)/2);}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pAccept\ =\ Math.exp(-\/(1-\/total)/T);}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Generar\ un\ n{\ucr}mero\ aleatorio}}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}((ThreadLocalRandom.current().nextFloat())\ <\ pAccept)\{}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Don't\ assign\ to\ the\ parameter\ reference\ (dead\ store).\ The\ caller\ should\ handle\ state\ updates.}}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Verificando\ que\ la\ soluci{\ucr}n\ candidata\ domina\ a\ alguna\ de\ las\ soluciones}}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ accept\ =\ dominance.\mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1Dominance_ad61c0e3cb6cc4036419cb36758cf3814}{listDominance}}(stateCandidate,\ list);}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ accept;}
+\DoxyCodeLine{00103\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{State_8java_source_l00142}{problem.\+definition.\+State.\+clone()}}, \mbox{\hyperlink{Dominance_8java_source_l00087}{local\+\_\+search.\+acceptation\+\_\+type.\+Dominance.\+dominance()}}, \mbox{\hyperlink{AcceptMulticase_8java_source_l00106}{dominance\+Counter()}}, \mbox{\hyperlink{AcceptMulticase_8java_source_l00117}{dominance\+Rank()}}, \mbox{\hyperlink{State_8java_source_l00104}{problem.\+definition.\+State.\+get\+Evaluation()}}, \mbox{\hyperlink{Strategy_8java_source_l00080}{metaheurictics.\+strategy.\+Strategy.\+get\+Strategy()}}, \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00059}{metaheuristics.\+generators.\+Multi\+Case\+Simulated\+Annealing.\+get\+Tinitial()}}, \mbox{\hyperlink{Dominance_8java_source_l00033}{local\+\_\+search.\+acceptation\+\_\+type.\+Dominance.\+list\+Dominance()}} y \mbox{\hyperlink{Strategy_8java_source_l00049}{metaheurictics.\+strategy.\+Strategy.\+list\+Ref\+Poblac\+Final}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlocal__search_1_1acceptation__type_1_1AcceptMulticase_a526e452510b7eebe59af4dde0c59b337_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classlocal__search_1_1acceptation__type_1_1AcceptMulticase_a054b2c0dc802d3ac4e003b4bd763b48f}\index{local\_search.acceptation\_type.AcceptMulticase@{local\_search.acceptation\_type.AcceptMulticase}!dominanceCounter@{dominanceCounter}}
+\index{dominanceCounter@{dominanceCounter}!local\_search.acceptation\_type.AcceptMulticase@{local\_search.acceptation\_type.AcceptMulticase}}
+\doxysubsubsection{\texorpdfstring{dominanceCounter()}{dominanceCounter()}}
+{\footnotesize\ttfamily \label{classlocal__search_1_1acceptation__type_1_1AcceptMulticase_a054b2c0dc802d3ac4e003b4bd763b48f} 
+int local\+\_\+search.\+acceptation\+\_\+type.\+Accept\+Multicase.\+dominance\+Counter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}}]{state\+Candidate}{, }\item[{List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$}]{list}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{AcceptMulticase_8java_source_l00106}{106}} del archivo \mbox{\hyperlink{AcceptMulticase_8java_source}{Accept\+Multicase.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \textcolor{comment}{//chequea\ el\ n{\ucr}mero\ de\ soluciones\ de\ Pareto\ que\ son\ dominados\ por\ la\ nueva\ soluci{\ucr}n}}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ counter\ =\ 0;}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ list.size();\ i++)\ \{}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ State\ solution\ =\ list.get(i);}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ Dominance\ dominance\ =\ \textcolor{keyword}{new}\ Dominance();}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(dominance.\mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1Dominance_a0dafd58be8365a22956f59417841a2d8}{dominance}}(stateCandidate,\ solution)\ ==\ \textcolor{keyword}{true})}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ counter++;}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ counter;}
+\DoxyCodeLine{00115\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{Dominance_8java_source_l00087}{local\+\_\+search.\+acceptation\+\_\+type.\+Dominance.\+dominance()}}.
+
+
+
+Referenciado por \mbox{\hyperlink{AcceptMulticase_8java_source_l00034}{accept\+Candidate()}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlocal__search_1_1acceptation__type_1_1AcceptMulticase_a054b2c0dc802d3ac4e003b4bd763b48f_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlocal__search_1_1acceptation__type_1_1AcceptMulticase_a054b2c0dc802d3ac4e003b4bd763b48f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classlocal__search_1_1acceptation__type_1_1AcceptMulticase_a9f30e2b41f460cc8992f1e33136a14cc}\index{local\_search.acceptation\_type.AcceptMulticase@{local\_search.acceptation\_type.AcceptMulticase}!dominanceRank@{dominanceRank}}
+\index{dominanceRank@{dominanceRank}!local\_search.acceptation\_type.AcceptMulticase@{local\_search.acceptation\_type.AcceptMulticase}}
+\doxysubsubsection{\texorpdfstring{dominanceRank()}{dominanceRank()}}
+{\footnotesize\ttfamily \label{classlocal__search_1_1acceptation__type_1_1AcceptMulticase_a9f30e2b41f460cc8992f1e33136a14cc} 
+int local\+\_\+search.\+acceptation\+\_\+type.\+Accept\+Multicase.\+dominance\+Rank (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}}]{state\+Candidate}{, }\item[{List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$}]{list}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{AcceptMulticase_8java_source_l00117}{117}} del archivo \mbox{\hyperlink{AcceptMulticase_8java_source}{Accept\+Multicase.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \textcolor{comment}{//calculando\ el\ n{\ucr}mero\ de\ soluciones\ en\ el\ conjunto\ de\ Pareto\ que\ dominan\ a\ la\ soluci{\ucr}n}}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ rank\ =\ 0;}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ list.size();\ i++)\ \{}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ State\ solution\ =\ list.get(i);}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ Dominance\ dominance\ =\ \textcolor{keyword}{new}\ Dominance();}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(dominance.\mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1Dominance_a0dafd58be8365a22956f59417841a2d8}{dominance}}(solution,\ stateCandidate)\ ==\ \textcolor{keyword}{true})\{}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ rank++;}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ rank;}
+\DoxyCodeLine{00128\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{Dominance_8java_source_l00087}{local\+\_\+search.\+acceptation\+\_\+type.\+Dominance.\+dominance()}}.
+
+
+
+Referenciado por \mbox{\hyperlink{AcceptMulticase_8java_source_l00034}{accept\+Candidate()}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlocal__search_1_1acceptation__type_1_1AcceptMulticase_a9f30e2b41f460cc8992f1e33136a14cc_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlocal__search_1_1acceptation__type_1_1AcceptMulticase_a9f30e2b41f460cc8992f1e33136a14cc_icgraph}
+\end{center}
+\end{figure}
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{AcceptMulticase_8java}{Accept\+Multicase.\+java}}\end{DoxyCompactItemize}

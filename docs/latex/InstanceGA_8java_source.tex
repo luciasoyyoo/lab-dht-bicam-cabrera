@@ -1,0 +1,48 @@
+\doxysection{Instance\+GA.\+java}
+\hypertarget{InstanceGA_8java_source}{}\label{InstanceGA_8java_source}\index{InstanceGA.java@{InstanceGA.java}}
+\mbox{\hyperlink{InstanceGA_8java}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{InstanceGA_8java_source_l00001}00001\ \textcolor{keyword}{package\ }metaheuristics.generators;}
+\DoxyCodeLine{\Hypertarget{InstanceGA_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{InstanceGA_8java_source_l00003}00003\ \textcolor{keyword}{import}\ factory\_method.FactoryGenerator;}
+\DoxyCodeLine{\Hypertarget{InstanceGA_8java_source_l00004}00004\ \textcolor{keyword}{import}\ java.util.logging.Level;}
+\DoxyCodeLine{\Hypertarget{InstanceGA_8java_source_l00005}00005\ \textcolor{keyword}{import}\ java.util.logging.Logger;}
+\DoxyCodeLine{\Hypertarget{InstanceGA_8java_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{InstanceGA_8java_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{InstanceGA_8java_source_l00012}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1InstanceGA}{00012}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1InstanceGA}{InstanceGA}}\ \textcolor{keyword}{implements}\ Runnable\ \{}
+\DoxyCodeLine{\Hypertarget{InstanceGA_8java_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{InstanceGA_8java_source_l00014}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1InstanceGA_ad0cf2f76b10b567ac5488c48109e1b85}{00014}}\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keyword}{final}\ Logger\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1InstanceGA_ad0cf2f76b10b567ac5488c48109e1b85}{LOGGER}}\ =\ Logger.getLogger(\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1InstanceGA}{InstanceGA}}.class.getName());}
+\DoxyCodeLine{\Hypertarget{InstanceGA_8java_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{InstanceGA_8java_source_l00016}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1InstanceGA_a856cb58f0cd8975905dcf5f60b50b110}{00016}}\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{boolean}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1InstanceGA_a856cb58f0cd8975905dcf5f60b50b110}{terminate}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{InstanceGA_8java_source_l00017}00017\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{InstanceGA_8java_source_l00021}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1InstanceGA_aefa3b4de3be77d579e499fbd6a6f5761}{00021}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1InstanceGA_aefa3b4de3be77d579e499fbd6a6f5761}{run}}()\ \{}
+\DoxyCodeLine{\Hypertarget{InstanceGA_8java_source_l00022}00022\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classfactory__method_1_1FactoryGenerator}{FactoryGenerator}}\ ifFactoryGenerator\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classfactory__method_1_1FactoryGenerator}{FactoryGenerator}}();}
+\DoxyCodeLine{\Hypertarget{InstanceGA_8java_source_l00023}00023\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator}{Generator}}\ generatorGA\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{InstanceGA_8java_source_l00024}00024\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\Hypertarget{InstanceGA_8java_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ generatorGA\ =\ ifFactoryGenerator.\mbox{\hyperlink{classfactory__method_1_1FactoryGenerator_a76c269b114cbf643e92a7467b7cf21f7}{createGenerator}}(\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{GeneratorType}}.\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType_aa7d0ed047362b79a1bbe2a29837ddbe3}{GeneticAlgorithm}});}
+\DoxyCodeLine{\Hypertarget{InstanceGA_8java_source_l00026}00026\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (Exception\ e)\ \{}
+\DoxyCodeLine{\Hypertarget{InstanceGA_8java_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1InstanceGA_ad0cf2f76b10b567ac5488c48109e1b85}{LOGGER}}.log(Level.SEVERE,\ \textcolor{stringliteral}{"{}Failed\ to\ create\ GeneticAlgorithm\ generator"{}},\ e);}
+\DoxyCodeLine{\Hypertarget{InstanceGA_8java_source_l00028}00028\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{InstanceGA_8java_source_l00029}00029\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{boolean}\ find\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{InstanceGA_8java_source_l00030}00030\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ i\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{InstanceGA_8java_source_l00031}00031\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (find\ ==\ \textcolor{keyword}{false})\ \{}
+\DoxyCodeLine{\Hypertarget{InstanceGA_8java_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiGenerator}{MultiGenerator}}.\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiGenerator_ab331905baebb433340e05d19e174340b}{getListGenerators}}()[i].\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a5a123306b43c42d28cd1d6e17f8067a5}{getType}}().equals(\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{GeneratorType}}.\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType_aa7d0ed047362b79a1bbe2a29837ddbe3}{GeneticAlgorithm}}))\{}
+\DoxyCodeLine{\Hypertarget{InstanceGA_8java_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiGenerator}{MultiGenerator}}.\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiGenerator_ab331905baebb433340e05d19e174340b}{getListGenerators}}()[i]\ =\ generatorGA;}
+\DoxyCodeLine{\Hypertarget{InstanceGA_8java_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ find\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{InstanceGA_8java_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{InstanceGA_8java_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ i++;}
+\DoxyCodeLine{\Hypertarget{InstanceGA_8java_source_l00037}00037\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{InstanceGA_8java_source_l00038}00038\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1InstanceGA_a856cb58f0cd8975905dcf5f60b50b110}{terminate}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{InstanceGA_8java_source_l00039}00039\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{InstanceGA_8java_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{InstanceGA_8java_source_l00045}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1InstanceGA_a92672eb54c8a759bb96df77dcdb5d231}{00045}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{boolean}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1InstanceGA_a92672eb54c8a759bb96df77dcdb5d231}{isTerminate}}()\ \{}
+\DoxyCodeLine{\Hypertarget{InstanceGA_8java_source_l00046}00046\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1InstanceGA_a856cb58f0cd8975905dcf5f60b50b110}{terminate}};}
+\DoxyCodeLine{\Hypertarget{InstanceGA_8java_source_l00047}00047\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{InstanceGA_8java_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{InstanceGA_8java_source_l00053}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1InstanceGA_afc2713f35ed34b7dabeae388cd39fe1e}{00053}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1InstanceGA_afc2713f35ed34b7dabeae388cd39fe1e}{setTerminate}}(\textcolor{keywordtype}{boolean}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1InstanceGA_a856cb58f0cd8975905dcf5f60b50b110}{terminate}})\ \{}
+\DoxyCodeLine{\Hypertarget{InstanceGA_8java_source_l00054}00054\ \ \ \ \ \ \ \ \ this.terminate\ =\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1InstanceGA_a856cb58f0cd8975905dcf5f60b50b110}{terminate}};}
+\DoxyCodeLine{\Hypertarget{InstanceGA_8java_source_l00055}00055\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{InstanceGA_8java_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{InstanceGA_8java_source_l00057}00057\ \}}
+
+\end{DoxyCode}

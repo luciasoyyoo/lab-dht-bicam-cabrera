@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="es">
+  <compounddef id="classlocal__search_1_1acceptation__type_1_1AcceptNotBadT" kind="class" language="Java" prot="public">
+    <compoundname>local_search::acceptation_type::AcceptNotBadT</compoundname>
+    <basecompoundref refid="classlocal__search_1_1acceptation__type_1_1AcceptableCandidate" prot="public" virt="non-virtual">local_search.acceptation_type.AcceptableCandidate</basecompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classlocal__search_1_1acceptation__type_1_1AcceptNotBadT_1ab913b2e75ae2c8a85091ba229f13d123" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Boolean</type>
+        <definition>Boolean local_search.acceptation_type.AcceptNotBadT.acceptCandidate</definition>
+        <argsstring>(State stateCurrent, State stateCandidate)</argsstring>
+        <name>acceptCandidate</name>
+        <qualifiedname>local_search.acceptation_type.AcceptNotBadT.acceptCandidate</qualifiedname>
+        <reimplements refid="classlocal__search_1_1acceptation__type_1_1AcceptableCandidate_1aa9e62e1d2d213c3828d2491b506d0592">acceptCandidate</reimplements>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>stateCurrent</declname>
+        </param>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>stateCandidate</declname>
+        </param>
+        <exceptions> throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException </exceptions>
+        <briefdescription>
+<para>Uses ThreadLocalRandom for algorithmic (non-cryptographic) randomness. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This RNG is used to decide acceptance in simulated annealing and is not used for security-sensitive purposes. Suppress Sonar S2245 for this usage. Decide acceptance using temperature-based probability.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stateCurrent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the current state </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stateCandidate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the candidate state </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if accepted, false otherwise </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>IllegalArgumentException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>on invalid arguments </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>SecurityException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>on reflective access problems </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ClassNotFoundException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when a referenced class cannot be found </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>InstantiationException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>on reflective instantiation failures </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>IllegalAccessException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>on illegal reflective access </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>InvocationTargetException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when a reflective call throws </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>NoSuchMethodException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when a reflective method lookup fails </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/local_search/acceptation_type/AcceptNotBadT.java" line="45" column="16" bodyfile="practica5/src/main/java/local_search/acceptation_type/AcceptNotBadT.java" bodystart="45" bodyend="66"/>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1a4bc6bd95db71e14b1f48c1bfc85f1305" compoundref="Strategy_8java" startline="405" endline="407">metaheurictics.strategy.Strategy.getProblem</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1ad2641e12c52292930364de6655333aa8" compoundref="Strategy_8java" startline="80" endline="85">metaheurictics.strategy.Strategy.getStrategy</references>
+        <references refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1a54de458e42332b9c5c0146f1e5b29626" compoundref="SimulatedAnnealing_8java" startline="84" endline="86">metaheuristics.generators.SimulatedAnnealing.getTinitial</references>
+        <references refid="enumproblem_1_1definition_1_1Problem_1_1ProblemType_1aa55383c4cb9a71cfeabc7f715ee0cd6e" compoundref="Problem_8java" startline="29">problem.definition.Problem.ProblemType.Maximizar</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="classlocal__search_1_1acceptation__type_1_1AcceptNotBadT" kindref="compound">AcceptNotBadT</ref> - Temperature based acceptation (simulated annealing style). </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Accepts candidates with a probability depending on temperature and the evaluation difference when the candidate is worse. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>local_search.acceptation_type.AcceptNotBadT</label>
+        <link refid="classlocal__search_1_1acceptation__type_1_1AcceptNotBadT"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>local_search.acceptation_type.AcceptableCandidate</label>
+        <link refid="classlocal__search_1_1acceptation__type_1_1AcceptableCandidate"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>local_search.acceptation_type.AcceptNotBadT</label>
+        <link refid="classlocal__search_1_1acceptation__type_1_1AcceptNotBadT"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>local_search.acceptation_type.AcceptableCandidate</label>
+        <link refid="classlocal__search_1_1acceptation__type_1_1AcceptableCandidate"/>
+      </node>
+    </collaborationgraph>
+    <location file="practica5/src/main/java/local_search/acceptation_type/AcceptNotBadT.java" line="22" column="7" bodyfile="practica5/src/main/java/local_search/acceptation_type/AcceptNotBadT.java" bodystart="22" bodyend="67"/>
+    <listofallmembers>
+      <member refid="classlocal__search_1_1acceptation__type_1_1AcceptNotBadT_1ab913b2e75ae2c8a85091ba229f13d123" prot="public" virt="non-virtual"><scope>local_search::acceptation_type::AcceptNotBadT</scope><name>acceptCandidate</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

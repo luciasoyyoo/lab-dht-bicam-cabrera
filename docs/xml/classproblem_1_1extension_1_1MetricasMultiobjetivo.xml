@@ -1,0 +1,295 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="es">
+  <compounddef id="classproblem_1_1extension_1_1MetricasMultiobjetivo" kind="class" language="Java" prot="public">
+    <compoundname>problem::extension::MetricasMultiobjetivo</compoundname>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classproblem_1_1extension_1_1MetricasMultiobjetivo_1a4472830ebe1a6fe8bd33f701316552b1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double problem.extension.MetricasMultiobjetivo.TasaError</definition>
+        <argsstring>(List&lt; State &gt; solutionsFPcurrent, List&lt; State &gt; solutionsFPtrue)</argsstring>
+        <name>TasaError</name>
+        <qualifiedname>problem.extension.MetricasMultiobjetivo.TasaError</qualifiedname>
+        <param>
+          <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+          <declname>solutionsFPcurrent</declname>
+        </param>
+        <param>
+          <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+          <declname>solutionsFPtrue</declname>
+        </param>
+        <exceptions> throws BiffException, IOException</exceptions>
+        <briefdescription>
+<para>Calcular el porcentaje de soluciones del frente actual que no pertenecen al frente de Pareto verdadero. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>solutionsFPcurrent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>frente de Pareto obtenido por el algoritmo </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>solutionsFPtrue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>frente de Pareto de referencia (verdadero) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>proporción de soluciones incorrectas (0..1) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/problem/extension/MetricasMultiobjetivo.java" line="29" column="15" bodyfile="practica5/src/main/java/problem/extension/MetricasMultiobjetivo.java" bodystart="29" bodyend="40"/>
+        <references refid="classproblem_1_1extension_1_1MetricasMultiobjetivo_1a0baaa7dba3706f16de008d747a7548a1" compoundref="MetricasMultiobjetivo_8java" startline="135" endline="145">problem.extension.MetricasMultiobjetivo.Contains</references>
+      </memberdef>
+      <memberdef kind="function" id="classproblem_1_1extension_1_1MetricasMultiobjetivo_1a30a03c8819f7191b7bfe09000d33532f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double problem.extension.MetricasMultiobjetivo.DistanciaGeneracional</definition>
+        <argsstring>(List&lt; State &gt; solutionsFPcurrent, List&lt; State &gt; solutionsFPtrue)</argsstring>
+        <name>DistanciaGeneracional</name>
+        <qualifiedname>problem.extension.MetricasMultiobjetivo.DistanciaGeneracional</qualifiedname>
+        <param>
+          <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+          <declname>solutionsFPcurrent</declname>
+        </param>
+        <param>
+          <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+          <declname>solutionsFPtrue</declname>
+        </param>
+        <exceptions> throws BiffException, IOException</exceptions>
+        <briefdescription>
+<para>DistanciaGeneracional. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Calcula la distancia media entre los miembros del frente actual y sus puntos más cercanos en el frente verdadero.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>solutionsFPcurrent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>frente actual </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>solutionsFPtrue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>frente verdadero </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>distancia agregada normalizada </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/problem/extension/MetricasMultiobjetivo.java" line="53" column="15" bodyfile="practica5/src/main/java/problem/extension/MetricasMultiobjetivo.java" bodystart="53" bodyend="77"/>
+        <references refid="classproblem_1_1definition_1_1State_1a226ea6fab8e7060cf131edfdb245a6fa" compoundref="State_8java" startline="104" endline="106">problem.definition.State.getEvaluation</references>
+      </memberdef>
+      <memberdef kind="function" id="classproblem_1_1extension_1_1MetricasMultiobjetivo_1a5ded050edcc046f49548df1cf0ec7449" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double problem.extension.MetricasMultiobjetivo.Dispersion</definition>
+        <argsstring>(ArrayList&lt; State &gt; solutions)</argsstring>
+        <name>Dispersion</name>
+        <qualifiedname>problem.extension.MetricasMultiobjetivo.Dispersion</qualifiedname>
+        <param>
+          <type>ArrayList&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+          <declname>solutions</declname>
+        </param>
+        <exceptions> throws BiffException, IOException</exceptions>
+        <briefdescription>
+<para>Dispersion. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Mide la dispersión (desviación típica) entre las distancias inter-soluciones de un frente.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>solutions</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>lista de estados que conforman el frente </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>medida de dispersión </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/problem/extension/MetricasMultiobjetivo.java" line="88" column="15" bodyfile="practica5/src/main/java/problem/extension/MetricasMultiobjetivo.java" bodystart="88" bodyend="127"/>
+        <references refid="classproblem_1_1definition_1_1State_1a226ea6fab8e7060cf131edfdb245a6fa" compoundref="State_8java" startline="104" endline="106">problem.definition.State.getEvaluation</references>
+      </memberdef>
+      <memberdef kind="function" id="classproblem_1_1extension_1_1MetricasMultiobjetivo_1abfb87540cf1b3680d692821621a2619c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double problem.extension.MetricasMultiobjetivo.CalcularMin</definition>
+        <argsstring>(ArrayList&lt; Double &gt; allMetrics)</argsstring>
+        <name>CalcularMin</name>
+        <qualifiedname>problem.extension.MetricasMultiobjetivo.CalcularMin</qualifiedname>
+        <param>
+          <type>ArrayList&lt; Double &gt;</type>
+          <declname>allMetrics</declname>
+        </param>
+        <briefdescription>
+<para>Calcular el valor mínimo de una lista de métricas. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>allMetrics</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>lista de métricas </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>valor mínimo </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/problem/extension/MetricasMultiobjetivo.java" line="152" column="15" bodyfile="practica5/src/main/java/problem/extension/MetricasMultiobjetivo.java" bodystart="152" bodyend="161"/>
+      </memberdef>
+      <memberdef kind="function" id="classproblem_1_1extension_1_1MetricasMultiobjetivo_1a38ed4658d79ea9d5cfef4bceb7ba5816" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double problem.extension.MetricasMultiobjetivo.CalcularMax</definition>
+        <argsstring>(ArrayList&lt; Double &gt; allMetrics)</argsstring>
+        <name>CalcularMax</name>
+        <qualifiedname>problem.extension.MetricasMultiobjetivo.CalcularMax</qualifiedname>
+        <param>
+          <type>ArrayList&lt; Double &gt;</type>
+          <declname>allMetrics</declname>
+        </param>
+        <briefdescription>
+<para>Calcular el valor máximo de una lista de métricas. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>allMetrics</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>lista de métricas </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>valor máximo </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/problem/extension/MetricasMultiobjetivo.java" line="169" column="15" bodyfile="practica5/src/main/java/problem/extension/MetricasMultiobjetivo.java" bodystart="169" bodyend="178"/>
+      </memberdef>
+      <memberdef kind="function" id="classproblem_1_1extension_1_1MetricasMultiobjetivo_1add9c9a821a254397c6a70d4f56363c0a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double problem.extension.MetricasMultiobjetivo.CalcularMedia</definition>
+        <argsstring>(ArrayList&lt; Double &gt; allMetrics)</argsstring>
+        <name>CalcularMedia</name>
+        <qualifiedname>problem.extension.MetricasMultiobjetivo.CalcularMedia</qualifiedname>
+        <param>
+          <type>ArrayList&lt; Double &gt;</type>
+          <declname>allMetrics</declname>
+        </param>
+        <briefdescription>
+<para>Calcular la media aritmética de una lista de métricas. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>allMetrics</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>lista de métricas </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>media </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/problem/extension/MetricasMultiobjetivo.java" line="185" column="15" bodyfile="practica5/src/main/java/problem/extension/MetricasMultiobjetivo.java" bodystart="185" bodyend="193"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classproblem_1_1extension_1_1MetricasMultiobjetivo_1a0baaa7dba3706f16de008d747a7548a1" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean problem.extension.MetricasMultiobjetivo.Contains</definition>
+        <argsstring>(State solA, List&lt; State &gt; solutions)</argsstring>
+        <name>Contains</name>
+        <qualifiedname>problem.extension.MetricasMultiobjetivo.Contains</qualifiedname>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>solA</declname>
+        </param>
+        <param>
+          <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+          <declname>solutions</declname>
+        </param>
+        <briefdescription>
+<para>Comprueba si una solución (por su vector de evaluación) está en una lista. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>solA</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>solución a comprobar </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>solutions</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>lista de soluciones </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true si se encuentra una evaluación idéntica </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/problem/extension/MetricasMultiobjetivo.java" line="135" column="17" bodyfile="practica5/src/main/java/problem/extension/MetricasMultiobjetivo.java" bodystart="135" bodyend="145"/>
+        <references refid="classproblem_1_1definition_1_1State_1a226ea6fab8e7060cf131edfdb245a6fa" compoundref="State_8java" startline="104" endline="106">problem.definition.State.getEvaluation</references>
+        <referencedby refid="classproblem_1_1extension_1_1MetricasMultiobjetivo_1a4472830ebe1a6fe8bd33f701316552b1" compoundref="MetricasMultiobjetivo_8java" startline="29" endline="40">problem.extension.MetricasMultiobjetivo.TasaError</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="classproblem_1_1extension_1_1MetricasMultiobjetivo" kindref="compound">MetricasMultiobjetivo</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Conjunto de métricas para evaluar frentes de Pareto en problemas multiobjetivo (error, distancia generacional, dispersión, etc.). </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>problem.extension.MetricasMultiobjetivo</label>
+        <link refid="classproblem_1_1extension_1_1MetricasMultiobjetivo"/>
+      </node>
+    </collaborationgraph>
+    <location file="practica5/src/main/java/problem/extension/MetricasMultiobjetivo.java" line="18" column="7" bodyfile="practica5/src/main/java/problem/extension/MetricasMultiobjetivo.java" bodystart="18" bodyend="194"/>
+    <listofallmembers>
+      <member refid="classproblem_1_1extension_1_1MetricasMultiobjetivo_1a38ed4658d79ea9d5cfef4bceb7ba5816" prot="public" virt="non-virtual"><scope>problem::extension::MetricasMultiobjetivo</scope><name>CalcularMax</name></member>
+      <member refid="classproblem_1_1extension_1_1MetricasMultiobjetivo_1add9c9a821a254397c6a70d4f56363c0a" prot="public" virt="non-virtual"><scope>problem::extension::MetricasMultiobjetivo</scope><name>CalcularMedia</name></member>
+      <member refid="classproblem_1_1extension_1_1MetricasMultiobjetivo_1abfb87540cf1b3680d692821621a2619c" prot="public" virt="non-virtual"><scope>problem::extension::MetricasMultiobjetivo</scope><name>CalcularMin</name></member>
+      <member refid="classproblem_1_1extension_1_1MetricasMultiobjetivo_1a0baaa7dba3706f16de008d747a7548a1" prot="private" virt="non-virtual"><scope>problem::extension::MetricasMultiobjetivo</scope><name>Contains</name></member>
+      <member refid="classproblem_1_1extension_1_1MetricasMultiobjetivo_1a5ded050edcc046f49548df1cf0ec7449" prot="public" virt="non-virtual"><scope>problem::extension::MetricasMultiobjetivo</scope><name>Dispersion</name></member>
+      <member refid="classproblem_1_1extension_1_1MetricasMultiobjetivo_1a30a03c8819f7191b7bfe09000d33532f" prot="public" virt="non-virtual"><scope>problem::extension::MetricasMultiobjetivo</scope><name>DistanciaGeneracional</name></member>
+      <member refid="classproblem_1_1extension_1_1MetricasMultiobjetivo_1a4472830ebe1a6fe8bd33f701316552b1" prot="public" virt="non-virtual"><scope>problem::extension::MetricasMultiobjetivo</scope><name>TasaError</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

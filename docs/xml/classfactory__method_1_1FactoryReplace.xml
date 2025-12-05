@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="es">
+  <compounddef id="classfactory__method_1_1FactoryReplace" kind="class" language="Java" prot="public">
+    <compoundname>factory_method::FactoryReplace</compoundname>
+    <basecompoundref refid="interfacefactory__interface_1_1IFFactoryReplace" prot="public" virt="non-virtual">factory_interface.IFFactoryReplace</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classfactory__method_1_1FactoryReplace_1aca705f699965ab08bd8e31cf82344804" prot="private" static="no" mutable="no">
+        <type><ref refid="classevolutionary__algorithms_1_1complement_1_1Replace" kindref="compound">Replace</ref></type>
+        <definition>Replace factory_method.FactoryReplace.replace</definition>
+        <argsstring></argsstring>
+        <name>replace</name>
+        <qualifiedname>factory_method.FactoryReplace.replace</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/factory_method/FactoryReplace.java" line="19" column="17" bodyfile="practica5/src/main/java/factory_method/FactoryReplace.java" bodystart="19" bodyend="-1"/>
+        <referencedby refid="classfactory__method_1_1FactoryReplace_1a3fb4ad635f082144c89b4a7c7f881951" compoundref="FactoryReplace_8java" startline="26" endline="30">factory_method.FactoryReplace.createReplace</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classfactory__method_1_1FactoryReplace_1a3fb4ad635f082144c89b4a7c7f881951" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classevolutionary__algorithms_1_1complement_1_1Replace" kindref="compound">Replace</ref></type>
+        <definition>Replace factory_method.FactoryReplace.createReplace</definition>
+        <argsstring>(ReplaceType typereplace)</argsstring>
+        <name>createReplace</name>
+        <qualifiedname>factory_method.FactoryReplace.createReplace</qualifiedname>
+        <reimplements refid="interfacefactory__interface_1_1IFFactoryReplace_1afad62c7e2768633a0336f04917918965">createReplace</reimplements>
+        <param>
+          <type><ref refid="enumevolutionary__algorithms_1_1complement_1_1ReplaceType" kindref="compound">ReplaceType</ref></type>
+          <declname>typereplace</declname>
+        </param>
+        <exceptions> throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException</exceptions>
+        <briefdescription>
+<para>createReplace - Creates an instance of <ref refid="classevolutionary__algorithms_1_1complement_1_1Replace" kindref="compound">Replace</ref> based on the provided <ref refid="enumevolutionary__algorithms_1_1complement_1_1ReplaceType" kindref="compound">ReplaceType</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>typereplace</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns an instance of <ref refid="classevolutionary__algorithms_1_1complement_1_1Replace" kindref="compound">Replace</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/factory_method/FactoryReplace.java" line="26" column="16" bodyfile="practica5/src/main/java/factory_method/FactoryReplace.java" bodystart="26" bodyend="30"/>
+        <references refid="classfactory__method_1_1FactoryLoader_1a4e61ffc7038a082277d67e3e59cdb859" compoundref="FactoryLoader_8java" startline="21" endline="28">factory_method.FactoryLoader.getInstance</references>
+        <references refid="classfactory__method_1_1FactoryReplace_1aca705f699965ab08bd8e31cf82344804" compoundref="FactoryReplace_8java" startline="19">factory_method.FactoryReplace.replace</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="classfactory__method_1_1FactoryReplace" kindref="compound">FactoryReplace</ref> - Class responsible for creating replacement strategies. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>factory_interface.IFFactoryReplace</label>
+        <link refid="interfacefactory__interface_1_1IFFactoryReplace"/>
+      </node>
+      <node id="1">
+        <label>factory_method.FactoryReplace</label>
+        <link refid="classfactory__method_1_1FactoryReplace"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>evolutionary_algorithms.complement.Replace</label>
+        <link refid="classevolutionary__algorithms_1_1complement_1_1Replace"/>
+      </node>
+      <node id="2">
+        <label>factory_interface.IFFactoryReplace</label>
+        <link refid="interfacefactory__interface_1_1IFFactoryReplace"/>
+      </node>
+      <node id="1">
+        <label>factory_method.FactoryReplace</label>
+        <link refid="classfactory__method_1_1FactoryReplace"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-replace</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="practica5/src/main/java/factory_method/FactoryReplace.java" line="17" column="7" bodyfile="practica5/src/main/java/factory_method/FactoryReplace.java" bodystart="17" bodyend="31"/>
+    <listofallmembers>
+      <member refid="classfactory__method_1_1FactoryReplace_1a3fb4ad635f082144c89b4a7c7f881951" prot="public" virt="non-virtual"><scope>factory_method::FactoryReplace</scope><name>createReplace</name></member>
+      <member refid="classfactory__method_1_1FactoryReplace_1aca705f699965ab08bd8e31cf82344804" prot="private" virt="non-virtual"><scope>factory_method::FactoryReplace</scope><name>replace</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

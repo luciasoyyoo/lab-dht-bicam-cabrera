@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="es">
+  <compounddef id="classlocal__search_1_1complement_1_1TabuSolutions" kind="class" language="Java" prot="public">
+    <compoundname>local_search::complement::TabuSolutions</compoundname>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classlocal__search_1_1complement_1_1TabuSolutions_1ad602469482bab1bd52b03ef738bd7907" prot="public" static="yes" mutable="no">
+        <type>final List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+        <definition>final List&lt;State&gt; local_search.complement.TabuSolutions.listTabu</definition>
+        <argsstring></argsstring>
+        <name>listTabu</name>
+        <qualifiedname>local_search.complement.TabuSolutions.listTabu</qualifiedname>
+        <initializer>= Collections.synchronizedList(new ArrayList&lt;<ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref>&gt;())</initializer>
+        <briefdescription>
+<para>Global synchronized tabu list shared by the local search components. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/local_search/complement/TabuSolutions.java" line="19" column="26" bodyfile="practica5/src/main/java/local_search/complement/TabuSolutions.java" bodystart="19" bodyend="-1"/>
+        <referencedby refid="classlocal__search_1_1complement_1_1TabuSolutions_1abe7521e1b6c8ca96a3a6b5b63cd08c48" compoundref="TabuSolutions_8java" startline="36" endline="57">local_search.complement.TabuSolutions.filterNeighborhood</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a5e7f4e1f1fb436f2fb9c1770b90ee253" compoundref="MultiobjectiveTabuSearch_8java" startline="105" endline="141">metaheuristics.generators.MultiobjectiveTabuSearch.updateReference</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1TabuSearch_1a8e5310bc24ca49dccb985a122173936c" compoundref="TabuSearch_8java" startline="133" endline="168">metaheuristics.generators.TabuSearch.updateReference</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classlocal__search_1_1complement_1_1TabuSolutions_1a294b3167e2976e63e7264c619e756d82" prot="public" static="yes" mutable="no">
+        <type>final int</type>
+        <definition>final int local_search.complement.TabuSolutions.maxelements</definition>
+        <argsstring></argsstring>
+        <name>maxelements</name>
+        <qualifiedname>local_search.complement.TabuSolutions.maxelements</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Maximum number of elements allowed in the tabu list (unused/placeholder). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/local_search/complement/TabuSolutions.java" line="22" column="25" bodyfile="practica5/src/main/java/local_search/complement/TabuSolutions.java" bodystart="22" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a5e7f4e1f1fb436f2fb9c1770b90ee253" compoundref="MultiobjectiveTabuSearch_8java" startline="105" endline="141">metaheuristics.generators.MultiobjectiveTabuSearch.updateReference</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1TabuSearch_1a8e5310bc24ca49dccb985a122173936c" compoundref="TabuSearch_8java" startline="133" endline="168">metaheuristics.generators.TabuSearch.updateReference</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classlocal__search_1_1complement_1_1TabuSolutions_1abe7521e1b6c8ca96a3a6b5b63cd08c48" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+        <definition>List&lt; State &gt; local_search.complement.TabuSolutions.filterNeighborhood</definition>
+        <argsstring>(List&lt; State &gt; listNeighborhood)</argsstring>
+        <name>filterNeighborhood</name>
+        <qualifiedname>local_search.complement.TabuSolutions.filterNeighborhood</qualifiedname>
+        <param>
+          <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+          <declname>listNeighborhood</declname>
+        </param>
+        <exceptions> throws Exception </exceptions>
+        <briefdescription>
+<para>Remove tabu solutions from the supplied neighborhood list. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method iterates the provided neighborhood and removes any element that equals an element in the global <computeroutput><ref refid="classlocal__search_1_1complement_1_1TabuSolutions_1ad602469482bab1bd52b03ef738bd7907" kindref="member">listTabu</ref></computeroutput>. If after filtering the neighborhood becomes empty the method throws an Exception to signal the caller that no valid neighbors remain.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>listNeighborhood</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>list of neighbor States to filter </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a filtered List&lt;State&gt; with tabu entries removed </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>Exception</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when no neighbors remain after filtering </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/local_search/complement/TabuSolutions.java" line="36" column="13" bodyfile="practica5/src/main/java/local_search/complement/TabuSolutions.java" bodystart="36" bodyend="57"/>
+        <references refid="classlocal__search_1_1complement_1_1TabuSolutions_1ad602469482bab1bd52b03ef738bd7907" compoundref="TabuSolutions_8java" startline="19">local_search.complement.TabuSolutions.listTabu</references>
+        <referencedby refid="classlocal__search_1_1candidate__type_1_1CandidateValue_1a77505d8ed443552afa435f51d0222d75" compoundref="CandidateValue_8java" startline="74" endline="97">local_search.candidate_type.CandidateValue.stateCandidate</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="classlocal__search_1_1complement_1_1TabuSolutions" kindref="compound">TabuSolutions</ref> - helper that manages a tabu list and filters neighborhoods. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Provides a synchronized global tabu list and a utility to remove tabu entries from candidate neighborhoods. The filtering method will throw an Exception if all neighbors are tabu. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>local_search.complement.TabuSolutions</label>
+        <link refid="classlocal__search_1_1complement_1_1TabuSolutions"/>
+      </node>
+    </collaborationgraph>
+    <location file="practica5/src/main/java/local_search/complement/TabuSolutions.java" line="16" column="7" bodyfile="practica5/src/main/java/local_search/complement/TabuSolutions.java" bodystart="16" bodyend="58"/>
+    <listofallmembers>
+      <member refid="classlocal__search_1_1complement_1_1TabuSolutions_1abe7521e1b6c8ca96a3a6b5b63cd08c48" prot="public" virt="non-virtual"><scope>local_search::complement::TabuSolutions</scope><name>filterNeighborhood</name></member>
+      <member refid="classlocal__search_1_1complement_1_1TabuSolutions_1ad602469482bab1bd52b03ef738bd7907" prot="public" virt="non-virtual"><scope>local_search::complement::TabuSolutions</scope><name>listTabu</name></member>
+      <member refid="classlocal__search_1_1complement_1_1TabuSolutions_1a294b3167e2976e63e7264c619e756d82" prot="public" virt="non-virtual"><scope>local_search::complement::TabuSolutions</scope><name>maxelements</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

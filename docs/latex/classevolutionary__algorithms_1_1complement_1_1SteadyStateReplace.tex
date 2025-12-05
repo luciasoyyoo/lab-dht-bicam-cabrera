@@ -1,0 +1,255 @@
+\doxysection{Referencia de la clase evolutionary\+\_\+algorithms.\+complement.\+Steady\+State\+Replace}
+\hypertarget{classevolutionary__algorithms_1_1complement_1_1SteadyStateReplace}{}\label{classevolutionary__algorithms_1_1complement_1_1SteadyStateReplace}\index{evolutionary\_algorithms.complement.SteadyStateReplace@{evolutionary\_algorithms.complement.SteadyStateReplace}}
+
+
+\doxylink{classevolutionary__algorithms_1_1complement_1_1SteadyStateReplace}{Steady\+State\+Replace} -\/ applies steady-\/state replacement strategy.  
+
+
+
+
+Diagrama de herencia de evolutionary\+\_\+algorithms.\+complement.\+Steady\+State\+Replace
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=277pt]{classevolutionary__algorithms_1_1complement_1_1SteadyStateReplace__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagrama de colaboración de evolutionary\+\_\+algorithms.\+complement.\+Steady\+State\+Replace\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=277pt]{classevolutionary__algorithms_1_1complement_1_1SteadyStateReplace__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1SteadyStateReplace_a1283c4f4d8b9bbe5ae5dc4916934c8a9}{replace}} (\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} state\+Candidate, List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ list\+State)
+\begin{DoxyCompactList}\small\item\em replace -\/ applies steady-\/state replacement strategy. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1SteadyStateReplace_affa2735e2c66cb923a0a90661c7f3e87}{min\+Value}} (List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ list\+State)
+\begin{DoxyCompactList}\small\item\em min\+Value -\/ applies steady-\/state replacement strategy. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1SteadyStateReplace_aaefcd55e0ee9ae9823dc07ab72466288}{max\+Value}} (List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ list\+State)
+\begin{DoxyCompactList}\small\item\em max\+Value -\/ applies steady-\/state replacement strategy. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+\doxylink{classevolutionary__algorithms_1_1complement_1_1SteadyStateReplace}{Steady\+State\+Replace} -\/ applies steady-\/state replacement strategy. 
+
+Definición en la línea \mbox{\hyperlink{SteadyStateReplace_8java_source_l00013}{13}} del archivo \mbox{\hyperlink{SteadyStateReplace_8java_source}{Steady\+State\+Replace.\+java}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{classevolutionary__algorithms_1_1complement_1_1SteadyStateReplace_doc-func-members}
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{classevolutionary__algorithms_1_1complement_1_1SteadyStateReplace_aaefcd55e0ee9ae9823dc07ab72466288}\index{evolutionary\_algorithms.complement.SteadyStateReplace@{evolutionary\_algorithms.complement.SteadyStateReplace}!maxValue@{maxValue}}
+\index{maxValue@{maxValue}!evolutionary\_algorithms.complement.SteadyStateReplace@{evolutionary\_algorithms.complement.SteadyStateReplace}}
+\doxysubsubsection{\texorpdfstring{maxValue()}{maxValue()}}
+{\footnotesize\ttfamily \label{classevolutionary__algorithms_1_1complement_1_1SteadyStateReplace_aaefcd55e0ee9ae9823dc07ab72466288} 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} evolutionary\+\_\+algorithms.\+complement.\+Steady\+State\+Replace.\+max\+Value (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$}]{list\+State}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+max\+Value -\/ applies steady-\/state replacement strategy. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em list\+State} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+returns the state with the maximum evaluation value. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{SteadyStateReplace_8java_source_l00081}{81}} del archivo \mbox{\hyperlink{SteadyStateReplace_8java_source}{Steady\+State\+Replace.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ State\ value\ =\ listState.get(0);}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ max\ =\ listState.get(0).getEvaluation().get(0);}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 1;\ i\ <\ listState.size();\ i++)\ \{}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (listState.get(i).getEvaluation().get(0)\ >\ max)\ \{}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ max\ =\ listState.get(i).getEvaluation().get(0);}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ value\ =\ listState.get(i);}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ value;}
+\DoxyCodeLine{00091\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{State_8java_source_l00104}{problem.\+definition.\+State.\+get\+Evaluation()}}.
+
+
+
+Referenciado por \mbox{\hyperlink{SteadyStateReplace_8java_source_l00022}{replace()}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classevolutionary__algorithms_1_1complement_1_1SteadyStateReplace_aaefcd55e0ee9ae9823dc07ab72466288_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classevolutionary__algorithms_1_1complement_1_1SteadyStateReplace_aaefcd55e0ee9ae9823dc07ab72466288_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classevolutionary__algorithms_1_1complement_1_1SteadyStateReplace_affa2735e2c66cb923a0a90661c7f3e87}\index{evolutionary\_algorithms.complement.SteadyStateReplace@{evolutionary\_algorithms.complement.SteadyStateReplace}!minValue@{minValue}}
+\index{minValue@{minValue}!evolutionary\_algorithms.complement.SteadyStateReplace@{evolutionary\_algorithms.complement.SteadyStateReplace}}
+\doxysubsubsection{\texorpdfstring{minValue()}{minValue()}}
+{\footnotesize\ttfamily \label{classevolutionary__algorithms_1_1complement_1_1SteadyStateReplace_affa2735e2c66cb923a0a90661c7f3e87} 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} evolutionary\+\_\+algorithms.\+complement.\+Steady\+State\+Replace.\+min\+Value (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$}]{list\+State}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+min\+Value -\/ applies steady-\/state replacement strategy. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em list\+State} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+returns the state with the minimum evaluation value. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{SteadyStateReplace_8java_source_l00064}{64}} del archivo \mbox{\hyperlink{SteadyStateReplace_8java_source}{Steady\+State\+Replace.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ State\ value\ =\ listState.get(0);}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ min\ =\ listState.get(0).getEvaluation().get(0);}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 1;\ i\ <\ listState.size();\ i++)\ \{}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (listState.get(i).getEvaluation().get(0)\ <\ min)\ \{}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ min\ =\ listState.get(i).getEvaluation().get(0);}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ value\ =\ listState.get(i);}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ value;}
+\DoxyCodeLine{00074\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{State_8java_source_l00104}{problem.\+definition.\+State.\+get\+Evaluation()}}.
+
+
+
+Referenciado por \mbox{\hyperlink{SteadyStateReplace_8java_source_l00022}{replace()}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classevolutionary__algorithms_1_1complement_1_1SteadyStateReplace_affa2735e2c66cb923a0a90661c7f3e87_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classevolutionary__algorithms_1_1complement_1_1SteadyStateReplace_affa2735e2c66cb923a0a90661c7f3e87_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classevolutionary__algorithms_1_1complement_1_1SteadyStateReplace_a1283c4f4d8b9bbe5ae5dc4916934c8a9}\index{evolutionary\_algorithms.complement.SteadyStateReplace@{evolutionary\_algorithms.complement.SteadyStateReplace}!replace@{replace}}
+\index{replace@{replace}!evolutionary\_algorithms.complement.SteadyStateReplace@{evolutionary\_algorithms.complement.SteadyStateReplace}}
+\doxysubsubsection{\texorpdfstring{replace()}{replace()}}
+{\footnotesize\ttfamily \label{classevolutionary__algorithms_1_1complement_1_1SteadyStateReplace_a1283c4f4d8b9bbe5ae5dc4916934c8a9} 
+List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ evolutionary\+\_\+algorithms.\+complement.\+Steady\+State\+Replace.\+replace (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}}]{state\+Candidate}{, }\item[{List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$}]{list\+State}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+replace -\/ applies steady-\/state replacement strategy. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em state\+Candidate} & \\
+\hline
+{\em list\+State} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+returns the updated list of states after replacement. 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1Replace_aac9402083a696d23ca0d97540d3951e5}{evolutionary\+\_\+algorithms.\+complement.\+Replace}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{SteadyStateReplace_8java_source_l00022}{22}} del archivo \mbox{\hyperlink{SteadyStateReplace_8java_source}{Steady\+State\+Replace.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ State\ stateREP\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Strategy.getStrategy().getProblem().getTypeProblem().equals(ProblemType.Maximizar))\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ stateREP\ =\ minValue(listState);}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(stateCandidate.getEvaluation().get(0)\ >=\ stateREP.getEvaluation().get(0))\{}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Boolean\ find\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ count\ =\ 0;}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ ((find.equals(\textcolor{keyword}{false}))\ \&\&\ (listState.size()\ >\ count))\{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(listState.get(count).equals(stateREP))\{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ listState.remove(count);}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ listState.add(count,\ stateCandidate);}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ find\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ count\ ++;}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(Strategy.getStrategy().getProblem().getTypeProblem().equals(ProblemType.Minimizar))\{}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ stateREP\ =\ maxValue(listState);}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(stateCandidate.getEvaluation().get(0)\ <=\ stateREP.getEvaluation().get(0))\{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Boolean\ find\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ count\ =\ 0;}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ ((find.equals(\textcolor{keyword}{false}))\ \&\&\ (listState.size()\ >\ count))\{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(listState.get(count).equals(stateREP))\{}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ listState.remove(count);}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ listState.add(count,\ stateCandidate);}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ find\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ count\ ++;}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ listState;}
+\DoxyCodeLine{00057\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{State_8java_source_l00104}{problem.\+definition.\+State.\+get\+Evaluation()}}, \mbox{\hyperlink{Strategy_8java_source_l00405}{metaheurictics.\+strategy.\+Strategy.\+get\+Problem()}}, \mbox{\hyperlink{Strategy_8java_source_l00080}{metaheurictics.\+strategy.\+Strategy.\+get\+Strategy()}}, \mbox{\hyperlink{Problem_8java_source_l00097}{problem.\+definition.\+Problem.\+get\+Type\+Problem()}}, \mbox{\hyperlink{Problem_8java_source_l00029}{problem.\+definition.\+Problem.\+Problem\+Type.\+Maximizar}}, \mbox{\hyperlink{SteadyStateReplace_8java_source_l00081}{max\+Value()}}, \mbox{\hyperlink{Problem_8java_source_l00029}{problem.\+definition.\+Problem.\+Problem\+Type.\+Minimizar}} y \mbox{\hyperlink{SteadyStateReplace_8java_source_l00064}{min\+Value()}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classevolutionary__algorithms_1_1complement_1_1SteadyStateReplace_a1283c4f4d8b9bbe5ae5dc4916934c8a9_cgraph}
+\end{center}
+\end{figure}
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{SteadyStateReplace_8java}{Steady\+State\+Replace.\+java}}\end{DoxyCompactItemize}

@@ -1,0 +1,121 @@
+\doxysection{Referencia de la clase factory\+\_\+method.\+Factory\+Crossover}
+\hypertarget{classfactory__method_1_1FactoryCrossover}{}\label{classfactory__method_1_1FactoryCrossover}\index{factory\_method.FactoryCrossover@{factory\_method.FactoryCrossover}}
+
+
+\doxylink{classfactory__method_1_1FactoryCrossover}{Factory\+Crossover} -\/ Interface for creating crossover strategies.  
+
+
+
+
+Diagrama de herencia de factory\+\_\+method.\+Factory\+Crossover
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{classfactory__method_1_1FactoryCrossover__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagrama de colaboración de factory\+\_\+method.\+Factory\+Crossover\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classfactory__method_1_1FactoryCrossover__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1Crossover}{Crossover}} \mbox{\hyperlink{classfactory__method_1_1FactoryCrossover_ae361191d68e551e12a823f5956111a49}{create\+Crossover}} (\mbox{\hyperlink{enumevolutionary__algorithms_1_1complement_1_1CrossoverType}{Crossover\+Type}} Crossovertype)  throws Illegal\+Argument\+Exception, Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception, Illegal\+Access\+Exception, Invocation\+Target\+Exception, No\+Such\+Method\+Exception 
+\begin{DoxyCompactList}\small\item\em create\+Crossover -\/ Creates an instance of \doxylink{classevolutionary__algorithms_1_1complement_1_1Crossover}{Crossover} based on the provided \doxylink{enumevolutionary__algorithms_1_1complement_1_1CrossoverType}{Crossover\+Type}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1Crossover}{Crossover}} \mbox{\hyperlink{classfactory__method_1_1FactoryCrossover_a958bbac8cc07bb3330e165078dbe56a7}{crossing}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+\doxylink{classfactory__method_1_1FactoryCrossover}{Factory\+Crossover} -\/ Interface for creating crossover strategies. 
+
+Definición en la línea \mbox{\hyperlink{FactoryCrossover_8java_source_l00016}{16}} del archivo \mbox{\hyperlink{FactoryCrossover_8java_source}{Factory\+Crossover.\+java}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{classfactory__method_1_1FactoryCrossover_doc-func-members}
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{classfactory__method_1_1FactoryCrossover_ae361191d68e551e12a823f5956111a49}\index{factory\_method.FactoryCrossover@{factory\_method.FactoryCrossover}!createCrossover@{createCrossover}}
+\index{createCrossover@{createCrossover}!factory\_method.FactoryCrossover@{factory\_method.FactoryCrossover}}
+\doxysubsubsection{\texorpdfstring{createCrossover()}{createCrossover()}}
+{\footnotesize\ttfamily \label{classfactory__method_1_1FactoryCrossover_ae361191d68e551e12a823f5956111a49} 
+\mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1Crossover}{Crossover}} factory\+\_\+method.\+Factory\+Crossover.\+create\+Crossover (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{enumevolutionary__algorithms_1_1complement_1_1CrossoverType}{Crossover\+Type}}}]{Crossovertype}{}\end{DoxyParamCaption}) throws Illegal\+Argument\+Exception, Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception, Illegal\+Access\+Exception, Invocation\+Target\+Exception, No\+Such\+Method\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+create\+Crossover -\/ Creates an instance of \doxylink{classevolutionary__algorithms_1_1complement_1_1Crossover}{Crossover} based on the provided \doxylink{enumevolutionary__algorithms_1_1complement_1_1CrossoverType}{Crossover\+Type}. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Crossovertype} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+returns an instance of \doxylink{classevolutionary__algorithms_1_1complement_1_1Crossover}{Crossover} 
+\end{DoxyReturn}
+
+
+Implementa \mbox{\hyperlink{interfacefactory__interface_1_1IFFactoryCrossover_af2c954dab1eb110beaab79ccae6115c5}{factory\+\_\+interface.\+IFFactory\+Crossover}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{FactoryCrossover_8java_source_l00024}{24}} del archivo \mbox{\hyperlink{FactoryCrossover_8java_source}{Factory\+Crossover.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ String\ className\ =\ \textcolor{stringliteral}{"{}evolutionary\_algorithms.complement."{}}\ +\ Crossovertype.toString();}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ crossing\ =\ (Crossover)\ FactoryLoader.getInstance(className);}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ crossing;}
+\DoxyCodeLine{00029\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{FactoryCrossover_8java_source_l00017}{crossing}} y \mbox{\hyperlink{FactoryLoader_8java_source_l00021}{factory\+\_\+method.\+Factory\+Loader.\+get\+Instance()}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classfactory__method_1_1FactoryCrossover_ae361191d68e551e12a823f5956111a49_cgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-variable-members}
+\Hypertarget{classfactory__method_1_1FactoryCrossover_doc-variable-members}
+\doxysubsection{Documentación de datos miembro}
+\Hypertarget{classfactory__method_1_1FactoryCrossover_a958bbac8cc07bb3330e165078dbe56a7}\index{factory\_method.FactoryCrossover@{factory\_method.FactoryCrossover}!crossing@{crossing}}
+\index{crossing@{crossing}!factory\_method.FactoryCrossover@{factory\_method.FactoryCrossover}}
+\doxysubsubsection{\texorpdfstring{crossing}{crossing}}
+{\footnotesize\ttfamily \label{classfactory__method_1_1FactoryCrossover_a958bbac8cc07bb3330e165078dbe56a7} 
+\mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1Crossover}{Crossover}} factory\+\_\+method.\+Factory\+Crossover.\+crossing\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{FactoryCrossover_8java_source_l00017}{17}} del archivo \mbox{\hyperlink{FactoryCrossover_8java_source}{Factory\+Crossover.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{FactoryCrossover_8java_source_l00024}{create\+Crossover()}}.
+
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{FactoryCrossover_8java}{Factory\+Crossover.\+java}}\end{DoxyCompactItemize}

@@ -1,0 +1,170 @@
+\doxysection{Referencia de la clase evolutionary\+\_\+algorithms.\+complement.\+Univariate}
+\hypertarget{classevolutionary__algorithms_1_1complement_1_1Univariate}{}\label{classevolutionary__algorithms_1_1complement_1_1Univariate}\index{evolutionary\_algorithms.complement.Univariate@{evolutionary\_algorithms.complement.Univariate}}
+
+
+\doxylink{classevolutionary__algorithms_1_1complement_1_1Univariate}{Univariate} -\/ applies univariate distribution strategy.  
+
+
+
+
+Diagrama de herencia de evolutionary\+\_\+algorithms.\+complement.\+Univariate
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=277pt]{classevolutionary__algorithms_1_1complement_1_1Univariate__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagrama de colaboración de evolutionary\+\_\+algorithms.\+complement.\+Univariate\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=277pt]{classevolutionary__algorithms_1_1complement_1_1Univariate__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1Probability}{Probability}} $>$ \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1Univariate_a4732278fca14312bc399c1d313384e26}{distribution}} (List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ fathers)
+\begin{DoxyCompactList}\small\item\em distribution -\/ applies univariate distribution strategy. \end{DoxyCompactList}\item 
+List$<$ String $>$ \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1Univariate_afa13e9ef6e898434b0c99d846e9eac80}{get\+List\+Key}} (Sorted\+Map$<$ String, Object $>$ map)
+\begin{DoxyCompactList}\small\item\em get\+List\+Key -\/ applies univariate distribution strategy. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+\doxylink{classevolutionary__algorithms_1_1complement_1_1Univariate}{Univariate} -\/ applies univariate distribution strategy. 
+
+Definición en la línea \mbox{\hyperlink{Univariate_8java_source_l00014}{14}} del archivo \mbox{\hyperlink{Univariate_8java_source}{Univariate.\+java}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{classevolutionary__algorithms_1_1complement_1_1Univariate_doc-func-members}
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{classevolutionary__algorithms_1_1complement_1_1Univariate_a4732278fca14312bc399c1d313384e26}\index{evolutionary\_algorithms.complement.Univariate@{evolutionary\_algorithms.complement.Univariate}!distribution@{distribution}}
+\index{distribution@{distribution}!evolutionary\_algorithms.complement.Univariate@{evolutionary\_algorithms.complement.Univariate}}
+\doxysubsubsection{\texorpdfstring{distribution()}{distribution()}}
+{\footnotesize\ttfamily \label{classevolutionary__algorithms_1_1complement_1_1Univariate_a4732278fca14312bc399c1d313384e26} 
+List$<$ \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1Probability}{Probability}} $>$ evolutionary\+\_\+algorithms.\+complement.\+Univariate.\+distribution (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$}]{fathers}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+distribution -\/ applies univariate distribution strategy. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em fathers} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+returns the list of probabilities for each variable value. 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1Distribution_a3659ddbe93fb1b752547591eaf141873}{evolutionary\+\_\+algorithms.\+complement.\+Distribution}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{Univariate_8java_source_l00022}{22}} del archivo \mbox{\hyperlink{Univariate_8java_source}{Univariate.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ List<Probability>\ ListProbability\ =\ \textcolor{keyword}{new}\ ArrayList<Probability>();}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ cantV\ =\ fathers.get(0).getCode().size();}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ cantV;\ i++)\ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}[]\ values\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[fathers.size()];}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//llenar\ los\ valores\ de\ cada\ variable}}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ fathers.size();\ j++)\{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ values[j]\ =\ (Integer)\ fathers.get(j).getCode().get(i);}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//para\ cada\ valor\ contar\ la\ cantidad\ de\ veces\ que\ se\ repite}}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ k\ =\ 0;}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (k\ <\ values.length)\ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ count\ =\ 0;}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(values[k]\ !=\ -\/1)\{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ l\ =\ k;}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ temp\ =\ values[k];}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (l\ <\ values.length)\ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(temp\ ==\ values[l])\{}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ count++;}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ values[l]\ =\ -\/1;}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ l++;\ \ \ \ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Probability\ probability\ =\ \textcolor{keyword}{new}\ Probability();}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ prob\ =\ count\ /\ values.length;}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ probability.setKey(i);}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ probability.setValue(temp);}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ probability.setProbability(prob);}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ListProbability.add(probability);}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ k++;}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ListProbability;}
+\DoxyCodeLine{00057\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{Probability_8java_source_l00037}{evolutionary\+\_\+algorithms.\+complement.\+Probability.\+set\+Key()}}, \mbox{\hyperlink{Probability_8java_source_l00023}{evolutionary\+\_\+algorithms.\+complement.\+Probability.\+set\+Probability()}} y \mbox{\hyperlink{Probability_8java_source_l00051}{evolutionary\+\_\+algorithms.\+complement.\+Probability.\+set\+Value()}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classevolutionary__algorithms_1_1complement_1_1Univariate_a4732278fca14312bc399c1d313384e26_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classevolutionary__algorithms_1_1complement_1_1Univariate_afa13e9ef6e898434b0c99d846e9eac80}\index{evolutionary\_algorithms.complement.Univariate@{evolutionary\_algorithms.complement.Univariate}!getListKey@{getListKey}}
+\index{getListKey@{getListKey}!evolutionary\_algorithms.complement.Univariate@{evolutionary\_algorithms.complement.Univariate}}
+\doxysubsubsection{\texorpdfstring{getListKey()}{getListKey()}}
+{\footnotesize\ttfamily \label{classevolutionary__algorithms_1_1complement_1_1Univariate_afa13e9ef6e898434b0c99d846e9eac80} 
+List$<$ String $>$ evolutionary\+\_\+algorithms.\+complement.\+Univariate.\+get\+List\+Key (\begin{DoxyParamCaption}\item[{Sorted\+Map$<$ String, Object $>$}]{map}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+List\+Key -\/ applies univariate distribution strategy. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Sorted\+Map$<$\+String} & \\
+\hline
+{\em map} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+returns the list of keys from the given map. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{Univariate_8java_source_l00065}{65}} del archivo \mbox{\hyperlink{Univariate_8java_source}{Univariate.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ List<String>\ listKey\ =\ \textcolor{keyword}{new}\ ArrayList<String>();}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ String\ key\ =\ map.keySet().toString();}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ String\ returnString\ =\ key.substring(1,\ key.length()\ -\/\ 1);}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ returnString\ =\ returnString\ +\ \textcolor{stringliteral}{"{},\ "{}};}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ countKey\ =\ map.size();}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ countKey;\ j++)\ \{}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ String\ r\ =\ returnString.substring(0,\ returnString.indexOf(\textcolor{charliteral}{','}));}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ returnString\ =\ returnString.substring(returnString.indexOf(\textcolor{charliteral}{','})+2);}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ listKey.add(r);}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ listKey;}
+\DoxyCodeLine{00077\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Univariate_8java}{Univariate.\+java}}\end{DoxyCompactItemize}

@@ -1,0 +1,206 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="es">
+  <compounddef id="classlocal__search_1_1acceptation__type_1_1AcceptableCandidate" kind="class" language="Java" prot="public" abstract="yes">
+    <compoundname>local_search::acceptation_type::AcceptableCandidate</compoundname>
+    <derivedcompoundref refid="classlocal__search_1_1acceptation__type_1_1AcceptAnyone" prot="public" virt="non-virtual">local_search.acceptation_type.AcceptAnyone</derivedcompoundref>
+    <derivedcompoundref refid="classlocal__search_1_1acceptation__type_1_1AcceptBest" prot="public" virt="non-virtual">local_search.acceptation_type.AcceptBest</derivedcompoundref>
+    <derivedcompoundref refid="classlocal__search_1_1acceptation__type_1_1AcceptMulticase" prot="public" virt="non-virtual">local_search.acceptation_type.AcceptMulticase</derivedcompoundref>
+    <derivedcompoundref refid="classlocal__search_1_1acceptation__type_1_1AcceptNotBad" prot="public" virt="non-virtual">local_search.acceptation_type.AcceptNotBad</derivedcompoundref>
+    <derivedcompoundref refid="classlocal__search_1_1acceptation__type_1_1AcceptNotBadT" prot="public" virt="non-virtual">local_search.acceptation_type.AcceptNotBadT</derivedcompoundref>
+    <derivedcompoundref refid="classlocal__search_1_1acceptation__type_1_1AcceptNotBadU" prot="public" virt="non-virtual">local_search.acceptation_type.AcceptNotBadU</derivedcompoundref>
+    <derivedcompoundref refid="classlocal__search_1_1acceptation__type_1_1AcceptNotDominated" prot="public" virt="non-virtual">local_search.acceptation_type.AcceptNotDominated</derivedcompoundref>
+    <derivedcompoundref refid="classlocal__search_1_1acceptation__type_1_1AcceptNotDominatedTabu" prot="public" virt="non-virtual">local_search.acceptation_type.AcceptNotDominatedTabu</derivedcompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classlocal__search_1_1acceptation__type_1_1AcceptableCandidate_1aa9e62e1d2d213c3828d2491b506d0592" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>abstract Boolean</type>
+        <definition>abstract Boolean local_search.acceptation_type.AcceptableCandidate.acceptCandidate</definition>
+        <argsstring>(State stateCurrent, State stateCandidate)</argsstring>
+        <name>acceptCandidate</name>
+        <qualifiedname>local_search.acceptation_type.AcceptableCandidate.acceptCandidate</qualifiedname>
+        <reimplementedby refid="classlocal__search_1_1acceptation__type_1_1AcceptAnyone_1aa08b618877d2ffed2805e11fbb817921">acceptCandidate</reimplementedby>
+        <reimplementedby refid="classlocal__search_1_1acceptation__type_1_1AcceptBest_1a0ecd99df90a9818e14ddf8908cc38626">acceptCandidate</reimplementedby>
+        <reimplementedby refid="classlocal__search_1_1acceptation__type_1_1AcceptMulticase_1a526e452510b7eebe59af4dde0c59b337">acceptCandidate</reimplementedby>
+        <reimplementedby refid="classlocal__search_1_1acceptation__type_1_1AcceptNotBad_1a06c25a1ad9093849dc090b67effe8654">acceptCandidate</reimplementedby>
+        <reimplementedby refid="classlocal__search_1_1acceptation__type_1_1AcceptNotBadT_1ab913b2e75ae2c8a85091ba229f13d123">acceptCandidate</reimplementedby>
+        <reimplementedby refid="classlocal__search_1_1acceptation__type_1_1AcceptNotBadU_1aae18a93b424add171ea18e79645977c7">acceptCandidate</reimplementedby>
+        <reimplementedby refid="classlocal__search_1_1acceptation__type_1_1AcceptNotDominated_1a05fe7b0385dfafe7701f6a4e9b2b80d2">acceptCandidate</reimplementedby>
+        <reimplementedby refid="classlocal__search_1_1acceptation__type_1_1AcceptNotDominatedTabu_1a3182ac113bddb89bb3ea7af704b38835">acceptCandidate</reimplementedby>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>stateCurrent</declname>
+        </param>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>stateCandidate</declname>
+        </param>
+        <exceptions> throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException </exceptions>
+        <briefdescription>
+<para>Evaluate whether a candidate state should be accepted. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stateCurrent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the current state </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stateCandidate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the candidate state </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the candidate should be accepted, false otherwise </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>IllegalArgumentException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>on invalid arguments </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>SecurityException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>on reflective access problems </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ClassNotFoundException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when a referenced class cannot be found </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>InstantiationException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>on reflective instantiation failures </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>IllegalAccessException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>on illegal reflective access </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>InvocationTargetException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when a reflective call throws </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>NoSuchMethodException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when a reflective method lookup fails </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/local_search/acceptation_type/AcceptableCandidate.java" line="28" column="25"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1HillClimbing_1afc5f08a9d50796fdf3bbc8dd3e4d8b87" compoundref="HillClimbing_8java" startline="85" endline="91">metaheuristics.generators.HillClimbing.updateReference</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1HillClimbingRestart_1a7dceb2a864772b9f3b83befa4fe39be8" compoundref="HillClimbingRestart_8java" startline="88" endline="99">metaheuristics.generators.HillClimbingRestart.updateReference</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1LimitThreshold_1a74c3d66b7aba895e95facbced3cac70f" compoundref="LimitThreshold_8java" startline="105" endline="112">metaheuristics.generators.LimitThreshold.updateReference</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_1a7410b42658c2aacb75082a509d1059fc" compoundref="MultiCaseSimulatedAnnealing_8java" startline="129" endline="145">metaheuristics.generators.MultiCaseSimulatedAnnealing.updateReference</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingDistance_1a35ed16f3af3c7fdcbff8165d9674cc9a" compoundref="MultiobjectiveHillClimbingDistance_8java" startline="87" endline="137">metaheuristics.generators.MultiobjectiveHillClimbingDistance.updateReference</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiobjectiveHillClimbingRestart_1ab3716a950049b1d77c4374efd355aa14" compoundref="MultiobjectiveHillClimbingRestart_8java" startline="83" endline="133">metaheuristics.generators.MultiobjectiveHillClimbingRestart.updateReference</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiobjectiveStochasticHillClimbing_1a326b491494f5c4aca1b49cb397d8bcd2" compoundref="MultiobjectiveStochasticHillClimbing_8java" startline="67" endline="74">metaheuristics.generators.MultiobjectiveStochasticHillClimbing.updateReference</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1MultiobjectiveTabuSearch_1a5e7f4e1f1fb436f2fb9c1770b90ee253" compoundref="MultiobjectiveTabuSearch_8java" startline="105" endline="141">metaheuristics.generators.MultiobjectiveTabuSearch.updateReference</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1RandomSearch_1a0ec26b03ce5dd592af4568fa0b4b915e" compoundref="RandomSearch_8java" startline="98" endline="104">metaheuristics.generators.RandomSearch.updateReference</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1SimulatedAnnealing_1af6e00b21dc4f621cbee1a9ed85b9770e" compoundref="SimulatedAnnealing_8java" startline="156" endline="168">metaheuristics.generators.SimulatedAnnealing.updateReference</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1TabuSearch_1a8e5310bc24ca49dccb985a122173936c" compoundref="TabuSearch_8java" startline="133" endline="168">metaheuristics.generators.TabuSearch.updateReference</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="classlocal__search_1_1acceptation__type_1_1AcceptableCandidate" kindref="compound">AcceptableCandidate</ref> - Base type for acceptation strategies. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Abstract contract that all acceptation strategies must implement. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>local_search.acceptation_type.AcceptableCandidate</label>
+        <link refid="classlocal__search_1_1acceptation__type_1_1AcceptableCandidate"/>
+      </node>
+      <node id="2">
+        <label>local_search.acceptation_type.AcceptAnyone</label>
+        <link refid="classlocal__search_1_1acceptation__type_1_1AcceptAnyone"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>local_search.acceptation_type.AcceptBest</label>
+        <link refid="classlocal__search_1_1acceptation__type_1_1AcceptBest"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>local_search.acceptation_type.AcceptMulticase</label>
+        <link refid="classlocal__search_1_1acceptation__type_1_1AcceptMulticase"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>local_search.acceptation_type.AcceptNotBad</label>
+        <link refid="classlocal__search_1_1acceptation__type_1_1AcceptNotBad"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>local_search.acceptation_type.AcceptNotBadT</label>
+        <link refid="classlocal__search_1_1acceptation__type_1_1AcceptNotBadT"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>local_search.acceptation_type.AcceptNotBadU</label>
+        <link refid="classlocal__search_1_1acceptation__type_1_1AcceptNotBadU"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>local_search.acceptation_type.AcceptNotDominated</label>
+        <link refid="classlocal__search_1_1acceptation__type_1_1AcceptNotDominated"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>local_search.acceptation_type.AcceptNotDominatedTabu</label>
+        <link refid="classlocal__search_1_1acceptation__type_1_1AcceptNotDominatedTabu"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>local_search.acceptation_type.AcceptableCandidate</label>
+        <link refid="classlocal__search_1_1acceptation__type_1_1AcceptableCandidate"/>
+      </node>
+    </collaborationgraph>
+    <location file="practica5/src/main/java/local_search/acceptation_type/AcceptableCandidate.java" line="12" column="17" bodyfile="practica5/src/main/java/local_search/acceptation_type/AcceptableCandidate.java" bodystart="12" bodyend="29"/>
+    <listofallmembers>
+      <member refid="classlocal__search_1_1acceptation__type_1_1AcceptableCandidate_1aa9e62e1d2d213c3828d2491b506d0592" prot="public" virt="non-virtual"><scope>local_search::acceptation_type::AcceptableCandidate</scope><name>acceptCandidate</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

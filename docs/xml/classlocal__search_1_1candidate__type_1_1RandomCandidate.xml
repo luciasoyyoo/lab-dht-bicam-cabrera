@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="es">
+  <compounddef id="classlocal__search_1_1candidate__type_1_1RandomCandidate" kind="class" language="Java" prot="public">
+    <compoundname>local_search::candidate_type::RandomCandidate</compoundname>
+    <basecompoundref refid="classlocal__search_1_1candidate__type_1_1SearchCandidate" prot="public" virt="non-virtual">local_search.candidate_type.SearchCandidate</basecompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classlocal__search_1_1candidate__type_1_1RandomCandidate_1a66efbf984c90ee02f81608b3621220a9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+        <definition>State local_search.candidate_type.RandomCandidate.stateSearch</definition>
+        <argsstring>(List&lt; State &gt; listNeighborhood)</argsstring>
+        <name>stateSearch</name>
+        <qualifiedname>local_search.candidate_type.RandomCandidate.stateSearch</qualifiedname>
+        <reimplements refid="classlocal__search_1_1candidate__type_1_1SearchCandidate_1a0f10adc1526fb08f54427c50734f8abf">stateSearch</reimplements>
+        <param>
+          <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+          <declname>listNeighborhood</declname>
+        </param>
+        <briefdescription>
+<para>Uses ThreadLocalRandom for algorithmic (non-cryptographic) randomness. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This RNG is used to decide whether a mutation occurs in the evolutionary algorithm and is not used for security-sensitive purposes. Suppress Sonar security hotspot S2245 for this usage. Choose a random neighbor from the list.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>listNeighborhood</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>list of neighbor states </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a randomly selected <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> from the list </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/local_search/candidate_type/RandomCandidate.java" line="33" column="14" bodyfile="practica5/src/main/java/local_search/candidate_type/RandomCandidate.java" bodystart="33" bodyend="38"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="classlocal__search_1_1candidate__type_1_1RandomCandidate" kindref="compound">RandomCandidate</ref> - select a neighbor at random. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Returns a uniformly random neighbor from the provided list. Uses ThreadLocalRandom for thread-safe, efficient random number generation. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>local_search.candidate_type.RandomCandidate</label>
+        <link refid="classlocal__search_1_1candidate__type_1_1RandomCandidate"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>local_search.candidate_type.SearchCandidate</label>
+        <link refid="classlocal__search_1_1candidate__type_1_1SearchCandidate"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>local_search.candidate_type.RandomCandidate</label>
+        <link refid="classlocal__search_1_1candidate__type_1_1RandomCandidate"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>local_search.candidate_type.SearchCandidate</label>
+        <link refid="classlocal__search_1_1candidate__type_1_1SearchCandidate"/>
+      </node>
+    </collaborationgraph>
+    <location file="practica5/src/main/java/local_search/candidate_type/RandomCandidate.java" line="18" column="7" bodyfile="practica5/src/main/java/local_search/candidate_type/RandomCandidate.java" bodystart="18" bodyend="39"/>
+    <listofallmembers>
+      <member refid="classlocal__search_1_1candidate__type_1_1RandomCandidate_1a66efbf984c90ee02f81608b3621220a9" prot="public" virt="non-virtual"><scope>local_search::candidate_type::RandomCandidate</scope><name>stateSearch</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

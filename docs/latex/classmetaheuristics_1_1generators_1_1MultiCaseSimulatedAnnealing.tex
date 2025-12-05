@@ -1,0 +1,1045 @@
+\doxysection{Referencia de la clase metaheuristics.\+generators.\+Multi\+Case\+Simulated\+Annealing}
+\hypertarget{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing}{}\label{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing}\index{metaheuristics.generators.MultiCaseSimulatedAnnealing@{metaheuristics.generators.MultiCaseSimulatedAnnealing}}
+
+
+\doxylink{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing}{Multi\+Case\+Simulated\+Annealing} -\/ class that implements the Multi-\/\+Case Simulated Annealing metaheuristic.  
+
+
+
+
+Diagrama de herencia de metaheuristics.\+generators.\+Multi\+Case\+Simulated\+Annealing
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagrama de colaboración de metaheuristics.\+generators.\+Multi\+Case\+Simulated\+Annealing\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{Generator\+Type}} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_ad0e6c8dc487b5794f7cdcf7b0b343307}{get\+Type\+Generator}} ()
+\begin{DoxyCompactList}\small\item\em get\+Type\+Generator -\/ get the type of the generator. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a0daa651ae7666a2d738817991a2d4258}{set\+Type\+Generator}} (\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{Generator\+Type}} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a62e5b5c1c25ec1038dcf1cc5d46bffcb}{type\+Generator}})
+\begin{DoxyCompactList}\small\item\em set\+Type\+Generator -\/ set the type of the generator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_aa2a1e55b38502d0e4e2691cfa6cb54fa}{Multi\+Case\+Simulated\+Annealing}} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing}{Multi\+Case\+Simulated\+Annealing} -\/ class that implements the Multi-\/\+Case Simulated Annealing metaheuristic. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a79d89f831f827fff6db6e9757c88f9a0}{generate}} (Integer operatornumber)  throws Illegal\+Argument\+Exception, Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception, Illegal\+Access\+Exception, Invocation\+Target\+Exception, No\+Such\+Method\+Exception 
+\begin{DoxyCompactList}\small\item\em generate -\/ generate a new state based on the operator number. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a2ab229bc663e5fc9b20fef3896f62ba3}{get\+Reference}} ()
+\begin{DoxyCompactList}\small\item\em get\+Reference -\/ get the reference state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_add945410cf71e1645522eeb88391cd1c}{set\+State\+Ref}} (\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} state\+Ref)
+\begin{DoxyCompactList}\small\item\em set\+State\+Ref -\/ set the reference state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a401b66704c6a29d0822fc9ddd047686d}{set\+Initial\+Reference}} (\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} state\+Initial\+Ref)
+\begin{DoxyCompactList}\small\item\em set\+Initial\+Reference -\/ set the initial reference state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a7410b42658c2aacb75082a509d1059fc}{update\+Reference}} (\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} state\+Candidate, Integer count\+Iterations\+Current)  throws Illegal\+Argument\+Exception, Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception, Illegal\+Access\+Exception, Invocation\+Target\+Exception, No\+Such\+Method\+Exception 
+\begin{DoxyCompactList}\small\item\em update\+Reference -\/ update the reference state based on the candidate state. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{Generator\+Type}} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a132fa56d3c4359c1ba2e537eaa5a6bae}{get\+Type}} ()
+\begin{DoxyCompactList}\small\item\em get\+Type -\/ get the type of the generator. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a2fd47aac6c34f16ccb1998c22bbf0f73}{get\+Reference\+List}} ()
+\begin{DoxyCompactList}\small\item\em get\+Reference\+List -\/ get the list of reference states. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a678f3b98bc452c1a5d73b5dfb416cb3c}{get\+Son\+List}} ()
+\begin{DoxyCompactList}\small\item\em get\+Son\+List -\/ get the list of son states. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a17f4e961f5bb5a38a6613a440cd7c48e}{award\+Update\+REF}} (\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} state\+Candidate)
+\begin{DoxyCompactList}\small\item\em award\+Update\+REF -\/ award the update of the reference state. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a887ef9d928358193f9fd968ff08325b2}{get\+Weight}} ()
+\begin{DoxyCompactList}\small\item\em get\+Weight -\/ get the weight of the generator. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a8202a2450a8e7ed4b2d74841d5409f7b}{set\+Weight}} (float \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_af918305439473510fdd41c2d83e7ed51}{weight}})
+\begin{DoxyCompactList}\small\item\em set\+Weight -\/ set the weight of the generator. \end{DoxyCompactList}\item 
+int\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_ad460c5ef2e2b2b04a2485ebe0b443946}{get\+List\+Count\+Better\+Gender}} ()
+\begin{DoxyCompactList}\small\item\em get\+List\+Count\+Better\+Gender -\/ get the list of counts for better gender. \end{DoxyCompactList}\item 
+int\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a40c75ceaf3c16be0904c72072d4967e3}{get\+List\+Count\+Gender}} ()
+\begin{DoxyCompactList}\small\item\em get\+List\+Count\+Gender -\/ get the list of counts for gender. \end{DoxyCompactList}\item 
+float\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_abde3f8037ffa2049fd9378f4e931dab7}{get\+Trace}} ()
+\begin{DoxyCompactList}\small\item\em get\+Trace -\/ get the trace of the generator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Métodos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static Double \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_af8e07e094004ed50e59c401e8ba0d1bf}{get\+Tinitial}} ()
+\item 
+static void \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a101edb4a477543dacec10326a1c7e6ac}{set\+Tinitial}} (Double t)
+\begin{DoxyCompactList}\small\item\em set\+Tinitial -\/ set the initial temperature. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a6e7f02348f1aab2705a5547c1d63d144}{get\+Count\+IterationsT}} ()
+\begin{DoxyCompactList}\small\item\em get\+Count\+IterationsT -\/ get the count of iterations for temperature update. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a1d70af54e0ab927152fc1220800f11ec}{set\+Count\+IterationsT}} (int c)
+\begin{DoxyCompactList}\small\item\em set\+Count\+IterationsT -\/ set the count of iterations for temperature update. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static final double \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_ae904313283345bb7c0bb1f04136b7324}{alpha}} = 0.\+93
+\item 
+static final Double \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a9c2ecfc19b2c2bef039c3f9cb9b230ab}{tfinal}} = 41.\+66
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1CandidateValue}{Candidate\+Value}} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_aab1b3dbd8fd7de1d47fca8f2645a1127}{candidatevalue}}
+\item 
+\mbox{\hyperlink{enumlocal__search_1_1acceptation__type_1_1AcceptType}{Accept\+Type}} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a7d5efc719429a3e391b98595786d90ee}{type\+Acceptation}}
+\item 
+\mbox{\hyperlink{enumlocal__search_1_1complement_1_1StrategyType}{Strategy\+Type}} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a8aa49df2c8d2588fb6ac5c2e2cce69a1}{strategy}}
+\item 
+\mbox{\hyperlink{enumlocal__search_1_1candidate__type_1_1CandidateType}{Candidate\+Type}} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_abe054ef6ed3c6736dbc89e53b4f959e5}{type\+Candidate}}
+\item 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a878f8e42186d6122c9046180771e66ef}{state\+Reference\+SA}}
+\item 
+\mbox{\hyperlink{interfacefactory__interface_1_1IFFactoryAcceptCandidate}{IFFactory\+Accept\+Candidate}} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a9fb71d8f031f1a0a680b3d88fccdaf8f}{ifaccept\+Candidate}}
+\item 
+int \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a23cc5d9eda75894c16e83907e0f0e9e2}{count\+Rept}}
+\item 
+\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{Generator\+Type}} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a62e5b5c1c25ec1038dcf1cc5d46bffcb}{type\+Generator}}
+\item 
+List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a185394457f1d617ab0a5e382fb1f17a1}{list\+State\+Reference}} = new Array\+List$<$\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}$>$()
+\item 
+float \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_af918305439473510fdd41c2d83e7ed51}{weight}}
+\item 
+List$<$ Float $>$ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a643f1d627a09704b0e90168dc69297f9}{list\+Trace}} = new Array\+List$<$Float$>$()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos estáticos privados}
+\begin{DoxyCompactItemize}
+\item 
+static Double \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a33e3cf150442e54295333714a44e1160}{tinitial}} = 250.\+0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Otros miembros heredados}
+\doxysubsection*{Atributos públicos heredados de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator}{metaheuristics.\+generators.\+Generator}}}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a3c0145210385b6257c8fc20cac1f830a}{count\+Gender}}
+\item 
+int \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a43815f3944c514ba3156b0e68482befa}{count\+Better\+Gender}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+\doxylink{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing}{Multi\+Case\+Simulated\+Annealing} -\/ class that implements the Multi-\/\+Case Simulated Annealing metaheuristic. 
+
+Definición en la línea \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00022}{22}} del archivo \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source}{Multi\+Case\+Simulated\+Annealing.\+java}}.
+
+
+
+\label{doc-constructors}
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_doc-constructors}
+\doxysubsection{Documentación de constructores y destructores}
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_aa2a1e55b38502d0e4e2691cfa6cb54fa}\index{metaheuristics.generators.MultiCaseSimulatedAnnealing@{metaheuristics.generators.MultiCaseSimulatedAnnealing}!MultiCaseSimulatedAnnealing@{MultiCaseSimulatedAnnealing}}
+\index{MultiCaseSimulatedAnnealing@{MultiCaseSimulatedAnnealing}!metaheuristics.generators.MultiCaseSimulatedAnnealing@{metaheuristics.generators.MultiCaseSimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{MultiCaseSimulatedAnnealing()}{MultiCaseSimulatedAnnealing()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_aa2a1e55b38502d0e4e2691cfa6cb54fa} 
+metaheuristics.\+generators.\+Multi\+Case\+Simulated\+Annealing.\+Multi\+Case\+Simulated\+Annealing (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxylink{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing}{Multi\+Case\+Simulated\+Annealing} -\/ class that implements the Multi-\/\+Case Simulated Annealing metaheuristic. 
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00073}{73}} del archivo \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source}{Multi\+Case\+Simulated\+Annealing.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ super();}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ this.typeAcceptation\ =\ AcceptType.AcceptMulticase;}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ this.strategy\ =\ StrategyType.NORMAL;}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ this.typeCandidate\ =\ CandidateType.RandomCandidate;}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ this.candidatevalue\ =\ \textcolor{keyword}{new}\ CandidateValue();}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ this.typeGenerator\ =\ GeneratorType.MultiCaseSimulatedAnnealing;}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ this.weight\ =\ 50;}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ listTrace.add(weight);}
+\DoxyCodeLine{00082\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{AcceptType_8java_source_l00015}{local\+\_\+search.\+acceptation\+\_\+type.\+Accept\+Type.\+Accept\+Multicase}}, \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00040}{list\+Trace}}, \mbox{\hyperlink{GeneratorType_8java_source_l00010}{metaheuristics.\+generators.\+Generator\+Type.\+Multi\+Case\+Simulated\+Annealing}}, \mbox{\hyperlink{StrategyType_8java_source_l00018}{local\+\_\+search.\+complement.\+Strategy\+Type.\+NORMAL}}, \mbox{\hyperlink{CandidateType_8java_source_l00020}{local\+\_\+search.\+candidate\+\_\+type.\+Candidate\+Type.\+Random\+Candidate}} y \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00039}{weight}}.
+
+
+
+Referenciado por \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00129}{update\+Reference()}}.
+
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_aa2a1e55b38502d0e4e2691cfa6cb54fa_icgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-func-members}
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_doc-func-members}
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a17f4e961f5bb5a38a6613a440cd7c48e}\index{metaheuristics.generators.MultiCaseSimulatedAnnealing@{metaheuristics.generators.MultiCaseSimulatedAnnealing}!awardUpdateREF@{awardUpdateREF}}
+\index{awardUpdateREF@{awardUpdateREF}!metaheuristics.generators.MultiCaseSimulatedAnnealing@{metaheuristics.generators.MultiCaseSimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{awardUpdateREF()}{awardUpdateREF()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a17f4e961f5bb5a38a6613a440cd7c48e} 
+boolean metaheuristics.\+generators.\+Multi\+Case\+Simulated\+Annealing.\+award\+Update\+REF (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}}]{state\+Candidate}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+award\+Update\+REF -\/ award the update of the reference state. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em state\+Candidate} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+return true if the reference state was updated, false otherwise 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a3513d3953ecc97683f38bcb662b74b9b}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00197}{197}} del archivo \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source}{Multi\+Case\+Simulated\+Annealing.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00200\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a79d89f831f827fff6db6e9757c88f9a0}\index{metaheuristics.generators.MultiCaseSimulatedAnnealing@{metaheuristics.generators.MultiCaseSimulatedAnnealing}!generate@{generate}}
+\index{generate@{generate}!metaheuristics.generators.MultiCaseSimulatedAnnealing@{metaheuristics.generators.MultiCaseSimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{generate()}{generate()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a79d89f831f827fff6db6e9757c88f9a0} 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} metaheuristics.\+generators.\+Multi\+Case\+Simulated\+Annealing.\+generate (\begin{DoxyParamCaption}\item[{Integer}]{operatornumber}{}\end{DoxyParamCaption}) throws Illegal\+Argument\+Exception, Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception, Illegal\+Access\+Exception, Invocation\+Target\+Exception, No\+Such\+Method\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+generate -\/ generate a new state based on the operator number. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em operatornumber} & the operator number to use for generating the new state \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+the generated state 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a06f6f7622b9ce32590eadbdf6bf962b5}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00090}{90}} del archivo \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source}{Multi\+Case\+Simulated\+Annealing.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ Problem\ problem\ =\ Strategy.getStrategy().getProblem();}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ List<State>\ neighborhood\ =\ problem.getOperator().generatedNewState(stateReferenceSA,\ operatornumber);}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ State\ statecandidate\ =\ candidatevalue.stateCandidate(stateReferenceSA,\ typeCandidate,\ strategy,\ operatornumber,\ neighborhood);}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ statecandidate;}
+\DoxyCodeLine{00095\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00024}{candidatevalue}}, \mbox{\hyperlink{classproblem_1_1definition_1_1Operator_a5b6625843e73d938f9235985bf966b34}{problem.\+definition.\+Operator.\+generated\+New\+State()}}, \mbox{\hyperlink{Problem_8java_source_l00131}{problem.\+definition.\+Problem.\+get\+Operator()}}, \mbox{\hyperlink{Strategy_8java_source_l00405}{metaheurictics.\+strategy.\+Strategy.\+get\+Problem()}}, \mbox{\hyperlink{Strategy_8java_source_l00080}{metaheurictics.\+strategy.\+Strategy.\+get\+Strategy()}}, \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00028}{state\+Reference\+SA}}, \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00026}{strategy}} y \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00027}{type\+Candidate}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a79d89f831f827fff6db6e9757c88f9a0_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a6e7f02348f1aab2705a5547c1d63d144}\index{metaheuristics.generators.MultiCaseSimulatedAnnealing@{metaheuristics.generators.MultiCaseSimulatedAnnealing}!getCountIterationsT@{getCountIterationsT}}
+\index{getCountIterationsT@{getCountIterationsT}!metaheuristics.generators.MultiCaseSimulatedAnnealing@{metaheuristics.generators.MultiCaseSimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{getCountIterationsT()}{getCountIterationsT()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a6e7f02348f1aab2705a5547c1d63d144} 
+int metaheuristics.\+generators.\+Multi\+Case\+Simulated\+Annealing.\+get\+Count\+IterationsT (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+get\+Count\+IterationsT -\/ get the count of iterations for temperature update. 
+
+\begin{DoxyReturn}{Devuelve}
+the count of iterations for temperature update 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00150}{150}} del archivo \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source}{Multi\+Case\+Simulated\+Annealing.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ countIterationsT;}
+\DoxyCodeLine{00152\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_ad460c5ef2e2b2b04a2485ebe0b443946}\index{metaheuristics.generators.MultiCaseSimulatedAnnealing@{metaheuristics.generators.MultiCaseSimulatedAnnealing}!getListCountBetterGender@{getListCountBetterGender}}
+\index{getListCountBetterGender@{getListCountBetterGender}!metaheuristics.generators.MultiCaseSimulatedAnnealing@{metaheuristics.generators.MultiCaseSimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{getListCountBetterGender()}{getListCountBetterGender()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_ad460c5ef2e2b2b04a2485ebe0b443946} 
+int\mbox{[}$\,$\mbox{]} metaheuristics.\+generators.\+Multi\+Case\+Simulated\+Annealing.\+get\+List\+Count\+Better\+Gender (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+List\+Count\+Better\+Gender -\/ get the list of counts for better gender. 
+
+\begin{DoxyReturn}{Devuelve}
+the list of counts for better gender 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_ac5bace71f51c16b611ede3ed53263473}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00228}{228}} del archivo \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source}{Multi\+Case\+Simulated\+Annealing.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[0];}
+\DoxyCodeLine{00231\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a40c75ceaf3c16be0904c72072d4967e3}\index{metaheuristics.generators.MultiCaseSimulatedAnnealing@{metaheuristics.generators.MultiCaseSimulatedAnnealing}!getListCountGender@{getListCountGender}}
+\index{getListCountGender@{getListCountGender}!metaheuristics.generators.MultiCaseSimulatedAnnealing@{metaheuristics.generators.MultiCaseSimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{getListCountGender()}{getListCountGender()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a40c75ceaf3c16be0904c72072d4967e3} 
+int\mbox{[}$\,$\mbox{]} metaheuristics.\+generators.\+Multi\+Case\+Simulated\+Annealing.\+get\+List\+Count\+Gender (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+List\+Count\+Gender -\/ get the list of counts for gender. 
+
+\begin{DoxyReturn}{Devuelve}
+the list of counts for gender 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_ac5d6d45ee8017fb87d80aa952edfc34e}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00238}{238}} del archivo \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source}{Multi\+Case\+Simulated\+Annealing.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[0];}
+\DoxyCodeLine{00241\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a2ab229bc663e5fc9b20fef3896f62ba3}\index{metaheuristics.generators.MultiCaseSimulatedAnnealing@{metaheuristics.generators.MultiCaseSimulatedAnnealing}!getReference@{getReference}}
+\index{getReference@{getReference}!metaheuristics.generators.MultiCaseSimulatedAnnealing@{metaheuristics.generators.MultiCaseSimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{getReference()}{getReference()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a2ab229bc663e5fc9b20fef3896f62ba3} 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} metaheuristics.\+generators.\+Multi\+Case\+Simulated\+Annealing.\+get\+Reference (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Reference -\/ get the reference state. 
+
+\begin{DoxyReturn}{Devuelve}
+the reference state 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_aa56dd45a45776f6023b9f74179cc6384}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00102}{102}} del archivo \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source}{Multi\+Case\+Simulated\+Annealing.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ stateReferenceSA;}
+\DoxyCodeLine{00104\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00028}{state\+Reference\+SA}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a2fd47aac6c34f16ccb1998c22bbf0f73}\index{metaheuristics.generators.MultiCaseSimulatedAnnealing@{metaheuristics.generators.MultiCaseSimulatedAnnealing}!getReferenceList@{getReferenceList}}
+\index{getReferenceList@{getReferenceList}!metaheuristics.generators.MultiCaseSimulatedAnnealing@{metaheuristics.generators.MultiCaseSimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{getReferenceList()}{getReferenceList()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a2fd47aac6c34f16ccb1998c22bbf0f73} 
+List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ metaheuristics.\+generators.\+Multi\+Case\+Simulated\+Annealing.\+get\+Reference\+List (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Reference\+List -\/ get the list of reference states. 
+
+\begin{DoxyReturn}{Devuelve}
+the list of reference states 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_ae168237b306de55fe4d6dfda75c7cd13}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00176}{176}} del archivo \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source}{Multi\+Case\+Simulated\+Annealing.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ listStateReference.add(stateReferenceSA.clone());}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ listStateReference;}
+\DoxyCodeLine{00179\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00038}{list\+State\+Reference}} y \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00028}{state\+Reference\+SA}}.
+
+
+
+Referenciado por \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00129}{update\+Reference()}}.
+
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a2fd47aac6c34f16ccb1998c22bbf0f73_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a678f3b98bc452c1a5d73b5dfb416cb3c}\index{metaheuristics.generators.MultiCaseSimulatedAnnealing@{metaheuristics.generators.MultiCaseSimulatedAnnealing}!getSonList@{getSonList}}
+\index{getSonList@{getSonList}!metaheuristics.generators.MultiCaseSimulatedAnnealing@{metaheuristics.generators.MultiCaseSimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{getSonList()}{getSonList()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a678f3b98bc452c1a5d73b5dfb416cb3c} 
+List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ metaheuristics.\+generators.\+Multi\+Case\+Simulated\+Annealing.\+get\+Son\+List (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Son\+List -\/ get the list of son states. 
+
+\begin{DoxyReturn}{Devuelve}
+the list of son states 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_aee09d724c1b3040e7a7ad0b64e341c96}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00186}{186}} del archivo \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source}{Multi\+Case\+Simulated\+Annealing.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00189\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_af8e07e094004ed50e59c401e8ba0d1bf}\index{metaheuristics.generators.MultiCaseSimulatedAnnealing@{metaheuristics.generators.MultiCaseSimulatedAnnealing}!getTinitial@{getTinitial}}
+\index{getTinitial@{getTinitial}!metaheuristics.generators.MultiCaseSimulatedAnnealing@{metaheuristics.generators.MultiCaseSimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{getTinitial()}{getTinitial()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_af8e07e094004ed50e59c401e8ba0d1bf} 
+Double metaheuristics.\+generators.\+Multi\+Case\+Simulated\+Annealing.\+get\+Tinitial (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00059}{59}} del archivo \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source}{Multi\+Case\+Simulated\+Annealing.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ tinitial;}
+\DoxyCodeLine{00061\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00033}{tinitial}}.
+
+
+
+Referenciado por \mbox{\hyperlink{AcceptMulticase_8java_source_l00034}{local\+\_\+search.\+acceptation\+\_\+type.\+Accept\+Multicase.\+accept\+Candidate()}}.
+
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_af8e07e094004ed50e59c401e8ba0d1bf_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_abde3f8037ffa2049fd9378f4e931dab7}\index{metaheuristics.generators.MultiCaseSimulatedAnnealing@{metaheuristics.generators.MultiCaseSimulatedAnnealing}!getTrace@{getTrace}}
+\index{getTrace@{getTrace}!metaheuristics.generators.MultiCaseSimulatedAnnealing@{metaheuristics.generators.MultiCaseSimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{getTrace()}{getTrace()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_abde3f8037ffa2049fd9378f4e931dab7} 
+float\mbox{[}$\,$\mbox{]} metaheuristics.\+generators.\+Multi\+Case\+Simulated\+Annealing.\+get\+Trace (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Trace -\/ get the trace of the generator. 
+
+\begin{DoxyReturn}{Devuelve}
+the trace of the generator 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a75d7f30dd2cb3f92475db8525ac7c6e7}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00248}{248}} del archivo \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source}{Multi\+Case\+Simulated\+Annealing.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this.listTrace\ ==\ \textcolor{keyword}{null})\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{float}[0];}
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}[]\ arr\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{float}[this.listTrace.size()];}
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ this.listTrace.size();\ i++)\ \{}
+\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ \ \ \ \ Float\ v\ =\ this.listTrace.get(i);}
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \ \ \ \ arr[i]\ =\ (v\ ==\ \textcolor{keyword}{null})\ ?\ 0f\ :\ v.floatValue();}
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ arr;}
+\DoxyCodeLine{00257\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00040}{list\+Trace}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a132fa56d3c4359c1ba2e537eaa5a6bae}\index{metaheuristics.generators.MultiCaseSimulatedAnnealing@{metaheuristics.generators.MultiCaseSimulatedAnnealing}!getType@{getType}}
+\index{getType@{getType}!metaheuristics.generators.MultiCaseSimulatedAnnealing@{metaheuristics.generators.MultiCaseSimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a132fa56d3c4359c1ba2e537eaa5a6bae} 
+\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{Generator\+Type}} metaheuristics.\+generators.\+Multi\+Case\+Simulated\+Annealing.\+get\+Type (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Type -\/ get the type of the generator. 
+
+\begin{DoxyReturn}{Devuelve}
+the type of the generator 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a5a123306b43c42d28cd1d6e17f8067a5}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00167}{167}} del archivo \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source}{Multi\+Case\+Simulated\+Annealing.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this.typeGenerator;}
+\DoxyCodeLine{00169\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_ad0e6c8dc487b5794f7cdcf7b0b343307}\index{metaheuristics.generators.MultiCaseSimulatedAnnealing@{metaheuristics.generators.MultiCaseSimulatedAnnealing}!getTypeGenerator@{getTypeGenerator}}
+\index{getTypeGenerator@{getTypeGenerator}!metaheuristics.generators.MultiCaseSimulatedAnnealing@{metaheuristics.generators.MultiCaseSimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{getTypeGenerator()}{getTypeGenerator()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_ad0e6c8dc487b5794f7cdcf7b0b343307} 
+\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{Generator\+Type}} metaheuristics.\+generators.\+Multi\+Case\+Simulated\+Annealing.\+get\+Type\+Generator (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Type\+Generator -\/ get the type of the generator. 
+
+\begin{DoxyReturn}{Devuelve}
+the type of the generator 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00046}{46}} del archivo \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source}{Multi\+Case\+Simulated\+Annealing.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ typeGenerator;}
+\DoxyCodeLine{00048\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00037}{type\+Generator}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a887ef9d928358193f9fd968ff08325b2}\index{metaheuristics.generators.MultiCaseSimulatedAnnealing@{metaheuristics.generators.MultiCaseSimulatedAnnealing}!getWeight@{getWeight}}
+\index{getWeight@{getWeight}!metaheuristics.generators.MultiCaseSimulatedAnnealing@{metaheuristics.generators.MultiCaseSimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{getWeight()}{getWeight()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a887ef9d928358193f9fd968ff08325b2} 
+float metaheuristics.\+generators.\+Multi\+Case\+Simulated\+Annealing.\+get\+Weight (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get\+Weight -\/ get the weight of the generator. 
+
+\begin{DoxyReturn}{Devuelve}
+the weight of the generator 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a64f2b824081c7af593bf9aa8eabf2c9e}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00208}{208}} del archivo \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source}{Multi\+Case\+Simulated\+Annealing.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00211\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a1d70af54e0ab927152fc1220800f11ec}\index{metaheuristics.generators.MultiCaseSimulatedAnnealing@{metaheuristics.generators.MultiCaseSimulatedAnnealing}!setCountIterationsT@{setCountIterationsT}}
+\index{setCountIterationsT@{setCountIterationsT}!metaheuristics.generators.MultiCaseSimulatedAnnealing@{metaheuristics.generators.MultiCaseSimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{setCountIterationsT()}{setCountIterationsT()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a1d70af54e0ab927152fc1220800f11ec} 
+void metaheuristics.\+generators.\+Multi\+Case\+Simulated\+Annealing.\+set\+Count\+IterationsT (\begin{DoxyParamCaption}\item[{int}]{c}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+set\+Count\+IterationsT -\/ set the count of iterations for temperature update. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em c} & the count of iterations to set \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00158}{158}} del archivo \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source}{Multi\+Case\+Simulated\+Annealing.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ countIterationsT\ =\ c;}
+\DoxyCodeLine{00160\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a401b66704c6a29d0822fc9ddd047686d}\index{metaheuristics.generators.MultiCaseSimulatedAnnealing@{metaheuristics.generators.MultiCaseSimulatedAnnealing}!setInitialReference@{setInitialReference}}
+\index{setInitialReference@{setInitialReference}!metaheuristics.generators.MultiCaseSimulatedAnnealing@{metaheuristics.generators.MultiCaseSimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{setInitialReference()}{setInitialReference()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a401b66704c6a29d0822fc9ddd047686d} 
+void metaheuristics.\+generators.\+Multi\+Case\+Simulated\+Annealing.\+set\+Initial\+Reference (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}}]{state\+Initial\+Ref}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+set\+Initial\+Reference -\/ set the initial reference state. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em state\+Initial\+Ref} & the initial reference state to set \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_aa9f7c4c983705f843b8fcc81e4aa8ba4}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00119}{119}} del archivo \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source}{Multi\+Case\+Simulated\+Annealing.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ this.stateReferenceSA\ =\ stateInitialRef;}
+\DoxyCodeLine{00121\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_add945410cf71e1645522eeb88391cd1c}\index{metaheuristics.generators.MultiCaseSimulatedAnnealing@{metaheuristics.generators.MultiCaseSimulatedAnnealing}!setStateRef@{setStateRef}}
+\index{setStateRef@{setStateRef}!metaheuristics.generators.MultiCaseSimulatedAnnealing@{metaheuristics.generators.MultiCaseSimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{setStateRef()}{setStateRef()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_add945410cf71e1645522eeb88391cd1c} 
+void metaheuristics.\+generators.\+Multi\+Case\+Simulated\+Annealing.\+set\+State\+Ref (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}}]{state\+Ref}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+set\+State\+Ref -\/ set the reference state. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em state\+Ref} & the reference state to set \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00110}{110}} del archivo \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source}{Multi\+Case\+Simulated\+Annealing.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ this.stateReferenceSA\ =\ stateRef;}
+\DoxyCodeLine{00112\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a101edb4a477543dacec10326a1c7e6ac}\index{metaheuristics.generators.MultiCaseSimulatedAnnealing@{metaheuristics.generators.MultiCaseSimulatedAnnealing}!setTinitial@{setTinitial}}
+\index{setTinitial@{setTinitial}!metaheuristics.generators.MultiCaseSimulatedAnnealing@{metaheuristics.generators.MultiCaseSimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{setTinitial()}{setTinitial()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a101edb4a477543dacec10326a1c7e6ac} 
+void metaheuristics.\+generators.\+Multi\+Case\+Simulated\+Annealing.\+set\+Tinitial (\begin{DoxyParamCaption}\item[{Double}]{t}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+set\+Tinitial -\/ set the initial temperature. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em t} & the initial temperature to set \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00066}{66}} del archivo \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source}{Multi\+Case\+Simulated\+Annealing.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ tinitial\ =\ t;}
+\DoxyCodeLine{00068\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00033}{tinitial}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a0daa651ae7666a2d738817991a2d4258}\index{metaheuristics.generators.MultiCaseSimulatedAnnealing@{metaheuristics.generators.MultiCaseSimulatedAnnealing}!setTypeGenerator@{setTypeGenerator}}
+\index{setTypeGenerator@{setTypeGenerator}!metaheuristics.generators.MultiCaseSimulatedAnnealing@{metaheuristics.generators.MultiCaseSimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{setTypeGenerator()}{setTypeGenerator()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a0daa651ae7666a2d738817991a2d4258} 
+void metaheuristics.\+generators.\+Multi\+Case\+Simulated\+Annealing.\+set\+Type\+Generator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{Generator\+Type}}}]{type\+Generator}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+set\+Type\+Generator -\/ set the type of the generator. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em type\+Generator} & the type of the generator to set \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00054}{54}} del archivo \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source}{Multi\+Case\+Simulated\+Annealing.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ this.typeGenerator\ =\ typeGenerator;}
+\DoxyCodeLine{00056\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00037}{type\+Generator}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a8202a2450a8e7ed4b2d74841d5409f7b}\index{metaheuristics.generators.MultiCaseSimulatedAnnealing@{metaheuristics.generators.MultiCaseSimulatedAnnealing}!setWeight@{setWeight}}
+\index{setWeight@{setWeight}!metaheuristics.generators.MultiCaseSimulatedAnnealing@{metaheuristics.generators.MultiCaseSimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{setWeight()}{setWeight()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a8202a2450a8e7ed4b2d74841d5409f7b} 
+void metaheuristics.\+generators.\+Multi\+Case\+Simulated\+Annealing.\+set\+Weight (\begin{DoxyParamCaption}\item[{float}]{weight}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+set\+Weight -\/ set the weight of the generator. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em weight} & the weight to set \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a8b3c66b57b4c739666989fbce667eb40}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00218}{218}} del archivo \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source}{Multi\+Case\+Simulated\+Annealing.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00221\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00039}{weight}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a7410b42658c2aacb75082a509d1059fc}\index{metaheuristics.generators.MultiCaseSimulatedAnnealing@{metaheuristics.generators.MultiCaseSimulatedAnnealing}!updateReference@{updateReference}}
+\index{updateReference@{updateReference}!metaheuristics.generators.MultiCaseSimulatedAnnealing@{metaheuristics.generators.MultiCaseSimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{updateReference()}{updateReference()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a7410b42658c2aacb75082a509d1059fc} 
+void metaheuristics.\+generators.\+Multi\+Case\+Simulated\+Annealing.\+update\+Reference (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}}]{state\+Candidate}{, }\item[{Integer}]{count\+Iterations\+Current}{}\end{DoxyParamCaption}) throws Illegal\+Argument\+Exception, Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception, Illegal\+Access\+Exception, Invocation\+Target\+Exception, No\+Such\+Method\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+update\+Reference -\/ update the reference state based on the candidate state. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em state\+Candidate} & \\
+\hline
+{\em count\+Iterations\+Current} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_aa1c5878953f2111221b21cb9b1e6cc9f}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00129}{129}} del archivo \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source}{Multi\+Case\+Simulated\+Annealing.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ countRept\ =\ MultiCaseSimulatedAnnealing.getCountIterationsT();}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ ifacceptCandidate\ =\ \textcolor{keyword}{new}\ FactoryAcceptCandidate();}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ AcceptableCandidate\ candidate\ =\ ifacceptCandidate.createAcceptCandidate(typeAcceptation);}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ Boolean\ accept\ =\ candidate.acceptCandidate(stateReferenceSA,\ stateCandidate);}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(accept.equals(\textcolor{keyword}{true}))}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ stateReferenceSA\ =\ stateCandidate.clone();}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(countIterationsCurrent.equals(MultiCaseSimulatedAnnealing.getCountIterationsT()))\{}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ update\ via\ accessors\ to\ avoid\ writing\ static\ fields\ inside\ an\ instance\ method}}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ MultiCaseSimulatedAnnealing.setTinitial(MultiCaseSimulatedAnnealing.getTinitial()\ *\ alpha);}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Variante\ Fast\ MOSA}}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}La\ T:"{}}\ +\ MultiCaseSimulatedAnnealing.getTinitial());}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ MultiCaseSimulatedAnnealing.setCountIterationsT(MultiCaseSimulatedAnnealing.getCountIterationsT()\ +\ countRept);}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}La\ Cant\ es:\ "{}}\ +\ MultiCaseSimulatedAnnealing.getCountIterationsT());}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ getReferenceList();}
+\DoxyCodeLine{00145\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1AcceptableCandidate_aa9e62e1d2d213c3828d2491b506d0592}{local\+\_\+search.\+acceptation\+\_\+type.\+Acceptable\+Candidate.\+accept\+Candidate()}}, \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00031}{alpha}}, \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00036}{count\+Rept}}, \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00176}{get\+Reference\+List()}}, \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00029}{ifaccept\+Candidate}}, \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00073}{Multi\+Case\+Simulated\+Annealing()}}, \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00028}{state\+Reference\+SA}} y \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00025}{type\+Acceptation}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a7410b42658c2aacb75082a509d1059fc_cgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-variable-members}
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_doc-variable-members}
+\doxysubsection{Documentación de datos miembro}
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_ae904313283345bb7c0bb1f04136b7324}\index{metaheuristics.generators.MultiCaseSimulatedAnnealing@{metaheuristics.generators.MultiCaseSimulatedAnnealing}!alpha@{alpha}}
+\index{alpha@{alpha}!metaheuristics.generators.MultiCaseSimulatedAnnealing@{metaheuristics.generators.MultiCaseSimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{alpha}{alpha}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_ae904313283345bb7c0bb1f04136b7324} 
+final double metaheuristics.\+generators.\+Multi\+Case\+Simulated\+Annealing.\+alpha = 0.\+93\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00031}{31}} del archivo \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source}{Multi\+Case\+Simulated\+Annealing.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00129}{update\+Reference()}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_aab1b3dbd8fd7de1d47fca8f2645a1127}\index{metaheuristics.generators.MultiCaseSimulatedAnnealing@{metaheuristics.generators.MultiCaseSimulatedAnnealing}!candidatevalue@{candidatevalue}}
+\index{candidatevalue@{candidatevalue}!metaheuristics.generators.MultiCaseSimulatedAnnealing@{metaheuristics.generators.MultiCaseSimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{candidatevalue}{candidatevalue}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_aab1b3dbd8fd7de1d47fca8f2645a1127} 
+\mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1CandidateValue}{Candidate\+Value}} metaheuristics.\+generators.\+Multi\+Case\+Simulated\+Annealing.\+candidatevalue\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00024}{24}} del archivo \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source}{Multi\+Case\+Simulated\+Annealing.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00090}{generate()}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a23cc5d9eda75894c16e83907e0f0e9e2}\index{metaheuristics.generators.MultiCaseSimulatedAnnealing@{metaheuristics.generators.MultiCaseSimulatedAnnealing}!countRept@{countRept}}
+\index{countRept@{countRept}!metaheuristics.generators.MultiCaseSimulatedAnnealing@{metaheuristics.generators.MultiCaseSimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{countRept}{countRept}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a23cc5d9eda75894c16e83907e0f0e9e2} 
+int metaheuristics.\+generators.\+Multi\+Case\+Simulated\+Annealing.\+count\+Rept\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00036}{36}} del archivo \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source}{Multi\+Case\+Simulated\+Annealing.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00129}{update\+Reference()}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a9fb71d8f031f1a0a680b3d88fccdaf8f}\index{metaheuristics.generators.MultiCaseSimulatedAnnealing@{metaheuristics.generators.MultiCaseSimulatedAnnealing}!ifacceptCandidate@{ifacceptCandidate}}
+\index{ifacceptCandidate@{ifacceptCandidate}!metaheuristics.generators.MultiCaseSimulatedAnnealing@{metaheuristics.generators.MultiCaseSimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{ifacceptCandidate}{ifacceptCandidate}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a9fb71d8f031f1a0a680b3d88fccdaf8f} 
+\mbox{\hyperlink{interfacefactory__interface_1_1IFFactoryAcceptCandidate}{IFFactory\+Accept\+Candidate}} metaheuristics.\+generators.\+Multi\+Case\+Simulated\+Annealing.\+ifaccept\+Candidate\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00029}{29}} del archivo \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source}{Multi\+Case\+Simulated\+Annealing.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00129}{update\+Reference()}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a185394457f1d617ab0a5e382fb1f17a1}\index{metaheuristics.generators.MultiCaseSimulatedAnnealing@{metaheuristics.generators.MultiCaseSimulatedAnnealing}!listStateReference@{listStateReference}}
+\index{listStateReference@{listStateReference}!metaheuristics.generators.MultiCaseSimulatedAnnealing@{metaheuristics.generators.MultiCaseSimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{listStateReference}{listStateReference}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a185394457f1d617ab0a5e382fb1f17a1} 
+List$<$\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}$>$ metaheuristics.\+generators.\+Multi\+Case\+Simulated\+Annealing.\+list\+State\+Reference = new Array\+List$<$\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}$>$()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00038}{38}} del archivo \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source}{Multi\+Case\+Simulated\+Annealing.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00176}{get\+Reference\+List()}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a643f1d627a09704b0e90168dc69297f9}\index{metaheuristics.generators.MultiCaseSimulatedAnnealing@{metaheuristics.generators.MultiCaseSimulatedAnnealing}!listTrace@{listTrace}}
+\index{listTrace@{listTrace}!metaheuristics.generators.MultiCaseSimulatedAnnealing@{metaheuristics.generators.MultiCaseSimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{listTrace}{listTrace}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a643f1d627a09704b0e90168dc69297f9} 
+List$<$Float$>$ metaheuristics.\+generators.\+Multi\+Case\+Simulated\+Annealing.\+list\+Trace = new Array\+List$<$Float$>$()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00040}{40}} del archivo \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source}{Multi\+Case\+Simulated\+Annealing.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00248}{get\+Trace()}} y \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00073}{Multi\+Case\+Simulated\+Annealing()}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a878f8e42186d6122c9046180771e66ef}\index{metaheuristics.generators.MultiCaseSimulatedAnnealing@{metaheuristics.generators.MultiCaseSimulatedAnnealing}!stateReferenceSA@{stateReferenceSA}}
+\index{stateReferenceSA@{stateReferenceSA}!metaheuristics.generators.MultiCaseSimulatedAnnealing@{metaheuristics.generators.MultiCaseSimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{stateReferenceSA}{stateReferenceSA}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a878f8e42186d6122c9046180771e66ef} 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} metaheuristics.\+generators.\+Multi\+Case\+Simulated\+Annealing.\+state\+Reference\+SA\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00028}{28}} del archivo \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source}{Multi\+Case\+Simulated\+Annealing.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00090}{generate()}}, \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00102}{get\+Reference()}}, \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00176}{get\+Reference\+List()}} y \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00129}{update\+Reference()}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a8aa49df2c8d2588fb6ac5c2e2cce69a1}\index{metaheuristics.generators.MultiCaseSimulatedAnnealing@{metaheuristics.generators.MultiCaseSimulatedAnnealing}!strategy@{strategy}}
+\index{strategy@{strategy}!metaheuristics.generators.MultiCaseSimulatedAnnealing@{metaheuristics.generators.MultiCaseSimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{strategy}{strategy}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a8aa49df2c8d2588fb6ac5c2e2cce69a1} 
+\mbox{\hyperlink{enumlocal__search_1_1complement_1_1StrategyType}{Strategy\+Type}} metaheuristics.\+generators.\+Multi\+Case\+Simulated\+Annealing.\+strategy\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00026}{26}} del archivo \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source}{Multi\+Case\+Simulated\+Annealing.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00090}{generate()}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a9c2ecfc19b2c2bef039c3f9cb9b230ab}\index{metaheuristics.generators.MultiCaseSimulatedAnnealing@{metaheuristics.generators.MultiCaseSimulatedAnnealing}!tfinal@{tfinal}}
+\index{tfinal@{tfinal}!metaheuristics.generators.MultiCaseSimulatedAnnealing@{metaheuristics.generators.MultiCaseSimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{tfinal}{tfinal}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a9c2ecfc19b2c2bef039c3f9cb9b230ab} 
+final Double metaheuristics.\+generators.\+Multi\+Case\+Simulated\+Annealing.\+tfinal = 41.\+66\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00034}{34}} del archivo \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source}{Multi\+Case\+Simulated\+Annealing.\+java}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a33e3cf150442e54295333714a44e1160}\index{metaheuristics.generators.MultiCaseSimulatedAnnealing@{metaheuristics.generators.MultiCaseSimulatedAnnealing}!tinitial@{tinitial}}
+\index{tinitial@{tinitial}!metaheuristics.generators.MultiCaseSimulatedAnnealing@{metaheuristics.generators.MultiCaseSimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{tinitial}{tinitial}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a33e3cf150442e54295333714a44e1160} 
+Double metaheuristics.\+generators.\+Multi\+Case\+Simulated\+Annealing.\+tinitial = 250.\+0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00033}{33}} del archivo \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source}{Multi\+Case\+Simulated\+Annealing.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00059}{get\+Tinitial()}} y \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00066}{set\+Tinitial()}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a7d5efc719429a3e391b98595786d90ee}\index{metaheuristics.generators.MultiCaseSimulatedAnnealing@{metaheuristics.generators.MultiCaseSimulatedAnnealing}!typeAcceptation@{typeAcceptation}}
+\index{typeAcceptation@{typeAcceptation}!metaheuristics.generators.MultiCaseSimulatedAnnealing@{metaheuristics.generators.MultiCaseSimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{typeAcceptation}{typeAcceptation}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a7d5efc719429a3e391b98595786d90ee} 
+\mbox{\hyperlink{enumlocal__search_1_1acceptation__type_1_1AcceptType}{Accept\+Type}} metaheuristics.\+generators.\+Multi\+Case\+Simulated\+Annealing.\+type\+Acceptation\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00025}{25}} del archivo \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source}{Multi\+Case\+Simulated\+Annealing.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00129}{update\+Reference()}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_abe054ef6ed3c6736dbc89e53b4f959e5}\index{metaheuristics.generators.MultiCaseSimulatedAnnealing@{metaheuristics.generators.MultiCaseSimulatedAnnealing}!typeCandidate@{typeCandidate}}
+\index{typeCandidate@{typeCandidate}!metaheuristics.generators.MultiCaseSimulatedAnnealing@{metaheuristics.generators.MultiCaseSimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{typeCandidate}{typeCandidate}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_abe054ef6ed3c6736dbc89e53b4f959e5} 
+\mbox{\hyperlink{enumlocal__search_1_1candidate__type_1_1CandidateType}{Candidate\+Type}} metaheuristics.\+generators.\+Multi\+Case\+Simulated\+Annealing.\+type\+Candidate\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00027}{27}} del archivo \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source}{Multi\+Case\+Simulated\+Annealing.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00090}{generate()}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a62e5b5c1c25ec1038dcf1cc5d46bffcb}\index{metaheuristics.generators.MultiCaseSimulatedAnnealing@{metaheuristics.generators.MultiCaseSimulatedAnnealing}!typeGenerator@{typeGenerator}}
+\index{typeGenerator@{typeGenerator}!metaheuristics.generators.MultiCaseSimulatedAnnealing@{metaheuristics.generators.MultiCaseSimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{typeGenerator}{typeGenerator}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_a62e5b5c1c25ec1038dcf1cc5d46bffcb} 
+\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{Generator\+Type}} metaheuristics.\+generators.\+Multi\+Case\+Simulated\+Annealing.\+type\+Generator\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00037}{37}} del archivo \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source}{Multi\+Case\+Simulated\+Annealing.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00046}{get\+Type\+Generator()}} y \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00054}{set\+Type\+Generator()}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_af918305439473510fdd41c2d83e7ed51}\index{metaheuristics.generators.MultiCaseSimulatedAnnealing@{metaheuristics.generators.MultiCaseSimulatedAnnealing}!weight@{weight}}
+\index{weight@{weight}!metaheuristics.generators.MultiCaseSimulatedAnnealing@{metaheuristics.generators.MultiCaseSimulatedAnnealing}}
+\doxysubsubsection{\texorpdfstring{weight}{weight}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1MultiCaseSimulatedAnnealing_af918305439473510fdd41c2d83e7ed51} 
+float metaheuristics.\+generators.\+Multi\+Case\+Simulated\+Annealing.\+weight\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00039}{39}} del archivo \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source}{Multi\+Case\+Simulated\+Annealing.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00073}{Multi\+Case\+Simulated\+Annealing()}} y \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00218}{set\+Weight()}}.
+
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java}{Multi\+Case\+Simulated\+Annealing.\+java}}\end{DoxyCompactItemize}

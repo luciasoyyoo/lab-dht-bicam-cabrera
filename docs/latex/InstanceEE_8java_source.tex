@@ -1,0 +1,48 @@
+\doxysection{Instance\+EE.\+java}
+\hypertarget{InstanceEE_8java_source}{}\label{InstanceEE_8java_source}\index{InstanceEE.java@{InstanceEE.java}}
+\mbox{\hyperlink{InstanceEE_8java}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{InstanceEE_8java_source_l00001}00001\ \textcolor{keyword}{package\ }metaheuristics.generators;}
+\DoxyCodeLine{\Hypertarget{InstanceEE_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{InstanceEE_8java_source_l00003}00003\ \textcolor{keyword}{import}\ factory\_method.FactoryGenerator;}
+\DoxyCodeLine{\Hypertarget{InstanceEE_8java_source_l00004}00004\ \textcolor{keyword}{import}\ java.util.logging.Level;}
+\DoxyCodeLine{\Hypertarget{InstanceEE_8java_source_l00005}00005\ \textcolor{keyword}{import}\ java.util.logging.Logger;}
+\DoxyCodeLine{\Hypertarget{InstanceEE_8java_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{InstanceEE_8java_source_l00010}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1InstanceEE}{00010}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1InstanceEE}{InstanceEE}}\ \textcolor{keyword}{implements}\ Runnable\ \{}
+\DoxyCodeLine{\Hypertarget{InstanceEE_8java_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{InstanceEE_8java_source_l00012}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1InstanceEE_a470b5e7e9cbee9f2b8bc584f1a36d810}{00012}}\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keyword}{final}\ Logger\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1InstanceEE_a470b5e7e9cbee9f2b8bc584f1a36d810}{LOGGER}}\ =\ Logger.getLogger(\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1InstanceEE}{InstanceEE}}.class.getName());}
+\DoxyCodeLine{\Hypertarget{InstanceEE_8java_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{InstanceEE_8java_source_l00014}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1InstanceEE_a6d98a494ddfe4fb1042817618cd825f0}{00014}}\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{boolean}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1InstanceEE_a6d98a494ddfe4fb1042817618cd825f0}{terminate}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{InstanceEE_8java_source_l00015}00015\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{InstanceEE_8java_source_l00019}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1InstanceEE_a0b7588c73c2a82f79b2282c83bf4b9c8}{00019}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1InstanceEE_a0b7588c73c2a82f79b2282c83bf4b9c8}{run}}()\ \{}
+\DoxyCodeLine{\Hypertarget{InstanceEE_8java_source_l00020}00020\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classfactory__method_1_1FactoryGenerator}{FactoryGenerator}}\ ifFactoryGenerator\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classfactory__method_1_1FactoryGenerator}{FactoryGenerator}}();}
+\DoxyCodeLine{\Hypertarget{InstanceEE_8java_source_l00021}00021\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator}{Generator}}\ generatorEE\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{InstanceEE_8java_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\Hypertarget{InstanceEE_8java_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ generatorEE\ =\ ifFactoryGenerator.\mbox{\hyperlink{classfactory__method_1_1FactoryGenerator_a76c269b114cbf643e92a7467b7cf21f7}{createGenerator}}(\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{GeneratorType}}.\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType_afc90843afb31f8fd742441578f70e188}{EvolutionStrategies}});}
+\DoxyCodeLine{\Hypertarget{InstanceEE_8java_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (Exception\ e)\ \{}
+\DoxyCodeLine{\Hypertarget{InstanceEE_8java_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Log\ exception\ instead\ of\ printing\ stack\ trace\ to\ avoid\ debug\ output\ in\ production}}
+\DoxyCodeLine{\Hypertarget{InstanceEE_8java_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1InstanceEE_a470b5e7e9cbee9f2b8bc584f1a36d810}{LOGGER}}.log(Level.SEVERE,\ \textcolor{stringliteral}{"{}Failed\ to\ create\ EvolutionStrategies\ generator"{}},\ e);}
+\DoxyCodeLine{\Hypertarget{InstanceEE_8java_source_l00027}00027\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{InstanceEE_8java_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{boolean}\ find\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{InstanceEE_8java_source_l00029}00029\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ i\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{InstanceEE_8java_source_l00030}00030\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (find\ ==\ \textcolor{keyword}{false})\ \{}
+\DoxyCodeLine{\Hypertarget{InstanceEE_8java_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiGenerator}{MultiGenerator}}.\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiGenerator_ab331905baebb433340e05d19e174340b}{getListGenerators}}()[i].\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a5a123306b43c42d28cd1d6e17f8067a5}{getType}}().equals(\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{GeneratorType}}.\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType_afc90843afb31f8fd742441578f70e188}{EvolutionStrategies}}))\{}
+\DoxyCodeLine{\Hypertarget{InstanceEE_8java_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiGenerator}{MultiGenerator}}.\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1MultiGenerator_ab331905baebb433340e05d19e174340b}{getListGenerators}}()[i]\ =\ generatorEE;}
+\DoxyCodeLine{\Hypertarget{InstanceEE_8java_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ find\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{InstanceEE_8java_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{InstanceEE_8java_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ i++;\ \ \ }
+\DoxyCodeLine{\Hypertarget{InstanceEE_8java_source_l00036}00036\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{InstanceEE_8java_source_l00037}00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1InstanceEE_a6d98a494ddfe4fb1042817618cd825f0}{terminate}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{InstanceEE_8java_source_l00038}00038\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{InstanceEE_8java_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{InstanceEE_8java_source_l00044}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1InstanceEE_a597780fabf84aabd766637b679b66ecf}{00044}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{boolean}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1InstanceEE_a597780fabf84aabd766637b679b66ecf}{isTerminate}}()\ \{}
+\DoxyCodeLine{\Hypertarget{InstanceEE_8java_source_l00045}00045\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1InstanceEE_a6d98a494ddfe4fb1042817618cd825f0}{terminate}};}
+\DoxyCodeLine{\Hypertarget{InstanceEE_8java_source_l00046}00046\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{InstanceEE_8java_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{InstanceEE_8java_source_l00052}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1InstanceEE_a971c0edca64fe1d19463918c7f760837}{00052}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1InstanceEE_a971c0edca64fe1d19463918c7f760837}{setTerminate}}(\textcolor{keywordtype}{boolean}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1InstanceEE_a6d98a494ddfe4fb1042817618cd825f0}{terminate}})\ \{}
+\DoxyCodeLine{\Hypertarget{InstanceEE_8java_source_l00053}00053\ \ \ \ \ \ \ \ \ this.terminate\ =\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1InstanceEE_a6d98a494ddfe4fb1042817618cd825f0}{terminate}};}
+\DoxyCodeLine{\Hypertarget{InstanceEE_8java_source_l00054}00054\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{InstanceEE_8java_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{InstanceEE_8java_source_l00056}00056\ \}}
+
+\end{DoxyCode}

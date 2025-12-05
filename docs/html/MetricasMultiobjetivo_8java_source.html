@@ -1,0 +1,270 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>practica5: Archivo de código fuente MetricasMultiobjetivo.java</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">practica5
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('MetricasMultiobjetivo_8java_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">MetricasMultiobjetivo.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="MetricasMultiobjetivo_8java.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">package </span>problem.extension;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">import</span> java.io.IOException;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">import</span> java.util.ArrayList;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">import</span> java.util.Iterator;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">import</span> java.util.LinkedList;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">import</span> java.util.List;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">import</span> jxl.read.biff.BiffException;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">import</span> problem.definition.State;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span></div>
+<div class="foldopen" id="foldopen00018" data-start="{" data-end="};">
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classproblem_1_1extension_1_1MetricasMultiobjetivo.html">   18</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classproblem_1_1extension_1_1MetricasMultiobjetivo.html">MetricasMultiobjetivo</a> {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">// % de soluciones q no son miembros del frente de pareto verdadero</span></div>
+<div class="foldopen" id="foldopen00029" data-start="{" data-end="}">
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="classproblem_1_1extension_1_1MetricasMultiobjetivo.html#a4472830ebe1a6fe8bd33f701316552b1">   29</a></span>    <span class="keyword">public</span> <span class="keywordtype">double</span> <a class="code hl_function" href="classproblem_1_1extension_1_1MetricasMultiobjetivo.html#a4472830ebe1a6fe8bd33f701316552b1">TasaError</a>(List&lt;State&gt; solutionsFPcurrent, List&lt;State&gt; solutionsFPtrue) <span class="keywordflow">throws</span> BiffException, IOException{</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keywordtype">float</span> tasaError = 0;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; solutionsFPcurrent.size() ; i++) { <span class="comment">// frente de pareto actual</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            <a class="code hl_class" href="classproblem_1_1definition_1_1State.html">State</a> solutionVO = solutionsFPcurrent.get(i);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            <span class="keywordflow">if</span>(!<a class="code hl_function" href="classproblem_1_1extension_1_1MetricasMultiobjetivo.html#a0baaa7dba3706f16de008d747a7548a1">Contains</a>(solutionVO, solutionsFPtrue)){ <span class="comment">// no esta en el frente de pareto verdadero </span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                tasaError++;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            }</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        }</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keywordtype">double</span> total = tasaError/solutionsFPcurrent.size();</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="comment">//System.out.println(solutionsFP.size() + &quot;/&quot; + solutions.size() + &quot;/&quot; + total);</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="keywordflow">return</span> total;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    }</div>
+</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment">// % Indica  qué  tan  lejos  están  los  elementos  del frente  de  Pareto  actual  respecto  al  frente  de  Pareto  verdadero    </span></div>
+<div class="foldopen" id="foldopen00053" data-start="{" data-end="}">
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="classproblem_1_1extension_1_1MetricasMultiobjetivo.html#a30a03c8819f7191b7bfe09000d33532f">   53</a></span>    <span class="keyword">public</span> <span class="keywordtype">double</span> <a class="code hl_function" href="classproblem_1_1extension_1_1MetricasMultiobjetivo.html#a30a03c8819f7191b7bfe09000d33532f">DistanciaGeneracional</a>(List&lt;State&gt; solutionsFPcurrent, List&lt;State&gt; solutionsFPtrue) <span class="keywordflow">throws</span> BiffException, IOException{</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keywordtype">float</span> min = 1000;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keywordtype">float</span> distancia = 0;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keywordtype">float</span> distanciaGeneracional = 0;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; solutionsFPcurrent.size();i++) {</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            <a class="code hl_class" href="classproblem_1_1definition_1_1State.html">State</a> solutionVO = solutionsFPcurrent.get(i);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            <span class="comment">//Calculando la distancia euclideana entre solutionVO y el miembro más cercano del frente de Pareto verdadero</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            min = 1000;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; solutionsFPtrue.size();j++) { </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j2 = 0; j2 &lt; solutionVO.<a class="code hl_function" href="classproblem_1_1definition_1_1State.html#a226ea6fab8e7060cf131edfdb245a6fa">getEvaluation</a>().size(); j2++) {</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                    <a class="code hl_class" href="classproblem_1_1definition_1_1State.html">State</a> solutionFPV = solutionsFPtrue.get(j);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                    <span class="comment">// porq elevar la distancia al cuadrado</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                    distancia += (solutionVO.<a class="code hl_function" href="classproblem_1_1definition_1_1State.html#a226ea6fab8e7060cf131edfdb245a6fa">getEvaluation</a>().<span class="keyword">get</span>(j2) - solutionFPV.<a class="code hl_function" href="classproblem_1_1definition_1_1State.html#a226ea6fab8e7060cf131edfdb245a6fa">getEvaluation</a>().get(j2))*  </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                            (solutionVO.<a class="code hl_function" href="classproblem_1_1definition_1_1State.html#a226ea6fab8e7060cf131edfdb245a6fa">getEvaluation</a>().<span class="keyword">get</span>(j2) - solutionFPV.<a class="code hl_function" href="classproblem_1_1definition_1_1State.html#a226ea6fab8e7060cf131edfdb245a6fa">getEvaluation</a>().get(j2)); <span class="comment">//ceros si el argumento es el cero, 1.0 si el argumento es mayor que el cero, -1.0 si el argumento está menos del cero</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                }</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                <span class="keywordflow">if</span>(distancia &lt; min){</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                    min = distancia;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                }</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            }</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            distanciaGeneracional += min;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        }</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="keywordtype">double</span> total = Math.sqrt(distanciaGeneracional)/solutionsFPcurrent.size();</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="comment">//System.out.println(total);</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="keywordflow">return</span> total;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    }</div>
+</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span></div>
+<div class="foldopen" id="foldopen00088" data-start="{" data-end="}">
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="classproblem_1_1extension_1_1MetricasMultiobjetivo.html#a5ded050edcc046f49548df1cf0ec7449">   88</a></span>    <span class="keyword">public</span> <span class="keywordtype">double</span> <a class="code hl_function" href="classproblem_1_1extension_1_1MetricasMultiobjetivo.html#a5ded050edcc046f49548df1cf0ec7449">Dispersion</a>(ArrayList&lt;State&gt; solutions) <span class="keywordflow">throws</span> BiffException, IOException{</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        <span class="comment">//Soluciones obtenidas con la ejecución del algoritmo X</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        LinkedList&lt;Float&gt; distancias = <span class="keyword">new</span> LinkedList&lt;Float&gt;();</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <span class="keywordtype">float</span> distancia = 0;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <span class="keywordtype">float</span> min = 1000;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        <span class="keywordflow">for</span> (Iterator&lt;State&gt; iter = solutions.iterator(); iter.hasNext();) {</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>            <a class="code hl_class" href="classproblem_1_1definition_1_1State.html">State</a> solutionVO = (<a class="code hl_class" href="classproblem_1_1definition_1_1State.html">State</a>) iter.next();</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>            min = 1000;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>            <span class="keywordflow">for</span> (Iterator&lt;State&gt; iterator = solutions.iterator(); iterator.hasNext();) {</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                <a class="code hl_class" href="classproblem_1_1definition_1_1State.html">State</a> solVO = (<a class="code hl_class" href="classproblem_1_1definition_1_1State.html">State</a>) iterator.next();</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; solutionVO.<a class="code hl_function" href="classproblem_1_1definition_1_1State.html#a226ea6fab8e7060cf131edfdb245a6fa">getEvaluation</a>().size(); i++) {</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                    <span class="keywordflow">if</span>(!solutionVO.<a class="code hl_function" href="classproblem_1_1definition_1_1State.html#a226ea6fab8e7060cf131edfdb245a6fa">getEvaluation</a>().equals(solVO.<a class="code hl_function" href="classproblem_1_1definition_1_1State.html#a226ea6fab8e7060cf131edfdb245a6fa">getEvaluation</a>())){</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>                        distancia += (solutionVO.<a class="code hl_function" href="classproblem_1_1definition_1_1State.html#a226ea6fab8e7060cf131edfdb245a6fa">getEvaluation</a>().<span class="keyword">get</span>(i)- solVO.<a class="code hl_function" href="classproblem_1_1definition_1_1State.html#a226ea6fab8e7060cf131edfdb245a6fa">getEvaluation</a>().get(i));</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>                    }}</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>                <span class="keywordflow">if</span>(distancia &lt; min){</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>                    min = distancia;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>                }</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>            }</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>            distancias.add(Float.valueOf(min));</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        }</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        <span class="comment">//Calculando las media de las distancias </span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        <span class="keywordtype">float</span> sum = 0;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        <span class="keywordflow">for</span> (Iterator&lt;Float&gt; iter = distancias.iterator(); iter.hasNext();) {</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            Float dist = (Float) iter.next();</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>            sum += dist;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        }</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        <span class="keywordtype">float</span> media = sum/distancias.size();</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        <span class="keywordtype">float</span> sumDistancias = 0;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        <span class="keywordflow">for</span> (Iterator&lt;Float&gt; iter = distancias.iterator(); iter.hasNext();) {</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            Float dist = (Float) iter.next();</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>            sumDistancias += Math.pow((media - dist),2);</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        }</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        <span class="comment">//Calculando la dispersion</span></div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        <span class="keywordtype">double</span> dispersion = 0;</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        <span class="keywordflow">if</span>(solutions.size() &gt; 1){</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>            dispersion = Math.sqrt((1.0/(solutions.size()-1))*sumDistancias);</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        }</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        <span class="comment">//System.out.println(dispersion);</span></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        <span class="keywordflow">return</span> dispersion;</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    }</div>
+</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span></div>
+<div class="foldopen" id="foldopen00135" data-start="{" data-end="}">
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno"><a class="line" href="classproblem_1_1extension_1_1MetricasMultiobjetivo.html#a0baaa7dba3706f16de008d747a7548a1">  135</a></span>    <span class="keyword">private</span> <span class="keywordtype">boolean</span> <a class="code hl_function" href="classproblem_1_1extension_1_1MetricasMultiobjetivo.html#a0baaa7dba3706f16de008d747a7548a1">Contains</a>(<a class="code hl_class" href="classproblem_1_1definition_1_1State.html">State</a> solA, List&lt;State&gt; solutions){</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        <span class="keywordtype">int</span> i = 0;</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        <span class="keywordtype">boolean</span> result = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        <span class="keywordflow">while</span>(i&lt;solutions.size()&amp;&amp; result==<span class="keyword">false</span>){</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>            <span class="keywordflow">if</span>(solutions.get(i).getEvaluation().equals(solA.<a class="code hl_function" href="classproblem_1_1definition_1_1State.html#a226ea6fab8e7060cf131edfdb245a6fa">getEvaluation</a>()))</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>                result=<span class="keyword">true</span>;</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>            <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>                i++;</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        }</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        <span class="keywordflow">return</span> result;</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    }</div>
+</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span></div>
+<div class="foldopen" id="foldopen00152" data-start="{" data-end="}">
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno"><a class="line" href="classproblem_1_1extension_1_1MetricasMultiobjetivo.html#abfb87540cf1b3680d692821621a2619c">  152</a></span>    <span class="keyword">public</span> <span class="keywordtype">double</span> <a class="code hl_function" href="classproblem_1_1extension_1_1MetricasMultiobjetivo.html#abfb87540cf1b3680d692821621a2619c">CalcularMin</a>(ArrayList&lt;Double&gt; allMetrics){</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        <span class="keywordtype">double</span> min = 1000;</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        <span class="keywordflow">for</span> (Iterator&lt;Double&gt; iter = allMetrics.iterator(); iter.hasNext();) {</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>            <span class="keywordtype">double</span> element = (Double) iter.next();</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>            <span class="keywordflow">if</span>(element &lt; min){</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>                min = element;</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>            }</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        }</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>        <span class="keywordflow">return</span> min;</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    }</div>
+</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span></div>
+<div class="foldopen" id="foldopen00169" data-start="{" data-end="}">
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno"><a class="line" href="classproblem_1_1extension_1_1MetricasMultiobjetivo.html#a38ed4658d79ea9d5cfef4bceb7ba5816">  169</a></span>    <span class="keyword">public</span> <span class="keywordtype">double</span> <a class="code hl_function" href="classproblem_1_1extension_1_1MetricasMultiobjetivo.html#a38ed4658d79ea9d5cfef4bceb7ba5816">CalcularMax</a>(ArrayList&lt;Double&gt; allMetrics){</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>        <span class="keywordtype">double</span> max = 0;</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>        <span class="keywordflow">for</span> (Iterator&lt;Double&gt; iter = allMetrics.iterator(); iter.hasNext();) {</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>            <span class="keywordtype">double</span> element = (Double) iter.next();</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>            <span class="keywordflow">if</span>(element &gt; max){</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>                max = element;</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>            }</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>        }</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>        <span class="keywordflow">return</span> max;</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    }</div>
+</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span></div>
+<div class="foldopen" id="foldopen00185" data-start="{" data-end="}">
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno"><a class="line" href="classproblem_1_1extension_1_1MetricasMultiobjetivo.html#add9c9a821a254397c6a70d4f56363c0a">  185</a></span>    <span class="keyword">public</span> <span class="keywordtype">double</span> <a class="code hl_function" href="classproblem_1_1extension_1_1MetricasMultiobjetivo.html#add9c9a821a254397c6a70d4f56363c0a">CalcularMedia</a>(ArrayList&lt;Double&gt; allMetrics){</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>        <span class="keywordtype">double</span> sum = 0;</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>        <span class="keywordflow">for</span> (Iterator&lt;Double&gt; iter = allMetrics.iterator(); iter.hasNext();) {</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>            <span class="keywordtype">double</span> element = (Double) iter.next();</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>            sum = sum + element;</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>        }</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>        <span class="keywordtype">double</span> media = sum/allMetrics.size();</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>        <span class="keywordflow">return</span> media;</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    }</div>
+</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>}</div>
+</div>
+<div class="ttc" id="aclassproblem_1_1definition_1_1State_html"><div class="ttname"><a href="classproblem_1_1definition_1_1State.html">problem.definition.State</a></div><div class="ttdoc">State.</div><div class="ttdef"><b>Definition</b> <a href="State_8java_source.html#l00016">State.java:16</a></div></div>
+<div class="ttc" id="aclassproblem_1_1definition_1_1State_html_a226ea6fab8e7060cf131edfdb245a6fa"><div class="ttname"><a href="classproblem_1_1definition_1_1State.html#a226ea6fab8e7060cf131edfdb245a6fa">problem.definition.State.getEvaluation</a></div><div class="ttdeci">ArrayList&lt; Double &gt; getEvaluation()</div><div class="ttdoc">Obtener la lista de evaluaciones del estado.</div><div class="ttdef"><b>Definition</b> <a href="State_8java_source.html#l00104">State.java:104</a></div></div>
+<div class="ttc" id="aclassproblem_1_1extension_1_1MetricasMultiobjetivo_html"><div class="ttname"><a href="classproblem_1_1extension_1_1MetricasMultiobjetivo.html">problem.extension.MetricasMultiobjetivo</a></div><div class="ttdoc">MetricasMultiobjetivo.</div><div class="ttdef"><b>Definition</b> <a href="#l00018">MetricasMultiobjetivo.java:18</a></div></div>
+<div class="ttc" id="aclassproblem_1_1extension_1_1MetricasMultiobjetivo_html_a0baaa7dba3706f16de008d747a7548a1"><div class="ttname"><a href="classproblem_1_1extension_1_1MetricasMultiobjetivo.html#a0baaa7dba3706f16de008d747a7548a1">problem.extension.MetricasMultiobjetivo.Contains</a></div><div class="ttdeci">boolean Contains(State solA, List&lt; State &gt; solutions)</div><div class="ttdoc">Comprueba si una solución (por su vector de evaluación) está en una lista.</div><div class="ttdef"><b>Definition</b> <a href="#l00135">MetricasMultiobjetivo.java:135</a></div></div>
+<div class="ttc" id="aclassproblem_1_1extension_1_1MetricasMultiobjetivo_html_a30a03c8819f7191b7bfe09000d33532f"><div class="ttname"><a href="classproblem_1_1extension_1_1MetricasMultiobjetivo.html#a30a03c8819f7191b7bfe09000d33532f">problem.extension.MetricasMultiobjetivo.DistanciaGeneracional</a></div><div class="ttdeci">double DistanciaGeneracional(List&lt; State &gt; solutionsFPcurrent, List&lt; State &gt; solutionsFPtrue)</div><div class="ttdoc">DistanciaGeneracional.</div><div class="ttdef"><b>Definition</b> <a href="#l00053">MetricasMultiobjetivo.java:53</a></div></div>
+<div class="ttc" id="aclassproblem_1_1extension_1_1MetricasMultiobjetivo_html_a38ed4658d79ea9d5cfef4bceb7ba5816"><div class="ttname"><a href="classproblem_1_1extension_1_1MetricasMultiobjetivo.html#a38ed4658d79ea9d5cfef4bceb7ba5816">problem.extension.MetricasMultiobjetivo.CalcularMax</a></div><div class="ttdeci">double CalcularMax(ArrayList&lt; Double &gt; allMetrics)</div><div class="ttdoc">Calcular el valor máximo de una lista de métricas.</div><div class="ttdef"><b>Definition</b> <a href="#l00169">MetricasMultiobjetivo.java:169</a></div></div>
+<div class="ttc" id="aclassproblem_1_1extension_1_1MetricasMultiobjetivo_html_a4472830ebe1a6fe8bd33f701316552b1"><div class="ttname"><a href="classproblem_1_1extension_1_1MetricasMultiobjetivo.html#a4472830ebe1a6fe8bd33f701316552b1">problem.extension.MetricasMultiobjetivo.TasaError</a></div><div class="ttdeci">double TasaError(List&lt; State &gt; solutionsFPcurrent, List&lt; State &gt; solutionsFPtrue)</div><div class="ttdoc">Calcular el porcentaje de soluciones del frente actual que no pertenecen al frente de Pareto verdader...</div><div class="ttdef"><b>Definition</b> <a href="#l00029">MetricasMultiobjetivo.java:29</a></div></div>
+<div class="ttc" id="aclassproblem_1_1extension_1_1MetricasMultiobjetivo_html_a5ded050edcc046f49548df1cf0ec7449"><div class="ttname"><a href="classproblem_1_1extension_1_1MetricasMultiobjetivo.html#a5ded050edcc046f49548df1cf0ec7449">problem.extension.MetricasMultiobjetivo.Dispersion</a></div><div class="ttdeci">double Dispersion(ArrayList&lt; State &gt; solutions)</div><div class="ttdoc">Dispersion.</div><div class="ttdef"><b>Definition</b> <a href="#l00088">MetricasMultiobjetivo.java:88</a></div></div>
+<div class="ttc" id="aclassproblem_1_1extension_1_1MetricasMultiobjetivo_html_abfb87540cf1b3680d692821621a2619c"><div class="ttname"><a href="classproblem_1_1extension_1_1MetricasMultiobjetivo.html#abfb87540cf1b3680d692821621a2619c">problem.extension.MetricasMultiobjetivo.CalcularMin</a></div><div class="ttdeci">double CalcularMin(ArrayList&lt; Double &gt; allMetrics)</div><div class="ttdoc">Calcular el valor mínimo de una lista de métricas.</div><div class="ttdef"><b>Definition</b> <a href="#l00152">MetricasMultiobjetivo.java:152</a></div></div>
+<div class="ttc" id="aclassproblem_1_1extension_1_1MetricasMultiobjetivo_html_add9c9a821a254397c6a70d4f56363c0a"><div class="ttname"><a href="classproblem_1_1extension_1_1MetricasMultiobjetivo.html#add9c9a821a254397c6a70d4f56363c0a">problem.extension.MetricasMultiobjetivo.CalcularMedia</a></div><div class="ttdeci">double CalcularMedia(ArrayList&lt; Double &gt; allMetrics)</div><div class="ttdoc">Calcular la media aritmética de una lista de métricas.</div><div class="ttdef"><b>Definition</b> <a href="#l00185">MetricasMultiobjetivo.java:185</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_35e5e1a6dfa5adce22aec671c4d5c0d1.html">practica5</a></li><li class="navelem"><a href="dir_d2e984a8ddfea0cacd32e4238c7e9dd9.html">src</a></li><li class="navelem"><a href="dir_4a158cb6d41a1065711987d4dec8e14e.html">main</a></li><li class="navelem"><a href="dir_67084513cc423c424b0c8f4661d8bd90.html">java</a></li><li class="navelem"><a href="dir_95f9cb4bca94543c93127c3d7408aea3.html">problem</a></li><li class="navelem"><a href="dir_d9870da83e45a67194471adeac27c045.html">extension</a></li><li class="navelem"><a href="MetricasMultiobjetivo_8java.html">MetricasMultiobjetivo.java</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

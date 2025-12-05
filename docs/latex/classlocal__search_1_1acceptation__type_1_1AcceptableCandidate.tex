@@ -1,0 +1,104 @@
+\doxysection{Referencia de la clase local\+\_\+search.\+acceptation\+\_\+type.\+Acceptable\+Candidate}
+\hypertarget{classlocal__search_1_1acceptation__type_1_1AcceptableCandidate}{}\label{classlocal__search_1_1acceptation__type_1_1AcceptableCandidate}\index{local\_search.acceptation\_type.AcceptableCandidate@{local\_search.acceptation\_type.AcceptableCandidate}}
+
+
+\doxylink{classlocal__search_1_1acceptation__type_1_1AcceptableCandidate}{Acceptable\+Candidate} -\/ Base type for acceptation strategies.  
+
+
+
+
+Diagrama de herencia de local\+\_\+search.\+acceptation\+\_\+type.\+Acceptable\+Candidate
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlocal__search_1_1acceptation__type_1_1AcceptableCandidate__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagrama de colaboración de local\+\_\+search.\+acceptation\+\_\+type.\+Acceptable\+Candidate\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{classlocal__search_1_1acceptation__type_1_1AcceptableCandidate__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+abstract Boolean \mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1AcceptableCandidate_aa9e62e1d2d213c3828d2491b506d0592}{accept\+Candidate}} (\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} state\+Current, \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} state\+Candidate)  throws Illegal\+Argument\+Exception, Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception, Illegal\+Access\+Exception, Invocation\+Target\+Exception, No\+Such\+Method\+Exception 
+\begin{DoxyCompactList}\small\item\em Evaluate whether a candidate state should be accepted. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+\doxylink{classlocal__search_1_1acceptation__type_1_1AcceptableCandidate}{Acceptable\+Candidate} -\/ Base type for acceptation strategies. 
+
+Abstract contract that all acceptation strategies must implement. 
+
+Definición en la línea \mbox{\hyperlink{AcceptableCandidate_8java_source_l00012}{12}} del archivo \mbox{\hyperlink{AcceptableCandidate_8java_source}{Acceptable\+Candidate.\+java}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{classlocal__search_1_1acceptation__type_1_1AcceptableCandidate_doc-func-members}
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{classlocal__search_1_1acceptation__type_1_1AcceptableCandidate_aa9e62e1d2d213c3828d2491b506d0592}\index{local\_search.acceptation\_type.AcceptableCandidate@{local\_search.acceptation\_type.AcceptableCandidate}!acceptCandidate@{acceptCandidate}}
+\index{acceptCandidate@{acceptCandidate}!local\_search.acceptation\_type.AcceptableCandidate@{local\_search.acceptation\_type.AcceptableCandidate}}
+\doxysubsubsection{\texorpdfstring{acceptCandidate()}{acceptCandidate()}}
+{\footnotesize\ttfamily \label{classlocal__search_1_1acceptation__type_1_1AcceptableCandidate_aa9e62e1d2d213c3828d2491b506d0592} 
+abstract Boolean local\+\_\+search.\+acceptation\+\_\+type.\+Acceptable\+Candidate.\+accept\+Candidate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}}]{state\+Current}{, }\item[{\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}}]{state\+Candidate}{}\end{DoxyParamCaption}) throws Illegal\+Argument\+Exception, Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception, Illegal\+Access\+Exception, Invocation\+Target\+Exception, No\+Such\+Method\+Exception\hspace{0.3cm}{\ttfamily [abstract]}}
+
+
+
+Evaluate whether a candidate state should be accepted. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em state\+Current} & the current state \\
+\hline
+{\em state\+Candidate} & the candidate state \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+true if the candidate should be accepted, false otherwise 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em Illegal\+Argument\+Exception} & on invalid arguments \\
+\hline
+{\em Security\+Exception} & on reflective access problems \\
+\hline
+{\em Class\+Not\+Found\+Exception} & when a referenced class cannot be found \\
+\hline
+{\em Instantiation\+Exception} & on reflective instantiation failures \\
+\hline
+{\em Illegal\+Access\+Exception} & on illegal reflective access \\
+\hline
+{\em Invocation\+Target\+Exception} & when a reflective call throws \\
+\hline
+{\em No\+Such\+Method\+Exception} & when a reflective method lookup fails \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplementado en \mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1AcceptAnyone_aa08b618877d2ffed2805e11fbb817921}{local\+\_\+search.\+acceptation\+\_\+type.\+Accept\+Anyone}}, \mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1AcceptBest_a0ecd99df90a9818e14ddf8908cc38626}{local\+\_\+search.\+acceptation\+\_\+type.\+Accept\+Best}}, \mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1AcceptMulticase_a526e452510b7eebe59af4dde0c59b337}{local\+\_\+search.\+acceptation\+\_\+type.\+Accept\+Multicase}}, \mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1AcceptNotBad_a06c25a1ad9093849dc090b67effe8654}{local\+\_\+search.\+acceptation\+\_\+type.\+Accept\+Not\+Bad}}, \mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1AcceptNotBadT_ab913b2e75ae2c8a85091ba229f13d123}{local\+\_\+search.\+acceptation\+\_\+type.\+Accept\+Not\+BadT}}, \mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1AcceptNotBadU_aae18a93b424add171ea18e79645977c7}{local\+\_\+search.\+acceptation\+\_\+type.\+Accept\+Not\+BadU}}, \mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1AcceptNotDominated_a05fe7b0385dfafe7701f6a4e9b2b80d2}{local\+\_\+search.\+acceptation\+\_\+type.\+Accept\+Not\+Dominated}} y \mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1AcceptNotDominatedTabu_a3182ac113bddb89bb3ea7af704b38835}{local\+\_\+search.\+acceptation\+\_\+type.\+Accept\+Not\+Dominated\+Tabu}}.
+
+
+
+Referenciado por \mbox{\hyperlink{HillClimbing_8java_source_l00085}{metaheuristics.\+generators.\+Hill\+Climbing.\+update\+Reference()}}, \mbox{\hyperlink{HillClimbingRestart_8java_source_l00088}{metaheuristics.\+generators.\+Hill\+Climbing\+Restart.\+update\+Reference()}}, \mbox{\hyperlink{LimitThreshold_8java_source_l00105}{metaheuristics.\+generators.\+Limit\+Threshold.\+update\+Reference()}}, \mbox{\hyperlink{MultiCaseSimulatedAnnealing_8java_source_l00129}{metaheuristics.\+generators.\+Multi\+Case\+Simulated\+Annealing.\+update\+Reference()}}, \mbox{\hyperlink{MultiobjectiveHillClimbingDistance_8java_source_l00087}{metaheuristics.\+generators.\+Multiobjective\+Hill\+Climbing\+Distance.\+update\+Reference()}}, \mbox{\hyperlink{MultiobjectiveHillClimbingRestart_8java_source_l00083}{metaheuristics.\+generators.\+Multiobjective\+Hill\+Climbing\+Restart.\+update\+Reference()}}, \mbox{\hyperlink{MultiobjectiveStochasticHillClimbing_8java_source_l00067}{metaheuristics.\+generators.\+Multiobjective\+Stochastic\+Hill\+Climbing.\+update\+Reference()}}, \mbox{\hyperlink{MultiobjectiveTabuSearch_8java_source_l00105}{metaheuristics.\+generators.\+Multiobjective\+Tabu\+Search.\+update\+Reference()}}, \mbox{\hyperlink{RandomSearch_8java_source_l00098}{metaheuristics.\+generators.\+Random\+Search.\+update\+Reference()}}, \mbox{\hyperlink{SimulatedAnnealing_8java_source_l00156}{metaheuristics.\+generators.\+Simulated\+Annealing.\+update\+Reference()}} y \mbox{\hyperlink{TabuSearch_8java_source_l00133}{metaheuristics.\+generators.\+Tabu\+Search.\+update\+Reference()}}.
+
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlocal__search_1_1acceptation__type_1_1AcceptableCandidate_aa9e62e1d2d213c3828d2491b506d0592_icgraph}
+\end{center}
+\end{figure}
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{AcceptableCandidate_8java}{Acceptable\+Candidate.\+java}}\end{DoxyCompactItemize}

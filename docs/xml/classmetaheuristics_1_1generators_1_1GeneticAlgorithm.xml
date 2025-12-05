@@ -1,0 +1,1011 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="es">
+  <compounddef id="classmetaheuristics_1_1generators_1_1GeneticAlgorithm" kind="class" language="Java" prot="public">
+    <compoundname>metaheuristics::generators::GeneticAlgorithm</compoundname>
+    <basecompoundref refid="classmetaheuristics_1_1generators_1_1Generator" prot="public" virt="non-virtual">metaheuristics.generators.Generator</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a6aead58a018010568e7f453f97021b8d" prot="private" static="no" mutable="no">
+        <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+        <definition>State metaheuristics.generators.GeneticAlgorithm.stateReferenceGA</definition>
+        <argsstring></argsstring>
+        <name>stateReferenceGA</name>
+        <qualifiedname>metaheuristics.generators.GeneticAlgorithm.stateReferenceGA</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" line="36" column="15" bodyfile="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" bodystart="36" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a7bff79adbecc5510d4294dbc617eb8b4" compoundref="GeneticAlgorithm_8java" startline="132" endline="150">metaheuristics.generators.GeneticAlgorithm.getReference</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a48f94ad3fa5a3a89331f9a7b49400886" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+        <definition>List&lt;State&gt; metaheuristics.generators.GeneticAlgorithm.listState</definition>
+        <argsstring></argsstring>
+        <name>listState</name>
+        <qualifiedname>metaheuristics.generators.GeneticAlgorithm.listState</qualifiedname>
+        <initializer>= new ArrayList&lt;<ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref>&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" line="37" column="14" bodyfile="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" bodystart="37" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1afa69278cc4f87d309326773aeab7b6da" compoundref="GeneticAlgorithm_8java" startline="90" endline="125">metaheuristics.generators.GeneticAlgorithm.generate</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1af808ab394faa3451363c64047b0b3319" compoundref="GeneticAlgorithm_8java" startline="184" endline="186">metaheuristics.generators.GeneticAlgorithm.getListState</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a02c8f9088f27ab03a6a6ec65348750b5" compoundref="GeneticAlgorithm_8java" startline="200" endline="221">metaheuristics.generators.GeneticAlgorithm.getListStateRef</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a7bff79adbecc5510d4294dbc617eb8b4" compoundref="GeneticAlgorithm_8java" startline="132" endline="150">metaheuristics.generators.GeneticAlgorithm.getReference</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a1e7b57b017ec0fc5e4a77efac27020eb" compoundref="GeneticAlgorithm_8java" startline="253" endline="260">metaheuristics.generators.GeneticAlgorithm.getReferenceList</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a4e72574da9810ab5815c94c3499b8671" compoundref="GeneticAlgorithm_8java" startline="192" endline="194">metaheuristics.generators.GeneticAlgorithm.setListState</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1af007f7a227b465ed513b5b07f8c54b6b" compoundref="GeneticAlgorithm_8java" startline="174" endline="178">metaheuristics.generators.GeneticAlgorithm.updateReference</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1ae4eb9fe7eb65161cf1b41ca978451a32" prot="private" static="no" mutable="no">
+        <type><ref refid="interfacefactory__interface_1_1IFFactoryFatherSelection" kindref="compound">IFFactoryFatherSelection</ref></type>
+        <definition>IFFactoryFatherSelection metaheuristics.generators.GeneticAlgorithm.iffatherselection</definition>
+        <argsstring></argsstring>
+        <name>iffatherselection</name>
+        <qualifiedname>metaheuristics.generators.GeneticAlgorithm.iffatherselection</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" line="38" column="34" bodyfile="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" bodystart="38" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1afa69278cc4f87d309326773aeab7b6da" compoundref="GeneticAlgorithm_8java" startline="90" endline="125">metaheuristics.generators.GeneticAlgorithm.generate</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1acf49e3525fe7ef722a96b3c82990bfe3" prot="private" static="no" mutable="no">
+        <type><ref refid="interfacefactory__interface_1_1IFFactoryCrossover" kindref="compound">IFFactoryCrossover</ref></type>
+        <definition>IFFactoryCrossover metaheuristics.generators.GeneticAlgorithm.iffactorycrossover</definition>
+        <argsstring></argsstring>
+        <name>iffactorycrossover</name>
+        <qualifiedname>metaheuristics.generators.GeneticAlgorithm.iffactorycrossover</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" line="39" column="28" bodyfile="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" bodystart="39" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1afa69278cc4f87d309326773aeab7b6da" compoundref="GeneticAlgorithm_8java" startline="90" endline="125">metaheuristics.generators.GeneticAlgorithm.generate</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a73cf0d217617644f072c286df7a5a097" prot="private" static="no" mutable="no">
+        <type><ref refid="interfacefactory__interface_1_1IFFactoryMutation" kindref="compound">IFFactoryMutation</ref></type>
+        <definition>IFFactoryMutation metaheuristics.generators.GeneticAlgorithm.iffactorymutation</definition>
+        <argsstring></argsstring>
+        <name>iffactorymutation</name>
+        <qualifiedname>metaheuristics.generators.GeneticAlgorithm.iffactorymutation</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" line="40" column="27" bodyfile="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" bodystart="40" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1afa69278cc4f87d309326773aeab7b6da" compoundref="GeneticAlgorithm_8java" startline="90" endline="125">metaheuristics.generators.GeneticAlgorithm.generate</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1aa7b956e32f2aedea280263be61bc5efb" prot="private" static="no" mutable="no">
+        <type><ref refid="interfacefactory__interface_1_1IFFactoryReplace" kindref="compound">IFFactoryReplace</ref></type>
+        <definition>IFFactoryReplace metaheuristics.generators.GeneticAlgorithm.iffreplace</definition>
+        <argsstring></argsstring>
+        <name>iffreplace</name>
+        <qualifiedname>metaheuristics.generators.GeneticAlgorithm.iffreplace</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" line="41" column="26" bodyfile="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" bodystart="41" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1af007f7a227b465ed513b5b07f8c54b6b" compoundref="GeneticAlgorithm_8java" startline="174" endline="178">metaheuristics.generators.GeneticAlgorithm.updateReference</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1aa5911146e16570dbe2c6792922f64c4a" prot="private" static="no" mutable="no">
+        <type><ref refid="enummetaheuristics_1_1generators_1_1GeneratorType" kindref="compound">GeneratorType</ref></type>
+        <definition>GeneratorType metaheuristics.generators.GeneticAlgorithm.generatorType</definition>
+        <argsstring></argsstring>
+        <name>generatorType</name>
+        <qualifiedname>metaheuristics.generators.GeneticAlgorithm.generatorType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" line="48" column="23" bodyfile="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" bodystart="48" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a1d25e15228ac6416a75c73c21c0ea036" compoundref="GeneticAlgorithm_8java" startline="227" endline="229">metaheuristics.generators.GeneticAlgorithm.getGeneratorType</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a773b3a5d6e96968a738a0e5232317cf8" compoundref="GeneticAlgorithm_8java" startline="244" endline="246">metaheuristics.generators.GeneticAlgorithm.getType</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a0aa86194072af7818974867b703e06a4" compoundref="GeneticAlgorithm_8java" startline="235" endline="237">metaheuristics.generators.GeneticAlgorithm.setGeneratorType</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a4d164cdf156c6ce65f593fb42af2dc82" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float metaheuristics.generators.GeneticAlgorithm.weight</definition>
+        <argsstring></argsstring>
+        <name>weight</name>
+        <qualifiedname>metaheuristics.generators.GeneticAlgorithm.weight</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" line="57" column="15" bodyfile="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" bodystart="57" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a2d0bf12c8bedefdebb47612a503a6e6b" compoundref="GeneticAlgorithm_8java" startline="68" endline="76">metaheuristics.generators.GeneticAlgorithm.GeneticAlgorithm</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a56efbafbfd2c341a047e2110e652b561" compoundref="GeneticAlgorithm_8java" startline="289" endline="292">metaheuristics.generators.GeneticAlgorithm.getWeight</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1ab7d68ca3a4c1510c1ef697857c525233" compoundref="GeneticAlgorithm_8java" startline="299" endline="302">metaheuristics.generators.GeneticAlgorithm.setWeight</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a09ddf8e09c4688520b26bb71fc413791" prot="private" static="no" mutable="no">
+        <type>int[]</type>
+        <definition>int [] metaheuristics.generators.GeneticAlgorithm.listCountBetterGender</definition>
+        <argsstring></argsstring>
+        <name>listCountBetterGender</name>
+        <qualifiedname>metaheuristics.generators.GeneticAlgorithm.listCountBetterGender</qualifiedname>
+        <initializer>= new int[10]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" line="61" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" bodystart="61" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a2d0bf12c8bedefdebb47612a503a6e6b" compoundref="GeneticAlgorithm_8java" startline="68" endline="76">metaheuristics.generators.GeneticAlgorithm.GeneticAlgorithm</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a12d345be0bac7bc8b1098589604ad6f8" compoundref="GeneticAlgorithm_8java" startline="308" endline="311">metaheuristics.generators.GeneticAlgorithm.getListCountBetterGender</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a217c5558f699a1b27479e7277366861b" prot="private" static="no" mutable="no">
+        <type>int[]</type>
+        <definition>int [] metaheuristics.generators.GeneticAlgorithm.listCountGender</definition>
+        <argsstring></argsstring>
+        <name>listCountGender</name>
+        <qualifiedname>metaheuristics.generators.GeneticAlgorithm.listCountGender</qualifiedname>
+        <initializer>= new int[10]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" line="62" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" bodystart="62" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a2d0bf12c8bedefdebb47612a503a6e6b" compoundref="GeneticAlgorithm_8java" startline="68" endline="76">metaheuristics.generators.GeneticAlgorithm.GeneticAlgorithm</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1aafdeff3304b265033eb1b43c0e1d333a" compoundref="GeneticAlgorithm_8java" startline="318" endline="321">metaheuristics.generators.GeneticAlgorithm.getListCountGender</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1aca22b6729d609b6b9d2bf258994558ba" prot="private" static="no" mutable="no">
+        <type>float[]</type>
+        <definition>float [] metaheuristics.generators.GeneticAlgorithm.listTrace</definition>
+        <argsstring></argsstring>
+        <name>listTrace</name>
+        <qualifiedname>metaheuristics.generators.GeneticAlgorithm.listTrace</qualifiedname>
+        <initializer>= new float[1200000]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" line="63" column="15" bodyfile="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" bodystart="63" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a2d0bf12c8bedefdebb47612a503a6e6b" compoundref="GeneticAlgorithm_8java" startline="68" endline="76">metaheuristics.generators.GeneticAlgorithm.GeneticAlgorithm</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1aafb70e875527d683740485f89bbcc51e" compoundref="GeneticAlgorithm_8java" startline="328" endline="331">metaheuristics.generators.GeneticAlgorithm.getTrace</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1ac99e3f6b5b0218f260b93ac12ee9d84c" prot="public" static="yes" mutable="no">
+        <type>final <ref refid="enumevolutionary__algorithms_1_1complement_1_1MutationType" kindref="compound">MutationType</ref></type>
+        <definition>final MutationType metaheuristics.generators.GeneticAlgorithm.mutationType</definition>
+        <argsstring></argsstring>
+        <name>mutationType</name>
+        <qualifiedname>metaheuristics.generators.GeneticAlgorithm.mutationType</qualifiedname>
+        <initializer>= <ref refid="enumevolutionary__algorithms_1_1complement_1_1MutationType_1a9eecb09b30290f19a1cab8a1264c1625" kindref="member">MutationType.OnePointMutation</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" line="49" column="34" bodyfile="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" bodystart="49" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1afa69278cc4f87d309326773aeab7b6da" compoundref="GeneticAlgorithm_8java" startline="90" endline="125">metaheuristics.generators.GeneticAlgorithm.generate</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a3b5a496c6874da23350bc443cd08c00c" prot="public" static="yes" mutable="no">
+        <type>final <ref refid="enumevolutionary__algorithms_1_1complement_1_1CrossoverType" kindref="compound">CrossoverType</ref></type>
+        <definition>final CrossoverType metaheuristics.generators.GeneticAlgorithm.crossoverType</definition>
+        <argsstring></argsstring>
+        <name>crossoverType</name>
+        <qualifiedname>metaheuristics.generators.GeneticAlgorithm.crossoverType</qualifiedname>
+        <initializer>= <ref refid="enumevolutionary__algorithms_1_1complement_1_1CrossoverType_1aad18287029a05da708c6fb438e1bdf0f" kindref="member">CrossoverType.UniformCrossover</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" line="50" column="35" bodyfile="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" bodystart="50" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1afa69278cc4f87d309326773aeab7b6da" compoundref="GeneticAlgorithm_8java" startline="90" endline="125">metaheuristics.generators.GeneticAlgorithm.generate</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1ae1bdd1ed05bfb4702d07212de9a2e8af" prot="public" static="yes" mutable="no">
+        <type>final <ref refid="enumevolutionary__algorithms_1_1complement_1_1ReplaceType" kindref="compound">ReplaceType</ref></type>
+        <definition>final ReplaceType metaheuristics.generators.GeneticAlgorithm.replaceType</definition>
+        <argsstring></argsstring>
+        <name>replaceType</name>
+        <qualifiedname>metaheuristics.generators.GeneticAlgorithm.replaceType</qualifiedname>
+        <initializer>= <ref refid="enumevolutionary__algorithms_1_1complement_1_1ReplaceType_1add8d19fe300f2768faa2a51f56ccf7ed" kindref="member">ReplaceType.GenerationalReplace</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" line="51" column="33" bodyfile="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" bodystart="51" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1af007f7a227b465ed513b5b07f8c54b6b" compoundref="GeneticAlgorithm_8java" startline="174" endline="178">metaheuristics.generators.GeneticAlgorithm.updateReference</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a8913c849a2e49a7aff5b1fa110fb4874" prot="public" static="yes" mutable="no">
+        <type>final <ref refid="enumevolutionary__algorithms_1_1complement_1_1SelectionType" kindref="compound">SelectionType</ref></type>
+        <definition>final SelectionType metaheuristics.generators.GeneticAlgorithm.selectionType</definition>
+        <argsstring></argsstring>
+        <name>selectionType</name>
+        <qualifiedname>metaheuristics.generators.GeneticAlgorithm.selectionType</qualifiedname>
+        <initializer>= <ref refid="enumevolutionary__algorithms_1_1complement_1_1SelectionType_1a122c944398d78db6354b4320bc68b256" kindref="member">SelectionType.TruncationSelection</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" line="52" column="35" bodyfile="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" bodystart="52" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1afa69278cc4f87d309326773aeab7b6da" compoundref="GeneticAlgorithm_8java" startline="90" endline="125">metaheuristics.generators.GeneticAlgorithm.generate</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a51c602a2966c1f0122de14382a3e7744" prot="public" static="yes" mutable="no">
+        <type>final double</type>
+        <definition>final double metaheuristics.generators.GeneticAlgorithm.PC</definition>
+        <argsstring></argsstring>
+        <name>PC</name>
+        <qualifiedname>metaheuristics.generators.GeneticAlgorithm.PC</qualifiedname>
+        <initializer>= 0.6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" line="53" column="28" bodyfile="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" bodystart="53" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1afa69278cc4f87d309326773aeab7b6da" compoundref="GeneticAlgorithm_8java" startline="90" endline="125">metaheuristics.generators.GeneticAlgorithm.generate</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a94263867690319c56293fb8350375704" prot="public" static="yes" mutable="no">
+        <type>final double</type>
+        <definition>final double metaheuristics.generators.GeneticAlgorithm.PM</definition>
+        <argsstring></argsstring>
+        <name>PM</name>
+        <qualifiedname>metaheuristics.generators.GeneticAlgorithm.PM</qualifiedname>
+        <initializer>= 0.01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" line="54" column="28" bodyfile="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" bodystart="54" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1afa69278cc4f87d309326773aeab7b6da" compoundref="GeneticAlgorithm_8java" startline="90" endline="125">metaheuristics.generators.GeneticAlgorithm.generate</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a63b97c344354be3ca7bca194acbb2fee" prot="public" static="yes" mutable="no">
+        <type>final int</type>
+        <definition>final int metaheuristics.generators.GeneticAlgorithm.countRef</definition>
+        <argsstring></argsstring>
+        <name>countRef</name>
+        <qualifiedname>metaheuristics.generators.GeneticAlgorithm.countRef</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" line="55" column="25" bodyfile="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" bodystart="55" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1RandomSearch_1ad7023836b94dd23bffd78ab7b9915551" compoundref="RandomSearch_8java" startline="66" endline="72">metaheuristics.generators.RandomSearch.generate</referencedby>
+        <referencedby refid="classmetaheurictics_1_1strategy_1_1Strategy_1ae5fae0f94a80e56677aa3f7ac77b6d44" compoundref="Strategy_8java" startline="307" endline="325">metaheurictics.strategy.Strategy.update</referencedby>
+        <referencedby refid="classlocal__search_1_1complement_1_1UpdateParameter_1aa88a78351c0bc5de77f1ad05bee29e11" compoundref="UpdateParameter_8java" startline="39" endline="61">local_search.complement.UpdateParameter.updateParameter</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1af42d6dad4ce6883c8b4c37d8a726d738" prot="public" static="yes" mutable="no">
+        <type>final int</type>
+        <definition>final int metaheuristics.generators.GeneticAlgorithm.truncation</definition>
+        <argsstring></argsstring>
+        <name>truncation</name>
+        <qualifiedname>metaheuristics.generators.GeneticAlgorithm.truncation</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" line="56" column="25" bodyfile="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" bodystart="56" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1afa69278cc4f87d309326773aeab7b6da" compoundref="GeneticAlgorithm_8java" startline="90" endline="125">metaheuristics.generators.GeneticAlgorithm.generate</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a2d0bf12c8bedefdebb47612a503a6e6b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>metaheuristics.generators.GeneticAlgorithm.GeneticAlgorithm</definition>
+        <argsstring>()</argsstring>
+        <name>GeneticAlgorithm</name>
+        <qualifiedname>metaheuristics.generators.GeneticAlgorithm.GeneticAlgorithm</qualifiedname>
+        <briefdescription>
+<para><ref refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm" kindref="compound">GeneticAlgorithm</ref> - method to create an instance of <ref refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm" kindref="compound">GeneticAlgorithm</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" line="68" column="12" bodyfile="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" bodystart="68" bodyend="76"/>
+        <references refid="enummetaheuristics_1_1generators_1_1GeneratorType_1aa7d0ed047362b79a1bbe2a29837ddbe3" compoundref="GeneratorType_8java" startline="8">metaheuristics.generators.GeneratorType.GeneticAlgorithm</references>
+        <references refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a02c8f9088f27ab03a6a6ec65348750b5" compoundref="GeneticAlgorithm_8java" startline="200" endline="221">metaheuristics.generators.GeneticAlgorithm.getListStateRef</references>
+        <references refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a09ddf8e09c4688520b26bb71fc413791" compoundref="GeneticAlgorithm_8java" startline="61">metaheuristics.generators.GeneticAlgorithm.listCountBetterGender</references>
+        <references refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a217c5558f699a1b27479e7277366861b" compoundref="GeneticAlgorithm_8java" startline="62">metaheuristics.generators.GeneticAlgorithm.listCountGender</references>
+        <references refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1aca22b6729d609b6b9d2bf258994558ba" compoundref="GeneticAlgorithm_8java" startline="63">metaheuristics.generators.GeneticAlgorithm.listTrace</references>
+        <references refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a4d164cdf156c6ce65f593fb42af2dc82" compoundref="GeneticAlgorithm_8java" startline="57">metaheuristics.generators.GeneticAlgorithm.weight</references>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a02c8f9088f27ab03a6a6ec65348750b5" compoundref="GeneticAlgorithm_8java" startline="200" endline="221">metaheuristics.generators.GeneticAlgorithm.getListStateRef</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1afa69278cc4f87d309326773aeab7b6da" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+        <definition>State metaheuristics.generators.GeneticAlgorithm.generate</definition>
+        <argsstring>(Integer operatornumber)</argsstring>
+        <name>generate</name>
+        <qualifiedname>metaheuristics.generators.GeneticAlgorithm.generate</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1a06f6f7622b9ce32590eadbdf6bf962b5">generate</reimplements>
+        <param>
+          <type>Integer</type>
+          <declname>operatornumber</declname>
+        </param>
+        <exceptions> throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException </exceptions>
+        <briefdescription>
+<para>Uses ThreadLocalRandom for algorithmic (non-cryptographic) randomness. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This RNG is used to decide whether a mutation occurs in the evolutionary algorithm and is not used for security-sensitive purposes. Suppress Sonar security hotspot S2245 for this usage. generate - method to generate a new state. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>operatornumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" line="90" column="14" bodyfile="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" bodystart="90" bodyend="125"/>
+        <references refid="classevolutionary__algorithms_1_1complement_1_1Crossover_1a77155266e5646a87bcd427189938cc32">evolutionary_algorithms.complement.Crossover.crossover</references>
+        <references refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a3b5a496c6874da23350bc443cd08c00c" compoundref="GeneticAlgorithm_8java" startline="50">metaheuristics.generators.GeneticAlgorithm.crossoverType</references>
+        <references refid="classproblem_1_1definition_1_1State_1aaf14fa8466c945ff5e134028c6c259f8" compoundref="State_8java" startline="161" endline="163">problem.definition.State.getCopy</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1a4bc6bd95db71e14b1f48c1bfc85f1305" compoundref="Strategy_8java" startline="405" endline="407">metaheurictics.strategy.Strategy.getProblem</references>
+        <references refid="classproblem_1_1definition_1_1Problem_1ad685c1f6c1edba96aa5082d1fdf8bb35" compoundref="Problem_8java" startline="79" endline="81">problem.definition.Problem.getState</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1ad2641e12c52292930364de6655333aa8" compoundref="Strategy_8java" startline="80" endline="85">metaheurictics.strategy.Strategy.getStrategy</references>
+        <references refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1acf49e3525fe7ef722a96b3c82990bfe3" compoundref="GeneticAlgorithm_8java" startline="39">metaheuristics.generators.GeneticAlgorithm.iffactorycrossover</references>
+        <references refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a73cf0d217617644f072c286df7a5a097" compoundref="GeneticAlgorithm_8java" startline="40">metaheuristics.generators.GeneticAlgorithm.iffactorymutation</references>
+        <references refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1ae4eb9fe7eb65161cf1b41ca978451a32" compoundref="GeneticAlgorithm_8java" startline="38">metaheuristics.generators.GeneticAlgorithm.iffatherselection</references>
+        <references refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a48f94ad3fa5a3a89331f9a7b49400886" compoundref="GeneticAlgorithm_8java" startline="37">metaheuristics.generators.GeneticAlgorithm.listState</references>
+        <references refid="classevolutionary__algorithms_1_1complement_1_1Mutation_1a027da26e5a49d8ca908b03acffebb226">evolutionary_algorithms.complement.Mutation.mutation</references>
+        <references refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1ac99e3f6b5b0218f260b93ac12ee9d84c" compoundref="GeneticAlgorithm_8java" startline="49">metaheuristics.generators.GeneticAlgorithm.mutationType</references>
+        <references refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a51c602a2966c1f0122de14382a3e7744" compoundref="GeneticAlgorithm_8java" startline="53">metaheuristics.generators.GeneticAlgorithm.PC</references>
+        <references refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a94263867690319c56293fb8350375704" compoundref="GeneticAlgorithm_8java" startline="54">metaheuristics.generators.GeneticAlgorithm.PM</references>
+        <references refid="classevolutionary__algorithms_1_1complement_1_1FatherSelection_1aa6e6bd01ac639141a67815fb65f7c831">evolutionary_algorithms.complement.FatherSelection.selection</references>
+        <references refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a8913c849a2e49a7aff5b1fa110fb4874" compoundref="GeneticAlgorithm_8java" startline="52">metaheuristics.generators.GeneticAlgorithm.selectionType</references>
+        <references refid="classproblem_1_1definition_1_1State_1ab15765262a6e1cc7661c51cbcf0e7785" compoundref="State_8java" startline="77" endline="79">problem.definition.State.setCode</references>
+        <references refid="classproblem_1_1definition_1_1State_1abeaa628078af4804e5e9d93b3de593b5" compoundref="State_8java" startline="113" endline="115">problem.definition.State.setEvaluation</references>
+        <references refid="classproblem_1_1definition_1_1State_1ab802f63ab88415158f9c6cf468b6c8b3" compoundref="State_8java" startline="130" endline="132">problem.definition.State.setNumber</references>
+        <references refid="classproblem_1_1definition_1_1State_1afccaeac3af66cb772e2b3e70758b8fe6" compoundref="State_8java" startline="94" endline="96">problem.definition.State.setTypeGenerator</references>
+        <references refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1af42d6dad4ce6883c8b4c37d8a726d738" compoundref="GeneticAlgorithm_8java" startline="56">metaheuristics.generators.GeneticAlgorithm.truncation</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a7bff79adbecc5510d4294dbc617eb8b4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+        <definition>State metaheuristics.generators.GeneticAlgorithm.getReference</definition>
+        <argsstring>()</argsstring>
+        <name>getReference</name>
+        <qualifiedname>metaheuristics.generators.GeneticAlgorithm.getReference</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1aa56dd45a45776f6023b9f74179cc6384">getReference</reimplements>
+        <briefdescription>
+<para>getReference - method to get the current reference state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>returns the current reference state. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" line="132" column="14" bodyfile="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" bodystart="132" bodyend="150"/>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1a4bc6bd95db71e14b1f48c1bfc85f1305" compoundref="Strategy_8java" startline="405" endline="407">metaheurictics.strategy.Strategy.getProblem</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1ad2641e12c52292930364de6655333aa8" compoundref="Strategy_8java" startline="80" endline="85">metaheurictics.strategy.Strategy.getStrategy</references>
+        <references refid="classproblem_1_1definition_1_1Problem_1ad6f38df755179e22ffe487ba4a5c8021" compoundref="Problem_8java" startline="97" endline="99">problem.definition.Problem.getTypeProblem</references>
+        <references refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a48f94ad3fa5a3a89331f9a7b49400886" compoundref="GeneticAlgorithm_8java" startline="37">metaheuristics.generators.GeneticAlgorithm.listState</references>
+        <references refid="enumproblem_1_1definition_1_1Problem_1_1ProblemType_1aa55383c4cb9a71cfeabc7f715ee0cd6e" compoundref="Problem_8java" startline="29">problem.definition.Problem.ProblemType.Maximizar</references>
+        <references refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a6aead58a018010568e7f453f97021b8d" compoundref="GeneticAlgorithm_8java" startline="36">metaheuristics.generators.GeneticAlgorithm.stateReferenceGA</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a27f40e887e3304027c08bf705f99c4a0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheuristics.generators.GeneticAlgorithm.setStateRef</definition>
+        <argsstring>(State stateRef)</argsstring>
+        <name>setStateRef</name>
+        <qualifiedname>metaheuristics.generators.GeneticAlgorithm.setStateRef</qualifiedname>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>stateRef</declname>
+        </param>
+        <briefdescription>
+<para>setStateRef - method to set the current reference state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stateRef</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" line="156" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" bodystart="156" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1af30dbd658c8be56deb62ebc45c2ef894" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheuristics.generators.GeneticAlgorithm.setInitialReference</definition>
+        <argsstring>(State stateInitialRef)</argsstring>
+        <name>setInitialReference</name>
+        <qualifiedname>metaheuristics.generators.GeneticAlgorithm.setInitialReference</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1aa9f7c4c983705f843b8fcc81e4aa8ba4">setInitialReference</reimplements>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>stateInitialRef</declname>
+        </param>
+        <briefdescription>
+<para>setInitialReference - method to set the initial reference state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stateInitialRef</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" line="164" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" bodystart="164" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1af007f7a227b465ed513b5b07f8c54b6b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheuristics.generators.GeneticAlgorithm.updateReference</definition>
+        <argsstring>(State stateCandidate, Integer countIterationsCurrent)</argsstring>
+        <name>updateReference</name>
+        <qualifiedname>metaheuristics.generators.GeneticAlgorithm.updateReference</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1aa1c5878953f2111221b21cb9b1e6cc9f">updateReference</reimplements>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>stateCandidate</declname>
+        </param>
+        <param>
+          <type>Integer</type>
+          <declname>countIterationsCurrent</declname>
+        </param>
+        <exceptions> throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException,	NoSuchMethodException </exceptions>
+        <briefdescription>
+<para>updateReference - method to update the current reference state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stateCandidate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>countIterationsCurrent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" line="174" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" bodystart="174" bodyend="178"/>
+        <references refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1aa7b956e32f2aedea280263be61bc5efb" compoundref="GeneticAlgorithm_8java" startline="41">metaheuristics.generators.GeneticAlgorithm.iffreplace</references>
+        <references refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a48f94ad3fa5a3a89331f9a7b49400886" compoundref="GeneticAlgorithm_8java" startline="37">metaheuristics.generators.GeneticAlgorithm.listState</references>
+        <references refid="classevolutionary__algorithms_1_1complement_1_1Replace_1aac9402083a696d23ca0d97540d3951e5">evolutionary_algorithms.complement.Replace.replace</references>
+        <references refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1ae1bdd1ed05bfb4702d07212de9a2e8af" compoundref="GeneticAlgorithm_8java" startline="51">metaheuristics.generators.GeneticAlgorithm.replaceType</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1af808ab394faa3451363c64047b0b3319" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+        <definition>List&lt; State &gt; metaheuristics.generators.GeneticAlgorithm.getListState</definition>
+        <argsstring>()</argsstring>
+        <name>getListState</name>
+        <qualifiedname>metaheuristics.generators.GeneticAlgorithm.getListState</qualifiedname>
+        <briefdescription>
+<para>getListState - method to get the current list of states. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>returns the current list of states. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" line="184" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" bodystart="184" bodyend="186"/>
+        <references refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a48f94ad3fa5a3a89331f9a7b49400886" compoundref="GeneticAlgorithm_8java" startline="37">metaheuristics.generators.GeneticAlgorithm.listState</references>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a02c8f9088f27ab03a6a6ec65348750b5" compoundref="GeneticAlgorithm_8java" startline="200" endline="221">metaheuristics.generators.GeneticAlgorithm.getListStateRef</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a4e72574da9810ab5815c94c3499b8671" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheuristics.generators.GeneticAlgorithm.setListState</definition>
+        <argsstring>(List&lt; State &gt; listState)</argsstring>
+        <name>setListState</name>
+        <qualifiedname>metaheuristics.generators.GeneticAlgorithm.setListState</qualifiedname>
+        <param>
+          <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+          <declname>listState</declname>
+        </param>
+        <briefdescription>
+<para>setListState - method to set the current list of states. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>listState</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" line="192" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" bodystart="192" bodyend="194"/>
+        <references refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a48f94ad3fa5a3a89331f9a7b49400886" compoundref="GeneticAlgorithm_8java" startline="37">metaheuristics.generators.GeneticAlgorithm.listState</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a02c8f9088f27ab03a6a6ec65348750b5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+        <definition>List&lt; State &gt; metaheuristics.generators.GeneticAlgorithm.getListStateRef</definition>
+        <argsstring>()</argsstring>
+        <name>getListStateRef</name>
+        <qualifiedname>metaheuristics.generators.GeneticAlgorithm.getListStateRef</qualifiedname>
+        <briefdescription>
+<para>getListStateRef - method to get the current list of reference states. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>returns the current list of reference states. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" line="200" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" bodystart="200" bodyend="221"/>
+        <references refid="enummetaheuristics_1_1generators_1_1GeneratorType_1aa7d0ed047362b79a1bbe2a29837ddbe3" compoundref="GeneratorType_8java" startline="8">metaheuristics.generators.GeneratorType.GeneticAlgorithm</references>
+        <references refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a2d0bf12c8bedefdebb47612a503a6e6b" compoundref="GeneticAlgorithm_8java" startline="68" endline="76">metaheuristics.generators.GeneticAlgorithm.GeneticAlgorithm</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1ac70469856a2b6424f29952c0e77eebf8" compoundref="Strategy_8java" startline="421" endline="433">metaheurictics.strategy.Strategy.getListKey</references>
+        <references refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1af808ab394faa3451363c64047b0b3319" compoundref="GeneticAlgorithm_8java" startline="184" endline="186">metaheuristics.generators.GeneticAlgorithm.getListState</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1ad2641e12c52292930364de6655333aa8" compoundref="Strategy_8java" startline="80" endline="85">metaheurictics.strategy.Strategy.getStrategy</references>
+        <references refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a48f94ad3fa5a3a89331f9a7b49400886" compoundref="GeneticAlgorithm_8java" startline="37">metaheuristics.generators.GeneticAlgorithm.listState</references>
+        <references refid="classmetaheuristics_1_1generators_1_1RandomSearch_1ab7be9a87a0cb3de1e17f14e79a0b32ce" compoundref="RandomSearch_8java" startline="36">metaheuristics.generators.RandomSearch.listStateReference</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1a72b0b983ab5990ef999037f9c331515a" compoundref="Strategy_8java" startline="38">metaheurictics.strategy.Strategy.mapGenerators</references>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a2d0bf12c8bedefdebb47612a503a6e6b" compoundref="GeneticAlgorithm_8java" startline="68" endline="76">metaheuristics.generators.GeneticAlgorithm.GeneticAlgorithm</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a1d25e15228ac6416a75c73c21c0ea036" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="enummetaheuristics_1_1generators_1_1GeneratorType" kindref="compound">GeneratorType</ref></type>
+        <definition>GeneratorType metaheuristics.generators.GeneticAlgorithm.getGeneratorType</definition>
+        <argsstring>()</argsstring>
+        <name>getGeneratorType</name>
+        <qualifiedname>metaheuristics.generators.GeneticAlgorithm.getGeneratorType</qualifiedname>
+        <briefdescription>
+<para>getGeneratorType - method to get the generator type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>returns the generator type. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" line="227" column="22" bodyfile="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" bodystart="227" bodyend="229"/>
+        <references refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1aa5911146e16570dbe2c6792922f64c4a" compoundref="GeneticAlgorithm_8java" startline="48">metaheuristics.generators.GeneticAlgorithm.generatorType</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a0aa86194072af7818974867b703e06a4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheuristics.generators.GeneticAlgorithm.setGeneratorType</definition>
+        <argsstring>(GeneratorType generatorType)</argsstring>
+        <name>setGeneratorType</name>
+        <qualifiedname>metaheuristics.generators.GeneticAlgorithm.setGeneratorType</qualifiedname>
+        <param>
+          <type><ref refid="enummetaheuristics_1_1generators_1_1GeneratorType" kindref="compound">GeneratorType</ref></type>
+          <declname>generatorType</declname>
+        </param>
+        <briefdescription>
+<para>setGeneratorType - method to set the generator type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>generatorType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" line="235" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" bodystart="235" bodyend="237"/>
+        <references refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1aa5911146e16570dbe2c6792922f64c4a" compoundref="GeneticAlgorithm_8java" startline="48">metaheuristics.generators.GeneticAlgorithm.generatorType</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a773b3a5d6e96968a738a0e5232317cf8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="enummetaheuristics_1_1generators_1_1GeneratorType" kindref="compound">GeneratorType</ref></type>
+        <definition>GeneratorType metaheuristics.generators.GeneticAlgorithm.getType</definition>
+        <argsstring>()</argsstring>
+        <name>getType</name>
+        <qualifiedname>metaheuristics.generators.GeneticAlgorithm.getType</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1a5a123306b43c42d28cd1d6e17f8067a5">getType</reimplements>
+        <briefdescription>
+<para>getType - method to get the generator type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>returns the generator type. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" line="244" column="22" bodyfile="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" bodystart="244" bodyend="246"/>
+        <references refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1aa5911146e16570dbe2c6792922f64c4a" compoundref="GeneticAlgorithm_8java" startline="48">metaheuristics.generators.GeneticAlgorithm.generatorType</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a1e7b57b017ec0fc5e4a77efac27020eb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+        <definition>List&lt; State &gt; metaheuristics.generators.GeneticAlgorithm.getReferenceList</definition>
+        <argsstring>()</argsstring>
+        <name>getReferenceList</name>
+        <qualifiedname>metaheuristics.generators.GeneticAlgorithm.getReferenceList</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1ae168237b306de55fe4d6dfda75c7cd13">getReferenceList</reimplements>
+        <briefdescription>
+<para>getReferenceList - method to get the current list of reference states. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>returns the current list of reference states. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" line="253" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" bodystart="253" bodyend="260"/>
+        <references refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a48f94ad3fa5a3a89331f9a7b49400886" compoundref="GeneticAlgorithm_8java" startline="37">metaheuristics.generators.GeneticAlgorithm.listState</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1ae834128268192dd5fa3af2533601b4e8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+        <definition>List&lt; State &gt; metaheuristics.generators.GeneticAlgorithm.getSonList</definition>
+        <argsstring>()</argsstring>
+        <name>getSonList</name>
+        <qualifiedname>metaheuristics.generators.GeneticAlgorithm.getSonList</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1aee09d724c1b3040e7a7ad0b64e341c96">getSonList</reimplements>
+        <briefdescription>
+<para>getSonList - method to get the current list of son states. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>returns the current list of son states. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" line="267" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" bodystart="267" bodyend="270"/>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1aad3ab352411fa0a6d2ac878b4e422348" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean metaheuristics.generators.GeneticAlgorithm.awardUpdateREF</definition>
+        <argsstring>(State stateCandidate)</argsstring>
+        <name>awardUpdateREF</name>
+        <qualifiedname>metaheuristics.generators.GeneticAlgorithm.awardUpdateREF</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1a3513d3953ecc97683f38bcb662b74b9b">awardUpdateREF</reimplements>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>stateCandidate</declname>
+        </param>
+        <briefdescription>
+<para>awardUpdateREF - method to award the update of the reference state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stateCandidate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns true if the update is awarded, false otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" line="278" column="16" bodyfile="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" bodystart="278" bodyend="281"/>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a56efbafbfd2c341a047e2110e652b561" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float metaheuristics.generators.GeneticAlgorithm.getWeight</definition>
+        <argsstring>()</argsstring>
+        <name>getWeight</name>
+        <qualifiedname>metaheuristics.generators.GeneticAlgorithm.getWeight</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1a64f2b824081c7af593bf9aa8eabf2c9e">getWeight</reimplements>
+        <briefdescription>
+<para>getWeight - method to get the weight. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>returns the weight. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" line="289" column="14" bodyfile="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" bodystart="289" bodyend="292"/>
+        <references refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a4d164cdf156c6ce65f593fb42af2dc82" compoundref="GeneticAlgorithm_8java" startline="57">metaheuristics.generators.GeneticAlgorithm.weight</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1ab7d68ca3a4c1510c1ef697857c525233" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheuristics.generators.GeneticAlgorithm.setWeight</definition>
+        <argsstring>(float weight)</argsstring>
+        <name>setWeight</name>
+        <qualifiedname>metaheuristics.generators.GeneticAlgorithm.setWeight</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1a8b3c66b57b4c739666989fbce667eb40">setWeight</reimplements>
+        <param>
+          <type>float</type>
+          <declname>weight</declname>
+        </param>
+        <briefdescription>
+<para>setWeight - method to set the weight. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>weight</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" line="299" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" bodystart="299" bodyend="302"/>
+        <references refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a4d164cdf156c6ce65f593fb42af2dc82" compoundref="GeneticAlgorithm_8java" startline="57">metaheuristics.generators.GeneticAlgorithm.weight</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a12d345be0bac7bc8b1098589604ad6f8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int[]</type>
+        <definition>int[] metaheuristics.generators.GeneticAlgorithm.getListCountBetterGender</definition>
+        <argsstring>()</argsstring>
+        <name>getListCountBetterGender</name>
+        <qualifiedname>metaheuristics.generators.GeneticAlgorithm.getListCountBetterGender</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1ac5bace71f51c16b611ede3ed53263473">getListCountBetterGender</reimplements>
+        <briefdescription>
+<para>getListCountBetterGender - method to get the list of count better gender. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>returns the list of count better gender. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" line="308" column="12" bodyfile="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" bodystart="308" bodyend="311"/>
+        <references refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a09ddf8e09c4688520b26bb71fc413791" compoundref="GeneticAlgorithm_8java" startline="61">metaheuristics.generators.GeneticAlgorithm.listCountBetterGender</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1aafdeff3304b265033eb1b43c0e1d333a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int[]</type>
+        <definition>int[] metaheuristics.generators.GeneticAlgorithm.getListCountGender</definition>
+        <argsstring>()</argsstring>
+        <name>getListCountGender</name>
+        <qualifiedname>metaheuristics.generators.GeneticAlgorithm.getListCountGender</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1ac5d6d45ee8017fb87d80aa952edfc34e">getListCountGender</reimplements>
+        <briefdescription>
+<para>getListCountGender - method to get the list of count gender. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>returns the list of count gender. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" line="318" column="12" bodyfile="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" bodystart="318" bodyend="321"/>
+        <references refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a217c5558f699a1b27479e7277366861b" compoundref="GeneticAlgorithm_8java" startline="62">metaheuristics.generators.GeneticAlgorithm.listCountGender</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1aafb70e875527d683740485f89bbcc51e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float[]</type>
+        <definition>float[] metaheuristics.generators.GeneticAlgorithm.getTrace</definition>
+        <argsstring>()</argsstring>
+        <name>getTrace</name>
+        <qualifiedname>metaheuristics.generators.GeneticAlgorithm.getTrace</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1a75d7f30dd2cb3f92475db8525ac7c6e7">getTrace</reimplements>
+        <briefdescription>
+<para>getTrace - method to get the trace. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>returns the trace. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" line="328" column="14" bodyfile="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" bodystart="328" bodyend="331"/>
+        <references refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1aca22b6729d609b6b9d2bf258994558ba" compoundref="GeneticAlgorithm_8java" startline="63">metaheuristics.generators.GeneticAlgorithm.listTrace</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm" kindref="compound">GeneticAlgorithm</ref> - descripcion (añade detalles). </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>metaheuristics.generators.GeneticAlgorithm</label>
+        <link refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>metaheuristics.generators.Generator</label>
+        <link refid="classmetaheuristics_1_1generators_1_1Generator"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4">
+        <label>Cloneable</label>
+      </node>
+      <node id="11">
+        <label>evolutionary_algorithms.complement.CrossoverType</label>
+        <link refid="enumevolutionary__algorithms_1_1complement_1_1CrossoverType"/>
+      </node>
+      <node id="10">
+        <label>evolutionary_algorithms.complement.MutationType</label>
+        <link refid="enumevolutionary__algorithms_1_1complement_1_1MutationType"/>
+      </node>
+      <node id="12">
+        <label>evolutionary_algorithms.complement.ReplaceType</label>
+        <link refid="enumevolutionary__algorithms_1_1complement_1_1ReplaceType"/>
+      </node>
+      <node id="13">
+        <label>evolutionary_algorithms.complement.SelectionType</label>
+        <link refid="enumevolutionary__algorithms_1_1complement_1_1SelectionType"/>
+      </node>
+      <node id="7">
+        <label>factory_interface.IFFactoryCrossover</label>
+        <link refid="interfacefactory__interface_1_1IFFactoryCrossover"/>
+      </node>
+      <node id="6">
+        <label>factory_interface.IFFactoryFatherSelection</label>
+        <link refid="interfacefactory__interface_1_1IFFactoryFatherSelection"/>
+      </node>
+      <node id="8">
+        <label>factory_interface.IFFactoryMutation</label>
+        <link refid="interfacefactory__interface_1_1IFFactoryMutation"/>
+      </node>
+      <node id="9">
+        <label>factory_interface.IFFactoryReplace</label>
+        <link refid="interfacefactory__interface_1_1IFFactoryReplace"/>
+      </node>
+      <node id="1">
+        <label>metaheuristics.generators.GeneticAlgorithm</label>
+        <link refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-stateReferenceGA</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>-iffatherselection</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>-iffactorycrossover</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>-iffactorymutation</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>-iffreplace</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>-generatorType</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>+mutationType</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>+crossoverType</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>+replaceType</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>+selectionType</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>metaheuristics.generators.Generator</label>
+        <link refid="classmetaheuristics_1_1generators_1_1Generator"/>
+      </node>
+      <node id="5">
+        <label>metaheuristics.generators.GeneratorType</label>
+        <link refid="enummetaheuristics_1_1generators_1_1GeneratorType"/>
+      </node>
+      <node id="3">
+        <label>problem.definition.State</label>
+        <link refid="classproblem_1_1definition_1_1State"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>#typeGenerator</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" line="34" column="7" bodyfile="practica5/src/main/java/metaheuristics/generators/GeneticAlgorithm.java" bodystart="34" bodyend="333"/>
+    <listofallmembers>
+      <member refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1aad3ab352411fa0a6d2ac878b4e422348" prot="public" virt="non-virtual"><scope>metaheuristics::generators::GeneticAlgorithm</scope><name>awardUpdateREF</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1Generator_1a43815f3944c514ba3156b0e68482befa" prot="public" virt="non-virtual"><scope>metaheuristics::generators::GeneticAlgorithm</scope><name>countBetterGender</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1Generator_1a3c0145210385b6257c8fc20cac1f830a" prot="public" virt="non-virtual"><scope>metaheuristics::generators::GeneticAlgorithm</scope><name>countGender</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a63b97c344354be3ca7bca194acbb2fee" prot="public" virt="non-virtual"><scope>metaheuristics::generators::GeneticAlgorithm</scope><name>countRef</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a3b5a496c6874da23350bc443cd08c00c" prot="public" virt="non-virtual"><scope>metaheuristics::generators::GeneticAlgorithm</scope><name>crossoverType</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1afa69278cc4f87d309326773aeab7b6da" prot="public" virt="non-virtual"><scope>metaheuristics::generators::GeneticAlgorithm</scope><name>generate</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1aa5911146e16570dbe2c6792922f64c4a" prot="private" virt="non-virtual"><scope>metaheuristics::generators::GeneticAlgorithm</scope><name>generatorType</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a2d0bf12c8bedefdebb47612a503a6e6b" prot="public" virt="non-virtual"><scope>metaheuristics::generators::GeneticAlgorithm</scope><name>GeneticAlgorithm</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a1d25e15228ac6416a75c73c21c0ea036" prot="public" virt="non-virtual"><scope>metaheuristics::generators::GeneticAlgorithm</scope><name>getGeneratorType</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a12d345be0bac7bc8b1098589604ad6f8" prot="public" virt="non-virtual"><scope>metaheuristics::generators::GeneticAlgorithm</scope><name>getListCountBetterGender</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1aafdeff3304b265033eb1b43c0e1d333a" prot="public" virt="non-virtual"><scope>metaheuristics::generators::GeneticAlgorithm</scope><name>getListCountGender</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1af808ab394faa3451363c64047b0b3319" prot="public" virt="non-virtual"><scope>metaheuristics::generators::GeneticAlgorithm</scope><name>getListState</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a02c8f9088f27ab03a6a6ec65348750b5" prot="public" virt="non-virtual"><scope>metaheuristics::generators::GeneticAlgorithm</scope><name>getListStateRef</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a7bff79adbecc5510d4294dbc617eb8b4" prot="public" virt="non-virtual"><scope>metaheuristics::generators::GeneticAlgorithm</scope><name>getReference</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a1e7b57b017ec0fc5e4a77efac27020eb" prot="public" virt="non-virtual"><scope>metaheuristics::generators::GeneticAlgorithm</scope><name>getReferenceList</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1ae834128268192dd5fa3af2533601b4e8" prot="public" virt="non-virtual"><scope>metaheuristics::generators::GeneticAlgorithm</scope><name>getSonList</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1aafb70e875527d683740485f89bbcc51e" prot="public" virt="non-virtual"><scope>metaheuristics::generators::GeneticAlgorithm</scope><name>getTrace</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a773b3a5d6e96968a738a0e5232317cf8" prot="public" virt="non-virtual"><scope>metaheuristics::generators::GeneticAlgorithm</scope><name>getType</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a56efbafbfd2c341a047e2110e652b561" prot="public" virt="non-virtual"><scope>metaheuristics::generators::GeneticAlgorithm</scope><name>getWeight</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1acf49e3525fe7ef722a96b3c82990bfe3" prot="private" virt="non-virtual"><scope>metaheuristics::generators::GeneticAlgorithm</scope><name>iffactorycrossover</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a73cf0d217617644f072c286df7a5a097" prot="private" virt="non-virtual"><scope>metaheuristics::generators::GeneticAlgorithm</scope><name>iffactorymutation</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1ae4eb9fe7eb65161cf1b41ca978451a32" prot="private" virt="non-virtual"><scope>metaheuristics::generators::GeneticAlgorithm</scope><name>iffatherselection</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1aa7b956e32f2aedea280263be61bc5efb" prot="private" virt="non-virtual"><scope>metaheuristics::generators::GeneticAlgorithm</scope><name>iffreplace</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a09ddf8e09c4688520b26bb71fc413791" prot="private" virt="non-virtual"><scope>metaheuristics::generators::GeneticAlgorithm</scope><name>listCountBetterGender</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a217c5558f699a1b27479e7277366861b" prot="private" virt="non-virtual"><scope>metaheuristics::generators::GeneticAlgorithm</scope><name>listCountGender</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a48f94ad3fa5a3a89331f9a7b49400886" prot="private" virt="non-virtual"><scope>metaheuristics::generators::GeneticAlgorithm</scope><name>listState</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1aca22b6729d609b6b9d2bf258994558ba" prot="private" virt="non-virtual"><scope>metaheuristics::generators::GeneticAlgorithm</scope><name>listTrace</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1ac99e3f6b5b0218f260b93ac12ee9d84c" prot="public" virt="non-virtual"><scope>metaheuristics::generators::GeneticAlgorithm</scope><name>mutationType</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a51c602a2966c1f0122de14382a3e7744" prot="public" virt="non-virtual"><scope>metaheuristics::generators::GeneticAlgorithm</scope><name>PC</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a94263867690319c56293fb8350375704" prot="public" virt="non-virtual"><scope>metaheuristics::generators::GeneticAlgorithm</scope><name>PM</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1ae1bdd1ed05bfb4702d07212de9a2e8af" prot="public" virt="non-virtual"><scope>metaheuristics::generators::GeneticAlgorithm</scope><name>replaceType</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a8913c849a2e49a7aff5b1fa110fb4874" prot="public" virt="non-virtual"><scope>metaheuristics::generators::GeneticAlgorithm</scope><name>selectionType</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a0aa86194072af7818974867b703e06a4" prot="public" virt="non-virtual"><scope>metaheuristics::generators::GeneticAlgorithm</scope><name>setGeneratorType</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1af30dbd658c8be56deb62ebc45c2ef894" prot="public" virt="non-virtual"><scope>metaheuristics::generators::GeneticAlgorithm</scope><name>setInitialReference</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a4e72574da9810ab5815c94c3499b8671" prot="public" virt="non-virtual"><scope>metaheuristics::generators::GeneticAlgorithm</scope><name>setListState</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a27f40e887e3304027c08bf705f99c4a0" prot="public" virt="non-virtual"><scope>metaheuristics::generators::GeneticAlgorithm</scope><name>setStateRef</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1ab7d68ca3a4c1510c1ef697857c525233" prot="public" virt="non-virtual"><scope>metaheuristics::generators::GeneticAlgorithm</scope><name>setWeight</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a6aead58a018010568e7f453f97021b8d" prot="private" virt="non-virtual"><scope>metaheuristics::generators::GeneticAlgorithm</scope><name>stateReferenceGA</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1af42d6dad4ce6883c8b4c37d8a726d738" prot="public" virt="non-virtual"><scope>metaheuristics::generators::GeneticAlgorithm</scope><name>truncation</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1af007f7a227b465ed513b5b07f8c54b6b" prot="public" virt="non-virtual"><scope>metaheuristics::generators::GeneticAlgorithm</scope><name>updateReference</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a4d164cdf156c6ce65f593fb42af2dc82" prot="private" virt="non-virtual"><scope>metaheuristics::generators::GeneticAlgorithm</scope><name>weight</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

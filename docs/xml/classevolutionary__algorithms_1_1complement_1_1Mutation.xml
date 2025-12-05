@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="es">
+  <compounddef id="classevolutionary__algorithms_1_1complement_1_1Mutation" kind="class" language="Java" prot="public" abstract="yes">
+    <compoundname>evolutionary_algorithms::complement::Mutation</compoundname>
+    <derivedcompoundref refid="classevolutionary__algorithms_1_1complement_1_1AIOMutation" prot="public" virt="non-virtual">evolutionary_algorithms.complement.AIOMutation</derivedcompoundref>
+    <derivedcompoundref refid="classevolutionary__algorithms_1_1complement_1_1OnePointMutation" prot="public" virt="non-virtual">evolutionary_algorithms.complement.OnePointMutation</derivedcompoundref>
+    <derivedcompoundref refid="classevolutionary__algorithms_1_1complement_1_1TowPointsMutation" prot="public" virt="non-virtual">evolutionary_algorithms.complement.TowPointsMutation</derivedcompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classevolutionary__algorithms_1_1complement_1_1Mutation_1a027da26e5a49d8ca908b03acffebb226" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>abstract <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+        <definition>abstract State evolutionary_algorithms.complement.Mutation.mutation</definition>
+        <argsstring>(State state, double PM)</argsstring>
+        <name>mutation</name>
+        <qualifiedname>evolutionary_algorithms.complement.Mutation.mutation</qualifiedname>
+        <reimplementedby refid="classevolutionary__algorithms_1_1complement_1_1AIOMutation_1a182dacf4bb3046d61563d6bd5f31e156">mutation</reimplementedby>
+        <reimplementedby refid="classevolutionary__algorithms_1_1complement_1_1OnePointMutation_1a58178e28b21fd4559c38db00003e1bb0">mutation</reimplementedby>
+        <reimplementedby refid="classevolutionary__algorithms_1_1complement_1_1TowPointsMutation_1aba8bc136aacf5eafcd9e73d032218e16">mutation</reimplementedby>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>PM</declname>
+        </param>
+        <briefdescription>
+<para>mutation - applies the mutation to the state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>PM</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns the mutated state </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/evolutionary_algorithms/complement/Mutation.java" line="15" column="23"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a5a222a42cc69a782b603004f2ca501d0" compoundref="EvolutionStrategies_8java" startline="76" endline="94">metaheuristics.generators.EvolutionStrategies.generate</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1afa69278cc4f87d309326773aeab7b6da" compoundref="GeneticAlgorithm_8java" startline="90" endline="125">metaheuristics.generators.GeneticAlgorithm.generate</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="classevolutionary__algorithms_1_1complement_1_1Mutation" kindref="compound">Mutation</ref> - applies a mutation to a given state. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>evolutionary_algorithms.complement.Mutation</label>
+        <link refid="classevolutionary__algorithms_1_1complement_1_1Mutation"/>
+      </node>
+      <node id="2">
+        <label>evolutionary_algorithms.complement.AIOMutation</label>
+        <link refid="classevolutionary__algorithms_1_1complement_1_1AIOMutation"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>evolutionary_algorithms.complement.OnePointMutation</label>
+        <link refid="classevolutionary__algorithms_1_1complement_1_1OnePointMutation"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>evolutionary_algorithms.complement.TowPointsMutation</label>
+        <link refid="classevolutionary__algorithms_1_1complement_1_1TowPointsMutation"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>evolutionary_algorithms.complement.Mutation</label>
+        <link refid="classevolutionary__algorithms_1_1complement_1_1Mutation"/>
+      </node>
+    </collaborationgraph>
+    <location file="practica5/src/main/java/evolutionary_algorithms/complement/Mutation.java" line="8" column="17" bodyfile="practica5/src/main/java/evolutionary_algorithms/complement/Mutation.java" bodystart="8" bodyend="17"/>
+    <listofallmembers>
+      <member refid="classevolutionary__algorithms_1_1complement_1_1Mutation_1a027da26e5a49d8ca908b03acffebb226" prot="public" virt="non-virtual"><scope>evolutionary_algorithms::complement::Mutation</scope><name>mutation</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

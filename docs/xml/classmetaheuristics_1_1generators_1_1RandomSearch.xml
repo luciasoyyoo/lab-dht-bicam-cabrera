@@ -1,0 +1,761 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="es">
+  <compounddef id="classmetaheuristics_1_1generators_1_1RandomSearch" kind="class" language="Java" prot="public">
+    <compoundname>metaheuristics::generators::RandomSearch</compoundname>
+    <basecompoundref refid="classmetaheuristics_1_1generators_1_1Generator" prot="public" virt="non-virtual">metaheuristics.generators.Generator</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1RandomSearch_1a31725eeb416cd0b5845bf0b2b8cd9a61" prot="private" static="no" mutable="no">
+        <type><ref refid="classlocal__search_1_1candidate__type_1_1CandidateValue" kindref="compound">CandidateValue</ref></type>
+        <definition>CandidateValue metaheuristics.generators.RandomSearch.candidatevalue</definition>
+        <argsstring></argsstring>
+        <name>candidatevalue</name>
+        <qualifiedname>metaheuristics.generators.RandomSearch.candidatevalue</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/RandomSearch.java" line="26" column="24" bodyfile="practica5/src/main/java/metaheuristics/generators/RandomSearch.java" bodystart="26" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1RandomSearch_1ad7023836b94dd23bffd78ab7b9915551" compoundref="RandomSearch_8java" startline="66" endline="72">metaheuristics.generators.RandomSearch.generate</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1RandomSearch_1a713ff99310ed0fb343bd9514bc3d92dc" prot="private" static="no" mutable="no">
+        <type><ref refid="enumlocal__search_1_1acceptation__type_1_1AcceptType" kindref="compound">AcceptType</ref></type>
+        <definition>AcceptType metaheuristics.generators.RandomSearch.typeAcceptation</definition>
+        <argsstring></argsstring>
+        <name>typeAcceptation</name>
+        <qualifiedname>metaheuristics.generators.RandomSearch.typeAcceptation</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/RandomSearch.java" line="27" column="20" bodyfile="practica5/src/main/java/metaheuristics/generators/RandomSearch.java" bodystart="27" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1RandomSearch_1a0ec26b03ce5dd592af4568fa0b4b915e" compoundref="RandomSearch_8java" startline="98" endline="104">metaheuristics.generators.RandomSearch.updateReference</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1RandomSearch_1a423df75382c7b0481b472ba9d64dbc06" prot="private" static="no" mutable="no">
+        <type><ref refid="enumlocal__search_1_1complement_1_1StrategyType" kindref="compound">StrategyType</ref></type>
+        <definition>StrategyType metaheuristics.generators.RandomSearch.strategy</definition>
+        <argsstring></argsstring>
+        <name>strategy</name>
+        <qualifiedname>metaheuristics.generators.RandomSearch.strategy</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/RandomSearch.java" line="28" column="22" bodyfile="practica5/src/main/java/metaheuristics/generators/RandomSearch.java" bodystart="28" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1RandomSearch_1ad7023836b94dd23bffd78ab7b9915551" compoundref="RandomSearch_8java" startline="66" endline="72">metaheuristics.generators.RandomSearch.generate</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1RandomSearch_1a41464d2c8c9fea8baa80db5e8555065a" prot="private" static="no" mutable="no">
+        <type><ref refid="enumlocal__search_1_1candidate__type_1_1CandidateType" kindref="compound">CandidateType</ref></type>
+        <definition>CandidateType metaheuristics.generators.RandomSearch.typeCandidate</definition>
+        <argsstring></argsstring>
+        <name>typeCandidate</name>
+        <qualifiedname>metaheuristics.generators.RandomSearch.typeCandidate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/RandomSearch.java" line="29" column="23" bodyfile="practica5/src/main/java/metaheuristics/generators/RandomSearch.java" bodystart="29" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1RandomSearch_1ad7023836b94dd23bffd78ab7b9915551" compoundref="RandomSearch_8java" startline="66" endline="72">metaheuristics.generators.RandomSearch.generate</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1RandomSearch_1a0d8cba82a8afe29331014b860f3f40e2" prot="private" static="no" mutable="no">
+        <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+        <definition>State metaheuristics.generators.RandomSearch.stateReferenceRS</definition>
+        <argsstring></argsstring>
+        <name>stateReferenceRS</name>
+        <qualifiedname>metaheuristics.generators.RandomSearch.stateReferenceRS</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/RandomSearch.java" line="30" column="15" bodyfile="practica5/src/main/java/metaheuristics/generators/RandomSearch.java" bodystart="30" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1RandomSearch_1ad7023836b94dd23bffd78ab7b9915551" compoundref="RandomSearch_8java" startline="66" endline="72">metaheuristics.generators.RandomSearch.generate</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1RandomSearch_1aff9eb703f54f81e6c52c0f2242c726c9" compoundref="RandomSearch_8java" startline="79" endline="81">metaheuristics.generators.RandomSearch.getReference</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1RandomSearch_1a86fdf2273755318267c1839988d2074c" compoundref="RandomSearch_8java" startline="137" endline="140">metaheuristics.generators.RandomSearch.getReferenceList</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1RandomSearch_1a0ec26b03ce5dd592af4568fa0b4b915e" compoundref="RandomSearch_8java" startline="98" endline="104">metaheuristics.generators.RandomSearch.updateReference</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1RandomSearch_1aaccc7be6beddc8bfcdf9ef6399f2e27f" prot="private" static="no" mutable="no">
+        <type><ref refid="interfacefactory__interface_1_1IFFactoryAcceptCandidate" kindref="compound">IFFactoryAcceptCandidate</ref></type>
+        <definition>IFFactoryAcceptCandidate metaheuristics.generators.RandomSearch.ifacceptCandidate</definition>
+        <argsstring></argsstring>
+        <name>ifacceptCandidate</name>
+        <qualifiedname>metaheuristics.generators.RandomSearch.ifacceptCandidate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/RandomSearch.java" line="31" column="38" bodyfile="practica5/src/main/java/metaheuristics/generators/RandomSearch.java" bodystart="31" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1RandomSearch_1a0ec26b03ce5dd592af4568fa0b4b915e" compoundref="RandomSearch_8java" startline="98" endline="104">metaheuristics.generators.RandomSearch.updateReference</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1RandomSearch_1a14824f061a82565bcbe633ab11cc8c99" prot="private" static="no" mutable="no">
+        <type><ref refid="enummetaheuristics_1_1generators_1_1GeneratorType" kindref="compound">GeneratorType</ref></type>
+        <definition>GeneratorType metaheuristics.generators.RandomSearch.typeGenerator</definition>
+        <argsstring></argsstring>
+        <name>typeGenerator</name>
+        <qualifiedname>metaheuristics.generators.RandomSearch.typeGenerator</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/RandomSearch.java" line="32" column="27" bodyfile="practica5/src/main/java/metaheuristics/generators/RandomSearch.java" bodystart="32" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1RandomSearch_1ab6f8c524a2947214b1c2fdfbefdd6a62" compoundref="RandomSearch_8java" startline="120" endline="122">metaheuristics.generators.RandomSearch.getTypeGenerator</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1RandomSearch_1a4f1278b5787af80bfca253179a4d2de4" compoundref="RandomSearch_8java" startline="128" endline="130">metaheuristics.generators.RandomSearch.setTypeGenerator</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1RandomSearch_1a9c70568238fb6c172062e8709c28c53c" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float metaheuristics.generators.RandomSearch.weight</definition>
+        <argsstring></argsstring>
+        <name>weight</name>
+        <qualifiedname>metaheuristics.generators.RandomSearch.weight</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/RandomSearch.java" line="34" column="19" bodyfile="practica5/src/main/java/metaheuristics/generators/RandomSearch.java" bodystart="34" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1RandomSearch_1a7a6ced92bd465675956f08a646e93aaa" compoundref="RandomSearch_8java" startline="179" endline="182">metaheuristics.generators.RandomSearch.setWeight</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1RandomSearch_1a0bf4dbdcfe91cc3ec191b96ba9104a07" prot="private" static="no" mutable="no">
+        <type>int[]</type>
+        <definition>int [] metaheuristics.generators.RandomSearch.listCountBetterGender</definition>
+        <argsstring></argsstring>
+        <name>listCountBetterGender</name>
+        <qualifiedname>metaheuristics.generators.RandomSearch.listCountBetterGender</qualifiedname>
+        <initializer>= new int[10]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/RandomSearch.java" line="39" column="17" bodyfile="practica5/src/main/java/metaheuristics/generators/RandomSearch.java" bodystart="39" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1RandomSearch_1ab94942d43169f104044b32d1e513f9f2" compoundref="RandomSearch_8java" startline="46" endline="58">metaheuristics.generators.RandomSearch.RandomSearch</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1RandomSearch_1a9fdd813456c4f26698cc0c1fed994b4f" prot="private" static="no" mutable="no">
+        <type>int[]</type>
+        <definition>int [] metaheuristics.generators.RandomSearch.listCountGender</definition>
+        <argsstring></argsstring>
+        <name>listCountGender</name>
+        <qualifiedname>metaheuristics.generators.RandomSearch.listCountGender</qualifiedname>
+        <initializer>= new int[10]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/RandomSearch.java" line="40" column="17" bodyfile="practica5/src/main/java/metaheuristics/generators/RandomSearch.java" bodystart="40" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1RandomSearch_1ab94942d43169f104044b32d1e513f9f2" compoundref="RandomSearch_8java" startline="46" endline="58">metaheuristics.generators.RandomSearch.RandomSearch</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1RandomSearch_1a3d9000b9b84e9918bcf2e8187a057d7d" prot="private" static="no" mutable="no">
+        <type>float[]</type>
+        <definition>float [] metaheuristics.generators.RandomSearch.listTrace</definition>
+        <argsstring></argsstring>
+        <name>listTrace</name>
+        <qualifiedname>metaheuristics.generators.RandomSearch.listTrace</qualifiedname>
+        <initializer>= new float[1200000]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/RandomSearch.java" line="41" column="19" bodyfile="practica5/src/main/java/metaheuristics/generators/RandomSearch.java" bodystart="41" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1RandomSearch_1ab94942d43169f104044b32d1e513f9f2" compoundref="RandomSearch_8java" startline="46" endline="58">metaheuristics.generators.RandomSearch.RandomSearch</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1RandomSearch_1ab7be9a87a0cb3de1e17f14e79a0b32ce" prot="public" static="yes" mutable="no">
+        <type>final List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+        <definition>final List&lt;State&gt; metaheuristics.generators.RandomSearch.listStateReference</definition>
+        <argsstring></argsstring>
+        <name>listStateReference</name>
+        <qualifiedname>metaheuristics.generators.RandomSearch.listStateReference</qualifiedname>
+        <initializer>= Collections.synchronizedList(new ArrayList&lt;<ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref>&gt;())</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/RandomSearch.java" line="36" column="26" bodyfile="practica5/src/main/java/metaheuristics/generators/RandomSearch.java" bodystart="36" bodyend="-1"/>
+        <referencedby refid="classmetaheurictics_1_1strategy_1_1Strategy_1ac4829af561593656b314235f004f0308" compoundref="Strategy_8java" startline="483" endline="486">metaheurictics.strategy.Strategy.destroyExecute</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1RandomSearch_1ad7023836b94dd23bffd78ab7b9915551" compoundref="RandomSearch_8java" startline="66" endline="72">metaheuristics.generators.RandomSearch.generate</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a951d5d5991b9e676084456258c2c2947" compoundref="DistributionEstimationAlgorithm_8java" startline="189" endline="208">metaheuristics.generators.DistributionEstimationAlgorithm.getListStateRef</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1a3c8abb363dd3c13968dca892016f7567" compoundref="EvolutionStrategies_8java" startline="164" endline="183">metaheuristics.generators.EvolutionStrategies.getListStateRef</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a02c8f9088f27ab03a6a6ec65348750b5" compoundref="GeneticAlgorithm_8java" startline="200" endline="221">metaheuristics.generators.GeneticAlgorithm.getListStateRef</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a4a9da4ad8253a7521056fbb306a495a3" compoundref="ParticleSwarmOptimization_8java" startline="220" endline="260">metaheuristics.generators.ParticleSwarmOptimization.getListStateRef</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1RandomSearch_1a86fdf2273755318267c1839988d2074c" compoundref="RandomSearch_8java" startline="137" endline="140">metaheuristics.generators.RandomSearch.getReferenceList</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1RandomSearch_1ab94942d43169f104044b32d1e513f9f2" compoundref="RandomSearch_8java" startline="46" endline="58">metaheuristics.generators.RandomSearch.RandomSearch</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1RandomSearch_1ab94942d43169f104044b32d1e513f9f2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>metaheuristics.generators.RandomSearch.RandomSearch</definition>
+        <argsstring>()</argsstring>
+        <name>RandomSearch</name>
+        <qualifiedname>metaheuristics.generators.RandomSearch.RandomSearch</qualifiedname>
+        <briefdescription>
+<para><ref refid="classmetaheuristics_1_1generators_1_1RandomSearch" kindref="compound">RandomSearch</ref> - class that implements the Random Search metaheuristic. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/RandomSearch.java" line="46" column="8" bodyfile="practica5/src/main/java/metaheuristics/generators/RandomSearch.java" bodystart="46" bodyend="58"/>
+        <references refid="enumlocal__search_1_1acceptation__type_1_1AcceptType_1abc2c141301995f3a5a501195a81c1420" compoundref="AcceptType_8java" startline="15">local_search.acceptation_type.AcceptType.AcceptBest</references>
+        <references refid="classmetaheuristics_1_1generators_1_1RandomSearch_1a0bf4dbdcfe91cc3ec191b96ba9104a07" compoundref="RandomSearch_8java" startline="39">metaheuristics.generators.RandomSearch.listCountBetterGender</references>
+        <references refid="classmetaheuristics_1_1generators_1_1RandomSearch_1a9fdd813456c4f26698cc0c1fed994b4f" compoundref="RandomSearch_8java" startline="40">metaheuristics.generators.RandomSearch.listCountGender</references>
+        <references refid="classmetaheuristics_1_1generators_1_1RandomSearch_1ab7be9a87a0cb3de1e17f14e79a0b32ce" compoundref="RandomSearch_8java" startline="36">metaheuristics.generators.RandomSearch.listStateReference</references>
+        <references refid="classmetaheuristics_1_1generators_1_1RandomSearch_1a3d9000b9b84e9918bcf2e8187a057d7d" compoundref="RandomSearch_8java" startline="41">metaheuristics.generators.RandomSearch.listTrace</references>
+        <references refid="enumlocal__search_1_1complement_1_1StrategyType_1a6319a2518e93ad757c398fb858df8c9e" compoundref="StrategyType_8java" startline="18">local_search.complement.StrategyType.NORMAL</references>
+        <references refid="enumlocal__search_1_1candidate__type_1_1CandidateType_1a3914a76aec072c9056c8a338449c0532" compoundref="CandidateType_8java" startline="20">local_search.candidate_type.CandidateType.RandomCandidate</references>
+        <references refid="enummetaheuristics_1_1generators_1_1GeneratorType_1a6923135e50535f5ec9b1ba1e9b8c7107" compoundref="GeneratorType_8java" startline="7">metaheuristics.generators.GeneratorType.RandomSearch</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1RandomSearch_1ad7023836b94dd23bffd78ab7b9915551" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+        <definition>State metaheuristics.generators.RandomSearch.generate</definition>
+        <argsstring>(Integer operatornumber)</argsstring>
+        <name>generate</name>
+        <qualifiedname>metaheuristics.generators.RandomSearch.generate</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1a06f6f7622b9ce32590eadbdf6bf962b5">generate</reimplements>
+        <param>
+          <type>Integer</type>
+          <declname>operatornumber</declname>
+        </param>
+        <exceptions> throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException </exceptions>
+        <briefdescription>
+<para>generate - generate a new state for the random search. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>operatornumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the generated state </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/RandomSearch.java" line="66" column="14" bodyfile="practica5/src/main/java/metaheuristics/generators/RandomSearch.java" bodystart="66" bodyend="72"/>
+        <references refid="classmetaheuristics_1_1generators_1_1RandomSearch_1a31725eeb416cd0b5845bf0b2b8cd9a61" compoundref="RandomSearch_8java" startline="26">metaheuristics.generators.RandomSearch.candidatevalue</references>
+        <references refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a15b9c3d9f7da69124b58dd08aca096dc" compoundref="DistributionEstimationAlgorithm_8java" startline="48">metaheuristics.generators.DistributionEstimationAlgorithm.countRef</references>
+        <references refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1ab1e6d7d7bb0c21bd90f5ddd5532dcb3b" compoundref="EvolutionStrategies_8java" startline="41">metaheuristics.generators.EvolutionStrategies.countRef</references>
+        <references refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a63b97c344354be3ca7bca194acbb2fee" compoundref="GeneticAlgorithm_8java" startline="55">metaheuristics.generators.GeneticAlgorithm.countRef</references>
+        <references refid="classproblem_1_1definition_1_1Operator_1a08c63f0d681ef130fccdb04d24ddf181">problem.definition.Operator.generateRandomState</references>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a8a448ceb59a38faaa4d964e5c31510ee" compoundref="ParticleSwarmOptimization_8java" startline="344" endline="346">metaheuristics.generators.ParticleSwarmOptimization.getCountRef</references>
+        <references refid="classproblem_1_1definition_1_1Problem_1a4cd649edb8862f21af171491cb9b9386" compoundref="Problem_8java" startline="131" endline="133">problem.definition.Problem.getOperator</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1a4bc6bd95db71e14b1f48c1bfc85f1305" compoundref="Strategy_8java" startline="405" endline="407">metaheurictics.strategy.Strategy.getProblem</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1ad2641e12c52292930364de6655333aa8" compoundref="Strategy_8java" startline="80" endline="85">metaheurictics.strategy.Strategy.getStrategy</references>
+        <references refid="classmetaheuristics_1_1generators_1_1RandomSearch_1ab7be9a87a0cb3de1e17f14e79a0b32ce" compoundref="RandomSearch_8java" startline="36">metaheuristics.generators.RandomSearch.listStateReference</references>
+        <references refid="classmetaheuristics_1_1generators_1_1RandomSearch_1a0d8cba82a8afe29331014b860f3f40e2" compoundref="RandomSearch_8java" startline="30">metaheuristics.generators.RandomSearch.stateReferenceRS</references>
+        <references refid="classmetaheuristics_1_1generators_1_1RandomSearch_1a423df75382c7b0481b472ba9d64dbc06" compoundref="RandomSearch_8java" startline="28">metaheuristics.generators.RandomSearch.strategy</references>
+        <references refid="classmetaheuristics_1_1generators_1_1RandomSearch_1a41464d2c8c9fea8baa80db5e8555065a" compoundref="RandomSearch_8java" startline="29">metaheuristics.generators.RandomSearch.typeCandidate</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1RandomSearch_1aff9eb703f54f81e6c52c0f2242c726c9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+        <definition>State metaheuristics.generators.RandomSearch.getReference</definition>
+        <argsstring>()</argsstring>
+        <name>getReference</name>
+        <qualifiedname>metaheuristics.generators.RandomSearch.getReference</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1aa56dd45a45776f6023b9f74179cc6384">getReference</reimplements>
+        <briefdescription>
+<para>getReference - get the reference state for the random search. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the reference state </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/RandomSearch.java" line="79" column="14" bodyfile="practica5/src/main/java/metaheuristics/generators/RandomSearch.java" bodystart="79" bodyend="81"/>
+        <references refid="classmetaheuristics_1_1generators_1_1RandomSearch_1a0d8cba82a8afe29331014b860f3f40e2" compoundref="RandomSearch_8java" startline="30">metaheuristics.generators.RandomSearch.stateReferenceRS</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1RandomSearch_1a13ed1a979ee6b0c7e1c9b1a8dc245a42" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheuristics.generators.RandomSearch.setInitialReference</definition>
+        <argsstring>(State stateInitialRef)</argsstring>
+        <name>setInitialReference</name>
+        <qualifiedname>metaheuristics.generators.RandomSearch.setInitialReference</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1aa9f7c4c983705f843b8fcc81e4aa8ba4">setInitialReference</reimplements>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>stateInitialRef</declname>
+        </param>
+        <briefdescription>
+<para>setInitialReference - set the initial reference state for the random search. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stateInitialRef</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/RandomSearch.java" line="88" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/RandomSearch.java" bodystart="88" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1RandomSearch_1a0ec26b03ce5dd592af4568fa0b4b915e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheuristics.generators.RandomSearch.updateReference</definition>
+        <argsstring>(State stateCandidate, Integer countIterationsCurrent)</argsstring>
+        <name>updateReference</name>
+        <qualifiedname>metaheuristics.generators.RandomSearch.updateReference</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1aa1c5878953f2111221b21cb9b1e6cc9f">updateReference</reimplements>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>stateCandidate</declname>
+        </param>
+        <param>
+          <type>Integer</type>
+          <declname>countIterationsCurrent</declname>
+        </param>
+        <exceptions> throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException,	IllegalAccessException, InvocationTargetException, NoSuchMethodException </exceptions>
+        <briefdescription>
+<para>updateReference - update the reference state and the personal best state of the particle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stateCandidate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>countIterationsCurrent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/RandomSearch.java" line="98" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/RandomSearch.java" bodystart="98" bodyend="104"/>
+        <references refid="classlocal__search_1_1acceptation__type_1_1AcceptableCandidate_1aa9e62e1d2d213c3828d2491b506d0592">local_search.acceptation_type.AcceptableCandidate.acceptCandidate</references>
+        <references refid="classmetaheuristics_1_1generators_1_1RandomSearch_1aaccc7be6beddc8bfcdf9ef6399f2e27f" compoundref="RandomSearch_8java" startline="31">metaheuristics.generators.RandomSearch.ifacceptCandidate</references>
+        <references refid="classmetaheuristics_1_1generators_1_1RandomSearch_1a0d8cba82a8afe29331014b860f3f40e2" compoundref="RandomSearch_8java" startline="30">metaheuristics.generators.RandomSearch.stateReferenceRS</references>
+        <references refid="classmetaheuristics_1_1generators_1_1RandomSearch_1a713ff99310ed0fb343bd9514bc3d92dc" compoundref="RandomSearch_8java" startline="27">metaheuristics.generators.RandomSearch.typeAcceptation</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1RandomSearch_1ac91ed100725544f9a3b74c1950d202eb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="enummetaheuristics_1_1generators_1_1GeneratorType" kindref="compound">GeneratorType</ref></type>
+        <definition>GeneratorType metaheuristics.generators.RandomSearch.getType</definition>
+        <argsstring>()</argsstring>
+        <name>getType</name>
+        <qualifiedname>metaheuristics.generators.RandomSearch.getType</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1a5a123306b43c42d28cd1d6e17f8067a5">getType</reimplements>
+        <briefdescription>
+<para>getType - get the type of the generator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the type of the generator </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/RandomSearch.java" line="112" column="22" bodyfile="practica5/src/main/java/metaheuristics/generators/RandomSearch.java" bodystart="112" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1RandomSearch_1ab6f8c524a2947214b1c2fdfbefdd6a62" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="enummetaheuristics_1_1generators_1_1GeneratorType" kindref="compound">GeneratorType</ref></type>
+        <definition>GeneratorType metaheuristics.generators.RandomSearch.getTypeGenerator</definition>
+        <argsstring>()</argsstring>
+        <name>getTypeGenerator</name>
+        <qualifiedname>metaheuristics.generators.RandomSearch.getTypeGenerator</qualifiedname>
+        <briefdescription>
+<para>getTypeGenerator - get the type of the generator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the type of the generator </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/RandomSearch.java" line="120" column="22" bodyfile="practica5/src/main/java/metaheuristics/generators/RandomSearch.java" bodystart="120" bodyend="122"/>
+        <references refid="classmetaheuristics_1_1generators_1_1RandomSearch_1a14824f061a82565bcbe633ab11cc8c99" compoundref="RandomSearch_8java" startline="32">metaheuristics.generators.RandomSearch.typeGenerator</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1RandomSearch_1a4f1278b5787af80bfca253179a4d2de4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheuristics.generators.RandomSearch.setTypeGenerator</definition>
+        <argsstring>(GeneratorType typeGenerator)</argsstring>
+        <name>setTypeGenerator</name>
+        <qualifiedname>metaheuristics.generators.RandomSearch.setTypeGenerator</qualifiedname>
+        <param>
+          <type><ref refid="enummetaheuristics_1_1generators_1_1GeneratorType" kindref="compound">GeneratorType</ref></type>
+          <declname>typeGenerator</declname>
+        </param>
+        <briefdescription>
+<para>setTypeGenerator - set the type of the generator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>typeGenerator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/RandomSearch.java" line="128" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/RandomSearch.java" bodystart="128" bodyend="130"/>
+        <references refid="classmetaheuristics_1_1generators_1_1RandomSearch_1a14824f061a82565bcbe633ab11cc8c99" compoundref="RandomSearch_8java" startline="32">metaheuristics.generators.RandomSearch.typeGenerator</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1RandomSearch_1a86fdf2273755318267c1839988d2074c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+        <definition>List&lt; State &gt; metaheuristics.generators.RandomSearch.getReferenceList</definition>
+        <argsstring>()</argsstring>
+        <name>getReferenceList</name>
+        <qualifiedname>metaheuristics.generators.RandomSearch.getReferenceList</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1ae168237b306de55fe4d6dfda75c7cd13">getReferenceList</reimplements>
+        <briefdescription>
+<para>getReferenceList - get the list of reference states for the random search. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the list of reference states </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/RandomSearch.java" line="137" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/RandomSearch.java" bodystart="137" bodyend="140"/>
+        <references refid="classmetaheuristics_1_1generators_1_1RandomSearch_1ab7be9a87a0cb3de1e17f14e79a0b32ce" compoundref="RandomSearch_8java" startline="36">metaheuristics.generators.RandomSearch.listStateReference</references>
+        <references refid="classmetaheuristics_1_1generators_1_1RandomSearch_1a0d8cba82a8afe29331014b860f3f40e2" compoundref="RandomSearch_8java" startline="30">metaheuristics.generators.RandomSearch.stateReferenceRS</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1RandomSearch_1a31385fa5fe7d4a79578a92daa41e6b6e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+        <definition>List&lt; State &gt; metaheuristics.generators.RandomSearch.getSonList</definition>
+        <argsstring>()</argsstring>
+        <name>getSonList</name>
+        <qualifiedname>metaheuristics.generators.RandomSearch.getSonList</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1aee09d724c1b3040e7a7ad0b64e341c96">getSonList</reimplements>
+        <briefdescription>
+<para>getSonList - get the son list. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the son list </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/RandomSearch.java" line="147" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/RandomSearch.java" bodystart="147" bodyend="150"/>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1RandomSearch_1a76a5b1a98d0456923d6eba8635dcb81a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean metaheuristics.generators.RandomSearch.awardUpdateREF</definition>
+        <argsstring>(State stateCandidate)</argsstring>
+        <name>awardUpdateREF</name>
+        <qualifiedname>metaheuristics.generators.RandomSearch.awardUpdateREF</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1a3513d3953ecc97683f38bcb662b74b9b">awardUpdateREF</reimplements>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>stateCandidate</declname>
+        </param>
+        <briefdescription>
+<para>awardUpdateREF - award the update of the reference state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stateCandidate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>return true if the update is awarded, false otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/RandomSearch.java" line="158" column="16" bodyfile="practica5/src/main/java/metaheuristics/generators/RandomSearch.java" bodystart="158" bodyend="161"/>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1RandomSearch_1af83f9d33ce8b1909a426d5eb70f3d272" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float metaheuristics.generators.RandomSearch.getWeight</definition>
+        <argsstring>()</argsstring>
+        <name>getWeight</name>
+        <qualifiedname>metaheuristics.generators.RandomSearch.getWeight</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1a64f2b824081c7af593bf9aa8eabf2c9e">getWeight</reimplements>
+        <briefdescription>
+<para>getWeight - get the weight of the generator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the weight of the generator </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/RandomSearch.java" line="169" column="14" bodyfile="practica5/src/main/java/metaheuristics/generators/RandomSearch.java" bodystart="169" bodyend="172"/>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1RandomSearch_1a7a6ced92bd465675956f08a646e93aaa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheuristics.generators.RandomSearch.setWeight</definition>
+        <argsstring>(float weight)</argsstring>
+        <name>setWeight</name>
+        <qualifiedname>metaheuristics.generators.RandomSearch.setWeight</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1a8b3c66b57b4c739666989fbce667eb40">setWeight</reimplements>
+        <param>
+          <type>float</type>
+          <declname>weight</declname>
+        </param>
+        <briefdescription>
+<para>setWeight - set the weight of the generator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>weight</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/RandomSearch.java" line="179" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/RandomSearch.java" bodystart="179" bodyend="182"/>
+        <references refid="classmetaheuristics_1_1generators_1_1RandomSearch_1a9c70568238fb6c172062e8709c28c53c" compoundref="RandomSearch_8java" startline="34">metaheuristics.generators.RandomSearch.weight</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1RandomSearch_1aeb13ba46d7b1dceaa28e5f348869e5b2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int[]</type>
+        <definition>int[] metaheuristics.generators.RandomSearch.getListCountBetterGender</definition>
+        <argsstring>()</argsstring>
+        <name>getListCountBetterGender</name>
+        <qualifiedname>metaheuristics.generators.RandomSearch.getListCountBetterGender</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1ac5bace71f51c16b611ede3ed53263473">getListCountBetterGender</reimplements>
+        <briefdescription>
+<para>getListCountBetterGender - get the list of count better gender. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the list of count better gender </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/RandomSearch.java" line="189" column="12" bodyfile="practica5/src/main/java/metaheuristics/generators/RandomSearch.java" bodystart="189" bodyend="192"/>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1RandomSearch_1a0f1f95ae1c09092029ca31c7cc5296d5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int[]</type>
+        <definition>int[] metaheuristics.generators.RandomSearch.getListCountGender</definition>
+        <argsstring>()</argsstring>
+        <name>getListCountGender</name>
+        <qualifiedname>metaheuristics.generators.RandomSearch.getListCountGender</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1ac5d6d45ee8017fb87d80aa952edfc34e">getListCountGender</reimplements>
+        <briefdescription>
+<para>getListCountGender - get the list of count gender. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the list of count gender </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/RandomSearch.java" line="199" column="12" bodyfile="practica5/src/main/java/metaheuristics/generators/RandomSearch.java" bodystart="199" bodyend="202"/>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1RandomSearch_1ab0a81fb9ec17688eaa9e68532192e278" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float[]</type>
+        <definition>float[] metaheuristics.generators.RandomSearch.getTrace</definition>
+        <argsstring>()</argsstring>
+        <name>getTrace</name>
+        <qualifiedname>metaheuristics.generators.RandomSearch.getTrace</qualifiedname>
+        <reimplements refid="classmetaheuristics_1_1generators_1_1Generator_1a75d7f30dd2cb3f92475db8525ac7c6e7">getTrace</reimplements>
+        <briefdescription>
+<para>getTrace - get the trace of the generator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the trace of the generator </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/RandomSearch.java" line="209" column="14" bodyfile="practica5/src/main/java/metaheuristics/generators/RandomSearch.java" bodystart="209" bodyend="212"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="classmetaheuristics_1_1generators_1_1RandomSearch" kindref="compound">RandomSearch</ref> - class that implements the Random Search metaheuristic. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>metaheuristics.generators.RandomSearch</label>
+        <link refid="classmetaheuristics_1_1generators_1_1RandomSearch"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>metaheuristics.generators.Generator</label>
+        <link refid="classmetaheuristics_1_1generators_1_1Generator"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="11">
+        <label>Cloneable</label>
+      </node>
+      <node id="13">
+        <label>factory_interface.IFFactoryAcceptCandidate</label>
+        <link refid="interfacefactory__interface_1_1IFFactoryAcceptCandidate"/>
+      </node>
+      <node id="4">
+        <label>factory_interface.IFFactoryCandidate</label>
+        <link refid="interfacefactory__interface_1_1IFFactoryCandidate"/>
+      </node>
+      <node id="7">
+        <label>local_search.acceptation_type.AcceptType</label>
+        <link refid="enumlocal__search_1_1acceptation__type_1_1AcceptType"/>
+      </node>
+      <node id="9">
+        <label>local_search.candidate_type.CandidateType</label>
+        <link refid="enumlocal__search_1_1candidate__type_1_1CandidateType"/>
+      </node>
+      <node id="3">
+        <label>local_search.candidate_type.CandidateValue</label>
+        <link refid="classlocal__search_1_1candidate__type_1_1CandidateValue"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-ifFactory</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>-tabusolution</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>-searchcandidate</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>local_search.candidate_type.SearchCandidate</label>
+        <link refid="classlocal__search_1_1candidate__type_1_1SearchCandidate"/>
+      </node>
+      <node id="8">
+        <label>local_search.complement.StrategyType</label>
+        <link refid="enumlocal__search_1_1complement_1_1StrategyType"/>
+      </node>
+      <node id="5">
+        <label>local_search.complement.TabuSolutions</label>
+        <link refid="classlocal__search_1_1complement_1_1TabuSolutions"/>
+      </node>
+      <node id="1">
+        <label>metaheuristics.generators.RandomSearch</label>
+        <link refid="classmetaheuristics_1_1generators_1_1RandomSearch"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-candidatevalue</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>-typeAcceptation</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>-strategy</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>-typeCandidate</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>-stateReferenceRS</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>-ifacceptCandidate</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>-typeGenerator</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>metaheuristics.generators.Generator</label>
+        <link refid="classmetaheuristics_1_1generators_1_1Generator"/>
+      </node>
+      <node id="12">
+        <label>metaheuristics.generators.GeneratorType</label>
+        <link refid="enummetaheuristics_1_1generators_1_1GeneratorType"/>
+      </node>
+      <node id="10">
+        <label>problem.definition.State</label>
+        <link refid="classproblem_1_1definition_1_1State"/>
+        <childnode refid="11" relation="public-inheritance">
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>#typeGenerator</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="practica5/src/main/java/metaheuristics/generators/RandomSearch.java" line="24" column="7" bodyfile="practica5/src/main/java/metaheuristics/generators/RandomSearch.java" bodystart="24" bodyend="214"/>
+    <listofallmembers>
+      <member refid="classmetaheuristics_1_1generators_1_1RandomSearch_1a76a5b1a98d0456923d6eba8635dcb81a" prot="public" virt="non-virtual"><scope>metaheuristics::generators::RandomSearch</scope><name>awardUpdateREF</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1RandomSearch_1a31725eeb416cd0b5845bf0b2b8cd9a61" prot="private" virt="non-virtual"><scope>metaheuristics::generators::RandomSearch</scope><name>candidatevalue</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1Generator_1a43815f3944c514ba3156b0e68482befa" prot="public" virt="non-virtual"><scope>metaheuristics::generators::RandomSearch</scope><name>countBetterGender</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1Generator_1a3c0145210385b6257c8fc20cac1f830a" prot="public" virt="non-virtual"><scope>metaheuristics::generators::RandomSearch</scope><name>countGender</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1RandomSearch_1ad7023836b94dd23bffd78ab7b9915551" prot="public" virt="non-virtual"><scope>metaheuristics::generators::RandomSearch</scope><name>generate</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1RandomSearch_1aeb13ba46d7b1dceaa28e5f348869e5b2" prot="public" virt="non-virtual"><scope>metaheuristics::generators::RandomSearch</scope><name>getListCountBetterGender</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1RandomSearch_1a0f1f95ae1c09092029ca31c7cc5296d5" prot="public" virt="non-virtual"><scope>metaheuristics::generators::RandomSearch</scope><name>getListCountGender</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1RandomSearch_1aff9eb703f54f81e6c52c0f2242c726c9" prot="public" virt="non-virtual"><scope>metaheuristics::generators::RandomSearch</scope><name>getReference</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1RandomSearch_1a86fdf2273755318267c1839988d2074c" prot="public" virt="non-virtual"><scope>metaheuristics::generators::RandomSearch</scope><name>getReferenceList</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1RandomSearch_1a31385fa5fe7d4a79578a92daa41e6b6e" prot="public" virt="non-virtual"><scope>metaheuristics::generators::RandomSearch</scope><name>getSonList</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1RandomSearch_1ab0a81fb9ec17688eaa9e68532192e278" prot="public" virt="non-virtual"><scope>metaheuristics::generators::RandomSearch</scope><name>getTrace</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1RandomSearch_1ac91ed100725544f9a3b74c1950d202eb" prot="public" virt="non-virtual"><scope>metaheuristics::generators::RandomSearch</scope><name>getType</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1RandomSearch_1ab6f8c524a2947214b1c2fdfbefdd6a62" prot="public" virt="non-virtual"><scope>metaheuristics::generators::RandomSearch</scope><name>getTypeGenerator</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1RandomSearch_1af83f9d33ce8b1909a426d5eb70f3d272" prot="public" virt="non-virtual"><scope>metaheuristics::generators::RandomSearch</scope><name>getWeight</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1RandomSearch_1aaccc7be6beddc8bfcdf9ef6399f2e27f" prot="private" virt="non-virtual"><scope>metaheuristics::generators::RandomSearch</scope><name>ifacceptCandidate</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1RandomSearch_1a0bf4dbdcfe91cc3ec191b96ba9104a07" prot="private" virt="non-virtual"><scope>metaheuristics::generators::RandomSearch</scope><name>listCountBetterGender</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1RandomSearch_1a9fdd813456c4f26698cc0c1fed994b4f" prot="private" virt="non-virtual"><scope>metaheuristics::generators::RandomSearch</scope><name>listCountGender</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1RandomSearch_1ab7be9a87a0cb3de1e17f14e79a0b32ce" prot="public" virt="non-virtual"><scope>metaheuristics::generators::RandomSearch</scope><name>listStateReference</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1RandomSearch_1a3d9000b9b84e9918bcf2e8187a057d7d" prot="private" virt="non-virtual"><scope>metaheuristics::generators::RandomSearch</scope><name>listTrace</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1RandomSearch_1ab94942d43169f104044b32d1e513f9f2" prot="public" virt="non-virtual"><scope>metaheuristics::generators::RandomSearch</scope><name>RandomSearch</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1RandomSearch_1a13ed1a979ee6b0c7e1c9b1a8dc245a42" prot="public" virt="non-virtual"><scope>metaheuristics::generators::RandomSearch</scope><name>setInitialReference</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1RandomSearch_1a4f1278b5787af80bfca253179a4d2de4" prot="public" virt="non-virtual"><scope>metaheuristics::generators::RandomSearch</scope><name>setTypeGenerator</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1RandomSearch_1a7a6ced92bd465675956f08a646e93aaa" prot="public" virt="non-virtual"><scope>metaheuristics::generators::RandomSearch</scope><name>setWeight</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1RandomSearch_1a0d8cba82a8afe29331014b860f3f40e2" prot="private" virt="non-virtual"><scope>metaheuristics::generators::RandomSearch</scope><name>stateReferenceRS</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1RandomSearch_1a423df75382c7b0481b472ba9d64dbc06" prot="private" virt="non-virtual"><scope>metaheuristics::generators::RandomSearch</scope><name>strategy</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1RandomSearch_1a713ff99310ed0fb343bd9514bc3d92dc" prot="private" virt="non-virtual"><scope>metaheuristics::generators::RandomSearch</scope><name>typeAcceptation</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1RandomSearch_1a41464d2c8c9fea8baa80db5e8555065a" prot="private" virt="non-virtual"><scope>metaheuristics::generators::RandomSearch</scope><name>typeCandidate</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1RandomSearch_1a14824f061a82565bcbe633ab11cc8c99" prot="private" virt="non-virtual"><scope>metaheuristics::generators::RandomSearch</scope><name>typeGenerator</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1RandomSearch_1a0ec26b03ce5dd592af4568fa0b4b915e" prot="public" virt="non-virtual"><scope>metaheuristics::generators::RandomSearch</scope><name>updateReference</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1RandomSearch_1a9c70568238fb6c172062e8709c28c53c" prot="private" virt="non-virtual"><scope>metaheuristics::generators::RandomSearch</scope><name>weight</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

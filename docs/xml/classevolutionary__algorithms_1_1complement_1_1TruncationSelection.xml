@@ -1,0 +1,159 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="es">
+  <compounddef id="classevolutionary__algorithms_1_1complement_1_1TruncationSelection" kind="class" language="Java" prot="public">
+    <compoundname>evolutionary_algorithms::complement::TruncationSelection</compoundname>
+    <basecompoundref refid="classevolutionary__algorithms_1_1complement_1_1FatherSelection" prot="public" virt="non-virtual">evolutionary_algorithms.complement.FatherSelection</basecompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classevolutionary__algorithms_1_1complement_1_1TruncationSelection_1abfd00bbf62267166f7af2cd942223134" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+        <definition>List&lt; State &gt; evolutionary_algorithms.complement.TruncationSelection.orderBetter</definition>
+        <argsstring>(List&lt; State &gt; listState)</argsstring>
+        <name>orderBetter</name>
+        <qualifiedname>evolutionary_algorithms.complement.TruncationSelection.orderBetter</qualifiedname>
+        <param>
+          <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+          <declname>listState</declname>
+        </param>
+        <briefdescription>
+<para>orderBetter - applies truncation selection strategy. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>listState</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns the list of states ordered from best to worst. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/evolutionary_algorithms/complement/TruncationSelection.java" line="22" column="13" bodyfile="practica5/src/main/java/evolutionary_algorithms/complement/TruncationSelection.java" bodystart="22" bodyend="34"/>
+        <referencedby refid="classevolutionary__algorithms_1_1complement_1_1TruncationSelection_1ab59a8422f18ba171cb70b680c84eaac1" compoundref="TruncationSelection_8java" startline="62" endline="76">evolutionary_algorithms.complement.TruncationSelection.selection</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classevolutionary__algorithms_1_1complement_1_1TruncationSelection_1aa0d3f437007ccd6f8004b949025251e8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+        <definition>List&lt; State &gt; evolutionary_algorithms.complement.TruncationSelection.ascOrderBetter</definition>
+        <argsstring>(List&lt; State &gt; listState)</argsstring>
+        <name>ascOrderBetter</name>
+        <qualifiedname>evolutionary_algorithms.complement.TruncationSelection.ascOrderBetter</qualifiedname>
+        <param>
+          <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+          <declname>listState</declname>
+        </param>
+        <briefdescription>
+<para>ascOrderBetter - applies truncation selection strategy. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>listState</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns the list of states ordered from worst to best. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/evolutionary_algorithms/complement/TruncationSelection.java" line="41" column="13" bodyfile="practica5/src/main/java/evolutionary_algorithms/complement/TruncationSelection.java" bodystart="41" bodyend="53"/>
+        <referencedby refid="classevolutionary__algorithms_1_1complement_1_1TruncationSelection_1ab59a8422f18ba171cb70b680c84eaac1" compoundref="TruncationSelection_8java" startline="62" endline="76">evolutionary_algorithms.complement.TruncationSelection.selection</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classevolutionary__algorithms_1_1complement_1_1TruncationSelection_1ab59a8422f18ba171cb70b680c84eaac1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+        <definition>List&lt; State &gt; evolutionary_algorithms.complement.TruncationSelection.selection</definition>
+        <argsstring>(List&lt; State &gt; listState, int truncation)</argsstring>
+        <name>selection</name>
+        <qualifiedname>evolutionary_algorithms.complement.TruncationSelection.selection</qualifiedname>
+        <reimplements refid="classevolutionary__algorithms_1_1complement_1_1FatherSelection_1aa6e6bd01ac639141a67815fb65f7c831">selection</reimplements>
+        <param>
+          <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+          <declname>listState</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>truncation</declname>
+        </param>
+        <briefdescription>
+<para>selection - applies truncation selection strategy. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>listState</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>truncation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns the selected list of states based on truncation. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/evolutionary_algorithms/complement/TruncationSelection.java" line="62" column="13" bodyfile="practica5/src/main/java/evolutionary_algorithms/complement/TruncationSelection.java" bodystart="62" bodyend="76"/>
+        <references refid="classevolutionary__algorithms_1_1complement_1_1TruncationSelection_1aa0d3f437007ccd6f8004b949025251e8" compoundref="TruncationSelection_8java" startline="41" endline="53">evolutionary_algorithms.complement.TruncationSelection.ascOrderBetter</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1a4bc6bd95db71e14b1f48c1bfc85f1305" compoundref="Strategy_8java" startline="405" endline="407">metaheurictics.strategy.Strategy.getProblem</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1ad2641e12c52292930364de6655333aa8" compoundref="Strategy_8java" startline="80" endline="85">metaheurictics.strategy.Strategy.getStrategy</references>
+        <references refid="classproblem_1_1definition_1_1Problem_1ad6f38df755179e22ffe487ba4a5c8021" compoundref="Problem_8java" startline="97" endline="99">problem.definition.Problem.getTypeProblem</references>
+        <references refid="enumproblem_1_1definition_1_1Problem_1_1ProblemType_1aa55383c4cb9a71cfeabc7f715ee0cd6e" compoundref="Problem_8java" startline="29">problem.definition.Problem.ProblemType.Maximizar</references>
+        <references refid="enumproblem_1_1definition_1_1Problem_1_1ProblemType_1aa1a15967abb927b9b6038c0a0af5fa18" compoundref="Problem_8java" startline="29">problem.definition.Problem.ProblemType.Minimizar</references>
+        <references refid="classevolutionary__algorithms_1_1complement_1_1TruncationSelection_1abfd00bbf62267166f7af2cd942223134" compoundref="TruncationSelection_8java" startline="22" endline="34">evolutionary_algorithms.complement.TruncationSelection.orderBetter</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="classevolutionary__algorithms_1_1complement_1_1TruncationSelection" kindref="compound">TruncationSelection</ref> - applies truncation selection strategy. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>evolutionary_algorithms.complement.TruncationSelection</label>
+        <link refid="classevolutionary__algorithms_1_1complement_1_1TruncationSelection"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>evolutionary_algorithms.complement.FatherSelection</label>
+        <link refid="classevolutionary__algorithms_1_1complement_1_1FatherSelection"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>evolutionary_algorithms.complement.TruncationSelection</label>
+        <link refid="classevolutionary__algorithms_1_1complement_1_1TruncationSelection"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>evolutionary_algorithms.complement.FatherSelection</label>
+        <link refid="classevolutionary__algorithms_1_1complement_1_1FatherSelection"/>
+      </node>
+    </collaborationgraph>
+    <location file="practica5/src/main/java/evolutionary_algorithms/complement/TruncationSelection.java" line="15" column="7" bodyfile="practica5/src/main/java/evolutionary_algorithms/complement/TruncationSelection.java" bodystart="15" bodyend="77"/>
+    <listofallmembers>
+      <member refid="classevolutionary__algorithms_1_1complement_1_1TruncationSelection_1aa0d3f437007ccd6f8004b949025251e8" prot="public" virt="non-virtual"><scope>evolutionary_algorithms::complement::TruncationSelection</scope><name>ascOrderBetter</name></member>
+      <member refid="classevolutionary__algorithms_1_1complement_1_1TruncationSelection_1abfd00bbf62267166f7af2cd942223134" prot="public" virt="non-virtual"><scope>evolutionary_algorithms::complement::TruncationSelection</scope><name>orderBetter</name></member>
+      <member refid="classevolutionary__algorithms_1_1complement_1_1TruncationSelection_1ab59a8422f18ba171cb70b680c84eaac1" prot="public" virt="non-virtual"><scope>evolutionary_algorithms::complement::TruncationSelection</scope><name>selection</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

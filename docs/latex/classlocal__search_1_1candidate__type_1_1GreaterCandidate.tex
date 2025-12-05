@@ -1,0 +1,110 @@
+\doxysection{Referencia de la clase local\+\_\+search.\+candidate\+\_\+type.\+Greater\+Candidate}
+\hypertarget{classlocal__search_1_1candidate__type_1_1GreaterCandidate}{}\label{classlocal__search_1_1candidate__type_1_1GreaterCandidate}\index{local\_search.candidate\_type.GreaterCandidate@{local\_search.candidate\_type.GreaterCandidate}}
+
+
+\doxylink{classlocal__search_1_1candidate__type_1_1GreaterCandidate}{Greater\+Candidate} -\/ choose the neighbor with the greatest evaluation.  
+
+
+
+
+Diagrama de herencia de local\+\_\+search.\+candidate\+\_\+type.\+Greater\+Candidate
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=207pt]{classlocal__search_1_1candidate__type_1_1GreaterCandidate__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagrama de colaboración de local\+\_\+search.\+candidate\+\_\+type.\+Greater\+Candidate\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=207pt]{classlocal__search_1_1candidate__type_1_1GreaterCandidate__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} \mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1GreaterCandidate_a2d2d47efc889cca9b440e64746b67f46}{state\+Search}} (List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ list\+Neighborhood)  throws Illegal\+Argument\+Exception, Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception, Illegal\+Access\+Exception, Invocation\+Target\+Exception, No\+Such\+Method\+Exception 
+\begin{DoxyCompactList}\small\item\em Uses Thread\+Local\+Random for algorithmic (non-\/cryptographic) randomness. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+\doxylink{classlocal__search_1_1candidate__type_1_1GreaterCandidate}{Greater\+Candidate} -\/ choose the neighbor with the greatest evaluation. 
+
+Scans the provided neighborhood and returns the state with the highest primary objective value. If multiple candidates tie, a random choice among them is returned. 
+
+Definición en la línea \mbox{\hyperlink{GreaterCandidate_8java_source_l00021}{21}} del archivo \mbox{\hyperlink{GreaterCandidate_8java_source}{Greater\+Candidate.\+java}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{classlocal__search_1_1candidate__type_1_1GreaterCandidate_doc-func-members}
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{classlocal__search_1_1candidate__type_1_1GreaterCandidate_a2d2d47efc889cca9b440e64746b67f46}\index{local\_search.candidate\_type.GreaterCandidate@{local\_search.candidate\_type.GreaterCandidate}!stateSearch@{stateSearch}}
+\index{stateSearch@{stateSearch}!local\_search.candidate\_type.GreaterCandidate@{local\_search.candidate\_type.GreaterCandidate}}
+\doxysubsubsection{\texorpdfstring{stateSearch()}{stateSearch()}}
+{\footnotesize\ttfamily \label{classlocal__search_1_1candidate__type_1_1GreaterCandidate_a2d2d47efc889cca9b440e64746b67f46} 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} local\+\_\+search.\+candidate\+\_\+type.\+Greater\+Candidate.\+state\+Search (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$}]{list\+Neighborhood}{}\end{DoxyParamCaption}) throws Illegal\+Argument\+Exception, Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception, Illegal\+Access\+Exception, Invocation\+Target\+Exception, No\+Such\+Method\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Uses Thread\+Local\+Random for algorithmic (non-\/cryptographic) randomness. 
+
+This RNG is used to pick a random neighbor when multiple equal bests are found and is not security-\/sensitive. Suppress Sonar S2245. Select the greatest neighbor from the list.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em list\+Neighborhood} & list of neighbor states \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+the neighbor with the greatest evaluation (primary objective) 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em Reflective\+Operation\+Exception} & propagated from potential evaluations \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplementado de \mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1SearchCandidate_a0f10adc1526fb08f54427c50734f8abf}{local\+\_\+search.\+candidate\+\_\+type.\+Search\+Candidate}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{GreaterCandidate_8java_source_l00037}{37}} del archivo \mbox{\hyperlink{GreaterCandidate_8java_source}{Greater\+Candidate.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ State\ stateGreater\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(listNeighborhood.size()\ >\ 1)\{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ counter\ =\ 0;}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ currentCount\ =\ listNeighborhood.get(0).getEvaluation().get(0);}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 1;\ i\ <\ listNeighborhood.size();\ i++)\ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ counter\ =\ listNeighborhood.get(i).getEvaluation().get(0);}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (counter\ >\ currentCount)\ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ currentCount\ =\ counter;}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ stateGreater\ =\ listNeighborhood.get(i);}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ counter\ =\ 0;}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(stateGreater\ ==\ \textcolor{keyword}{null})\{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ bound\ is\ listNeighborhood.size()\ -\/\ 1\ (>=1\ since\ size>1)}}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ pos\ =\ ThreadLocalRandom.current().nextInt(listNeighborhood.size()\ -\/\ 1);}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ stateGreater\ =\ listNeighborhood.get(pos);}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ stateGreater\ =\ listNeighborhood.get(0);}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ stateGreater;}
+\DoxyCodeLine{00058\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{GreaterCandidate_8java}{Greater\+Candidate.\+java}}\end{DoxyCompactItemize}

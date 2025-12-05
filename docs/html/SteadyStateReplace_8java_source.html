@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>practica5: Archivo de código fuente SteadyStateReplace.java</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">practica5
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('SteadyStateReplace_8java_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">SteadyStateReplace.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="SteadyStateReplace_8java.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">package </span>evolutionary_algorithms.complement;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">import</span> java.util.List;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">import</span> metaheurictics.strategy.Strategy;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">import</span> problem.definition.State;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">import</span> problem.definition.Problem.ProblemType;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span></div>
+<div class="foldopen" id="foldopen00013" data-start="{" data-end="};">
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="classevolutionary__algorithms_1_1complement_1_1SteadyStateReplace.html">   13</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classevolutionary__algorithms_1_1complement_1_1SteadyStateReplace.html">SteadyStateReplace</a> <span class="keyword">extends</span> <a class="code hl_class" href="classevolutionary__algorithms_1_1complement_1_1Replace.html">Replace</a> {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    @Override</div>
+<div class="foldopen" id="foldopen00022" data-start="{" data-end="}">
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="classevolutionary__algorithms_1_1complement_1_1SteadyStateReplace.html#a1283c4f4d8b9bbe5ae5dc4916934c8a9">   22</a></span>    <span class="keyword">public</span> List&lt;State&gt; <a class="code hl_function" href="classevolutionary__algorithms_1_1complement_1_1SteadyStateReplace.html#a1283c4f4d8b9bbe5ae5dc4916934c8a9">replace</a>(<a class="code hl_class" href="classproblem_1_1definition_1_1State.html">State</a> stateCandidate, List&lt;State&gt; listState) {</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <a class="code hl_class" href="classproblem_1_1definition_1_1State.html">State</a> stateREP = <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classmetaheurictics_1_1strategy_1_1Strategy.html">Strategy</a>.<a class="code hl_function" href="classmetaheurictics_1_1strategy_1_1Strategy.html#ad2641e12c52292930364de6655333aa8">getStrategy</a>().<a class="code hl_function" href="classmetaheurictics_1_1strategy_1_1Strategy.html#a4bc6bd95db71e14b1f48c1bfc85f1305">getProblem</a>().<a class="code hl_function" href="classproblem_1_1definition_1_1Problem.html#ad6f38df755179e22ffe487ba4a5c8021">getTypeProblem</a>().equals(<a class="code hl_class" href="enumproblem_1_1definition_1_1Problem_1_1ProblemType.html">ProblemType</a>.<a class="code hl_variable" href="enumproblem_1_1definition_1_1Problem_1_1ProblemType.html#aa55383c4cb9a71cfeabc7f715ee0cd6e">Maximizar</a>)) {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            stateREP = <a class="code hl_function" href="classevolutionary__algorithms_1_1complement_1_1SteadyStateReplace.html#affa2735e2c66cb923a0a90661c7f3e87">minValue</a>(listState);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            <span class="keywordflow">if</span>(stateCandidate.<a class="code hl_function" href="classproblem_1_1definition_1_1State.html#a226ea6fab8e7060cf131edfdb245a6fa">getEvaluation</a>().get(0) &gt;= stateREP.<a class="code hl_function" href="classproblem_1_1definition_1_1State.html#a226ea6fab8e7060cf131edfdb245a6fa">getEvaluation</a>().get(0)){</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>                Boolean find = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>                <span class="keywordtype">int</span> count = 0;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>                <span class="keywordflow">while</span> ((find.equals(<span class="keyword">false</span>)) &amp;&amp; (listState.size() &gt; count)){</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>                    <span class="keywordflow">if</span>(listState.get(count).equals(stateREP)){</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>                        listState.remove(count);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>                        listState.add(count, stateCandidate);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>                        find = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                    }</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                    <span class="keywordflow">else</span> count ++;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                }</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            }</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        }</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                <span class="keywordflow">if</span>(<a class="code hl_class" href="classmetaheurictics_1_1strategy_1_1Strategy.html">Strategy</a>.<a class="code hl_function" href="classmetaheurictics_1_1strategy_1_1Strategy.html#ad2641e12c52292930364de6655333aa8">getStrategy</a>().<a class="code hl_function" href="classmetaheurictics_1_1strategy_1_1Strategy.html#a4bc6bd95db71e14b1f48c1bfc85f1305">getProblem</a>().<a class="code hl_function" href="classproblem_1_1definition_1_1Problem.html#ad6f38df755179e22ffe487ba4a5c8021">getTypeProblem</a>().equals(<a class="code hl_class" href="enumproblem_1_1definition_1_1Problem_1_1ProblemType.html">ProblemType</a>.<a class="code hl_variable" href="enumproblem_1_1definition_1_1Problem_1_1ProblemType.html#aa1a15967abb927b9b6038c0a0af5fa18">Minimizar</a>)){</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                stateREP = <a class="code hl_function" href="classevolutionary__algorithms_1_1complement_1_1SteadyStateReplace.html#aaefcd55e0ee9ae9823dc07ab72466288">maxValue</a>(listState);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                <span class="keywordflow">if</span>(stateCandidate.<a class="code hl_function" href="classproblem_1_1definition_1_1State.html#a226ea6fab8e7060cf131edfdb245a6fa">getEvaluation</a>().get(0) &lt;= stateREP.<a class="code hl_function" href="classproblem_1_1definition_1_1State.html#a226ea6fab8e7060cf131edfdb245a6fa">getEvaluation</a>().get(0)){</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                    Boolean find = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                    <span class="keywordtype">int</span> count = 0;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                    <span class="keywordflow">while</span> ((find.equals(<span class="keyword">false</span>)) &amp;&amp; (listState.size() &gt; count)){</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                        <span class="keywordflow">if</span>(listState.get(count).equals(stateREP)){</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                            listState.remove(count);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                            listState.add(count, stateCandidate);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                            find = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                        }</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                        <span class="keywordflow">else</span> count ++;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                    }</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                }</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            }</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        }</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keywordflow">return</span> listState;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    }</div>
+</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    </div>
+<div class="foldopen" id="foldopen00064" data-start="{" data-end="}">
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="classevolutionary__algorithms_1_1complement_1_1SteadyStateReplace.html#affa2735e2c66cb923a0a90661c7f3e87">   64</a></span>    <span class="keyword">public</span> <a class="code hl_class" href="classproblem_1_1definition_1_1State.html">State</a> <a class="code hl_function" href="classevolutionary__algorithms_1_1complement_1_1SteadyStateReplace.html#affa2735e2c66cb923a0a90661c7f3e87">minValue</a>(List&lt;State&gt; listState) {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <a class="code hl_class" href="classproblem_1_1definition_1_1State.html">State</a> value = listState.get(0);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keywordtype">double</span> min = listState.get(0).<a class="code hl_function" href="classproblem_1_1definition_1_1State.html#a226ea6fab8e7060cf131edfdb245a6fa">getEvaluation</a>().get(0);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt; listState.size(); i++) {</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            <span class="keywordflow">if</span> (listState.get(i).getEvaluation().get(0) &lt; min) {</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                min = listState.get(i).getEvaluation().get(0);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                value = listState.get(i);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            }</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        }</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <span class="keywordflow">return</span> value;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    }</div>
+</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span></div>
+<div class="foldopen" id="foldopen00081" data-start="{" data-end="}">
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="classevolutionary__algorithms_1_1complement_1_1SteadyStateReplace.html#aaefcd55e0ee9ae9823dc07ab72466288">   81</a></span>    <span class="keyword">public</span> <a class="code hl_class" href="classproblem_1_1definition_1_1State.html">State</a> <a class="code hl_function" href="classevolutionary__algorithms_1_1complement_1_1SteadyStateReplace.html#aaefcd55e0ee9ae9823dc07ab72466288">maxValue</a>(List&lt;State&gt; listState) {</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <a class="code hl_class" href="classproblem_1_1definition_1_1State.html">State</a> value = listState.get(0);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <span class="keywordtype">double</span> max = listState.get(0).<a class="code hl_function" href="classproblem_1_1definition_1_1State.html#a226ea6fab8e7060cf131edfdb245a6fa">getEvaluation</a>().get(0);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt; listState.size(); i++) {</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            <span class="keywordflow">if</span> (listState.get(i).getEvaluation().get(0) &gt; max) {</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                max = listState.get(i).getEvaluation().get(0);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                value = listState.get(i);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            }</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        }</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <span class="keywordflow">return</span> value;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    }</div>
+</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>}</div>
+</div>
+<div class="ttc" id="aclassevolutionary__algorithms_1_1complement_1_1Replace_html"><div class="ttname"><a href="classevolutionary__algorithms_1_1complement_1_1Replace.html">evolutionary_algorithms.complement.Replace</a></div><div class="ttdoc">Replace - applies replacement strategies for individuals in the population.</div><div class="ttdef"><b>Definition</b> <a href="Replace_8java_source.html#l00012">Replace.java:12</a></div></div>
+<div class="ttc" id="aclassevolutionary__algorithms_1_1complement_1_1SteadyStateReplace_html"><div class="ttname"><a href="classevolutionary__algorithms_1_1complement_1_1SteadyStateReplace.html">evolutionary_algorithms.complement.SteadyStateReplace</a></div><div class="ttdoc">SteadyStateReplace - applies steady-state replacement strategy.</div><div class="ttdef"><b>Definition</b> <a href="#l00013">SteadyStateReplace.java:13</a></div></div>
+<div class="ttc" id="aclassevolutionary__algorithms_1_1complement_1_1SteadyStateReplace_html_a1283c4f4d8b9bbe5ae5dc4916934c8a9"><div class="ttname"><a href="classevolutionary__algorithms_1_1complement_1_1SteadyStateReplace.html#a1283c4f4d8b9bbe5ae5dc4916934c8a9">evolutionary_algorithms.complement.SteadyStateReplace.replace</a></div><div class="ttdeci">List&lt; State &gt; replace(State stateCandidate, List&lt; State &gt; listState)</div><div class="ttdoc">replace - applies steady-state replacement strategy.</div><div class="ttdef"><b>Definition</b> <a href="#l00022">SteadyStateReplace.java:22</a></div></div>
+<div class="ttc" id="aclassevolutionary__algorithms_1_1complement_1_1SteadyStateReplace_html_aaefcd55e0ee9ae9823dc07ab72466288"><div class="ttname"><a href="classevolutionary__algorithms_1_1complement_1_1SteadyStateReplace.html#aaefcd55e0ee9ae9823dc07ab72466288">evolutionary_algorithms.complement.SteadyStateReplace.maxValue</a></div><div class="ttdeci">State maxValue(List&lt; State &gt; listState)</div><div class="ttdoc">maxValue - applies steady-state replacement strategy.</div><div class="ttdef"><b>Definition</b> <a href="#l00081">SteadyStateReplace.java:81</a></div></div>
+<div class="ttc" id="aclassevolutionary__algorithms_1_1complement_1_1SteadyStateReplace_html_affa2735e2c66cb923a0a90661c7f3e87"><div class="ttname"><a href="classevolutionary__algorithms_1_1complement_1_1SteadyStateReplace.html#affa2735e2c66cb923a0a90661c7f3e87">evolutionary_algorithms.complement.SteadyStateReplace.minValue</a></div><div class="ttdeci">State minValue(List&lt; State &gt; listState)</div><div class="ttdoc">minValue - applies steady-state replacement strategy.</div><div class="ttdef"><b>Definition</b> <a href="#l00064">SteadyStateReplace.java:64</a></div></div>
+<div class="ttc" id="aclassmetaheurictics_1_1strategy_1_1Strategy_html"><div class="ttname"><a href="classmetaheurictics_1_1strategy_1_1Strategy.html">metaheurictics.strategy.Strategy</a></div><div class="ttdoc">Strategy -.</div><div class="ttdef"><b>Definition</b> <a href="Strategy_8java_source.html#l00033">Strategy.java:33</a></div></div>
+<div class="ttc" id="aclassmetaheurictics_1_1strategy_1_1Strategy_html_a4bc6bd95db71e14b1f48c1bfc85f1305"><div class="ttname"><a href="classmetaheurictics_1_1strategy_1_1Strategy.html#a4bc6bd95db71e14b1f48c1bfc85f1305">metaheurictics.strategy.Strategy.getProblem</a></div><div class="ttdeci">Problem getProblem()</div><div class="ttdoc">getProblem - method to get the problem.</div><div class="ttdef"><b>Definition</b> <a href="Strategy_8java_source.html#l00405">Strategy.java:405</a></div></div>
+<div class="ttc" id="aclassmetaheurictics_1_1strategy_1_1Strategy_html_ad2641e12c52292930364de6655333aa8"><div class="ttname"><a href="classmetaheurictics_1_1strategy_1_1Strategy.html#ad2641e12c52292930364de6655333aa8">metaheurictics.strategy.Strategy.getStrategy</a></div><div class="ttdeci">static Strategy getStrategy()</div><div class="ttdoc">getStrategy - getter of Strategy singleton instance</div><div class="ttdef"><b>Definition</b> <a href="Strategy_8java_source.html#l00080">Strategy.java:80</a></div></div>
+<div class="ttc" id="aclassproblem_1_1definition_1_1Problem_html_ad6f38df755179e22ffe487ba4a5c8021"><div class="ttname"><a href="classproblem_1_1definition_1_1Problem.html#ad6f38df755179e22ffe487ba4a5c8021">problem.definition.Problem.getTypeProblem</a></div><div class="ttdeci">ProblemType getTypeProblem()</div><div class="ttdoc">Obtener el tipo de problema (Maximizar / Minimizar).</div><div class="ttdef"><b>Definition</b> <a href="Problem_8java_source.html#l00097">Problem.java:97</a></div></div>
+<div class="ttc" id="aclassproblem_1_1definition_1_1State_html"><div class="ttname"><a href="classproblem_1_1definition_1_1State.html">problem.definition.State</a></div><div class="ttdoc">State.</div><div class="ttdef"><b>Definition</b> <a href="State_8java_source.html#l00016">State.java:16</a></div></div>
+<div class="ttc" id="aclassproblem_1_1definition_1_1State_html_a226ea6fab8e7060cf131edfdb245a6fa"><div class="ttname"><a href="classproblem_1_1definition_1_1State.html#a226ea6fab8e7060cf131edfdb245a6fa">problem.definition.State.getEvaluation</a></div><div class="ttdeci">ArrayList&lt; Double &gt; getEvaluation()</div><div class="ttdoc">Obtener la lista de evaluaciones del estado.</div><div class="ttdef"><b>Definition</b> <a href="State_8java_source.html#l00104">State.java:104</a></div></div>
+<div class="ttc" id="aenumproblem_1_1definition_1_1Problem_1_1ProblemType_html"><div class="ttname"><a href="enumproblem_1_1definition_1_1Problem_1_1ProblemType.html">problem.definition.Problem.ProblemType</a></div><div class="ttdoc">ProblemType - descripcion (añade detalles).</div><div class="ttdef"><b>Definition</b> <a href="Problem_8java_source.html#l00029">Problem.java:29</a></div></div>
+<div class="ttc" id="aenumproblem_1_1definition_1_1Problem_1_1ProblemType_html_aa1a15967abb927b9b6038c0a0af5fa18"><div class="ttname"><a href="enumproblem_1_1definition_1_1Problem_1_1ProblemType.html#aa1a15967abb927b9b6038c0a0af5fa18">problem.definition.Problem.ProblemType.Minimizar</a></div><div class="ttdeci">Minimizar</div><div class="ttdef"><b>Definition</b> <a href="Problem_8java_source.html#l00029">Problem.java:29</a></div></div>
+<div class="ttc" id="aenumproblem_1_1definition_1_1Problem_1_1ProblemType_html_aa55383c4cb9a71cfeabc7f715ee0cd6e"><div class="ttname"><a href="enumproblem_1_1definition_1_1Problem_1_1ProblemType.html#aa55383c4cb9a71cfeabc7f715ee0cd6e">problem.definition.Problem.ProblemType.Maximizar</a></div><div class="ttdeci">Maximizar</div><div class="ttdef"><b>Definition</b> <a href="Problem_8java_source.html#l00029">Problem.java:29</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_35e5e1a6dfa5adce22aec671c4d5c0d1.html">practica5</a></li><li class="navelem"><a href="dir_d2e984a8ddfea0cacd32e4238c7e9dd9.html">src</a></li><li class="navelem"><a href="dir_4a158cb6d41a1065711987d4dec8e14e.html">main</a></li><li class="navelem"><a href="dir_67084513cc423c424b0c8f4661d8bd90.html">java</a></li><li class="navelem"><a href="dir_ad78f9a8eeae7de63d23929bdb4bd70f.html">evolutionary_algorithms</a></li><li class="navelem"><a href="dir_d00fad21fcf036c29a4bc24d5ad0d64c.html">complement</a></li><li class="navelem"><a href="SteadyStateReplace_8java.html">SteadyStateReplace.java</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

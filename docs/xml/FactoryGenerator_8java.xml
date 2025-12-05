@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="es">
+  <compounddef id="FactoryGenerator_8java" kind="file" language="Java">
+    <compoundname>FactoryGenerator.java</compoundname>
+    <includes local="no">java.lang.reflect.InvocationTargetException</includes>
+    <includes local="no">factory_interface.IFFactoryGenerator</includes>
+    <includes local="no">metaheuristics.generators.Generator</includes>
+    <includes local="no">metaheuristics.generators.GeneratorType</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>FactoryGenerator.java</label>
+        <link refid="FactoryGenerator_8java"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>factory_interface.IFFactoryGenerator</label>
+      </node>
+      <node id="2">
+        <label>java.lang.reflect.InvocationTargetException</label>
+      </node>
+      <node id="4">
+        <label>metaheuristics.generators.Generator</label>
+      </node>
+      <node id="5">
+        <label>metaheuristics.generators.GeneratorType</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classfactory__method_1_1FactoryGenerator" prot="public">factory_method::FactoryGenerator</innerclass>
+    <innernamespace refid="namespacefactory__method">factory_method</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">package<sp/></highlight><highlight class="normal">factory_method;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>java.lang.reflect.InvocationTargetException;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>factory_interface.IFFactoryGenerator;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>metaheuristics.generators.Generator;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>metaheuristics.generators.GeneratorType;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="classfactory__method_1_1FactoryGenerator" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classfactory__method_1_1FactoryGenerator" kindref="compound">FactoryGenerator</ref><sp/></highlight><highlight class="keyword">implements</highlight><highlight class="normal"><sp/><ref refid="interfacefactory__interface_1_1IFFactoryGenerator" kindref="compound">IFFactoryGenerator</ref><sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="classfactory__method_1_1FactoryGenerator_1a85ceb32e0a0d2d6948a21d3667182520" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/><ref refid="classmetaheuristics_1_1generators_1_1Generator" kindref="compound">Generator</ref><sp/><ref refid="classfactory__method_1_1FactoryGenerator_1a85ceb32e0a0d2d6948a21d3667182520" kindref="member">generator</ref>;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="25" refid="classfactory__method_1_1FactoryGenerator_1a76c269b114cbf643e92a7467b7cf21f7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classmetaheuristics_1_1generators_1_1Generator" kindref="compound">Generator</ref><sp/><ref refid="classfactory__method_1_1FactoryGenerator_1a76c269b114cbf643e92a7467b7cf21f7" kindref="member">createGenerator</ref>(<ref refid="enummetaheuristics_1_1generators_1_1GeneratorType" kindref="compound">GeneratorType</ref><sp/>generatorType)<sp/></highlight><highlight class="keywordflow">throws</highlight><highlight class="normal"><sp/>IllegalArgumentException,<sp/>SecurityException,<sp/>ClassNotFoundException,<sp/>InstantiationException,<sp/>IllegalAccessException,<sp/>InvocationTargetException,<sp/>NoSuchMethodException<sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>String<sp/>className<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;metaheuristics.generators.&quot;</highlight><highlight class="normal"><sp/>+<sp/>generatorType.toString();</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfactory__method_1_1FactoryGenerator_1a85ceb32e0a0d2d6948a21d3667182520" kindref="member">generator</ref><sp/>=<sp/>(<ref refid="classmetaheuristics_1_1generators_1_1Generator" kindref="compound">Generator</ref>)<sp/><ref refid="classfactory__method_1_1FactoryLoader" kindref="compound">FactoryLoader</ref>.<ref refid="classfactory__method_1_1FactoryLoader_1a4e61ffc7038a082277d67e3e59cdb859" kindref="member">getInstance</ref>(className);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classfactory__method_1_1FactoryGenerator_1a85ceb32e0a0d2d6948a21d3667182520" kindref="member">generator</ref>;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="practica5/src/main/java/factory_method/FactoryGenerator.java"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,210 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>practica5: Archivo de código fuente CandidateValue.java</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">practica5
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('CandidateValue_8java_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">CandidateValue.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="CandidateValue_8java.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">package </span>local_search.candidate_type;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">import</span> java.lang.reflect.InvocationTargetException;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">import</span> java.util.ArrayList;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">import</span> java.util.List;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">import</span> problem.definition.State;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">import</span> local_search.complement.StrategyType;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">import</span> local_search.complement.TabuSolutions;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">import</span> metaheurictics.strategy.Strategy;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">//import ceis.grial.problem.Problem;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">import</span> factory_interface.IFFactoryCandidate;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">import</span> factory_method.FactoryCandidate;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span></div>
+<div class="foldopen" id="foldopen00029" data-start="{" data-end="};">
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="classlocal__search_1_1candidate__type_1_1CandidateValue.html">   29</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_function" href="classlocal__search_1_1candidate__type_1_1CandidateValue.html#a0b569242170a94ec76659efea622f402">CandidateValue</a> {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="classlocal__search_1_1candidate__type_1_1CandidateValue.html#a7ec51b9213b57e19f65fa0d7c24a2e67">   32</a></span>    <span class="keyword">private</span> <a class="code hl_interface" href="interfacefactory__interface_1_1IFFactoryCandidate.html">IFFactoryCandidate</a> <a class="code hl_variable" href="classlocal__search_1_1candidate__type_1_1CandidateValue.html#a7ec51b9213b57e19f65fa0d7c24a2e67">ifFactory</a>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="comment">// strategy and typecand fields were unused; removed to avoid SpotBugs unread-field warnings.</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classlocal__search_1_1candidate__type_1_1CandidateValue.html#a050cc90f7786e4825e7ca09e20492ebb">   36</a></span>    <span class="keyword">private</span> <a class="code hl_class" href="classlocal__search_1_1complement_1_1TabuSolutions.html">TabuSolutions</a> <a class="code hl_variable" href="classlocal__search_1_1candidate__type_1_1CandidateValue.html#a050cc90f7786e4825e7ca09e20492ebb">tabusolution</a>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="classlocal__search_1_1candidate__type_1_1CandidateValue.html#a7b05c8a6d8af9170fc422b78c9af5b64">   38</a></span>    <span class="keyword">private</span> <a class="code hl_class" href="classlocal__search_1_1candidate__type_1_1SearchCandidate.html">SearchCandidate</a> <a class="code hl_variable" href="classlocal__search_1_1candidate__type_1_1CandidateValue.html#a7b05c8a6d8af9170fc422b78c9af5b64">searchcandidate</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="classlocal__search_1_1candidate__type_1_1CandidateValue.html#a0b569242170a94ec76659efea622f402">   40</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="classlocal__search_1_1candidate__type_1_1CandidateValue.html#a0b569242170a94ec76659efea622f402">CandidateValue</a>(){}</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="comment">// Keep a no-arg constructor; parameterized constructor was removed because its fields were unused.</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span></div>
+<div class="foldopen" id="foldopen00052" data-start="{" data-end="}">
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="classlocal__search_1_1candidate__type_1_1CandidateValue.html#ab02441a95d5abedea3a2c82bf9c5d457">   52</a></span>    <span class="keyword">public</span> <a class="code hl_class" href="classlocal__search_1_1candidate__type_1_1SearchCandidate.html">SearchCandidate</a> <a class="code hl_function" href="classlocal__search_1_1candidate__type_1_1CandidateValue.html#ab02441a95d5abedea3a2c82bf9c5d457">newSearchCandidate</a>(<a class="code hl_class" href="enumlocal__search_1_1candidate__type_1_1CandidateType.html">CandidateType</a> typecandidate) <span class="keywordflow">throws</span> IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <a class="code hl_variable" href="classlocal__search_1_1candidate__type_1_1CandidateValue.html#a7ec51b9213b57e19f65fa0d7c24a2e67">ifFactory</a> = <span class="keyword">new</span> <a class="code hl_class" href="classfactory__method_1_1FactoryCandidate.html">FactoryCandidate</a>();</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <a class="code hl_variable" href="classlocal__search_1_1candidate__type_1_1CandidateValue.html#a7b05c8a6d8af9170fc422b78c9af5b64">searchcandidate</a> = <a class="code hl_variable" href="classlocal__search_1_1candidate__type_1_1CandidateValue.html#a7ec51b9213b57e19f65fa0d7c24a2e67">ifFactory</a>.createSearchCandidate(typecandidate);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classlocal__search_1_1candidate__type_1_1CandidateValue.html#a7b05c8a6d8af9170fc422b78c9af5b64">searchcandidate</a>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    }</div>
+</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span></div>
+<div class="foldopen" id="foldopen00074" data-start="{" data-end="}">
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="classlocal__search_1_1candidate__type_1_1CandidateValue.html#a77505d8ed443552afa435f51d0222d75">   74</a></span>    <span class="keyword">public</span> <a class="code hl_class" href="classproblem_1_1definition_1_1State.html">State</a> <a class="code hl_function" href="classlocal__search_1_1candidate__type_1_1CandidateValue.html#a77505d8ed443552afa435f51d0222d75">stateCandidate</a>(<a class="code hl_class" href="classproblem_1_1definition_1_1State.html">State</a> stateCurrent, <a class="code hl_class" href="enumlocal__search_1_1candidate__type_1_1CandidateType.html">CandidateType</a> typeCandidate, <a class="code hl_class" href="enumlocal__search_1_1complement_1_1StrategyType.html">StrategyType</a> strategy, Integer operatornumber, List&lt;State&gt; neighborhood) <span class="keywordflow">throws</span> IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException{</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="comment">//Problem problem = ExecuteGenerator.getExecuteGenerator().getProblem();</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <a class="code hl_class" href="classproblem_1_1definition_1_1State.html">State</a> <a class="code hl_function" href="classlocal__search_1_1candidate__type_1_1CandidateValue.html#a77505d8ed443552afa435f51d0222d75">stateCandidate</a>;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        List&lt;State&gt; auxList = <span class="keyword">new</span> ArrayList&lt;State&gt;();</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; neighborhood.size(); i++) {</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            auxList.add(neighborhood.get(i));</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        }</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        this.tabusolution = <span class="keyword">new</span> <a class="code hl_class" href="classlocal__search_1_1complement_1_1TabuSolutions.html">TabuSolutions</a>();</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <span class="keywordflow">if</span> (strategy.equals(<a class="code hl_class" href="enumlocal__search_1_1complement_1_1StrategyType.html">StrategyType</a>.<a class="code hl_variable" href="enumlocal__search_1_1complement_1_1StrategyType.html#ac0c34198bb10ffedf05b8be68f72c170">TABU</a>)) {</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            <span class="keywordflow">try</span> {</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                auxList = this.tabusolution.<a class="code hl_function" href="classlocal__search_1_1complement_1_1TabuSolutions.html#abe7521e1b6c8ca96a3a6b5b63cd08c48">filterNeighborhood</a>(auxList);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            }</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            <span class="keywordflow">catch</span> (Exception e) {</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                <a class="code hl_class" href="classmetaheurictics_1_1strategy_1_1Strategy.html">Strategy</a> strategys = <a class="code hl_class" href="classmetaheurictics_1_1strategy_1_1Strategy.html">Strategy</a>.<a class="code hl_function" href="classmetaheurictics_1_1strategy_1_1Strategy.html#ad2641e12c52292930364de6655333aa8">getStrategy</a>();</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                <span class="keywordflow">if</span>(strategys.<a class="code hl_function" href="classmetaheurictics_1_1strategy_1_1Strategy.html#a4bc6bd95db71e14b1f48c1bfc85f1305">getProblem</a>()!=<span class="keyword">null</span>){</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>                    neighborhood = strategys.<a class="code hl_function" href="classmetaheurictics_1_1strategy_1_1Strategy.html#a4bc6bd95db71e14b1f48c1bfc85f1305">getProblem</a>().<a class="code hl_function" href="classproblem_1_1definition_1_1Problem.html#a4cd649edb8862f21af171491cb9b9386">getOperator</a>().<a class="code hl_function" href="classproblem_1_1definition_1_1Operator.html#a5b6625843e73d938f9235985bf966b34">generatedNewState</a>(neighborhood.get(0), operatornumber);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                }</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>                <span class="keywordflow">return</span> <a class="code hl_function" href="classlocal__search_1_1candidate__type_1_1CandidateValue.html#a77505d8ed443552afa435f51d0222d75">stateCandidate</a>(stateCurrent, typeCandidate, strategy, operatornumber, neighborhood);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            }</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        }</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        <a class="code hl_class" href="classlocal__search_1_1candidate__type_1_1SearchCandidate.html">SearchCandidate</a> searchCand = <a class="code hl_function" href="classlocal__search_1_1candidate__type_1_1CandidateValue.html#ab02441a95d5abedea3a2c82bf9c5d457">newSearchCandidate</a>(typeCandidate);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <a class="code hl_function" href="classlocal__search_1_1candidate__type_1_1CandidateValue.html#a77505d8ed443552afa435f51d0222d75">stateCandidate</a> = searchCand.<a class="code hl_function" href="classlocal__search_1_1candidate__type_1_1SearchCandidate.html#a0f10adc1526fb08f54427c50734f8abf">stateSearch</a>(auxList);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="classlocal__search_1_1candidate__type_1_1CandidateValue.html#a77505d8ed443552afa435f51d0222d75">stateCandidate</a>;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    }</div>
+</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span></div>
+<div class="foldopen" id="foldopen00104" data-start="{" data-end="}">
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="classlocal__search_1_1candidate__type_1_1CandidateValue.html#ae334fe4b4bc2211c5120d905d3114762">  104</a></span>    <span class="keyword">public</span> <a class="code hl_class" href="classlocal__search_1_1complement_1_1TabuSolutions.html">TabuSolutions</a> <a class="code hl_function" href="classlocal__search_1_1candidate__type_1_1CandidateValue.html#ae334fe4b4bc2211c5120d905d3114762">getTabusolution</a>() {</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classlocal__search_1_1candidate__type_1_1CandidateValue.html#a050cc90f7786e4825e7ca09e20492ebb">tabusolution</a>;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    }</div>
+</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span></div>
+<div class="foldopen" id="foldopen00113" data-start="{" data-end="}">
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="classlocal__search_1_1candidate__type_1_1CandidateValue.html#a142eb7bff2e5f3312d0277152f803d1a">  113</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classlocal__search_1_1candidate__type_1_1CandidateValue.html#a142eb7bff2e5f3312d0277152f803d1a">setTabusolution</a>(<a class="code hl_class" href="classlocal__search_1_1complement_1_1TabuSolutions.html">TabuSolutions</a> <a class="code hl_variable" href="classlocal__search_1_1candidate__type_1_1CandidateValue.html#a050cc90f7786e4825e7ca09e20492ebb">tabusolution</a>) {</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        this.tabusolution = <a class="code hl_variable" href="classlocal__search_1_1candidate__type_1_1CandidateValue.html#a050cc90f7786e4825e7ca09e20492ebb">tabusolution</a>;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    }</div>
+</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>}</div>
+</div>
+<div class="ttc" id="aclassfactory__method_1_1FactoryCandidate_html"><div class="ttname"><a href="classfactory__method_1_1FactoryCandidate.html">factory_method.FactoryCandidate</a></div><div class="ttdoc">FactoryCandidate - Interface for creating search candidates.</div><div class="ttdef"><b>Definition</b> <a href="FactoryCandidate_8java_source.html#l00018">FactoryCandidate.java:18</a></div></div>
+<div class="ttc" id="aclasslocal__search_1_1candidate__type_1_1CandidateValue_html_a050cc90f7786e4825e7ca09e20492ebb"><div class="ttname"><a href="classlocal__search_1_1candidate__type_1_1CandidateValue.html#a050cc90f7786e4825e7ca09e20492ebb">local_search.candidate_type.CandidateValue.tabusolution</a></div><div class="ttdeci">TabuSolutions tabusolution</div><div class="ttdef"><b>Definition</b> <a href="#l00036">CandidateValue.java:36</a></div></div>
+<div class="ttc" id="aclasslocal__search_1_1candidate__type_1_1CandidateValue_html_a0b569242170a94ec76659efea622f402"><div class="ttname"><a href="classlocal__search_1_1candidate__type_1_1CandidateValue.html#a0b569242170a94ec76659efea622f402">local_search.candidate_type.CandidateValue.CandidateValue</a></div><div class="ttdeci">CandidateValue()</div><div class="ttdef"><b>Definition</b> <a href="#l00040">CandidateValue.java:40</a></div></div>
+<div class="ttc" id="aclasslocal__search_1_1candidate__type_1_1CandidateValue_html_a142eb7bff2e5f3312d0277152f803d1a"><div class="ttname"><a href="classlocal__search_1_1candidate__type_1_1CandidateValue.html#a142eb7bff2e5f3312d0277152f803d1a">local_search.candidate_type.CandidateValue.setTabusolution</a></div><div class="ttdeci">void setTabusolution(TabuSolutions tabusolution)</div><div class="ttdoc">Set the TabuSolutions helper used by this CandidateValue.</div><div class="ttdef"><b>Definition</b> <a href="#l00113">CandidateValue.java:113</a></div></div>
+<div class="ttc" id="aclasslocal__search_1_1candidate__type_1_1CandidateValue_html_a77505d8ed443552afa435f51d0222d75"><div class="ttname"><a href="classlocal__search_1_1candidate__type_1_1CandidateValue.html#a77505d8ed443552afa435f51d0222d75">local_search.candidate_type.CandidateValue.stateCandidate</a></div><div class="ttdeci">State stateCandidate(State stateCurrent, CandidateType typeCandidate, StrategyType strategy, Integer operatornumber, List&lt; State &gt; neighborhood)</div><div class="ttdoc">Choose a candidate state from the provided neighborhood according to the specified candidate selectio...</div><div class="ttdef"><b>Definition</b> <a href="#l00074">CandidateValue.java:74</a></div></div>
+<div class="ttc" id="aclasslocal__search_1_1candidate__type_1_1CandidateValue_html_a7b05c8a6d8af9170fc422b78c9af5b64"><div class="ttname"><a href="classlocal__search_1_1candidate__type_1_1CandidateValue.html#a7b05c8a6d8af9170fc422b78c9af5b64">local_search.candidate_type.CandidateValue.searchcandidate</a></div><div class="ttdeci">SearchCandidate searchcandidate</div><div class="ttdef"><b>Definition</b> <a href="#l00038">CandidateValue.java:38</a></div></div>
+<div class="ttc" id="aclasslocal__search_1_1candidate__type_1_1CandidateValue_html_a7ec51b9213b57e19f65fa0d7c24a2e67"><div class="ttname"><a href="classlocal__search_1_1candidate__type_1_1CandidateValue.html#a7ec51b9213b57e19f65fa0d7c24a2e67">local_search.candidate_type.CandidateValue.ifFactory</a></div><div class="ttdeci">IFFactoryCandidate ifFactory</div><div class="ttdef"><b>Definition</b> <a href="#l00032">CandidateValue.java:32</a></div></div>
+<div class="ttc" id="aclasslocal__search_1_1candidate__type_1_1CandidateValue_html_ab02441a95d5abedea3a2c82bf9c5d457"><div class="ttname"><a href="classlocal__search_1_1candidate__type_1_1CandidateValue.html#ab02441a95d5abedea3a2c82bf9c5d457">local_search.candidate_type.CandidateValue.newSearchCandidate</a></div><div class="ttdeci">SearchCandidate newSearchCandidate(CandidateType typecandidate)</div><div class="ttdoc">Create a new SearchCandidate instance for the provided candidate type.</div><div class="ttdef"><b>Definition</b> <a href="#l00052">CandidateValue.java:52</a></div></div>
+<div class="ttc" id="aclasslocal__search_1_1candidate__type_1_1CandidateValue_html_ae334fe4b4bc2211c5120d905d3114762"><div class="ttname"><a href="classlocal__search_1_1candidate__type_1_1CandidateValue.html#ae334fe4b4bc2211c5120d905d3114762">local_search.candidate_type.CandidateValue.getTabusolution</a></div><div class="ttdeci">TabuSolutions getTabusolution()</div><div class="ttdoc">Get the currently stored tabu solutions helper instance.</div><div class="ttdef"><b>Definition</b> <a href="#l00104">CandidateValue.java:104</a></div></div>
+<div class="ttc" id="aclasslocal__search_1_1candidate__type_1_1SearchCandidate_html"><div class="ttname"><a href="classlocal__search_1_1candidate__type_1_1SearchCandidate.html">local_search.candidate_type.SearchCandidate</a></div><div class="ttdoc">SearchCandidate - abstract base class for candidate selection strategies.</div><div class="ttdef"><b>Definition</b> <a href="SearchCandidate_8java_source.html#l00019">SearchCandidate.java:19</a></div></div>
+<div class="ttc" id="aclasslocal__search_1_1candidate__type_1_1SearchCandidate_html_a0f10adc1526fb08f54427c50734f8abf"><div class="ttname"><a href="classlocal__search_1_1candidate__type_1_1SearchCandidate.html#a0f10adc1526fb08f54427c50734f8abf">local_search.candidate_type.SearchCandidate.stateSearch</a></div><div class="ttdeci">abstract State stateSearch(List&lt; State &gt; listNeighborhood)</div><div class="ttdoc">Choose a candidate state from the provided neighborhood.</div></div>
+<div class="ttc" id="aclasslocal__search_1_1complement_1_1TabuSolutions_html"><div class="ttname"><a href="classlocal__search_1_1complement_1_1TabuSolutions.html">local_search.complement.TabuSolutions</a></div><div class="ttdoc">TabuSolutions - helper that manages a tabu list and filters neighborhoods.</div><div class="ttdef"><b>Definition</b> <a href="TabuSolutions_8java_source.html#l00016">TabuSolutions.java:16</a></div></div>
+<div class="ttc" id="aclasslocal__search_1_1complement_1_1TabuSolutions_html_abe7521e1b6c8ca96a3a6b5b63cd08c48"><div class="ttname"><a href="classlocal__search_1_1complement_1_1TabuSolutions.html#abe7521e1b6c8ca96a3a6b5b63cd08c48">local_search.complement.TabuSolutions.filterNeighborhood</a></div><div class="ttdeci">List&lt; State &gt; filterNeighborhood(List&lt; State &gt; listNeighborhood)</div><div class="ttdoc">Remove tabu solutions from the supplied neighborhood list.</div><div class="ttdef"><b>Definition</b> <a href="TabuSolutions_8java_source.html#l00036">TabuSolutions.java:36</a></div></div>
+<div class="ttc" id="aclassmetaheurictics_1_1strategy_1_1Strategy_html"><div class="ttname"><a href="classmetaheurictics_1_1strategy_1_1Strategy.html">metaheurictics.strategy.Strategy</a></div><div class="ttdoc">Strategy -.</div><div class="ttdef"><b>Definition</b> <a href="Strategy_8java_source.html#l00033">Strategy.java:33</a></div></div>
+<div class="ttc" id="aclassmetaheurictics_1_1strategy_1_1Strategy_html_a4bc6bd95db71e14b1f48c1bfc85f1305"><div class="ttname"><a href="classmetaheurictics_1_1strategy_1_1Strategy.html#a4bc6bd95db71e14b1f48c1bfc85f1305">metaheurictics.strategy.Strategy.getProblem</a></div><div class="ttdeci">Problem getProblem()</div><div class="ttdoc">getProblem - method to get the problem.</div><div class="ttdef"><b>Definition</b> <a href="Strategy_8java_source.html#l00405">Strategy.java:405</a></div></div>
+<div class="ttc" id="aclassmetaheurictics_1_1strategy_1_1Strategy_html_ad2641e12c52292930364de6655333aa8"><div class="ttname"><a href="classmetaheurictics_1_1strategy_1_1Strategy.html#ad2641e12c52292930364de6655333aa8">metaheurictics.strategy.Strategy.getStrategy</a></div><div class="ttdeci">static Strategy getStrategy()</div><div class="ttdoc">getStrategy - getter of Strategy singleton instance</div><div class="ttdef"><b>Definition</b> <a href="Strategy_8java_source.html#l00080">Strategy.java:80</a></div></div>
+<div class="ttc" id="aclassproblem_1_1definition_1_1Operator_html_a5b6625843e73d938f9235985bf966b34"><div class="ttname"><a href="classproblem_1_1definition_1_1Operator.html#a5b6625843e73d938f9235985bf966b34">problem.definition.Operator.generatedNewState</a></div><div class="ttdeci">abstract List&lt; State &gt; generatedNewState(State stateCurrent, Integer operatornumber)</div><div class="ttdoc">Generar nuevos estados a partir de un estado dado.</div></div>
+<div class="ttc" id="aclassproblem_1_1definition_1_1Problem_html_a4cd649edb8862f21af171491cb9b9386"><div class="ttname"><a href="classproblem_1_1definition_1_1Problem.html#a4cd649edb8862f21af171491cb9b9386">problem.definition.Problem.getOperator</a></div><div class="ttdeci">Operator getOperator()</div><div class="ttdoc">Obtener el operador encargado de generar nuevos estados.</div><div class="ttdef"><b>Definition</b> <a href="Problem_8java_source.html#l00131">Problem.java:131</a></div></div>
+<div class="ttc" id="aclassproblem_1_1definition_1_1State_html"><div class="ttname"><a href="classproblem_1_1definition_1_1State.html">problem.definition.State</a></div><div class="ttdoc">State.</div><div class="ttdef"><b>Definition</b> <a href="State_8java_source.html#l00016">State.java:16</a></div></div>
+<div class="ttc" id="aenumlocal__search_1_1candidate__type_1_1CandidateType_html"><div class="ttname"><a href="enumlocal__search_1_1candidate__type_1_1CandidateType.html">local_search.candidate_type.CandidateType</a></div><div class="ttdoc">CandidateType - enumeration of available candidate selection strategies.</div><div class="ttdef"><b>Definition</b> <a href="CandidateType_8java_source.html#l00013">CandidateType.java:13</a></div></div>
+<div class="ttc" id="aenumlocal__search_1_1complement_1_1StrategyType_html"><div class="ttname"><a href="enumlocal__search_1_1complement_1_1StrategyType.html">local_search.complement.StrategyType</a></div><div class="ttdoc">StrategyType - enumeration of local search strategy modes.</div><div class="ttdef"><b>Definition</b> <a href="StrategyType_8java_source.html#l00013">StrategyType.java:14</a></div></div>
+<div class="ttc" id="aenumlocal__search_1_1complement_1_1StrategyType_html_ac0c34198bb10ffedf05b8be68f72c170"><div class="ttname"><a href="enumlocal__search_1_1complement_1_1StrategyType.html#ac0c34198bb10ffedf05b8be68f72c170">local_search.complement.StrategyType.TABU</a></div><div class="ttdeci">TABU</div><div class="ttdoc">Use tabu-list based neighborhood filtering and behavior.</div><div class="ttdef"><b>Definition</b> <a href="StrategyType_8java_source.html#l00016">StrategyType.java:16</a></div></div>
+<div class="ttc" id="ainterfacefactory__interface_1_1IFFactoryCandidate_html"><div class="ttname"><a href="interfacefactory__interface_1_1IFFactoryCandidate.html">factory_interface.IFFactoryCandidate</a></div><div class="ttdoc">IFFactoryCandidate - Interface for creating search candidates.</div><div class="ttdef"><b>Definition</b> <a href="IFFactoryCandidate_8java_source.html#l00018">IFFactoryCandidate.java:19</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_35e5e1a6dfa5adce22aec671c4d5c0d1.html">practica5</a></li><li class="navelem"><a href="dir_d2e984a8ddfea0cacd32e4238c7e9dd9.html">src</a></li><li class="navelem"><a href="dir_4a158cb6d41a1065711987d4dec8e14e.html">main</a></li><li class="navelem"><a href="dir_67084513cc423c424b0c8f4661d8bd90.html">java</a></li><li class="navelem"><a href="dir_945c5c0e6a7c6d51287bd0dbc7037b0c.html">local_search</a></li><li class="navelem"><a href="dir_437c3e13973ced1e9936998350a0b7ac.html">candidate_type</a></li><li class="navelem"><a href="CandidateValue_8java.html">CandidateValue.java</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

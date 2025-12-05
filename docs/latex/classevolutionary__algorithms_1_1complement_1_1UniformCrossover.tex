@@ -1,0 +1,173 @@
+\doxysection{Referencia de la clase evolutionary\+\_\+algorithms.\+complement.\+Uniform\+Crossover}
+\hypertarget{classevolutionary__algorithms_1_1complement_1_1UniformCrossover}{}\label{classevolutionary__algorithms_1_1complement_1_1UniformCrossover}\index{evolutionary\_algorithms.complement.UniformCrossover@{evolutionary\_algorithms.complement.UniformCrossover}}
+
+
+\doxylink{classevolutionary__algorithms_1_1complement_1_1UniformCrossover}{Uniform\+Crossover} -\/ complements uniform crossover strategy.  
+
+
+
+
+Diagrama de herencia de evolutionary\+\_\+algorithms.\+complement.\+Uniform\+Crossover
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=277pt]{classevolutionary__algorithms_1_1complement_1_1UniformCrossover__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagrama de colaboración de evolutionary\+\_\+algorithms.\+complement.\+Uniform\+Crossover\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=277pt]{classevolutionary__algorithms_1_1complement_1_1UniformCrossover__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+int\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1UniformCrossover_aa99dc616ac6ca6cd4ee926b275736cb0}{mascara}} (int length)
+\begin{DoxyCompactList}\small\item\em Uses Thread\+Local\+Random for algorithmic (non-\/cryptographic) randomness. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1UniformCrossover_a54eb36b06a9e409253360eb9cd76f774}{crossover}} (\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} father1, \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} father2, double PC)
+\begin{DoxyCompactList}\small\item\em crossover -\/ applies uniform crossover strategy. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+\doxylink{classevolutionary__algorithms_1_1complement_1_1UniformCrossover}{Uniform\+Crossover} -\/ complements uniform crossover strategy. 
+
+Definición en la línea \mbox{\hyperlink{UniformCrossover_8java_source_l00011}{11}} del archivo \mbox{\hyperlink{UniformCrossover_8java_source}{Uniform\+Crossover.\+java}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{classevolutionary__algorithms_1_1complement_1_1UniformCrossover_doc-func-members}
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{classevolutionary__algorithms_1_1complement_1_1UniformCrossover_a54eb36b06a9e409253360eb9cd76f774}\index{evolutionary\_algorithms.complement.UniformCrossover@{evolutionary\_algorithms.complement.UniformCrossover}!crossover@{crossover}}
+\index{crossover@{crossover}!evolutionary\_algorithms.complement.UniformCrossover@{evolutionary\_algorithms.complement.UniformCrossover}}
+\doxysubsubsection{\texorpdfstring{crossover()}{crossover()}}
+{\footnotesize\ttfamily \label{classevolutionary__algorithms_1_1complement_1_1UniformCrossover_a54eb36b06a9e409253360eb9cd76f774} 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} evolutionary\+\_\+algorithms.\+complement.\+Uniform\+Crossover.\+crossover (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}}]{father1}{, }\item[{\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}}]{father2}{, }\item[{double}]{PC}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+crossover -\/ applies uniform crossover strategy. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em father1} & \\
+\hline
+{\em father2} & \\
+\hline
+{\em PC} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+returns the offspring state after crossover. 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1Crossover_a77155266e5646a87bcd427189938cc32}{evolutionary\+\_\+algorithms.\+complement.\+Crossover}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{UniformCrossover_8java_source_l00042}{42}} del archivo \mbox{\hyperlink{UniformCrossover_8java_source}{Uniform\+Crossover.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ Object\ value;}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ State\ state\ =\ (State)\ father1.getCopy();}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}[]\ mascara\ =\ mascara(father1.getCode().size());}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ k\ =\ 0;\ k\ <\ mascara.length;\ k++)\ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(mascara[k]\ ==\ 1)\{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ value\ =\ father1.getCode().get(k);}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ state.getCode().set(k,\ value);}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(mascara[k]\ ==\ 0)\{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ value\ =\ father2.getCode().get(k);\ \ }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ state.getCode().set(k,\ value);}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ state;}
+\DoxyCodeLine{00059\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{State_8java_source_l00068}{problem.\+definition.\+State.\+get\+Code()}}, \mbox{\hyperlink{State_8java_source_l00161}{problem.\+definition.\+State.\+get\+Copy()}} y \mbox{\hyperlink{UniformCrossover_8java_source_l00025}{mascara()}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classevolutionary__algorithms_1_1complement_1_1UniformCrossover_a54eb36b06a9e409253360eb9cd76f774_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classevolutionary__algorithms_1_1complement_1_1UniformCrossover_aa99dc616ac6ca6cd4ee926b275736cb0}\index{evolutionary\_algorithms.complement.UniformCrossover@{evolutionary\_algorithms.complement.UniformCrossover}!mascara@{mascara}}
+\index{mascara@{mascara}!evolutionary\_algorithms.complement.UniformCrossover@{evolutionary\_algorithms.complement.UniformCrossover}}
+\doxysubsubsection{\texorpdfstring{mascara()}{mascara()}}
+{\footnotesize\ttfamily \label{classevolutionary__algorithms_1_1complement_1_1UniformCrossover_aa99dc616ac6ca6cd4ee926b275736cb0} 
+int\mbox{[}$\,$\mbox{]} evolutionary\+\_\+algorithms.\+complement.\+Uniform\+Crossover.\+mascara (\begin{DoxyParamCaption}\item[{int}]{length}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Uses Thread\+Local\+Random for algorithmic (non-\/cryptographic) randomness. 
+
+This RNG is used for evolutionary algorithm operations (crossover point, selection between children, etc.) and is not used for security-\/sensitive purposes. Therefore we suppress the Sonar security hotspot S2245 here. mascara -\/ applies uniform crossover strategy. 
+\begin{DoxyParams}{Parámetros}
+{\em length} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+returns the generated mask for crossover. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{UniformCrossover_8java_source_l00025}{25}} del archivo \mbox{\hyperlink{UniformCrossover_8java_source}{Uniform\+Crossover.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}[]\ mascara\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[length];}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ mascara.length;\ i++)\ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ value\ =\ ThreadLocalRandom.current().nextInt(2);}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ mascara[i]\ =\ value;}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ mascara;}
+\DoxyCodeLine{00032\ \ \ \ \ \}\ \ \ }
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{UniformCrossover_8java_source_l00025}{mascara()}}.
+
+
+
+Referenciado por \mbox{\hyperlink{UniformCrossover_8java_source_l00042}{crossover()}} y \mbox{\hyperlink{UniformCrossover_8java_source_l00025}{mascara()}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=283pt]{classevolutionary__algorithms_1_1complement_1_1UniformCrossover_aa99dc616ac6ca6cd4ee926b275736cb0_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classevolutionary__algorithms_1_1complement_1_1UniformCrossover_aa99dc616ac6ca6cd4ee926b275736cb0_icgraph}
+\end{center}
+\end{figure}
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{UniformCrossover_8java}{Uniform\+Crossover.\+java}}\end{DoxyCompactItemize}

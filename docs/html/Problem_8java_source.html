@@ -1,0 +1,299 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.15.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>practica5: Archivo de código fuente Problem.java</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">practica5
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.15.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Buscar',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('Problem_8java_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Problem.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="Problem_8java.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">package </span>problem.definition;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">import</span> java.lang.reflect.InvocationTargetException;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">import</span> java.util.ArrayList;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">import</span> problem.extension.SolutionMethod;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">import</span> problem.extension.TypeSolutionMethod;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">import</span> factory_interface.IFFactorySolutionMethod;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">import</span> factory_method.FactorySolutionMethod;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span></div>
+<div class="foldopen" id="foldopen00024" data-start="{" data-end="};">
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="classproblem_1_1definition_1_1Problem.html">   24</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_function" href="classproblem_1_1definition_1_1Problem.html#a88bf7becf2c7c7beef8a24afe1397d6a">Problem</a> {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="enumproblem_1_1definition_1_1Problem_1_1ProblemType.html#aa55383c4cb9a71cfeabc7f715ee0cd6e">   29</a></span>    <span class="keyword">public</span> <span class="keyword">enum</span> <a class="code hl_class" href="enumproblem_1_1definition_1_1Problem_1_1ProblemType.html">ProblemType</a> {<a class="code hl_variable" href="enumproblem_1_1definition_1_1Problem_1_1ProblemType.html#aa55383c4cb9a71cfeabc7f715ee0cd6e">Maximizar</a>,<a class="code hl_variable" href="enumproblem_1_1definition_1_1Problem_1_1ProblemType.html#aa1a15967abb927b9b6038c0a0af5fa18">Minimizar</a>;}</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classproblem_1_1definition_1_1Problem.html#a43216e475bc790f615d6c6096f55009d">   31</a></span>    <span class="keyword">private</span> ArrayList&lt;ObjetiveFunction&gt; <span class="keyword">function</span>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="classproblem_1_1definition_1_1Problem.html#a9d5bdbaaa3ab7261904ca45852f46249">   32</a></span>    <span class="keyword">private</span> <a class="code hl_class" href="classproblem_1_1definition_1_1State.html">State</a> <a class="code hl_variable" href="classproblem_1_1definition_1_1Problem.html#a9d5bdbaaa3ab7261904ca45852f46249">state</a>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="classproblem_1_1definition_1_1Problem.html#a3d230269c9b6bccd54fea12149a3c7b8">   33</a></span>    <span class="keyword">private</span> <a class="code hl_class" href="enumproblem_1_1definition_1_1Problem_1_1ProblemType.html">ProblemType</a> <a class="code hl_variable" href="classproblem_1_1definition_1_1Problem.html#a3d230269c9b6bccd54fea12149a3c7b8">typeProblem</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="classproblem_1_1definition_1_1Problem.html#a0ecc87130634f9aae2610a541347be19">   34</a></span>    <span class="keyword">private</span> <a class="code hl_class" href="classproblem_1_1definition_1_1Codification.html">Codification</a> <a class="code hl_variable" href="classproblem_1_1definition_1_1Problem.html#a0ecc87130634f9aae2610a541347be19">codification</a>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="classproblem_1_1definition_1_1Problem.html#aa8dda2409e952ae76989f705664c20a1">   35</a></span>    <span class="keyword">private</span> <a class="code hl_class" href="classproblem_1_1definition_1_1Operator.html">Operator</a> <a class="code hl_variable" href="classproblem_1_1definition_1_1Problem.html#aa8dda2409e952ae76989f705664c20a1">operator</a>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classproblem_1_1definition_1_1Problem.html#acbe93a56dc15db61619b505d17e34127">   36</a></span>    <span class="keyword">private</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="classproblem_1_1definition_1_1Problem.html#acbe93a56dc15db61619b505d17e34127">possibleValue</a>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="classproblem_1_1definition_1_1Problem.html#a331828d9233c7997c58a844b8536e869">   37</a></span>    <span class="keyword">private</span> <a class="code hl_class" href="enumproblem_1_1extension_1_1TypeSolutionMethod.html">TypeSolutionMethod</a> <a class="code hl_variable" href="classproblem_1_1definition_1_1Problem.html#a331828d9233c7997c58a844b8536e869">typeSolutionMethod</a>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="classproblem_1_1definition_1_1Problem.html#a29bde4c1722b923cb95c7157dd49ee55">   38</a></span>    <span class="keyword">private</span> <a class="code hl_interface" href="interfacefactory__interface_1_1IFFactorySolutionMethod.html">IFFactorySolutionMethod</a> <a class="code hl_variable" href="classproblem_1_1definition_1_1Problem.html#a29bde4c1722b923cb95c7157dd49ee55">factorySolutionMethod</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    </div>
+<div class="foldopen" id="foldopen00047" data-start="{" data-end="}">
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="classproblem_1_1definition_1_1Problem.html#a88bf7becf2c7c7beef8a24afe1397d6a">   47</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="classproblem_1_1definition_1_1Problem.html#a88bf7becf2c7c7beef8a24afe1397d6a">Problem</a>() {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        super();</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    }</div>
+</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span></div>
+<div class="foldopen" id="foldopen00057" data-start="{" data-end="}">
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="classproblem_1_1definition_1_1Problem.html#a1427b83a226c7a174deee23925af14e4">   57</a></span>    <span class="keyword">public</span> ArrayList&lt;ObjetiveFunction&gt; <a class="code hl_function" href="classproblem_1_1definition_1_1Problem.html#a1427b83a226c7a174deee23925af14e4">getFunction</a>() {</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="keywordflow">return</span> (<span class="keyword">function</span> == <span class="keyword">null</span>) ? <span class="keyword">new</span> ArrayList&lt;ObjetiveFunction&gt;() : <span class="keyword">new</span> ArrayList&lt;ObjetiveFunction&gt;(<span class="keyword">function</span>);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    }</div>
+</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span></div>
+<div class="foldopen" id="foldopen00068" data-start="{" data-end="}">
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="classproblem_1_1definition_1_1Problem.html#af7a73fa0767acd800875f32e97386d21">   68</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classproblem_1_1definition_1_1Problem.html#af7a73fa0767acd800875f32e97386d21">setFunction</a>(ArrayList&lt;ObjetiveFunction&gt; <span class="keyword">function</span>) {</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        this.function = (<span class="keyword">function</span> == <span class="keyword">null</span>) ? <span class="keyword">new</span> ArrayList&lt;ObjetiveFunction&gt;() : <span class="keyword">new</span> ArrayList&lt;ObjetiveFunction&gt;(<span class="keyword">function</span>);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    }</div>
+</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span></div>
+<div class="foldopen" id="foldopen00079" data-start="{" data-end="}">
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="classproblem_1_1definition_1_1Problem.html#ad685c1f6c1edba96aa5082d1fdf8bb35">   79</a></span>    <span class="keyword">public</span> <a class="code hl_class" href="classproblem_1_1definition_1_1State.html">State</a> <a class="code hl_function" href="classproblem_1_1definition_1_1Problem.html#ad685c1f6c1edba96aa5082d1fdf8bb35">getState</a>() {</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <span class="keywordflow">return</span> (<a class="code hl_variable" href="classproblem_1_1definition_1_1Problem.html#a9d5bdbaaa3ab7261904ca45852f46249">state</a> == <span class="keyword">null</span>) ? null : <span class="keyword">new</span> <a class="code hl_class" href="classproblem_1_1definition_1_1State.html">State</a>(<a class="code hl_variable" href="classproblem_1_1definition_1_1Problem.html#a9d5bdbaaa3ab7261904ca45852f46249">state</a>);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    }</div>
+</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span></div>
+<div class="foldopen" id="foldopen00088" data-start="{" data-end="}">
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="classproblem_1_1definition_1_1Problem.html#afa1cbf017b0c64122fb2db7e4e7df2a2">   88</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classproblem_1_1definition_1_1Problem.html#afa1cbf017b0c64122fb2db7e4e7df2a2">setState</a>(<a class="code hl_class" href="classproblem_1_1definition_1_1State.html">State</a> <a class="code hl_variable" href="classproblem_1_1definition_1_1Problem.html#a9d5bdbaaa3ab7261904ca45852f46249">state</a>) {</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        this.state = (<a class="code hl_variable" href="classproblem_1_1definition_1_1Problem.html#a9d5bdbaaa3ab7261904ca45852f46249">state</a> == <span class="keyword">null</span>) ? <span class="keyword">null</span> : <span class="keyword">new</span> <a class="code hl_class" href="classproblem_1_1definition_1_1State.html">State</a>(<a class="code hl_variable" href="classproblem_1_1definition_1_1Problem.html#a9d5bdbaaa3ab7261904ca45852f46249">state</a>);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    }</div>
+</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span></div>
+<div class="foldopen" id="foldopen00097" data-start="{" data-end="}">
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="classproblem_1_1definition_1_1Problem.html#ad6f38df755179e22ffe487ba4a5c8021">   97</a></span>    <span class="keyword">public</span> <a class="code hl_class" href="enumproblem_1_1definition_1_1Problem_1_1ProblemType.html">ProblemType</a> <a class="code hl_function" href="classproblem_1_1definition_1_1Problem.html#ad6f38df755179e22ffe487ba4a5c8021">getTypeProblem</a>() {</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classproblem_1_1definition_1_1Problem.html#a3d230269c9b6bccd54fea12149a3c7b8">typeProblem</a>;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    }</div>
+</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span></div>
+<div class="foldopen" id="foldopen00105" data-start="{" data-end="}">
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="classproblem_1_1definition_1_1Problem.html#a8c0af80ee55954ced5ad7a7e81c84c6a">  105</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classproblem_1_1definition_1_1Problem.html#a8c0af80ee55954ced5ad7a7e81c84c6a">setTypeProblem</a>(<a class="code hl_class" href="enumproblem_1_1definition_1_1Problem_1_1ProblemType.html">ProblemType</a> <a class="code hl_variable" href="classproblem_1_1definition_1_1Problem.html#a3d230269c9b6bccd54fea12149a3c7b8">typeProblem</a>) {</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        this.typeProblem = <a class="code hl_variable" href="classproblem_1_1definition_1_1Problem.html#a3d230269c9b6bccd54fea12149a3c7b8">typeProblem</a>;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    }</div>
+</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span></div>
+<div class="foldopen" id="foldopen00114" data-start="{" data-end="}">
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="classproblem_1_1definition_1_1Problem.html#a7da2aa6b2a6f00f6f3993e6fdc43e34b">  114</a></span>    <span class="keyword">public</span> <a class="code hl_class" href="classproblem_1_1definition_1_1Codification.html">Codification</a> <a class="code hl_function" href="classproblem_1_1definition_1_1Problem.html#a7da2aa6b2a6f00f6f3993e6fdc43e34b">getCodification</a>() {</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classproblem_1_1definition_1_1Problem.html#a0ecc87130634f9aae2610a541347be19">codification</a>;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    }</div>
+</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span></div>
+<div class="foldopen" id="foldopen00122" data-start="{" data-end="}">
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno"><a class="line" href="classproblem_1_1definition_1_1Problem.html#a33a672579a66c2add5476e0fe446b4eb">  122</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classproblem_1_1definition_1_1Problem.html#a33a672579a66c2add5476e0fe446b4eb">setCodification</a>(<a class="code hl_class" href="classproblem_1_1definition_1_1Codification.html">Codification</a> <a class="code hl_variable" href="classproblem_1_1definition_1_1Problem.html#a0ecc87130634f9aae2610a541347be19">codification</a>) {</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        this.codification = <a class="code hl_variable" href="classproblem_1_1definition_1_1Problem.html#a0ecc87130634f9aae2610a541347be19">codification</a>;</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    }</div>
+</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span></div>
+<div class="foldopen" id="foldopen00131" data-start="{" data-end="}">
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno"><a class="line" href="classproblem_1_1definition_1_1Problem.html#a4cd649edb8862f21af171491cb9b9386">  131</a></span>    <span class="keyword">public</span> <a class="code hl_class" href="classproblem_1_1definition_1_1Operator.html">Operator</a> <a class="code hl_function" href="classproblem_1_1definition_1_1Problem.html#a4cd649edb8862f21af171491cb9b9386">getOperator</a>() {</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classproblem_1_1definition_1_1Problem.html#aa8dda2409e952ae76989f705664c20a1">operator</a>;</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    }</div>
+</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span></div>
+<div class="foldopen" id="foldopen00140" data-start="{" data-end="}">
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno"><a class="line" href="classproblem_1_1definition_1_1Problem.html#a2b4cde1a61f7587d1e90d3c6d0b804fe">  140</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classproblem_1_1definition_1_1Problem.html#a2b4cde1a61f7587d1e90d3c6d0b804fe">setOperator</a>(<a class="code hl_class" href="classproblem_1_1definition_1_1Operator.html">Operator</a> <a class="code hl_variable" href="classproblem_1_1definition_1_1Problem.html#aa8dda2409e952ae76989f705664c20a1">operator</a>) {</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>        this.operator = <a class="code hl_variable" href="classproblem_1_1definition_1_1Problem.html#aa8dda2409e952ae76989f705664c20a1">operator</a>;</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    }</div>
+</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span></div>
+<div class="foldopen" id="foldopen00149" data-start="{" data-end="}">
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno"><a class="line" href="classproblem_1_1definition_1_1Problem.html#a9a98e419b1fbf5368f68c3894ef733c6">  149</a></span>    <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classproblem_1_1definition_1_1Problem.html#a9a98e419b1fbf5368f68c3894ef733c6">getPossibleValue</a>() {</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classproblem_1_1definition_1_1Problem.html#acbe93a56dc15db61619b505d17e34127">possibleValue</a>;</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    }</div>
+</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span></div>
+<div class="foldopen" id="foldopen00158" data-start="{" data-end="}">
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno"><a class="line" href="classproblem_1_1definition_1_1Problem.html#a110ea946c11ac38487f2f94d7407ee4b">  158</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classproblem_1_1definition_1_1Problem.html#a110ea946c11ac38487f2f94d7407ee4b">setPossibleValue</a>(<span class="keywordtype">int</span> <a class="code hl_variable" href="classproblem_1_1definition_1_1Problem.html#acbe93a56dc15db61619b505d17e34127">possibleValue</a>) {</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        this.possibleValue = <a class="code hl_variable" href="classproblem_1_1definition_1_1Problem.html#acbe93a56dc15db61619b505d17e34127">possibleValue</a>;</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    }</div>
+</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span></div>
+<div class="foldopen" id="foldopen00171" data-start="{" data-end="}">
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno"><a class="line" href="classproblem_1_1definition_1_1Problem.html#a74d56127a8524b4a20f6ab831744f164">  171</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classproblem_1_1definition_1_1Problem.html#a74d56127a8524b4a20f6ab831744f164">Evaluate</a>(<a class="code hl_class" href="classproblem_1_1definition_1_1State.html">State</a> <a class="code hl_variable" href="classproblem_1_1definition_1_1Problem.html#a9d5bdbaaa3ab7261904ca45852f46249">state</a>) <span class="keywordflow">throws</span> IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>        <span class="keywordtype">double</span> eval = 0;       </div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>        ArrayList&lt;Double&gt; evaluation = <span class="keyword">new</span> ArrayList&lt;Double&gt;(this.<span class="keyword">function</span>.size());</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classproblem_1_1definition_1_1Problem.html#a331828d9233c7997c58a844b8536e869">typeSolutionMethod</a> == <span class="keyword">null</span>) {</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>            eval= <span class="keyword">function</span>.get(0).Evaluation(<a class="code hl_variable" href="classproblem_1_1definition_1_1Problem.html#a9d5bdbaaa3ab7261904ca45852f46249">state</a>);</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>            evaluation.add(evaluation.size(), eval);</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>            <a class="code hl_variable" href="classproblem_1_1definition_1_1Problem.html#a9d5bdbaaa3ab7261904ca45852f46249">state</a>.setEvaluation(evaluation);</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>        }</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>        <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>            <a class="code hl_class" href="classproblem_1_1extension_1_1SolutionMethod.html">SolutionMethod</a> method = <a class="code hl_function" href="classproblem_1_1definition_1_1Problem.html#a443db14206d399250f49e78175ca829e">newSolutionMethod</a>(<a class="code hl_variable" href="classproblem_1_1definition_1_1Problem.html#a331828d9233c7997c58a844b8536e869">typeSolutionMethod</a>);</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>            method.<a class="code hl_function" href="classproblem_1_1extension_1_1SolutionMethod.html#ae31d6d6000b9043bdee5e2d79fd2a628">evaluationState</a>(<a class="code hl_variable" href="classproblem_1_1definition_1_1Problem.html#a9d5bdbaaa3ab7261904ca45852f46249">state</a>);</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>        }</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    }</div>
+</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    </div>
+<div class="foldopen" id="foldopen00190" data-start="{" data-end="}">
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno"><a class="line" href="classproblem_1_1definition_1_1Problem.html#a6731d9f81ab05739dce8ddb4800e1d80">  190</a></span>    <span class="keyword">public</span> <a class="code hl_class" href="enumproblem_1_1extension_1_1TypeSolutionMethod.html">TypeSolutionMethod</a> <a class="code hl_function" href="classproblem_1_1definition_1_1Problem.html#a6731d9f81ab05739dce8ddb4800e1d80">getTypeSolutionMethod</a>() {</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classproblem_1_1definition_1_1Problem.html#a331828d9233c7997c58a844b8536e869">typeSolutionMethod</a>;</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>    }</div>
+</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span></div>
+<div class="foldopen" id="foldopen00198" data-start="{" data-end="}">
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno"><a class="line" href="classproblem_1_1definition_1_1Problem.html#a31c200ce7f4bb23052bff995ec12d521">  198</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classproblem_1_1definition_1_1Problem.html#a31c200ce7f4bb23052bff995ec12d521">setTypeSolutionMethod</a>(<a class="code hl_class" href="enumproblem_1_1extension_1_1TypeSolutionMethod.html">TypeSolutionMethod</a> <a class="code hl_variable" href="classproblem_1_1definition_1_1Problem.html#a331828d9233c7997c58a844b8536e869">typeSolutionMethod</a>) {</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>        this.typeSolutionMethod = <a class="code hl_variable" href="classproblem_1_1definition_1_1Problem.html#a331828d9233c7997c58a844b8536e869">typeSolutionMethod</a>;</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    }</div>
+</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span></div>
+<div class="foldopen" id="foldopen00206" data-start="{" data-end="}">
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno"><a class="line" href="classproblem_1_1definition_1_1Problem.html#a333591de57cbc861ffe762d93b7616e7">  206</a></span>    <span class="keyword">public</span> <a class="code hl_interface" href="interfacefactory__interface_1_1IFFactorySolutionMethod.html">IFFactorySolutionMethod</a> <a class="code hl_function" href="classproblem_1_1definition_1_1Problem.html#a333591de57cbc861ffe762d93b7616e7">getFactorySolutionMethod</a>() {</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classproblem_1_1definition_1_1Problem.html#a29bde4c1722b923cb95c7157dd49ee55">factorySolutionMethod</a>;</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    }</div>
+</div>
+<div class="foldopen" id="foldopen00209" data-start="{" data-end="}">
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno"><a class="line" href="classproblem_1_1definition_1_1Problem.html#a33e0dea915fd0bbded79b7be8478dd79">  209</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classproblem_1_1definition_1_1Problem.html#a33e0dea915fd0bbded79b7be8478dd79">setFactorySolutionMethod</a>(</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>            <a class="code hl_interface" href="interfacefactory__interface_1_1IFFactorySolutionMethod.html">IFFactorySolutionMethod</a> <a class="code hl_variable" href="classproblem_1_1definition_1_1Problem.html#a29bde4c1722b923cb95c7157dd49ee55">factorySolutionMethod</a>) {</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>        this.factorySolutionMethod = <a class="code hl_variable" href="classproblem_1_1definition_1_1Problem.html#a29bde4c1722b923cb95c7157dd49ee55">factorySolutionMethod</a>;</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    }</div>
+</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    </div>
+<div class="foldopen" id="foldopen00221" data-start="{" data-end="}">
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno"><a class="line" href="classproblem_1_1definition_1_1Problem.html#a443db14206d399250f49e78175ca829e">  221</a></span>    <span class="keyword">public</span> <a class="code hl_class" href="classproblem_1_1extension_1_1SolutionMethod.html">SolutionMethod</a> <a class="code hl_function" href="classproblem_1_1definition_1_1Problem.html#a443db14206d399250f49e78175ca829e">newSolutionMethod</a>(<a class="code hl_class" href="enumproblem_1_1extension_1_1TypeSolutionMethod.html">TypeSolutionMethod</a> <a class="code hl_variable" href="classproblem_1_1definition_1_1Problem.html#a331828d9233c7997c58a844b8536e869">typeSolutionMethod</a>) <span class="keywordflow">throws</span> IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>        <a class="code hl_variable" href="classproblem_1_1definition_1_1Problem.html#a29bde4c1722b923cb95c7157dd49ee55">factorySolutionMethod</a> = <span class="keyword">new</span> <a class="code hl_class" href="classfactory__method_1_1FactorySolutionMethod.html">FactorySolutionMethod</a>();</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>        <a class="code hl_class" href="classproblem_1_1extension_1_1SolutionMethod.html">SolutionMethod</a> solutionMethod = <a class="code hl_variable" href="classproblem_1_1definition_1_1Problem.html#a29bde4c1722b923cb95c7157dd49ee55">factorySolutionMethod</a>.createdSolutionMethod(<a class="code hl_variable" href="classproblem_1_1definition_1_1Problem.html#a331828d9233c7997c58a844b8536e869">typeSolutionMethod</a>);</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>        <span class="keywordflow">return</span> solutionMethod;</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>    }</div>
+</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>}</div>
+</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span> </div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>    </div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>    </div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span> </div>
+<div class="ttc" id="aclassfactory__method_1_1FactorySolutionMethod_html"><div class="ttname"><a href="classfactory__method_1_1FactorySolutionMethod.html">factory_method.FactorySolutionMethod</a></div><div class="ttdoc">FactorySolutionMethod - Class responsible for creating solution method strategies.</div><div class="ttdef"><b>Definition</b> <a href="FactorySolutionMethod_8java_source.html#l00012">FactorySolutionMethod.java:12</a></div></div>
+<div class="ttc" id="aclassproblem_1_1definition_1_1Codification_html"><div class="ttname"><a href="classproblem_1_1definition_1_1Codification.html">problem.definition.Codification</a></div><div class="ttdoc">Codification.</div><div class="ttdef"><b>Definition</b> <a href="Codification_8java_source.html#l00011">Codification.java:11</a></div></div>
+<div class="ttc" id="aclassproblem_1_1definition_1_1Operator_html"><div class="ttname"><a href="classproblem_1_1definition_1_1Operator.html">problem.definition.Operator</a></div><div class="ttdoc">Operator.</div><div class="ttdef"><b>Definition</b> <a href="Operator_8java_source.html#l00011">Operator.java:11</a></div></div>
+<div class="ttc" id="aclassproblem_1_1definition_1_1Problem_html_a0ecc87130634f9aae2610a541347be19"><div class="ttname"><a href="classproblem_1_1definition_1_1Problem.html#a0ecc87130634f9aae2610a541347be19">problem.definition.Problem.codification</a></div><div class="ttdeci">Codification codification</div><div class="ttdef"><b>Definition</b> <a href="#l00034">Problem.java:34</a></div></div>
+<div class="ttc" id="aclassproblem_1_1definition_1_1Problem_html_a110ea946c11ac38487f2f94d7407ee4b"><div class="ttname"><a href="classproblem_1_1definition_1_1Problem.html#a110ea946c11ac38487f2f94d7407ee4b">problem.definition.Problem.setPossibleValue</a></div><div class="ttdeci">void setPossibleValue(int possibleValue)</div><div class="ttdoc">Establecer el número de valores posibles.</div><div class="ttdef"><b>Definition</b> <a href="#l00158">Problem.java:158</a></div></div>
+<div class="ttc" id="aclassproblem_1_1definition_1_1Problem_html_a1427b83a226c7a174deee23925af14e4"><div class="ttname"><a href="classproblem_1_1definition_1_1Problem.html#a1427b83a226c7a174deee23925af14e4">problem.definition.Problem.getFunction</a></div><div class="ttdeci">ArrayList&lt; ObjetiveFunction &gt; getFunction()</div><div class="ttdoc">Obtener la lista de funciones objetivo del problema.</div><div class="ttdef"><b>Definition</b> <a href="#l00057">Problem.java:57</a></div></div>
+<div class="ttc" id="aclassproblem_1_1definition_1_1Problem_html_a29bde4c1722b923cb95c7157dd49ee55"><div class="ttname"><a href="classproblem_1_1definition_1_1Problem.html#a29bde4c1722b923cb95c7157dd49ee55">problem.definition.Problem.factorySolutionMethod</a></div><div class="ttdeci">IFFactorySolutionMethod factorySolutionMethod</div><div class="ttdef"><b>Definition</b> <a href="#l00038">Problem.java:38</a></div></div>
+<div class="ttc" id="aclassproblem_1_1definition_1_1Problem_html_a2b4cde1a61f7587d1e90d3c6d0b804fe"><div class="ttname"><a href="classproblem_1_1definition_1_1Problem.html#a2b4cde1a61f7587d1e90d3c6d0b804fe">problem.definition.Problem.setOperator</a></div><div class="ttdeci">void setOperator(Operator operator)</div><div class="ttdoc">Establecer el operador de generación de estados.</div><div class="ttdef"><b>Definition</b> <a href="#l00140">Problem.java:140</a></div></div>
+<div class="ttc" id="aclassproblem_1_1definition_1_1Problem_html_a31c200ce7f4bb23052bff995ec12d521"><div class="ttname"><a href="classproblem_1_1definition_1_1Problem.html#a31c200ce7f4bb23052bff995ec12d521">problem.definition.Problem.setTypeSolutionMethod</a></div><div class="ttdeci">void setTypeSolutionMethod(TypeSolutionMethod typeSolutionMethod)</div><div class="ttdoc">Establecer el tipo de método de solución.</div><div class="ttdef"><b>Definition</b> <a href="#l00198">Problem.java:198</a></div></div>
+<div class="ttc" id="aclassproblem_1_1definition_1_1Problem_html_a331828d9233c7997c58a844b8536e869"><div class="ttname"><a href="classproblem_1_1definition_1_1Problem.html#a331828d9233c7997c58a844b8536e869">problem.definition.Problem.typeSolutionMethod</a></div><div class="ttdeci">TypeSolutionMethod typeSolutionMethod</div><div class="ttdef"><b>Definition</b> <a href="#l00037">Problem.java:37</a></div></div>
+<div class="ttc" id="aclassproblem_1_1definition_1_1Problem_html_a333591de57cbc861ffe762d93b7616e7"><div class="ttname"><a href="classproblem_1_1definition_1_1Problem.html#a333591de57cbc861ffe762d93b7616e7">problem.definition.Problem.getFactorySolutionMethod</a></div><div class="ttdeci">IFFactorySolutionMethod getFactorySolutionMethod()</div><div class="ttdoc">Obtener la fábrica de métodos de solución.</div><div class="ttdef"><b>Definition</b> <a href="#l00206">Problem.java:206</a></div></div>
+<div class="ttc" id="aclassproblem_1_1definition_1_1Problem_html_a33a672579a66c2add5476e0fe446b4eb"><div class="ttname"><a href="classproblem_1_1definition_1_1Problem.html#a33a672579a66c2add5476e0fe446b4eb">problem.definition.Problem.setCodification</a></div><div class="ttdeci">void setCodification(Codification codification)</div><div class="ttdoc">Establecer la codificación de variables para el problema.</div><div class="ttdef"><b>Definition</b> <a href="#l00122">Problem.java:122</a></div></div>
+<div class="ttc" id="aclassproblem_1_1definition_1_1Problem_html_a33e0dea915fd0bbded79b7be8478dd79"><div class="ttname"><a href="classproblem_1_1definition_1_1Problem.html#a33e0dea915fd0bbded79b7be8478dd79">problem.definition.Problem.setFactorySolutionMethod</a></div><div class="ttdeci">void setFactorySolutionMethod(IFFactorySolutionMethod factorySolutionMethod)</div><div class="ttdef"><b>Definition</b> <a href="#l00209">Problem.java:209</a></div></div>
+<div class="ttc" id="aclassproblem_1_1definition_1_1Problem_html_a3d230269c9b6bccd54fea12149a3c7b8"><div class="ttname"><a href="classproblem_1_1definition_1_1Problem.html#a3d230269c9b6bccd54fea12149a3c7b8">problem.definition.Problem.typeProblem</a></div><div class="ttdeci">ProblemType typeProblem</div><div class="ttdef"><b>Definition</b> <a href="#l00033">Problem.java:33</a></div></div>
+<div class="ttc" id="aclassproblem_1_1definition_1_1Problem_html_a443db14206d399250f49e78175ca829e"><div class="ttname"><a href="classproblem_1_1definition_1_1Problem.html#a443db14206d399250f49e78175ca829e">problem.definition.Problem.newSolutionMethod</a></div><div class="ttdeci">SolutionMethod newSolutionMethod(TypeSolutionMethod typeSolutionMethod)</div><div class="ttdoc">Crear una instancia de SolutionMethod para el tipo solicitado.</div><div class="ttdef"><b>Definition</b> <a href="#l00221">Problem.java:221</a></div></div>
+<div class="ttc" id="aclassproblem_1_1definition_1_1Problem_html_a4cd649edb8862f21af171491cb9b9386"><div class="ttname"><a href="classproblem_1_1definition_1_1Problem.html#a4cd649edb8862f21af171491cb9b9386">problem.definition.Problem.getOperator</a></div><div class="ttdeci">Operator getOperator()</div><div class="ttdoc">Obtener el operador encargado de generar nuevos estados.</div><div class="ttdef"><b>Definition</b> <a href="#l00131">Problem.java:131</a></div></div>
+<div class="ttc" id="aclassproblem_1_1definition_1_1Problem_html_a6731d9f81ab05739dce8ddb4800e1d80"><div class="ttname"><a href="classproblem_1_1definition_1_1Problem.html#a6731d9f81ab05739dce8ddb4800e1d80">problem.definition.Problem.getTypeSolutionMethod</a></div><div class="ttdeci">TypeSolutionMethod getTypeSolutionMethod()</div><div class="ttdoc">Obtener el tipo de método de solución configurado.</div><div class="ttdef"><b>Definition</b> <a href="#l00190">Problem.java:190</a></div></div>
+<div class="ttc" id="aclassproblem_1_1definition_1_1Problem_html_a74d56127a8524b4a20f6ab831744f164"><div class="ttname"><a href="classproblem_1_1definition_1_1Problem.html#a74d56127a8524b4a20f6ab831744f164">problem.definition.Problem.Evaluate</a></div><div class="ttdeci">void Evaluate(State state)</div><div class="ttdoc">Evaluar un estado de solución.</div><div class="ttdef"><b>Definition</b> <a href="#l00171">Problem.java:171</a></div></div>
+<div class="ttc" id="aclassproblem_1_1definition_1_1Problem_html_a7da2aa6b2a6f00f6f3993e6fdc43e34b"><div class="ttname"><a href="classproblem_1_1definition_1_1Problem.html#a7da2aa6b2a6f00f6f3993e6fdc43e34b">problem.definition.Problem.getCodification</a></div><div class="ttdeci">Codification getCodification()</div><div class="ttdoc">Obtener la codificación usada para representar estados.</div><div class="ttdef"><b>Definition</b> <a href="#l00114">Problem.java:114</a></div></div>
+<div class="ttc" id="aclassproblem_1_1definition_1_1Problem_html_a88bf7becf2c7c7beef8a24afe1397d6a"><div class="ttname"><a href="classproblem_1_1definition_1_1Problem.html#a88bf7becf2c7c7beef8a24afe1397d6a">problem.definition.Problem.Problem</a></div><div class="ttdeci">Problem()</div><div class="ttdoc">Constructor por defecto.</div><div class="ttdef"><b>Definition</b> <a href="#l00047">Problem.java:47</a></div></div>
+<div class="ttc" id="aclassproblem_1_1definition_1_1Problem_html_a8c0af80ee55954ced5ad7a7e81c84c6a"><div class="ttname"><a href="classproblem_1_1definition_1_1Problem.html#a8c0af80ee55954ced5ad7a7e81c84c6a">problem.definition.Problem.setTypeProblem</a></div><div class="ttdeci">void setTypeProblem(ProblemType typeProblem)</div><div class="ttdoc">Establecer el tipo de problema.</div><div class="ttdef"><b>Definition</b> <a href="#l00105">Problem.java:105</a></div></div>
+<div class="ttc" id="aclassproblem_1_1definition_1_1Problem_html_a9a98e419b1fbf5368f68c3894ef733c6"><div class="ttname"><a href="classproblem_1_1definition_1_1Problem.html#a9a98e419b1fbf5368f68c3894ef733c6">problem.definition.Problem.getPossibleValue</a></div><div class="ttdeci">int getPossibleValue()</div><div class="ttdoc">Obtener el número de valores posibles (uso dependiente de la codificación).</div><div class="ttdef"><b>Definition</b> <a href="#l00149">Problem.java:149</a></div></div>
+<div class="ttc" id="aclassproblem_1_1definition_1_1Problem_html_a9d5bdbaaa3ab7261904ca45852f46249"><div class="ttname"><a href="classproblem_1_1definition_1_1Problem.html#a9d5bdbaaa3ab7261904ca45852f46249">problem.definition.Problem.state</a></div><div class="ttdeci">State state</div><div class="ttdef"><b>Definition</b> <a href="#l00032">Problem.java:32</a></div></div>
+<div class="ttc" id="aclassproblem_1_1definition_1_1Problem_html_aa8dda2409e952ae76989f705664c20a1"><div class="ttname"><a href="classproblem_1_1definition_1_1Problem.html#aa8dda2409e952ae76989f705664c20a1">problem.definition.Problem.operator</a></div><div class="ttdeci">Operator operator</div><div class="ttdef"><b>Definition</b> <a href="#l00035">Problem.java:35</a></div></div>
+<div class="ttc" id="aclassproblem_1_1definition_1_1Problem_html_acbe93a56dc15db61619b505d17e34127"><div class="ttname"><a href="classproblem_1_1definition_1_1Problem.html#acbe93a56dc15db61619b505d17e34127">problem.definition.Problem.possibleValue</a></div><div class="ttdeci">int possibleValue</div><div class="ttdef"><b>Definition</b> <a href="#l00036">Problem.java:36</a></div></div>
+<div class="ttc" id="aclassproblem_1_1definition_1_1Problem_html_ad685c1f6c1edba96aa5082d1fdf8bb35"><div class="ttname"><a href="classproblem_1_1definition_1_1Problem.html#ad685c1f6c1edba96aa5082d1fdf8bb35">problem.definition.Problem.getState</a></div><div class="ttdeci">State getState()</div><div class="ttdoc">Obtener una copia del estado actual del problema.</div><div class="ttdef"><b>Definition</b> <a href="#l00079">Problem.java:79</a></div></div>
+<div class="ttc" id="aclassproblem_1_1definition_1_1Problem_html_ad6f38df755179e22ffe487ba4a5c8021"><div class="ttname"><a href="classproblem_1_1definition_1_1Problem.html#ad6f38df755179e22ffe487ba4a5c8021">problem.definition.Problem.getTypeProblem</a></div><div class="ttdeci">ProblemType getTypeProblem()</div><div class="ttdoc">Obtener el tipo de problema (Maximizar / Minimizar).</div><div class="ttdef"><b>Definition</b> <a href="#l00097">Problem.java:97</a></div></div>
+<div class="ttc" id="aclassproblem_1_1definition_1_1Problem_html_af7a73fa0767acd800875f32e97386d21"><div class="ttname"><a href="classproblem_1_1definition_1_1Problem.html#af7a73fa0767acd800875f32e97386d21">problem.definition.Problem.setFunction</a></div><div class="ttdeci">void setFunction(ArrayList&lt; ObjetiveFunction &gt; function)</div><div class="ttdoc">Establecer las funciones objetivo del problema.</div><div class="ttdef"><b>Definition</b> <a href="#l00068">Problem.java:68</a></div></div>
+<div class="ttc" id="aclassproblem_1_1definition_1_1Problem_html_afa1cbf017b0c64122fb2db7e4e7df2a2"><div class="ttname"><a href="classproblem_1_1definition_1_1Problem.html#afa1cbf017b0c64122fb2db7e4e7df2a2">problem.definition.Problem.setState</a></div><div class="ttdeci">void setState(State state)</div><div class="ttdoc">Establecer el estado actual del problema (copia defensiva).</div><div class="ttdef"><b>Definition</b> <a href="#l00088">Problem.java:88</a></div></div>
+<div class="ttc" id="aclassproblem_1_1definition_1_1State_html"><div class="ttname"><a href="classproblem_1_1definition_1_1State.html">problem.definition.State</a></div><div class="ttdoc">State.</div><div class="ttdef"><b>Definition</b> <a href="State_8java_source.html#l00016">State.java:16</a></div></div>
+<div class="ttc" id="aclassproblem_1_1extension_1_1SolutionMethod_html"><div class="ttname"><a href="classproblem_1_1extension_1_1SolutionMethod.html">problem.extension.SolutionMethod</a></div><div class="ttdoc">SolutionMethod.</div><div class="ttdef"><b>Definition</b> <a href="SolutionMethod_8java_source.html#l00012">SolutionMethod.java:12</a></div></div>
+<div class="ttc" id="aclassproblem_1_1extension_1_1SolutionMethod_html_ae31d6d6000b9043bdee5e2d79fd2a628"><div class="ttname"><a href="classproblem_1_1extension_1_1SolutionMethod.html#ae31d6d6000b9043bdee5e2d79fd2a628">problem.extension.SolutionMethod.evaluationState</a></div><div class="ttdeci">abstract void evaluationState(State state)</div><div class="ttdoc">Evaluar un estado según el método de solución concreto.</div></div>
+<div class="ttc" id="aenumproblem_1_1definition_1_1Problem_1_1ProblemType_html"><div class="ttname"><a href="enumproblem_1_1definition_1_1Problem_1_1ProblemType.html">problem.definition.Problem.ProblemType</a></div><div class="ttdoc">ProblemType - descripcion (añade detalles).</div><div class="ttdef"><b>Definition</b> <a href="#l00029">Problem.java:29</a></div></div>
+<div class="ttc" id="aenumproblem_1_1definition_1_1Problem_1_1ProblemType_html_aa1a15967abb927b9b6038c0a0af5fa18"><div class="ttname"><a href="enumproblem_1_1definition_1_1Problem_1_1ProblemType.html#aa1a15967abb927b9b6038c0a0af5fa18">problem.definition.Problem.ProblemType.Minimizar</a></div><div class="ttdeci">Minimizar</div><div class="ttdef"><b>Definition</b> <a href="#l00029">Problem.java:29</a></div></div>
+<div class="ttc" id="aenumproblem_1_1definition_1_1Problem_1_1ProblemType_html_aa55383c4cb9a71cfeabc7f715ee0cd6e"><div class="ttname"><a href="enumproblem_1_1definition_1_1Problem_1_1ProblemType.html#aa55383c4cb9a71cfeabc7f715ee0cd6e">problem.definition.Problem.ProblemType.Maximizar</a></div><div class="ttdeci">Maximizar</div><div class="ttdef"><b>Definition</b> <a href="#l00029">Problem.java:29</a></div></div>
+<div class="ttc" id="aenumproblem_1_1extension_1_1TypeSolutionMethod_html"><div class="ttname"><a href="enumproblem_1_1extension_1_1TypeSolutionMethod.html">problem.extension.TypeSolutionMethod</a></div><div class="ttdoc">TypeSolutionMethod.</div><div class="ttdef"><b>Definition</b> <a href="TypeSolutionMethod_8java_source.html#l00009">TypeSolutionMethod.java:9</a></div></div>
+<div class="ttc" id="ainterfacefactory__interface_1_1IFFactorySolutionMethod_html"><div class="ttname"><a href="interfacefactory__interface_1_1IFFactorySolutionMethod.html">factory_interface.IFFactorySolutionMethod</a></div><div class="ttdoc">IFFactorySolutionMethod - Interface for creating solution methods.</div><div class="ttdef"><b>Definition</b> <a href="IFFactorySolutionMethod_8java_source.html#l00011">IFFactorySolutionMethod.java:11</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_35e5e1a6dfa5adce22aec671c4d5c0d1.html">practica5</a></li><li class="navelem"><a href="dir_d2e984a8ddfea0cacd32e4238c7e9dd9.html">src</a></li><li class="navelem"><a href="dir_4a158cb6d41a1065711987d4dec8e14e.html">main</a></li><li class="navelem"><a href="dir_67084513cc423c424b0c8f4661d8bd90.html">java</a></li><li class="navelem"><a href="dir_95f9cb4bca94543c93127c3d7408aea3.html">problem</a></li><li class="navelem"><a href="dir_d8c8590331e04e63432dbd8dba072ed0.html">definition</a></li><li class="navelem"><a href="Problem_8java.html">Problem.java</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
+  </ul>
+</div>
+</body>
+</html>

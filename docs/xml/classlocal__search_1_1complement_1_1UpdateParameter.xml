@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="es">
+  <compounddef id="classlocal__search_1_1complement_1_1UpdateParameter" kind="class" language="Java" prot="public">
+    <compoundname>local_search::complement::UpdateParameter</compoundname>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classlocal__search_1_1complement_1_1UpdateParameter_1ad048d2f483314001ca573c5cff6395c2" prot="private" static="yes" mutable="no">
+        <type><ref refid="interfacefactory__interface_1_1IFFactoryGenerator" kindref="compound">IFFactoryGenerator</ref></type>
+        <definition>IFFactoryGenerator local_search.complement.UpdateParameter.ifFactoryGenerator</definition>
+        <argsstring></argsstring>
+        <name>ifFactoryGenerator</name>
+        <qualifiedname>local_search.complement.UpdateParameter.ifFactoryGenerator</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/local_search/complement/UpdateParameter.java" line="25" column="35" bodyfile="practica5/src/main/java/local_search/complement/UpdateParameter.java" bodystart="25" bodyend="-1"/>
+        <referencedby refid="classlocal__search_1_1complement_1_1UpdateParameter_1aa88a78351c0bc5de77f1ad05bee29e11" compoundref="UpdateParameter_8java" startline="39" endline="61">local_search.complement.UpdateParameter.updateParameter</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classlocal__search_1_1complement_1_1UpdateParameter_1aa88a78351c0bc5de77f1ad05bee29e11" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Integer</type>
+        <definition>static Integer local_search.complement.UpdateParameter.updateParameter</definition>
+        <argsstring>(Integer countIterationsCurrent)</argsstring>
+        <name>updateParameter</name>
+        <qualifiedname>local_search.complement.UpdateParameter.updateParameter</qualifiedname>
+        <param>
+          <type>Integer</type>
+          <declname>countIterationsCurrent</declname>
+        </param>
+        <exceptions> throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException </exceptions>
+        <briefdescription>
+<para>Increment the provided iteration counter and, when thresholds for different generators are reached, replace the <ref refid="classmetaheurictics_1_1strategy_1_1Strategy" kindref="compound">Strategy</ref>&apos;s generator with the corresponding implementation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Common use: called at each iteration to advance the count and rotate the generator when configured counts are reached.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>countIterationsCurrent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>current iteration counter </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>incremented iteration counter </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>ReflectiveOperationException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>when reflective generator creation fails </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/local_search/complement/UpdateParameter.java" line="39" column="23" bodyfile="practica5/src/main/java/local_search/complement/UpdateParameter.java" bodystart="39" bodyend="61"/>
+        <references refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1a15b9c3d9f7da69124b58dd08aca096dc" compoundref="DistributionEstimationAlgorithm_8java" startline="48">metaheuristics.generators.DistributionEstimationAlgorithm.countRef</references>
+        <references refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1ab1e6d7d7bb0c21bd90f5ddd5532dcb3b" compoundref="EvolutionStrategies_8java" startline="41">metaheuristics.generators.EvolutionStrategies.countRef</references>
+        <references refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1a63b97c344354be3ca7bca194acbb2fee" compoundref="GeneticAlgorithm_8java" startline="55">metaheuristics.generators.GeneticAlgorithm.countRef</references>
+        <references refid="enummetaheuristics_1_1generators_1_1GeneratorType_1aad36814ee53c9a9c502a5fbe48e1d018" compoundref="GeneratorType_8java" startline="8">metaheuristics.generators.GeneratorType.DistributionEstimationAlgorithm</references>
+        <references refid="enummetaheuristics_1_1generators_1_1GeneratorType_1afc90843afb31f8fd742441578f70e188" compoundref="GeneratorType_8java" startline="8">metaheuristics.generators.GeneratorType.EvolutionStrategies</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1a2f0ea18b2127e6e38c1d335fed32c7e0" compoundref="Strategy_8java" startline="44">metaheurictics.strategy.Strategy.generator</references>
+        <references refid="enummetaheuristics_1_1generators_1_1GeneratorType_1aa7d0ed047362b79a1bbe2a29837ddbe3" compoundref="GeneratorType_8java" startline="8">metaheuristics.generators.GeneratorType.GeneticAlgorithm</references>
+        <references refid="classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_1a8a448ceb59a38faaa4d964e5c31510ee" compoundref="ParticleSwarmOptimization_8java" startline="344" endline="346">metaheuristics.generators.ParticleSwarmOptimization.getCountRef</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1ad2641e12c52292930364de6655333aa8" compoundref="Strategy_8java" startline="80" endline="85">metaheurictics.strategy.Strategy.getStrategy</references>
+        <references refid="classlocal__search_1_1complement_1_1UpdateParameter_1ad048d2f483314001ca573c5cff6395c2" compoundref="UpdateParameter_8java" startline="25">local_search.complement.UpdateParameter.ifFactoryGenerator</references>
+        <references refid="enummetaheuristics_1_1generators_1_1GeneratorType_1a9ccda4111f489a1155ac573295ffb747" compoundref="GeneratorType_8java" startline="8">metaheuristics.generators.GeneratorType.ParticleSwarmOptimization</references>
+        <referencedby refid="classmetaheurictics_1_1strategy_1_1Strategy_1af320de8dac2de5a7ec10d373952064d5" compoundref="Strategy_8java" startline="94" endline="282">metaheurictics.strategy.Strategy.executeStrategy</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="classlocal__search_1_1complement_1_1UpdateParameter" kindref="compound">UpdateParameter</ref> - utility that updates generator parameters during search. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Responsible for incrementing an iteration counter and switching the active generator implementation in the global <ref refid="classmetaheurictics_1_1strategy_1_1Strategy" kindref="compound">Strategy</ref> when certain iteration thresholds are reached. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>factory_interface.IFFactoryGenerator</label>
+        <link refid="interfacefactory__interface_1_1IFFactoryGenerator"/>
+      </node>
+      <node id="1">
+        <label>local_search.complement.UpdateParameter</label>
+        <link refid="classlocal__search_1_1complement_1_1UpdateParameter"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-ifFactoryGenerator</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="practica5/src/main/java/local_search/complement/UpdateParameter.java" line="23" column="7" bodyfile="practica5/src/main/java/local_search/complement/UpdateParameter.java" bodystart="23" bodyend="62"/>
+    <listofallmembers>
+      <member refid="classlocal__search_1_1complement_1_1UpdateParameter_1ad048d2f483314001ca573c5cff6395c2" prot="private" virt="non-virtual"><scope>local_search::complement::UpdateParameter</scope><name>ifFactoryGenerator</name></member>
+      <member refid="classlocal__search_1_1complement_1_1UpdateParameter_1aa88a78351c0bc5de77f1ad05bee29e11" prot="public" virt="non-virtual"><scope>local_search::complement::UpdateParameter</scope><name>updateParameter</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,51 @@
+\doxysection{Multi\+Objetivo\+Puro.\+java}
+\hypertarget{MultiObjetivoPuro_8java_source}{}\label{MultiObjetivoPuro_8java_source}\index{MultiObjetivoPuro.java@{MultiObjetivoPuro.java}}
+\mbox{\hyperlink{MultiObjetivoPuro_8java}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{MultiObjetivoPuro_8java_source_l00001}00001\ \textcolor{keyword}{package\ }problem.extension;}
+\DoxyCodeLine{\Hypertarget{MultiObjetivoPuro_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{MultiObjetivoPuro_8java_source_l00003}00003\ \textcolor{keyword}{import}\ java.util.ArrayList;}
+\DoxyCodeLine{\Hypertarget{MultiObjetivoPuro_8java_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{MultiObjetivoPuro_8java_source_l00005}00005\ \textcolor{keyword}{import}\ metaheurictics.strategy.Strategy;}
+\DoxyCodeLine{\Hypertarget{MultiObjetivoPuro_8java_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{MultiObjetivoPuro_8java_source_l00007}00007\ \textcolor{keyword}{import}\ problem.definition.ObjetiveFunction;}
+\DoxyCodeLine{\Hypertarget{MultiObjetivoPuro_8java_source_l00008}00008\ \textcolor{keyword}{import}\ problem.definition.State;}
+\DoxyCodeLine{\Hypertarget{MultiObjetivoPuro_8java_source_l00009}00009\ \textcolor{keyword}{import}\ problem.definition.Problem.ProblemType;}
+\DoxyCodeLine{\Hypertarget{MultiObjetivoPuro_8java_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{MultiObjetivoPuro_8java_source_l00017}\mbox{\hyperlink{classproblem_1_1extension_1_1MultiObjetivoPuro}{00017}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classproblem_1_1extension_1_1MultiObjetivoPuro}{MultiObjetivoPuro}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{classproblem_1_1extension_1_1SolutionMethod}{SolutionMethod}}\ \{}
+\DoxyCodeLine{\Hypertarget{MultiObjetivoPuro_8java_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{MultiObjetivoPuro_8java_source_l00019}00019\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{MultiObjetivoPuro_8java_source_l00029}\mbox{\hyperlink{classproblem_1_1extension_1_1MultiObjetivoPuro_aaac35db96f3f750b6f5349243c39d122}{00029}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classproblem_1_1extension_1_1MultiObjetivoPuro_aaac35db96f3f750b6f5349243c39d122}{evaluationState}}(\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ state)\ \{}
+\DoxyCodeLine{\Hypertarget{MultiObjetivoPuro_8java_source_l00030}00030\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TODO\ Auto-\/generated\ method\ stub}}
+\DoxyCodeLine{\Hypertarget{MultiObjetivoPuro_8java_source_l00031}00031\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ tempEval\ =\ -\/1;}
+\DoxyCodeLine{\Hypertarget{MultiObjetivoPuro_8java_source_l00032}00032\ \ \ \ \ \ \ \ \ ArrayList<Double>\ evaluation\ =\ \textcolor{keyword}{new}\ ArrayList<Double>(\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy}{Strategy}}.\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_ad2641e12c52292930364de6655333aa8}{getStrategy}}().\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_a4bc6bd95db71e14b1f48c1bfc85f1305}{getProblem}}().\mbox{\hyperlink{classproblem_1_1definition_1_1Problem_a1427b83a226c7a174deee23925af14e4}{getFunction}}().size());}
+\DoxyCodeLine{\Hypertarget{MultiObjetivoPuro_8java_source_l00033}00033\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy}{Strategy}}.\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_ad2641e12c52292930364de6655333aa8}{getStrategy}}().getProblem().getFunction().size();\ i++)}
+\DoxyCodeLine{\Hypertarget{MultiObjetivoPuro_8java_source_l00034}00034\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{MultiObjetivoPuro_8java_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classproblem_1_1definition_1_1ObjetiveFunction}{ObjetiveFunction}}\ objfunction\ =\ (\mbox{\hyperlink{classproblem_1_1definition_1_1ObjetiveFunction}{ObjetiveFunction}})\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy}{Strategy}}.\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_ad2641e12c52292930364de6655333aa8}{getStrategy}}().\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_a4bc6bd95db71e14b1f48c1bfc85f1305}{getProblem}}().\mbox{\hyperlink{classproblem_1_1definition_1_1Problem_a1427b83a226c7a174deee23925af14e4}{getFunction}}().get(i);}
+\DoxyCodeLine{\Hypertarget{MultiObjetivoPuro_8java_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy}{Strategy}}.\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_ad2641e12c52292930364de6655333aa8}{getStrategy}}().\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_a4bc6bd95db71e14b1f48c1bfc85f1305}{getProblem}}().\mbox{\hyperlink{classproblem_1_1definition_1_1Problem_ad6f38df755179e22ffe487ba4a5c8021}{getTypeProblem}}().equals(\mbox{\hyperlink{enumproblem_1_1definition_1_1Problem_1_1ProblemType}{ProblemType}}.\mbox{\hyperlink{enumproblem_1_1definition_1_1Problem_1_1ProblemType_aa55383c4cb9a71cfeabc7f715ee0cd6e}{Maximizar}}))\{}
+\DoxyCodeLine{\Hypertarget{MultiObjetivoPuro_8java_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(objfunction.\mbox{\hyperlink{classproblem_1_1definition_1_1ObjetiveFunction_a546c39d702df1ab99f2babbf994adbe0}{getTypeProblem}}().equals(\mbox{\hyperlink{enumproblem_1_1definition_1_1Problem_1_1ProblemType}{ProblemType}}.\mbox{\hyperlink{enumproblem_1_1definition_1_1Problem_1_1ProblemType_aa55383c4cb9a71cfeabc7f715ee0cd6e}{Maximizar}}))}
+\DoxyCodeLine{\Hypertarget{MultiObjetivoPuro_8java_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{MultiObjetivoPuro_8java_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tempEval\ =\ objfunction.\mbox{\hyperlink{classproblem_1_1definition_1_1ObjetiveFunction_ac67bc734733fdfc29d3b282255e2de98}{Evaluation}}(state);}
+\DoxyCodeLine{\Hypertarget{MultiObjetivoPuro_8java_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MultiObjetivoPuro_8java_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{MultiObjetivoPuro_8java_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tempEval\ =\ 1-\/objfunction.\mbox{\hyperlink{classproblem_1_1definition_1_1ObjetiveFunction_ac67bc734733fdfc29d3b282255e2de98}{Evaluation}}(state);}
+\DoxyCodeLine{\Hypertarget{MultiObjetivoPuro_8java_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MultiObjetivoPuro_8java_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MultiObjetivoPuro_8java_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{MultiObjetivoPuro_8java_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(objfunction.\mbox{\hyperlink{classproblem_1_1definition_1_1ObjetiveFunction_a546c39d702df1ab99f2babbf994adbe0}{getTypeProblem}}().equals(\mbox{\hyperlink{enumproblem_1_1definition_1_1Problem_1_1ProblemType}{ProblemType}}.\mbox{\hyperlink{enumproblem_1_1definition_1_1Problem_1_1ProblemType_aa55383c4cb9a71cfeabc7f715ee0cd6e}{Maximizar}}))}
+\DoxyCodeLine{\Hypertarget{MultiObjetivoPuro_8java_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{MultiObjetivoPuro_8java_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tempEval\ =\ 1-\/objfunction.\mbox{\hyperlink{classproblem_1_1definition_1_1ObjetiveFunction_ac67bc734733fdfc29d3b282255e2de98}{Evaluation}}(state);}
+\DoxyCodeLine{\Hypertarget{MultiObjetivoPuro_8java_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MultiObjetivoPuro_8java_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{MultiObjetivoPuro_8java_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tempEval\ =\ objfunction.\mbox{\hyperlink{classproblem_1_1definition_1_1ObjetiveFunction_ac67bc734733fdfc29d3b282255e2de98}{Evaluation}}(state);}
+\DoxyCodeLine{\Hypertarget{MultiObjetivoPuro_8java_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MultiObjetivoPuro_8java_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MultiObjetivoPuro_8java_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ evaluation.add(tempEval);}
+\DoxyCodeLine{\Hypertarget{MultiObjetivoPuro_8java_source_l00055}00055\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MultiObjetivoPuro_8java_source_l00056}00056\ \ \ \ \ \ \ \ \ \textcolor{comment}{//evaluation.add(\ (double)\ -\/1);}}
+\DoxyCodeLine{\Hypertarget{MultiObjetivoPuro_8java_source_l00057}00057\ \ \ \ \ \ \ \ \ state.\mbox{\hyperlink{classproblem_1_1definition_1_1State_abeaa628078af4804e5e9d93b3de593b5}{setEvaluation}}(evaluation);}
+\DoxyCodeLine{\Hypertarget{MultiObjetivoPuro_8java_source_l00058}00058\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{MultiObjetivoPuro_8java_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{MultiObjetivoPuro_8java_source_l00060}00060\ \}}
+
+\end{DoxyCode}

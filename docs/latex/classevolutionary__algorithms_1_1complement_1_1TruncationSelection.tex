@@ -1,0 +1,214 @@
+\doxysection{Referencia de la clase evolutionary\+\_\+algorithms.\+complement.\+Truncation\+Selection}
+\hypertarget{classevolutionary__algorithms_1_1complement_1_1TruncationSelection}{}\label{classevolutionary__algorithms_1_1complement_1_1TruncationSelection}\index{evolutionary\_algorithms.complement.TruncationSelection@{evolutionary\_algorithms.complement.TruncationSelection}}
+
+
+\doxylink{classevolutionary__algorithms_1_1complement_1_1TruncationSelection}{Truncation\+Selection} -\/ applies truncation selection strategy.  
+
+
+
+
+Diagrama de herencia de evolutionary\+\_\+algorithms.\+complement.\+Truncation\+Selection
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=277pt]{classevolutionary__algorithms_1_1complement_1_1TruncationSelection__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagrama de colaboración de evolutionary\+\_\+algorithms.\+complement.\+Truncation\+Selection\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=277pt]{classevolutionary__algorithms_1_1complement_1_1TruncationSelection__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1TruncationSelection_abfd00bbf62267166f7af2cd942223134}{order\+Better}} (List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ list\+State)
+\begin{DoxyCompactList}\small\item\em order\+Better -\/ applies truncation selection strategy. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1TruncationSelection_aa0d3f437007ccd6f8004b949025251e8}{asc\+Order\+Better}} (List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ list\+State)
+\begin{DoxyCompactList}\small\item\em asc\+Order\+Better -\/ applies truncation selection strategy. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1TruncationSelection_ab59a8422f18ba171cb70b680c84eaac1}{selection}} (List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ list\+State, int truncation)
+\begin{DoxyCompactList}\small\item\em selection -\/ applies truncation selection strategy. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+\doxylink{classevolutionary__algorithms_1_1complement_1_1TruncationSelection}{Truncation\+Selection} -\/ applies truncation selection strategy. 
+
+Definición en la línea \mbox{\hyperlink{TruncationSelection_8java_source_l00015}{15}} del archivo \mbox{\hyperlink{TruncationSelection_8java_source}{Truncation\+Selection.\+java}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{classevolutionary__algorithms_1_1complement_1_1TruncationSelection_doc-func-members}
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{classevolutionary__algorithms_1_1complement_1_1TruncationSelection_aa0d3f437007ccd6f8004b949025251e8}\index{evolutionary\_algorithms.complement.TruncationSelection@{evolutionary\_algorithms.complement.TruncationSelection}!ascOrderBetter@{ascOrderBetter}}
+\index{ascOrderBetter@{ascOrderBetter}!evolutionary\_algorithms.complement.TruncationSelection@{evolutionary\_algorithms.complement.TruncationSelection}}
+\doxysubsubsection{\texorpdfstring{ascOrderBetter()}{ascOrderBetter()}}
+{\footnotesize\ttfamily \label{classevolutionary__algorithms_1_1complement_1_1TruncationSelection_aa0d3f437007ccd6f8004b949025251e8} 
+List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ evolutionary\+\_\+algorithms.\+complement.\+Truncation\+Selection.\+asc\+Order\+Better (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$}]{list\+State}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+asc\+Order\+Better -\/ applies truncation selection strategy. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em list\+State} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+returns the list of states ordered from worst to best. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{TruncationSelection_8java_source_l00041}{41}} del archivo \mbox{\hyperlink{TruncationSelection_8java_source}{Truncation\+Selection.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ State\ var\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ listState.size()-\/\ 1;\ i++)\ \{}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ i+1;\ j\ <\ listState.size();\ j++)\ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(listState.get(i).getEvaluation().get(0)\ >\ listState.get(j).getEvaluation().get(0))\{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ =\ listState.get(i);}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ listState.set(i,\ listState.get(j));}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ listState.set(j,var);}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ listState;}
+\DoxyCodeLine{00053\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referenciado por \mbox{\hyperlink{TruncationSelection_8java_source_l00062}{selection()}}.
+
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classevolutionary__algorithms_1_1complement_1_1TruncationSelection_aa0d3f437007ccd6f8004b949025251e8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classevolutionary__algorithms_1_1complement_1_1TruncationSelection_abfd00bbf62267166f7af2cd942223134}\index{evolutionary\_algorithms.complement.TruncationSelection@{evolutionary\_algorithms.complement.TruncationSelection}!orderBetter@{orderBetter}}
+\index{orderBetter@{orderBetter}!evolutionary\_algorithms.complement.TruncationSelection@{evolutionary\_algorithms.complement.TruncationSelection}}
+\doxysubsubsection{\texorpdfstring{orderBetter()}{orderBetter()}}
+{\footnotesize\ttfamily \label{classevolutionary__algorithms_1_1complement_1_1TruncationSelection_abfd00bbf62267166f7af2cd942223134} 
+List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ evolutionary\+\_\+algorithms.\+complement.\+Truncation\+Selection.\+order\+Better (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$}]{list\+State}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+order\+Better -\/ applies truncation selection strategy. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em list\+State} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+returns the list of states ordered from best to worst. 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{TruncationSelection_8java_source_l00022}{22}} del archivo \mbox{\hyperlink{TruncationSelection_8java_source}{Truncation\+Selection.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ State\ var\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ listState.size()-\/\ 1;\ i++)\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ i+1;\ j\ <\ listState.size();\ j++)\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(listState.get(i).getEvaluation().get(0)\ <\ listState.get(j).getEvaluation().get(0))\{}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ =\ listState.get(i);}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ listState.set(i,\ listState.get(j));}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ listState.set(j,var);}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ listState;}
+\DoxyCodeLine{00034\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Referenciado por \mbox{\hyperlink{TruncationSelection_8java_source_l00062}{selection()}}.
+
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classevolutionary__algorithms_1_1complement_1_1TruncationSelection_abfd00bbf62267166f7af2cd942223134_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classevolutionary__algorithms_1_1complement_1_1TruncationSelection_ab59a8422f18ba171cb70b680c84eaac1}\index{evolutionary\_algorithms.complement.TruncationSelection@{evolutionary\_algorithms.complement.TruncationSelection}!selection@{selection}}
+\index{selection@{selection}!evolutionary\_algorithms.complement.TruncationSelection@{evolutionary\_algorithms.complement.TruncationSelection}}
+\doxysubsubsection{\texorpdfstring{selection()}{selection()}}
+{\footnotesize\ttfamily \label{classevolutionary__algorithms_1_1complement_1_1TruncationSelection_ab59a8422f18ba171cb70b680c84eaac1} 
+List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ evolutionary\+\_\+algorithms.\+complement.\+Truncation\+Selection.\+selection (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$}]{list\+State}{, }\item[{int}]{truncation}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+selection -\/ applies truncation selection strategy. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em list\+State} & \\
+\hline
+{\em truncation} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+returns the selected list of states based on truncation. 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classevolutionary__algorithms_1_1complement_1_1FatherSelection_aa6e6bd01ac639141a67815fb65f7c831}{evolutionary\+\_\+algorithms.\+complement.\+Father\+Selection}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{TruncationSelection_8java_source_l00062}{62}} del archivo \mbox{\hyperlink{TruncationSelection_8java_source}{Truncation\+Selection.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ List<State>\ AuxList\ =\ \textcolor{keyword}{new}\ ArrayList<State>();}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Strategy.getStrategy().getProblem().getTypeProblem().equals(ProblemType.Maximizar))\ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ listState\ =\ orderBetter(listState);}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(Strategy.getStrategy().getProblem().getTypeProblem().equals(ProblemType.Minimizar))}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ listState\ =\ ascOrderBetter(listState);}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ i\ =\ 0;}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(AuxList.size()<\ truncation)\{}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ AuxList.add(listState.get(i));}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ i++;}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ AuxList;}
+\DoxyCodeLine{00076\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{TruncationSelection_8java_source_l00041}{asc\+Order\+Better()}}, \mbox{\hyperlink{Strategy_8java_source_l00405}{metaheurictics.\+strategy.\+Strategy.\+get\+Problem()}}, \mbox{\hyperlink{Strategy_8java_source_l00080}{metaheurictics.\+strategy.\+Strategy.\+get\+Strategy()}}, \mbox{\hyperlink{Problem_8java_source_l00097}{problem.\+definition.\+Problem.\+get\+Type\+Problem()}}, \mbox{\hyperlink{Problem_8java_source_l00029}{problem.\+definition.\+Problem.\+Problem\+Type.\+Maximizar}}, \mbox{\hyperlink{Problem_8java_source_l00029}{problem.\+definition.\+Problem.\+Problem\+Type.\+Minimizar}} y \mbox{\hyperlink{TruncationSelection_8java_source_l00022}{order\+Better()}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classevolutionary__algorithms_1_1complement_1_1TruncationSelection_ab59a8422f18ba171cb70b680c84eaac1_cgraph}
+\end{center}
+\end{figure}
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{TruncationSelection_8java}{Truncation\+Selection.\+java}}\end{DoxyCompactItemize}

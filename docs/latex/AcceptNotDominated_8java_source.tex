@@ -1,0 +1,42 @@
+\doxysection{Accept\+Not\+Dominated.\+java}
+\hypertarget{AcceptNotDominated_8java_source}{}\label{AcceptNotDominated_8java_source}\index{AcceptNotDominated.java@{AcceptNotDominated.java}}
+\mbox{\hyperlink{AcceptNotDominated_8java}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{AcceptNotDominated_8java_source_l00001}00001\ \textcolor{keyword}{package\ }local\_search.acceptation\_type;}
+\DoxyCodeLine{\Hypertarget{AcceptNotDominated_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{AcceptNotDominated_8java_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{AcceptNotDominated_8java_source_l00004}00004\ \textcolor{keyword}{import}\ local\_search.acceptation\_type.Dominance;}
+\DoxyCodeLine{\Hypertarget{AcceptNotDominated_8java_source_l00005}00005\ \textcolor{keyword}{import}\ metaheurictics.strategy.Strategy;}
+\DoxyCodeLine{\Hypertarget{AcceptNotDominated_8java_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{AcceptNotDominated_8java_source_l00007}00007\ \textcolor{keyword}{import}\ problem.definition.State;}
+\DoxyCodeLine{\Hypertarget{AcceptNotDominated_8java_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{AcceptNotDominated_8java_source_l00016}\mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1AcceptNotDominated}{00016}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1AcceptNotDominated}{AcceptNotDominated}}\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1AcceptableCandidate}{AcceptableCandidate}}\ \{}
+\DoxyCodeLine{\Hypertarget{AcceptNotDominated_8java_source_l00017}00017\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{AcceptNotDominated_8java_source_l00018}00018\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{AcceptNotDominated_8java_source_l00028}\mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1AcceptNotDominated_a05fe7b0385dfafe7701f6a4e9b2b80d2}{00028}}\ \ \ \ \ \textcolor{keyword}{public}\ Boolean\ \mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1AcceptNotDominated_a05fe7b0385dfafe7701f6a4e9b2b80d2}{acceptCandidate}}(\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ stateCurrent,\ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ stateCandidate)\ \{}
+\DoxyCodeLine{\Hypertarget{AcceptNotDominated_8java_source_l00029}00029\ \ \ \ \ \ \ \ \ Boolean\ accept\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{AcceptNotDominated_8java_source_l00030}00030\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1Dominance}{Dominance}}\ dominace\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1Dominance}{Dominance}}();}
+\DoxyCodeLine{\Hypertarget{AcceptNotDominated_8java_source_l00031}00031\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{AcceptNotDominated_8java_source_l00032}00032\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy}{Strategy}}.\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_ad2641e12c52292930364de6655333aa8}{getStrategy}}().\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_aa572e7d90e24bae70ea47a31fee298f4}{listRefPoblacFinal}}.size()\ ==\ 0)\{}
+\DoxyCodeLine{\Hypertarget{AcceptNotDominated_8java_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy}{Strategy}}.\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_ad2641e12c52292930364de6655333aa8}{getStrategy}}().\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_aa572e7d90e24bae70ea47a31fee298f4}{listRefPoblacFinal}}.add(stateCurrent.\mbox{\hyperlink{classproblem_1_1definition_1_1State_a113f6883a1f6bd20eea2da09a0adc5c3}{clone}}());}
+\DoxyCodeLine{\Hypertarget{AcceptNotDominated_8java_source_l00034}00034\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AcceptNotDominated_8java_source_l00035}00035\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(dominace.\mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1Dominance_a0dafd58be8365a22956f59417841a2d8}{dominance}}(stateCurrent,\ stateCandidate)==\ \textcolor{keyword}{false})}
+\DoxyCodeLine{\Hypertarget{AcceptNotDominated_8java_source_l00036}00036\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{AcceptNotDominated_8java_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Verificando\ si\ la\ solución\ candidata\ domina\ a\ alguna\ de\ las\ soluciones\ de\ la\ lista\ de\ soluciones\ no\ dominadas}}
+\DoxyCodeLine{\Hypertarget{AcceptNotDominated_8java_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//De\ ser\ asi\ se\ eliminan\ de\ la\ lista\ y\ se\ adiciona\ la\ nueva\ solución\ en\ la\ lista}}
+\DoxyCodeLine{\Hypertarget{AcceptNotDominated_8java_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//De\ lo\ contrario\ no\ se\ adiciona\ la\ solución\ candidata\ a\ la\ lista}}
+\DoxyCodeLine{\Hypertarget{AcceptNotDominated_8java_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Si\ fue\ insertada\ en\ la\ lista\ entonces\ la\ solución\ candidata\ se\ convierte\ en\ solución\ actual}}
+\DoxyCodeLine{\Hypertarget{AcceptNotDominated_8java_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(dominace.\mbox{\hyperlink{classlocal__search_1_1acceptation__type_1_1Dominance_ad61c0e3cb6cc4036419cb36758cf3814}{listDominance}}(stateCandidate,\ \mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy}{Strategy}}.\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_ad2641e12c52292930364de6655333aa8}{getStrategy}}().\mbox{\hyperlink{classmetaheurictics_1_1strategy_1_1Strategy_aa572e7d90e24bae70ea47a31fee298f4}{listRefPoblacFinal}})\ ==\ \textcolor{keyword}{true})\{}
+\DoxyCodeLine{\Hypertarget{AcceptNotDominated_8java_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Se\ pone\ la\ solución\ candidata\ como\ solución\ actual}}
+\DoxyCodeLine{\Hypertarget{AcceptNotDominated_8java_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ accept\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{AcceptNotDominated_8java_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AcceptNotDominated_8java_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{AcceptNotDominated_8java_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ accept\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{AcceptNotDominated_8java_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AcceptNotDominated_8java_source_l00048}00048\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AcceptNotDominated_8java_source_l00049}00049\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ accept;}
+\DoxyCodeLine{\Hypertarget{AcceptNotDominated_8java_source_l00050}00050\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{AcceptNotDominated_8java_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{AcceptNotDominated_8java_source_l00052}00052\ \}}
+
+\end{DoxyCode}

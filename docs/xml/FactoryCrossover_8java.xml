@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="es">
+  <compounddef id="FactoryCrossover_8java" kind="file" language="Java">
+    <compoundname>FactoryCrossover.java</compoundname>
+    <includes local="no">java.lang.reflect.InvocationTargetException</includes>
+    <includes local="no">evolutionary_algorithms.complement.Crossover</includes>
+    <includes local="no">evolutionary_algorithms.complement.CrossoverType</includes>
+    <includes local="no">factory_interface.IFFactoryCrossover</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>FactoryCrossover.java</label>
+        <link refid="FactoryCrossover_8java"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>evolutionary_algorithms.complement.Crossover</label>
+      </node>
+      <node id="4">
+        <label>evolutionary_algorithms.complement.CrossoverType</label>
+      </node>
+      <node id="5">
+        <label>factory_interface.IFFactoryCrossover</label>
+      </node>
+      <node id="2">
+        <label>java.lang.reflect.InvocationTargetException</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classfactory__method_1_1FactoryCrossover" prot="public">factory_method::FactoryCrossover</innerclass>
+    <innernamespace refid="namespacefactory__method">factory_method</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">package<sp/></highlight><highlight class="normal">factory_method;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>java.lang.reflect.InvocationTargetException;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>evolutionary_algorithms.complement.Crossover;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>evolutionary_algorithms.complement.CrossoverType;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>factory_interface.IFFactoryCrossover;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="classfactory__method_1_1FactoryCrossover" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classfactory__method_1_1FactoryCrossover" kindref="compound">FactoryCrossover</ref><sp/></highlight><highlight class="keyword">implements</highlight><highlight class="normal"><sp/><ref refid="interfacefactory__interface_1_1IFFactoryCrossover" kindref="compound">IFFactoryCrossover</ref><sp/>{</highlight></codeline>
+<codeline lineno="17" refid="classfactory__method_1_1FactoryCrossover_1a958bbac8cc07bb3330e165078dbe56a7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/><ref refid="classevolutionary__algorithms_1_1complement_1_1Crossover" kindref="compound">Crossover</ref><sp/><ref refid="classfactory__method_1_1FactoryCrossover_1a958bbac8cc07bb3330e165078dbe56a7" kindref="member">crossing</ref>;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="classfactory__method_1_1FactoryCrossover_1ae361191d68e551e12a823f5956111a49" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classevolutionary__algorithms_1_1complement_1_1Crossover" kindref="compound">Crossover</ref><sp/><ref refid="classfactory__method_1_1FactoryCrossover_1ae361191d68e551e12a823f5956111a49" kindref="member">createCrossover</ref>(<ref refid="enumevolutionary__algorithms_1_1complement_1_1CrossoverType" kindref="compound">CrossoverType</ref><sp/>Crossovertype)<sp/></highlight><highlight class="keywordflow">throws</highlight><highlight class="normal"><sp/>IllegalArgumentException,<sp/>SecurityException,<sp/>ClassNotFoundException,<sp/>InstantiationException,<sp/>IllegalAccessException,<sp/>InvocationTargetException,<sp/>NoSuchMethodException<sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>String<sp/>className<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;evolutionary_algorithms.complement.&quot;</highlight><highlight class="normal"><sp/>+<sp/>Crossovertype.toString();</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classfactory__method_1_1FactoryCrossover_1a958bbac8cc07bb3330e165078dbe56a7" kindref="member">crossing</ref><sp/>=<sp/>(<ref refid="classevolutionary__algorithms_1_1complement_1_1Crossover" kindref="compound">Crossover</ref>)<sp/><ref refid="classfactory__method_1_1FactoryLoader" kindref="compound">FactoryLoader</ref>.<ref refid="classfactory__method_1_1FactoryLoader_1a4e61ffc7038a082277d67e3e59cdb859" kindref="member">getInstance</ref>(className);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classfactory__method_1_1FactoryCrossover_1a958bbac8cc07bb3330e165078dbe56a7" kindref="member">crossing</ref>;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="practica5/src/main/java/factory_method/FactoryCrossover.java"/>
+  </compounddef>
+</doxygen>

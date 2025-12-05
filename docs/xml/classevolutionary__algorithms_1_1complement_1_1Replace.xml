@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="es">
+  <compounddef id="classevolutionary__algorithms_1_1complement_1_1Replace" kind="class" language="Java" prot="public" abstract="yes">
+    <compoundname>evolutionary_algorithms::complement::Replace</compoundname>
+    <derivedcompoundref refid="classevolutionary__algorithms_1_1complement_1_1GenerationalReplace" prot="public" virt="non-virtual">evolutionary_algorithms.complement.GenerationalReplace</derivedcompoundref>
+    <derivedcompoundref refid="classevolutionary__algorithms_1_1complement_1_1SteadyStateReplace" prot="public" virt="non-virtual">evolutionary_algorithms.complement.SteadyStateReplace</derivedcompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classevolutionary__algorithms_1_1complement_1_1Replace_1aac9402083a696d23ca0d97540d3951e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>abstract List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+        <definition>abstract List&lt; State &gt; evolutionary_algorithms.complement.Replace.replace</definition>
+        <argsstring>(State stateCandidate, List&lt; State &gt;listState)</argsstring>
+        <name>replace</name>
+        <qualifiedname>evolutionary_algorithms.complement.Replace.replace</qualifiedname>
+        <reimplementedby refid="classevolutionary__algorithms_1_1complement_1_1GenerationalReplace_1aad6c6c29ab27a71b56b077977875b9f8">replace</reimplementedby>
+        <reimplementedby refid="classevolutionary__algorithms_1_1complement_1_1SteadyStateReplace_1a1283c4f4d8b9bbe5ae5dc4916934c8a9">replace</reimplementedby>
+        <param>
+          <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>stateCandidate</declname>
+        </param>
+        <param>
+          <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+          <declname>listState</declname>
+        </param>
+        <exceptions> throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException</exceptions>
+        <briefdescription>
+<para>replace - replace the worst individual in the population. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stateCandidate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>listState</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>IllegalArgumentException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>SecurityException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ClassNotFoundException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>InstantiationException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>IllegalAccessException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>InvocationTargetException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>NoSuchMethodException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/evolutionary_algorithms/complement/Replace.java" line="26" column="22"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1DistributionEstimationAlgorithm_1aae6c25e5e1e4c93694755233cb016ea6" compoundref="DistributionEstimationAlgorithm_8java" startline="179" endline="183">metaheuristics.generators.DistributionEstimationAlgorithm.updateReference</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1EvolutionStrategies_1ae37dff5bcc1931755d2d78ad3c047c99" compoundref="EvolutionStrategies_8java" startline="153" endline="158">metaheuristics.generators.EvolutionStrategies.updateReference</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1GeneticAlgorithm_1af007f7a227b465ed513b5b07f8c54b6b" compoundref="GeneticAlgorithm_8java" startline="174" endline="178">metaheuristics.generators.GeneticAlgorithm.updateReference</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="classevolutionary__algorithms_1_1complement_1_1Replace" kindref="compound">Replace</ref> - applies replacement strategies for individuals in the population. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>evolutionary_algorithms.complement.Replace</label>
+        <link refid="classevolutionary__algorithms_1_1complement_1_1Replace"/>
+      </node>
+      <node id="2">
+        <label>evolutionary_algorithms.complement.GenerationalReplace</label>
+        <link refid="classevolutionary__algorithms_1_1complement_1_1GenerationalReplace"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>evolutionary_algorithms.complement.SteadyStateReplace</label>
+        <link refid="classevolutionary__algorithms_1_1complement_1_1SteadyStateReplace"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>evolutionary_algorithms.complement.Replace</label>
+        <link refid="classevolutionary__algorithms_1_1complement_1_1Replace"/>
+      </node>
+    </collaborationgraph>
+    <location file="practica5/src/main/java/evolutionary_algorithms/complement/Replace.java" line="12" column="17" bodyfile="practica5/src/main/java/evolutionary_algorithms/complement/Replace.java" bodystart="12" bodyend="27"/>
+    <listofallmembers>
+      <member refid="classevolutionary__algorithms_1_1complement_1_1Replace_1aac9402083a696d23ca0d97540d3951e5" prot="public" virt="non-virtual"><scope>evolutionary_algorithms::complement::Replace</scope><name>replace</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

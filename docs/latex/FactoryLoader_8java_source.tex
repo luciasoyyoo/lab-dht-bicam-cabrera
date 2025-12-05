@@ -1,0 +1,20 @@
+\doxysection{Factory\+Loader.\+java}
+\hypertarget{FactoryLoader_8java_source}{}\label{FactoryLoader_8java_source}\index{FactoryLoader.java@{FactoryLoader.java}}
+\mbox{\hyperlink{FactoryLoader_8java}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{FactoryLoader_8java_source_l00001}00001\ \textcolor{keyword}{package\ }factory\_method;}
+\DoxyCodeLine{\Hypertarget{FactoryLoader_8java_source_l00002}00002\ \textcolor{keyword}{import}\ java.lang.reflect.InvocationTargetException;}
+\DoxyCodeLine{\Hypertarget{FactoryLoader_8java_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{FactoryLoader_8java_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{FactoryLoader_8java_source_l00008}\mbox{\hyperlink{classfactory__method_1_1FactoryLoader}{00008}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classfactory__method_1_1FactoryLoader}{FactoryLoader}}\ \{}
+\DoxyCodeLine{\Hypertarget{FactoryLoader_8java_source_l00021}\mbox{\hyperlink{classfactory__method_1_1FactoryLoader_a4e61ffc7038a082277d67e3e59cdb859}{00021}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ Object\ \mbox{\hyperlink{classfactory__method_1_1FactoryLoader_a4e61ffc7038a082277d67e3e59cdb859}{getInstance}}(String\ className)\ \textcolor{keywordflow}{throws}\ ClassNotFoundException,\ IllegalArgumentException,\ SecurityException,\ InstantiationException,\ IllegalAccessException,\ InvocationTargetException,\ NoSuchMethodException\{}
+\DoxyCodeLine{\Hypertarget{FactoryLoader_8java_source_l00022}00022\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Let\ exceptions\ propagate\ to\ caller\ instead\ of\ swallowing\ them\ (prevents\ null\ dereference)}}
+\DoxyCodeLine{\Hypertarget{FactoryLoader_8java_source_l00023}00023\ \ \ \ \ \ \ \ \ @SuppressWarnings(\textcolor{stringliteral}{"{}rawtypes"{}})}
+\DoxyCodeLine{\Hypertarget{FactoryLoader_8java_source_l00024}00024\ \ \ \ \ \ \ \ \ Class\ c\ =\ Class.forName(className);}
+\DoxyCodeLine{\Hypertarget{FactoryLoader_8java_source_l00025}00025\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ use\ getDeclaredConstructor().newInstance()\ to\ avoid\ deprecated\ Class.newInstance()}}
+\DoxyCodeLine{\Hypertarget{FactoryLoader_8java_source_l00026}00026\ \ \ \ \ \ \ \ \ Object\ o\ =\ c.getDeclaredConstructor().newInstance();}
+\DoxyCodeLine{\Hypertarget{FactoryLoader_8java_source_l00027}00027\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ o;}
+\DoxyCodeLine{\Hypertarget{FactoryLoader_8java_source_l00028}00028\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{FactoryLoader_8java_source_l00029}00029\ \}}
+
+\end{DoxyCode}

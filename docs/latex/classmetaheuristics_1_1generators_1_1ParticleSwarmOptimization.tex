@@ -1,0 +1,1973 @@
+\doxysection{Referencia de la clase metaheuristics.\+generators.\+Particle\+Swarm\+Optimization}
+\hypertarget{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization}{}\label{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization}\index{metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}}
+
+
+\doxylink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization}{Particle\+Swarm\+Optimization} -\/ class that implements the \doxylink{classmetaheuristics_1_1generators_1_1Particle}{Particle} Swarm Optimization metaheuristic.  
+
+
+
+
+Diagrama de herencia de metaheuristics.\+generators.\+Particle\+Swarm\+Optimization
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagrama de colaboración de metaheuristics.\+generators.\+Particle\+Swarm\+Optimization\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a58823d3000e36d540bd20800e0636a88}{Particle\+Swarm\+Optimization}} ()
+\begin{DoxyCompactList}\small\item\em Create a new \doxylink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization}{Particle\+Swarm\+Optimization} instance. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a4bab770550c31f12b11de2585086936a}{generate}} (Integer operatornumber)  throws Illegal\+Argument\+Exception, Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception, Illegal\+Access\+Exception, Invocation\+Target\+Exception, No\+Such\+Method\+Exception 
+\begin{DoxyCompactList}\small\item\em Generate a new state by advancing the next particle in the swarm. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a2b35916a7fef7ecc1ae9c6f4c571a6d1}{inicialice\+LBest}} ()
+\begin{DoxyCompactList}\small\item\em Initialize the local best {\ttfamily l\+Best} array for each swarm. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a2764712d1d2ba2259d0562f78e669977}{get\+Reference}} ()
+\begin{DoxyCompactList}\small\item\em Return the single reference state used by single-\/reference generators. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a4e9ec463f3058721220c4c28c99a42e7}{get\+State\+Reference\+PSO}} ()
+\begin{DoxyCompactList}\small\item\em Return the PSO-\/specific reference state used by some helpers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_af0007f3368bc26e13509697f13b8bd8f}{set\+State\+Reference\+PSO}} (\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a84f1604d94af7fb5a200176a4c245b15}{state\+Reference\+PSO}})
+\begin{DoxyCompactList}\small\item\em Set the PSO-\/specific reference state. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle}{Particle}} $>$ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a82c7ce280bc0e520f17466e4c147bea4}{get\+List\+State\+Reference}} ()
+\begin{DoxyCompactList}\small\item\em Return the current list of particles used internally. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a672badc4745b5b9327dcc920fb195c8a}{set\+List\+State\+Reference}} (List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a488b113859866aa90ed7f71dea741024}{list\+State\+Reference}})
+\begin{DoxyCompactList}\small\item\em \doxylink{classevolutionary__algorithms_1_1complement_1_1Replace}{Replace} the internal state reference list. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle}{Particle}} $>$ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a754377431c7fa3de15b4e81fd7f79f6f}{get\+List\+Particle}} ()
+\begin{DoxyCompactList}\small\item\em Get the internal particle list. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle}{Particle}} $>$ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a8e0fe5cf94eb84b09d75c6e270bf60de}{set\+List\+Particle}} (List$<$ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle}{Particle}} $>$ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a4635b77d518d93e48c436213dc8d3601}{list\+Particle}})
+\begin{DoxyCompactList}\small\item\em \doxylink{classevolutionary__algorithms_1_1complement_1_1Replace}{Replace} the internal particle list and return the newly set list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{Generator\+Type}} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a6f553e35a4929a626db8c0e3a038eaf5}{get\+Generator\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Get the generator type associated with this instance. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a5855f4db41982beb1b0ef27a4b44742d}{set\+Generator\+Type}} (\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{Generator\+Type}} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a87ec4603a4779481939b402eb8e02089}{generator\+Type}})
+\begin{DoxyCompactList}\small\item\em Set the generator type for this instance. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_abc5a8dcdf9ff7418f4084002e383b860}{update\+Reference}} (\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} state\+Candidate, Integer count\+Iterations\+Current)  throws Illegal\+Argument\+Exception,Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception,Illegal\+Access\+Exception, Invocation\+Target\+Exception,No\+Such\+Method\+Exception 
+\begin{DoxyCompactList}\small\item\em Update the PSO internal references based on a newly generated candidate state. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_aec9a3560a4a9aa2e60eeaf289ea18b3c}{g\+Best\+Inicial}} ()
+\begin{DoxyCompactList}\small\item\em Compute the initial global best (g\+Best) from the local bests contained in {\ttfamily l\+Best}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_aa8fc5294266abb5704de5fb3b70aa0e2}{set\+Initial\+Reference}} (\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} state\+Initial\+Ref)
+\begin{DoxyCompactList}\small\item\em Set the initial reference(s) for the generator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{Generator\+Type}} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a71987dfaef5ebd055f958f9ca186953f}{get\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Return the concrete generator type of this generator. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a64d44fa65b23051d69ab0d4d14e0f162}{get\+Reference\+List}} ()
+\begin{DoxyCompactList}\small\item\em Return a copy of the list used as reference solutions by PSO. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a464fc4922d70868c61bb905e6caa3c8e}{get\+Son\+List}} ()
+\begin{DoxyCompactList}\small\item\em Return the currently generated offspring/state list for this generator. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a17300bef2e571cecf9428d5768f88dc4}{award\+Update\+REF}} (\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} state\+Candidate)
+\begin{DoxyCompactList}\small\item\em Decide whether the provided candidate should update references. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_af200d1e3621dea6a34960f8ffbbefa8c}{set\+Weight}} (float \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a4a4f8987c2b64eb8e5728e9abe354c58}{weight}})
+\begin{DoxyCompactList}\small\item\em Set the internal inertia weight used by particle velocity updates. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_aec94a0a6dc5331c35a59a3be0078be9f}{get\+Weight}} ()
+\begin{DoxyCompactList}\small\item\em Get the current inertia weight used in PSO. \end{DoxyCompactList}\item 
+int\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_ac6bc6fa2d1b14049ea3a1a5f0c26b4b5}{get\+List\+Count\+Better\+Gender}} ()
+\begin{DoxyCompactList}\small\item\em Return a defensive copy of the counters that track how many times a particle improved during a period. \end{DoxyCompactList}\item 
+int\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a4015ce46c4c0b78825daa8a263a5ac56}{get\+List\+Count\+Gender}} ()
+\begin{DoxyCompactList}\small\item\em Return a defensive copy of usage counters per period. \end{DoxyCompactList}\item 
+float\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a6e3b617f60a8f8ff0d3f3e5e000996fb}{get\+Trace}} ()
+\begin{DoxyCompactList}\small\item\em Return a copy of the internal trace array used for diagnostic information (weights over time, etc.). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Métodos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a52383fab169358bf7971311c7ed8f207}{get\+Cout\+Swarm}} ()
+\begin{DoxyCompactList}\small\item\em get\+Cout\+Swarm -\/ get the number of swarms. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a0b98342174ad9b19e199a0cf1c85950e}{set\+Cout\+Swarm}} (int v)
+\begin{DoxyCompactList}\small\item\em set\+Cout\+Swarm -\/ set the number of swarms. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a8df765e1194a606605e5eefa5c136010}{get\+Count\+Particle\+By\+Swarm}} ()
+\begin{DoxyCompactList}\small\item\em get\+Count\+Particle\+By\+Swarm -\/ get the number of particles per swarm. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a4a7e8784ece74feb38646a5535f13699}{set\+Count\+Particle\+By\+Swarm}} (int v)
+\begin{DoxyCompactList}\small\item\em set\+Count\+Particle\+By\+Swarm -\/ set the number of particles per swarm. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a0e7dc7ca80c456a71f0fa4f660b33086}{get\+LBest}} ()
+\item 
+static void \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a9452e8ce9fd5587e4bac1eadf10addbb}{set\+LBest}} (\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\mbox{[}$\,$\mbox{]} arr)
+\begin{DoxyCompactList}\small\item\em set\+LBest -\/ set the local best array. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a2d0fa32b6e465a69309d1061aa8c63f6}{set\+LBest\+At}} (int idx, \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} s)
+\begin{DoxyCompactList}\small\item\em set\+LBest -\/ set the local best at index. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_abd10eb844626b27fb592eee9f353725c}{get\+GBest}} ()
+\item 
+static void \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a842a4536ebfc5c89c2e21286fa70ed5e}{set\+GBest}} (\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} s)
+\item 
+static int \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a12c12b70f5c84e0f06027adbe4db63f1}{get\+Count\+Current\+Iter\+PSO}} ()
+\item 
+static void \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a5a73eed9252828f08c61e6f6f4d82ac6}{set\+Count\+Current\+Iter\+PSO}} (int v)
+\item 
+static int \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a9d7f0796fac17cb2d4fe19a9f9960ae4}{get\+Count\+Particle}} ()
+\item 
+static void \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_aa554d5dbe993b4817d3895806e7dd063}{set\+Count\+Particle}} (int v)
+\item 
+static int \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a8a448ceb59a38faaa4d964e5c31510ee}{get\+Count\+Ref}} ()
+\item 
+static void \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a443250bb3b7fb34f1a2a3ba062cb3311}{set\+Count\+Ref}} (int \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_ac7ebf8d9c7ccd1f23c38eea79ea50ad4}{count\+Ref}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static final double \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a920f572bad5f93b03c3347356f7c2bc4}{wmax}} = 0.\+9
+\item 
+static final double \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a25ee209144e81a8a9b36dda74df290c1}{wmin}} = 0.\+2
+\item 
+static final int \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a4a53547ab8ca6aa61df72a02a76e3e80}{learning1}} = 2
+\item 
+static final int \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_afcbf94cbccaf2d2654fac058793cc173}{learning2}} = 2
+\item 
+static final boolean \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a45a990b27b172338c10931d135b88b7f}{binary}} = false
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Métodos privados}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle}{Particle}} $>$ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a4a9da4ad8253a7521056fbb306a495a3}{get\+List\+State\+Ref}} ()
+\begin{DoxyCompactList}\small\item\em Build or return the list of {\ttfamily \doxylink{classmetaheuristics_1_1generators_1_1Particle}{Particle}} instances used by PSO. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a84f1604d94af7fb5a200176a4c245b15}{state\+Reference\+PSO}}
+\item 
+List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a488b113859866aa90ed7f71dea741024}{list\+State\+Reference}} = new Array\+List$<$\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}$>$()
+\item 
+List$<$ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle}{Particle}} $>$ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a4635b77d518d93e48c436213dc8d3601}{list\+Particle}} = new Array\+List$<$\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle}{Particle}}$>$ ()
+\item 
+\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{Generator\+Type}} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a87ec4603a4779481939b402eb8e02089}{generator\+Type}}
+\item 
+float \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a4a4f8987c2b64eb8e5728e9abe354c58}{weight}} = 50
+\item 
+int\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_ac4fe1e87c6489d682099ca0e22e7d0f8}{list\+Count\+Better\+Gender}} = new int\mbox{[}10\mbox{]}
+\item 
+int\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_aaedf6d547a9fd8128fb12898bcacc3fe}{list\+Count\+Gender}} = new int\mbox{[}10\mbox{]}
+\item 
+float\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a3436d8147038325c0726224894038433}{list\+Trace}} = new float\mbox{[}1200000\mbox{]}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos estáticos privados}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_ac2df5a730f09652ea6303fde195de727}{cout\+Swarm}} = 0
+\item 
+static int \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_aeac78dea881f9fd22d59194fb42efd79}{count\+Particle\+By\+Swarm}} = 0
+\item 
+static int \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_ac7ebf8d9c7ccd1f23c38eea79ea50ad4}{count\+Ref}} = \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_ac2df5a730f09652ea6303fde195de727}{cout\+Swarm}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_aeac78dea881f9fd22d59194fb42efd79}{count\+Particle\+By\+Swarm}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Otros miembros heredados}
+\doxysubsection*{Atributos públicos heredados de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator}{metaheuristics.\+generators.\+Generator}}}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a3c0145210385b6257c8fc20cac1f830a}{count\+Gender}}
+\item 
+int \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a43815f3944c514ba3156b0e68482befa}{count\+Better\+Gender}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+\doxylink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization}{Particle\+Swarm\+Optimization} -\/ class that implements the \doxylink{classmetaheuristics_1_1generators_1_1Particle}{Particle} Swarm Optimization metaheuristic. 
+
+Definición en la línea \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00019}{19}} del archivo \mbox{\hyperlink{ParticleSwarmOptimization_8java_source}{Particle\+Swarm\+Optimization.\+java}}.
+
+
+
+\label{doc-constructors}
+\Hypertarget{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_doc-constructors}
+\doxysubsection{Documentación de constructores y destructores}
+\Hypertarget{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a58823d3000e36d540bd20800e0636a88}\index{metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}!ParticleSwarmOptimization@{ParticleSwarmOptimization}}
+\index{ParticleSwarmOptimization@{ParticleSwarmOptimization}!metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}}
+\doxysubsubsection{\texorpdfstring{ParticleSwarmOptimization()}{ParticleSwarmOptimization()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a58823d3000e36d540bd20800e0636a88} 
+metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+Particle\+Swarm\+Optimization (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Create a new \doxylink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization}{Particle\+Swarm\+Optimization} instance. 
+
+The constructor initializes internal arrays and sets default values for weights, counters and generators. It intentionally does not perform expensive operations; heavy initialization is deferred to {\ttfamily \doxylink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a4a9da4ad8253a7521056fbb306a495a3}{get\+List\+State\+Ref()}} when needed. 
+
+Definición en la línea \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00132}{132}} del archivo \mbox{\hyperlink{ParticleSwarmOptimization_8java_source}{Particle\+Swarm\+Optimization.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ super();}
+\DoxyCodeLine{00134\ \ \ \ \ this.setListParticle(getListStateRef());\ }
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ this.generatorType\ =\ GeneratorType.ParticleSwarmOptimization;}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ this.weight\ =\ 50;}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ setLBest(\textcolor{keyword}{new}\ State[coutSwarm]);}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!listParticle.isEmpty())\{}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ setCountCurrentIterPSO(1);}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ inicialiceLBest();}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ setGBest(gBestInicial());}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ setCountParticle(0);}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ listTrace[0]\ =\ this.weight;}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ listCountBetterGender[0]\ =\ 0;}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ listCountGender[0]\ =\ 0;}
+\DoxyCodeLine{00147\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00030}{cout\+Swarm}}, \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00403}{g\+Best\+Inicial()}}, \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00220}{get\+List\+State\+Ref()}}, \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00173}{inicialice\+LBest()}}, \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00120}{list\+Count\+Better\+Gender}}, \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00121}{list\+Count\+Gender}}, \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00023}{list\+Particle}}, \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00122}{list\+Trace}}, \mbox{\hyperlink{GeneratorType_8java_source_l00008}{metaheuristics.\+generators.\+Generator\+Type.\+Particle\+Swarm\+Optimization}}, \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00115}{set\+Count\+Current\+Iter\+PSO()}}, \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00117}{set\+Count\+Particle()}}, \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00113}{set\+GBest()}}, \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00092}{set\+LBest()}}, \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00321}{set\+List\+Particle()}} y \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00068}{weight}}.
+
+
+
+Referenciado por \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00220}{get\+List\+State\+Ref()}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a58823d3000e36d540bd20800e0636a88_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a58823d3000e36d540bd20800e0636a88_icgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-func-members}
+\Hypertarget{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_doc-func-members}
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a17300bef2e571cecf9428d5768f88dc4}\index{metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}!awardUpdateREF@{awardUpdateREF}}
+\index{awardUpdateREF@{awardUpdateREF}!metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}}
+\doxysubsubsection{\texorpdfstring{awardUpdateREF()}{awardUpdateREF()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a17300bef2e571cecf9428d5768f88dc4} 
+boolean metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+award\+Update\+REF (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}}]{state\+Candidate}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Decide whether the provided candidate should update references. 
+
+PSO uses {\ttfamily update\+Reference} directly; this helper returns {\ttfamily false} by default and can be implemented if integration requires it.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em state\+Candidate} & candidate state to evaluate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+{\ttfamily false} by default 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a3513d3953ecc97683f38bcb662b74b9b}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00475}{475}} del archivo \mbox{\hyperlink{ParticleSwarmOptimization_8java_source}{Particle\+Swarm\+Optimization.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00475\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00476\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00477\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_aec9a3560a4a9aa2e60eeaf289ea18b3c}\index{metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}!gBestInicial@{gBestInicial}}
+\index{gBestInicial@{gBestInicial}!metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}}
+\doxysubsubsection{\texorpdfstring{gBestInicial()}{gBestInicial()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_aec9a3560a4a9aa2e60eeaf289ea18b3c} 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+g\+Best\+Inicial (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Compute the initial global best (g\+Best) from the local bests contained in {\ttfamily l\+Best}. 
+
+\begin{DoxyReturn}{Devuelve}
+the best \doxylink{classproblem_1_1definition_1_1State}{State} among {\ttfamily l\+Best} 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00403}{403}} del archivo \mbox{\hyperlink{ParticleSwarmOptimization_8java_source}{Particle\+Swarm\+Optimization.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00403\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00404\ \ \ \ \ \ \ \ \ State\ stateBest\ =\ lBest[0];}
+\DoxyCodeLine{00405\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 1;\ i\ <\ lBest.length;\ i++)\ \{}
+\DoxyCodeLine{00406\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(Strategy.getStrategy().getProblem().getTypeProblem().equals(ProblemType.Maximizar))\{}
+\DoxyCodeLine{00407\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (lBest[i].getEvaluation().\textcolor{keyword}{get}(0)\ >\ stateBest.getEvaluation().get(0))\{}
+\DoxyCodeLine{00408\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ stateBest\ =\ lBest[i];}
+\DoxyCodeLine{00409\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00410\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00411\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00412\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (lBest[i].getEvaluation().\textcolor{keyword}{get}(0)\ <\ stateBest.getEvaluation().get(0))\{}
+\DoxyCodeLine{00413\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ stateBest\ =\ lBest[i];}
+\DoxyCodeLine{00414\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00415\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00416\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00417\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ stateBest;}
+\DoxyCodeLine{00418\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{State_8java_source_l00104}{problem.\+definition.\+State.\+get\+Evaluation()}}, \mbox{\hyperlink{Strategy_8java_source_l00405}{metaheurictics.\+strategy.\+Strategy.\+get\+Problem()}}, \mbox{\hyperlink{Strategy_8java_source_l00080}{metaheurictics.\+strategy.\+Strategy.\+get\+Strategy()}}, \mbox{\hyperlink{Problem_8java_source_l00097}{problem.\+definition.\+Problem.\+get\+Type\+Problem()}} y \mbox{\hyperlink{Problem_8java_source_l00029}{problem.\+definition.\+Problem.\+Problem\+Type.\+Maximizar}}.
+
+
+
+Referenciado por \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00132}{Particle\+Swarm\+Optimization()}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_aec9a3560a4a9aa2e60eeaf289ea18b3c_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_aec9a3560a4a9aa2e60eeaf289ea18b3c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a4bab770550c31f12b11de2585086936a}\index{metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}!generate@{generate}}
+\index{generate@{generate}!metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}}
+\doxysubsubsection{\texorpdfstring{generate()}{generate()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a4bab770550c31f12b11de2585086936a} 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+generate (\begin{DoxyParamCaption}\item[{Integer}]{operatornumber}{}\end{DoxyParamCaption}) throws Illegal\+Argument\+Exception, Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception, Illegal\+Access\+Exception, Invocation\+Target\+Exception, No\+Such\+Method\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Generate a new state by advancing the next particle in the swarm. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em operatornumber} & unused for PSO (kept for API compatibility) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+the newly generated \doxylink{classproblem_1_1definition_1_1State}{State} produced by the advanced particle 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em Reflective\+Operation\+Exception} & forwarded from nested generator calls \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a06f6f7622b9ce32590eadbdf6bf962b5}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00157}{157}} del archivo \mbox{\hyperlink{ParticleSwarmOptimization_8java_source}{Particle\+Swarm\+Optimization.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \textcolor{comment}{//\ PSO}}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (getCountParticle()\ >=\ countRef)\ \{}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ setCountParticle(0);}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Advance\ the\ current\ particle\ and\ return\ its\ active\ state.}}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ listParticle.get(getCountParticle()).generate(1);}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ listParticle.get(getCountParticle()).getStateActual();}
+\DoxyCodeLine{00164\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00067}{count\+Ref}}, \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00116}{get\+Count\+Particle()}}, \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00023}{list\+Particle}} y \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00117}{set\+Count\+Particle()}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a4bab770550c31f12b11de2585086936a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a12c12b70f5c84e0f06027adbe4db63f1}\index{metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}!getCountCurrentIterPSO@{getCountCurrentIterPSO}}
+\index{getCountCurrentIterPSO@{getCountCurrentIterPSO}!metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}}
+\doxysubsubsection{\texorpdfstring{getCountCurrentIterPSO()}{getCountCurrentIterPSO()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a12c12b70f5c84e0f06027adbe4db63f1} 
+int metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+get\+Count\+Current\+Iter\+PSO (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00114}{114}} del archivo \mbox{\hyperlink{ParticleSwarmOptimization_8java_source}{Particle\+Swarm\+Optimization.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00114\ \{\ \textcolor{keywordflow}{return}\ countCurrentIterPSO;\ \}}
+
+\end{DoxyCode}
+
+
+Referenciado por \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00364}{update\+Reference()}} y \mbox{\hyperlink{Particle_8java_source_l00127}{metaheuristics.\+generators.\+Particle.\+Update\+Velocity()}}.
+
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a12c12b70f5c84e0f06027adbe4db63f1_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a9d7f0796fac17cb2d4fe19a9f9960ae4}\index{metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}!getCountParticle@{getCountParticle}}
+\index{getCountParticle@{getCountParticle}!metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}}
+\doxysubsubsection{\texorpdfstring{getCountParticle()}{getCountParticle()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a9d7f0796fac17cb2d4fe19a9f9960ae4} 
+int metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+get\+Count\+Particle (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00116}{116}} del archivo \mbox{\hyperlink{ParticleSwarmOptimization_8java_source}{Particle\+Swarm\+Optimization.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00116\ \{\ \textcolor{keywordflow}{return}\ countParticle;\ \}}
+
+\end{DoxyCode}
+
+
+Referenciado por \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00157}{generate()}}, \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00173}{inicialice\+LBest()}} y \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00364}{update\+Reference()}}.
+
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a9d7f0796fac17cb2d4fe19a9f9960ae4_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a8df765e1194a606605e5eefa5c136010}\index{metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}!getCountParticleBySwarm@{getCountParticleBySwarm}}
+\index{getCountParticleBySwarm@{getCountParticleBySwarm}!metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}}
+\doxysubsubsection{\texorpdfstring{getCountParticleBySwarm()}{getCountParticleBySwarm()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a8df765e1194a606605e5eefa5c136010} 
+int metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+get\+Count\+Particle\+By\+Swarm (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+get\+Count\+Particle\+By\+Swarm -\/ get the number of particles per swarm. 
+
+\begin{DoxyReturn}{Devuelve}
+the number of particles per swarm 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00054}{54}} del archivo \mbox{\hyperlink{ParticleSwarmOptimization_8java_source}{Particle\+Swarm\+Optimization.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ countParticleBySwarm;}
+\DoxyCodeLine{00056\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00049}{count\+Particle\+By\+Swarm}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a8a448ceb59a38faaa4d964e5c31510ee}\index{metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}!getCountRef@{getCountRef}}
+\index{getCountRef@{getCountRef}!metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}}
+\doxysubsubsection{\texorpdfstring{getCountRef()}{getCountRef()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a8a448ceb59a38faaa4d964e5c31510ee} 
+int metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+get\+Count\+Ref (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00344}{344}} del archivo \mbox{\hyperlink{ParticleSwarmOptimization_8java_source}{Particle\+Swarm\+Optimization.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00344\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00345\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ countRef;}
+\DoxyCodeLine{00346\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00067}{count\+Ref}}.
+
+
+
+Referenciado por \mbox{\hyperlink{RandomSearch_8java_source_l00066}{metaheuristics.\+generators.\+Random\+Search.\+generate()}}, \mbox{\hyperlink{Strategy_8java_source_l00307}{metaheurictics.\+strategy.\+Strategy.\+update()}} y \mbox{\hyperlink{UpdateParameter_8java_source_l00039}{local\+\_\+search.\+complement.\+Update\+Parameter.\+update\+Parameter()}}.
+
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a8a448ceb59a38faaa4d964e5c31510ee_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a52383fab169358bf7971311c7ed8f207}\index{metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}!getCoutSwarm@{getCoutSwarm}}
+\index{getCoutSwarm@{getCoutSwarm}!metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}}
+\doxysubsubsection{\texorpdfstring{getCoutSwarm()}{getCoutSwarm()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a52383fab169358bf7971311c7ed8f207} 
+int metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+get\+Cout\+Swarm (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+get\+Cout\+Swarm -\/ get the number of swarms. 
+
+\begin{DoxyReturn}{Devuelve}
+return the number of swarms 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00035}{35}} del archivo \mbox{\hyperlink{ParticleSwarmOptimization_8java_source}{Particle\+Swarm\+Optimization.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ coutSwarm;}
+\DoxyCodeLine{00037\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00030}{cout\+Swarm}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_abd10eb844626b27fb592eee9f353725c}\index{metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}!getGBest@{getGBest}}
+\index{getGBest@{getGBest}!metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}}
+\doxysubsubsection{\texorpdfstring{getGBest()}{getGBest()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_abd10eb844626b27fb592eee9f353725c} 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+get\+GBest (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00112}{112}} del archivo \mbox{\hyperlink{ParticleSwarmOptimization_8java_source}{Particle\+Swarm\+Optimization.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00112\ \{\ \textcolor{keywordflow}{return}\ gBest;\ \}}
+
+\end{DoxyCode}
+
+
+Referenciado por \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00364}{update\+Reference()}}.
+
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_abd10eb844626b27fb592eee9f353725c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a6f553e35a4929a626db8c0e3a038eaf5}\index{metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}!getGeneratorType@{getGeneratorType}}
+\index{getGeneratorType@{getGeneratorType}!metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}}
+\doxysubsubsection{\texorpdfstring{getGeneratorType()}{getGeneratorType()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a6f553e35a4929a626db8c0e3a038eaf5} 
+\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{Generator\+Type}} metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+get\+Generator\+Type (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the generator type associated with this instance. 
+
+\begin{DoxyReturn}{Devuelve}
+generator type (\doxylink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization}{Particle\+Swarm\+Optimization}) 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00331}{331}} del archivo \mbox{\hyperlink{ParticleSwarmOptimization_8java_source}{Particle\+Swarm\+Optimization.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00331\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00332\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ generatorType;}
+\DoxyCodeLine{00333\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00024}{generator\+Type}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a0e7dc7ca80c456a71f0fa4f660b33086}\index{metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}!getLBest@{getLBest}}
+\index{getLBest@{getLBest}!metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}}
+\doxysubsubsection{\texorpdfstring{getLBest()}{getLBest()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a0e7dc7ca80c456a71f0fa4f660b33086} 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\mbox{[}$\,$\mbox{]} metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+get\+LBest (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00080}{80}} del archivo \mbox{\hyperlink{ParticleSwarmOptimization_8java_source}{Particle\+Swarm\+Optimization.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (lBest\ ==\ \textcolor{keyword}{null})\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ State[0];}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ State[]\ copy\ =\ \textcolor{keyword}{new}\ State[lBest.length];}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ lBest.length;\ i++)\ \{}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ copy[i]\ =\ (lBest[i]\ ==\ \textcolor{keyword}{null})\ ?\ \textcolor{keyword}{null}\ :\ lBest[i].clone();}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ copy;}
+\DoxyCodeLine{00087\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_ac6bc6fa2d1b14049ea3a1a5f0c26b4b5}\index{metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}!getListCountBetterGender@{getListCountBetterGender}}
+\index{getListCountBetterGender@{getListCountBetterGender}!metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}}
+\doxysubsubsection{\texorpdfstring{getListCountBetterGender()}{getListCountBetterGender()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_ac6bc6fa2d1b14049ea3a1a5f0c26b4b5} 
+int\mbox{[}$\,$\mbox{]} metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+get\+List\+Count\+Better\+Gender (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return a defensive copy of the counters that track how many times a particle improved during a period. 
+
+\begin{DoxyReturn}{Devuelve}
+copy of list\+Count\+Better\+Gender 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_ac5bace71f51c16b611ede3ed53263473}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00506}{506}} del archivo \mbox{\hyperlink{ParticleSwarmOptimization_8java_source}{Particle\+Swarm\+Optimization.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00506\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00507\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (this.listCountBetterGender\ ==\ \textcolor{keyword}{null})\ ?\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[0]\ :\ Arrays.copyOf(this.listCountBetterGender,\ this.listCountBetterGender.length);}
+\DoxyCodeLine{00508\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00120}{list\+Count\+Better\+Gender}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a4015ce46c4c0b78825daa8a263a5ac56}\index{metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}!getListCountGender@{getListCountGender}}
+\index{getListCountGender@{getListCountGender}!metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}}
+\doxysubsubsection{\texorpdfstring{getListCountGender()}{getListCountGender()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a4015ce46c4c0b78825daa8a263a5ac56} 
+int\mbox{[}$\,$\mbox{]} metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+get\+List\+Count\+Gender (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return a defensive copy of usage counters per period. 
+
+\begin{DoxyReturn}{Devuelve}
+copy of list\+Count\+Gender 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_ac5d6d45ee8017fb87d80aa952edfc34e}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00516}{516}} del archivo \mbox{\hyperlink{ParticleSwarmOptimization_8java_source}{Particle\+Swarm\+Optimization.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00516\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00517\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (this.listCountGender\ ==\ \textcolor{keyword}{null})\ ?\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[0]\ :\ Arrays.copyOf(this.listCountGender,\ this.listCountGender.length);}
+\DoxyCodeLine{00518\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00121}{list\+Count\+Gender}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a754377431c7fa3de15b4e81fd7f79f6f}\index{metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}!getListParticle@{getListParticle}}
+\index{getListParticle@{getListParticle}!metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}}
+\doxysubsubsection{\texorpdfstring{getListParticle()}{getListParticle()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a754377431c7fa3de15b4e81fd7f79f6f} 
+List$<$ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle}{Particle}} $>$ metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+get\+List\+Particle (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the internal particle list. 
+
+\begin{DoxyReturn}{Devuelve}
+internal list of {\ttfamily \doxylink{classmetaheuristics_1_1generators_1_1Particle}{Particle}} instances 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00311}{311}} del archivo \mbox{\hyperlink{ParticleSwarmOptimization_8java_source}{Particle\+Swarm\+Optimization.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00311\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00312\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ listParticle;}
+\DoxyCodeLine{00313\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00023}{list\+Particle}}.
+
+
+
+Referenciado por \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00220}{get\+List\+State\+Ref()}} y \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00292}{get\+List\+State\+Reference()}}.
+
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a754377431c7fa3de15b4e81fd7f79f6f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a4a9da4ad8253a7521056fbb306a495a3}\index{metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}!getListStateRef@{getListStateRef}}
+\index{getListStateRef@{getListStateRef}!metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}}
+\doxysubsubsection{\texorpdfstring{getListStateRef()}{getListStateRef()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a4a9da4ad8253a7521056fbb306a495a3} 
+List$<$ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle}{Particle}} $>$ metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+get\+List\+State\+Ref (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Build or return the list of {\ttfamily \doxylink{classmetaheuristics_1_1generators_1_1Particle}{Particle}} instances used by PSO. 
+
+If an existing PSO generator instance has an initialized particle list, that list is reused. Otherwise, states from {\ttfamily \doxylink{classmetaheuristics_1_1generators_1_1RandomSearch_ab7be9a87a0cb3de1e17f14e79a0b32ce}{Random\+Search\#list\+State\+Reference}} are converted into particles.
+
+\begin{DoxyReturn}{Devuelve}
+list of particles representing the swarm population 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00220}{220}} del archivo \mbox{\hyperlink{ParticleSwarmOptimization_8java_source}{Particle\+Swarm\+Optimization.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ Boolean\ found\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ List<String>\ key\ =\ Strategy.getStrategy().getListKey();}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ count\ =\ 0;}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(RandomSearch.listStateReference.size()\ ==\ 0)\{}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this.setListParticle(\textcolor{keyword}{new}\ ArrayList<Particle>());}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}((found.equals(\textcolor{keyword}{false}))\ \&\&\ (Strategy.getStrategy().mapGenerators.size()\ >\ count))\{}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//recorrer\ la\ lista\ de\ generadores,\ hasta\ que\ encuentre\ el\ PSO}}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(key.get(count).equals(GeneratorType.ParticleSwarmOptimization.toString()))\{}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//creo\ el\ generador\ PSO,\ y\ si\ su\ lista\ de\ particulas\ esta\ vacia\ entonces\ es\ la\ primera\ vez\ que\ lo\ estoy\ creando,\ y\ cada\ estado\ lo\ convierto\ en\ particulas}}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GeneratorType\ keyGenerator\ =\ GeneratorType.valueOf(String.valueOf(key.get(count)));}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ParticleSwarmOptimization\ generator\ =\ (ParticleSwarmOptimization)\ Strategy.getStrategy().mapGenerators.get(keyGenerator);}
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(generator.getListParticle().isEmpty())\{}
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//convertir\ los\ estados\ en\ particulas}}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ RandomSearch.listStateReference.size();\ j++)\ \{}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//si\ el\ estado\ es\ creado\ con\ el\ generator\ RandomSearch\ entonces\ la\ convierto\ en\ particula}}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(getListParticle().size()\ !=\ countRef)\{}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ArrayList<Object>\ velocity\ =\ \textcolor{keyword}{new}\ ArrayList<Object>();}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ State\ stateAct\ =\ (State)\ RandomSearch.listStateReference.get(j).getCopy();}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ stateAct.setCode(\textcolor{keyword}{new}\ ArrayList<Object>(RandomSearch.listStateReference.get(j).getCode()));}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ stateAct.setEvaluation(RandomSearch.listStateReference.get(j).getEvaluation());}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ State\ statePBest\ =\ (State)\ RandomSearch.listStateReference.get(j).getCopy();}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ statePBest.setCode(\textcolor{keyword}{new}\ ArrayList<Object>(RandomSearch.listStateReference.get(j).getCode()));}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ statePBest.setEvaluation(RandomSearch.listStateReference.get(j).getEvaluation());}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Particle\ particle\ =\ \textcolor{keyword}{new}\ Particle(stateAct,\ statePBest,\ velocity);}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ getListParticle().add(particle);}
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \ }
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ setListParticle(generator.getListStateReference());}
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ found\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ \ \ \ \ count++;}
+\DoxyCodeLine{00258\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ getListParticle();}
+\DoxyCodeLine{00260\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00067}{count\+Ref}}, \mbox{\hyperlink{Strategy_8java_source_l00421}{metaheurictics.\+strategy.\+Strategy.\+get\+List\+Key()}}, \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00311}{get\+List\+Particle()}}, \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00292}{get\+List\+State\+Reference()}}, \mbox{\hyperlink{Strategy_8java_source_l00080}{metaheurictics.\+strategy.\+Strategy.\+get\+Strategy()}}, \mbox{\hyperlink{RandomSearch_8java_source_l00036}{metaheuristics.\+generators.\+Random\+Search.\+list\+State\+Reference}}, \mbox{\hyperlink{Strategy_8java_source_l00038}{metaheurictics.\+strategy.\+Strategy.\+map\+Generators}}, \mbox{\hyperlink{GeneratorType_8java_source_l00008}{metaheuristics.\+generators.\+Generator\+Type.\+Particle\+Swarm\+Optimization}}, \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00132}{Particle\+Swarm\+Optimization()}}, \mbox{\hyperlink{State_8java_source_l00077}{problem.\+definition.\+State.\+set\+Code()}}, \mbox{\hyperlink{State_8java_source_l00113}{problem.\+definition.\+State.\+set\+Evaluation()}} y \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00321}{set\+List\+Particle()}}.
+
+
+
+Referenciado por \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00132}{Particle\+Swarm\+Optimization()}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a4a9da4ad8253a7521056fbb306a495a3_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a4a9da4ad8253a7521056fbb306a495a3_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a82c7ce280bc0e520f17466e4c147bea4}\index{metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}!getListStateReference@{getListStateReference}}
+\index{getListStateReference@{getListStateReference}!metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}}
+\doxysubsubsection{\texorpdfstring{getListStateReference()}{getListStateReference()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a82c7ce280bc0e520f17466e4c147bea4} 
+List$<$ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle}{Particle}} $>$ metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+get\+List\+State\+Reference (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return the current list of particles used internally. 
+
+The returned list is the internal storage reference; callers that need mutability isolation should copy it.
+
+\begin{DoxyReturn}{Devuelve}
+internal list of particles 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00292}{292}} del archivo \mbox{\hyperlink{ParticleSwarmOptimization_8java_source}{Particle\+Swarm\+Optimization.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00292\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00293\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this.getListParticle();}
+\DoxyCodeLine{00294\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00311}{get\+List\+Particle()}}.
+
+
+
+Referenciado por \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00220}{get\+List\+State\+Ref()}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a82c7ce280bc0e520f17466e4c147bea4_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a82c7ce280bc0e520f17466e4c147bea4_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a2764712d1d2ba2259d0562f78e669977}\index{metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}!getReference@{getReference}}
+\index{getReference@{getReference}!metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}}
+\doxysubsubsection{\texorpdfstring{getReference()}{getReference()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a2764712d1d2ba2259d0562f78e669977} 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+get\+Reference (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return the single reference state used by single-\/reference generators. 
+
+PSO manages multiple references (per-\/swarm and global), so this method returns {\ttfamily null} by design in the current implementation.
+
+\begin{DoxyReturn}{Devuelve}
+null in this PSO implementation 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_aa56dd45a45776f6023b9f74179cc6384}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00207}{207}} del archivo \mbox{\hyperlink{ParticleSwarmOptimization_8java_source}{Particle\+Swarm\+Optimization.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00209\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a64d44fa65b23051d69ab0d4d14e0f162}\index{metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}!getReferenceList@{getReferenceList}}
+\index{getReferenceList@{getReferenceList}!metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}}
+\doxysubsubsection{\texorpdfstring{getReferenceList()}{getReferenceList()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a64d44fa65b23051d69ab0d4d14e0f162} 
+List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+get\+Reference\+List (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return a copy of the list used as reference solutions by PSO. 
+
+\begin{DoxyReturn}{Devuelve}
+copy of internal reference list 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_ae168237b306de55fe4d6dfda75c7cd13}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00448}{448}} del archivo \mbox{\hyperlink{ParticleSwarmOptimization_8java_source}{Particle\+Swarm\+Optimization.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00448\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00449\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ ArrayList<State>(this.listStateReference);}
+\DoxyCodeLine{00450\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00022}{list\+State\+Reference}}.
+
+
+
+Referenciado por \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00364}{update\+Reference()}}.
+
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a64d44fa65b23051d69ab0d4d14e0f162_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a464fc4922d70868c61bb905e6caa3c8e}\index{metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}!getSonList@{getSonList}}
+\index{getSonList@{getSonList}!metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}}
+\doxysubsubsection{\texorpdfstring{getSonList()}{getSonList()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a464fc4922d70868c61bb905e6caa3c8e} 
+List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+get\+Son\+List (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return the currently generated offspring/state list for this generator. 
+
+PSO does not maintain a son list in the classical sense and thus returns {\ttfamily null}.
+
+\begin{DoxyReturn}{Devuelve}
+null for PSO 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_aee09d724c1b3040e7a7ad0b64e341c96}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00460}{460}} del archivo \mbox{\hyperlink{ParticleSwarmOptimization_8java_source}{Particle\+Swarm\+Optimization.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00460\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00461\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00462\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a4e9ec463f3058721220c4c28c99a42e7}\index{metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}!getStateReferencePSO@{getStateReferencePSO}}
+\index{getStateReferencePSO@{getStateReferencePSO}!metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}}
+\doxysubsubsection{\texorpdfstring{getStateReferencePSO()}{getStateReferencePSO()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a4e9ec463f3058721220c4c28c99a42e7} 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+get\+State\+Reference\+PSO (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return the PSO-\/specific reference state used by some helpers. 
+
+\begin{DoxyReturn}{Devuelve}
+stored state\+Reference\+PSO (may be null) 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00268}{268}} del archivo \mbox{\hyperlink{ParticleSwarmOptimization_8java_source}{Particle\+Swarm\+Optimization.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ stateReferencePSO;}
+\DoxyCodeLine{00270\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00021}{state\+Reference\+PSO}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a6e3b617f60a8f8ff0d3f3e5e000996fb}\index{metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}!getTrace@{getTrace}}
+\index{getTrace@{getTrace}!metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}}
+\doxysubsubsection{\texorpdfstring{getTrace()}{getTrace()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a6e3b617f60a8f8ff0d3f3e5e000996fb} 
+float\mbox{[}$\,$\mbox{]} metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+get\+Trace (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return a copy of the internal trace array used for diagnostic information (weights over time, etc.). 
+
+\begin{DoxyReturn}{Devuelve}
+copy of list\+Trace 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a75d7f30dd2cb3f92475db8525ac7c6e7}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00527}{527}} del archivo \mbox{\hyperlink{ParticleSwarmOptimization_8java_source}{Particle\+Swarm\+Optimization.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00527\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00528\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (this.listTrace\ ==\ \textcolor{keyword}{null})\ ?\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{float}[0]\ :\ Arrays.copyOf(this.listTrace,\ this.listTrace.length);}
+\DoxyCodeLine{00529\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00122}{list\+Trace}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a71987dfaef5ebd055f958f9ca186953f}\index{metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}!getType@{getType}}
+\index{getType@{getType}!metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a71987dfaef5ebd055f958f9ca186953f} 
+\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{Generator\+Type}} metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+get\+Type (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return the concrete generator type of this generator. 
+
+\begin{DoxyReturn}{Devuelve}
+the {\ttfamily \doxylink{enummetaheuristics_1_1generators_1_1GeneratorType}{Generator\+Type}} for this generator 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a5a123306b43c42d28cd1d6e17f8067a5}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00438}{438}} del archivo \mbox{\hyperlink{ParticleSwarmOptimization_8java_source}{Particle\+Swarm\+Optimization.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00438\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00439\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this.generatorType;}
+\DoxyCodeLine{00440\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00024}{generator\+Type}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_aec94a0a6dc5331c35a59a3be0078be9f}\index{metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}!getWeight@{getWeight}}
+\index{getWeight@{getWeight}!metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}}
+\doxysubsubsection{\texorpdfstring{getWeight()}{getWeight()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_aec94a0a6dc5331c35a59a3be0078be9f} 
+float metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+get\+Weight (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the current inertia weight used in PSO. 
+
+\begin{DoxyReturn}{Devuelve}
+current weight value 
+\end{DoxyReturn}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a64f2b824081c7af593bf9aa8eabf2c9e}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00495}{495}} del archivo \mbox{\hyperlink{ParticleSwarmOptimization_8java_source}{Particle\+Swarm\+Optimization.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00495\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00496\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ this.weight;}
+\DoxyCodeLine{00497\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00068}{weight}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a2b35916a7fef7ecc1ae9c6f4c571a6d1}\index{metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}!inicialiceLBest@{inicialiceLBest}}
+\index{inicialiceLBest@{inicialiceLBest}!metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}}
+\doxysubsubsection{\texorpdfstring{inicialiceLBest()}{inicialiceLBest()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a2b35916a7fef7ecc1ae9c6f4c571a6d1} 
+void metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+inicialice\+LBest (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initialize the local best {\ttfamily l\+Best} array for each swarm. 
+
+The method inspects particle personal-\/bests within each swarm and selects the best among them according to the problem\textquotesingle{}s objective type (maximize or minimize). 
+
+Definición en la línea \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00173}{173}} del archivo \mbox{\hyperlink{ParticleSwarmOptimization_8java_source}{Particle\+Swarm\+Optimization.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ coutSwarm;\ j++)\ \{}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ pick\ initial\ reference\ from\ the\ particle's\ personal\ best}}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \ \ \ \ State\ reference\ =\ listParticle.get(getCountParticle()).getStatePBest();}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ iterator\ =\ countParticleBySwarm\ +\ getCountParticle();}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(Strategy.getStrategy().getProblem().getTypeProblem().equals(ProblemType.Maximizar))\{}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ countParticle;\ i\ <\ iterator;\ i++)\ \{}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (listParticle.get(i).getStatePBest().getEvaluation().get(0)\ >\ reference.getEvaluation().get(0))}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ reference\ =\ listParticle.get(i).getStatePBest();}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ setCountParticle(getCountParticle()\ +\ 1);}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ countParticle;\ i\ <\ iterator;\ i++)\ \{}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (listParticle.get(i).getStatePBest().getEvaluation().get(0)\ <\ reference.getEvaluation().get(0))}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ reference\ =\ listParticle.get(i).getStatePBest();}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ setCountParticle(getCountParticle()\ +\ 1);}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ lBest[j]\ =\ reference;}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00195\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00049}{count\+Particle\+By\+Swarm}}, \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00030}{cout\+Swarm}}, \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00116}{get\+Count\+Particle()}}, \mbox{\hyperlink{State_8java_source_l00104}{problem.\+definition.\+State.\+get\+Evaluation()}}, \mbox{\hyperlink{Strategy_8java_source_l00405}{metaheurictics.\+strategy.\+Strategy.\+get\+Problem()}}, \mbox{\hyperlink{Strategy_8java_source_l00080}{metaheurictics.\+strategy.\+Strategy.\+get\+Strategy()}}, \mbox{\hyperlink{Problem_8java_source_l00097}{problem.\+definition.\+Problem.\+get\+Type\+Problem()}}, \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00023}{list\+Particle}}, \mbox{\hyperlink{Problem_8java_source_l00029}{problem.\+definition.\+Problem.\+Problem\+Type.\+Maximizar}} y \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00117}{set\+Count\+Particle()}}.
+
+
+
+Referenciado por \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00132}{Particle\+Swarm\+Optimization()}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a2b35916a7fef7ecc1ae9c6f4c571a6d1_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a2b35916a7fef7ecc1ae9c6f4c571a6d1_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a5a73eed9252828f08c61e6f6f4d82ac6}\index{metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}!setCountCurrentIterPSO@{setCountCurrentIterPSO}}
+\index{setCountCurrentIterPSO@{setCountCurrentIterPSO}!metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}}
+\doxysubsubsection{\texorpdfstring{setCountCurrentIterPSO()}{setCountCurrentIterPSO()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a5a73eed9252828f08c61e6f6f4d82ac6} 
+void metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+set\+Count\+Current\+Iter\+PSO (\begin{DoxyParamCaption}\item[{int}]{v}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00115}{115}} del archivo \mbox{\hyperlink{ParticleSwarmOptimization_8java_source}{Particle\+Swarm\+Optimization.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00115\ \{\ countCurrentIterPSO\ =\ v;\ \}}
+
+\end{DoxyCode}
+
+
+Referenciado por \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00132}{Particle\+Swarm\+Optimization()}} y \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00364}{update\+Reference()}}.
+
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a5a73eed9252828f08c61e6f6f4d82ac6_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_aa554d5dbe993b4817d3895806e7dd063}\index{metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}!setCountParticle@{setCountParticle}}
+\index{setCountParticle@{setCountParticle}!metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}}
+\doxysubsubsection{\texorpdfstring{setCountParticle()}{setCountParticle()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_aa554d5dbe993b4817d3895806e7dd063} 
+void metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+set\+Count\+Particle (\begin{DoxyParamCaption}\item[{int}]{v}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00117}{117}} del archivo \mbox{\hyperlink{ParticleSwarmOptimization_8java_source}{Particle\+Swarm\+Optimization.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00117\ \{\ countParticle\ =\ v;\ \}}
+
+\end{DoxyCode}
+
+
+Referenciado por \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00157}{generate()}}, \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00173}{inicialice\+LBest()}}, \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00132}{Particle\+Swarm\+Optimization()}} y \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00364}{update\+Reference()}}.
+
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_aa554d5dbe993b4817d3895806e7dd063_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a4a7e8784ece74feb38646a5535f13699}\index{metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}!setCountParticleBySwarm@{setCountParticleBySwarm}}
+\index{setCountParticleBySwarm@{setCountParticleBySwarm}!metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}}
+\doxysubsubsection{\texorpdfstring{setCountParticleBySwarm()}{setCountParticleBySwarm()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a4a7e8784ece74feb38646a5535f13699} 
+void metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+set\+Count\+Particle\+By\+Swarm (\begin{DoxyParamCaption}\item[{int}]{v}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+set\+Count\+Particle\+By\+Swarm -\/ set the number of particles per swarm. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em v} & the number of particles per swarm to set \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00061}{61}} del archivo \mbox{\hyperlink{ParticleSwarmOptimization_8java_source}{Particle\+Swarm\+Optimization.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (v\ <\ 0)\ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ IllegalArgumentException(\textcolor{stringliteral}{"{}countParticleBySwarm\ must\ be\ >=\ 0"{}});}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ countParticleBySwarm\ =\ v;}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ keep\ dependent\ countRef\ in\ sync}}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ setCountRef(coutSwarm\ *\ countParticleBySwarm);}
+\DoxyCodeLine{00066\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00049}{count\+Particle\+By\+Swarm}}, \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00030}{cout\+Swarm}} y \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00348}{set\+Count\+Ref()}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a4a7e8784ece74feb38646a5535f13699_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a443250bb3b7fb34f1a2a3ba062cb3311}\index{metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}!setCountRef@{setCountRef}}
+\index{setCountRef@{setCountRef}!metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}}
+\doxysubsubsection{\texorpdfstring{setCountRef()}{setCountRef()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a443250bb3b7fb34f1a2a3ba062cb3311} 
+void metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+set\+Count\+Ref (\begin{DoxyParamCaption}\item[{int}]{count\+Ref}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00348}{348}} del archivo \mbox{\hyperlink{ParticleSwarmOptimization_8java_source}{Particle\+Swarm\+Optimization.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00348\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00349\ \ \ \ \ \ \ \ \ ParticleSwarmOptimization.countRef\ =\ countRef;}
+\DoxyCodeLine{00350\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00067}{count\+Ref}}.
+
+
+
+Referenciado por \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00061}{set\+Count\+Particle\+By\+Swarm()}} y \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00042}{set\+Cout\+Swarm()}}.
+
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a443250bb3b7fb34f1a2a3ba062cb3311_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a0b98342174ad9b19e199a0cf1c85950e}\index{metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}!setCoutSwarm@{setCoutSwarm}}
+\index{setCoutSwarm@{setCoutSwarm}!metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}}
+\doxysubsubsection{\texorpdfstring{setCoutSwarm()}{setCoutSwarm()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a0b98342174ad9b19e199a0cf1c85950e} 
+void metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+set\+Cout\+Swarm (\begin{DoxyParamCaption}\item[{int}]{v}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+set\+Cout\+Swarm -\/ set the number of swarms. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em v} & the number of swarms to set \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00042}{42}} del archivo \mbox{\hyperlink{ParticleSwarmOptimization_8java_source}{Particle\+Swarm\+Optimization.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (v\ <\ 0)\ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ IllegalArgumentException(\textcolor{stringliteral}{"{}coutSwarm\ must\ be\ >=\ 0"{}});}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ coutSwarm\ =\ v;}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ keep\ dependent\ countRef\ in\ sync}}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ setCountRef(coutSwarm\ *\ countParticleBySwarm);}
+\DoxyCodeLine{00047\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00049}{count\+Particle\+By\+Swarm}}, \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00030}{cout\+Swarm}} y \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00348}{set\+Count\+Ref()}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a0b98342174ad9b19e199a0cf1c85950e_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a842a4536ebfc5c89c2e21286fa70ed5e}\index{metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}!setGBest@{setGBest}}
+\index{setGBest@{setGBest}!metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}}
+\doxysubsubsection{\texorpdfstring{setGBest()}{setGBest()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a842a4536ebfc5c89c2e21286fa70ed5e} 
+void metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+set\+GBest (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}}]{s}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00113}{113}} del archivo \mbox{\hyperlink{ParticleSwarmOptimization_8java_source}{Particle\+Swarm\+Optimization.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00113\ \{\ gBest\ =\ s;\ \}}
+
+\end{DoxyCode}
+
+
+Referenciado por \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00132}{Particle\+Swarm\+Optimization()}} y \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00364}{update\+Reference()}}.
+
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a842a4536ebfc5c89c2e21286fa70ed5e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a5855f4db41982beb1b0ef27a4b44742d}\index{metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}!setGeneratorType@{setGeneratorType}}
+\index{setGeneratorType@{setGeneratorType}!metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}}
+\doxysubsubsection{\texorpdfstring{setGeneratorType()}{setGeneratorType()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a5855f4db41982beb1b0ef27a4b44742d} 
+void metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+set\+Generator\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{Generator\+Type}}}]{generator\+Type}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the generator type for this instance. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em generator\+Type} & generator type to set \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00340}{340}} del archivo \mbox{\hyperlink{ParticleSwarmOptimization_8java_source}{Particle\+Swarm\+Optimization.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00340\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00341\ \ \ \ \ \ \ \ \ this.generatorType\ =\ generatorType;}
+\DoxyCodeLine{00342\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00024}{generator\+Type}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_aa8fc5294266abb5704de5fb3b70aa0e2}\index{metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}!setInitialReference@{setInitialReference}}
+\index{setInitialReference@{setInitialReference}!metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}}
+\doxysubsubsection{\texorpdfstring{setInitialReference()}{setInitialReference()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_aa8fc5294266abb5704de5fb3b70aa0e2} 
+void metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+set\+Initial\+Reference (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}}]{state\+Initial\+Ref}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the initial reference(s) for the generator. 
+
+PSO uses swarm references and therefore this method is intentionally left as a no-\/op or to be implemented by callers that bridge different data.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em state\+Initial\+Ref} & initial state to use as a reference \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_aa9f7c4c983705f843b8fcc81e4aa8ba4}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00428}{428}} del archivo \mbox{\hyperlink{ParticleSwarmOptimization_8java_source}{Particle\+Swarm\+Optimization.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00428\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00429\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Intentionally\ left\ blank\ for\ PSO\ (no\ single\ initial\ reference)}}
+\DoxyCodeLine{00430\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a9452e8ce9fd5587e4bac1eadf10addbb}\index{metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}!setLBest@{setLBest}}
+\index{setLBest@{setLBest}!metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}}
+\doxysubsubsection{\texorpdfstring{setLBest()}{setLBest()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a9452e8ce9fd5587e4bac1eadf10addbb} 
+void metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+set\+LBest (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\mbox{[}$\,$\mbox{]}}]{arr}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+set\+LBest -\/ set the local best array. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em arr} & \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00092}{92}} del archivo \mbox{\hyperlink{ParticleSwarmOptimization_8java_source}{Particle\+Swarm\+Optimization.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (arr\ ==\ \textcolor{keyword}{null})\ \{}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ lBest\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ lBest\ =\ \textcolor{keyword}{new}\ State[arr.length];}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ arr.length;\ i++)\ \{}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ lBest[i]\ =\ (arr[i]\ ==\ \textcolor{keyword}{null})\ ?\ \textcolor{keyword}{null}\ :\ arr[i].clone();}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00101\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{State_8java_source_l00142}{problem.\+definition.\+State.\+clone()}}.
+
+
+
+Referenciado por \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00132}{Particle\+Swarm\+Optimization()}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a9452e8ce9fd5587e4bac1eadf10addbb_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a9452e8ce9fd5587e4bac1eadf10addbb_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a2d0fa32b6e465a69309d1061aa8c63f6}\index{metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}!setLBestAt@{setLBestAt}}
+\index{setLBestAt@{setLBestAt}!metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}}
+\doxysubsubsection{\texorpdfstring{setLBestAt()}{setLBestAt()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a2d0fa32b6e465a69309d1061aa8c63f6} 
+void metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+set\+LBest\+At (\begin{DoxyParamCaption}\item[{int}]{idx}{, }\item[{\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}}]{s}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+set\+LBest -\/ set the local best at index. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em idx} & \\
+\hline
+{\em s} & \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00107}{107}} del archivo \mbox{\hyperlink{ParticleSwarmOptimization_8java_source}{Particle\+Swarm\+Optimization.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (lBest\ ==\ \textcolor{keyword}{null})\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (idx\ <\ 0\ ||\ idx\ >=\ lBest.length)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ lBest[idx]\ =\ (s\ ==\ \textcolor{keyword}{null})\ ?\ \textcolor{keyword}{null}\ :\ s.clone();}
+\DoxyCodeLine{00111\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{State_8java_source_l00142}{problem.\+definition.\+State.\+clone()}}.
+
+
+
+Referenciado por \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00364}{update\+Reference()}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a2d0fa32b6e465a69309d1061aa8c63f6_cgraph}
+\end{center}
+\end{figure}
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a2d0fa32b6e465a69309d1061aa8c63f6_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a8e0fe5cf94eb84b09d75c6e270bf60de}\index{metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}!setListParticle@{setListParticle}}
+\index{setListParticle@{setListParticle}!metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}}
+\doxysubsubsection{\texorpdfstring{setListParticle()}{setListParticle()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a8e0fe5cf94eb84b09d75c6e270bf60de} 
+List$<$ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle}{Particle}} $>$ metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+set\+List\+Particle (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle}{Particle}} $>$}]{list\+Particle}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxylink{classevolutionary__algorithms_1_1complement_1_1Replace}{Replace} the internal particle list and return the newly set list. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em list\+Particle} & list to install \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+the installed list 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00321}{321}} del archivo \mbox{\hyperlink{ParticleSwarmOptimization_8java_source}{Particle\+Swarm\+Optimization.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00321\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00322\ \ \ \ \ \ \ \ \ this.listParticle\ =\ listParticle;}
+\DoxyCodeLine{00323\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ listParticle;}
+\DoxyCodeLine{00324\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00023}{list\+Particle}}.
+
+
+
+Referenciado por \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00220}{get\+List\+State\+Ref()}} y \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00132}{Particle\+Swarm\+Optimization()}}.
+
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a8e0fe5cf94eb84b09d75c6e270bf60de_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a672badc4745b5b9327dcc920fb195c8a}\index{metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}!setListStateReference@{setListStateReference}}
+\index{setListStateReference@{setListStateReference}!metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}}
+\doxysubsubsection{\texorpdfstring{setListStateReference()}{setListStateReference()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a672badc4745b5b9327dcc920fb195c8a} 
+void metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+set\+List\+State\+Reference (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$}]{list\+State\+Reference}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxylink{classevolutionary__algorithms_1_1complement_1_1Replace}{Replace} the internal state reference list. 
+
+Provided for API compatibility; most callers should use {\ttfamily \doxylink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a8e0fe5cf94eb84b09d75c6e270bf60de}{set\+List\+Particle}} instead.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em list\+State\+Reference} & new list of states \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00302}{302}} del archivo \mbox{\hyperlink{ParticleSwarmOptimization_8java_source}{Particle\+Swarm\+Optimization.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00303\ \ \ \ \ \ \ \ \ this.listStateReference\ =\ listStateReference;}
+\DoxyCodeLine{00304\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00022}{list\+State\+Reference}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_af0007f3368bc26e13509697f13b8bd8f}\index{metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}!setStateReferencePSO@{setStateReferencePSO}}
+\index{setStateReferencePSO@{setStateReferencePSO}!metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}}
+\doxysubsubsection{\texorpdfstring{setStateReferencePSO()}{setStateReferencePSO()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_af0007f3368bc26e13509697f13b8bd8f} 
+void metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+set\+State\+Reference\+PSO (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}}]{state\+Reference\+PSO}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the PSO-\/specific reference state. 
+
+A defensive copy is not performed because {\ttfamily \doxylink{classproblem_1_1definition_1_1State}{State}} provides its own copy/clone methods; callers should clone if they want isolation.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em state\+Reference\+PSO} & the state to store as PSO reference \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00280}{280}} del archivo \mbox{\hyperlink{ParticleSwarmOptimization_8java_source}{Particle\+Swarm\+Optimization.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00281\ \ \ \ \ \ \ \ \ this.stateReferencePSO\ =\ stateReferencePSO;}
+\DoxyCodeLine{00282\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00021}{state\+Reference\+PSO}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_af200d1e3621dea6a34960f8ffbbefa8c}\index{metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}!setWeight@{setWeight}}
+\index{setWeight@{setWeight}!metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}}
+\doxysubsubsection{\texorpdfstring{setWeight()}{setWeight()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_af200d1e3621dea6a34960f8ffbbefa8c} 
+void metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+set\+Weight (\begin{DoxyParamCaption}\item[{float}]{weight}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the internal inertia weight used by particle velocity updates. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em weight} & inertia weight value \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a8b3c66b57b4c739666989fbce667eb40}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00485}{485}} del archivo \mbox{\hyperlink{ParticleSwarmOptimization_8java_source}{Particle\+Swarm\+Optimization.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00485\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00486\ \ \ \ \ \ \ \ \ this.weight\ =\ weight;}
+\DoxyCodeLine{00487\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00068}{weight}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_abc5a8dcdf9ff7418f4084002e383b860}\index{metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}!updateReference@{updateReference}}
+\index{updateReference@{updateReference}!metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}}
+\doxysubsubsection{\texorpdfstring{updateReference()}{updateReference()}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_abc5a8dcdf9ff7418f4084002e383b860} 
+void metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+update\+Reference (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}}]{state\+Candidate}{, }\item[{Integer}]{count\+Iterations\+Current}{}\end{DoxyParamCaption}) throws Illegal\+Argument\+Exception,Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception,Illegal\+Access\+Exception, Invocation\+Target\+Exception,No\+Such\+Method\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Update the PSO internal references based on a newly generated candidate state. 
+
+This method updates the particle personal-\/bests and possibly the local/global bests depending on the objective.
+
+
+\begin{DoxyParams}{Parámetros}
+{\em state\+Candidate} & newly generated candidate state \\
+\hline
+{\em count\+Iterations\+Current} & current iteration counter \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em Reflective\+Operation\+Exception} & forwarded from nested calls \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplementado de \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_aa1c5878953f2111221b21cb9b1e6cc9f}{metaheuristics.\+generators.\+Generator}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00364}{364}} del archivo \mbox{\hyperlink{ParticleSwarmOptimization_8java_source}{Particle\+Swarm\+Optimization.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00364\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00365\ \ \ \ \ \ \ \ \ Particle\ particle\ =\ listParticle.get(countParticle);}
+\DoxyCodeLine{00366\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ swarm\ =\ countParticle/countParticleBySwarm;}
+\DoxyCodeLine{00367\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(Strategy.getStrategy().getProblem().getTypeProblem().equals(ProblemType.Maximizar))\{}
+\DoxyCodeLine{00368\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((lBest[swarm]).getEvaluation().\textcolor{keyword}{get}(0)\ <\ particle.getStatePBest().getEvaluation().get(0))\{}
+\DoxyCodeLine{00369\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ setLBestAt(swarm,\ particle.getStatePBest());}
+\DoxyCodeLine{00370\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(lBest[swarm].getEvaluation().\textcolor{keyword}{get}(0)\ >\ getReferenceList().\textcolor{keyword}{get}(getReferenceList().size()\ -\/\ 1).getEvaluation().\textcolor{keyword}{get}(0))\{}
+\DoxyCodeLine{00371\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ State\ tmp\ =\ \textcolor{keyword}{new}\ State();}
+\DoxyCodeLine{00372\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tmp.setCode(\textcolor{keyword}{new}\ ArrayList<Object>(lBest[swarm].getCode()));}
+\DoxyCodeLine{00373\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tmp.setEvaluation(lBest[swarm].getEvaluation());}
+\DoxyCodeLine{00374\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tmp.setTypeGenerator(lBest[swarm].getTypeGenerator());}
+\DoxyCodeLine{00375\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ setGBest(tmp);}
+\DoxyCodeLine{00376\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00377\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00378\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00379\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00380\ \ \ \ \ \ \ \ \ \ \ \ \ particle.updateReference(stateCandidate,\ countIterationsCurrent);}
+\DoxyCodeLine{00381\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((lBest[swarm]).getEvaluation().\textcolor{keyword}{get}(0)\ >\ particle.getStatePBest().getEvaluation().get(0))\{}
+\DoxyCodeLine{00382\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ setLBestAt(swarm,\ particle.getStatePBest());}
+\DoxyCodeLine{00383\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(lBest[swarm].getEvaluation().\textcolor{keyword}{get}(0)\ <\ getReferenceList().\textcolor{keyword}{get}(getReferenceList().size()\ -\/\ 1).getEvaluation().\textcolor{keyword}{get}(0))\{}
+\DoxyCodeLine{00384\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ State\ tmp\ =\ \textcolor{keyword}{new}\ State();}
+\DoxyCodeLine{00385\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tmp.setCode(\textcolor{keyword}{new}\ ArrayList<Object>(lBest[swarm].getCode()));}
+\DoxyCodeLine{00386\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tmp.setEvaluation(lBest[swarm].getEvaluation());}
+\DoxyCodeLine{00387\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tmp.setTypeGenerator(lBest[swarm].getTypeGenerator());}
+\DoxyCodeLine{00388\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ setGBest(tmp);}
+\DoxyCodeLine{00389\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00390\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00391\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00392\ \ \ \ \ listStateReference.add(getGBest());}
+\DoxyCodeLine{00393\ \ \ \ \ setCountParticle(getCountParticle()\ +\ 1);}
+\DoxyCodeLine{00394\ \ \ \ \ setCountCurrentIterPSO(getCountCurrentIterPSO()\ +\ 1);}
+\DoxyCodeLine{00395\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00049}{count\+Particle\+By\+Swarm}}, \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00114}{get\+Count\+Current\+Iter\+PSO()}}, \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00116}{get\+Count\+Particle()}}, \mbox{\hyperlink{State_8java_source_l00104}{problem.\+definition.\+State.\+get\+Evaluation()}}, \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00112}{get\+GBest()}}, \mbox{\hyperlink{Strategy_8java_source_l00405}{metaheurictics.\+strategy.\+Strategy.\+get\+Problem()}}, \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00448}{get\+Reference\+List()}}, \mbox{\hyperlink{Particle_8java_source_l00066}{metaheuristics.\+generators.\+Particle.\+get\+State\+PBest()}}, \mbox{\hyperlink{Strategy_8java_source_l00080}{metaheurictics.\+strategy.\+Strategy.\+get\+Strategy()}}, \mbox{\hyperlink{Problem_8java_source_l00097}{problem.\+definition.\+Problem.\+get\+Type\+Problem()}}, \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00023}{list\+Particle}}, \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00022}{list\+State\+Reference}}, \mbox{\hyperlink{Problem_8java_source_l00029}{problem.\+definition.\+Problem.\+Problem\+Type.\+Maximizar}}, \mbox{\hyperlink{State_8java_source_l00077}{problem.\+definition.\+State.\+set\+Code()}}, \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00115}{set\+Count\+Current\+Iter\+PSO()}}, \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00117}{set\+Count\+Particle()}}, \mbox{\hyperlink{State_8java_source_l00113}{problem.\+definition.\+State.\+set\+Evaluation()}}, \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00113}{set\+GBest()}}, \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00107}{set\+LBest\+At()}}, \mbox{\hyperlink{State_8java_source_l00094}{problem.\+definition.\+State.\+set\+Type\+Generator()}} y \mbox{\hyperlink{Particle_8java_source_l00203}{metaheuristics.\+generators.\+Particle.\+update\+Reference()}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_abc5a8dcdf9ff7418f4084002e383b860_cgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-variable-members}
+\Hypertarget{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_doc-variable-members}
+\doxysubsection{Documentación de datos miembro}
+\Hypertarget{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a45a990b27b172338c10931d135b88b7f}\index{metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}!binary@{binary}}
+\index{binary@{binary}!metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}}
+\doxysubsubsection{\texorpdfstring{binary}{binary}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a45a990b27b172338c10931d135b88b7f} 
+final boolean metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+binary = false\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00073}{73}} del archivo \mbox{\hyperlink{ParticleSwarmOptimization_8java_source}{Particle\+Swarm\+Optimization.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{Particle_8java_source_l00164}{metaheuristics.\+generators.\+Particle.\+Update\+Code()}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_aeac78dea881f9fd22d59194fb42efd79}\index{metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}!countParticleBySwarm@{countParticleBySwarm}}
+\index{countParticleBySwarm@{countParticleBySwarm}!metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}}
+\doxysubsubsection{\texorpdfstring{countParticleBySwarm}{countParticleBySwarm}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_aeac78dea881f9fd22d59194fb42efd79} 
+int metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+count\+Particle\+By\+Swarm = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00049}{49}} del archivo \mbox{\hyperlink{ParticleSwarmOptimization_8java_source}{Particle\+Swarm\+Optimization.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00054}{get\+Count\+Particle\+By\+Swarm()}}, \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00173}{inicialice\+LBest()}}, \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00061}{set\+Count\+Particle\+By\+Swarm()}}, \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00042}{set\+Cout\+Swarm()}} y \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00364}{update\+Reference()}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_ac7ebf8d9c7ccd1f23c38eea79ea50ad4}\index{metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}!countRef@{countRef}}
+\index{countRef@{countRef}!metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}}
+\doxysubsubsection{\texorpdfstring{countRef}{countRef}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_ac7ebf8d9c7ccd1f23c38eea79ea50ad4} 
+int metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+count\+Ref = \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_ac2df5a730f09652ea6303fde195de727}{cout\+Swarm}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_aeac78dea881f9fd22d59194fb42efd79}{count\+Particle\+By\+Swarm}}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00067}{67}} del archivo \mbox{\hyperlink{ParticleSwarmOptimization_8java_source}{Particle\+Swarm\+Optimization.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00157}{generate()}}, \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00344}{get\+Count\+Ref()}}, \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00220}{get\+List\+State\+Ref()}} y \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00348}{set\+Count\+Ref()}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_ac2df5a730f09652ea6303fde195de727}\index{metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}!coutSwarm@{coutSwarm}}
+\index{coutSwarm@{coutSwarm}!metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}}
+\doxysubsubsection{\texorpdfstring{coutSwarm}{coutSwarm}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_ac2df5a730f09652ea6303fde195de727} 
+int metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+cout\+Swarm = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00030}{30}} del archivo \mbox{\hyperlink{ParticleSwarmOptimization_8java_source}{Particle\+Swarm\+Optimization.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00035}{get\+Cout\+Swarm()}}, \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00173}{inicialice\+LBest()}}, \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00132}{Particle\+Swarm\+Optimization()}}, \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00061}{set\+Count\+Particle\+By\+Swarm()}} y \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00042}{set\+Cout\+Swarm()}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a87ec4603a4779481939b402eb8e02089}\index{metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}!generatorType@{generatorType}}
+\index{generatorType@{generatorType}!metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}}
+\doxysubsubsection{\texorpdfstring{generatorType}{generatorType}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a87ec4603a4779481939b402eb8e02089} 
+\mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{Generator\+Type}} metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+generator\+Type\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00024}{24}} del archivo \mbox{\hyperlink{ParticleSwarmOptimization_8java_source}{Particle\+Swarm\+Optimization.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00331}{get\+Generator\+Type()}}, \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00438}{get\+Type()}} y \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00340}{set\+Generator\+Type()}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a4a53547ab8ca6aa61df72a02a76e3e80}\index{metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}!learning1@{learning1}}
+\index{learning1@{learning1}!metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}}
+\doxysubsubsection{\texorpdfstring{learning1}{learning1}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a4a53547ab8ca6aa61df72a02a76e3e80} 
+final int metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+learning1 = 2\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00071}{71}} del archivo \mbox{\hyperlink{ParticleSwarmOptimization_8java_source}{Particle\+Swarm\+Optimization.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{Particle_8java_source_l00127}{metaheuristics.\+generators.\+Particle.\+Update\+Velocity()}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_afcbf94cbccaf2d2654fac058793cc173}\index{metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}!learning2@{learning2}}
+\index{learning2@{learning2}!metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}}
+\doxysubsubsection{\texorpdfstring{learning2}{learning2}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_afcbf94cbccaf2d2654fac058793cc173} 
+final int metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+learning2 = 2\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00071}{71}} del archivo \mbox{\hyperlink{ParticleSwarmOptimization_8java_source}{Particle\+Swarm\+Optimization.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{Particle_8java_source_l00127}{metaheuristics.\+generators.\+Particle.\+Update\+Velocity()}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_ac4fe1e87c6489d682099ca0e22e7d0f8}\index{metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}!listCountBetterGender@{listCountBetterGender}}
+\index{listCountBetterGender@{listCountBetterGender}!metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}}
+\doxysubsubsection{\texorpdfstring{listCountBetterGender}{listCountBetterGender}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_ac4fe1e87c6489d682099ca0e22e7d0f8} 
+int \mbox{[}$\,$\mbox{]} metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+list\+Count\+Better\+Gender = new int\mbox{[}10\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00120}{120}} del archivo \mbox{\hyperlink{ParticleSwarmOptimization_8java_source}{Particle\+Swarm\+Optimization.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00506}{get\+List\+Count\+Better\+Gender()}} y \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00132}{Particle\+Swarm\+Optimization()}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_aaedf6d547a9fd8128fb12898bcacc3fe}\index{metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}!listCountGender@{listCountGender}}
+\index{listCountGender@{listCountGender}!metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}}
+\doxysubsubsection{\texorpdfstring{listCountGender}{listCountGender}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_aaedf6d547a9fd8128fb12898bcacc3fe} 
+int \mbox{[}$\,$\mbox{]} metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+list\+Count\+Gender = new int\mbox{[}10\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00121}{121}} del archivo \mbox{\hyperlink{ParticleSwarmOptimization_8java_source}{Particle\+Swarm\+Optimization.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00516}{get\+List\+Count\+Gender()}} y \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00132}{Particle\+Swarm\+Optimization()}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a4635b77d518d93e48c436213dc8d3601}\index{metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}!listParticle@{listParticle}}
+\index{listParticle@{listParticle}!metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}}
+\doxysubsubsection{\texorpdfstring{listParticle}{listParticle}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a4635b77d518d93e48c436213dc8d3601} 
+List$<$\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle}{Particle}}$>$ metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+list\+Particle = new Array\+List$<$\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Particle}{Particle}}$>$ ()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00023}{23}} del archivo \mbox{\hyperlink{ParticleSwarmOptimization_8java_source}{Particle\+Swarm\+Optimization.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00157}{generate()}}, \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00311}{get\+List\+Particle()}}, \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00173}{inicialice\+LBest()}}, \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00132}{Particle\+Swarm\+Optimization()}}, \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00321}{set\+List\+Particle()}} y \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00364}{update\+Reference()}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a488b113859866aa90ed7f71dea741024}\index{metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}!listStateReference@{listStateReference}}
+\index{listStateReference@{listStateReference}!metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}}
+\doxysubsubsection{\texorpdfstring{listStateReference}{listStateReference}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a488b113859866aa90ed7f71dea741024} 
+List$<$\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}$>$ metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+list\+State\+Reference = new Array\+List$<$\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}$>$()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00022}{22}} del archivo \mbox{\hyperlink{ParticleSwarmOptimization_8java_source}{Particle\+Swarm\+Optimization.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00448}{get\+Reference\+List()}}, \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00302}{set\+List\+State\+Reference()}} y \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00364}{update\+Reference()}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a3436d8147038325c0726224894038433}\index{metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}!listTrace@{listTrace}}
+\index{listTrace@{listTrace}!metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}}
+\doxysubsubsection{\texorpdfstring{listTrace}{listTrace}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a3436d8147038325c0726224894038433} 
+float \mbox{[}$\,$\mbox{]} metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+list\+Trace = new float\mbox{[}1200000\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00122}{122}} del archivo \mbox{\hyperlink{ParticleSwarmOptimization_8java_source}{Particle\+Swarm\+Optimization.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00527}{get\+Trace()}} y \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00132}{Particle\+Swarm\+Optimization()}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a84f1604d94af7fb5a200176a4c245b15}\index{metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}!stateReferencePSO@{stateReferencePSO}}
+\index{stateReferencePSO@{stateReferencePSO}!metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}}
+\doxysubsubsection{\texorpdfstring{stateReferencePSO}{stateReferencePSO}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a84f1604d94af7fb5a200176a4c245b15} 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+state\+Reference\+PSO\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00021}{21}} del archivo \mbox{\hyperlink{ParticleSwarmOptimization_8java_source}{Particle\+Swarm\+Optimization.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00268}{get\+State\+Reference\+PSO()}} y \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00280}{set\+State\+Reference\+PSO()}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a4a4f8987c2b64eb8e5728e9abe354c58}\index{metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}!weight@{weight}}
+\index{weight@{weight}!metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}}
+\doxysubsubsection{\texorpdfstring{weight}{weight}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a4a4f8987c2b64eb8e5728e9abe354c58} 
+float metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+weight = 50\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00068}{68}} del archivo \mbox{\hyperlink{ParticleSwarmOptimization_8java_source}{Particle\+Swarm\+Optimization.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00495}{get\+Weight()}}, \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00132}{Particle\+Swarm\+Optimization()}} y \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00485}{set\+Weight()}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a920f572bad5f93b03c3347356f7c2bc4}\index{metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}!wmax@{wmax}}
+\index{wmax@{wmax}!metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}}
+\doxysubsubsection{\texorpdfstring{wmax}{wmax}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a920f572bad5f93b03c3347356f7c2bc4} 
+final double metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+wmax = 0.\+9\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00069}{69}} del archivo \mbox{\hyperlink{ParticleSwarmOptimization_8java_source}{Particle\+Swarm\+Optimization.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{Particle_8java_source_l00127}{metaheuristics.\+generators.\+Particle.\+Update\+Velocity()}}.
+
+\Hypertarget{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a25ee209144e81a8a9b36dda74df290c1}\index{metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}!wmin@{wmin}}
+\index{wmin@{wmin}!metaheuristics.generators.ParticleSwarmOptimization@{metaheuristics.generators.ParticleSwarmOptimization}}
+\doxysubsubsection{\texorpdfstring{wmin}{wmin}}
+{\footnotesize\ttfamily \label{classmetaheuristics_1_1generators_1_1ParticleSwarmOptimization_a25ee209144e81a8a9b36dda74df290c1} 
+final double metaheuristics.\+generators.\+Particle\+Swarm\+Optimization.\+wmin = 0.\+2\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{ParticleSwarmOptimization_8java_source_l00070}{70}} del archivo \mbox{\hyperlink{ParticleSwarmOptimization_8java_source}{Particle\+Swarm\+Optimization.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{Particle_8java_source_l00127}{metaheuristics.\+generators.\+Particle.\+Update\+Velocity()}}.
+
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{ParticleSwarmOptimization_8java}{Particle\+Swarm\+Optimization.\+java}}\end{DoxyCompactItemize}

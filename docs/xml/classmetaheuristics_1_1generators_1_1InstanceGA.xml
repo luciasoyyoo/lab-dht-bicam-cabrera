@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="es">
+  <compounddef id="classmetaheuristics_1_1generators_1_1InstanceGA" kind="class" language="Java" prot="public">
+    <compoundname>metaheuristics::generators::InstanceGA</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Runnable</basecompoundref>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1InstanceGA_1ad0cf2f76b10b567ac5488c48109e1b85" prot="private" static="yes" mutable="no">
+        <type>final Logger</type>
+        <definition>final Logger metaheuristics.generators.InstanceGA.LOGGER</definition>
+        <argsstring></argsstring>
+        <name>LOGGER</name>
+        <qualifiedname>metaheuristics.generators.InstanceGA.LOGGER</qualifiedname>
+        <initializer>= Logger.getLogger(InstanceGA.class.getName())</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/InstanceGA.java" line="14" column="29" bodyfile="practica5/src/main/java/metaheuristics/generators/InstanceGA.java" bodystart="14" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1InstanceGA_1aefa3b4de3be77d579e499fbd6a6f5761" compoundref="InstanceGA_8java" startline="21" endline="39">metaheuristics.generators.InstanceGA.run</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1InstanceGA_1a856cb58f0cd8975905dcf5f60b50b110" prot="private" static="no" mutable="no">
+        <type>boolean</type>
+        <definition>boolean metaheuristics.generators.InstanceGA.terminate</definition>
+        <argsstring></argsstring>
+        <name>terminate</name>
+        <qualifiedname>metaheuristics.generators.InstanceGA.terminate</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/InstanceGA.java" line="16" column="17" bodyfile="practica5/src/main/java/metaheuristics/generators/InstanceGA.java" bodystart="16" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1InstanceGA_1a92672eb54c8a759bb96df77dcdb5d231" compoundref="InstanceGA_8java" startline="45" endline="47">metaheuristics.generators.InstanceGA.isTerminate</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1InstanceGA_1aefa3b4de3be77d579e499fbd6a6f5761" compoundref="InstanceGA_8java" startline="21" endline="39">metaheuristics.generators.InstanceGA.run</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1InstanceGA_1afc2713f35ed34b7dabeae388cd39fe1e" compoundref="InstanceGA_8java" startline="53" endline="55">metaheuristics.generators.InstanceGA.setTerminate</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1InstanceGA_1aefa3b4de3be77d579e499fbd6a6f5761" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheuristics.generators.InstanceGA.run</definition>
+        <argsstring>()</argsstring>
+        <name>run</name>
+        <qualifiedname>metaheuristics.generators.InstanceGA.run</qualifiedname>
+        <briefdescription>
+<para>run - create an instance of the Genetic Algorithm generator. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/InstanceGA.java" line="21" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/InstanceGA.java" bodystart="21" bodyend="39"/>
+        <references refid="classfactory__method_1_1FactoryGenerator_1a76c269b114cbf643e92a7467b7cf21f7" compoundref="FactoryGenerator_8java" startline="25" endline="29">factory_method.FactoryGenerator.createGenerator</references>
+        <references refid="enummetaheuristics_1_1generators_1_1GeneratorType_1aa7d0ed047362b79a1bbe2a29837ddbe3" compoundref="GeneratorType_8java" startline="8">metaheuristics.generators.GeneratorType.GeneticAlgorithm</references>
+        <references refid="classmetaheuristics_1_1generators_1_1MultiGenerator_1ab331905baebb433340e05d19e174340b" compoundref="MultiGenerator_8java" startline="161" endline="164">metaheuristics.generators.MultiGenerator.getListGenerators</references>
+        <references refid="classmetaheuristics_1_1generators_1_1Generator_1a5a123306b43c42d28cd1d6e17f8067a5">metaheuristics.generators.Generator.getType</references>
+        <references refid="classmetaheuristics_1_1generators_1_1InstanceGA_1ad0cf2f76b10b567ac5488c48109e1b85" compoundref="InstanceGA_8java" startline="14">metaheuristics.generators.InstanceGA.LOGGER</references>
+        <references refid="classmetaheuristics_1_1generators_1_1InstanceGA_1a856cb58f0cd8975905dcf5f60b50b110" compoundref="InstanceGA_8java" startline="16">metaheuristics.generators.InstanceGA.terminate</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1InstanceGA_1a92672eb54c8a759bb96df77dcdb5d231" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean metaheuristics.generators.InstanceGA.isTerminate</definition>
+        <argsstring>()</argsstring>
+        <name>isTerminate</name>
+        <qualifiedname>metaheuristics.generators.InstanceGA.isTerminate</qualifiedname>
+        <briefdescription>
+<para>isTerminate - check if the instance is terminated. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true if terminated, false otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/InstanceGA.java" line="45" column="16" bodyfile="practica5/src/main/java/metaheuristics/generators/InstanceGA.java" bodystart="45" bodyend="47"/>
+        <references refid="classmetaheuristics_1_1generators_1_1InstanceGA_1a856cb58f0cd8975905dcf5f60b50b110" compoundref="InstanceGA_8java" startline="16">metaheuristics.generators.InstanceGA.terminate</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1InstanceGA_1afc2713f35ed34b7dabeae388cd39fe1e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheuristics.generators.InstanceGA.setTerminate</definition>
+        <argsstring>(boolean terminate)</argsstring>
+        <name>setTerminate</name>
+        <qualifiedname>metaheuristics.generators.InstanceGA.setTerminate</qualifiedname>
+        <param>
+          <type>boolean</type>
+          <declname>terminate</declname>
+        </param>
+        <briefdescription>
+<para>setTerminate - determine the termination status of the instance. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>terminate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true to terminate, false to continue </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/InstanceGA.java" line="53" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/InstanceGA.java" bodystart="53" bodyend="55"/>
+        <references refid="classmetaheuristics_1_1generators_1_1InstanceGA_1a856cb58f0cd8975905dcf5f60b50b110" compoundref="InstanceGA_8java" startline="16">metaheuristics.generators.InstanceGA.terminate</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="classmetaheuristics_1_1generators_1_1InstanceGA" kindref="compound">InstanceGA</ref> - class that implements the Runnable interface to create an instance of the Genetic Algorithm generator. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Runnable</label>
+      </node>
+      <node id="1">
+        <label>metaheuristics.generators.InstanceGA</label>
+        <link refid="classmetaheuristics_1_1generators_1_1InstanceGA"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Runnable</label>
+      </node>
+      <node id="1">
+        <label>metaheuristics.generators.InstanceGA</label>
+        <link refid="classmetaheuristics_1_1generators_1_1InstanceGA"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="practica5/src/main/java/metaheuristics/generators/InstanceGA.java" line="12" column="7" bodyfile="practica5/src/main/java/metaheuristics/generators/InstanceGA.java" bodystart="12" bodyend="57"/>
+    <listofallmembers>
+      <member refid="classmetaheuristics_1_1generators_1_1InstanceGA_1a92672eb54c8a759bb96df77dcdb5d231" prot="public" virt="non-virtual"><scope>metaheuristics::generators::InstanceGA</scope><name>isTerminate</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1InstanceGA_1ad0cf2f76b10b567ac5488c48109e1b85" prot="private" virt="non-virtual"><scope>metaheuristics::generators::InstanceGA</scope><name>LOGGER</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1InstanceGA_1aefa3b4de3be77d579e499fbd6a6f5761" prot="public" virt="non-virtual"><scope>metaheuristics::generators::InstanceGA</scope><name>run</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1InstanceGA_1afc2713f35ed34b7dabeae388cd39fe1e" prot="public" virt="non-virtual"><scope>metaheuristics::generators::InstanceGA</scope><name>setTerminate</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1InstanceGA_1a856cb58f0cd8975905dcf5f60b50b110" prot="private" virt="non-virtual"><scope>metaheuristics::generators::InstanceGA</scope><name>terminate</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,247 @@
+\doxysection{Referencia de la clase problem.\+definition.\+Objetive\+Function}
+\hypertarget{classproblem_1_1definition_1_1ObjetiveFunction}{}\label{classproblem_1_1definition_1_1ObjetiveFunction}\index{problem.definition.ObjetiveFunction@{problem.definition.ObjetiveFunction}}
+
+
+\doxylink{classproblem_1_1definition_1_1ObjetiveFunction}{Objetive\+Function}.  
+
+
+
+
+Diagrama de colaboración de problem.\+definition.\+Objetive\+Function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{classproblem_1_1definition_1_1ObjetiveFunction__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{classproblem_1_1definition_1_1ObjetiveFunction_ad887f3d72969374a0dee69d8875834e1}{get\+Weight}} ()
+\begin{DoxyCompactList}\small\item\em Obtener el peso relativo de esta función objetivo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classproblem_1_1definition_1_1ObjetiveFunction_ae499492e9679b11fa78341b9d8a043e2}{set\+Weight}} (float \mbox{\hyperlink{classproblem_1_1definition_1_1ObjetiveFunction_a71a1852fec5d4e8e1ab0d81c0f8c39b6}{weight}})
+\begin{DoxyCompactList}\small\item\em Establecer el peso relativo de la función objetivo. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{enumproblem_1_1definition_1_1Problem_1_1ProblemType}{Problem\+Type}} \mbox{\hyperlink{classproblem_1_1definition_1_1ObjetiveFunction_a546c39d702df1ab99f2babbf994adbe0}{get\+Type\+Problem}} ()
+\begin{DoxyCompactList}\small\item\em Obtener si la función es de tipo Maximizar o Minimizar. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classproblem_1_1definition_1_1ObjetiveFunction_aacb5681d5f1106c5fbcb18ae716f2736}{set\+Type\+Problem}} (\mbox{\hyperlink{enumproblem_1_1definition_1_1Problem_1_1ProblemType}{Problem\+Type}} \mbox{\hyperlink{classproblem_1_1definition_1_1ObjetiveFunction_a2796f3d7f2e36d09152cc20dd072d4cf}{type\+Problem}})
+\begin{DoxyCompactList}\small\item\em Establecer el tipo (Maximizar/\+Minimizar) de la función objetivo. \end{DoxyCompactList}\item 
+abstract Double \mbox{\hyperlink{classproblem_1_1definition_1_1ObjetiveFunction_ac67bc734733fdfc29d3b282255e2de98}{Evaluation}} (\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} state)
+\begin{DoxyCompactList}\small\item\em Evaluar el estado respecto a esta función objetivo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{enumproblem_1_1definition_1_1Problem_1_1ProblemType}{Problem\+Type}} \mbox{\hyperlink{classproblem_1_1definition_1_1ObjetiveFunction_a2796f3d7f2e36d09152cc20dd072d4cf}{type\+Problem}}
+\item 
+float \mbox{\hyperlink{classproblem_1_1definition_1_1ObjetiveFunction_a71a1852fec5d4e8e1ab0d81c0f8c39b6}{weight}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+\doxylink{classproblem_1_1definition_1_1ObjetiveFunction}{Objetive\+Function}. 
+
+Representa una función objetivo del problema. Puede ser usada en problemas mono o multi-\/objetivo y contiene el peso y el tipo (Maximizar/\+Minimizar). 
+
+Definición en la línea \mbox{\hyperlink{ObjetiveFunction_8java_source_l00012}{12}} del archivo \mbox{\hyperlink{ObjetiveFunction_8java_source}{Objetive\+Function.\+java}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{classproblem_1_1definition_1_1ObjetiveFunction_doc-func-members}
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{classproblem_1_1definition_1_1ObjetiveFunction_ac67bc734733fdfc29d3b282255e2de98}\index{problem.definition.ObjetiveFunction@{problem.definition.ObjetiveFunction}!Evaluation@{Evaluation}}
+\index{Evaluation@{Evaluation}!problem.definition.ObjetiveFunction@{problem.definition.ObjetiveFunction}}
+\doxysubsubsection{\texorpdfstring{Evaluation()}{Evaluation()}}
+{\footnotesize\ttfamily \label{classproblem_1_1definition_1_1ObjetiveFunction_ac67bc734733fdfc29d3b282255e2de98} 
+abstract Double problem.\+definition.\+Objetive\+Function.\+Evaluation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}}]{state}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+
+
+Evaluar el estado respecto a esta función objetivo. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em state} & estado a evaluar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+valor de evaluación (Double) 
+\end{DoxyReturn}
+
+
+Referenciado por \mbox{\hyperlink{MultiObjetivoPuro_8java_source_l00029}{problem.\+extension.\+Multi\+Objetivo\+Puro.\+evaluation\+State()}}.
+
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classproblem_1_1definition_1_1ObjetiveFunction_ac67bc734733fdfc29d3b282255e2de98_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classproblem_1_1definition_1_1ObjetiveFunction_a546c39d702df1ab99f2babbf994adbe0}\index{problem.definition.ObjetiveFunction@{problem.definition.ObjetiveFunction}!getTypeProblem@{getTypeProblem}}
+\index{getTypeProblem@{getTypeProblem}!problem.definition.ObjetiveFunction@{problem.definition.ObjetiveFunction}}
+\doxysubsubsection{\texorpdfstring{getTypeProblem()}{getTypeProblem()}}
+{\footnotesize\ttfamily \label{classproblem_1_1definition_1_1ObjetiveFunction_a546c39d702df1ab99f2babbf994adbe0} 
+\mbox{\hyperlink{enumproblem_1_1definition_1_1Problem_1_1ProblemType}{Problem\+Type}} problem.\+definition.\+Objetive\+Function.\+get\+Type\+Problem (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtener si la función es de tipo Maximizar o Minimizar. 
+
+\begin{DoxyReturn}{Devuelve}
+tipo de problema asociado a la función 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{ObjetiveFunction_8java_source_l00040}{40}} del archivo \mbox{\hyperlink{ObjetiveFunction_8java_source}{Objetive\+Function.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ typeProblem;}
+\DoxyCodeLine{00042\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{ObjetiveFunction_8java_source_l00014}{type\+Problem}}.
+
+
+
+Referenciado por \mbox{\hyperlink{MultiObjetivoPuro_8java_source_l00029}{problem.\+extension.\+Multi\+Objetivo\+Puro.\+evaluation\+State()}}.
+
+Gráfico de llamadas a esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classproblem_1_1definition_1_1ObjetiveFunction_a546c39d702df1ab99f2babbf994adbe0_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classproblem_1_1definition_1_1ObjetiveFunction_ad887f3d72969374a0dee69d8875834e1}\index{problem.definition.ObjetiveFunction@{problem.definition.ObjetiveFunction}!getWeight@{getWeight}}
+\index{getWeight@{getWeight}!problem.definition.ObjetiveFunction@{problem.definition.ObjetiveFunction}}
+\doxysubsubsection{\texorpdfstring{getWeight()}{getWeight()}}
+{\footnotesize\ttfamily \label{classproblem_1_1definition_1_1ObjetiveFunction_ad887f3d72969374a0dee69d8875834e1} 
+float problem.\+definition.\+Objetive\+Function.\+get\+Weight (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtener el peso relativo de esta función objetivo. 
+
+\begin{DoxyReturn}{Devuelve}
+peso (float) 
+\end{DoxyReturn}
+
+
+Definición en la línea \mbox{\hyperlink{ObjetiveFunction_8java_source_l00022}{22}} del archivo \mbox{\hyperlink{ObjetiveFunction_8java_source}{Objetive\+Function.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ weight;}
+\DoxyCodeLine{00024\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{ObjetiveFunction_8java_source_l00015}{weight}}.
+
+\Hypertarget{classproblem_1_1definition_1_1ObjetiveFunction_aacb5681d5f1106c5fbcb18ae716f2736}\index{problem.definition.ObjetiveFunction@{problem.definition.ObjetiveFunction}!setTypeProblem@{setTypeProblem}}
+\index{setTypeProblem@{setTypeProblem}!problem.definition.ObjetiveFunction@{problem.definition.ObjetiveFunction}}
+\doxysubsubsection{\texorpdfstring{setTypeProblem()}{setTypeProblem()}}
+{\footnotesize\ttfamily \label{classproblem_1_1definition_1_1ObjetiveFunction_aacb5681d5f1106c5fbcb18ae716f2736} 
+void problem.\+definition.\+Objetive\+Function.\+set\+Type\+Problem (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{enumproblem_1_1definition_1_1Problem_1_1ProblemType}{Problem\+Type}}}]{type\+Problem}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Establecer el tipo (Maximizar/\+Minimizar) de la función objetivo. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em type\+Problem} & tipo a asignar \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{ObjetiveFunction_8java_source_l00049}{49}} del archivo \mbox{\hyperlink{ObjetiveFunction_8java_source}{Objetive\+Function.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ this.typeProblem\ =\ typeProblem;}
+\DoxyCodeLine{00051\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{ObjetiveFunction_8java_source_l00014}{type\+Problem}}.
+
+\Hypertarget{classproblem_1_1definition_1_1ObjetiveFunction_ae499492e9679b11fa78341b9d8a043e2}\index{problem.definition.ObjetiveFunction@{problem.definition.ObjetiveFunction}!setWeight@{setWeight}}
+\index{setWeight@{setWeight}!problem.definition.ObjetiveFunction@{problem.definition.ObjetiveFunction}}
+\doxysubsubsection{\texorpdfstring{setWeight()}{setWeight()}}
+{\footnotesize\ttfamily \label{classproblem_1_1definition_1_1ObjetiveFunction_ae499492e9679b11fa78341b9d8a043e2} 
+void problem.\+definition.\+Objetive\+Function.\+set\+Weight (\begin{DoxyParamCaption}\item[{float}]{weight}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Establecer el peso relativo de la función objetivo. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em weight} & valor de peso \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea \mbox{\hyperlink{ObjetiveFunction_8java_source_l00031}{31}} del archivo \mbox{\hyperlink{ObjetiveFunction_8java_source}{Objetive\+Function.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ this.weight\ =\ weight;}
+\DoxyCodeLine{00033\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{ObjetiveFunction_8java_source_l00015}{weight}}.
+
+
+
+\label{doc-variable-members}
+\Hypertarget{classproblem_1_1definition_1_1ObjetiveFunction_doc-variable-members}
+\doxysubsection{Documentación de datos miembro}
+\Hypertarget{classproblem_1_1definition_1_1ObjetiveFunction_a2796f3d7f2e36d09152cc20dd072d4cf}\index{problem.definition.ObjetiveFunction@{problem.definition.ObjetiveFunction}!typeProblem@{typeProblem}}
+\index{typeProblem@{typeProblem}!problem.definition.ObjetiveFunction@{problem.definition.ObjetiveFunction}}
+\doxysubsubsection{\texorpdfstring{typeProblem}{typeProblem}}
+{\footnotesize\ttfamily \label{classproblem_1_1definition_1_1ObjetiveFunction_a2796f3d7f2e36d09152cc20dd072d4cf} 
+\mbox{\hyperlink{enumproblem_1_1definition_1_1Problem_1_1ProblemType}{Problem\+Type}} problem.\+definition.\+Objetive\+Function.\+type\+Problem\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{ObjetiveFunction_8java_source_l00014}{14}} del archivo \mbox{\hyperlink{ObjetiveFunction_8java_source}{Objetive\+Function.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{ObjetiveFunction_8java_source_l00040}{get\+Type\+Problem()}} y \mbox{\hyperlink{ObjetiveFunction_8java_source_l00049}{set\+Type\+Problem()}}.
+
+\Hypertarget{classproblem_1_1definition_1_1ObjetiveFunction_a71a1852fec5d4e8e1ab0d81c0f8c39b6}\index{problem.definition.ObjetiveFunction@{problem.definition.ObjetiveFunction}!weight@{weight}}
+\index{weight@{weight}!problem.definition.ObjetiveFunction@{problem.definition.ObjetiveFunction}}
+\doxysubsubsection{\texorpdfstring{weight}{weight}}
+{\footnotesize\ttfamily \label{classproblem_1_1definition_1_1ObjetiveFunction_a71a1852fec5d4e8e1ab0d81c0f8c39b6} 
+float problem.\+definition.\+Objetive\+Function.\+weight\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea \mbox{\hyperlink{ObjetiveFunction_8java_source_l00015}{15}} del archivo \mbox{\hyperlink{ObjetiveFunction_8java_source}{Objetive\+Function.\+java}}.
+
+
+
+Referenciado por \mbox{\hyperlink{ObjetiveFunction_8java_source_l00022}{get\+Weight()}} y \mbox{\hyperlink{ObjetiveFunction_8java_source_l00031}{set\+Weight()}}.
+
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{ObjetiveFunction_8java}{Objetive\+Function.\+java}}\end{DoxyCompactItemize}

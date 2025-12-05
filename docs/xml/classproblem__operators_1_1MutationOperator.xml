@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="es">
+  <compounddef id="classproblem__operators_1_1MutationOperator" kind="class" language="Java" prot="public">
+    <compoundname>problem_operators::MutationOperator</compoundname>
+    <basecompoundref refid="classproblem_1_1definition_1_1Operator" prot="public" virt="non-virtual">problem.definition.Operator</basecompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classproblem__operators_1_1MutationOperator_1adc581cf1337e53458e6695aec007028b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+        <definition>List&lt; State &gt; problem_operators.MutationOperator.generatedNewState</definition>
+        <argsstring>(final State stateCurrent, final Integer operatornumber)</argsstring>
+        <name>generatedNewState</name>
+        <qualifiedname>problem_operators.MutationOperator.generatedNewState</qualifiedname>
+        <reimplements refid="classproblem_1_1definition_1_1Operator_1a5b6625843e73d938f9235985bf966b34">generatedNewState</reimplements>
+        <param>
+          <type>final <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+          <declname>stateCurrent</declname>
+        </param>
+        <param>
+          <type>final Integer</type>
+          <declname>operatornumber</declname>
+        </param>
+        <briefdescription>
+<para>Generate a neighborhood of states by mutating the provided state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Contract for overriding implementations:<itemizedlist>
+<listitem><para>Return a non-null List of <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> objects (may be empty).</para>
+</listitem><listitem><para>Each returned <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> should be a safe copy (no shared mutable internals).</para>
+</listitem><listitem><para>The <javadoccode>operatornumber</javadoccode> parameter indicates how many neighbors should be produced. </para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stateCurrent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the state to mutate (must not be modified by callers) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>operatornumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of neighbor states to generate </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>list of neighboring states, never null </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/problem_operators/MutationOperator.java" line="32" column="13" bodyfile="practica5/src/main/java/problem_operators/MutationOperator.java" bodystart="32" bodyend="47"/>
+        <references refid="classproblem_1_1definition_1_1Codification_1a01a0c8247d76d4c4c32c7f3e51c2d5f8">problem.definition.Codification.getAleatoryKey</references>
+        <references refid="classproblem_1_1definition_1_1State_1a2e75b6f2bedb2107478ecd1e8e681418" compoundref="State_8java" startline="68" endline="70">problem.definition.State.getCode</references>
+        <references refid="classproblem_1_1definition_1_1Problem_1a7da2aa6b2a6f00f6f3993e6fdc43e34b" compoundref="Problem_8java" startline="114" endline="116">problem.definition.Problem.getCodification</references>
+        <references refid="classproblem_1_1definition_1_1State_1aaf14fa8466c945ff5e134028c6c259f8" compoundref="State_8java" startline="161" endline="163">problem.definition.State.getCopy</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1a4bc6bd95db71e14b1f48c1bfc85f1305" compoundref="Strategy_8java" startline="405" endline="407">metaheurictics.strategy.Strategy.getProblem</references>
+        <references refid="classmetaheurictics_1_1strategy_1_1Strategy_1ad2641e12c52292930364de6655333aa8" compoundref="Strategy_8java" startline="80" endline="85">metaheurictics.strategy.Strategy.getStrategy</references>
+        <references refid="classproblem_1_1definition_1_1Codification_1ad5875a47b3e863653ede3bb7feae524f">problem.definition.Codification.getVariableAleatoryValue</references>
+      </memberdef>
+      <memberdef kind="function" id="classproblem__operators_1_1MutationOperator_1a0f6271c1365408220a1749db18e335d9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+        <definition>List&lt; State &gt; problem_operators.MutationOperator.generateRandomState</definition>
+        <argsstring>(final Integer operatornumber)</argsstring>
+        <name>generateRandomState</name>
+        <qualifiedname>problem_operators.MutationOperator.generateRandomState</qualifiedname>
+        <reimplements refid="classproblem_1_1definition_1_1Operator_1a08c63f0d681ef130fccdb04d24ddf181">generateRandomState</reimplements>
+        <param>
+          <type>final Integer</type>
+          <declname>operatornumber</declname>
+        </param>
+        <briefdescription>
+<para>Generate a list of random states using this mutation operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Contract for overriding implementations:<itemizedlist>
+<listitem><para>Must return a non-null List of <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> objects (may be empty).</para>
+</listitem><listitem><para>Each returned <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> should be a safe copy (no shared mutable internals that could be modified externally).</para>
+</listitem><listitem><para>The <javadoccode>operatornumber</javadoccode> parameter indicates how many random states should be produced. </para>
+</listitem></itemizedlist>
+</para>
+<para>Subclasses overriding this method should preserve the contract above.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>operatornumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of random states to generate </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>list of randomly generated states, never null generateRandomState - method to generate random states. </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>operatornumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns list of random states. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/problem_operators/MutationOperator.java" line="70" column="13" bodyfile="practica5/src/main/java/problem_operators/MutationOperator.java" bodystart="70" bodyend="73"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="classproblem__operators_1_1MutationOperator" kindref="compound">MutationOperator</ref> - defines a mutation operator for generating new states. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>problem.definition.Operator</label>
+        <link refid="classproblem_1_1definition_1_1Operator"/>
+      </node>
+      <node id="1">
+        <label>problem_operators.MutationOperator</label>
+        <link refid="classproblem__operators_1_1MutationOperator"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>problem.definition.Operator</label>
+        <link refid="classproblem_1_1definition_1_1Operator"/>
+      </node>
+      <node id="1">
+        <label>problem_operators.MutationOperator</label>
+        <link refid="classproblem__operators_1_1MutationOperator"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="practica5/src/main/java/problem_operators/MutationOperator.java" line="15" column="7" bodyfile="practica5/src/main/java/problem_operators/MutationOperator.java" bodystart="15" bodyend="75"/>
+    <listofallmembers>
+      <member refid="classproblem__operators_1_1MutationOperator_1adc581cf1337e53458e6695aec007028b" prot="public" virt="non-virtual"><scope>problem_operators::MutationOperator</scope><name>generatedNewState</name></member>
+      <member refid="classproblem__operators_1_1MutationOperator_1a0f6271c1365408220a1749db18e335d9" prot="public" virt="non-virtual"><scope>problem_operators::MutationOperator</scope><name>generateRandomState</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

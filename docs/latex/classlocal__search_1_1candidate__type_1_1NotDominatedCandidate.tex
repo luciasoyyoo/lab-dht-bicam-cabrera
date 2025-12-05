@@ -1,0 +1,125 @@
+\doxysection{Referencia de la clase local\+\_\+search.\+candidate\+\_\+type.\+Not\+Dominated\+Candidate}
+\hypertarget{classlocal__search_1_1candidate__type_1_1NotDominatedCandidate}{}\label{classlocal__search_1_1candidate__type_1_1NotDominatedCandidate}\index{local\_search.candidate\_type.NotDominatedCandidate@{local\_search.candidate\_type.NotDominatedCandidate}}
+
+
+\doxylink{classlocal__search_1_1candidate__type_1_1NotDominatedCandidate}{Not\+Dominated\+Candidate} -\/ select a non-\/dominated neighbor for multi-\/objective.  
+
+
+
+
+Diagrama de herencia de local\+\_\+search.\+candidate\+\_\+type.\+Not\+Dominated\+Candidate
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{classlocal__search_1_1candidate__type_1_1NotDominatedCandidate__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagrama de colaboración de local\+\_\+search.\+candidate\+\_\+type.\+Not\+Dominated\+Candidate\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{classlocal__search_1_1candidate__type_1_1NotDominatedCandidate__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} \mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1NotDominatedCandidate_a8f08ece6519709427b4917712b805159}{state\+Search}} (List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$ list\+Neighborhood)  throws Illegal\+Argument\+Exception, Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception, Illegal\+Access\+Exception, Invocation\+Target\+Exception, No\+Such\+Method\+Exception 
+\begin{DoxyCompactList}\small\item\em Select a non-\/dominated state from the neighborhood. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+\doxylink{classlocal__search_1_1candidate__type_1_1NotDominatedCandidate}{Not\+Dominated\+Candidate} -\/ select a non-\/dominated neighbor for multi-\/objective. 
+
+Chooses a neighbor that is not dominated by others in the neighborhood using the Domination comparator. Intended for multi-\/objective problems. 
+
+Definición en la línea \mbox{\hyperlink{NotDominatedCandidate_8java_source_l00017}{17}} del archivo \mbox{\hyperlink{NotDominatedCandidate_8java_source}{Not\+Dominated\+Candidate.\+java}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{classlocal__search_1_1candidate__type_1_1NotDominatedCandidate_doc-func-members}
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{classlocal__search_1_1candidate__type_1_1NotDominatedCandidate_a8f08ece6519709427b4917712b805159}\index{local\_search.candidate\_type.NotDominatedCandidate@{local\_search.candidate\_type.NotDominatedCandidate}!stateSearch@{stateSearch}}
+\index{stateSearch@{stateSearch}!local\_search.candidate\_type.NotDominatedCandidate@{local\_search.candidate\_type.NotDominatedCandidate}}
+\doxysubsubsection{\texorpdfstring{stateSearch()}{stateSearch()}}
+{\footnotesize\ttfamily \label{classlocal__search_1_1candidate__type_1_1NotDominatedCandidate_a8f08ece6519709427b4917712b805159} 
+\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} local\+\_\+search.\+candidate\+\_\+type.\+Not\+Dominated\+Candidate.\+state\+Search (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}} $>$}]{list\+Neighborhood}{}\end{DoxyParamCaption}) throws Illegal\+Argument\+Exception, Security\+Exception, Class\+Not\+Found\+Exception, Instantiation\+Exception, Illegal\+Access\+Exception, Invocation\+Target\+Exception, No\+Such\+Method\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Select a non-\/dominated state from the neighborhood. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em list\+Neighborhood} & list of neighbor states \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+a non-\/dominated \doxylink{classproblem_1_1definition_1_1State}{State} chosen from the list (or the first if only one) 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em Reflective\+Operation\+Exception} & when evaluation or reflective calls fail \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplementado de \mbox{\hyperlink{classlocal__search_1_1candidate__type_1_1SearchCandidate_a0f10adc1526fb08f54427c50734f8abf}{local\+\_\+search.\+candidate\+\_\+type.\+Search\+Candidate}}.
+
+
+
+Definición en la línea \mbox{\hyperlink{NotDominatedCandidate_8java_source_l00027}{27}} del archivo \mbox{\hyperlink{NotDominatedCandidate_8java_source}{Not\+Dominated\+Candidate.\+java}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ State\ state\ =\ \textcolor{keyword}{new}\ State();}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ State\ stateA\ =\ listNeighborhood.get(0);}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{boolean}\ stop\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(listNeighborhood.size()\ ==\ 1)\{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ stop\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ state\ =\ stateA;}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ Strategy.getStrategy().getProblem().Evaluate(stateA);}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ State\ stateB;}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ Dominance\ dominance\ =\ \textcolor{keyword}{new}\ Dominance();}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 1;\ i\ <\ listNeighborhood.size();\ i++)\ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(stop\ ==\ \textcolor{keyword}{false})\{}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ stateB\ =\ listNeighborhood.get(i);}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Strategy.getStrategy().getProblem().Evaluate(stateB);}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(dominance.dominance(stateB,\ stateA)\ ==\ \textcolor{keyword}{true})\{}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ stateA\ =\ stateB;}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ stop\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ state\ =\ stateA;}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ state;}
+\DoxyCodeLine{00053\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Hace referencia a \mbox{\hyperlink{Dominance_8java_source_l00087}{local\+\_\+search.\+acceptation\+\_\+type.\+Dominance.\+dominance()}}, \mbox{\hyperlink{Problem_8java_source_l00171}{problem.\+definition.\+Problem.\+Evaluate()}}, \mbox{\hyperlink{Strategy_8java_source_l00405}{metaheurictics.\+strategy.\+Strategy.\+get\+Problem()}} y \mbox{\hyperlink{Strategy_8java_source_l00080}{metaheurictics.\+strategy.\+Strategy.\+get\+Strategy()}}.
+
+Gráfico de llamadas de esta función\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classlocal__search_1_1candidate__type_1_1NotDominatedCandidate_a8f08ece6519709427b4917712b805159_cgraph}
+\end{center}
+\end{figure}
+
+
+La documentación de esta clase está generada del siguiente archivo\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{NotDominatedCandidate_8java}{Not\+Dominated\+Candidate.\+java}}\end{DoxyCompactItemize}

@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="es">
+  <compounddef id="classfactory__method_1_1FactoryAcceptCandidate" kind="class" language="Java" prot="public">
+    <compoundname>factory_method::FactoryAcceptCandidate</compoundname>
+    <basecompoundref refid="interfacefactory__interface_1_1IFFactoryAcceptCandidate" prot="public" virt="non-virtual">factory_interface.IFFactoryAcceptCandidate</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classfactory__method_1_1FactoryAcceptCandidate_1af59d291c10bc117fb9735e3eea857652" prot="private" static="no" mutable="no">
+        <type><ref refid="classlocal__search_1_1acceptation__type_1_1AcceptableCandidate" kindref="compound">AcceptableCandidate</ref></type>
+        <definition>AcceptableCandidate factory_method.FactoryAcceptCandidate.acceptCandidate</definition>
+        <argsstring></argsstring>
+        <name>acceptCandidate</name>
+        <qualifiedname>factory_method.FactoryAcceptCandidate.acceptCandidate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/factory_method/FactoryAcceptCandidate.java" line="22" column="29" bodyfile="practica5/src/main/java/factory_method/FactoryAcceptCandidate.java" bodystart="22" bodyend="-1"/>
+        <referencedby refid="classfactory__method_1_1FactoryAcceptCandidate_1a3f5e82869758bc8a38c9ffdf56f44455" compoundref="FactoryAcceptCandidate_8java" startline="29" endline="33">factory_method.FactoryAcceptCandidate.createAcceptCandidate</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classfactory__method_1_1FactoryAcceptCandidate_1a3f5e82869758bc8a38c9ffdf56f44455" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classlocal__search_1_1acceptation__type_1_1AcceptableCandidate" kindref="compound">AcceptableCandidate</ref></type>
+        <definition>AcceptableCandidate factory_method.FactoryAcceptCandidate.createAcceptCandidate</definition>
+        <argsstring>(AcceptType typeacceptation)</argsstring>
+        <name>createAcceptCandidate</name>
+        <qualifiedname>factory_method.FactoryAcceptCandidate.createAcceptCandidate</qualifiedname>
+        <reimplements refid="interfacefactory__interface_1_1IFFactoryAcceptCandidate_1a6548b562e2e2359fe0522cc7a98d0b7a">createAcceptCandidate</reimplements>
+        <param>
+          <type><ref refid="enumlocal__search_1_1acceptation__type_1_1AcceptType" kindref="compound">AcceptType</ref></type>
+          <declname>typeacceptation</declname>
+        </param>
+        <exceptions> throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException</exceptions>
+        <briefdescription>
+<para>createAcceptCandidate - Creates an instance of <ref refid="classlocal__search_1_1acceptation__type_1_1AcceptableCandidate" kindref="compound">AcceptableCandidate</ref> based on the provided <ref refid="enumlocal__search_1_1acceptation__type_1_1AcceptType" kindref="compound">AcceptType</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>typeacceptation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/factory_method/FactoryAcceptCandidate.java" line="29" column="28" bodyfile="practica5/src/main/java/factory_method/FactoryAcceptCandidate.java" bodystart="29" bodyend="33"/>
+        <references refid="classfactory__method_1_1FactoryAcceptCandidate_1af59d291c10bc117fb9735e3eea857652" compoundref="FactoryAcceptCandidate_8java" startline="22">factory_method.FactoryAcceptCandidate.acceptCandidate</references>
+        <references refid="classfactory__method_1_1FactoryLoader_1a4e61ffc7038a082277d67e3e59cdb859" compoundref="FactoryLoader_8java" startline="21" endline="28">factory_method.FactoryLoader.getInstance</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="classfactory__method_1_1FactoryAcceptCandidate" kindref="compound">FactoryAcceptCandidate</ref> - Interface for creating acceptable candidates. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>factory_interface.IFFactoryAcceptCandidate</label>
+        <link refid="interfacefactory__interface_1_1IFFactoryAcceptCandidate"/>
+      </node>
+      <node id="1">
+        <label>factory_method.FactoryAcceptCandidate</label>
+        <link refid="classfactory__method_1_1FactoryAcceptCandidate"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>factory_interface.IFFactoryAcceptCandidate</label>
+        <link refid="interfacefactory__interface_1_1IFFactoryAcceptCandidate"/>
+      </node>
+      <node id="1">
+        <label>factory_method.FactoryAcceptCandidate</label>
+        <link refid="classfactory__method_1_1FactoryAcceptCandidate"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-acceptCandidate</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>local_search.acceptation_type.AcceptableCandidate</label>
+        <link refid="classlocal__search_1_1acceptation__type_1_1AcceptableCandidate"/>
+      </node>
+    </collaborationgraph>
+    <location file="practica5/src/main/java/factory_method/FactoryAcceptCandidate.java" line="21" column="7" bodyfile="practica5/src/main/java/factory_method/FactoryAcceptCandidate.java" bodystart="21" bodyend="34"/>
+    <listofallmembers>
+      <member refid="classfactory__method_1_1FactoryAcceptCandidate_1af59d291c10bc117fb9735e3eea857652" prot="private" virt="non-virtual"><scope>factory_method::FactoryAcceptCandidate</scope><name>acceptCandidate</name></member>
+      <member refid="classfactory__method_1_1FactoryAcceptCandidate_1a3f5e82869758bc8a38c9ffdf56f44455" prot="public" virt="non-virtual"><scope>factory_method::FactoryAcceptCandidate</scope><name>createAcceptCandidate</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

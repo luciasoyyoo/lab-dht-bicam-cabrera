@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="es">
+  <compounddef id="classmetaheuristics_1_1generators_1_1InstanceEE" kind="class" language="Java" prot="public">
+    <compoundname>metaheuristics::generators::InstanceEE</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Runnable</basecompoundref>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1InstanceEE_1a470b5e7e9cbee9f2b8bc584f1a36d810" prot="private" static="yes" mutable="no">
+        <type>final Logger</type>
+        <definition>final Logger metaheuristics.generators.InstanceEE.LOGGER</definition>
+        <argsstring></argsstring>
+        <name>LOGGER</name>
+        <qualifiedname>metaheuristics.generators.InstanceEE.LOGGER</qualifiedname>
+        <initializer>= Logger.getLogger(InstanceEE.class.getName())</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/InstanceEE.java" line="12" column="29" bodyfile="practica5/src/main/java/metaheuristics/generators/InstanceEE.java" bodystart="12" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1InstanceEE_1a0b7588c73c2a82f79b2282c83bf4b9c8" compoundref="InstanceEE_8java" startline="19" endline="38">metaheuristics.generators.InstanceEE.run</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classmetaheuristics_1_1generators_1_1InstanceEE_1a6d98a494ddfe4fb1042817618cd825f0" prot="private" static="no" mutable="no">
+        <type>boolean</type>
+        <definition>boolean metaheuristics.generators.InstanceEE.terminate</definition>
+        <argsstring></argsstring>
+        <name>terminate</name>
+        <qualifiedname>metaheuristics.generators.InstanceEE.terminate</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/InstanceEE.java" line="14" column="17" bodyfile="practica5/src/main/java/metaheuristics/generators/InstanceEE.java" bodystart="14" bodyend="-1"/>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1InstanceEE_1a597780fabf84aabd766637b679b66ecf" compoundref="InstanceEE_8java" startline="44" endline="46">metaheuristics.generators.InstanceEE.isTerminate</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1InstanceEE_1a0b7588c73c2a82f79b2282c83bf4b9c8" compoundref="InstanceEE_8java" startline="19" endline="38">metaheuristics.generators.InstanceEE.run</referencedby>
+        <referencedby refid="classmetaheuristics_1_1generators_1_1InstanceEE_1a971c0edca64fe1d19463918c7f760837" compoundref="InstanceEE_8java" startline="52" endline="54">metaheuristics.generators.InstanceEE.setTerminate</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1InstanceEE_1a0b7588c73c2a82f79b2282c83bf4b9c8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheuristics.generators.InstanceEE.run</definition>
+        <argsstring>()</argsstring>
+        <name>run</name>
+        <qualifiedname>metaheuristics.generators.InstanceEE.run</qualifiedname>
+        <briefdescription>
+<para>run - create an instance of the Evolution Strategies generator. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/InstanceEE.java" line="19" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/InstanceEE.java" bodystart="19" bodyend="38"/>
+        <references refid="classfactory__method_1_1FactoryGenerator_1a76c269b114cbf643e92a7467b7cf21f7" compoundref="FactoryGenerator_8java" startline="25" endline="29">factory_method.FactoryGenerator.createGenerator</references>
+        <references refid="enummetaheuristics_1_1generators_1_1GeneratorType_1afc90843afb31f8fd742441578f70e188" compoundref="GeneratorType_8java" startline="8">metaheuristics.generators.GeneratorType.EvolutionStrategies</references>
+        <references refid="classmetaheuristics_1_1generators_1_1MultiGenerator_1ab331905baebb433340e05d19e174340b" compoundref="MultiGenerator_8java" startline="161" endline="164">metaheuristics.generators.MultiGenerator.getListGenerators</references>
+        <references refid="classmetaheuristics_1_1generators_1_1Generator_1a5a123306b43c42d28cd1d6e17f8067a5">metaheuristics.generators.Generator.getType</references>
+        <references refid="classmetaheuristics_1_1generators_1_1InstanceEE_1a470b5e7e9cbee9f2b8bc584f1a36d810" compoundref="InstanceEE_8java" startline="12">metaheuristics.generators.InstanceEE.LOGGER</references>
+        <references refid="classmetaheuristics_1_1generators_1_1InstanceEE_1a6d98a494ddfe4fb1042817618cd825f0" compoundref="InstanceEE_8java" startline="14">metaheuristics.generators.InstanceEE.terminate</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1InstanceEE_1a597780fabf84aabd766637b679b66ecf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean metaheuristics.generators.InstanceEE.isTerminate</definition>
+        <argsstring>()</argsstring>
+        <name>isTerminate</name>
+        <qualifiedname>metaheuristics.generators.InstanceEE.isTerminate</qualifiedname>
+        <briefdescription>
+<para>isTerminate - check if the instance is terminated. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true if terminated, false otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/InstanceEE.java" line="44" column="16" bodyfile="practica5/src/main/java/metaheuristics/generators/InstanceEE.java" bodystart="44" bodyend="46"/>
+        <references refid="classmetaheuristics_1_1generators_1_1InstanceEE_1a6d98a494ddfe4fb1042817618cd825f0" compoundref="InstanceEE_8java" startline="14">metaheuristics.generators.InstanceEE.terminate</references>
+      </memberdef>
+      <memberdef kind="function" id="classmetaheuristics_1_1generators_1_1InstanceEE_1a971c0edca64fe1d19463918c7f760837" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void metaheuristics.generators.InstanceEE.setTerminate</definition>
+        <argsstring>(boolean terminate)</argsstring>
+        <name>setTerminate</name>
+        <qualifiedname>metaheuristics.generators.InstanceEE.setTerminate</qualifiedname>
+        <param>
+          <type>boolean</type>
+          <declname>terminate</declname>
+        </param>
+        <briefdescription>
+<para>setTerminate - set the termination status of the instance. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>terminate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true to terminate, false to continue </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/metaheuristics/generators/InstanceEE.java" line="52" column="13" bodyfile="practica5/src/main/java/metaheuristics/generators/InstanceEE.java" bodystart="52" bodyend="54"/>
+        <references refid="classmetaheuristics_1_1generators_1_1InstanceEE_1a6d98a494ddfe4fb1042817618cd825f0" compoundref="InstanceEE_8java" startline="14">metaheuristics.generators.InstanceEE.terminate</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="classmetaheuristics_1_1generators_1_1InstanceEE" kindref="compound">InstanceEE</ref> - class that implements the Runnable interface to create an instance of. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Runnable</label>
+      </node>
+      <node id="1">
+        <label>metaheuristics.generators.InstanceEE</label>
+        <link refid="classmetaheuristics_1_1generators_1_1InstanceEE"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Runnable</label>
+      </node>
+      <node id="1">
+        <label>metaheuristics.generators.InstanceEE</label>
+        <link refid="classmetaheuristics_1_1generators_1_1InstanceEE"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="practica5/src/main/java/metaheuristics/generators/InstanceEE.java" line="10" column="7" bodyfile="practica5/src/main/java/metaheuristics/generators/InstanceEE.java" bodystart="10" bodyend="56"/>
+    <listofallmembers>
+      <member refid="classmetaheuristics_1_1generators_1_1InstanceEE_1a597780fabf84aabd766637b679b66ecf" prot="public" virt="non-virtual"><scope>metaheuristics::generators::InstanceEE</scope><name>isTerminate</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1InstanceEE_1a470b5e7e9cbee9f2b8bc584f1a36d810" prot="private" virt="non-virtual"><scope>metaheuristics::generators::InstanceEE</scope><name>LOGGER</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1InstanceEE_1a0b7588c73c2a82f79b2282c83bf4b9c8" prot="public" virt="non-virtual"><scope>metaheuristics::generators::InstanceEE</scope><name>run</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1InstanceEE_1a971c0edca64fe1d19463918c7f760837" prot="public" virt="non-virtual"><scope>metaheuristics::generators::InstanceEE</scope><name>setTerminate</name></member>
+      <member refid="classmetaheuristics_1_1generators_1_1InstanceEE_1a6d98a494ddfe4fb1042817618cd825f0" prot="private" virt="non-virtual"><scope>metaheuristics::generators::InstanceEE</scope><name>terminate</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

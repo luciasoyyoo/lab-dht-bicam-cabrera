@@ -1,0 +1,46 @@
+\doxysection{Generator.\+java}
+\hypertarget{Generator_8java_source}{}\label{Generator_8java_source}\index{Generator.java@{Generator.java}}
+\mbox{\hyperlink{Generator_8java}{Ir a la documentación de este archivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Generator_8java_source_l00001}00001\ \textcolor{keyword}{package\ }metaheuristics.generators;}
+\DoxyCodeLine{\Hypertarget{Generator_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{Generator_8java_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{Generator_8java_source_l00004}00004\ \textcolor{keyword}{import}\ java.lang.reflect.InvocationTargetException;}
+\DoxyCodeLine{\Hypertarget{Generator_8java_source_l00005}00005\ \textcolor{keyword}{import}\ java.util.List;}
+\DoxyCodeLine{\Hypertarget{Generator_8java_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{Generator_8java_source_l00007}00007\ \textcolor{keyword}{import}\ problem.definition.State;}
+\DoxyCodeLine{\Hypertarget{Generator_8java_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{Generator_8java_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{Generator_8java_source_l00013}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator}{00013}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{abstract}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator}{Generator}}\ \{}
+\DoxyCodeLine{\Hypertarget{Generator_8java_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{Generator_8java_source_l00015}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a06f6f7622b9ce32590eadbdf6bf962b5}{00015}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{abstract}\ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a06f6f7622b9ce32590eadbdf6bf962b5}{generate}}(Integer\ operatornumber)\ \textcolor{keywordflow}{throws}\ IllegalArgumentException,\ SecurityException,\ ClassNotFoundException,\ InstantiationException,\ IllegalAccessException,\ InvocationTargetException,\ NoSuchMethodException;}
+\DoxyCodeLine{\Hypertarget{Generator_8java_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{Generator_8java_source_l00017}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_aa1c5878953f2111221b21cb9b1e6cc9f}{00017}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{abstract}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_aa1c5878953f2111221b21cb9b1e6cc9f}{updateReference}}(\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ stateCandidate,\ Integer\ countIterationsCurrent)\ \textcolor{keywordflow}{throws}\ IllegalArgumentException,\ SecurityException,\ ClassNotFoundException,\ InstantiationException,\ IllegalAccessException,\ InvocationTargetException,\ NoSuchMethodException;}
+\DoxyCodeLine{\Hypertarget{Generator_8java_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{Generator_8java_source_l00019}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_aa56dd45a45776f6023b9f74179cc6384}{00019}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{abstract}\ \mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_aa56dd45a45776f6023b9f74179cc6384}{getReference}}();}
+\DoxyCodeLine{\Hypertarget{Generator_8java_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{Generator_8java_source_l00021}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_aa9f7c4c983705f843b8fcc81e4aa8ba4}{00021}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{abstract}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_aa9f7c4c983705f843b8fcc81e4aa8ba4}{setInitialReference}}\ (\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ stateInitialRef);}
+\DoxyCodeLine{\Hypertarget{Generator_8java_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{Generator_8java_source_l00023}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a5a123306b43c42d28cd1d6e17f8067a5}{00023}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{abstract}\ \mbox{\hyperlink{enummetaheuristics_1_1generators_1_1GeneratorType}{GeneratorType}}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a5a123306b43c42d28cd1d6e17f8067a5}{getType}}\ ();}
+\DoxyCodeLine{\Hypertarget{Generator_8java_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{Generator_8java_source_l00025}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_ae168237b306de55fe4d6dfda75c7cd13}{00025}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{abstract}\ List<State>\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_ae168237b306de55fe4d6dfda75c7cd13}{getReferenceList}}();}
+\DoxyCodeLine{\Hypertarget{Generator_8java_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{Generator_8java_source_l00027}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_aee09d724c1b3040e7a7ad0b64e341c96}{00027}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{abstract}\ List<State>\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_aee09d724c1b3040e7a7ad0b64e341c96}{getSonList}}\ ();}
+\DoxyCodeLine{\Hypertarget{Generator_8java_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{Generator_8java_source_l00029}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a3513d3953ecc97683f38bcb662b74b9b}{00029}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{abstract}\ \textcolor{keywordtype}{boolean}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a3513d3953ecc97683f38bcb662b74b9b}{awardUpdateREF}}(\mbox{\hyperlink{classproblem_1_1definition_1_1State}{State}}\ stateCandidate);}
+\DoxyCodeLine{\Hypertarget{Generator_8java_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{Generator_8java_source_l00031}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a8b3c66b57b4c739666989fbce667eb40}{00031}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{abstract}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a8b3c66b57b4c739666989fbce667eb40}{setWeight}}(\textcolor{keywordtype}{float}\ weight);}
+\DoxyCodeLine{\Hypertarget{Generator_8java_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{Generator_8java_source_l00033}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a64f2b824081c7af593bf9aa8eabf2c9e}{00033}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{abstract}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a64f2b824081c7af593bf9aa8eabf2c9e}{getWeight}}();}
+\DoxyCodeLine{\Hypertarget{Generator_8java_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{Generator_8java_source_l00035}00035\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Generator_8java_source_l00036}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a75d7f30dd2cb3f92475db8525ac7c6e7}{00036}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{abstract}\ \textcolor{keywordtype}{float}[]\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a75d7f30dd2cb3f92475db8525ac7c6e7}{getTrace}}();}
+\DoxyCodeLine{\Hypertarget{Generator_8java_source_l00037}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a3c0145210385b6257c8fc20cac1f830a}{00037}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a3c0145210385b6257c8fc20cac1f830a}{countGender}};}
+\DoxyCodeLine{\Hypertarget{Generator_8java_source_l00038}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a43815f3944c514ba3156b0e68482befa}{00038}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_a43815f3944c514ba3156b0e68482befa}{countBetterGender}};}
+\DoxyCodeLine{\Hypertarget{Generator_8java_source_l00039}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_ac5bace71f51c16b611ede3ed53263473}{00039}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{abstract}\ \textcolor{keywordtype}{int}[]\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_ac5bace71f51c16b611ede3ed53263473}{getListCountBetterGender}}();}
+\DoxyCodeLine{\Hypertarget{Generator_8java_source_l00040}\mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_ac5d6d45ee8017fb87d80aa952edfc34e}{00040}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{abstract}\ \textcolor{keywordtype}{int}[]\ \mbox{\hyperlink{classmetaheuristics_1_1generators_1_1Generator_ac5d6d45ee8017fb87d80aa952edfc34e}{getListCountGender}}();}
+\DoxyCodeLine{\Hypertarget{Generator_8java_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{Generator_8java_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{Generator_8java_source_l00043}00043\ \}}
+
+\end{DoxyCode}

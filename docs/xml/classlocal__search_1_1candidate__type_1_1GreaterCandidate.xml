@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.15.0" xml:lang="es">
+  <compounddef id="classlocal__search_1_1candidate__type_1_1GreaterCandidate" kind="class" language="Java" prot="public">
+    <compoundname>local_search::candidate_type::GreaterCandidate</compoundname>
+    <basecompoundref refid="classlocal__search_1_1candidate__type_1_1SearchCandidate" prot="public" virt="non-virtual">local_search.candidate_type.SearchCandidate</basecompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classlocal__search_1_1candidate__type_1_1GreaterCandidate_1a2d2d47efc889cca9b440e64746b67f46" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref></type>
+        <definition>State local_search.candidate_type.GreaterCandidate.stateSearch</definition>
+        <argsstring>(List&lt; State &gt; listNeighborhood)</argsstring>
+        <name>stateSearch</name>
+        <qualifiedname>local_search.candidate_type.GreaterCandidate.stateSearch</qualifiedname>
+        <reimplements refid="classlocal__search_1_1candidate__type_1_1SearchCandidate_1a0f10adc1526fb08f54427c50734f8abf">stateSearch</reimplements>
+        <param>
+          <type>List&lt; <ref refid="classproblem_1_1definition_1_1State" kindref="compound">State</ref> &gt;</type>
+          <declname>listNeighborhood</declname>
+        </param>
+        <exceptions> throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException </exceptions>
+        <briefdescription>
+<para>Uses ThreadLocalRandom for algorithmic (non-cryptographic) randomness. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This RNG is used to pick a random neighbor when multiple equal bests are found and is not security-sensitive. Suppress Sonar S2245. Select the greatest neighbor from the list.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>listNeighborhood</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>list of neighbor states </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the neighbor with the greatest evaluation (primary objective) </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>ReflectiveOperationException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>propagated from potential evaluations </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="practica5/src/main/java/local_search/candidate_type/GreaterCandidate.java" line="37" column="14" bodyfile="practica5/src/main/java/local_search/candidate_type/GreaterCandidate.java" bodystart="37" bodyend="58"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para><ref refid="classlocal__search_1_1candidate__type_1_1GreaterCandidate" kindref="compound">GreaterCandidate</ref> - choose the neighbor with the greatest evaluation. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Scans the provided neighborhood and returns the state with the highest primary objective value. If multiple candidates tie, a random choice among them is returned. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>local_search.candidate_type.GreaterCandidate</label>
+        <link refid="classlocal__search_1_1candidate__type_1_1GreaterCandidate"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>local_search.candidate_type.SearchCandidate</label>
+        <link refid="classlocal__search_1_1candidate__type_1_1SearchCandidate"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>local_search.candidate_type.GreaterCandidate</label>
+        <link refid="classlocal__search_1_1candidate__type_1_1GreaterCandidate"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>local_search.candidate_type.SearchCandidate</label>
+        <link refid="classlocal__search_1_1candidate__type_1_1SearchCandidate"/>
+      </node>
+    </collaborationgraph>
+    <location file="practica5/src/main/java/local_search/candidate_type/GreaterCandidate.java" line="21" column="7" bodyfile="practica5/src/main/java/local_search/candidate_type/GreaterCandidate.java" bodystart="21" bodyend="59"/>
+    <listofallmembers>
+      <member refid="classlocal__search_1_1candidate__type_1_1GreaterCandidate_1a2d2d47efc889cca9b440e64746b67f46" prot="public" virt="non-virtual"><scope>local_search::candidate_type::GreaterCandidate</scope><name>stateSearch</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
