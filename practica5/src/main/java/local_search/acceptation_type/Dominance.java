@@ -8,11 +8,28 @@ import metaheuristics.generators.MultiobjectiveHillClimbingDistance;
 import problem.definition.Problem.ProblemType;
 import problem.definition.State;
 
+/**
+ * Dominance - Utilities for Pareto dominance comparisons.
+ *
+ * @brief Provides helpers to test dominance relations between multi-objective
+ *        solution states and to maintain a Pareto front (list of non-dominated
+ *        solutions).
+ */
 public class Dominance {
 
-	//---------------------------------M�todos que se utilizan en los algoritmos multiobjetivo-------------------------------------------------------//
-	//Funci�n que determina si la soluci�n X domina a alguna de las soluciones no dominadas de una lista
+	//---------------------------------Metodos que se utilizan en los algoritmos multiobjetivo-------------------------------------------------------//
+	//Funcion que determina si la solucion X domina a alguna de las soluciones no dominadas de una lista
 	//Devuelve la lista actualizada y true si fue adicionada a la lista o false de lo contrario
+	/**
+	 * Check whether solutionX dominates members of the supplied list and update
+	 * the list accordingly. If solutionX is not dominated and not present it is
+	 * added.
+	 *
+	 * @param solutionX the candidate solution to test
+	 * @param list the list of non-dominated solutions (Pareto front)
+	 * @return true if the solution was added to the list (i.e. it is non-dominated
+	 *         and not duplicate), false otherwise
+	 */
 	public boolean listDominance(State solutionX, List<State> list){
 		boolean domain = false;
 		for (int i = 0; i < list.size() && domain == false; i++) {
@@ -54,47 +71,20 @@ public class Dominance {
 		}
 		return false;
 
-		/*boolean domain = false;
-		List<State> deletedSolution = new ArrayList<State>();
-		for (int i = 0; i < list.size() && domain == false; i++) {
-			State element = list.get(i);
-			//Si la soluci�n X domina a la soluci�n de la lista
-			if(dominance(solutionX, element) == true){
-				//Se elimina el elemento de la lista
-				deletedSolution.add(element);
-			}
-			if(dominance(element, solutionX) == true){
-				domain = true;
-			}
-		}
-		//Si la soluci�n X no fue dominada
-		if(domain == false){
-			//Comprobando que la soluci�n no exista
-			boolean found = false;
-			for (int k = 0; k < list.size() && found == false; k++) {
-				State element = list.get(k);
-				found = solutionX.Comparator(element);
-			}
-			//Si la soluci�n no existe
-			if(found == false){
 
-				//Se eliminan de la lista de soluciones optimas de pareto aquellas que fueron dominadas por la soluci�n candidata
-				list.removeAll(deletedSolution);
-				//Se guarda la soluci�n candidata en la lista de soluciones �ptimas de Pareto
-				list.add(solutionX.clone());
-				if(Strategy.getStrategy().getProblem()!= null){
-					Strategy.getStrategy().listRefPoblacFinal = list;
-				}
-				return true;
-			}
-		}
-
-		return false;*/
 	}
 
 
-	//Funci�n que devuelve true si solutionX domina a solutionY
-	public boolean dominance(State solutionX,  State solutionY)	{
+	//Funcion que devuelve true si solutionX domina a solutionY
+	/**
+	 * Determine whether solutionX Pareto-dominates solutionY.
+	 *
+	 * @param solutionX the candidate solution
+	 * @param solutionY the reference solution
+	 * @return true if solutionX dominates solutionY according to the
+	 *         problem objective type, false otherwise
+	 */
+	public boolean dominance(State solutionX,  State solutionY) 	{
 		boolean dominance = false;
 		int countBest = 0;
 		int countEquals = 0;

@@ -8,6 +8,12 @@ import java.util.concurrent.ThreadLocalRandom;
 
 import problem.definition.State;
 
+/**
+ * AcceptMulticase - Multi-case acceptation strategy for multiobjective algorithms.
+ *
+ * @brief Decides whether to accept a candidate state based on dominance,
+ *        rank and simulated annealing like probabilities.
+ */
 public class AcceptMulticase extends AcceptableCandidate {
 	/**
      * Uses ThreadLocalRandom for algorithmic (non-cryptographic) randomness.
@@ -17,6 +23,14 @@ public class AcceptMulticase extends AcceptableCandidate {
      */
     @SuppressWarnings("squid:S2245")
 	@Override
+	/**
+	 * Evaluate a candidate for acceptance using dominance, rank and
+	 * probabilistic criteria.
+	 *
+	 * @param stateCurrent  the current state
+	 * @param stateCandidate the candidate state
+	 * @return true if the candidate should be accepted, false otherwise
+	 */
 	public Boolean acceptCandidate(State stateCurrent, State stateCandidate) {
 		// TODO Auto-generated method stub
 		Boolean accept = false;
