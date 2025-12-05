@@ -12,9 +12,17 @@ import factory_interface.IFFactoryCandidate;
 
 
 
+/**
+ * FactoryCandidate - Interface for creating search candidates.
+ */
 public class FactoryCandidate implements IFFactoryCandidate{
 	private SearchCandidate searchcandidate;
 	
+	/**
+	 * createSearchCandidate - descripcion (añade detalles).
+	 * @param typeCandidate 
+	 * @return 
+	 */
 	public SearchCandidate createSearchCandidate(CandidateType typeCandidate) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
 		String className = "local_search.candidate_type." + typeCandidate.toString();
 		searchcandidate = (SearchCandidate) FactoryLoader.getInstance(className);
