@@ -8,6 +8,9 @@ import evolutionary_algorithms.complement.DistributionType;
 
 
 
+/**
+ * IFFactoryDistribution - Interface for creating distribution strategies.
+ */
 public interface IFFactoryDistribution {
 	Distribution createDistribution(DistributionType typedistribution) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException;
 }
