@@ -7,6 +7,9 @@ import java.util.List;
 import problem.definition.State;
 
 
+/**
+ * Generator - abstract base class for solution generators in metaheuristic algorithms.
+ */
 public abstract class Generator {
 
 	public abstract State generate(Integer operatornumber) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException;

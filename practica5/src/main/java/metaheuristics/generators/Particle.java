@@ -10,6 +10,9 @@ import metaheurictics.strategy.Strategy;
 import problem.definition.Problem.ProblemType;
 import problem.definition.State;
 
+/**
+ * Particle - class that represents a particle in the Particle Swarm Optimization algorithm.
+ */
 public class Particle extends Generator {
 
 	private State statePBest;
@@ -17,6 +20,9 @@ public class Particle extends Generator {
 	private ArrayList<Object> velocity;
 	
 	
+	/**
+	 * Particle - method constructor.
+	 */
 	public Particle() {
 		super();
 		this.stateActual = new State();
@@ -24,6 +30,12 @@ public class Particle extends Generator {
 		this.velocity = new ArrayList<Object>();
 	}
 	
+	/**
+	 * Particle - method constructor.
+	 * @param statePBest 
+	 * @param stateActual 
+	 * @param velocity 
+	 */
 	public Particle(State statePBest, State stateActual, ArrayList<Object> velocity) {
 		super();
 		this.statePBest = statePBest;
@@ -31,30 +43,65 @@ public class Particle extends Generator {
 		this.velocity = velocity;
 	}
 
+	/**
+	 * getVelocity - get the velocity of the particle.
+	 * @return the velocity of the particle
+	 */
 	public ArrayList<Object> getVelocity() {
 		return velocity;
 	}
 
+	/**
+	 * setVelocity - set the velocity of the particle.
+	 * @param velocity the velocity to set 
+	 */
 	public void setVelocity(ArrayList<Object> velocity) {
 		this.velocity = velocity;
 	}
 
+	/**
+	 * getStatePBest - get the personal best state of the particle.
+	 * @return the personal best state of the particle
+	 */
 	public State getStatePBest() {
 		return statePBest;
 	}
 
+	/**
+	 * setStatePBest - set the personal best state of the particle.
+	 * @param statePBest the personal best state to set
+	 */
 	public void setStatePBest(State statePBest) {
 		this.statePBest = statePBest;
 	}
 
+	/**
+	 * getStateActual - get the current state of the particle.
+	 * @return the current state of the particle
+	 */
 	public State getStateActual() {
 		return stateActual;
 	}
 
+	/**
+	 * setStateActual - set the current state of the particle.
+	 * @param stateActual the current state to set
+	 */
 	public void setStateActual(State stateActual) {
 		this.stateActual = stateActual;
 	}
-
+	/**
+	 * generate - generate a new state for the particle.
+	 * @param operatornumber
+	 * @return
+	 * @throws IllegalArgumentException
+	 * @throws SecurityException
+	 * @throws ClassNotFoundException
+	 * @throws InstantiationException
+	 * @throws IllegalAccessException
+	 * @throws InvocationTargetException
+	 * @throws NoSuchMethodException
+	 */
 	@Override
 	public State generate(Integer operatornumber)
 			throws IllegalArgumentException, SecurityException,
@@ -105,12 +152,7 @@ public class Particle extends Generator {
            	}
         	actualVelocity.add(ParticleSwarmOptimization.constriction*(inertia + cognitive + social));
         }
-    /*    if (ParticleSwarmOptimization.binary == true){
-    		for (int i = 0; i < actualVelocity.size(); i++) {
-				binaryVelocity.add((3 + (Integer)actualVelocity.get(i))%3 - 1);     //FORMULA DE LA VELOCIDAD PARA CODIFICACION BINARIA  
-			}
-    		return binaryVelocity;
-    	}*/
+ 
         return actualVelocity;
     }
 	
@@ -141,17 +183,22 @@ public class Particle extends Generator {
 			     	}
 			  }
 	          return binaryCode;
-	}
-			/*	if(ParticleSwarmOptimization.binary == true){//wendy
-					for (int i = 0; i < newCode.size(); i++) {
-						binaryCode.add(4 + ((Integer)newCode.get(i))%2);     //FORMULA DE LA POSICION PARA CODIFICACION BINARIA  
-					}
-					return binaryCode;
-				}*/
+		}
 		
 	}
 	
-
+	/**
+	 * updateReference - update the reference state and the personal best state of the particle.
+	 * @param stateCandidate
+	 * @param countIterationsCurrent
+	 * @throws IllegalArgumentException
+	 * @throws SecurityException
+	 * @throws ClassNotFoundException
+	 * @throws InstantiationException
+	 * @throws IllegalAccessException
+	 * @throws InvocationTargetException
+	 * @throws NoSuchMethodException
+	 */
 	@Override
 	public void updateReference(State stateCandidate,
 			Integer countIterationsCurrent) throws IllegalArgumentException,
@@ -175,70 +222,114 @@ public class Particle extends Generator {
 	}
 
 	@Override
+	/**
+	 * getReference - get the reference state.
+	 * @return reference state
+	 */
 	public State getReference() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
+	/**
+	 * setInitialReference - set the initial reference state for the particle.
+	 * @param stateInitialRef 
+	 */
 	public void setInitialReference(State stateInitialRef) {
 		// TODO Auto-generated method stub
 
 	}
 
 	@Override
+	/**
+	 * getType - get the type of the generator.
+	 * @return return the type of the generator
+	 */
 	public GeneratorType getType() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
+	/**
+	 * getReferenceList - get the list of reference states.
+	 * @return list of reference states
+	 */
 	public List<State> getReferenceList() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
+	/**
+	 * getSonList - get the list of son states.
+	 * @return list of son states
+	 */
 	public List<State> getSonList() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
+	/**
+	 * awardUpdateREF - award the update of the reference state.
+	 * @param stateCandidate 
+	 * @return  return true if the reference state was updated, false otherwise
+	 */
 	public boolean awardUpdateREF(State stateCandidate) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
+	/**
+	 * setWeight - set the weight of the particle.
+	 * @param weight 
+	 */
 	public void setWeight(float weight) {
 		// TODO Auto-generated method stub
 
 	}
 
 	@Override
+	/**
+	 * getWeight - get the weight of the particle.
+	 * @return return the weight of the particle
+	 */
 	public float getWeight() {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
+	/**
+	 * getTrace - get the trace of the particle.
+	 * @return return the trace of the particle
+	 */
 	public float[] getTrace() {
 		// TODO Auto-generated method stub
 		return new float[0];
 	}
 
 	@Override
+	/**
+	 * getListCountBetterGender - get the list of counts of better genders.
+	 * @return list of counts of better genders
+	 */
 	public int[] getListCountBetterGender() {
 		// TODO Auto-generated method stub
 		return new int[0];
 	}
 
 	@Override
+	/**
+	 * getListCountGender - get the list of counts of genders.
+	 * @return list of counts of genders
+	 */
 	public int[] getListCountGender() {
 		// TODO Auto-generated method stub
 		return new int[0];
 	}
-
 
 }

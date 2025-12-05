@@ -5,12 +5,19 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 
+/**
+ * InstanceDE - class that implements the Runnable interface to create an instance of
+ *               the Distribution Estimation Algorithm generator.
+ */
 public class InstanceDE implements Runnable {
 
 	private static final Logger LOGGER = Logger.getLogger(InstanceDE.class.getName());
 
 	private boolean terminate = false;
     
+	/**
+	 * run - create an instance of the Distribution Estimation Algorithm generator.
+	 */
 	public void run() {
 		FactoryGenerator ifFactoryGenerator = new FactoryGenerator();
 		Generator generatorDE = null;
@@ -33,10 +40,18 @@ public class InstanceDE implements Runnable {
 		terminate = true;
 	}
 
+	/**
+	 * isTerminate - check if the instance is terminated.
+	 * @return true if terminated, false otherwise
+	 */
 	public boolean isTerminate() {
 		return terminate;
 	}
 
+	/**
+	 * setTerminate - set the termination status of the instance.
+	 * @param terminate true to terminate, false to continue
+	 */
 	public void setTerminate(boolean terminate) {
 		this.terminate = terminate;
 	}

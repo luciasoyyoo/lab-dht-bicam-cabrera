@@ -22,6 +22,9 @@ import problem.definition.Problem.ProblemType;
 import factory_interface.IFFactoryAcceptCandidate;
 import factory_method.FactoryAcceptCandidate;
 
+/**
+ * TabuSearch - class that implements the Tabu Search metaheuristic.
+ */
 public class TabuSearch extends Generator {
 
 	private CandidateValue candidatevalue;
@@ -40,14 +43,25 @@ public class TabuSearch extends Generator {
     private float[] listTrace = new float[1200000];
 
 
+    /**
+     * getTypeGenerator - get the type of the generator.
+     * @return the type of the generator
+     */
     public GeneratorType getTypeGenerator() {
 		return typeGenerator;
 	}
 
+	/**
+	 * setTypeGenerator - set the type of the generator.
+	 * @param typeGenerator the type of the generator to set
+	 */
 	public void setTypeGenerator(GeneratorType typeGenerator) {
 		this.typeGenerator = typeGenerator;
 	}
 
+	/**
+	 * TabuSearch - constructor for the Tabu Search metaheuristic.
+	 */
 	public TabuSearch() {
     	super();
 		this.typeAcceptation = AcceptType.AcceptAnyone;
@@ -73,29 +87,49 @@ public class TabuSearch extends Generator {
 	}
 
 	@Override
+	/**
+	 * generate - method to generate a new state.
+	 * @param operatornumber 
+	 * @return the generated state
+	 */
 	public State generate(Integer operatornumber) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
-		//ArrayList<State>list=new ArrayList<State>();
 		List<State> neighborhood = Strategy.getStrategy().getProblem().getOperator().generatedNewState(stateReferenceTS, operatornumber);
 	    State statecandidate = candidatevalue.stateCandidate(stateReferenceTS, typeCandidate, strategy, operatornumber, neighborhood);
-	   // list.add(statecandidate);
 	    return statecandidate;
 	}
 
 	@Override
+	/**
+	 * getReference - get the reference state.
+	 * @return the reference state
+	 */
 	public State getReference() {
 		return stateReferenceTS;
 	}
 
 	@Override
+	/**
+	 * setInitialReference - set the initial reference state.
+	 * @param stateInitialRef the initial reference state to set
+	 */
 	public void setInitialReference(State stateInitialRef) {
 		this.stateReferenceTS = stateInitialRef;
 	}
 
+	/**
+	 * setStateRef - set the reference state.
+	 * @param stateRef the reference state to set
+	 */
 	public void setStateRef(State stateRef) {
 		this.stateReferenceTS = stateRef;
 	}
 
-	@Override            //******************no lo entiendo
+	@Override            
+	/**
+	 * updateReference - update the reference state.
+	 * @param stateCandidate 
+	 * @param countIterationsCurrent 
+	 */
 	public void updateReference(State stateCandidate, Integer countIterationsCurrent)throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
 		ifacceptCandidate = new FactoryAcceptCandidate();
 		AcceptableCandidate candidate = ifacceptCandidate.createAcceptCandidate(typeAcceptation);
@@ -131,60 +165,100 @@ public class TabuSearch extends Generator {
 				}
 			}
 		}
-//		getReferenceList();
 	}
 
 	@Override
+	/**
+	 * getType - get the type of the generator.
+	 * @return the type of the generator
+	 */
 	public GeneratorType getType() {
 		return this.typeGenerator;
 	}
 
 	@Override
+	/**
+	 * getReferenceList - get the list of reference states.
+	 * @return the list of reference states
+	 */
 	public List<State> getReferenceList() {
 		listStateReference.add(stateReferenceTS);
 		return new ArrayList<State>(listStateReference);
 	}
 
 	@Override
+	/**
+	 * getSonList - get the list of child states.
+	 * @return the list of child states
+	 */
 	public List<State> getSonList() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
+	/**
+	 * setTypeCandidate - set the type of the candidate.
+	 * @param typeCandidate the type of the candidate to set
+	 */
 	public void setTypeCandidate(CandidateType typeCandidate){
 		this.typeCandidate = typeCandidate;
 	}
 
 	@Override
+	/**
+	 * awardUpdateREF - award the update of the reference state.
+	 * @param stateCandidate 
+	 * @return 
+	 */
 	public boolean awardUpdateREF(State stateCandidate) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
+	/**
+	 * getWeight - get the weight of the generator.
+	 * @return the weight of the generator
+	 */
 	public float getWeight() {
 		// TODO Auto-generated method stub
 		return this.weight;
 	}
 
 	@Override
+	/**
+	 * setWeight - set the weight of the generator.
+	 * @param weight the weight to set
+	 */
 	public void setWeight(float weight) {
 		// TODO Auto-generated method stub
 		this.weight = weight;
 	}
 
 	@Override
+	/**
+	 * getListCountBetterGender - get the list of counts for better gender.
+	 * @return the list of counts for better gender
+	 */
 	public int[] getListCountBetterGender() {
 		// TODO Auto-generated method stub
 		return (this.listCountBetterGender == null) ? new int[0] : Arrays.copyOf(this.listCountBetterGender, this.listCountBetterGender.length);
 	}
 
 	@Override
+	/**
+	 * getListCountGender - get the list of counts for gender.
+	 * @return the list of counts for gender
+	 */
 	public int[] getListCountGender() {
 		// TODO Auto-generated method stub
 		return (this.listCountGender == null) ? new int[0] : Arrays.copyOf(this.listCountGender, this.listCountGender.length);
 	}
 
 	@Override
+	/**
+	 * getTrace - get the trace of the generator.
+	 * @return the trace of the generator
+	 */
 	public float[] getTrace() {
 		// TODO Auto-generated method stub
 		return (this.listTrace == null) ? new float[0] : Arrays.copyOf(this.listTrace, this.listTrace.length);
