@@ -3,6 +3,7 @@ package metaheuristics.generators;
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -13,6 +14,7 @@ import problem.definition.Problem;
 import problem.definition.State;
 import testutils.TestHelper;
 import problem.definition.ObjetiveFunction;
+import problem.definition.Problem.ProblemType;
 import metaheurictics.strategy.Strategy;
 
 public class ParticleSwarmOptimizationTest {
@@ -201,5 +203,110 @@ public class ParticleSwarmOptimizationTest {
         assertEquals(1, pso.getListParticle().size());
         // listStateReference getter proxies to getListParticle
         assertEquals(1, pso.getListStateReference().size());
+    }
+
+    @AfterEach
+    public void tearDown() {
+        // Reset static state to avoid test interference
+        ParticleSwarmOptimization.setCoutSwarm(0);
+        ParticleSwarmOptimization.setCountParticleBySwarm(0);
+        ParticleSwarmOptimization.setCountRef(0);
+        ParticleSwarmOptimization.setLBest((State[]) null);
+        ParticleSwarmOptimization.setGBest(null);
+        ParticleSwarmOptimization.setCountCurrentIterPSO(0);
+        ParticleSwarmOptimization.setCountParticle(0);
+        Strategy.getStrategy().setProblem(null);
+        RandomSearch.listStateReference.clear();
+    }
+
+    @Test
+    public void testSettersAndCountRef() {
+        // set positive values
+        ParticleSwarmOptimization.setCountParticleBySwarm(2);
+        ParticleSwarmOptimization.setCoutSwarm(3);
+        assertEquals(6, ParticleSwarmOptimization.getCountRef());
+
+        // negative should throw
+        assertThrows(IllegalArgumentException.class, () -> ParticleSwarmOptimization.setCoutSwarm(-1));
+        assertThrows(IllegalArgumentException.class, () -> ParticleSwarmOptimization.setCountParticleBySwarm(-5));
+    }
+
+    @Test
+    public void testLBestDefensiveCopyAndSetAt() {
+        State s1 = new State();
+        s1.setEvaluation(new ArrayList<Double>(Arrays.asList(1.0)));
+        State s2 = new State();
+        s2.setEvaluation(new ArrayList<Double>(Arrays.asList(2.0)));
+
+        ParticleSwarmOptimization.setLBest(new State[] { s1, s2 });
+
+        State[] returned = ParticleSwarmOptimization.getLBest();
+        assertEquals(2, returned.length);
+
+        // modify returned copy should not affect subsequent getLBest() results
+        returned[0].setNumber(99);
+        State[] returned2 = ParticleSwarmOptimization.getLBest();
+        assertNotEquals(99, returned2[0].getNumber());
+
+        // set at valid index
+        State s3 = new State();
+        s3.setEvaluation(new ArrayList<Double>(Arrays.asList(7.5)));
+        ParticleSwarmOptimization.setLBestAt(1, s3);
+        State[] after = ParticleSwarmOptimization.getLBest();
+        assertEquals(7.5, after[1].getEvaluation().get(0));
+
+        // invalid indices are ignored (no exception)
+        ParticleSwarmOptimization.setLBestAt(-1, s3);
+        ParticleSwarmOptimization.setLBestAt(100, s3);
+    }
+
+    @Test
+    public void testGBestInicial_MaximizarAndMinimizar() {
+        State a = new State();
+        a.setEvaluation(new ArrayList<Double>(Arrays.asList(1.0)));
+        State b = new State();
+        b.setEvaluation(new ArrayList<Double>(Arrays.asList(2.0)));
+        State c = new State();
+        c.setEvaluation(new ArrayList<Double>(Arrays.asList(0.5)));
+
+    // ensure constructor does not overwrite our lBest: set coutSwarm first
+    ParticleSwarmOptimization.setCoutSwarm(3);
+
+    // Maximizar -> should pick the highest
+    Problem p = new Problem();
+    p.setTypeProblem(ProblemType.Maximizar);
+    Strategy.getStrategy().setProblem(p);
+
+    ParticleSwarmOptimization pso = new ParticleSwarmOptimization();
+    // constructor may allocate lBest array; set our desired array after construction
+    ParticleSwarmOptimization.setLBest(new State[] { a, b, c });
+    State bestMax = pso.gBestInicial();
+        assertEquals(2.0, bestMax.getEvaluation().get(0));
+
+        // Minimizar -> should pick the lowest
+        p.setTypeProblem(ProblemType.Minimizar);
+        Strategy.getStrategy().setProblem(p);
+    ParticleSwarmOptimization.setLBest(new State[] { a, b, c });
+    State bestMin = pso.gBestInicial();
+        assertEquals(0.5, bestMin.getEvaluation().get(0));
+    }
+
+    @Test
+    public void testArrayAccessorsReturnCopies() {
+        ParticleSwarmOptimization pso = new ParticleSwarmOptimization();
+        int[] better = pso.getListCountBetterGender();
+        int[] gender = pso.getListCountGender();
+        float[] trace = pso.getTrace();
+        assertNotNull(better);
+        assertNotNull(gender);
+        assertNotNull(trace);
+        assertTrue(better.length > 0);
+        assertTrue(gender.length > 0);
+        assertTrue(trace.length > 0);
+
+        // modify returned arrays shouldn't affect later calls
+        better[0] = 123;
+        int[] better2 = pso.getListCountBetterGender();
+        assertNotEquals(123, better2[0]);
     }
 }

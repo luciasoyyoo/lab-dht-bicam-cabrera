@@ -64,17 +64,17 @@ public class HillClimbingRestart extends Generator{
 	public State generate (Integer operatornumber) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
 	//ArrayList&lt;State&gt;list=new ArrayList&lt;State&gt;();
 	State statecandidate;
-<span class="pc bpc" id="L67" title="1 of 2 branches missed.">		if(count == Strategy.getStrategy().getCountCurrent()){</span>
+<span class="nc bnc" id="L67" title="All 2 branches missed.">		if(count == Strategy.getStrategy().getCountCurrent()){</span>
 <span class="nc" id="L68">			State stateR = new State(stateReferenceHC);</span>
 <span class="nc" id="L69">			listRef.add(stateR);</span>
 <span class="nc" id="L70">			stateReferenceHC = Strategy.getStrategy().getProblem().getOperator().generateRandomState(1).get(0);</span>
 <span class="nc" id="L71">			Strategy.getStrategy().getProblem().Evaluate(stateReferenceHC);</span>
 <span class="nc" id="L72">			count = count + countCurrent;</span>
 		}
-<span class="fc" id="L74">	List&lt;State&gt; neighborhood = Strategy.getStrategy().getProblem().getOperator().generatedNewState(stateReferenceHC, operatornumber);</span>
-<span class="fc" id="L75">	statecandidate = candidatevalue.stateCandidate(stateReferenceHC, typeCandidate, strategy, operatornumber, neighborhood);</span>
+<span class="nc" id="L74">	List&lt;State&gt; neighborhood = Strategy.getStrategy().getProblem().getOperator().generatedNewState(stateReferenceHC, operatornumber);</span>
+<span class="nc" id="L75">	statecandidate = candidatevalue.stateCandidate(stateReferenceHC, typeCandidate, strategy, operatornumber, neighborhood);</span>
 		//list.add(statecandidate);
-<span class="fc" id="L77">		return statecandidate;</span>
+<span class="nc" id="L77">		return statecandidate;</span>
 	}
 
 	@Override
@@ -84,24 +84,24 @@ public class HillClimbingRestart extends Generator{
 			IllegalAccessException, InvocationTargetException,
 			NoSuchMethodException {
 		// TODO Auto-generated method stub
-<span class="fc" id="L87">		ifacceptCandidate = new FactoryAcceptCandidate();</span>
-<span class="fc" id="L88">		AcceptableCandidate candidate = ifacceptCandidate.createAcceptCandidate(typeAcceptation);</span>
-<span class="fc" id="L89">		Boolean accept = candidate.acceptCandidate(stateReferenceHC, stateCandidate);</span>
-<span class="fc bfc" id="L90" title="All 2 branches covered.">		if(accept.equals(true))</span>
-<span class="fc" id="L91">		  stateReferenceHC = stateCandidate;</span>
+<span class="nc" id="L87">		ifacceptCandidate = new FactoryAcceptCandidate();</span>
+<span class="nc" id="L88">		AcceptableCandidate candidate = ifacceptCandidate.createAcceptCandidate(typeAcceptation);</span>
+<span class="nc" id="L89">		Boolean accept = candidate.acceptCandidate(stateReferenceHC, stateCandidate);</span>
+<span class="nc bnc" id="L90" title="All 2 branches missed.">		if(accept.equals(true))</span>
+<span class="nc" id="L91">		  stateReferenceHC = stateCandidate;</span>
 //		getReferenceList();
-<span class="fc" id="L93">	}</span>
+<span class="nc" id="L93">	}</span>
 
 
 
 	@Override
 	public List&lt;State&gt; getReferenceList() {
-<span class="nc bnc" id="L99" title="All 2 branches missed.">		if (stateReferenceHC != null) {</span>
-<span class="nc bnc" id="L100" title="All 4 branches missed.">			if (listStateReference.isEmpty() || listStateReference.get(listStateReference.size() - 1) != stateReferenceHC) {</span>
-<span class="nc" id="L101">				listStateReference.add(stateReferenceHC);</span>
+<span class="pc bpc" id="L99" title="1 of 2 branches missed.">		if (stateReferenceHC != null) {</span>
+<span class="fc bfc" id="L100" title="All 4 branches covered.">			if (listStateReference.isEmpty() || listStateReference.get(listStateReference.size() - 1) != stateReferenceHC) {</span>
+<span class="fc" id="L101">				listStateReference.add(stateReferenceHC);</span>
 			}
 		}
-<span class="nc" id="L104">		return new ArrayList&lt;State&gt;(listStateReference);</span>
+<span class="fc" id="L104">		return new ArrayList&lt;State&gt;(listStateReference);</span>
 	}
 
 	@Override
@@ -115,20 +115,20 @@ public class HillClimbingRestart extends Generator{
 
 	@Override
 	public void setInitialReference(State stateInitialRef) {
-<span class="nc bnc" id="L118" title="All 2 branches missed.">		this.stateReferenceHC = (stateInitialRef == null) ? null : new State(stateInitialRef);</span>
-<span class="nc" id="L119">	}</span>
+<span class="pc bpc" id="L118" title="1 of 2 branches missed.">		this.stateReferenceHC = (stateInitialRef == null) ? null : new State(stateInitialRef);</span>
+<span class="fc" id="L119">	}</span>
 
 	public GeneratorType getGeneratorType() {
 <span class="nc" id="L122">		return generatortype;</span>
 	}
 
 	public void setGeneratorType(GeneratorType generatortype) {
-<span class="nc" id="L126">		this.generatortype = generatortype;</span>
-<span class="nc" id="L127">	}</span>
+<span class="fc" id="L126">		this.generatortype = generatortype;</span>
+<span class="fc" id="L127">	}</span>
 
 	@Override
 	public GeneratorType getType() {
-<span class="nc" id="L131">		return this.generatortype;</span>
+<span class="fc" id="L131">		return this.generatortype;</span>
 	}
 
 	@Override

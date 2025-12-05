@@ -279,13 +279,13 @@ public class ParticleSwarmOptimization extends Generator {
 <span class="fc" id="L279">		State stateBest = lBest[0];</span>
 <span class="fc bfc" id="L280" title="All 2 branches covered.">		for (int i = 1; i &lt; lBest.length; i++) {</span>
 <span class="fc bfc" id="L281" title="All 2 branches covered.">			if(Strategy.getStrategy().getProblem().getTypeProblem().equals(ProblemType.Maximizar)){</span>
-<span class="pc bpc" id="L282" title="1 of 2 branches missed.">				if (lBest[i].getEvaluation().get(0) &gt; stateBest.getEvaluation().get(0)){</span>
+<span class="fc bfc" id="L282" title="All 2 branches covered.">				if (lBest[i].getEvaluation().get(0) &gt; stateBest.getEvaluation().get(0)){</span>
 <span class="fc" id="L283">					stateBest = lBest[i];</span>
 				}
 			}
 			else{
-<span class="pc bpc" id="L287" title="1 of 2 branches missed.">				if (lBest[i].getEvaluation().get(0) &lt; stateBest.getEvaluation().get(0)){</span>
-<span class="nc" id="L288">					stateBest = lBest[i];</span>
+<span class="fc bfc" id="L287" title="All 2 branches covered.">				if (lBest[i].getEvaluation().get(0) &lt; stateBest.getEvaluation().get(0)){</span>
+<span class="fc" id="L288">					stateBest = lBest[i];</span>
 				}
 			}
 		}
