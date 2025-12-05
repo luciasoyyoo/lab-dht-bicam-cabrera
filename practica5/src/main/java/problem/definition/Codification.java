@@ -1,5 +1,13 @@
 package problem.definition;
 
+/**
+ * Codification
+ *
+ * @brief Interfaz abstracta para la codificación de variables de un problema.
+ *
+ * Implementaciones concretas deben validar estados y generar valores aleatorios
+ * para variables según el dominio del problema.
+ */
 public abstract class Codification {
 
 	public abstract boolean validState(State state);

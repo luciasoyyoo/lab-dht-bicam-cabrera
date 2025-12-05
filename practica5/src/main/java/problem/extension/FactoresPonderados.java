@@ -7,9 +7,25 @@ import metaheurictics.strategy.Strategy;
 import problem.definition.State;
 import problem.definition.Problem.ProblemType;
 
+/**
+ * FactoresPonderados
+ *
+ * @brief Implementación de {@link SolutionMethod} que combina funciones
+ *        objetivo mediante factores ponderados.
+ */
 public class FactoresPonderados extends SolutionMethod {
 
 	@Override
+	/**
+	 * evaluationState
+	 *
+	 * @brief Evalúa un estado aplicando la suma ponderada de cada función
+	 *        objetivo, teniendo en cuenta si la función es de maximizar o
+	 *        minimizar.
+	 *
+	 * @param state estado a evaluar; la lista de evaluación del estado se
+	 *              actualiza con el valor calculado.
+	 */
 	public void evaluationState(State state) {
 		// TODO Auto-generated method stub
 		double eval = 0;       
