@@ -2,6 +2,7 @@ package evolutionary_algorithms.complement;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ThreadLocalRandom;
 
 import metaheuristics.generators.LimitRoulette;
 
@@ -10,22 +11,7 @@ import problem.definition.State;
 public class RouletteSelection extends FatherSelection {
 
 	@Override
-	public List<State> selection(List<State> listState, int truncation) {/*
-		List<State> fatherList = new ArrayList<State>();
-		double total = 0;
-		double sum = 0;
-		for (int i = 0; i < listState.size(); i++) {
-			total  = total + listState.get(i).getEvaluation().get(0);
-		}
-		double number = (double) Math.random() * (double)(total);
-
-		for (int i = 0; i < listState.size(); i++) {
-		  sum = sum + listState.get(i).getEvaluation().get(0);
-		  if(sum >= number)
-			  fatherList.add(listState.get(i));			  
-		}
-		return fatherList;
-	 */
+	public List<State> selection(List<State> listState, int truncation) {
 		float totalWeight = 0;
 		for (int i = 0; i < listState.size(); i++) {
 			totalWeight = (float) (listState.get(i).getEvaluation().get(0) + totalWeight);
@@ -49,7 +35,11 @@ public class RouletteSelection extends FatherSelection {
 		}
 		List<State> fatherList = new ArrayList<State>();
 		for (int j = 0; j < listState.size(); j++) {
-			float numbAleatory = (float) (Math.random() * (double)(1));
+			// Uses ThreadLocalRandom for algorithmic (non-cryptographic) randomness.
+			// This RNG decides selection in the evolutionary algorithm and is not
+			// used for security-sensitive purposes. Suppress Sonar hotspot S2245.
+			@SuppressWarnings("squid:S2245")
+			float numbAleatory = (float) ThreadLocalRandom.current().nextDouble();
 			boolean find = false;
 			int i = 0;
 			while ((find == false) && (i < listLimit.size())){

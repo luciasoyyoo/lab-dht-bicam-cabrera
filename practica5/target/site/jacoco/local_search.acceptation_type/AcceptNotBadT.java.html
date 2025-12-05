@@ -5,6 +5,7 @@
 package local_search.acceptation_type;
 
 import java.lang.reflect.InvocationTargetException;
+import java.util.concurrent.ThreadLocalRandom;
 
 import metaheurictics.strategy.Strategy;
 import metaheuristics.generators.SimulatedAnnealing;
@@ -12,30 +13,36 @@ import problem.definition.Problem;
 import problem.definition.State;
 import problem.definition.Problem.ProblemType;
 
-<span class="fc" id="L15">public class AcceptNotBadT extends AcceptableCandidate{</span>
+<span class="fc" id="L16">public class AcceptNotBadT extends AcceptableCandidate{</span>
 
+	/**
+	 * Uses ThreadLocalRandom for algorithmic (non-cryptographic) randomness.
+	 * This RNG is used to decide acceptance in simulated annealing and is not
+	 * used for security-sensitive purposes. Suppress Sonar S2245 for this usage.
+	 */
+	@SuppressWarnings(&quot;squid:S2245&quot;)
 	@Override
 	public Boolean acceptCandidate(State stateCurrent, State stateCandidate) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
-<span class="fc" id="L19">		Boolean accept = null;</span>
-<span class="fc" id="L20">		Problem problem = Strategy.getStrategy().getProblem();</span>
-<span class="pc bpc" id="L21" title="1 of 2 branches missed.">		if (problem.getTypeProblem().equals(ProblemType.Maximizar)) {</span>
-<span class="fc" id="L22">			double result = (stateCandidate.getEvaluation().get(0) - stateCurrent.getEvaluation().get(0)) / SimulatedAnnealing.getTinitial();</span>
-<span class="fc" id="L23">			double probaleatory = Math.random();</span>
-<span class="fc" id="L24">			double exp = Math.exp(result);</span>
-<span class="pc bpc" id="L25" title="3 of 4 branches missed.">			if ((stateCandidate.getEvaluation().get(0) &gt;= stateCurrent.getEvaluation().get(0))</span>
+<span class="fc" id="L26">		Boolean accept = null;</span>
+<span class="fc" id="L27">		Problem problem = Strategy.getStrategy().getProblem();</span>
+<span class="fc bfc" id="L28" title="All 2 branches covered.">		if (problem.getTypeProblem().equals(ProblemType.Maximizar)) {</span>
+<span class="fc" id="L29">			double result = (stateCandidate.getEvaluation().get(0) - stateCurrent.getEvaluation().get(0)) / SimulatedAnnealing.getTinitial();</span>
+<span class="fc" id="L30">			double probaleatory = ThreadLocalRandom.current().nextDouble();</span>
+<span class="fc" id="L31">			double exp = Math.exp(result);</span>
+<span class="pc bpc" id="L32" title="3 of 4 branches missed.">			if ((stateCandidate.getEvaluation().get(0) &gt;= stateCurrent.getEvaluation().get(0))</span>
 					|| (probaleatory &lt; exp))
-<span class="fc" id="L27"> 				accept = true;</span>
-			else
-<span class="nc" id="L29">				accept = false;</span>
-<span class="fc" id="L30">		} else {</span>
-<span class="nc" id="L31">			double result_min = (stateCandidate.getEvaluation().get(0) - stateCurrent.getEvaluation().get(0)) / SimulatedAnnealing.getTinitial();</span>
-<span class="nc bnc" id="L32" title="All 2 branches missed.">			if ((stateCandidate.getEvaluation().get(0) &lt;= stateCurrent.getEvaluation().get(0))</span>
-<span class="nc bnc" id="L33" title="All 2 branches missed.">					|| (Math.random() &lt; Math.exp(result_min)))</span>
-<span class="nc" id="L34">				accept = true;</span>
+<span class="fc" id="L34"> 				accept = true;</span>
 			else
 <span class="nc" id="L36">				accept = false;</span>
+<span class="fc" id="L37">		} else {</span>
+<span class="fc" id="L38">			double result_min = (stateCandidate.getEvaluation().get(0) - stateCurrent.getEvaluation().get(0)) / SimulatedAnnealing.getTinitial();</span>
+<span class="pc bpc" id="L39" title="1 of 2 branches missed.">			if ((stateCandidate.getEvaluation().get(0) &lt;= stateCurrent.getEvaluation().get(0))</span>
+<span class="pc bpc" id="L40" title="1 of 2 branches missed.">					|| (ThreadLocalRandom.current().nextDouble() &lt; Math.exp(result_min)))</span>
+<span class="fc" id="L41">				accept = true;</span>
+			else
+<span class="nc" id="L43">				accept = false;</span>
 		}
-<span class="fc" id="L38">		return accept;</span>
+<span class="fc" id="L45">		return accept;</span>
 	}
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

@@ -13,6 +13,13 @@ import problem.definition.State;
 
 public class ProbabilisticSampling extends Sampling {
 
+	/**
+	 * Uses ThreadLocalRandom for algorithmic (non-cryptographic) randomness.
+	 * This RNG is used for evolutionary algorithm operations (crossover point,
+	 * selection between children, etc.) and is not used for security-sensitive
+	 * purposes. Therefore we suppress the Sonar security hotspot S2245 here.
+	 */
+	@SuppressWarnings("squid:S2245")
 	@Override
 	public List<State> sampling(List<State> fathers, int countInd) {
 		// TODO Auto-generated method stub

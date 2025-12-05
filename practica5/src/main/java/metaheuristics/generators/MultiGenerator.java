@@ -5,6 +5,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.concurrent.ThreadLocalRandom;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import factory_method.FactoryGenerator;
 
@@ -20,6 +23,7 @@ public class MultiGenerator extends Generator implements Cloneable {
 	public static final List<State> listGeneratedPP = Collections.synchronizedList(new ArrayList<State>());
 	public static volatile Generator activeGenerator;
 	public static final List<State> listStateReference = Collections.synchronizedList(new ArrayList<State>());
+	private static final Logger LOGGER = Logger.getLogger(MultiGenerator.class.getName());
 	
 	public void setGeneratorType(GeneratorType generatortype) {
 		this.generatortype = generatortype;
@@ -132,8 +136,9 @@ public class MultiGenerator extends Generator implements Cloneable {
 				stateCandidate.setTypeGenerator(generator.getType());
 				listGeneratedPP.add(stateCandidate);
 			} catch (Exception e) {
-				e.printStackTrace();
-			} 
+				// Log exception instead of printing stack trace to avoid debug output in production
+				LOGGER.log(Level.SEVERE, "Failed to create state candidate in createInstanceGeneratorsBPP", e);
+			}
 			j++;
 		}
 	}
@@ -293,7 +298,11 @@ public class MultiGenerator extends Generator implements Cloneable {
 			limitRoulette.setGenerator(listGenerators[i]);
 			listLimit.add(limitRoulette);
 		}
-		float numbAleatory = (float) (Math.random() * (double)(1));
+		// Uses ThreadLocalRandom for algorithmic (non-cryptographic) randomness.
+		// This RNG chooses a generator according to roulette weights and is not
+		// used for security-sensitive purposes. Suppress Sonar hotspot S2245.
+		@SuppressWarnings("squid:S2245")
+		float numbAleatory = ThreadLocalRandom.current().nextFloat();
 		boolean find = false;
 		int i = 0;
 		while ((find == false) && (i < listLimit.size())){

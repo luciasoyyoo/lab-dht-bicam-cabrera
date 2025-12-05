@@ -7,34 +7,40 @@ import problem.definition.State;
 
 <span class="fc" id="L8">public class UniformCrossover extends Crossover {</span>
 	
-	
+	/**
+	 * Uses ThreadLocalRandom for algorithmic (non-cryptographic) randomness.
+	 * This RNG is used for evolutionary algorithm operations (crossover point,
+	 * selection between children, etc.) and is not used for security-sensitive
+	 * purposes. Therefore we suppress the Sonar security hotspot S2245 here.
+	 */
+	@SuppressWarnings(&quot;squid:S2245&quot;)
 	public int[] mascara(int length){
-<span class="fc" id="L12">		int[] mascara = new int[length];</span>
-<span class="fc bfc" id="L13" title="All 2 branches covered.">		for (int i = 0; i &lt; mascara.length; i++) {</span>
-<span class="fc" id="L14">			int value = ThreadLocalRandom.current().nextInt(2);</span>
-<span class="fc" id="L15">			mascara[i] = value;</span>
+<span class="fc" id="L18">		int[] mascara = new int[length];</span>
+<span class="fc bfc" id="L19" title="All 2 branches covered.">		for (int i = 0; i &lt; mascara.length; i++) {</span>
+<span class="fc" id="L20">			int value = ThreadLocalRandom.current().nextInt(2);</span>
+<span class="fc" id="L21">			mascara[i] = value;</span>
 		}
-<span class="fc" id="L17">		return mascara;</span>
+<span class="fc" id="L23">		return mascara;</span>
 	}	
     
 	@Override
 	public State crossover(State father1, State father2, double PC) {
 		Object value;
-<span class="fc" id="L23">		State state = (State) father1.getCopy();</span>
-<span class="fc" id="L24">		int[] mascara = mascara(father1.getCode().size());</span>
-<span class="fc bfc" id="L25" title="All 2 branches covered.">   		for (int k = 0; k &lt; mascara.length; k++) {</span>
-<span class="fc bfc" id="L26" title="All 2 branches covered.">   			if(mascara[k] == 1){</span>
-<span class="fc" id="L27">   				value = father1.getCode().get(k);</span>
-<span class="fc" id="L28">   				state.getCode().set(k, value);</span>
+<span class="fc" id="L29">		State state = (State) father1.getCopy();</span>
+<span class="fc" id="L30">		int[] mascara = mascara(father1.getCode().size());</span>
+<span class="fc bfc" id="L31" title="All 2 branches covered.">   		for (int k = 0; k &lt; mascara.length; k++) {</span>
+<span class="fc bfc" id="L32" title="All 2 branches covered.">   			if(mascara[k] == 1){</span>
+<span class="fc" id="L33">   				value = father1.getCode().get(k);</span>
+<span class="fc" id="L34">   				state.getCode().set(k, value);</span>
    			}
    			else{
-<span class="pc bpc" id="L31" title="1 of 2 branches missed.">   				if(mascara[k] == 0){</span>
-<span class="fc" id="L32">   					value = father2.getCode().get(k);  </span>
-<span class="fc" id="L33">   					state.getCode().set(k, value);</span>
+<span class="pc bpc" id="L37" title="1 of 2 branches missed.">   				if(mascara[k] == 0){</span>
+<span class="fc" id="L38">   					value = father2.getCode().get(k);  </span>
+<span class="fc" id="L39">   					state.getCode().set(k, value);</span>
    				}
    			}
 		}
-<span class="fc" id="L37">		return state;</span>
+<span class="fc" id="L43">		return state;</span>
 	}
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

@@ -3,6 +3,7 @@ package metaheuristics.generators;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ThreadLocalRandom;
 
 import metaheurictics.strategy.Strategy;
 
@@ -70,10 +71,16 @@ public class Particle extends Generator {
 	}
 	
 	
+	/**
+	 * Uses ThreadLocalRandom for algorithmic (non-cryptographic) randomness.
+	 * This RNG updates particle velocity and is not security-sensitive.
+	 * Suppress Sonar hotspot S2245 for this usage.
+	 */
+	@SuppressWarnings("squid:S2245")
 	private ArrayList<Object> UpdateVelocity(){ // actualizar velocidad
     	double w = ParticleSwarmOptimization.wmax - ((ParticleSwarmOptimization.wmax - ParticleSwarmOptimization.wmin) / Strategy.getStrategy().getCountMax()) * ParticleSwarmOptimization.getCountCurrentIterPSO();  //CALCULO DE LA INERCIA
-    	double rand1 = (double)(Math.random() * (double)(1));
-    	double rand2 = (double)(Math.random() * (double)(1));
+		double rand1 = ThreadLocalRandom.current().nextDouble();
+		double rand2 = ThreadLocalRandom.current().nextDouble();
     	double inertia, cognitive, social;
     	int learning = ParticleSwarmOptimization.learning1 + ParticleSwarmOptimization.learning2; // ratios de aprendizaje cognitivo y social
     	ParticleSwarmOptimization.constriction = 2/(Math.abs(2 - learning-Math.sqrt((learning * learning)- 4 * learning)));   // Factor de costriccion
@@ -107,6 +114,11 @@ public class Particle extends Generator {
         return actualVelocity;
     }
 	
+	/**
+	 * Uses ThreadLocalRandom for algorithmic (non-cryptographic) randomness
+	 * when computing binary code updates. Not security-sensitive; suppress S2245.
+	 */
+	@SuppressWarnings("squid:S2245")
 	private ArrayList<Object> UpdateCode(ArrayList<Object> actualVelocity) {  // CALCULO DE LA NUEA POSICION DE LA PARTICULA
     	ArrayList<Object> newCode = new ArrayList<Object>();
 		//poner la condicion de si se esta trabajando con valores continuos o binarios
@@ -118,8 +130,8 @@ public class Particle extends Generator {
 	    }
 		 else{                                                  //c�lculo de la posicion para codificacion binaria
 			ArrayList<Object> binaryCode = new ArrayList<Object>();
-			for (int i = 0; i < stateActual.getCode().size(); i++){
-			  double rand = (double)(Math.random() * (double)(1));
+						for (int i = 0; i < stateActual.getCode().size(); i++){
+							double rand = ThreadLocalRandom.current().nextDouble();
 			  double s = 1/(1 + 1.72 * (Double)(actualVelocity.get(i))); // 
 			  if (rand < s){
 			     binaryCode.add(1);

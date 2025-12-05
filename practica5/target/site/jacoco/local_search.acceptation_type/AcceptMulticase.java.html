@@ -9,102 +9,108 @@ import java.util.concurrent.ThreadLocalRandom;
 import problem.definition.State;
 
 <span class="fc" id="L11">public class AcceptMulticase extends AcceptableCandidate {</span>
-
+	/**
+     * Uses ThreadLocalRandom for algorithmic (non-cryptographic) randomness.
+     * This RNG is used to decide whether a mutation occurs in the
+     * evolutionary algorithm and is not used for security-sensitive purposes.
+     * Suppress Sonar security hotspot S2245 for this usage.
+     */
+    @SuppressWarnings(&quot;squid:S2245&quot;)
 	@Override
 	public Boolean acceptCandidate(State stateCurrent, State stateCandidate) {
 		// TODO Auto-generated method stub
-<span class="fc" id="L16">		Boolean accept = false;</span>
-<span class="fc" id="L17">		List&lt;State&gt; list = Strategy.getStrategy().listRefPoblacFinal;</span>
+<span class="fc" id="L22">		Boolean accept = false;</span>
+<span class="fc" id="L23">		List&lt;State&gt; list = Strategy.getStrategy().listRefPoblacFinal;</span>
 		
-<span class="fc bfc" id="L19" title="All 2 branches covered.">		if(list.size() == 0){</span>
-<span class="fc" id="L20">			list.add(stateCurrent.clone());</span>
+<span class="fc bfc" id="L25" title="All 2 branches covered.">		if(list.size() == 0){</span>
+<span class="fc" id="L26">			list.add(stateCurrent.clone());</span>
 		}
-<span class="fc" id="L22">	Double T = MultiCaseSimulatedAnnealing.getTinitial();</span>
-<span class="fc" id="L23">		double pAccept = 0;</span>
+<span class="fc" id="L28">	Double T = MultiCaseSimulatedAnnealing.getTinitial();</span>
+<span class="fc" id="L29">		double pAccept = 0;</span>
 	// use ThreadLocalRandom to avoid creating a new Random instance on each call
-<span class="fc" id="L25">		Dominance dominance= new Dominance();</span>
+<span class="fc" id="L31">		Dominance dominance= new Dominance();</span>
 		//Verificando si la soluciï¿½n candidata domina a la soluciï¿½n actual
 		//Si la soluciï¿½n candidata domina a la soluciï¿½n actual
-<span class="fc bfc" id="L28" title="All 2 branches covered.">		if(dominance.dominance(stateCandidate, stateCurrent) == true){</span>
+<span class="fc bfc" id="L34" title="All 2 branches covered.">		if(dominance.dominance(stateCandidate, stateCurrent) == true){</span>
 			//Se asigna como soluciï¿½n actual la soluciï¿½n candidata con probabilidad 1
-<span class="fc" id="L30">			pAccept = 1; </span>
+<span class="fc" id="L36">			pAccept = 1; </span>
 		}
-<span class="pc bpc" id="L32" title="1 of 2 branches missed.">		else if(dominance.dominance(stateCandidate, stateCurrent)== false){	</span>
-<span class="fc bfc" id="L33" title="All 2 branches covered.">			if(dominanceCounter(stateCandidate, list) &gt; 0){</span>
-<span class="fc" id="L34">				pAccept = 1;</span>
+<span class="pc bpc" id="L38" title="1 of 2 branches missed.">		else if(dominance.dominance(stateCandidate, stateCurrent)== false){	</span>
+<span class="fc bfc" id="L39" title="All 2 branches covered.">			if(dominanceCounter(stateCandidate, list) &gt; 0){</span>
+<span class="fc" id="L40">				pAccept = 1;</span>
 			}
-<span class="fc bfc" id="L36" title="All 2 branches covered.">			else if(dominanceRank(stateCandidate, list) == 0){</span>
-<span class="fc" id="L37">				pAccept = 1;</span>
+<span class="fc bfc" id="L42" title="All 2 branches covered.">			else if(dominanceRank(stateCandidate, list) == 0){</span>
+<span class="fc" id="L43">				pAccept = 1;</span>
 			}
-<span class="pc bpc" id="L39" title="1 of 2 branches missed.">			else if(dominanceRank(stateCandidate, list) &lt; dominanceRank(stateCurrent, list)){</span>
-<span class="nc" id="L40">				pAccept = 1;</span>
+<span class="pc bpc" id="L45" title="1 of 2 branches missed.">			else if(dominanceRank(stateCandidate, list) &lt; dominanceRank(stateCurrent, list)){</span>
+<span class="nc" id="L46">				pAccept = 1;</span>
 			}
-<span class="pc bpc" id="L42" title="1 of 2 branches missed.">			else if(dominanceRank(stateCandidate, list) == dominanceRank(stateCurrent, list)){</span>
+<span class="pc bpc" id="L48" title="1 of 2 branches missed.">			else if(dominanceRank(stateCandidate, list) == dominanceRank(stateCurrent, list)){</span>
 				//Calculando la probabilidad de aceptaciï¿½n
-<span class="nc" id="L44">				List&lt;Double&gt; evaluations = stateCurrent.getEvaluation();</span>
-<span class="nc" id="L45">				double total = 0;</span>
-<span class="nc bnc" id="L46" title="All 2 branches missed.">				for (int i = 0; i &lt; evaluations.size()-1; i++) {</span>
-<span class="nc" id="L47">					Double evalA = evaluations.get(i);</span>
-<span class="nc" id="L48">					Double evalB = stateCandidate.getEvaluation().get(i);</span>
-<span class="nc bnc" id="L49" title="All 4 branches missed.">					if (evalA != 0 &amp;&amp; evalB != 0) {</span>
-<span class="nc" id="L50">						total += (evalA - evalB)/((evalA + evalB)/2);</span>
+<span class="nc" id="L50">				List&lt;Double&gt; evaluations = stateCurrent.getEvaluation();</span>
+<span class="nc" id="L51">				double total = 0;</span>
+<span class="nc bnc" id="L52" title="All 2 branches missed.">				for (int i = 0; i &lt; evaluations.size()-1; i++) {</span>
+<span class="nc" id="L53">					Double evalA = evaluations.get(i);</span>
+<span class="nc" id="L54">					Double evalB = stateCandidate.getEvaluation().get(i);</span>
+<span class="nc bnc" id="L55" title="All 4 branches missed.">					if (evalA != 0 &amp;&amp; evalB != 0) {</span>
+<span class="nc" id="L56">						total += (evalA - evalB)/((evalA + evalB)/2);</span>
 					}
 				}	
-<span class="nc" id="L53">				pAccept = Math.exp(-(1-total)/T);</span>
-<span class="nc" id="L54">			}</span>
-<span class="pc bpc" id="L55" title="2 of 4 branches missed.">			else if (dominanceRank(stateCandidate, list) &gt; dominanceRank(stateCurrent, list) &amp;&amp; dominanceRank(stateCurrent, list)!= 0){</span>
+<span class="nc" id="L59">				pAccept = Math.exp(-(1-total)/T);</span>
+<span class="nc" id="L60">			}</span>
+<span class="pc bpc" id="L61" title="2 of 4 branches missed.">			else if (dominanceRank(stateCandidate, list) &gt; dominanceRank(stateCurrent, list) &amp;&amp; dominanceRank(stateCurrent, list)!= 0){</span>
 				// avoid integer division -&gt; compute ranks once and use floating point division
-<span class="nc" id="L57">				int rankCandidate = dominanceRank(stateCandidate, list);</span>
-<span class="nc" id="L58">				int rankCurrent = dominanceRank(stateCurrent, list);</span>
-<span class="nc bnc" id="L59" title="All 2 branches missed.">				float value = (rankCurrent == 0) ? 0f : ((float) rankCandidate) / ((float) rankCurrent);</span>
-<span class="nc" id="L60">				pAccept = Math.exp(-((double)value+1.0)/T);</span>
-<span class="nc" id="L61">			}</span>
+<span class="nc" id="L63">				int rankCandidate = dominanceRank(stateCandidate, list);</span>
+<span class="nc" id="L64">				int rankCurrent = dominanceRank(stateCurrent, list);</span>
+<span class="nc bnc" id="L65" title="All 2 branches missed.">				float value = (rankCurrent == 0) ? 0f : ((float) rankCandidate) / ((float) rankCurrent);</span>
+<span class="nc" id="L66">				pAccept = Math.exp(-((double)value+1.0)/T);</span>
+<span class="nc" id="L67">			}</span>
 			else{
 				//Calculando la probabilidad de aceptaciï¿½n
-<span class="fc" id="L64">				List&lt;Double&gt; evaluations = stateCurrent.getEvaluation();</span>
-<span class="fc" id="L65">				double total = 0;</span>
-<span class="pc bpc" id="L66" title="1 of 2 branches missed.">				for (int i = 0; i &lt; evaluations.size()-1; i++) {</span>
-<span class="nc" id="L67">					Double evalA = evaluations.get(i);</span>
-<span class="nc" id="L68">					Double evalB = stateCandidate.getEvaluation().get(i);</span>
-<span class="nc bnc" id="L69" title="All 4 branches missed.">					if (evalA != 0 &amp;&amp; evalB != 0) {</span>
-<span class="nc" id="L70">						total += (evalA - evalB)/((evalA + evalB)/2);</span>
+<span class="fc" id="L70">				List&lt;Double&gt; evaluations = stateCurrent.getEvaluation();</span>
+<span class="fc" id="L71">				double total = 0;</span>
+<span class="pc bpc" id="L72" title="1 of 2 branches missed.">				for (int i = 0; i &lt; evaluations.size()-1; i++) {</span>
+<span class="nc" id="L73">					Double evalA = evaluations.get(i);</span>
+<span class="nc" id="L74">					Double evalB = stateCandidate.getEvaluation().get(i);</span>
+<span class="nc bnc" id="L75" title="All 4 branches missed.">					if (evalA != 0 &amp;&amp; evalB != 0) {</span>
+<span class="nc" id="L76">						total += (evalA - evalB)/((evalA + evalB)/2);</span>
 					}
 				}
-<span class="fc" id="L73">				pAccept = Math.exp(-(1-total)/T);</span>
+<span class="fc" id="L79">				pAccept = Math.exp(-(1-total)/T);</span>
 			}
 		}
 		//Generar un nï¿½mero aleatorio
-<span class="fc bfc" id="L77" title="All 2 branches covered.">			if((ThreadLocalRandom.current().nextFloat()) &lt; pAccept){</span>
+<span class="fc bfc" id="L83" title="All 2 branches covered.">			if((ThreadLocalRandom.current().nextFloat()) &lt; pAccept){</span>
 			// Don't assign to the parameter reference (dead store). The caller should handle state updates.
 			// Verificando que la soluciï¿½n candidata domina a alguna de las soluciones
-<span class="fc" id="L80">				accept = dominance.listDominance(stateCandidate, list);</span>
+<span class="fc" id="L86">				accept = dominance.listDominance(stateCandidate, list);</span>
 		}
-<span class="fc" id="L82">		return accept;</span>
+<span class="fc" id="L88">		return accept;</span>
 	}
 
 
 	private int dominanceCounter(State stateCandidate, List&lt;State&gt; list) { //chequea el nï¿½mero de soluciones de Pareto que son dominados por la nueva soluciï¿½n
-<span class="fc" id="L87">		int counter = 0;</span>
-<span class="fc bfc" id="L88" title="All 2 branches covered.">		for (int i = 0; i &lt; list.size(); i++) {</span>
-<span class="fc" id="L89">			State solution = list.get(i);</span>
-<span class="fc" id="L90">			Dominance dominance = new Dominance();</span>
-<span class="fc bfc" id="L91" title="All 2 branches covered.">			if(dominance.dominance(stateCandidate, solution) == true)</span>
-<span class="fc" id="L92">				counter++;</span>
+<span class="fc" id="L93">		int counter = 0;</span>
+<span class="fc bfc" id="L94" title="All 2 branches covered.">		for (int i = 0; i &lt; list.size(); i++) {</span>
+<span class="fc" id="L95">			State solution = list.get(i);</span>
+<span class="fc" id="L96">			Dominance dominance = new Dominance();</span>
+<span class="fc bfc" id="L97" title="All 2 branches covered.">			if(dominance.dominance(stateCandidate, solution) == true)</span>
+<span class="fc" id="L98">				counter++;</span>
 		}
-<span class="fc" id="L94">		return counter;</span>
+<span class="fc" id="L100">		return counter;</span>
 	}
 
 	private int dominanceRank(State stateCandidate, List&lt;State&gt; list) { //calculando el nï¿½mero de soluciones en el conjunto de Pareto que dominan a la soluciï¿½n
-<span class="fc" id="L98">		int rank = 0;</span>
-<span class="fc bfc" id="L99" title="All 2 branches covered.">		for (int i = 0; i &lt; list.size(); i++) {</span>
-<span class="fc" id="L100">			State solution = list.get(i);</span>
-<span class="fc" id="L101">			Dominance dominance = new Dominance();</span>
-<span class="fc bfc" id="L102" title="All 2 branches covered.">			if(dominance.dominance(solution, stateCandidate) == true){</span>
-<span class="fc" id="L103">				rank++;</span>
+<span class="fc" id="L104">		int rank = 0;</span>
+<span class="fc bfc" id="L105" title="All 2 branches covered.">		for (int i = 0; i &lt; list.size(); i++) {</span>
+<span class="fc" id="L106">			State solution = list.get(i);</span>
+<span class="fc" id="L107">			Dominance dominance = new Dominance();</span>
+<span class="fc bfc" id="L108" title="All 2 branches covered.">			if(dominance.dominance(solution, stateCandidate) == true){</span>
+<span class="fc" id="L109">				rank++;</span>
 			}
 		}
 		
-<span class="fc" id="L107">		return rank;</span>
+<span class="fc" id="L113">		return rank;</span>
 	}
 
 }

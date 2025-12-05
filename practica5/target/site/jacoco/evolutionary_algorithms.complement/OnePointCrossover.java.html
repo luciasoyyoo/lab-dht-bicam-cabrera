@@ -11,27 +11,34 @@ import problem.definition.State;
 
 <span class="fc" id="L12">public class OnePointCrossover extends Crossover {</span>
 
+	/**
+	 * Uses ThreadLocalRandom for algorithmic (non-cryptographic) randomness.
+	 * This RNG is used for evolutionary algorithm operations (crossover point,
+	 * selection between children, etc.) and is not used for security-sensitive
+	 * purposes. Therefore we suppress the Sonar security hotspot S2245 here.
+	 */
+	@SuppressWarnings(&quot;squid:S2245&quot;)
 	@Override
 	public State crossover(State father1, State father2, double PC) {
 				
-<span class="fc" id="L17">		State newInd = (State) father1.getCopy();</span>
+<span class="fc" id="L24">		State newInd = (State) father1.getCopy();</span>
 		
-<span class="fc" id="L19">	    List&lt;Object&gt; ind1 = new ArrayList&lt;Object&gt;();</span>
-<span class="fc" id="L20">	    List&lt;Object&gt; ind2 = new ArrayList&lt;Object&gt;();</span>
+<span class="fc" id="L26">	    List&lt;Object&gt; ind1 = new ArrayList&lt;Object&gt;();</span>
+<span class="fc" id="L27">	    List&lt;Object&gt; ind2 = new ArrayList&lt;Object&gt;();</span>
 	    
-<span class="fc" id="L22">		double number = ThreadLocalRandom.current().nextDouble(); // thread-safe, [0.0, 1.0)</span>
-<span class="fc bfc" id="L23" title="All 2 branches covered.">		if(number &lt;= PC){</span>
+<span class="fc" id="L29">		double number = ThreadLocalRandom.current().nextDouble(); // thread-safe, [0.0, 1.0)</span>
+<span class="fc bfc" id="L30" title="All 2 branches covered.">		if(number &lt;= PC){</span>
 			//llenar los valores de cada hijo
-<span class="fc" id="L25">			int bound = Strategy.getStrategy().getProblem().getCodification().getVariableCount();</span>
-<span class="fc bfc" id="L26" title="All 2 branches covered.">			int pos = (bound &gt; 0) ? ThreadLocalRandom.current().nextInt(bound) : 0;</span>
-<span class="fc bfc" id="L27" title="All 2 branches covered.">			for (int i = 0; i &lt; father1.getCode().size(); i++) {</span>
-<span class="fc bfc" id="L28" title="All 2 branches covered.">				if(i &lt;= pos){</span>
-<span class="fc" id="L29">					ind1.add(father1.getCode().get(i));</span>
-<span class="fc" id="L30">					ind2.add(father2.getCode().get(i));</span>
+<span class="fc" id="L32">			int bound = Strategy.getStrategy().getProblem().getCodification().getVariableCount();</span>
+<span class="fc bfc" id="L33" title="All 2 branches covered.">			int pos = (bound &gt; 0) ? ThreadLocalRandom.current().nextInt(bound) : 0;</span>
+<span class="fc bfc" id="L34" title="All 2 branches covered.">			for (int i = 0; i &lt; father1.getCode().size(); i++) {</span>
+<span class="fc bfc" id="L35" title="All 2 branches covered.">				if(i &lt;= pos){</span>
+<span class="fc" id="L36">					ind1.add(father1.getCode().get(i));</span>
+<span class="fc" id="L37">					ind2.add(father2.getCode().get(i));</span>
 				}
 				else{
-<span class="fc" id="L33">					ind1.add(father2.getCode().get(i));</span>
-<span class="fc" id="L34">					ind2.add(father1.getCode().get(i));</span>
+<span class="fc" id="L40">					ind1.add(father2.getCode().get(i));</span>
+<span class="fc" id="L41">					ind2.add(father1.getCode().get(i));</span>
 				}
 			}
 			/*
@@ -43,12 +50,12 @@ import problem.definition.State;
 			   }				  
 		    }*/
 			//generar un numero aleatorio 0 o 1, si es 0 me quedo con ind1 si es 1 con ind2.
-<span class="fc" id="L46">			int random = ThreadLocalRandom.current().nextInt(2);</span>
-<span class="fc bfc" id="L47" title="All 2 branches covered.">			if(random == 0)</span>
-<span class="fc" id="L48">				newInd.setCode((ArrayList&lt;Object&gt;) ind1);</span>
-<span class="fc" id="L49">			else newInd.setCode((ArrayList&lt;Object&gt;) ind2); </span>
+<span class="fc" id="L53">			int random = ThreadLocalRandom.current().nextInt(2);</span>
+<span class="fc bfc" id="L54" title="All 2 branches covered.">			if(random == 0)</span>
+<span class="fc" id="L55">				newInd.setCode((ArrayList&lt;Object&gt;) ind1);</span>
+<span class="fc" id="L56">			else newInd.setCode((ArrayList&lt;Object&gt;) ind2); </span>
 		}
-<span class="fc" id="L51">		return newInd;			</span>
+<span class="fc" id="L58">		return newInd;			</span>
 	}
 	
 	

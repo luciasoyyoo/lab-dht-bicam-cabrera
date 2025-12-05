@@ -5,6 +5,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.concurrent.ThreadLocalRandom;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import factory_method.FactoryGenerator;
 
@@ -16,72 +19,73 @@ import problem.definition.State;
 public class MultiGenerator extends Generator implements Cloneable {
 
 	private GeneratorType generatortype;
-<span class="fc" id="L19">	private static Generator[] listGenerators = new Generator[GeneratorType.values().length];</span>
-<span class="fc" id="L20">	public static final List&lt;State&gt; listGeneratedPP = Collections.synchronizedList(new ArrayList&lt;State&gt;());</span>
+<span class="fc" id="L22">	private static Generator[] listGenerators = new Generator[GeneratorType.values().length];</span>
+<span class="fc" id="L23">	public static final List&lt;State&gt; listGeneratedPP = Collections.synchronizedList(new ArrayList&lt;State&gt;());</span>
 	public static volatile Generator activeGenerator;
-<span class="fc" id="L22">	public static final List&lt;State&gt; listStateReference = Collections.synchronizedList(new ArrayList&lt;State&gt;());</span>
+<span class="fc" id="L25">	public static final List&lt;State&gt; listStateReference = Collections.synchronizedList(new ArrayList&lt;State&gt;());</span>
+<span class="fc" id="L26">	private static final Logger LOGGER = Logger.getLogger(MultiGenerator.class.getName());</span>
 	
 	public void setGeneratorType(GeneratorType generatortype) {
-<span class="nc" id="L25">		this.generatortype = generatortype;</span>
-<span class="nc" id="L26">	}</span>
+<span class="nc" id="L29">		this.generatortype = generatortype;</span>
+<span class="nc" id="L30">	}</span>
 
 	public MultiGenerator(){
-<span class="fc" id="L29">		super();</span>
-<span class="fc" id="L30">	this.generatortype = GeneratorType.MultiGenerator;</span>
-<span class="fc" id="L31">	}</span>
+<span class="fc" id="L33">		super();</span>
+<span class="fc" id="L34">	this.generatortype = GeneratorType.MultiGenerator;</span>
+<span class="fc" id="L35">	}</span>
 	
 
 	public static void destroyMultiGenerator(){
-<span class="fc" id="L35">		listGeneratedPP.clear();</span>
+<span class="fc" id="L39">		listGeneratedPP.clear();</span>
 		//listGenerators.clear();
-<span class="fc" id="L37">		listStateReference.clear();</span>
-<span class="fc" id="L38">		activeGenerator = null;</span>
-<span class="fc" id="L39">		listGenerators = null;</span>
-<span class="fc" id="L40">	}</span>
+<span class="fc" id="L41">		listStateReference.clear();</span>
+<span class="fc" id="L42">		activeGenerator = null;</span>
+<span class="fc" id="L43">		listGenerators = null;</span>
+<span class="fc" id="L44">	}</span>
 	
 	public static void initializeListGenerator()throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
-<span class="fc" id="L43">		listGenerators = new Generator[4];</span>
-<span class="fc" id="L44">		Generator generator1 = new HillClimbing();</span>
-<span class="fc" id="L45">		Generator generator2 = new EvolutionStrategies();</span>
-<span class="fc" id="L46">		Generator generator3 = new LimitThreshold();</span>
-<span class="fc" id="L47">		Generator generator4 = new GeneticAlgorithm();</span>
-<span class="fc" id="L48">		listGenerators[0] = generator1;</span>
-<span class="fc" id="L49">		listGenerators[1] = generator2;</span>
-<span class="fc" id="L50">		listGenerators[2] = generator3;</span>
-<span class="fc" id="L51">		listGenerators[3] = generator4;</span>
-<span class="fc" id="L52">	}</span>
+<span class="fc" id="L47">		listGenerators = new Generator[4];</span>
+<span class="fc" id="L48">		Generator generator1 = new HillClimbing();</span>
+<span class="fc" id="L49">		Generator generator2 = new EvolutionStrategies();</span>
+<span class="fc" id="L50">		Generator generator3 = new LimitThreshold();</span>
+<span class="fc" id="L51">		Generator generator4 = new GeneticAlgorithm();</span>
+<span class="fc" id="L52">		listGenerators[0] = generator1;</span>
+<span class="fc" id="L53">		listGenerators[1] = generator2;</span>
+<span class="fc" id="L54">		listGenerators[2] = generator3;</span>
+<span class="fc" id="L55">		listGenerators[3] = generator4;</span>
+<span class="fc" id="L56">	}</span>
 	
 	public static void initializeGenerators() throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
 //		Strategy.getStrategy().initializeGenerators();
-<span class="nc" id="L56">		initializeListGenerator();</span>
-<span class="nc" id="L57">		State stateREF = new State(Strategy.getStrategy().getProblem().getState());</span>
-<span class="nc" id="L58">		listStateReference.add(stateREF);</span>
-<span class="nc bnc" id="L59" title="All 2 branches missed.">		for (int i = 0; i &lt; listGenerators.length; i++) {</span>
-<span class="nc bnc" id="L60" title="All 10 branches missed.">			if ((listGenerators[i].getType().equals(GeneratorType.HillClimbing)) || (listGenerators[i].getType().equals(GeneratorType.RandomSearch)) || (listGenerators[i].getType().equals(GeneratorType.TabuSearch)) || (listGenerators[i].getType().equals(GeneratorType.SimulatedAnnealing) || (listGenerators[i].getType().equals(GeneratorType.LimitThreshold)))){</span>
-<span class="nc" id="L61">				listGenerators[i].setInitialReference(stateREF);</span>
+<span class="nc" id="L60">		initializeListGenerator();</span>
+<span class="nc" id="L61">		State stateREF = new State(Strategy.getStrategy().getProblem().getState());</span>
+<span class="nc" id="L62">		listStateReference.add(stateREF);</span>
+<span class="nc bnc" id="L63" title="All 2 branches missed.">		for (int i = 0; i &lt; listGenerators.length; i++) {</span>
+<span class="nc bnc" id="L64" title="All 10 branches missed.">			if ((listGenerators[i].getType().equals(GeneratorType.HillClimbing)) || (listGenerators[i].getType().equals(GeneratorType.RandomSearch)) || (listGenerators[i].getType().equals(GeneratorType.TabuSearch)) || (listGenerators[i].getType().equals(GeneratorType.SimulatedAnnealing) || (listGenerators[i].getType().equals(GeneratorType.LimitThreshold)))){</span>
+<span class="nc" id="L65">				listGenerators[i].setInitialReference(stateREF);</span>
 			}
 		}
-<span class="nc" id="L64">		createInstanceGeneratorsBPP();</span>
-<span class="nc" id="L65">		Strategy.getStrategy().listStates = MultiGenerator.getListGeneratedPP();</span>
+<span class="nc" id="L68">		createInstanceGeneratorsBPP();</span>
+<span class="nc" id="L69">		Strategy.getStrategy().listStates = MultiGenerator.getListGeneratedPP();</span>
 		
-<span class="nc" id="L67">		FactoryGenerator ifFactoryGeneratorEE = new FactoryGenerator();</span>
-<span class="nc" id="L68">		Generator generatorEE = ifFactoryGeneratorEE.createGenerator(GeneratorType.EvolutionStrategies);</span>
+<span class="nc" id="L71">		FactoryGenerator ifFactoryGeneratorEE = new FactoryGenerator();</span>
+<span class="nc" id="L72">		Generator generatorEE = ifFactoryGeneratorEE.createGenerator(GeneratorType.EvolutionStrategies);</span>
 		
-<span class="nc" id="L70">		FactoryGenerator ifFactoryGeneratorGA = new FactoryGenerator();</span>
-<span class="nc" id="L71">		Generator generatorGA = ifFactoryGeneratorGA.createGenerator(GeneratorType.GeneticAlgorithm);</span>
+<span class="nc" id="L74">		FactoryGenerator ifFactoryGeneratorGA = new FactoryGenerator();</span>
+<span class="nc" id="L75">		Generator generatorGA = ifFactoryGeneratorGA.createGenerator(GeneratorType.GeneticAlgorithm);</span>
 		
-<span class="nc" id="L73">		FactoryGenerator ifFactoryGeneratorEDA = new FactoryGenerator();</span>
-<span class="nc" id="L74">		Generator generatorEDA = ifFactoryGeneratorEDA.createGenerator(GeneratorType.DistributionEstimationAlgorithm);</span>
+<span class="nc" id="L77">		FactoryGenerator ifFactoryGeneratorEDA = new FactoryGenerator();</span>
+<span class="nc" id="L78">		Generator generatorEDA = ifFactoryGeneratorEDA.createGenerator(GeneratorType.DistributionEstimationAlgorithm);</span>
 		
-<span class="nc bnc" id="L76" title="All 2 branches missed.">		for (int i = 0; i &lt; MultiGenerator.getListGenerators().length; i++) {</span>
-<span class="nc bnc" id="L77" title="All 2 branches missed.">			if(MultiGenerator.getListGenerators()[i].getType().equals(GeneratorType.EvolutionStrategies)){</span>
-<span class="nc" id="L78">				MultiGenerator.getListGenerators()[i] = generatorEE;</span>
+<span class="nc bnc" id="L80" title="All 2 branches missed.">		for (int i = 0; i &lt; MultiGenerator.getListGenerators().length; i++) {</span>
+<span class="nc bnc" id="L81" title="All 2 branches missed.">			if(MultiGenerator.getListGenerators()[i].getType().equals(GeneratorType.EvolutionStrategies)){</span>
+<span class="nc" id="L82">				MultiGenerator.getListGenerators()[i] = generatorEE;</span>
 			}
-<span class="nc bnc" id="L80" title="All 2 branches missed.">			if(MultiGenerator.getListGenerators()[i].getType().equals(GeneratorType.GeneticAlgorithm)){</span>
-<span class="nc" id="L81">				MultiGenerator.getListGenerators()[i] = generatorGA;</span>
+<span class="nc bnc" id="L84" title="All 2 branches missed.">			if(MultiGenerator.getListGenerators()[i].getType().equals(GeneratorType.GeneticAlgorithm)){</span>
+<span class="nc" id="L85">				MultiGenerator.getListGenerators()[i] = generatorGA;</span>
 			}
-<span class="nc bnc" id="L83" title="All 2 branches missed.">			if(MultiGenerator.getListGenerators()[i].getType().equals(GeneratorType.DistributionEstimationAlgorithm)){</span>
-<span class="nc" id="L84">				MultiGenerator.getListGenerators()[i] = generatorEDA;</span>
+<span class="nc bnc" id="L87" title="All 2 branches missed.">			if(MultiGenerator.getListGenerators()[i].getType().equals(GeneratorType.DistributionEstimationAlgorithm)){</span>
+<span class="nc" id="L88">				MultiGenerator.getListGenerators()[i] = generatorEDA;</span>
 			}
 		}
 		
@@ -103,13 +107,13 @@ public class MultiGenerator extends Generator implements Cloneable {
 			if(instanceEE.isTerminate() == true &amp;&amp; instanceGA.isTerminate() == true &amp;&amp; instanceDE.isTerminate() == true) 
 				stop = true;
 		}*/
-<span class="nc" id="L106">	}</span>
+<span class="nc" id="L110">	}</span>
 
 	
 	public static void createInstanceGeneratorsBPP() {
 //		int i = 0;
 //		boolean find = false;
-<span class="nc" id="L112">		Generator generator = new RandomSearch();</span>
+<span class="fc" id="L116">		Generator generator = new RandomSearch();</span>
 //		while (find == false) {
 //			if (listGenerators[i].getType().equals(GeneratorType.RandomSearch)) {
 //				generator = listGenerators[i];
@@ -117,57 +121,58 @@ public class MultiGenerator extends Generator implements Cloneable {
 //			}
 //			else i++;
 //		}
-<span class="nc" id="L120">		int j = 0;</span>
-<span class="nc bnc" id="L121" title="All 2 branches missed.">		while (j &lt; EvolutionStrategies.countRef){</span>
+<span class="fc" id="L124">		int j = 0;</span>
+<span class="pc bpc" id="L125" title="1 of 2 branches missed.">		while (j &lt; EvolutionStrategies.countRef){</span>
 			State stateCandidate;
 			try {
-<span class="nc" id="L124">				stateCandidate = generator.generate(1);</span>
-<span class="nc" id="L125">				Strategy.getStrategy().getProblem().Evaluate(stateCandidate);</span>
+<span class="nc" id="L128">				stateCandidate = generator.generate(1);</span>
+<span class="nc" id="L129">				Strategy.getStrategy().getProblem().Evaluate(stateCandidate);</span>
 				//stateCandidate.setEvaluation(stateCandidate.getEvaluation());
 				
 				//stateCandidate = generator.generate(1);
 				//Double evaluation = Strategy.getStrategy().getProblem().getFunction().get(0).Evaluation(stateCandidate);
 				//stateCandidate.getEvaluation().set(0, evaluation);
-<span class="nc" id="L131">				stateCandidate.setNumber(j);</span>
-<span class="nc" id="L132">				stateCandidate.setTypeGenerator(generator.getType());</span>
-<span class="nc" id="L133">				listGeneratedPP.add(stateCandidate);</span>
-<span class="nc" id="L134">			} catch (Exception e) {</span>
-<span class="nc" id="L135">				e.printStackTrace();</span>
-<span class="nc" id="L136">			} </span>
-<span class="nc" id="L137">			j++;</span>
+<span class="nc" id="L135">				stateCandidate.setNumber(j);</span>
+<span class="nc" id="L136">				stateCandidate.setTypeGenerator(generator.getType());</span>
+<span class="nc" id="L137">				listGeneratedPP.add(stateCandidate);</span>
+<span class="nc" id="L138">			} catch (Exception e) {</span>
+				// Log exception instead of printing stack trace to avoid debug output in production
+<span class="nc" id="L140">				LOGGER.log(Level.SEVERE, &quot;Failed to create state candidate in createInstanceGeneratorsBPP&quot;, e);</span>
+<span class="nc" id="L141">			}</span>
+<span class="nc" id="L142">			j++;</span>
 		}
-<span class="nc" id="L139">	}</span>
+<span class="fc" id="L144">	}</span>
 	
 	private static List&lt;State&gt; getListGeneratedPP() {
-<span class="nc" id="L142">		return listGeneratedPP;</span>
+<span class="nc" id="L147">		return listGeneratedPP;</span>
 	}
 
 	public static Generator[] getListGenerators() {
 		// return a defensive copy to avoid exposing internal static array
-<span class="fc bfc" id="L147" title="All 2 branches covered.">		return (listGenerators == null) ? null : Arrays.copyOf(listGenerators, listGenerators.length);</span>
+<span class="fc bfc" id="L152" title="All 2 branches covered.">		return (listGenerators == null) ? null : Arrays.copyOf(listGenerators, listGenerators.length);</span>
 	}
 
 	public static void setListGenerators(Generator[] listGenerators) {
 		// store a defensive copy to avoid keeping a reference to caller's mutable array
-<span class="fc bfc" id="L152" title="All 2 branches covered.">		MultiGenerator.listGenerators = (listGenerators == null) ? null : Arrays.copyOf(listGenerators, listGenerators.length);</span>
-<span class="fc" id="L153">	}</span>
+<span class="fc bfc" id="L157" title="All 2 branches covered.">		MultiGenerator.listGenerators = (listGenerators == null) ? null : Arrays.copyOf(listGenerators, listGenerators.length);</span>
+<span class="fc" id="L158">	}</span>
 
 	public static Generator getActiveGenerator() {
-<span class="fc" id="L156">		return activeGenerator;</span>
+<span class="fc" id="L161">		return activeGenerator;</span>
 	}
 
 	public static void setActiveGenerator(Generator activeGenerator) {
-<span class="fc" id="L160">		MultiGenerator.activeGenerator = activeGenerator;</span>
-<span class="fc" id="L161">	}</span>
+<span class="fc" id="L165">		MultiGenerator.activeGenerator = activeGenerator;</span>
+<span class="fc" id="L166">	}</span>
 
 	public static void setListGeneratedPP(List&lt;State&gt; newListGeneratedPP) {
-<span class="fc" id="L164">		synchronized (listGeneratedPP) {</span>
-<span class="fc" id="L165">			listGeneratedPP.clear();</span>
-<span class="pc bpc" id="L166" title="1 of 2 branches missed.">			if (newListGeneratedPP != null) {</span>
-<span class="fc" id="L167">				listGeneratedPP.addAll(newListGeneratedPP);</span>
+<span class="fc" id="L169">		synchronized (listGeneratedPP) {</span>
+<span class="fc" id="L170">			listGeneratedPP.clear();</span>
+<span class="pc bpc" id="L171" title="1 of 2 branches missed.">			if (newListGeneratedPP != null) {</span>
+<span class="fc" id="L172">				listGeneratedPP.addAll(newListGeneratedPP);</span>
 			}
-<span class="fc" id="L169">		}</span>
-<span class="fc" id="L170">	}</span>
+<span class="fc" id="L174">		}</span>
+<span class="fc" id="L175">	}</span>
 
 	@Override
 	public State generate(Integer operatornumber)
@@ -176,41 +181,41 @@ public class MultiGenerator extends Generator implements Cloneable {
 			IllegalAccessException, InvocationTargetException,
 			NoSuchMethodException {
 	// TODO Auto-generated method stub
-<span class="fc" id="L179">	Strategy.getStrategy().generator = roulette();</span>
-<span class="fc" id="L180">	MultiGenerator.setActiveGenerator(Strategy.getStrategy().generator);</span>
-<span class="fc" id="L181">		activeGenerator.countGender++;</span>
-<span class="fc" id="L182">		State state = Strategy.getStrategy().generator.generate(1);</span>
-<span class="fc" id="L183">		return state;</span>
+<span class="fc" id="L184">	Strategy.getStrategy().generator = roulette();</span>
+<span class="fc" id="L185">	MultiGenerator.setActiveGenerator(Strategy.getStrategy().generator);</span>
+<span class="fc" id="L186">		activeGenerator.countGender++;</span>
+<span class="fc" id="L187">		State state = Strategy.getStrategy().generator.generate(1);</span>
+<span class="fc" id="L188">		return state;</span>
 	}
 
 	@Override
 	public State getReference() {
 		// TODO Auto-generated method stub
-<span class="nc" id="L189">		return null;</span>
+<span class="nc" id="L194">		return null;</span>
 	}
 
 	@Override
 	public List&lt;State&gt; getReferenceList() {
 		// TODO Auto-generated method stub
-<span class="fc" id="L195">		return listStateReference;</span>
+<span class="fc" id="L200">		return listStateReference;</span>
 	}
 
 	@Override
 	public List&lt;State&gt; getSonList() {
 		// TODO Auto-generated method stub
-<span class="nc" id="L201">		return null;</span>
+<span class="nc" id="L206">		return null;</span>
 	}
 
 	@Override
 	public GeneratorType getType() {
-<span class="nc" id="L206">		return this.generatortype;</span>
+<span class="nc" id="L211">		return this.generatortype;</span>
 	}
 
 	@Override
 	public void setInitialReference(State stateInitialRef) {
 		// TODO Auto-generated method stub
 
-<span class="nc" id="L213">	}</span>
+<span class="nc" id="L218">	}</span>
 
 	@Override
 	public void updateReference(State stateCandidate,
@@ -219,8 +224,8 @@ public class MultiGenerator extends Generator implements Cloneable {
 			IllegalAccessException, InvocationTargetException,
 			NoSuchMethodException {
 		// TODO Auto-generated method stub
-<span class="nc" id="L222">		updateWeight(stateCandidate);</span>
-<span class="nc" id="L223">		tournament(stateCandidate, countIterationsCurrent);</span>
+<span class="nc" id="L227">		updateWeight(stateCandidate);</span>
+<span class="nc" id="L228">		tournament(stateCandidate, countIterationsCurrent);</span>
 		/*if(Strategy.getStrategy().getProblem().getTypeProblem().equals(ProblemType.Maximizar)){
 			if((stateCandidate.getEvaluation() &gt; listStateReference.get(listStateReference.size() - 1).getEvaluation()))
 				listStateReference.add(stateCandidate);
@@ -231,35 +236,35 @@ public class MultiGenerator extends Generator implements Cloneable {
 				listStateReference.add(stateCandidate);
 			else listStateReference.add(listStateReference.get(listStateReference.size() - 1));
 		} */
-<span class="nc" id="L234">	}</span>
+<span class="nc" id="L239">	}</span>
 	
 	public void updateWeight(State stateCandidate) { 
-<span class="fc" id="L237">		boolean search = searchState(stateCandidate);//premio por calidad. </span>
-<span class="pc bpc" id="L238" title="1 of 2 branches missed.">		if(search == false)</span>
-<span class="nc" id="L239">			updateAwardImp();</span>
-<span class="fc" id="L240">		else updateAwardSC();</span>
-<span class="fc" id="L241">	}</span>
+<span class="fc" id="L242">		boolean search = searchState(stateCandidate);//premio por calidad. </span>
+<span class="pc bpc" id="L243" title="1 of 2 branches missed.">		if(search == false)</span>
+<span class="nc" id="L244">			updateAwardImp();</span>
+<span class="fc" id="L245">		else updateAwardSC();</span>
+<span class="fc" id="L246">	}</span>
 	
 	public boolean searchState(State stateCandidate) {
-<span class="pc bpc" id="L244" title="1 of 2 branches missed.">		if(Strategy.getStrategy().getProblem().getTypeProblem().equals(ProblemType.Maximizar)){</span>
-<span class="pc bpc" id="L245" title="1 of 2 branches missed.">			if(stateCandidate.getEvaluation().get(0) &gt; Strategy.getStrategy().getBestState().getEvaluation().get(0)){</span>
-<span class="pc bpc" id="L246" title="1 of 2 branches missed.">				if(stateCandidate.getEvaluation().get(0) &gt; Strategy.getStrategy().getBestState().getEvaluation().get(0))</span>
-<span class="fc" id="L247">					activeGenerator.countBetterGender++;</span>
+<span class="pc bpc" id="L249" title="1 of 2 branches missed.">		if(Strategy.getStrategy().getProblem().getTypeProblem().equals(ProblemType.Maximizar)){</span>
+<span class="pc bpc" id="L250" title="1 of 2 branches missed.">			if(stateCandidate.getEvaluation().get(0) &gt; Strategy.getStrategy().getBestState().getEvaluation().get(0)){</span>
+<span class="pc bpc" id="L251" title="1 of 2 branches missed.">				if(stateCandidate.getEvaluation().get(0) &gt; Strategy.getStrategy().getBestState().getEvaluation().get(0))</span>
+<span class="fc" id="L252">					activeGenerator.countBetterGender++;</span>
 //				System.out.println(activeGenerator.getType().toString() + activeGenerator.countBetterGender);
 //				System.out.println(activeGenerator.countBetterGender);
-<span class="fc" id="L250">				return true;</span>
+<span class="fc" id="L255">				return true;</span>
 			}
-<span class="nc" id="L252">			else return false;</span>
+<span class="nc" id="L257">			else return false;</span>
 		}
 		else {
-<span class="nc bnc" id="L255" title="All 2 branches missed.">			if(stateCandidate.getEvaluation().get(0) &lt; Strategy.getStrategy().getBestState().getEvaluation().get(0)){</span>
-<span class="nc bnc" id="L256" title="All 2 branches missed.">				if(stateCandidate.getEvaluation().get(0) &lt; Strategy.getStrategy().getBestState().getEvaluation().get(0))</span>
-<span class="nc" id="L257">					activeGenerator.countBetterGender++;</span>
+<span class="nc bnc" id="L260" title="All 2 branches missed.">			if(stateCandidate.getEvaluation().get(0) &lt; Strategy.getStrategy().getBestState().getEvaluation().get(0)){</span>
+<span class="nc bnc" id="L261" title="All 2 branches missed.">				if(stateCandidate.getEvaluation().get(0) &lt; Strategy.getStrategy().getBestState().getEvaluation().get(0))</span>
+<span class="nc" id="L262">					activeGenerator.countBetterGender++;</span>
 //				System.out.println(activeGenerator.getType().toString() + activeGenerator.countBetterGender);
 //				System.out.println(activeGenerator.countBetterGender);
-<span class="nc" id="L260">				return true;</span>
+<span class="nc" id="L265">				return true;</span>
 			}
-<span class="nc" id="L262">			else return false;</span>
+<span class="nc" id="L267">			else return false;</span>
 		}
 		
 		
@@ -268,115 +273,119 @@ public class MultiGenerator extends Generator implements Cloneable {
 	@Override
 	public float getWeight() {
 		// TODO Auto-generated method stub
-<span class="nc" id="L271">		return 0;</span>
+<span class="nc" id="L276">		return 0;</span>
 	}
 	
 	public Generator roulette() {
-<span class="fc" id="L275">		float totalWeight = 0;</span>
-<span class="fc bfc" id="L276" title="All 2 branches covered.">		for (int i = 0; i &lt; listGenerators.length; i++) {</span>
-<span class="fc" id="L277">			totalWeight = listGenerators[i].getWeight() + totalWeight;</span>
+<span class="fc" id="L280">		float totalWeight = 0;</span>
+<span class="fc bfc" id="L281" title="All 2 branches covered.">		for (int i = 0; i &lt; listGenerators.length; i++) {</span>
+<span class="fc" id="L282">			totalWeight = listGenerators[i].getWeight() + totalWeight;</span>
 		}
-<span class="fc" id="L279">		List&lt;Float&gt; listProb = new ArrayList&lt;Float&gt;();</span>
-<span class="fc bfc" id="L280" title="All 2 branches covered.">		for (int i = 0; i &lt; listGenerators.length; i++) {</span>
-<span class="fc" id="L281">			float probF = listGenerators[i].getWeight() / totalWeight;</span>
-<span class="fc" id="L282">			listProb.add(probF);</span>
+<span class="fc" id="L284">		List&lt;Float&gt; listProb = new ArrayList&lt;Float&gt;();</span>
+<span class="fc bfc" id="L285" title="All 2 branches covered.">		for (int i = 0; i &lt; listGenerators.length; i++) {</span>
+<span class="fc" id="L286">			float probF = listGenerators[i].getWeight() / totalWeight;</span>
+<span class="fc" id="L287">			listProb.add(probF);</span>
 		}
-<span class="fc" id="L284">		List&lt;LimitRoulette&gt; listLimit = new ArrayList&lt;LimitRoulette&gt;();</span>
-<span class="fc" id="L285">		float limitHigh = 0;</span>
-<span class="fc" id="L286">		float limitLow = 0;</span>
-<span class="fc bfc" id="L287" title="All 2 branches covered.">		for (int i = 0; i &lt; listProb.size(); i++) {</span>
-<span class="fc" id="L288">			LimitRoulette limitRoulette = new LimitRoulette();</span>
-<span class="fc" id="L289">			limitHigh = listProb.get(i) + limitHigh;</span>
-<span class="fc" id="L290">			limitRoulette.setLimitHigh(limitHigh);</span>
-<span class="fc" id="L291">			limitRoulette.setLimitLow(limitLow);</span>
-<span class="fc" id="L292">			limitLow = limitHigh;</span>
-<span class="fc" id="L293">			limitRoulette.setGenerator(listGenerators[i]);</span>
-<span class="fc" id="L294">			listLimit.add(limitRoulette);</span>
+<span class="fc" id="L289">		List&lt;LimitRoulette&gt; listLimit = new ArrayList&lt;LimitRoulette&gt;();</span>
+<span class="fc" id="L290">		float limitHigh = 0;</span>
+<span class="fc" id="L291">		float limitLow = 0;</span>
+<span class="fc bfc" id="L292" title="All 2 branches covered.">		for (int i = 0; i &lt; listProb.size(); i++) {</span>
+<span class="fc" id="L293">			LimitRoulette limitRoulette = new LimitRoulette();</span>
+<span class="fc" id="L294">			limitHigh = listProb.get(i) + limitHigh;</span>
+<span class="fc" id="L295">			limitRoulette.setLimitHigh(limitHigh);</span>
+<span class="fc" id="L296">			limitRoulette.setLimitLow(limitLow);</span>
+<span class="fc" id="L297">			limitLow = limitHigh;</span>
+<span class="fc" id="L298">			limitRoulette.setGenerator(listGenerators[i]);</span>
+<span class="fc" id="L299">			listLimit.add(limitRoulette);</span>
 		}
-<span class="fc" id="L296">		float numbAleatory = (float) (Math.random() * (double)(1));</span>
-<span class="fc" id="L297">		boolean find = false;</span>
-<span class="fc" id="L298">		int i = 0;</span>
-<span class="pc bpc" id="L299" title="1 of 4 branches missed.">		while ((find == false) &amp;&amp; (i &lt; listLimit.size())){</span>
-<span class="pc bpc" id="L300" title="1 of 4 branches missed.">			if((listLimit.get(i).getLimitLow() &lt;= numbAleatory) &amp;&amp; (numbAleatory &lt;= listLimit.get(i).getLimitHigh())){</span>
-<span class="fc" id="L301">				find = true;</span>
+		// Uses ThreadLocalRandom for algorithmic (non-cryptographic) randomness.
+		// This RNG chooses a generator according to roulette weights and is not
+		// used for security-sensitive purposes. Suppress Sonar hotspot S2245.
+		@SuppressWarnings(&quot;squid:S2245&quot;)
+<span class="fc" id="L305">		float numbAleatory = ThreadLocalRandom.current().nextFloat();</span>
+<span class="fc" id="L306">		boolean find = false;</span>
+<span class="fc" id="L307">		int i = 0;</span>
+<span class="pc bpc" id="L308" title="1 of 4 branches missed.">		while ((find == false) &amp;&amp; (i &lt; listLimit.size())){</span>
+<span class="pc bpc" id="L309" title="1 of 4 branches missed.">			if((listLimit.get(i).getLimitLow() &lt;= numbAleatory) &amp;&amp; (numbAleatory &lt;= listLimit.get(i).getLimitHigh())){</span>
+<span class="fc" id="L310">				find = true;</span>
 			}
-<span class="fc" id="L303">			else i++;</span>
+<span class="fc" id="L312">			else i++;</span>
 		}
-<span class="pc bpc" id="L305" title="1 of 2 branches missed.">		if (find) {</span>
-<span class="fc" id="L306">			return listLimit.get(i).getGenerator();</span>
+<span class="pc bpc" id="L314" title="1 of 2 branches missed.">		if (find) {</span>
+<span class="fc" id="L315">			return listLimit.get(i).getGenerator();</span>
 		}
-<span class="nc" id="L308">		else return listLimit.get(listLimit.size() - 1).getGenerator();</span>
+<span class="nc" id="L317">		else return listLimit.get(listLimit.size() - 1).getGenerator();</span>
 	}
 
 	@Override
 	public boolean awardUpdateREF(State stateCandidate) {
 		// TODO Auto-generated method stub
-<span class="nc" id="L314">		return false;</span>
+<span class="nc" id="L323">		return false;</span>
 	}
 	
 	@SuppressWarnings(&quot;static-access&quot;)
 	public void updateAwardSC() {
-<span class="fc" id="L319">		float weightLast = activeGenerator.getWeight();</span>
-<span class="fc" id="L320">		float weightUpdate = (float) (weightLast * (1 - 0.1) + 10);</span>
-<span class="fc" id="L321">		activeGenerator.setWeight(weightUpdate);</span>
+<span class="fc" id="L328">		float weightLast = activeGenerator.getWeight();</span>
+<span class="fc" id="L329">		float weightUpdate = (float) (weightLast * (1 - 0.1) + 10);</span>
+<span class="fc" id="L330">		activeGenerator.setWeight(weightUpdate);</span>
 //		activeGenerator.getTrace()getTrace().add(weightUpdate);
-<span class="fc bfc" id="L323" title="All 2 branches covered.">		for (int i = 0; i &lt; listGenerators.length; i++) {</span>
-<span class="fc bfc" id="L324" title="All 2 branches covered.">			if(listGenerators[i].equals(activeGenerator))</span>
-<span class="fc" id="L325">				activeGenerator.getTrace()[Strategy.getStrategy().getCountCurrent()] = weightUpdate;</span>
+<span class="fc bfc" id="L332" title="All 2 branches covered.">		for (int i = 0; i &lt; listGenerators.length; i++) {</span>
+<span class="fc bfc" id="L333" title="All 2 branches covered.">			if(listGenerators[i].equals(activeGenerator))</span>
+<span class="fc" id="L334">				activeGenerator.getTrace()[Strategy.getStrategy().getCountCurrent()] = weightUpdate;</span>
 			else{
-<span class="pc bpc" id="L327" title="1 of 2 branches missed.">				if(!listGenerators[i].getType().equals(GeneratorType.MultiGenerator)){</span>
-<span class="fc" id="L328">					float trace = listGenerators[i].getWeight();</span>
-<span class="fc" id="L329">					listGenerators[i].getTrace() [Strategy.getStrategy().getCountCurrent()] = trace;</span>
+<span class="pc bpc" id="L336" title="1 of 2 branches missed.">				if(!listGenerators[i].getType().equals(GeneratorType.MultiGenerator)){</span>
+<span class="fc" id="L337">					float trace = listGenerators[i].getWeight();</span>
+<span class="fc" id="L338">					listGenerators[i].getTrace() [Strategy.getStrategy().getCountCurrent()] = trace;</span>
 				}
 			}
 		}
-<span class="fc" id="L333">	}</span>
+<span class="fc" id="L342">	}</span>
 
 	@SuppressWarnings(&quot;static-access&quot;)
 	public void updateAwardImp() {
-<span class="fc" id="L337">		float weightLast = activeGenerator.getWeight();</span>
-<span class="fc" id="L338">		float weightUpdate = (float) (weightLast * (1 - 0.1));</span>
-<span class="fc" id="L339">		activeGenerator.setWeight(weightUpdate);</span>
+<span class="fc" id="L346">		float weightLast = activeGenerator.getWeight();</span>
+<span class="fc" id="L347">		float weightUpdate = (float) (weightLast * (1 - 0.1));</span>
+<span class="fc" id="L348">		activeGenerator.setWeight(weightUpdate);</span>
 //		activeGenerator.getTrace().add(weightUpdate);
-<span class="fc bfc" id="L341" title="All 2 branches covered.">		for (int i = 0; i &lt; listGenerators.length; i++) {</span>
-<span class="fc bfc" id="L342" title="All 2 branches covered.">			if(listGenerators[i].equals(activeGenerator))</span>
-<span class="fc" id="L343">				activeGenerator.getTrace()[Strategy.getStrategy().getCountCurrent()] = weightUpdate;</span>
+<span class="fc bfc" id="L350" title="All 2 branches covered.">		for (int i = 0; i &lt; listGenerators.length; i++) {</span>
+<span class="fc bfc" id="L351" title="All 2 branches covered.">			if(listGenerators[i].equals(activeGenerator))</span>
+<span class="fc" id="L352">				activeGenerator.getTrace()[Strategy.getStrategy().getCountCurrent()] = weightUpdate;</span>
 			else{
-<span class="pc bpc" id="L345" title="1 of 2 branches missed.">				if(!listGenerators[i].getType().equals(GeneratorType.MultiGenerator)){</span>
-<span class="fc" id="L346">					float trace = listGenerators[i].getWeight();</span>
-<span class="fc" id="L347">					listGenerators[i].getTrace() [Strategy.getStrategy().getCountCurrent()] = trace;</span>
+<span class="pc bpc" id="L354" title="1 of 2 branches missed.">				if(!listGenerators[i].getType().equals(GeneratorType.MultiGenerator)){</span>
+<span class="fc" id="L355">					float trace = listGenerators[i].getWeight();</span>
+<span class="fc" id="L356">					listGenerators[i].getTrace() [Strategy.getStrategy().getCountCurrent()] = trace;</span>
 				}
 			}
 		}
-<span class="fc" id="L351">	}</span>
+<span class="fc" id="L360">	}</span>
 	
 	@Override
 	public void setWeight(float weight) {
 		// TODO Auto-generated method stub
 		
-<span class="nc" id="L357">	}</span>
+<span class="nc" id="L366">	}</span>
 	@Override
 	public float[] getTrace() {
 		// TODO Auto-generated method stub
 		// MultiGenerator does not maintain a single trace array; return empty array to avoid nulls
-<span class="fc" id="L362">		return new float[0];</span>
+<span class="fc" id="L371">		return new float[0];</span>
 	}
 	
 	@SuppressWarnings(&quot;static-access&quot;)
 	public void tournament(State stateCandidate,Integer countIterationsCurrent) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
-<span class="fc" id="L367">		State stateTem = new State(stateCandidate);</span>
-<span class="fc bfc" id="L368" title="All 2 branches covered.">		for (int i = 0; i &lt; MultiGenerator.getListGenerators().length; i++) {</span>
-<span class="pc bpc" id="L369" title="1 of 2 branches missed.">				if(!listGenerators[i].getType().equals(GeneratorType.MultiGenerator))</span>
-<span class="fc" id="L370">					MultiGenerator.getListGenerators()[i].updateReference(stateTem, countIterationsCurrent);</span>
+<span class="fc" id="L376">		State stateTem = new State(stateCandidate);</span>
+<span class="fc bfc" id="L377" title="All 2 branches covered.">		for (int i = 0; i &lt; MultiGenerator.getListGenerators().length; i++) {</span>
+<span class="pc bpc" id="L378" title="1 of 2 branches missed.">				if(!listGenerators[i].getType().equals(GeneratorType.MultiGenerator))</span>
+<span class="fc" id="L379">					MultiGenerator.getListGenerators()[i].updateReference(stateTem, countIterationsCurrent);</span>
 		}
-<span class="fc" id="L372">	}</span>
+<span class="fc" id="L381">	}</span>
 	
 	@Override
 	public Object clone(){
 		try{
-<span class="fc" id="L377">			return super.clone();</span>
-<span class="nc" id="L378">		} catch (CloneNotSupportedException e) {</span>
-<span class="nc" id="L379">			return new MultiGenerator();</span>
+<span class="fc" id="L386">			return super.clone();</span>
+<span class="nc" id="L387">		} catch (CloneNotSupportedException e) {</span>
+<span class="nc" id="L388">			return new MultiGenerator();</span>
 		}
 	}
 
@@ -384,14 +393,14 @@ public class MultiGenerator extends Generator implements Cloneable {
 	public int[] getListCountBetterGender() {
 		// TODO Auto-generated method stub
 		// MultiGenerator does not maintain these arrays itself; return empty array to avoid nulls
-<span class="fc" id="L387">		return new int[0];</span>
+<span class="fc" id="L396">		return new int[0];</span>
 	}
 
 	@Override
 	public int[] getListCountGender() {
 		// TODO Auto-generated method stub
 		// MultiGenerator does not maintain these arrays itself; return empty array to avoid nulls
-<span class="fc" id="L394">		return new int[0];</span>
+<span class="fc" id="L403">		return new int[0];</span>
 	}
 
 }
