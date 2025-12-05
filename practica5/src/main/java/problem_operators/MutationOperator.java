@@ -9,6 +9,9 @@ import problem.definition.Operator;
 import problem.definition.State;
 
 
+/**
+ * MutationOperator - defines a mutation operator for generating new states.
+ */
 public class MutationOperator extends Operator {
 
 	/**
@@ -59,6 +62,11 @@ public class MutationOperator extends Operator {
 	 * @return list of randomly generated states, never null
 	 */
 	@Override
+	/**
+	 * generateRandomState - method to generate random states.
+	 * @param operatornumber 
+	 * @return returns list of random states.
+	 */
 	public List<State> generateRandomState(final Integer operatornumber) {
 		// TODO Auto-generated method stub
 		return null;
