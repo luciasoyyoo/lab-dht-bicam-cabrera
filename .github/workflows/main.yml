@@ -23,6 +23,7 @@ jobs:
           cache: maven
 
       - name: Compilar y ejecutar tests
+        working-directory: practica5
         run: mvn clean verify
 
 
@@ -42,6 +43,7 @@ jobs:
           cache: maven
 
       - name: Ejecutar análisis estático y seguridad
+        working-directory: practica5
         run: mvn verify
 
 
@@ -64,6 +66,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        working-directory: practica5
         run: |
           mvn verify sonar:sonar \
           -Dsonar.projectKey=luciasoyyoo_lab-dht-bicam-cabrera \
@@ -87,6 +90,7 @@ jobs:
           cache: maven
 
       - name: Construir JAR final
+        working-directory: practica5  
         run: mvn package -DskipTests
 
       - name: Publicar artefacto
