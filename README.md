@@ -1,4 +1,8 @@
 # Proyecto BiCIAM 
+[![CI Pipeline - BiCIAM](https://github.com/luciasoyyoo/lab-dht-bicam-cabrera/actions/workflows/main.yml/badge.svg)](https://github.com/luciasoyyoo/lab-dht-bicam-cabrera/actions/workflows/main.yml)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=luciasoyyoo_lab-dht-bicam-cabrera&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=luciasoyyoo_lab-dht-bicam-cabrera)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=luciasoyyoo_lab-dht-bicam-cabrera&metric=coverage)](https://sonarcloud.io/summary/new_code?id=luciasoyyoo_lab-dht-bicam-cabrera)
+
 ## Instrucciones de compilación y notas
 
 Resumen: 
