@@ -10,9 +10,23 @@ import factory_interface.IFFactorySolutionMethod;
 import factory_method.FactorySolutionMethod;
 
 
+/**
+ * Problem
+ *
+ * @brief Encapsula la definiciÃ³n del problema a resolver: funciones objetivo,
+ *        codificaciÃ³n, operador generador de estados y mÃ©todo de soluciÃ³n.
+ *
+ * Esta clase actÃºa como contenedor de las piezas necesarias para evaluar y
+ * manipular estados de soluciÃ³n dentro de los metaheurÃ­sticos. No modifica
+ * el comportamiento de evaluaciÃ³n âsolo documenta y expone getters/setters
+ * usados por los generadores y estrategias.
+ */
 public class Problem {
 
-<span class="fc" id="L15">	public enum ProblemType {Maximizar,Minimizar;}</span>
+	/**
+	 * ProblemType - descripcion (aÃ±ade detalles).
+	 */
+<span class="fc" id="L29">	public enum ProblemType {Maximizar,Minimizar;}</span>
 
 	private ArrayList&lt;ObjetiveFunction&gt; function;
 	private State state;
@@ -23,88 +37,191 @@ public class Problem {
 	private TypeSolutionMethod typeSolutionMethod;
 	private IFFactorySolutionMethod factorySolutionMethod;
 	
+	/**
+	 * Constructor por defecto.
+	 *
+	 * Inicializa una instancia vacÃ­a; los componentes concretos (funciones,
+	 * codificaciÃ³n, operador) se deben inyectar mediante los setters antes de
+	 * usar {@link #Evaluate(State)}.
+	 */
 	public Problem() {
-<span class="fc" id="L27">		super();</span>
-<span class="fc" id="L28">	}</span>
+<span class="fc" id="L48">		super();</span>
+<span class="fc" id="L49">	}</span>
 
+	/**
+	 * Obtener la lista de funciones objetivo del problema.
+	 *
+	 * @return copia defensiva de la lista de {@link ObjetiveFunction}; nunca
+	 *         devuelve la referencia interna (puede ser lista vacÃ­a).
+	 */
 	public ArrayList&lt;ObjetiveFunction&gt; getFunction() {
-<span class="pc bpc" id="L31" title="1 of 2 branches missed.">		return (function == null) ? new ArrayList&lt;ObjetiveFunction&gt;() : new ArrayList&lt;ObjetiveFunction&gt;(function);</span>
+<span class="pc bpc" id="L58" title="1 of 2 branches missed.">		return (function == null) ? new ArrayList&lt;ObjetiveFunction&gt;() : new ArrayList&lt;ObjetiveFunction&gt;(function);</span>
 	}
 
+	/**
+	 * Establecer las funciones objetivo del problema.
+	 *
+	 * Se realiza una copia defensiva de la lista proporcionada.
+	 *
+	 * @param function lista de funciones objetivo
+	 */
 	public void setFunction(ArrayList&lt;ObjetiveFunction&gt; function) {
-<span class="pc bpc" id="L35" title="1 of 2 branches missed.">		this.function = (function == null) ? new ArrayList&lt;ObjetiveFunction&gt;() : new ArrayList&lt;ObjetiveFunction&gt;(function);</span>
-<span class="fc" id="L36">	}</span>
+<span class="pc bpc" id="L69" title="1 of 2 branches missed.">		this.function = (function == null) ? new ArrayList&lt;ObjetiveFunction&gt;() : new ArrayList&lt;ObjetiveFunction&gt;(function);</span>
+<span class="fc" id="L70">	}</span>
 
+	/**
+	 * Obtener una copia del estado actual del problema.
+	 *
+	 * Devuelve una copia para evitar aliasing con la representaciÃ³n interna.
+	 *
+	 * @return copia de {@link State} o null si no hay estado inicial.
+	 */
 	public State getState() {
-<span class="pc bpc" id="L39" title="1 of 2 branches missed.">		return (state == null) ? null : new State(state);</span>
+<span class="pc bpc" id="L80" title="1 of 2 branches missed.">		return (state == null) ? null : new State(state);</span>
 	}
 
+	/**
+	 * Establecer el estado actual del problema (copia defensiva).
+	 *
+	 * @param state estado a asignar; si es null se resetea el estado interno.
+	 */
 	public void setState(State state) {
-<span class="pc bpc" id="L43" title="1 of 2 branches missed.">		this.state = (state == null) ? null : new State(state);</span>
-<span class="fc" id="L44">	}</span>
+<span class="pc bpc" id="L89" title="1 of 2 branches missed.">		this.state = (state == null) ? null : new State(state);</span>
+<span class="fc" id="L90">	}</span>
 
+	/**
+	 * Obtener el tipo de problema (Maximizar / Minimizar).
+	 *
+	 * @return el {@link ProblemType} configurado para este problema
+	 */
 	public ProblemType getTypeProblem() {
-<span class="fc" id="L47">		return typeProblem;</span>
+<span class="fc" id="L98">		return typeProblem;</span>
 	}
+	/**
+	 * Establecer el tipo de problema.
+	 *
+	 * @param typeProblem tipo de problema (Maximizar o Minimizar)
+	 */
 	public void setTypeProblem(ProblemType typeProblem) {
-<span class="fc" id="L50">		this.typeProblem = typeProblem;</span>
-<span class="fc" id="L51">	}</span>
+<span class="fc" id="L106">		this.typeProblem = typeProblem;</span>
+<span class="fc" id="L107">	}</span>
 
+	/**
+	 * Obtener la codificaciÃ³n usada para representar estados.
+	 *
+	 * @return la {@link Codification} configurada
+	 */
 	public Codification getCodification() {
-<span class="fc" id="L54">		return codification;</span>
+<span class="fc" id="L115">		return codification;</span>
 	}
+	/**
+	 * Establecer la codificaciÃ³n de variables para el problema.
+	 *
+	 * @param codification implementaciÃ³n de {@link Codification}
+	 */
 	public void setCodification(Codification codification) {
-<span class="fc" id="L57">		this.codification = codification;</span>
-<span class="fc" id="L58">	}</span>
+<span class="fc" id="L123">		this.codification = codification;</span>
+<span class="fc" id="L124">	}</span>
 
+	/**
+	 * Obtener el operador encargado de generar nuevos estados.
+	 *
+	 * @return operador configurado
+	 */
 	public Operator getOperator() {
-<span class="fc" id="L61">		return operator;</span>
+<span class="fc" id="L132">		return operator;</span>
 	}
 
+	/**
+	 * Establecer el operador de generaciÃ³n de estados.
+	 *
+	 * @param operator operador que implementa la generaciÃ³n de estados
+	 */
 	public void setOperator(Operator operator) {
-<span class="fc" id="L65">		this.operator = operator;</span>
-<span class="fc" id="L66">	}</span>
+<span class="fc" id="L141">		this.operator = operator;</span>
+<span class="fc" id="L142">	}</span>
 
+	/**
+	 * Obtener el nÃºmero de valores posibles (uso dependiente de la codificaciÃ³n).
+	 *
+	 * @return nÃºmero de valores posibles
+	 */
 	public int getPossibleValue() {
-<span class="fc" id="L69">		return possibleValue;</span>
+<span class="fc" id="L150">		return possibleValue;</span>
 	}
 
+	/**
+	 * Establecer el nÃºmero de valores posibles.
+	 *
+	 * @param possibleValue nÃºmero de valores
+	 */
 	public void setPossibleValue(int possibleValue) {
-<span class="fc" id="L73">		this.possibleValue = possibleValue;</span>
-<span class="fc" id="L74">	}</span>
+<span class="fc" id="L159">		this.possibleValue = possibleValue;</span>
+<span class="fc" id="L160">	}</span>
 
+	/**
+	 * Evaluar un estado de soluciÃ³n.
+	 *
+	 * Dependiendo del {@link #typeSolutionMethod} realiza una evaluaciÃ³n simple
+	 * usando la primera funciÃ³n objetivo o delega en un {@link SolutionMethod}.
+	 *
+	 * @param state estado a evaluar (se modifica su lista de evaluaciones)
+	 * @throws ReflectiveOperationException si falla la creaciÃ³n reflexiva del mÃ©todo de soluciÃ³n
+	 */
 	public void Evaluate(State state) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
-<span class="fc" id="L77">		double eval = 0;       </span>
-<span class="fc" id="L78">		ArrayList&lt;Double&gt; evaluation = new ArrayList&lt;Double&gt;(this.function.size());</span>
-<span class="pc bpc" id="L79" title="1 of 2 branches missed.">		if (typeSolutionMethod == null) {</span>
-<span class="fc" id="L80">			eval= function.get(0).Evaluation(state);</span>
-<span class="fc" id="L81">			evaluation.add(evaluation.size(), eval);</span>
-<span class="fc" id="L82">			state.setEvaluation(evaluation);</span>
+<span class="fc" id="L172">		double eval = 0;       </span>
+<span class="fc" id="L173">		ArrayList&lt;Double&gt; evaluation = new ArrayList&lt;Double&gt;(this.function.size());</span>
+<span class="pc bpc" id="L174" title="1 of 2 branches missed.">		if (typeSolutionMethod == null) {</span>
+<span class="fc" id="L175">			eval= function.get(0).Evaluation(state);</span>
+<span class="fc" id="L176">			evaluation.add(evaluation.size(), eval);</span>
+<span class="fc" id="L177">			state.setEvaluation(evaluation);</span>
 		}
 		else {
-<span class="nc" id="L85">			SolutionMethod method = newSolutionMethod(typeSolutionMethod);</span>
-<span class="nc" id="L86">			method.evaluationState(state);</span>
+<span class="nc" id="L180">			SolutionMethod method = newSolutionMethod(typeSolutionMethod);</span>
+<span class="nc" id="L181">			method.evaluationState(state);</span>
 		}
-<span class="fc" id="L88">	}</span>
+<span class="fc" id="L183">	}</span>
 	
+	/**
+	 * Obtener el tipo de mÃ©todo de soluciÃ³n configurado.
+	 *
+	 * @return tipo de mÃ©todo de soluciÃ³n o null
+	 */
 	public TypeSolutionMethod getTypeSolutionMethod() {
-<span class="nc" id="L91">		return typeSolutionMethod;</span>
+<span class="nc" id="L191">		return typeSolutionMethod;</span>
 	}
+	/**
+	 * Establecer el tipo de mÃ©todo de soluciÃ³n.
+	 *
+	 * @param typeSolutionMethod tipo a usar para evaluar estados
+	 */
 	public void setTypeSolutionMethod(TypeSolutionMethod typeSolutionMethod) {
-<span class="nc" id="L94">		this.typeSolutionMethod = typeSolutionMethod;</span>
-<span class="nc" id="L95">	}</span>
+<span class="nc" id="L199">		this.typeSolutionMethod = typeSolutionMethod;</span>
+<span class="nc" id="L200">	}</span>
+	/**
+	 * Obtener la fÃ¡brica de mÃ©todos de soluciÃ³n.
+	 *
+	 * @return fÃ¡brica configurada (puede ser null)
+	 */
 	public IFFactorySolutionMethod getFactorySolutionMethod() {
-<span class="nc" id="L97">		return factorySolutionMethod;</span>
+<span class="nc" id="L207">		return factorySolutionMethod;</span>
 	}
 	public void setFactorySolutionMethod(
 			IFFactorySolutionMethod factorySolutionMethod) {
-<span class="nc" id="L101">		this.factorySolutionMethod = factorySolutionMethod;</span>
-<span class="nc" id="L102">	}</span>
+<span class="nc" id="L211">		this.factorySolutionMethod = factorySolutionMethod;</span>
+<span class="nc" id="L212">	}</span>
 	
+	/**
+	 * Crear una instancia de {@link SolutionMethod} para el tipo solicitado.
+	 *
+	 * @param typeSolutionMethod tipo de mÃ©todo de soluciÃ³n a crear
+	 * @return instancia de {@link SolutionMethod}
+	 * @throws ReflectiveOperationException si la creaciÃ³n vÃ­a fÃ¡brica falla
+	 */
 	public SolutionMethod newSolutionMethod(TypeSolutionMethod typeSolutionMethod) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
-<span class="nc" id="L105">		factorySolutionMethod = new FactorySolutionMethod();</span>
-<span class="nc" id="L106">		SolutionMethod solutionMethod = factorySolutionMethod.createdSolutionMethod(typeSolutionMethod);</span>
-<span class="nc" id="L107">		return solutionMethod;</span>
+<span class="nc" id="L222">		factorySolutionMethod = new FactorySolutionMethod();</span>
+<span class="nc" id="L223">		SolutionMethod solutionMethod = factorySolutionMethod.createdSolutionMethod(typeSolutionMethod);</span>
+<span class="nc" id="L224">		return solutionMethod;</span>
 	}
 }
 

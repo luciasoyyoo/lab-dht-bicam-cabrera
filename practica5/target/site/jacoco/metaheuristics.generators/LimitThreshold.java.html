@@ -22,6 +22,9 @@ import factory_interface.IFFactoryAcceptCandidate;
 import factory_method.FactoryAcceptCandidate;
 
 
+/**
+ * LimitThreshold - class that implements the Limit Threshold metaheuristic.
+ */
 public class LimitThreshold extends Generator{
 	
 	private CandidateValue candidatevalue;
@@ -31,135 +34,206 @@ public class LimitThreshold extends Generator{
 	private State stateReferenceLT;
     private IFFactoryAcceptCandidate ifacceptCandidate;
 	private GeneratorType typeGenerator;
-	//private List&lt;State&gt; listStateReference = new ArrayList&lt;State&gt;(); // lista de estados referencias por los que va pasando el algoritmo
 	private float weight;
 	
 	//problemas dinamicos
 	//problemas dinamicos: use instance fields from Generator (countGender, countBetterGender)
-<span class="fc" id="L39">	private int[] listCountBetterGender = new int[10];</span>
-<span class="fc" id="L40">	private int[] listCountGender = new int[10];</span>
-<span class="fc" id="L41">	private float[] listTrace = new float[1200000];</span>
+<span class="fc" id="L41">	private int[] listCountBetterGender = new int[10];</span>
+<span class="fc" id="L42">	private int[] listCountGender = new int[10];</span>
+<span class="fc" id="L43">	private float[] listTrace = new float[1200000];</span>
 	
+	/**
+	 * getTypeGenerator - get the type of the generator.
+	 * @return the type of the generator
+	 */
 	public GeneratorType getTypeGenerator() {
-<span class="nc" id="L44">		return typeGenerator;</span>
+<span class="nc" id="L50">		return typeGenerator;</span>
 	}
 
+	/**
+	 * setTypeGenerator - set the type of the generator.
+	 * @param typeGenerator the type of the generator to set
+	 */
 	public void setTypeGenerator(GeneratorType typeGenerator) {
-<span class="nc" id="L48">		this.typeGenerator = typeGenerator;</span>
-<span class="nc" id="L49">	}</span>
+<span class="nc" id="L58">		this.typeGenerator = typeGenerator;</span>
+<span class="nc" id="L59">	}</span>
 
+	/**
+	 * LimitThreshold - class that implements the Limit Threshold metaheuristic.
+	 */
 	public LimitThreshold() {
-<span class="fc" id="L52">		super();</span>
-<span class="fc" id="L53">		this.typeAcceptation = AcceptType.AcceptNotBadU;</span>
-<span class="fc" id="L54">		this.strategy = StrategyType.NORMAL;</span>
+<span class="fc" id="L65">		super();</span>
+<span class="fc" id="L66">		this.typeAcceptation = AcceptType.AcceptNotBadU;</span>
+<span class="fc" id="L67">		this.strategy = StrategyType.NORMAL;</span>
 
 
-<span class="fc" id="L57">		Problem problem = Strategy.getStrategy().getProblem();</span>
+<span class="fc" id="L70">		Problem problem = Strategy.getStrategy().getProblem();</span>
 
-<span class="fc bfc" id="L59" title="All 2 branches covered.">		if(problem.getTypeProblem().equals(ProblemType.Maximizar)) {</span>
-<span class="fc" id="L60">			this.typeCandidate = CandidateType.GreaterCandidate;</span>
+<span class="fc bfc" id="L72" title="All 2 branches covered.">		if(problem.getTypeProblem().equals(ProblemType.Maximizar)) {</span>
+<span class="fc" id="L73">			this.typeCandidate = CandidateType.GreaterCandidate;</span>
 		}
 		else{
-<span class="fc" id="L63">			this.typeCandidate = CandidateType.SmallerCandidate;</span>
+<span class="fc" id="L76">			this.typeCandidate = CandidateType.SmallerCandidate;</span>
 		}
 
-<span class="fc" id="L66">		this.candidatevalue = new CandidateValue();</span>
-<span class="fc" id="L67">		this.typeGenerator = GeneratorType.LimitThreshold;</span>
-<span class="fc" id="L68">		this.weight = (float) 50.0;</span>
-<span class="fc" id="L69">		listTrace[0] = weight;</span>
-<span class="fc" id="L70">		listCountBetterGender[0] = 0;</span>
-<span class="fc" id="L71">		listCountGender[0] = 0;</span>
+<span class="fc" id="L79">		this.candidatevalue = new CandidateValue();</span>
+<span class="fc" id="L80">		this.typeGenerator = GeneratorType.LimitThreshold;</span>
+<span class="fc" id="L81">		this.weight = (float) 50.0;</span>
+<span class="fc" id="L82">		listTrace[0] = weight;</span>
+<span class="fc" id="L83">		listCountBetterGender[0] = 0;</span>
+<span class="fc" id="L84">		listCountGender[0] = 0;</span>
 
-<span class="fc" id="L73">	}</span>
+<span class="fc" id="L86">	}</span>
 	@Override
+	/**
+	 * generate - generate a new state based on the operator number.
+	 * @param operatornumber the operator number to use for generating the new state
+	 * @return the generated state
+	 */
 	public State generate(Integer operatornumber) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
-<span class="fc" id="L76">		List&lt;State&gt; neighborhood = Strategy.getStrategy().getProblem().getOperator().generatedNewState(stateReferenceLT, operatornumber);</span>
-<span class="fc" id="L77">	    State statecandidate = candidatevalue.stateCandidate(stateReferenceLT, typeCandidate, strategy, operatornumber, neighborhood);</span>
-<span class="fc" id="L78">	    return statecandidate;</span>
+<span class="fc" id="L94">		List&lt;State&gt; neighborhood = Strategy.getStrategy().getProblem().getOperator().generatedNewState(stateReferenceLT, operatornumber);</span>
+<span class="fc" id="L95">	    State statecandidate = candidatevalue.stateCandidate(stateReferenceLT, typeCandidate, strategy, operatornumber, neighborhood);</span>
+<span class="fc" id="L96">	    return statecandidate;</span>
 	}
 
 	@Override
+	/**
+	 * updateReference - update the reference state based on the candidate state.
+	 * @param stateCandidate 
+	 * @param countIterationsCurrent 
+	 */
 	public void updateReference(State stateCandidate, Integer countIterationsCurrent) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
-<span class="fc" id="L83">		ifacceptCandidate = new FactoryAcceptCandidate();</span>
-<span class="fc" id="L84">		AcceptableCandidate candidate = ifacceptCandidate.createAcceptCandidate(typeAcceptation);</span>
-<span class="fc" id="L85">		Boolean accept = candidate.acceptCandidate(stateReferenceLT , stateCandidate);</span>
-<span class="fc bfc" id="L86" title="All 2 branches covered.">		if(accept.equals(true)){</span>
-			//listStateReference.add(stateCandidate);
-<span class="fc" id="L88">			stateReferenceLT = stateCandidate;</span>
+<span class="fc" id="L106">		ifacceptCandidate = new FactoryAcceptCandidate();</span>
+<span class="fc" id="L107">		AcceptableCandidate candidate = ifacceptCandidate.createAcceptCandidate(typeAcceptation);</span>
+<span class="fc" id="L108">		Boolean accept = candidate.acceptCandidate(stateReferenceLT , stateCandidate);</span>
+<span class="fc bfc" id="L109" title="All 2 branches covered.">		if(accept.equals(true)){</span>
+<span class="fc" id="L110">			stateReferenceLT = stateCandidate;</span>
 		}
-		//else listStateReference.add(stateReferenceHC);
-<span class="fc" id="L91">	}</span>
+<span class="fc" id="L112">	}</span>
 	
 
 	@Override
+	/**
+	 * getReference - get the reference state.
+	 * @return the reference state
+	 */
 	public State getReference() {
-<span class="fc" id="L96">		return stateReferenceLT;</span>
+<span class="fc" id="L121">		return stateReferenceLT;</span>
 	}
 
+	/**
+	 * setStateRef - set the reference state.
+	 * @param stateRef the reference state to set
+	 */
 	public void setStateRef(State stateRef) {
-<span class="fc" id="L100">		this.stateReferenceLT = stateRef;</span>
-<span class="fc" id="L101">	}</span>
+<span class="fc" id="L129">		this.stateReferenceLT = stateRef;</span>
+<span class="fc" id="L130">	}</span>
 
 	@Override
+	/**
+	 * setInitialReference - set the initial reference state.
+	 * @param stateInitialRef 
+	 */
 	public void setInitialReference(State stateInitialRef) {
-<span class="nc" id="L105">		this.stateReferenceLT = stateInitialRef;</span>
-<span class="nc" id="L106">	}</span>
+<span class="nc" id="L138">		this.stateReferenceLT = stateInitialRef;</span>
+<span class="nc" id="L139">	}</span>
 
 
 	@Override
+	/**
+	 * getType - get the type of the generator.
+	 * @return the type of the generator
+	 */
 	public GeneratorType getType() {
-<span class="fc" id="L111">		return this.typeGenerator;</span>
+<span class="fc" id="L148">		return this.typeGenerator;</span>
 	}
 
 	@Override
+	/**
+	 * getReferenceList - get the list of reference states.
+	 * @return the list of reference states
+	 */
 	public List&lt;State&gt; getReferenceList() {
-<span class="nc" id="L116">		return null;</span>
+<span class="nc" id="L157">		return null;</span>
 	}
 
 	@Override
+	/**
+	 * getSonList - get the list of son states.
+	 * @return the list of son states
+	 */
 	public List&lt;State&gt; getSonList() {
 		// TODO Auto-generated method stub
-<span class="nc" id="L122">		return null;</span>
+<span class="nc" id="L167">		return null;</span>
 	}
 
+	/**
+	 * setTypeCandidate - set the type of candidate.
+	 * @param typeCandidate the type of candidate to set
+	 */
 	public void setTypeCandidate(CandidateType typeCandidate){
-<span class="nc" id="L126">		this.typeCandidate = typeCandidate;</span>
-<span class="nc" id="L127">	}</span>
+<span class="nc" id="L175">		this.typeCandidate = typeCandidate;</span>
+<span class="nc" id="L176">	}</span>
 
 	@Override
+	/**
+	 * awardUpdateREF - award the update of the reference state.
+	 * @param stateCandidate 
+	 * @return return true if the reference state was updated, false otherwise
+	 */
 	public boolean awardUpdateREF(State stateCandidate) {
 		// TODO Auto-generated method stub
-<span class="nc" id="L132">		return false;</span>
+<span class="nc" id="L186">		return false;</span>
 	}
 
+	/**
+	 * getWeight - get the weight of the generator.
+	 * @return the weight of the generator
+	 */
 	public float getWeight() {
 		// TODO Auto-generated method stub
-<span class="fc" id="L137">		return this.weight;</span>
+<span class="fc" id="L195">		return this.weight;</span>
 	}
 
 	@Override
+	/**
+	 * setWeight - set the weight of the generator.
+	 * @param weight 
+	 */
 	public void setWeight(float weight) {
 		// TODO Auto-generated method stub
-<span class="nc" id="L143">		this.weight = weight;</span>
-<span class="nc" id="L144">	}</span>
+<span class="nc" id="L205">		this.weight = weight;</span>
+<span class="nc" id="L206">	}</span>
 
 
 	@Override
+	/**
+	 * getListCountBetterGender - get the list of count better gender.
+	 * @return the list of count better gender
+	 */
 	public int[] getListCountBetterGender() {
 		// TODO Auto-generated method stub
-<span class="pc bpc" id="L150" title="1 of 2 branches missed.">		return (this.listCountBetterGender == null) ? new int[0] : Arrays.copyOf(this.listCountBetterGender, this.listCountBetterGender.length);</span>
+<span class="pc bpc" id="L216" title="1 of 2 branches missed.">		return (this.listCountBetterGender == null) ? new int[0] : Arrays.copyOf(this.listCountBetterGender, this.listCountBetterGender.length);</span>
 	}
 
 	@Override
+	/**
+	 * getListCountGender - get the list of count gender.
+	 * @return the list of count gender
+	 */
 	public int[] getListCountGender() {
 		// TODO Auto-generated method stub
-<span class="pc bpc" id="L156" title="1 of 2 branches missed.">		return (this.listCountGender == null) ? new int[0] : Arrays.copyOf(this.listCountGender, this.listCountGender.length);</span>
+<span class="pc bpc" id="L226" title="1 of 2 branches missed.">		return (this.listCountGender == null) ? new int[0] : Arrays.copyOf(this.listCountGender, this.listCountGender.length);</span>
 	}
 
 	@Override
+	/**
+	 * getTrace - get the trace of the generator.
+	 * @return the trace of the generator
+	 */
 	public float[] getTrace() {
 		// TODO Auto-generated method stub
-<span class="pc bpc" id="L162" title="1 of 2 branches missed.">		return (this.listTrace == null) ? new float[0] : Arrays.copyOf(this.listTrace, this.listTrace.length);</span>
+<span class="pc bpc" id="L236" title="1 of 2 branches missed.">		return (this.listTrace == null) ? new float[0] : Arrays.copyOf(this.listTrace, this.listTrace.length);</span>
 	}
 
 }

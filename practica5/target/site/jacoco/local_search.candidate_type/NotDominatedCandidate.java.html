@@ -8,35 +8,48 @@ import metaheurictics.strategy.Strategy;
 
 import problem.definition.State;
 
-<span class="fc" id="L11">public class NotDominatedCandidate extends SearchCandidate {</span>
+/**
+ * NotDominatedCandidate - select a non-dominated neighbor for multi-objective.
+ *
+ * @brief Chooses a neighbor that is not dominated by others in the neighborhood
+ *        using the Domination comparator. Intended for multi-objective problems.
+ */
+<span class="fc" id="L17">public class NotDominatedCandidate extends SearchCandidate {</span>
 
 	@Override
+	/**
+	 * Select a non-dominated state from the neighborhood.
+	 *
+	 * @param listNeighborhood list of neighbor states
+	 * @return a non-dominated State chosen from the list (or the first if only one)
+	 * @throws ReflectiveOperationException when evaluation or reflective calls fail
+	 */
 	public State stateSearch(List&lt;State&gt; listNeighborhood) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
-<span class="fc" id="L15">		State state = new State();</span>
-<span class="fc" id="L16">		State stateA = listNeighborhood.get(0);</span>
-<span class="fc" id="L17">		boolean stop = false;</span>
-<span class="fc bfc" id="L18" title="All 2 branches covered.">		if(listNeighborhood.size() == 1){</span>
-<span class="fc" id="L19">			stop = true;</span>
-<span class="fc" id="L20">			state = stateA;</span>
+<span class="fc" id="L28">		State state = new State();</span>
+<span class="fc" id="L29">		State stateA = listNeighborhood.get(0);</span>
+<span class="fc" id="L30">		boolean stop = false;</span>
+<span class="fc bfc" id="L31" title="All 2 branches covered.">		if(listNeighborhood.size() == 1){</span>
+<span class="fc" id="L32">			stop = true;</span>
+<span class="fc" id="L33">			state = stateA;</span>
 		}
 		else {
-<span class="fc" id="L23">			Strategy.getStrategy().getProblem().Evaluate(stateA);</span>
+<span class="fc" id="L36">			Strategy.getStrategy().getProblem().Evaluate(stateA);</span>
 			State stateB;
-<span class="fc" id="L25">			Dominance dominance = new Dominance();</span>
-<span class="fc bfc" id="L26" title="All 2 branches covered.">			for (int i = 1; i &lt; listNeighborhood.size(); i++) {</span>
-<span class="fc bfc" id="L27" title="All 2 branches covered.">				while(stop == false){</span>
-<span class="fc" id="L28">					stateB = listNeighborhood.get(i);</span>
-<span class="fc" id="L29">					Strategy.getStrategy().getProblem().Evaluate(stateB);</span>
-<span class="fc bfc" id="L30" title="All 2 branches covered.">					if(dominance.dominance(stateB, stateA) == true){</span>
-<span class="fc" id="L31">						stateA = stateB;</span>
+<span class="fc" id="L38">			Dominance dominance = new Dominance();</span>
+<span class="fc bfc" id="L39" title="All 2 branches covered.">			for (int i = 1; i &lt; listNeighborhood.size(); i++) {</span>
+<span class="fc bfc" id="L40" title="All 2 branches covered.">				while(stop == false){</span>
+<span class="fc" id="L41">					stateB = listNeighborhood.get(i);</span>
+<span class="fc" id="L42">					Strategy.getStrategy().getProblem().Evaluate(stateB);</span>
+<span class="fc bfc" id="L43" title="All 2 branches covered.">					if(dominance.dominance(stateB, stateA) == true){</span>
+<span class="fc" id="L44">						stateA = stateB;</span>
 					}else{
-<span class="fc" id="L33">						stop = true;</span>
-<span class="fc" id="L34">						state = stateA;</span>
+<span class="fc" id="L46">						stop = true;</span>
+<span class="fc" id="L47">						state = stateA;</span>
 					}
 				}
 			}
 		}
-<span class="fc" id="L39">		return state;</span>
+<span class="fc" id="L52">		return state;</span>
 	}
 
 }

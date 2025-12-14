@@ -6,31 +6,47 @@ import metaheurictics.strategy.Strategy;
 
 import problem.definition.State;
 
-<span class="fc" id="L9">public class AcceptNotDominated extends AcceptableCandidate {</span>
+/**
+ * AcceptNotDominated - Accept candidate if it is not dominated by current
+ *                    non-dominated set.
+ *
+ * @brief Multi-objective acceptation strategy that updates and consults
+ *        a Pareto front (listRefPoblacFinal) to decide acceptance.
+ */
+<span class="fc" id="L16">public class AcceptNotDominated extends AcceptableCandidate {</span>
 	
 	@Override
+	/**
+	 * Evaluate and accept a candidate based on Pareto dominance against the
+	 * stored set of non-dominated solutions.
+	 *
+	 * @param stateCurrent  the current state
+	 * @param stateCandidate the candidate state
+	 * @return true if candidate should be accepted (becomes part of Pareto set),
+	 *         false otherwise
+	 */
 	public Boolean acceptCandidate(State stateCurrent, State stateCandidate) {
-<span class="fc" id="L13">		Boolean accept = false;</span>
-<span class="fc" id="L14">		Dominance dominace = new Dominance();</span>
+<span class="fc" id="L29">		Boolean accept = false;</span>
+<span class="fc" id="L30">		Dominance dominace = new Dominance();</span>
 		
-<span class="fc bfc" id="L16" title="All 2 branches covered.">		if(Strategy.getStrategy().listRefPoblacFinal.size() == 0){</span>
-<span class="fc" id="L17">			Strategy.getStrategy().listRefPoblacFinal.add(stateCurrent.clone());</span>
+<span class="fc bfc" id="L32" title="All 2 branches covered.">		if(Strategy.getStrategy().listRefPoblacFinal.size() == 0){</span>
+<span class="fc" id="L33">			Strategy.getStrategy().listRefPoblacFinal.add(stateCurrent.clone());</span>
 		}
-<span class="fc bfc" id="L19" title="All 2 branches covered.">		if(dominace.dominance(stateCurrent, stateCandidate)== false)</span>
+<span class="fc bfc" id="L35" title="All 2 branches covered.">		if(dominace.dominance(stateCurrent, stateCandidate)== false)</span>
 		{
-			//Verificando si la soluciï¿½n candidata domina a alguna de las soluciones de la lista de soluciones no dominadas
-			//De ser asï¿½ se eliminan de la lista y se adiciona la nueva soluciï¿½n en la lista
-			//De lo contrario no se adiciona la soluciï¿½n candidata a la lista
-			//Si fue insertada en la lista entonces la solucion candidata se convierte en solucion actual
-<span class="fc bfc" id="L25" title="All 2 branches covered.">			if(dominace.listDominance(stateCandidate, Strategy.getStrategy().listRefPoblacFinal) == true){</span>
-				//Se pone la soluciï¿½n candidata como soluciï¿½n actual
-<span class="fc" id="L27">				accept = true;</span>
+			//Verificando si la soluciÃ³n candidata domina a alguna de las soluciones de la lista de soluciones no dominadas
+			//De ser asi se eliminan de la lista y se adiciona la nueva soluciÃ³n en la lista
+			//De lo contrario no se adiciona la soluciÃ³n candidata a la lista
+			//Si fue insertada en la lista entonces la soluciÃ³n candidata se convierte en soluciÃ³n actual
+<span class="fc bfc" id="L41" title="All 2 branches covered.">			if(dominace.listDominance(stateCandidate, Strategy.getStrategy().listRefPoblacFinal) == true){</span>
+				//Se pone la soluciÃ³n candidata como soluciÃ³n actual
+<span class="fc" id="L43">				accept = true;</span>
 			}
 			else{
-<span class="fc" id="L30">				accept = false;</span>
+<span class="fc" id="L46">				accept = false;</span>
 			}
 		}
-<span class="fc" id="L33">		return accept;</span>
+<span class="fc" id="L49">		return accept;</span>
 	}
 
 }

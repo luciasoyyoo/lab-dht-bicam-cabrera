@@ -5,7 +5,15 @@ import java.util.List;
 import problem.definition.State;
 
 
-<span class="fc" id="L8">public abstract class Distribution {</span>
+/**
+ * Distribution - applies a probability distribution to a set of fathers.
+ */
+<span class="fc" id="L11">public abstract class Distribution {</span>
+	/**
+	 * distribution - applies the distribution to the given fathers.
+	 * @param fathers 
+	 * @return returns a list of probabilities associated to the given fathers
+	 */
 	public abstract List&lt;Probability&gt; distribution(List&lt;State&gt; fathers);
 
 }

@@ -4,40 +4,54 @@ import factory_method.FactoryGenerator;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-<span class="fc" id="L7">public class InstanceEE implements Runnable {</span>
+/**
+ * InstanceEE - class that implements the Runnable interface to create an instance of
+ */
+<span class="fc" id="L10">public class InstanceEE implements Runnable {</span>
 
-<span class="fc" id="L9">	private static final Logger LOGGER = Logger.getLogger(InstanceEE.class.getName());</span>
+<span class="fc" id="L12">	private static final Logger LOGGER = Logger.getLogger(InstanceEE.class.getName());</span>
 
-<span class="fc" id="L11">	private boolean terminate = false;</span>
+<span class="fc" id="L14">	private boolean terminate = false;</span>
 	
+	/**
+	 * run - create an instance of the Evolution Strategies generator.
+	 */
 	public void run() {
-<span class="fc" id="L14">		FactoryGenerator ifFactoryGenerator = new FactoryGenerator();</span>
-<span class="fc" id="L15">		Generator generatorEE = null;</span>
+<span class="fc" id="L20">		FactoryGenerator ifFactoryGenerator = new FactoryGenerator();</span>
+<span class="fc" id="L21">		Generator generatorEE = null;</span>
 			try {
-<span class="fc" id="L17">				generatorEE = ifFactoryGenerator.createGenerator(GeneratorType.EvolutionStrategies);</span>
-<span class="nc" id="L18">			} catch (Exception e) {</span>
+<span class="fc" id="L23">				generatorEE = ifFactoryGenerator.createGenerator(GeneratorType.EvolutionStrategies);</span>
+<span class="nc" id="L24">			} catch (Exception e) {</span>
 				// Log exception instead of printing stack trace to avoid debug output in production
-<span class="nc" id="L20">				LOGGER.log(Level.SEVERE, &quot;Failed to create EvolutionStrategies generator&quot;, e);</span>
-<span class="fc" id="L21">		}</span>
-<span class="fc" id="L22">		boolean find = false;</span>
-<span class="fc" id="L23">		int i = 0;</span>
-<span class="fc bfc" id="L24" title="All 2 branches covered.">		while (find == false) {</span>
-<span class="pc bpc" id="L25" title="1 of 2 branches missed.">			if(MultiGenerator.getListGenerators()[i].getType().equals(GeneratorType.EvolutionStrategies)){</span>
-<span class="fc" id="L26">				MultiGenerator.getListGenerators()[i] = generatorEE;</span>
-<span class="fc" id="L27">				find = true;</span>
+<span class="nc" id="L26">				LOGGER.log(Level.SEVERE, &quot;Failed to create EvolutionStrategies generator&quot;, e);</span>
+<span class="fc" id="L27">		}</span>
+<span class="fc" id="L28">		boolean find = false;</span>
+<span class="fc" id="L29">		int i = 0;</span>
+<span class="fc bfc" id="L30" title="All 2 branches covered.">		while (find == false) {</span>
+<span class="pc bpc" id="L31" title="1 of 2 branches missed.">			if(MultiGenerator.getListGenerators()[i].getType().equals(GeneratorType.EvolutionStrategies)){</span>
+<span class="fc" id="L32">				MultiGenerator.getListGenerators()[i] = generatorEE;</span>
+<span class="fc" id="L33">				find = true;</span>
 			}
-<span class="nc" id="L29">			else i++;	</span>
+<span class="nc" id="L35">			else i++;	</span>
 		}
-<span class="fc" id="L31">		terminate = true;</span>
-<span class="fc" id="L32">	}</span>
+<span class="fc" id="L37">		terminate = true;</span>
+<span class="fc" id="L38">	}</span>
 
+	/**
+	 * isTerminate - check if the instance is terminated.
+	 * @return true if terminated, false otherwise
+	 */
 	public boolean isTerminate() {
-<span class="fc" id="L35">		return terminate;</span>
+<span class="fc" id="L45">		return terminate;</span>
 	}
 
+	/**
+	 * setTerminate - set the termination status of the instance.
+	 * @param terminate true to terminate, false to continue
+	 */
 	public void setTerminate(boolean terminate) {
-<span class="fc" id="L39">		this.terminate = terminate;</span>
-<span class="fc" id="L40">	}</span>
+<span class="fc" id="L53">		this.terminate = terminate;</span>
+<span class="fc" id="L54">	}</span>
 
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

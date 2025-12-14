@@ -17,9 +17,6 @@ import local_search.candidate_type.CandidateValue;
 import local_search.complement.StrategyType;
 import metaheurictics.strategy.Strategy;
 
-
-
-
 /**
  * MultiobjectiveHillClimbingRestart - class that implements the Multiobjective Hill Climbing with Restart metaheuristic.
  */
@@ -38,9 +35,6 @@ public class MultiobjectiveHillClimbingRestart extends Generator{
 	private List<State> visitedState = new ArrayList<State>();
 	private static final int sizeNeighbors = 10;
 
-	/**
-	 * Accessor for sizeNeighbors.
-	 */
 	public static int getSizeNeighbors() {
 		return sizeNeighbors;
 	}
@@ -133,71 +127,39 @@ public class MultiobjectiveHillClimbingRestart extends Generator{
 	}
 
 	@Override
-	/**
-	 * getReferenceList - get the list of reference states.
-	 * @return the list of reference states
-	 */
 	public List<State> getReferenceList() {
 		listStateReference.add(stateReferenceHC.clone());
 		return listStateReference;
 	}
 
 	@Override
-	/**
-	 * getReference - get the reference state.
-	 * @return the reference state
-	 */
 	public State getReference() {
 		return stateReferenceHC;
 	}
 
-	/**
-	 * setStateRef - set the reference state.
-	 * @param stateRef the reference state to set
-	 */
 	public void setStateRef(State stateRef) {
 		this.stateReferenceHC = stateRef;
 	}
 
 	@Override
-	/**
-	 * setInitialReference - set the initial reference state.
-	 * @param stateInitialRef the initial reference state to set
-	 */
 	public void setInitialReference(State stateInitialRef) {
 		this.stateReferenceHC = stateInitialRef;
 	}
 
-	/**
-	 * getGeneratorType - get the generator type.
-	 * @return the generator type
-	 */
 	public GeneratorType getGeneratorType() {
 		return generatortype;
 	}
 
-	/**
-	 * setGeneratorType - set the generator type.
-	 * @param generatortype the generator type to set
-	 */
 	public void setGeneratorType(GeneratorType generatortype) {
 		this.generatortype = generatortype;
 	}
 
 	@Override
-	/**
-	 * getType - get the generator type.
-	 * @return the generator type
-	 */
 	public GeneratorType getType() {
 		return this.generatortype;
 	}
 
 	@Override
-	/**
-	 * getSonList - get the list of child states.
-	 * @return the list of child states
-	 */
 	public List<State> getSonList() {
 		// TODO Auto-generated method stub
 		return null;
@@ -232,30 +194,18 @@ public class MultiobjectiveHillClimbingRestart extends Generator{
 
 
 	@Override
-	/**
-	 * getWeight - get the weight of the generator.
-	 * @return the weight of the generator
-	 */
 	public float getWeight() {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
-	/**
-	 * setWeight - set the weight of the generator.
-	 * @param weight the weight to set
-	 */
 	public void setWeight(float weight) {
 		// TODO Auto-generated method stub
 
 	}
 
 	@Override
-	/**
-	 * getTrace - get the trace of the generator.
-	 * @return the trace of the generator
-	 */
 	public float[] getTrace() {
 		// TODO Auto-generated method stub
 		if (this.listTrace == null) return new float[0];
@@ -268,20 +218,12 @@ public class MultiobjectiveHillClimbingRestart extends Generator{
 	}
 
 	@Override
-	/**
-	 * getListCountBetterGender - get the list of count of better solutions by gender.
-	 * @return the list of count of better solutions by gender
-	 */
 	public int[] getListCountBetterGender() {
 		// This generator doesn't maintain listCount arrays; return empty array to avoid nulls
 		return new int[0];
 	}
 
 	@Override
-	/**
-	 * getListCountGender - get the list of count of solutions by gender.
-	 * @return the list of count of solutions by gender
-	 */
 	public int[] getListCountGender() {
 		// This generator doesn't maintain listCount arrays; return empty array to avoid nulls
 		return new int[0];

@@ -8,39 +8,54 @@ import problem.definition.ObjetiveFunction;
 import problem.definition.State;
 import problem.definition.Problem.ProblemType;
 
-<span class="fc" id="L11">public class MultiObjetivoPuro extends SolutionMethod {</span>
+/**
+ * MultiObjetivoPuro
+ *
+ * @brief MÃ©todo de evaluaciÃ³n multiobjetivo puro: calcula el vector de
+ *        evaluaciones sin agregaciÃ³n (mantiene cada funciÃ³n objetivo por separado).
+ */
+<span class="fc" id="L17">public class MultiObjetivoPuro extends SolutionMethod {</span>
 
 	@Override
+	/**
+	 * evaluationState
+	 *
+	 * @brief Rellena la lista de evaluaciones del estado con los valores
+	 *        correspondientes a cada funciÃ³n objetivo, adaptando segÃºn si
+	 *        la funciÃ³n o el problema es de maximizar/minimizar.
+	 *
+	 * @param state estado a evaluar
+	 */
 	public void evaluationState(State state) {
 		// TODO Auto-generated method stub
-<span class="fc" id="L16">		double tempEval = -1;</span>
-<span class="fc" id="L17">		ArrayList&lt;Double&gt; evaluation = new ArrayList&lt;Double&gt;(Strategy.getStrategy().getProblem().getFunction().size());</span>
-<span class="fc bfc" id="L18" title="All 2 branches covered.">		for (int i = 0; i &lt; Strategy.getStrategy().getProblem().getFunction().size(); i++)</span>
+<span class="fc" id="L31">		double tempEval = -1;</span>
+<span class="fc" id="L32">		ArrayList&lt;Double&gt; evaluation = new ArrayList&lt;Double&gt;(Strategy.getStrategy().getProblem().getFunction().size());</span>
+<span class="fc bfc" id="L33" title="All 2 branches covered.">		for (int i = 0; i &lt; Strategy.getStrategy().getProblem().getFunction().size(); i++)</span>
 		{
-<span class="fc" id="L20">			ObjetiveFunction objfunction = (ObjetiveFunction)Strategy.getStrategy().getProblem().getFunction().get(i);</span>
-<span class="fc bfc" id="L21" title="All 2 branches covered.">			if(Strategy.getStrategy().getProblem().getTypeProblem().equals(ProblemType.Maximizar)){</span>
-<span class="fc bfc" id="L22" title="All 2 branches covered.">				if(objfunction.getTypeProblem().equals(ProblemType.Maximizar))</span>
+<span class="fc" id="L35">			ObjetiveFunction objfunction = (ObjetiveFunction)Strategy.getStrategy().getProblem().getFunction().get(i);</span>
+<span class="fc bfc" id="L36" title="All 2 branches covered.">			if(Strategy.getStrategy().getProblem().getTypeProblem().equals(ProblemType.Maximizar)){</span>
+<span class="fc bfc" id="L37" title="All 2 branches covered.">				if(objfunction.getTypeProblem().equals(ProblemType.Maximizar))</span>
 				{
-<span class="fc" id="L24">					tempEval = objfunction.Evaluation(state);</span>
+<span class="fc" id="L39">					tempEval = objfunction.Evaluation(state);</span>
 				}
 				else{
-<span class="fc" id="L27">					tempEval = 1-objfunction.Evaluation(state);</span>
+<span class="fc" id="L42">					tempEval = 1-objfunction.Evaluation(state);</span>
 				}
 			}
 			else{
-<span class="fc bfc" id="L31" title="All 2 branches covered.">				if(objfunction.getTypeProblem().equals(ProblemType.Maximizar))</span>
+<span class="fc bfc" id="L46" title="All 2 branches covered.">				if(objfunction.getTypeProblem().equals(ProblemType.Maximizar))</span>
 				{
-<span class="fc" id="L33">					tempEval = 1-objfunction.Evaluation(state);</span>
+<span class="fc" id="L48">					tempEval = 1-objfunction.Evaluation(state);</span>
 				}
 				else{
-<span class="fc" id="L36">					tempEval = objfunction.Evaluation(state);</span>
+<span class="fc" id="L51">					tempEval = objfunction.Evaluation(state);</span>
 				}
 			}
-<span class="fc" id="L39">			evaluation.add(tempEval);</span>
+<span class="fc" id="L54">			evaluation.add(tempEval);</span>
 		}
 		//evaluation.add( (double) -1);
-<span class="fc" id="L42">		state.setEvaluation(evaluation);</span>
-<span class="fc" id="L43">	}</span>
+<span class="fc" id="L57">		state.setEvaluation(evaluation);</span>
+<span class="fc" id="L58">	}</span>
 
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

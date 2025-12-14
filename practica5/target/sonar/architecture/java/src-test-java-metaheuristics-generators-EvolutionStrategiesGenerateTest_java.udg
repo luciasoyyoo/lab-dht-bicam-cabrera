@@ -1,5 +1,5 @@
 
-1.0!luciasoyyoo_lab-dht-bicam-cabreraJavaFrontend"1764946322521*java2.Bß
+1.0!luciasoyyoo_lab-dht-bicam-cabreraJavaFrontend"1765722119814*java2.B˙
 Q
 Lsrc/test/java/metaheuristics/generators/EvolutionStrategiesGenerateTest.java2
 	
@@ -23,104 +23,113 @@ module-key5
 access13
 
 public14
-
-simple-name15
-%
-EvolutionStrategiesGenerateTest16
-H
-Bmetaheuristics.generators.EvolutionStrategiesGenerateTest#setup()V18
-
-method19
-
-setup20
-&
- org.junit.jupiter.api.BeforeEach22
-
-unknown23
-
-annotated by24
-
-
-uses25
-
-testutils.TestHelper27
 
 
-references28
-Q
-Ktestutils.TestHelper#initStrategyWithProblem(Lproblem/definition/Problem;)V30
-
-calls31
- 
-problem.definition.Problem33
-
-returns34
-^
-Xtestutils.TestHelper#createMinimalProblemWithCodification(I)Lproblem/definition/Problem;36
-k
-emetaheuristics.generators.EvolutionStrategiesGenerateTest#generate_returnsCandidate_basedOnFathers()V38
-.
-(generate_returnsCandidate_basedOnFathers39
- 
-org.junit.jupiter.api.Test41
-
-is type42
-&
- metaheurictics.strategy.Strategy44
-O
-Imetaheurictics.strategy.Strategy#getProblem()Lproblem/definition/Problem;46
-V
-Pmetaheurictics.strategy.Strategy#getStrategy()Lmetaheurictics/strategy/Strategy;48
-3
--metaheuristics.generators.EvolutionStrategies50
-
-problem.definition.State52
->
-8problem.definition.State#setCode(Ljava/util/ArrayList;)V54
-D
->problem.definition.State#setEvaluation(Ljava/util/ArrayList;)V56
-\
-Vmetaheuristics.generators.EvolutionStrategies#setListStateReference(Ljava/util/List;)V58
-+
-%factory_method.FactoryFatherSelection60
-8
-2evolutionary_algorithms.complement.FatherSelection62
-ß
-†factory_method.FactoryFatherSelection#createSelectFather(Levolutionary_algorithms/complement/SelectionType;)Levolutionary_algorithms/complement/FatherSelection;64
-6
-0evolutionary_algorithms.complement.SelectionType66
+full-range15
+
+(16:1)-(54:2)16
+
+simple-name17
+%
+EvolutionStrategiesGenerateTest18
 H
-Bevolutionary_algorithms.complement.SelectionType.RouletteSelection68
-e
-_evolutionary_algorithms.complement.FatherSelection#selection(Ljava/util/List;I)Ljava/util/List;70
-[
-Umetaheuristics.generators.EvolutionStrategies#getListStateReference()Ljava/util/List;72
+Bmetaheuristics.generators.EvolutionStrategiesGenerateTest#setup()V20
+
+method21
+
+(18:5)-(22:6)22
+
+setup23
 &
- org.junit.jupiter.api.Assertions74
+ org.junit.jupiter.api.BeforeEach25
+
+unknown26
+
+annotated by27
+
+
+uses28
+
+testutils.TestHelper30
+
+
+references31
+Q
+Ktestutils.TestHelper#initStrategyWithProblem(Lproblem/definition/Problem;)V33
+
+calls34
+ 
+problem.definition.Problem36
+
+returns37
+^
+Xtestutils.TestHelper#createMinimalProblemWithCodification(I)Lproblem/definition/Problem;39
+k
+emetaheuristics.generators.EvolutionStrategiesGenerateTest#generate_returnsCandidate_basedOnFathers()V41
+
+(24:5)-(53:6)42
+.
+(generate_returnsCandidate_basedOnFathers43
+ 
+org.junit.jupiter.api.Test45
+
+is type46
+&
+ metaheurictics.strategy.Strategy48
+O
+Imetaheurictics.strategy.Strategy#getProblem()Lproblem/definition/Problem;50
+V
+Pmetaheurictics.strategy.Strategy#getStrategy()Lmetaheurictics/strategy/Strategy;52
+3
+-metaheuristics.generators.EvolutionStrategies54
+
+problem.definition.State56
+>
+8problem.definition.State#setCode(Ljava/util/ArrayList;)V58
+D
+>problem.definition.State#setEvaluation(Ljava/util/ArrayList;)V60
+\
+Vmetaheuristics.generators.EvolutionStrategies#setListStateReference(Ljava/util/List;)V62
++
+%factory_method.FactoryFatherSelection64
+8
+2evolutionary_algorithms.complement.FatherSelection66
+ß
+†factory_method.FactoryFatherSelection#createSelectFather(Levolutionary_algorithms/complement/SelectionType;)Levolutionary_algorithms/complement/FatherSelection;68
+6
+0evolutionary_algorithms.complement.SelectionType70
+H
+Bevolutionary_algorithms.complement.SelectionType.RouletteSelection72
+e
+_evolutionary_algorithms.complement.FatherSelection#selection(Ljava/util/List;I)Ljava/util/List;74
+[
+Umetaheuristics.generators.EvolutionStrategies#getListStateReference()Ljava/util/List;76
+&
+ org.junit.jupiter.api.Assertions78
 I
-Corg.junit.jupiter.api.Assertions#assertNotNull(Ljava/lang/Object;)V76
+Corg.junit.jupiter.api.Assertions#assertNotNull(Ljava/lang/Object;)V80
 6
-0org.junit.jupiter.api.Assertions#assertFalse(Z)V78
+0org.junit.jupiter.api.Assertions#assertFalse(Z)V82
 $
-factory_method.FactoryMutation80
+factory_method.FactoryMutation84
 1
-+evolutionary_algorithms.complement.Mutation82
++evolutionary_algorithms.complement.Mutation86
 î
-çfactory_method.FactoryMutation#createMutation(Levolutionary_algorithms/complement/MutationType;)Levolutionary_algorithms/complement/Mutation;84
+çfactory_method.FactoryMutation#createMutation(Levolutionary_algorithms/complement/MutationType;)Levolutionary_algorithms/complement/Mutation;88
 5
-/evolutionary_algorithms.complement.MutationType86
+/evolutionary_algorithms.complement.MutationType90
 F
-@evolutionary_algorithms.complement.MutationType.OnePointMutation88
+@evolutionary_algorithms.complement.MutationType.OnePointMutation92
 :
-4problem.definition.State#getCopy()Ljava/lang/Object;90
+4problem.definition.State#getCopy()Ljava/lang/Object;94
 E
-?problem.definition.Problem#getState()Lproblem/definition/State;92
+?problem.definition.Problem#getState()Lproblem/definition/State;96
 =
-7problem.definition.State#getCode()Ljava/util/ArrayList;94
-q
-kevolutionary_algorithms.complement.Mutation#mutation(Lproblem/definition/State;D)Lproblem/definition/State;96
-6
-0metaheuristics.generators.EvolutionStrategies.PM98J#
+7problem.definition.State#getCode()Ljava/util/ArrayList;98
+r
+kevolutionary_algorithms.complement.Mutation#mutation(Lproblem/definition/State;D)Lproblem/definition/State;100
+7
+0metaheuristics.generators.EvolutionStrategies.PM102J#
 !
 1
 12
@@ -136,77 +145,38 @@ kevolutionary_algorithms.complement.Mutation#mutation(Lproblem/definition/State;
 
 
 5
-6j
+6jò
 
-21
-212223
-
-71
-717223
-
-87
-878823
-
-67
-676823
-
-93
-939423
-
-49
-495023
+24
+242526
 
 75
-757623
-
-59
-596023
-
-63
-636423
-B
-17<
-171819 *
-1 (210:7B
-
-
-13
-14
-
-
-15
-20
-
-26
-262723
-
-81
-818223
-
-47
-474823
-
-57
-575823
-
-95
-959623
+757626
 
 91
-919223
+919226
+
+71
+717226
 
 97
-979823
+979826
 
-35
-353623
+53
+535426
 
-77
-777823
-B
-37<
-373819 *
-1 (210:7B
+79
+798026
+
+63
+636426
+
+67
+676826
+N
+19H
+192021 *
+1 (210:7B$
 
 
 13
@@ -214,14 +184,61 @@ B
 
 
 15
-39
+22
+
+
+17
+23
 
-69
-697023
->
-108
+29
+293026
+
+85
+858626
+
+51
+515226
+
+61
+616226
+
+99
+9910026
+
+95
+959626
+
+101
+10110226
+
+38
+383926
+
+81
+818226
+N
+40H
+404121 *
+1 (9210:7B$
+
+
+13
+14
+
+
+15
+42
+
+
+17
+43
+
+73
+737426
+J
+10D
 101112 *
-1 (-:7B
+1 (-:7B$
 
 
 13
@@ -230,355 +247,359 @@ B
 
 15
 16
-
-29
-293023
+
+
+17
+18
 
 32
-323323
+323326
 
-61
-616223
-
-51
-515223
-
-40
-404123
-
-55
-555623
-
-79
-798023
-
-43
-434423
-
-45
-454623
-
-83
-838423
-
-85
-858623
-
-89
-899023
-
-73
-737423
-
-53
-535423
+35
+353626
 
 65
-656623rù
+656626
+
+55
+555626
+
+44
+444526
+
+59
+596026
+
+83
+838426
+
+47
+474826
+
+49
+495026
+
+87
+878826
+
+89
+899026
+
+93
+939426
+
+77
+777826
+
+57
+575826
+
+69
+697026r•
 
-172124*
+192427*
 1 (
 
-172125*
+192428*
 1 (
 
-172628*
-1	 (
+192931*
+1	 (+
 
-172931*
+193234*
 1 (+
 
-172625*
+192928*
 1	 (
 
-173234*
-1, (6
+193537*
+1, ([
 
-172628*
-1, (6
+192931*
+1, ([
 
-173531*
+193834*
 17 ([
 
-172625*
+192928*
 1, (6
 
-374024*
+404427*
 1 (
 
 
-374025*
+404428*
 1 (
 
 
-373242*
+403546*
 1 (
 
-373225*
+403528*
 1	 (
 
-373234*
-1 (#
+403537*
+1 (N
 
-374328*
-1 (#
+404731*
+1 (N
 
-374531*
+404934*
 1D (N
 
-374334*
-1 (#
+404737*
+1 (A
 
-374328*
-1 (#
+404731*
+1 (A
 
-374731*
+405134*
 16 (A
 
-374325*
+404728*
 1- (5
 
-374942*
+405346*
 1 (
 
-374925*
+405328*
 1 (
 
-374931*
+405334*
 1" (5
 
-375142*
+405546*
 1   (
 
-375125*
+405528*
 1   (
 
 
-375131*
+405534*
 1   (
 
-375128*
-1!> !(D
+405531*
+1!> !(L
 
-375331*
+405734*
 1!E !(L
 
-375128*
-1"@ "(F
+405531*
+1"@ "(T
 
-375531*
+405934*
 1"G "(T
 
-375125*
+405528*
 1#
  #(
 
-374928*
-1$ $(
+405331*
+1$ $(
 
-375731*
+406134*
 1$ $(
 
-375942*
+406346*
 1'+ '(.
 
-375925*
+406328*
 1' '(*
 
-375931*
+406334*
 1'D '(Z
 
-376142*
+406546*
 1(8 ((;
 
-376125*
+406528*
 1(( ((7
 
-376134*
-1(> ((A
+406537*
+1(> ((T
 
-375928*
-1(> ((A
+406331*
+1(> ((T
 
-376331*
+406734*
 1(B ((T
 
-376525*
+406928*
 1(x ((Ö
 
-376525*
+406928*
 1(Ü ((ó
 
-376728*
+407131*
 1(Ü ((ó
 
-375125*
+405528*
 1)
  )(
 
-376128*
-1) )(
+406531*
+1) )((
 
-376931*
+407334*
 1) )((
 
-374928*
-1)) )(+
+405331*
+1)) )(A
 
-377131*
+407534*
 1), )(A
 
-377328*
+407731*
 1* *(
 
-377531*
+407934*
 1* *(
 
-377328*
+407731*
 1+ +(
 
-377731*
+408134*
 1+ +(
 
-377942*
+408346*
 1.$ .(&
 
-377925*
+408328*
 1. .(#
 
-377931*
+408334*
 1.< .(K
 
-378142*
+408546*
 1/1 /(4
 
-378125*
+408528*
 1/( /(0
 
-378134*
-1/7 /(9
+408537*
+1/7 /(H
 
-377928*
-1/7 /(9
+408331*
+1/7 /(H
 
-378331*
+408734*
 1/: /(H
 
-378525*
+408928*
 1/l /(x
 
-378525*
+408928*
 1/y /(â
 
-378728*
+409131*
 1/y /(â
 
-375142*
+405546*
 10 0(
 
-375125*
+405528*
 10 0(
 
 
-373234*
-10 0(%
+403537*
+10 0(P
 
-374328*
-10 0(%
+404731*
+10 0(P
 
-374531*
+404934*
 10F 0(P
 
-374334*
-10 0(%
+404737*
+10 0(C
 
-374328*
-10 0(%
+404731*
+10 0(C
 
-374731*
+405134*
 108 0(C
 
-374325*
+404728*
 10/ 0(7
 
-375125*
+405528*
 10g 0(l
-
-375128*
-10n 0(|
+
+405531*
+10n 0(º
 
-378931*
+409334*
 10µ 0(º
-
-375134*
-10n 0(|
-
-373228*
-10n 0(|
+
+405537*
+10n 0(≤
+
+403531*
+10n 0(≤
 
-379131*
+409534*
 10™ 0(≤
-
-373234*
-10n 0(|
-
-374328*
-10n 0(|
+
+403537*
+10n 0(ß
+
+404731*
+10n 0(ß
 
-374531*
+404934*
 10ù 0(ß
-
-374334*
-10n 0(|
-
-374328*
-10n 0(|
+
+404737*
+10n 0(ö
+
+404731*
+10n 0(ö
 
-374731*
+405134*
 10è 0(ö
 
-374325*
+404728*
 10Ü 0(é
 
-375128*
-12 2(
+405531*
+12 2(
 
-375331*
+405734*
 12 2(
 
-375128*
-12- 2(4
+405531*
+12- 2(C
 
-379331*
+409734*
 12< 2(C
 
-375134*
-12- 2(4
+405537*
+12- 2(8
 
-375142*
+405546*
 13 3(
 
-375125*
+405528*
 13 3(
 
 
-375134*
-13 3(
+405537*
+13 3(!
 
-378128*
-13 3(
+408531*
+13 3(!
 
-379531*
+409934*
 13 3(!
 
-374925*
+405328*
 13- 3(@
-
-379728*
+
+4010131*
 13A 3(C
 
-377328*
+407731*
 14 4(
 
-377531*
+407934*
 14 4(

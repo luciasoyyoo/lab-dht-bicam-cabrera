@@ -16,6 +16,9 @@ import problem.definition.Problem;
 import problem.definition.State;
 
 
+/**
+ * MultiCaseSimulatedAnnealing - class that implements the Multi-Case Simulated Annealing metaheuristic.
+ */
 public class MultiCaseSimulatedAnnealing extends Generator {
 
 	private CandidateValue candidatevalue;
@@ -27,151 +30,230 @@ public class MultiCaseSimulatedAnnealing extends Generator {
 	// Cooling factor: fixed constant for update rule. Set a conservative default.
 	public static final double alpha = 0.93;
 	// Make initial temperature private and provide accessors so it can be protected/validated.
-<span class="fc" id="L30">	private static Double tinitial = 250.0;</span>
-<span class="fc" id="L31">	public static final Double tfinal = 41.66;</span>
+<span class="fc" id="L33">	private static Double tinitial = 250.0;</span>
+<span class="fc" id="L34">	public static final Double tfinal = 41.66;</span>
 	static int countIterationsT;
     private int countRept;
     private GeneratorType typeGenerator;
-<span class="fc" id="L35">    private List&lt;State&gt; listStateReference = new ArrayList&lt;State&gt;();</span>
+<span class="fc" id="L38">    private List&lt;State&gt; listStateReference = new ArrayList&lt;State&gt;();</span>
     private float weight;
-<span class="fc" id="L37">	private List&lt;Float&gt; listTrace = new ArrayList&lt;Float&gt;();</span>
+<span class="fc" id="L40">	private List&lt;Float&gt; listTrace = new ArrayList&lt;Float&gt;();</span>
 
+    /**
+     * getTypeGenerator - get the type of the generator.
+     * @return the type of the generator
+     */
     public GeneratorType getTypeGenerator() {
-<span class="nc" id="L40">		return typeGenerator;</span>
+<span class="nc" id="L47">		return typeGenerator;</span>
 	}
 
+	/**
+	 * setTypeGenerator - set the type of the generator.
+	 * @param typeGenerator the type of the generator to set
+	 */
 	public void setTypeGenerator(GeneratorType typeGenerator) {
-<span class="nc" id="L44">		this.typeGenerator = typeGenerator;</span>
-<span class="nc" id="L45">	}</span>
+<span class="nc" id="L55">		this.typeGenerator = typeGenerator;</span>
+<span class="nc" id="L56">	}</span>
 
 	// Accessors for tinitial to avoid exposing a mutable static field directly.
 	public static Double getTinitial() {
-<span class="fc" id="L49">		return tinitial;</span>
+<span class="fc" id="L60">		return tinitial;</span>
 	}
-
+	/**
+	 * setTinitial - set the initial temperature.
+	 * @param t the initial temperature to set
+	 */
 	public static void setTinitial(Double t) {
-<span class="fc" id="L53">		tinitial = t;</span>
-<span class="fc" id="L54">	}</span>
+<span class="fc" id="L67">		tinitial = t;</span>
+<span class="fc" id="L68">	}</span>
 
+	/**
+	 * MultiCaseSimulatedAnnealing - class that implements the Multi-Case Simulated Annealing metaheuristic.
+	 */
 	public MultiCaseSimulatedAnnealing(){
-<span class="fc" id="L57">    	super();</span>
-<span class="fc" id="L58">    	this.typeAcceptation = AcceptType.AcceptMulticase;</span>
-<span class="fc" id="L59">		this.strategy = StrategyType.NORMAL;</span>
-<span class="fc" id="L60">		this.typeCandidate = CandidateType.RandomCandidate;</span>
-<span class="fc" id="L61">		this.candidatevalue = new CandidateValue();</span>
-<span class="fc" id="L62">		this.typeGenerator = GeneratorType.MultiCaseSimulatedAnnealing;</span>
-<span class="fc" id="L63">		this.weight = 50;</span>
-<span class="fc" id="L64">		listTrace.add(weight);</span>
-<span class="fc" id="L65">    }</span>
+<span class="fc" id="L74">    	super();</span>
+<span class="fc" id="L75">    	this.typeAcceptation = AcceptType.AcceptMulticase;</span>
+<span class="fc" id="L76">		this.strategy = StrategyType.NORMAL;</span>
+<span class="fc" id="L77">		this.typeCandidate = CandidateType.RandomCandidate;</span>
+<span class="fc" id="L78">		this.candidatevalue = new CandidateValue();</span>
+<span class="fc" id="L79">		this.typeGenerator = GeneratorType.MultiCaseSimulatedAnnealing;</span>
+<span class="fc" id="L80">		this.weight = 50;</span>
+<span class="fc" id="L81">		listTrace.add(weight);</span>
+<span class="fc" id="L82">    }</span>
 
 	@Override
+	/**
+	 * generate - generate a new state based on the operator number.
+	 * @param operatornumber the operator number to use for generating the new state
+	 * @return the generated state
+	 */
 	public State generate(Integer operatornumber) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
-<span class="fc" id="L69">		Problem problem = Strategy.getStrategy().getProblem();</span>
-<span class="fc" id="L70">		List&lt;State&gt; neighborhood = problem.getOperator().generatedNewState(stateReferenceSA, operatornumber);</span>
-<span class="fc" id="L71">	    State statecandidate = candidatevalue.stateCandidate(stateReferenceSA, typeCandidate, strategy, operatornumber, neighborhood);</span>
-<span class="fc" id="L72">	    return statecandidate;</span>
+<span class="fc" id="L91">		Problem problem = Strategy.getStrategy().getProblem();</span>
+<span class="fc" id="L92">		List&lt;State&gt; neighborhood = problem.getOperator().generatedNewState(stateReferenceSA, operatornumber);</span>
+<span class="fc" id="L93">	    State statecandidate = candidatevalue.stateCandidate(stateReferenceSA, typeCandidate, strategy, operatornumber, neighborhood);</span>
+<span class="fc" id="L94">	    return statecandidate;</span>
 	}
 
 	@Override
+	/**
+	 * getReference - get the reference state.
+	 * @return the reference state
+	 */
 	public State getReference() {
-<span class="fc" id="L77">		return stateReferenceSA;</span>
+<span class="fc" id="L103">		return stateReferenceSA;</span>
 	}
 
+	/**
+	 * setStateRef - set the reference state.
+	 * @param stateRef the reference state to set
+	 */
 	public void setStateRef(State stateRef) {
-<span class="nc" id="L81">		this.stateReferenceSA = stateRef;</span>
-<span class="nc" id="L82">	}</span>
+<span class="nc" id="L111">		this.stateReferenceSA = stateRef;</span>
+<span class="nc" id="L112">	}</span>
 
 	@Override
+	/**
+	 * setInitialReference - set the initial reference state.
+	 * @param stateInitialRef the initial reference state to set
+	 */
 	public void setInitialReference(State stateInitialRef) {
-<span class="fc" id="L86">		this.stateReferenceSA = stateInitialRef;</span>
-<span class="fc" id="L87">	}</span>
+<span class="fc" id="L120">		this.stateReferenceSA = stateInitialRef;</span>
+<span class="fc" id="L121">	}</span>
 
 	@Override
+	/**
+	 * updateReference - update the reference state based on the candidate state.
+	 * @param stateCandidate 
+	 * @param countIterationsCurrent 
+	 */
 	public void updateReference(State stateCandidate, Integer countIterationsCurrent)throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
-<span class="fc" id="L91">		countRept = MultiCaseSimulatedAnnealing.getCountIterationsT();</span>
-<span class="fc" id="L92">		ifacceptCandidate = new FactoryAcceptCandidate();</span>
-<span class="fc" id="L93">		AcceptableCandidate candidate = ifacceptCandidate.createAcceptCandidate(typeAcceptation);</span>
-<span class="fc" id="L94">		Boolean accept = candidate.acceptCandidate(stateReferenceSA, stateCandidate);</span>
-<span class="pc bpc" id="L95" title="1 of 2 branches missed.">		if(accept.equals(true))</span>
-<span class="fc" id="L96">		  stateReferenceSA = stateCandidate.clone();</span>
-<span class="pc bpc" id="L97" title="1 of 2 branches missed.">		if(countIterationsCurrent.equals(MultiCaseSimulatedAnnealing.getCountIterationsT())){</span>
+<span class="fc" id="L130">		countRept = MultiCaseSimulatedAnnealing.getCountIterationsT();</span>
+<span class="fc" id="L131">		ifacceptCandidate = new FactoryAcceptCandidate();</span>
+<span class="fc" id="L132">		AcceptableCandidate candidate = ifacceptCandidate.createAcceptCandidate(typeAcceptation);</span>
+<span class="fc" id="L133">		Boolean accept = candidate.acceptCandidate(stateReferenceSA, stateCandidate);</span>
+<span class="pc bpc" id="L134" title="1 of 2 branches missed.">		if(accept.equals(true))</span>
+<span class="fc" id="L135">		  stateReferenceSA = stateCandidate.clone();</span>
+<span class="pc bpc" id="L136" title="1 of 2 branches missed.">		if(countIterationsCurrent.equals(MultiCaseSimulatedAnnealing.getCountIterationsT())){</span>
 			// update via accessors to avoid writing static fields inside an instance method
-<span class="fc" id="L99">			MultiCaseSimulatedAnnealing.setTinitial(MultiCaseSimulatedAnnealing.getTinitial() * alpha);</span>
+<span class="fc" id="L138">			MultiCaseSimulatedAnnealing.setTinitial(MultiCaseSimulatedAnnealing.getTinitial() * alpha);</span>
 			//Variante Fast MOSA
-			//MultiCaseSimulatedAnnealing.setTinitial(MultiCaseSimulatedAnnealing.getTinitial()/(1 + countIterationsCurrent));
-<span class="fc" id="L102">			System.out.println(&quot;La T:&quot; + MultiCaseSimulatedAnnealing.getTinitial());</span>
-<span class="fc" id="L103">			MultiCaseSimulatedAnnealing.setCountIterationsT(MultiCaseSimulatedAnnealing.getCountIterationsT() + countRept);</span>
-<span class="fc" id="L104">			System.out.println(&quot;La Cant es: &quot; + MultiCaseSimulatedAnnealing.getCountIterationsT());</span>
+<span class="fc" id="L140">			System.out.println(&quot;La T:&quot; + MultiCaseSimulatedAnnealing.getTinitial());</span>
+<span class="fc" id="L141">			MultiCaseSimulatedAnnealing.setCountIterationsT(MultiCaseSimulatedAnnealing.getCountIterationsT() + countRept);</span>
+<span class="fc" id="L142">			System.out.println(&quot;La Cant es: &quot; + MultiCaseSimulatedAnnealing.getCountIterationsT());</span>
 		}
-<span class="fc" id="L106">		getReferenceList();</span>
-<span class="fc" id="L107">	}</span>
-
+<span class="fc" id="L144">		getReferenceList();</span>
+<span class="fc" id="L145">	}</span>
+	/**
+	 * getCountIterationsT - get the count of iterations for temperature update.
+	 * @return the count of iterations for temperature update
+	 */
 	public static int getCountIterationsT() {
-<span class="fc" id="L110">		return countIterationsT;</span>
+<span class="fc" id="L151">		return countIterationsT;</span>
 	}
 
+	/**
+	 * setCountIterationsT - set the count of iterations for temperature update.
+	 * @param c the count of iterations to set
+	 */
 	public static void setCountIterationsT(int c) {
-<span class="fc" id="L114">		countIterationsT = c;</span>
-<span class="fc" id="L115">	}</span>
+<span class="fc" id="L159">		countIterationsT = c;</span>
+<span class="fc" id="L160">	}</span>
 
 	@Override
+	/**
+	 * getType - get the type of the generator.
+	 * @return the type of the generator
+	 */
 	public GeneratorType getType() {
-<span class="fc" id="L119">		return this.typeGenerator;</span>
+<span class="fc" id="L168">		return this.typeGenerator;</span>
 	}
 
 	@Override
+	/**
+	 * getReferenceList - get the list of reference states.
+	 * @return the list of reference states
+	 */
 	public List&lt;State&gt; getReferenceList() {
-<span class="fc" id="L124">		listStateReference.add(stateReferenceSA.clone());</span>
-<span class="fc" id="L125">		return listStateReference;</span>
+<span class="fc" id="L177">		listStateReference.add(stateReferenceSA.clone());</span>
+<span class="fc" id="L178">		return listStateReference;</span>
 	}
 
 	@Override
+	/**
+	 * getSonList - get the list of son states.
+	 * @return the list of son states
+	 */
 	public List&lt;State&gt; getSonList() {
 		// TODO Auto-generated method stub
-<span class="nc" id="L131">		return null;</span>
+<span class="nc" id="L188">		return null;</span>
 	}
 
 	@Override
+	/**
+	 * awardUpdateREF - award the update of the reference state.
+	 * @param stateCandidate 
+	 * @return return true if the reference state was updated, false otherwise
+	 */
 	public boolean awardUpdateREF(State stateCandidate) {
 		// TODO Auto-generated method stub
-<span class="nc" id="L137">		return false;</span>
+<span class="nc" id="L199">		return false;</span>
 	}
 
 
 	@Override
+	/**
+	 * getWeight - get the weight of the generator.
+	 * @return the weight of the generator
+	 */
 	public float getWeight() {
 		// TODO Auto-generated method stub
-<span class="nc" id="L144">		return 0;</span>
+<span class="nc" id="L210">		return 0;</span>
 	}
 
 	@Override
+	/**
+	 * setWeight - set the weight of the generator.
+	 * @param weight the weight to set
+	 */
 	public void setWeight(float weight) {
 		// TODO Auto-generated method stub
 		
-<span class="nc" id="L151">	}</span>
+<span class="nc" id="L221">	}</span>
 
 	@Override
+	/**
+	 * getListCountBetterGender - get the list of counts for better gender.
+	 * @return the list of counts for better gender
+	 */
 	public int[] getListCountBetterGender() {
 		// TODO Auto-generated method stub
-<span class="nc" id="L156">		return new int[0];</span>
+<span class="nc" id="L230">		return new int[0];</span>
 	}
 
 	@Override
+	/**
+	 * getListCountGender - get the list of counts for gender.
+	 * @return the list of counts for gender
+	 */
 	public int[] getListCountGender() {
 		// TODO Auto-generated method stub
-<span class="nc" id="L162">		return new int[0];</span>
+<span class="nc" id="L240">		return new int[0];</span>
 	}
 
 	@Override
+	/**
+	 * getTrace - get the trace of the generator.
+	 * @return the trace of the generator
+	 */
 	public float[] getTrace() {
 		// TODO Auto-generated method stub
-<span class="pc bpc" id="L168" title="1 of 2 branches missed.">		if (this.listTrace == null) return new float[0];</span>
-<span class="fc" id="L169">		float[] arr = new float[this.listTrace.size()];</span>
-<span class="fc bfc" id="L170" title="All 2 branches covered.">		for (int i = 0; i &lt; this.listTrace.size(); i++) {</span>
-<span class="fc" id="L171">			Float v = this.listTrace.get(i);</span>
-<span class="pc bpc" id="L172" title="1 of 2 branches missed.">			arr[i] = (v == null) ? 0f : v.floatValue();</span>
+<span class="pc bpc" id="L250" title="1 of 2 branches missed.">		if (this.listTrace == null) return new float[0];</span>
+<span class="fc" id="L251">		float[] arr = new float[this.listTrace.size()];</span>
+<span class="fc bfc" id="L252" title="All 2 branches covered.">		for (int i = 0; i &lt; this.listTrace.size(); i++) {</span>
+<span class="fc" id="L253">			Float v = this.listTrace.get(i);</span>
+<span class="pc bpc" id="L254" title="1 of 2 branches missed.">			arr[i] = (v == null) ? 0f : v.floatValue();</span>
 		}
-<span class="fc" id="L174">		return arr;</span>
+<span class="fc" id="L256">		return arr;</span>
 	}
 	
 }

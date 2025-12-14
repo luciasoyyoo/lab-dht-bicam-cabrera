@@ -10,13 +10,21 @@ import factory_interface.IFFactoryFatherSelection;
 
 
 
-<span class="fc" id="L13">public class FactoryFatherSelection implements IFFactoryFatherSelection{</span>
+/**
+ * FactoryFatherSelection - Interface for creating father selection strategies.
+ */
+<span class="fc" id="L16">public class FactoryFatherSelection implements IFFactoryFatherSelection{</span>
     private FatherSelection selection;
 	
+    /**
+     * createSelectFather - Creates an instance of FatherSelection based on the provided SelectionType.
+     * @param selectionType 
+     * @return returns an instance of FatherSelection
+     */
     public FatherSelection createSelectFather(SelectionType selectionType) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
-<span class="fc" id="L17">    	String className = &quot;evolutionary_algorithms.complement.&quot; + selectionType.toString();</span>
-<span class="fc" id="L18">		selection = (FatherSelection) FactoryLoader.getInstance(className);</span>
-<span class="fc" id="L19">		return selection;</span>
+<span class="fc" id="L25">    	String className = &quot;evolutionary_algorithms.complement.&quot; + selectionType.toString();</span>
+<span class="fc" id="L26">		selection = (FatherSelection) FactoryLoader.getInstance(className);</span>
+<span class="fc" id="L27">		return selection;</span>
 	}
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

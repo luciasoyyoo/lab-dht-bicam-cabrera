@@ -61,33 +61,18 @@ public class SimulatedAnnealing extends Generator {
     private int[] listCountGender = new int[10];
     private float[] listTrace = new float[1200000];
 
-
-    /**
-     * getTypeGenerator - get the type of the generator.
-     * @return the type of the generator
-     */
     public GeneratorType getTypeGenerator() {
 		return typeGenerator;
 	}
 
-	/**
-	 * setTypeGenerator - set the type of the generator.
-	 * @param typeGenerator 
-	 */
 	public void setTypeGenerator(GeneratorType typeGenerator) {
 		this.typeGenerator = typeGenerator;
 	}
 
-	/**
-	 * Getter for initial temperature.
-	 */
 	public static Double getTinitial() {
 		return tinitial;
 	}
 
-	/**
-	 * Setter for initial temperature.
-	 */
 	public static void setTinitial(Double t) {
 		tinitial = t;
 	}
@@ -122,27 +107,15 @@ public class SimulatedAnnealing extends Generator {
 	}
 
 	@Override
-	/**
-	 * getReference - get the reference state.
-	 * @return the reference state
-	 */
 	public State getReference() {
 		return stateReferenceSA;
 	}
 
-	/**
-	 * setStateRef - set the reference state.
-	 * @param stateRef the reference state to set
-	 */
 	public void setStateRef(State stateRef) {
 		this.stateReferenceSA = stateRef;
 	}
 
 	@Override
-	/**
-	 * setInitialReference - set the initial reference state.
-	 * @param stateInitialRef the initial reference state to set
-	 */
 	public void setInitialReference(State stateInitialRef) {
 		this.stateReferenceSA = stateInitialRef;
 	}
@@ -168,29 +141,17 @@ public class SimulatedAnnealing extends Generator {
 	}
 
 	@Override
-	/**
-	 * getType - get the type of the generator.
-	 * @return the type of the generator
-	 */
 	public GeneratorType getType() {
 		return this.typeGenerator;
 	}
 
 	@Override
-	/**
-	 * getReferenceList - get the list of reference states.
-	 * @return the list of reference states
-	 */
 	public List<State> getReferenceList() {
 		listStateReference.add(stateReferenceSA);
 		return new ArrayList<State>(listStateReference);
 	}
 
 	@Override
-	/**
-	 * getSonList - get the list of child states.
-	 * @return the list of child states
-	 */
 	public List<State> getSonList() {
 		// TODO Auto-generated method stub
 		return null;
@@ -209,50 +170,30 @@ public class SimulatedAnnealing extends Generator {
 
 
 	@Override
-	/**
-	 * getWeight - get the weight of the generator.
-	 * @return the weight of the generator
-	 */
 	public float getWeight() {
 		// TODO Auto-generated method stub
 		return this.weight;
 	}
 
 	@Override
-	/**
-	 * setWeight - set the weight of the generator.
-	 * @param weight the weight to set
-	 */
 	public void setWeight(float weight) {
 		// TODO Auto-generated method stub
 		this.weight = weight;
 	}
 
 	@Override
-	/**
-	 * getListCountBetterGender - get the list of better gender counts.
-	 * @return the list of better gender counts
-	 */
 	public int[] getListCountBetterGender() {
 		// TODO Auto-generated method stub
 		return (this.listCountBetterGender == null) ? new int[0] : Arrays.copyOf(this.listCountBetterGender, this.listCountBetterGender.length);
 	}
 
 	@Override
-	/**
-	 * getListCountGender - get the list of gender counts.
-	 * @return the list of gender counts
-	 */
 	public int[] getListCountGender() {
 		// TODO Auto-generated method stub
 		return (this.listCountGender == null) ? new int[0] : Arrays.copyOf(this.listCountGender, this.listCountGender.length);
 	}
 
 	@Override
-	/**
-	 * getTrace -get the trace of the generator.
-	 * @return the trace of the generator
-	 */
 	public float[] getTrace() {
 		// TODO Auto-generated method stub
 		return (this.listTrace == null) ? new float[0] : Arrays.copyOf(this.listTrace, this.listTrace.length);

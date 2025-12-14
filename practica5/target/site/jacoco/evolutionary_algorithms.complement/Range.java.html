@@ -1,27 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Range.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">practica5</a> &gt; <a href="index.source.html" class="el_package">evolutionary_algorithms.complement</a> &gt; <span class="el_source">Range.java</span></div><h1>Range.java</h1><pre class="source lang-java linenums">package evolutionary_algorithms.complement;
 
-<span class="fc" id="L3">public class Range {</span>
+/**
+ * Range - represents a range of values with associated probabilities.
+ */
+<span class="fc" id="L6">public class Range {</span>
    private Probability data;
    private float max;
    private float min;
    
+   /**
+    * getData - getter for the data.
+    * @return returns the data
+    */
    public Probability getData() {
-<span class="fc" id="L9">	  return data;</span>
+<span class="fc" id="L16">	  return data;</span>
    }
+   /**
+    * setData - setter for the data.
+    * @param data 
+    */
    public void setData(Probability data) {
-<span class="fc" id="L12">	  this.data = data;</span>
-<span class="fc" id="L13">   }</span>
+<span class="fc" id="L23">	  this.data = data;</span>
+<span class="fc" id="L24">   }</span>
+   /**
+    * getMax - getter for the max.
+    * @return returns the max
+    */
    public float getMax() {
-<span class="fc" id="L15">	  return max;</span>
+<span class="fc" id="L30">	  return max;</span>
    }
+   /**
+    * setMax - setter for the max.
+    * @param max 
+    */
    public void setMax(float max) {
-<span class="fc" id="L18">	  this.max = max;</span>
-<span class="fc" id="L19">   }</span>
+<span class="fc" id="L37">	  this.max = max;</span>
+<span class="fc" id="L38">   }</span>
+   /**
+    * getMin - getter for the min.
+    * @return returns the min
+    */
    public float getMin() {
-<span class="fc" id="L21">	  return min;</span>
+<span class="fc" id="L44">	  return min;</span>
    }
+   /**
+    * setMin - setter for the min.
+    * @param min 
+    */
    public void setMin(float min) {
-<span class="fc" id="L24">	  this.min = min;</span>
-<span class="fc" id="L25">   }</span>
+<span class="fc" id="L51">	  this.min = min;</span>
+<span class="fc" id="L52">   }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

@@ -2,8 +2,16 @@
 
 import problem.definition.State;
 
-<span class="fc" id="L5">public abstract class Mutation {</span>
-	
+/**
+ * Mutation - applies a mutation to a given state.
+ */
+<span class="fc" id="L8">public abstract class Mutation {</span>
+	/**
+	 * mutation - applies the mutation to the state.
+	 * @param state
+	 * @param PM
+	 * @return returns the mutated state
+	 */
 	public abstract State mutation (State state, double PM);
 
 }

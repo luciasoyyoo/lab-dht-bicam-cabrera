@@ -6,8 +6,23 @@ import java.util.List;
 import problem.definition.State;
 
 
-<span class="fc" id="L9">public abstract class Replace {</span>
-
+/**
+ * Replace - applies replacement strategies for individuals in the population.
+ */
+<span class="fc" id="L12">public abstract class Replace {</span>
+	/**
+	 * replace - replace the worst individual in the population.
+	 * @param stateCandidate
+	 * @param listState
+	 * @return
+	 * @throws IllegalArgumentException
+	 * @throws SecurityException
+	 * @throws ClassNotFoundException
+	 * @throws InstantiationException
+	 * @throws IllegalAccessException
+	 * @throws InvocationTargetException
+	 * @throws NoSuchMethodException
+	 */
 	public abstract List&lt;State&gt; replace(State stateCandidate, List&lt;State&gt;listState) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException;
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

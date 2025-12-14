@@ -23,16 +23,16 @@ import factory_method.FactoryFatherSelection;
 import factory_method.FactoryMutation;
 import factory_method.FactoryReplace;
 
+/**
+ * EvolutionStrategies - class that implements the Evolution Strategies generator.
+ */
 public class EvolutionStrategies extends Generator {
 	
 	private State stateReferenceES;
-<span class="fc" id="L29">	private List&lt;State&gt; listStateReference = new ArrayList&lt;State&gt;(); </span>
+<span class="fc" id="L32">	private List&lt;State&gt; listStateReference = new ArrayList&lt;State&gt;(); </span>
 	private IFFactoryFatherSelection iffatherselection;
 	private IFFactoryMutation iffactorymutation;
 	private IFFactoryReplace iffreplace;
-//	private SelectionType selectionType;
-//	private MutationType mutationType;
-//	private ReplaceType replaceType;
 	private GeneratorType generatorType;
 	public static final double PM = 0.0;
 <span class="fc" id="L38">	public static final MutationType mutationType = MutationType.OnePointMutation;</span>
@@ -48,12 +48,12 @@ public class EvolutionStrategies extends Generator {
 <span class="fc" id="L48">	private int[] listCountGender = new int[10];</span>
 <span class="fc" id="L49">	private float[] listTrace = new float[1200000];</span>
 	
+	/**
+	 * EvolutionStrategies - method to create an instance of EvolutionStrategies.
+	 */
 	public EvolutionStrategies() {
-<span class="fc" id="L52">		super();</span>
-<span class="fc" id="L53">		this.listStateReference = getListStateRef(); </span>
-//		this.selectionType = SelectionType.Truncation;
-//		this.mutationType = MutationType.UniformMutation;
-//		this.replaceType = ReplaceType.Smallest;
+<span class="fc" id="L55">		super();</span>
+<span class="fc" id="L56">		this.listStateReference = getListStateRef(); </span>
 <span class="fc" id="L57">		this.generatorType = GeneratorType.EvolutionStrategies;</span>
 <span class="fc" id="L58">		this.weight = 50;</span>
 <span class="fc" id="L59">		listTrace[0] = this.weight;</span>
@@ -68,171 +68,236 @@ public class EvolutionStrategies extends Generator {
      */
     @SuppressWarnings(&quot;squid:S2245&quot;)
 	@Override
+	/**
+	 * generate - method to generate a new state.
+	 * @param operatornumber 
+	 * @return returns the generated state.
+	 */
 	public State generate(Integer operatornumber) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException,	NoSuchMethodException {
 
-    	//ArrayList&lt;State&gt; list = new ArrayList&lt;State&gt;();
-//		List&lt;State&gt; refList = new ArrayList&lt;State&gt;(this.listStateReference); 
-<span class="fc" id="L75">    	iffatherselection = new FactoryFatherSelection();</span>
-<span class="fc" id="L76">    	FatherSelection selection = iffatherselection.createSelectFather(selectionType);</span>
-<span class="fc" id="L77">    	List&lt;State&gt; fathers = selection.selection(this.listStateReference, truncation);</span>
-<span class="pc bpc" id="L78" title="1 of 2 branches missed.">    	int pos1 = (fathers.size() &gt; 0) ? ThreadLocalRandom.current().nextInt(fathers.size()) : 0;</span>
-<span class="fc" id="L79">    	State candidate = (State) Strategy.getStrategy().getProblem().getState().getCopy();</span>
-<span class="fc" id="L80">    	candidate.setCode(new ArrayList&lt;Object&gt;(fathers.get(pos1).getCode()));</span>
-<span class="fc" id="L81">    	candidate.setEvaluation(fathers.get(pos1).getEvaluation());</span>
-<span class="fc" id="L82">    	candidate.setNumber(fathers.get(pos1).getNumber());</span>
-<span class="fc" id="L83">    	candidate.setTypeGenerator(fathers.get(pos1).getTypeGenerator());</span>
+<span class="fc" id="L78">    	iffatherselection = new FactoryFatherSelection();</span>
+<span class="fc" id="L79">    	FatherSelection selection = iffatherselection.createSelectFather(selectionType);</span>
+<span class="fc" id="L80">    	List&lt;State&gt; fathers = selection.selection(this.listStateReference, truncation);</span>
+<span class="pc bpc" id="L81" title="1 of 2 branches missed.">    	int pos1 = (fathers.size() &gt; 0) ? ThreadLocalRandom.current().nextInt(fathers.size()) : 0;</span>
+<span class="fc" id="L82">    	State candidate = (State) Strategy.getStrategy().getProblem().getState().getCopy();</span>
+<span class="fc" id="L83">    	candidate.setCode(new ArrayList&lt;Object&gt;(fathers.get(pos1).getCode()));</span>
+<span class="fc" id="L84">    	candidate.setEvaluation(fathers.get(pos1).getEvaluation());</span>
+<span class="fc" id="L85">    	candidate.setNumber(fathers.get(pos1).getNumber());</span>
+<span class="fc" id="L86">    	candidate.setTypeGenerator(fathers.get(pos1).getTypeGenerator());</span>
     	
     	//**********mutacion******************************************** 	
-<span class="fc" id="L86">    	iffactorymutation = new FactoryMutation();</span>
-<span class="fc" id="L87">    	Mutation mutation = iffactorymutation.createMutation(mutationType);</span>
-<span class="fc" id="L88">    	candidate = mutation.mutation(candidate, PM);</span>
+<span class="fc" id="L89">    	iffactorymutation = new FactoryMutation();</span>
+<span class="fc" id="L90">    	Mutation mutation = iffactorymutation.createMutation(mutationType);</span>
+<span class="fc" id="L91">    	candidate = mutation.mutation(candidate, PM);</span>
     	//list.add(candidate);    	
-<span class="fc" id="L90">    	return candidate;</span>
+<span class="fc" id="L93">    	return candidate;</span>
 	}
 
 	@Override
+	/**
+	 * getReference - method to get the current reference state.
+	 * @return returns the current reference state.
+	 */
 	public State getReference() {
-<span class="pc bpc" id="L95" title="2 of 4 branches missed.">		if (listStateReference == null || listStateReference.isEmpty()) {</span>
-<span class="nc" id="L96">			return null;</span>
+<span class="pc bpc" id="L102" title="2 of 4 branches missed.">		if (listStateReference == null || listStateReference.isEmpty()) {</span>
+<span class="nc" id="L103">			return null;</span>
 		}
-<span class="fc" id="L98">		stateReferenceES = listStateReference.get(0);</span>
-<span class="pc bpc" id="L99" title="1 of 2 branches missed.">		if(Strategy.getStrategy().getProblem().getTypeProblem().equals(ProblemType.Maximizar)){</span>
-<span class="fc bfc" id="L100" title="All 2 branches covered.">			for (int i = 1; i &lt; listStateReference.size(); i++) {</span>
-<span class="pc bpc" id="L101" title="1 of 2 branches missed.">				if(stateReferenceES.getEvaluation().get(0) &lt; listStateReference.get(i).getEvaluation().get(0))</span>
-<span class="fc" id="L102">					stateReferenceES = listStateReference.get(i);</span>
+<span class="fc" id="L105">		stateReferenceES = listStateReference.get(0);</span>
+<span class="pc bpc" id="L106" title="1 of 2 branches missed.">		if(Strategy.getStrategy().getProblem().getTypeProblem().equals(ProblemType.Maximizar)){</span>
+<span class="fc bfc" id="L107" title="All 2 branches covered.">			for (int i = 1; i &lt; listStateReference.size(); i++) {</span>
+<span class="pc bpc" id="L108" title="1 of 2 branches missed.">				if(stateReferenceES.getEvaluation().get(0) &lt; listStateReference.get(i).getEvaluation().get(0))</span>
+<span class="fc" id="L109">					stateReferenceES = listStateReference.get(i);</span>
 			}
 		}
 		else{
-<span class="nc bnc" id="L106" title="All 2 branches missed.">			for (int i = 1; i &lt; listStateReference.size(); i++) {</span>
-<span class="nc bnc" id="L107" title="All 2 branches missed.">				if(stateReferenceES.getEvaluation().get(0) &gt; listStateReference.get(i).getEvaluation().get(0))</span>
-<span class="nc" id="L108">					stateReferenceES = listStateReference.get(i);</span>
+<span class="nc bnc" id="L113" title="All 2 branches missed.">			for (int i = 1; i &lt; listStateReference.size(); i++) {</span>
+<span class="nc bnc" id="L114" title="All 2 branches missed.">				if(stateReferenceES.getEvaluation().get(0) &gt; listStateReference.get(i).getEvaluation().get(0))</span>
+<span class="nc" id="L115">					stateReferenceES = listStateReference.get(i);</span>
 			}
 		}
-<span class="pc bpc" id="L111" title="1 of 2 branches missed.">		return (stateReferenceES == null) ? null : new State(stateReferenceES);</span>
+<span class="pc bpc" id="L118" title="1 of 2 branches missed.">		return (stateReferenceES == null) ? null : new State(stateReferenceES);</span>
 	}
 	
+	/**
+	 * setStateRef - method to set the current reference state.
+	 * @param stateRef 
+	 */
 	public void setStateRef(State stateRef) {
-<span class="nc bnc" id="L115" title="All 2 branches missed.">		this.stateReferenceES = (stateRef == null) ? null : new State(stateRef);</span>
-<span class="nc" id="L116">	}</span>
+<span class="nc bnc" id="L126" title="All 2 branches missed.">		this.stateReferenceES = (stateRef == null) ? null : new State(stateRef);</span>
+<span class="nc" id="L127">	}</span>
 
 	@Override
+	/**
+	 * getType - method to get the generator type.
+	 * @return returns the generator type.
+	 */
 	public GeneratorType getType() {
-<span class="fc" id="L120">		return this.generatorType;</span>
+<span class="fc" id="L135">		return this.generatorType;</span>
 	}
 
 	@Override
+	/**
+	 * setInitialReference - method to set the initial reference state.
+	 * @param stateInitialRef 
+	 */
 	public void setInitialReference(State stateInitialRef) {
-<span class="nc bnc" id="L125" title="All 2 branches missed.">		this.stateReferenceES = (stateInitialRef == null) ? null : new State(stateInitialRef);</span>
-<span class="nc" id="L126">	}</span>
+<span class="nc bnc" id="L144" title="All 2 branches missed.">		this.stateReferenceES = (stateInitialRef == null) ? null : new State(stateInitialRef);</span>
+<span class="nc" id="L145">	}</span>
 
 	@Override
+	/**
+	 * updateReference - method to update the reference state.
+	 * @param stateCandidate 
+	 * @param countIterationsCurrent 
+	 */
 	public void updateReference(State stateCandidate, Integer countIterationsCurrent) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
-<span class="nc" id="L130">		iffreplace = new FactoryReplace();</span>
-<span class="nc" id="L131">		Replace replace = iffreplace.createReplace(replaceType);</span>
-<span class="nc" id="L132">		listStateReference = replace.replace(stateCandidate, listStateReference);</span>
+<span class="nc" id="L154">		iffreplace = new FactoryReplace();</span>
+<span class="nc" id="L155">		Replace replace = iffreplace.createReplace(replaceType);</span>
+<span class="nc" id="L156">		listStateReference = replace.replace(stateCandidate, listStateReference);</span>
 
-<span class="nc" id="L134">	}</span>
+<span class="nc" id="L158">	}</span>
 	
+	/**
+	 * getListStateRef - method to get the list of reference states.
+	 * @return returns the list of reference states.
+	 */
 	public List&lt;State&gt; getListStateRef(){
-<span class="fc" id="L137">		Boolean found = false;</span>
-<span class="fc" id="L138">		List&lt;String&gt; key = Strategy.getStrategy().getListKey();</span>
-<span class="fc" id="L139">		int count = 0;</span>
-		//if(Strategy.getStrategy().Statistics.getAllStates().size() == 0){
-		/*if(RandomSearch.listStateReference.size() == 0){
-			return this.listStateReference = new ArrayList&lt;State&gt;();
-		}*/
-<span class="fc bfc" id="L144" title="All 4 branches covered.">		while((found.equals(false)) &amp;&amp; (Strategy.getStrategy().mapGenerators.size() &gt; count)){</span>
-<span class="fc bfc" id="L145" title="All 2 branches covered.">			if(key.get(count).equals(GeneratorType.EvolutionStrategies.toString())){</span>
-<span class="fc" id="L146">				GeneratorType keyGenerator = GeneratorType.valueOf(String.valueOf(key.get(count)));</span>
-<span class="fc" id="L147">				EvolutionStrategies generator = (EvolutionStrategies) Strategy.getStrategy().mapGenerators.get(keyGenerator);</span>
-<span class="pc bpc" id="L148" title="1 of 2 branches missed.">				if(generator.getListStateReference().isEmpty()){</span>
-<span class="fc" id="L149">					listStateReference.addAll(RandomSearch.listStateReference);</span>
-					//for (int j = 1; j &lt; Strategy.getStrategy().Statistics.getAllStates().size(); j++) {
-//					for (int j = 1; j &lt; RandomSearch.listStateReference.size(); j++) {
-//						if(listStateReference.size() != countRef){
-							//State problemState = Strategy.getStrategy().Statistics.getAllStates().get(j);
-//							listStateReference.add(RandomSearch.listStateReference.get(j));
-//						}
-//					}  
+<span class="fc" id="L165">		Boolean found = false;</span>
+<span class="fc" id="L166">		List&lt;String&gt; key = Strategy.getStrategy().getListKey();</span>
+<span class="fc" id="L167">		int count = 0;</span>
+<span class="fc bfc" id="L168" title="All 4 branches covered.">		while((found.equals(false)) &amp;&amp; (Strategy.getStrategy().mapGenerators.size() &gt; count)){</span>
+<span class="fc bfc" id="L169" title="All 2 branches covered.">			if(key.get(count).equals(GeneratorType.EvolutionStrategies.toString())){</span>
+<span class="fc" id="L170">				GeneratorType keyGenerator = GeneratorType.valueOf(String.valueOf(key.get(count)));</span>
+<span class="fc" id="L171">				EvolutionStrategies generator = (EvolutionStrategies) Strategy.getStrategy().mapGenerators.get(keyGenerator);</span>
+<span class="pc bpc" id="L172" title="1 of 2 branches missed.">				if(generator.getListStateReference().isEmpty()){</span>
+<span class="fc" id="L173">					listStateReference.addAll(RandomSearch.listStateReference);</span>
 				}
 				else{
-<span class="nc" id="L159">					listStateReference = generator.getListStateReference();</span>
+<span class="nc" id="L176">					listStateReference = generator.getListStateReference();</span>
 				}
-<span class="fc" id="L161">			        found = true;</span>
+<span class="fc" id="L178">			        found = true;</span>
 			}
-<span class="fc" id="L163">			count++;</span>
+<span class="fc" id="L180">			count++;</span>
 		}
-<span class="pc bpc" id="L165" title="1 of 2 branches missed.">		return (listStateReference == null) ? new ArrayList&lt;State&gt;() : new ArrayList&lt;State&gt;(listStateReference);</span>
+<span class="pc bpc" id="L182" title="1 of 2 branches missed.">		return (listStateReference == null) ? new ArrayList&lt;State&gt;() : new ArrayList&lt;State&gt;(listStateReference);</span>
 	}
 
+	/**
+	 * getListStateReference - method to get the list of reference states.
+	 * @return returns the list of reference states.
+	 */
 	public List&lt;State&gt; getListStateReference() {
-<span class="pc bpc" id="L169" title="1 of 2 branches missed.">		return (listStateReference == null) ? new ArrayList&lt;State&gt;() : new ArrayList&lt;State&gt;(listStateReference);</span>
+<span class="pc bpc" id="L190" title="1 of 2 branches missed.">		return (listStateReference == null) ? new ArrayList&lt;State&gt;() : new ArrayList&lt;State&gt;(listStateReference);</span>
 	}
 
+	/**
+	 * setListStateReference - method to set the list of reference states.
+	 * @param listStateReference 
+	 */
 	public void setListStateReference(List&lt;State&gt; listStateReference) {
-<span class="pc bpc" id="L173" title="1 of 2 branches missed.">		this.listStateReference = (listStateReference == null) ? new ArrayList&lt;State&gt;() : new ArrayList&lt;State&gt;(listStateReference);</span>
-<span class="fc" id="L174">	}</span>
+<span class="pc bpc" id="L198" title="1 of 2 branches missed.">		this.listStateReference = (listStateReference == null) ? new ArrayList&lt;State&gt;() : new ArrayList&lt;State&gt;(listStateReference);</span>
+<span class="fc" id="L199">	}</span>
 
+	/**
+	 * getTypeGenerator - method to get the generator type.
+	 * @return returns the generator type.
+	 */
 	public GeneratorType getTypeGenerator() {
-<span class="nc" id="L177">		return generatorType;</span>
+<span class="nc" id="L206">		return generatorType;</span>
 	}
 
+	/**
+	 * setTypeGenerator - method to set the generator type.
+	 * @param generatorType 
+	 */
 	public void setTypeGenerator(GeneratorType generatorType) {
-<span class="nc" id="L181">		this.generatorType = generatorType;</span>
-<span class="nc" id="L182">	}</span>
+<span class="nc" id="L214">		this.generatorType = generatorType;</span>
+<span class="nc" id="L215">	}</span>
 
 	@Override
+	/**
+	 * getReferenceList - method to get the list of reference states.
+	 * @return returns the list of reference states.
+	 */
 	public List&lt;State&gt; getReferenceList() {
-<span class="fc" id="L186">		List&lt;State&gt; ReferenceList = new ArrayList&lt;State&gt;();</span>
-<span class="fc bfc" id="L187" title="All 2 branches covered.">		for (int i = 0; i &lt; listStateReference.size(); i++) {</span>
-<span class="fc" id="L188">			State value = listStateReference.get(i);</span>
-<span class="fc" id="L189">			ReferenceList.add(value);</span>
+<span class="fc" id="L223">		List&lt;State&gt; ReferenceList = new ArrayList&lt;State&gt;();</span>
+<span class="fc bfc" id="L224" title="All 2 branches covered.">		for (int i = 0; i &lt; listStateReference.size(); i++) {</span>
+<span class="fc" id="L225">			State value = listStateReference.get(i);</span>
+<span class="fc" id="L226">			ReferenceList.add(value);</span>
 		}
-<span class="fc" id="L191">		return new ArrayList&lt;State&gt;(ReferenceList);</span>
+<span class="fc" id="L228">		return new ArrayList&lt;State&gt;(ReferenceList);</span>
 	}
 
 	@Override
+	/**
+	 * getSonList - method to get the list of son states.
+	 * @return returns the list of son states.
+	 */
 	public List&lt;State&gt; getSonList() {
 		// TODO Auto-generated method stub
-<span class="fc" id="L197">		return null;</span>
+<span class="fc" id="L238">		return null;</span>
 	}
 
 	@Override
+	/**
+	 * awardUpdateREF - method to award the update of the reference state.
+	 * @param stateCandidate 
+	 * @return returns true if the update is awarded, false otherwise.
+	 */
 	public boolean awardUpdateREF(State stateCandidate) {
 		// TODO Auto-generated method stub
-<span class="fc" id="L203">		return false;</span>
+<span class="fc" id="L249">		return false;</span>
 	}
 
 	@Override
+	/**
+	 * getWeight - method to get the weight.
+	 * @return returns the weight.
+	 */
 	public float getWeight() {
 		// TODO Auto-generated method stub
-<span class="fc" id="L209">		return this.weight;</span>
+<span class="fc" id="L259">		return this.weight;</span>
 	}
 
 	@Override
+	/**
+	 * setWeight - method to set the weight.
+	 * @param weight 
+	 */
 	public void setWeight(float weight) {
 		// TODO Auto-generated method stub
-<span class="fc" id="L215">		this.weight = weight;</span>
-<span class="fc" id="L216">	}</span>
+<span class="fc" id="L269">		this.weight = weight;</span>
+<span class="fc" id="L270">	}</span>
 
 	@Override
+	/**
+	 * getListCountBetterGender - method to get the list of count better gender.
+	 * @return 
+	 */
 	public int[] getListCountBetterGender() {
 		// TODO Auto-generated method stub
-<span class="pc bpc" id="L221" title="1 of 2 branches missed.">		return (this.listCountBetterGender == null) ? new int[0] : Arrays.copyOf(this.listCountBetterGender, this.listCountBetterGender.length);</span>
+<span class="pc bpc" id="L279" title="1 of 2 branches missed.">		return (this.listCountBetterGender == null) ? new int[0] : Arrays.copyOf(this.listCountBetterGender, this.listCountBetterGender.length);</span>
 	}
 
 	@Override
+	/**
+	 * getListCountGender - method to get the list of count gender.
+	 * @return returns the list of count gender.
+	 */
 	public int[] getListCountGender() {
 		// TODO Auto-generated method stub
-<span class="pc bpc" id="L227" title="1 of 2 branches missed.">		return (this.listCountGender == null) ? new int[0] : Arrays.copyOf(this.listCountGender, this.listCountGender.length);</span>
+<span class="pc bpc" id="L289" title="1 of 2 branches missed.">		return (this.listCountGender == null) ? new int[0] : Arrays.copyOf(this.listCountGender, this.listCountGender.length);</span>
 	}
 
 	@Override
+	/**
+	 * getTrace - method to get the trace.
+	 * @return returns the trace.
+	 */
 	public float[] getTrace() {
 		// TODO Auto-generated method stub
-<span class="pc bpc" id="L233" title="1 of 2 branches missed.">		return (this.listTrace == null) ? new float[0] : Arrays.copyOf(this.listTrace, this.listTrace.length);</span>
+<span class="pc bpc" id="L299" title="1 of 2 branches missed.">		return (this.listTrace == null) ? new float[0] : Arrays.copyOf(this.listTrace, this.listTrace.length);</span>
 	}
-
 
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

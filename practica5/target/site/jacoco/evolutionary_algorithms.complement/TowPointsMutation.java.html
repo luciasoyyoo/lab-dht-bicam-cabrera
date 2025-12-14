@@ -3,31 +3,28 @@
 
 import metaheurictics.strategy.Strategy;
 import problem.definition.State;
-<span class="fc" id="L6">public class TowPointsMutation extends Mutation {</span>
+/**
+ * TowPointsMutation - applies two-points mutation.
+ */
+<span class="fc" id="L9">public class TowPointsMutation extends Mutation {</span>
 
-	/*@Override
-	public ProblemState mutation(SortedMap&lt;Object, Object&gt; newind, double PM) {
-		
-		int pos1 = (int) (Math.random() * (int)Problem.countvariable);
-		int pos2 = (int) (Math.random() * (int)Problem.countvariable);
-		
-		Object value1 = (Integer)(newind.get(&quot;x&quot; + pos1));
-		Object value2 = (Integer)(newind.get(&quot;x&quot; + pos2));
-		newind.put(&quot;x&quot; + pos1, value2);
-		newind.put(&quot;x&quot; + pos2, value1);
-	
-		return newind;
-	}*/
+	// legacy ProblemState-based mutation removed: use State-based mutation below
 
 	@Override
+	/**
+	 * mutation - applies two-points mutation.
+	 * @param newind 
+	 * @param PM 
+	 * @return returns the mutated state
+	 */
 	public State mutation(State newind, double PM) {
-<span class="fc" id="L24">		Object key1 = Strategy.getStrategy().getProblem().getCodification().getAleatoryKey();</span>
-<span class="fc" id="L25">		Object key2 = Strategy.getStrategy().getProblem().getCodification().getAleatoryKey();</span>
-<span class="fc" id="L26">		Object value1 = Strategy.getStrategy().getProblem().getCodification().getVariableAleatoryValue((Integer) key1);</span>
-<span class="fc" id="L27">		Object value2 = Strategy.getStrategy().getProblem().getCodification().getVariableAleatoryValue((Integer) key2);</span>
-<span class="fc" id="L28">		newind.getCode().set((Integer) key1, (Integer)value2);</span>
-<span class="fc" id="L29">		newind.getCode().set((Integer) key2, (Integer)value1);</span>
-<span class="fc" id="L30">		return newind;</span>
+<span class="fc" id="L21">		Object key1 = Strategy.getStrategy().getProblem().getCodification().getAleatoryKey();</span>
+<span class="fc" id="L22">		Object key2 = Strategy.getStrategy().getProblem().getCodification().getAleatoryKey();</span>
+<span class="fc" id="L23">		Object value1 = Strategy.getStrategy().getProblem().getCodification().getVariableAleatoryValue((Integer) key1);</span>
+<span class="fc" id="L24">		Object value2 = Strategy.getStrategy().getProblem().getCodification().getVariableAleatoryValue((Integer) key2);</span>
+<span class="fc" id="L25">		newind.getCode().set((Integer) key1, (Integer)value2);</span>
+<span class="fc" id="L26">		newind.getCode().set((Integer) key2, (Integer)value1);</span>
+<span class="fc" id="L27">		return newind;</span>
 	}
 }
   

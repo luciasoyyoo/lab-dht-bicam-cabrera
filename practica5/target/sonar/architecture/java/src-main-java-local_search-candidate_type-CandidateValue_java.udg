@@ -1,5 +1,5 @@
 
-1.0!luciasoyyoo_lab-dht-bicam-cabreraJavaFrontend"1764946316671*java2.Bó
+1.0!luciasoyyoo_lab-dht-bicam-cabreraJavaFrontend"1765722115521*java2.BÔ
 B
 =src/main/java/local_search/candidate_type/CandidateValue.java2
 	
@@ -23,98 +23,119 @@ B
 access13
 
 public14
-
-simple-name15
-
-CandidateValue16
-:
-4local_search.candidate_type.CandidateValue.ifFactory18
-
-field19
-
-private20
-
-	ifFactory21
-*
-$factory_interface.IFFactoryCandidate23
-
-unknown24
-
-is type25
-
-
-uses26
-=
-7local_search.candidate_type.CandidateValue.tabusolution28
-
-tabusolution29
-+
-%local_search.complement.TabuSolutions31
-@
-:local_search.candidate_type.CandidateValue.searchcandidate33
-
-searchcandidate34
-1
-+local_search.candidate_type.SearchCandidate36
-:
-4local_search.candidate_type.CandidateValue#<init>()V38
-
-method39
-
-calls40
-û
-ólocal_search.candidate_type.CandidateValue#newSearchCandidate(Llocal_search/candidate_type/CandidateType;)Llocal_search/candidate_type/SearchCandidate;42
-
-newSearchCandidate43
-
-returns44
-/
-)local_search.candidate_type.CandidateType46
-
-	has param47
 
 
-references48
-%
-factory_method.FactoryCandidate50
-õ
-îfactory_interface.IFFactoryCandidate#createSearchCandidate(Llocal_search/candidate_type/CandidateType;)Llocal_search/candidate_type/SearchCandidate;52
-Í
-„local_search.candidate_type.CandidateValue#stateCandidate(Lproblem/definition/State;Llocal_search/candidate_type/CandidateType;Llocal_search/complement/StrategyType;Ljava/lang/Integer;Ljava/util/List;)Lproblem/definition/State;54
+full-range15
 
-stateCandidate55
-
-problem.definition.State57
+(29:1)-(116:2)16
+
+simple-name17
+
+CandidateValue18
+:
+4local_search.candidate_type.CandidateValue.ifFactory20
+
+field21
+
+private22
+
+(32:2)-(32:39)23
+
+	ifFactory24
 *
-$local_search.complement.StrategyType59
+$factory_interface.IFFactoryCandidate26
+
+unknown27
+
+is type28
+
+
+uses29
+=
+7local_search.candidate_type.CandidateValue.tabusolution31
+
+(36:2)-(36:37)32
+
+tabusolution33
++
+%local_search.complement.TabuSolutions35
+@
+:local_search.candidate_type.CandidateValue.searchcandidate37
+
+(38:2)-(38:42)38
+
+searchcandidate39
+1
++local_search.candidate_type.SearchCandidate41
+:
+4local_search.candidate_type.CandidateValue#<init>()V43
+
+method44
+
+(40:2)-(40:27)45
+
+calls46
+û
+ólocal_search.candidate_type.CandidateValue#newSearchCandidate(Llocal_search/candidate_type/CandidateType;)Llocal_search/candidate_type/SearchCandidate;48
+
+(52:2)-(56:3)49
+
+newSearchCandidate50
+
+returns51
 /
-)local_search.complement.StrategyType.TABU61
+)local_search.candidate_type.CandidateType53
+
+	has param54
+
+
+references55
+%
+factory_method.FactoryCandidate57
+õ
+îfactory_interface.IFFactoryCandidate#createSearchCandidate(Llocal_search/candidate_type/CandidateType;)Llocal_search/candidate_type/SearchCandidate;59
+Í
+„local_search.candidate_type.CandidateValue#stateCandidate(Lproblem/definition/State;Llocal_search/candidate_type/CandidateType;Llocal_search/complement/StrategyType;Ljava/lang/Integer;Ljava/util/List;)Lproblem/definition/State;61
+
+(74:2)-(97:3)62
+
+stateCandidate63
+
+problem.definition.State65
+*
+$local_search.complement.StrategyType67
+/
+)local_search.complement.StrategyType.TABU69
 `
-Zlocal_search.complement.TabuSolutions#filterNeighborhood(Ljava/util/List;)Ljava/util/List;63
+Zlocal_search.complement.TabuSolutions#filterNeighborhood(Ljava/util/List;)Ljava/util/List;71
 &
- metaheurictics.strategy.Strategy65
+ metaheurictics.strategy.Strategy73
 V
-Pmetaheurictics.strategy.Strategy#getStrategy()Lmetaheurictics/strategy/Strategy;67
+Pmetaheurictics.strategy.Strategy#getStrategy()Lmetaheurictics/strategy/Strategy;75
  
-problem.definition.Problem69
+problem.definition.Problem77
 O
-Imetaheurictics.strategy.Strategy#getProblem()Lproblem/definition/Problem;71
+Imetaheurictics.strategy.Strategy#getProblem()Lproblem/definition/Problem;79
 !
-problem.definition.Operator73
+problem.definition.Operator81
 r
-lproblem.definition.Operator#generatedNewState(Lproblem/definition/State;Ljava/lang/Integer;)Ljava/util/List;75
+lproblem.definition.Operator#generatedNewState(Lproblem/definition/State;Ljava/lang/Integer;)Ljava/util/List;83
 K
-Eproblem.definition.Problem#getOperator()Lproblem/definition/Operator;77
+Eproblem.definition.Problem#getOperator()Lproblem/definition/Operator;85
 i
-clocal_search.candidate_type.SearchCandidate#stateSearch(Ljava/util/List;)Lproblem/definition/State;79
+clocal_search.candidate_type.SearchCandidate#stateSearch(Ljava/util/List;)Lproblem/definition/State;87
 i
-clocal_search.candidate_type.CandidateValue#getTabusolution()Llocal_search/complement/TabuSolutions;81
+clocal_search.candidate_type.CandidateValue#getTabusolution()Llocal_search/complement/TabuSolutions;89
 
-getTabusolution82
+(104:2)-(106:3)90
+
+getTabusolution91
 j
-dlocal_search.candidate_type.CandidateValue#setTabusolution(Llocal_search/complement/TabuSolutions;)V84
+dlocal_search.candidate_type.CandidateValue#setTabusolution(Llocal_search/complement/TabuSolutions;)V93
 
-setTabusolution85J#
+(113:2)-(115:3)94
+
+setTabusolution95J#
 !
 1
 12
@@ -130,11 +151,11 @@ dlocal_search.candidate_type.CandidateValue#setTabusolution(Llocal_search/comple
 
 
 5
-6j»
-B
-41<
-414239 *
-1$ $(210:7B
+6j¥
+N
+47H
+474844 *
+14 4(+210:7B$
 
 
 13
@@ -142,98 +163,46 @@ B
 
 
 15
-43
-
-49
-495024
-
-51
-515224
-
-30
-303124
-
-60
-606124
-B
-17<
-171819 *
-1 (	210:7B
+49
 
 
-13
-20
-
-
-15
-21
-
-58
-585924
->
-108
-101112 *
-1 (:7B
-
-
-13
-14
-
-
-15
-16
-B
-37<
-373839 *
-1   (210:7B
-
-
-13
-14
-
-
-15
-16
-
-35
-353624
-
-45
-454624
-
-22
-222324
-
-66
-666724
-
-78
-787924
-
-68
-686924
-B
-32<
-323319 *
-1 (	210:7B
-
-
-13
-20
-
-
-15
-34
+17
+50
 
 56
-565724
+565727
 
-62
-626324
-B
-83<
-838439 *
-1G G(210:7B
+58
+585927
+
+34
+343527
+
+68
+686927
+N
+19H
+192021 *
+1   (&210:7B$
+
+
+13
+22
+
+
+15
+23
+
+
+17
+24
+
+66
+666727
+J
+10D
+101112 *
+1 (:7B$
 
 
 13
@@ -241,11 +210,15 @@ B
 
 
 15
-85
-B
-53<
-535439 *
-1* *(210:7B
+16
+
+
+17
+18
+N
+42H
+424344 *
+1(	 ((210:7B$
 
 
 13
@@ -253,35 +226,55 @@ B
 
 
 15
-55
+45
+
+
+17
+18
 
-64
-646524
+40
+404127
 
-70
-707124
+52
+525327
 
-76
-767724
+25
+252627
 
 74
-747524
-B
-27<
-272819 *
-1 (	210:7B
+747527
+
+86
+868727
+
+76
+767727
+N
+36H
+363721 *
+1& &()210:7B$
 
 
 13
-20
+22
 
 
 15
-29
-B
-80<
-808139 *
-1C C(210:7B
+38
+
+
+17
+39
+
+64
+646527
+
+70
+707127
+N
+92H
+929344 *
+1q q(210:7B$
 
 
 13
@@ -289,311 +282,375 @@ B
 
 
 15
-82
+94
+
+
+17
+95
+N
+60H
+606144 *
+1J J(210:7B$
+
+
+13
+14
+
+
+15
+62
+
+
+17
+63
 
 72
-727324rÿ
+727327
+
+78
+787927
+
+84
+848527
+
+82
+828327
+N
+30H
+303121 *
+1$ $($210:7B$
+
+
+13
+22
+
+
+15
+32
+
+
+17
+33
+N
+88H
+888944 *
+1h h(&210:7B$
+
+
+13
+14
+
+
+15
+90
+
+
+17
+91
+
+80
+808127rÿ
 
-172225*
-1
- (
+192528*
+1 
+  (
 
-172226*
-1
- (
+192529*
+1 
+  (
 
-172226*
-1 (&
+192529*
+1   (&
 
-273025*
-1
- (
+303428*
+1$
+ $(
 
-273026*
-1
- (
+303429*
+1$
+ $(
 
-273026*
-1 ($
+303429*
+1$ $($
 
-323525*
-1
- (
+364028*
+1&
+ &(
 
-323526*
-1
- (
+364029*
+1&
+ &(
 
-323526*
-1 ()
+364029*
+1& &()
 
-371040*
-1 	  (
+421046*
+1(	 ((
 
-413544*
-1$	 $(
+474051*
+14	 4(
 
-414547*
-1$, $(9
+475254*
+14, 4(9
 
-413526*
-1$	 $(
+474029*
+14	 4(
 
-414525*
-1$: $(G
+475228*
+14: 4(G
 
-414526*
-1$, $(9
+475229*
+14, 4(9
 
-412226*
-1% %(
+472529*
+15 5(
 
-411748*
-1% %(
+471955*
+15 5(
 
-414940*
-1% %(#
+475646*
+15 5(#
 
-413526*
-1& &(
+474029*
+16 6(
 
-413248*
-1& &(
+473655*
+16 6(
 
-413544*
-1& &(
+474051*
+16 6(4
 
-412248*
-1& &(
+472555*
+16 6(4
 
-415140*
-1& &(4
+475846*
+16 6(4
 
-411748*
-1& &(
+471955*
+16 6(
 
-412226*
-1& &(
+472529*
+16 6(
 
-411748*
-1& &(
+471955*
+16 6(
 
-413526*
-1'
- '(
+474029*
+17
+ 7(
 
-413248*
-1'
- '(
+473655*
+17
+ 7(
 
-535644*
-1*	 *(
+606451*
+1J	 J(
 
-535647*
-1* *(#
+606454*
+1J J(#
 
-534547*
-1*2 *(?
+605254*
+1J2 J(?
 
-535847*
-1*O *([
+606654*
+1JO J([
 
-535626*
-1*	 *(
+606429*
+1J	 J(
 
-535625*
-1*$ *(0
+606428*
+1J$ J(0
 
-535626*
-1* *(#
+606429*
+1J J(#
 
-534525*
-1*@ *(M
+605228*
+1J@ J(M
 
-534526*
-1*2 *(?
+605229*
+1J2 J(?
 
-535825*
-1*\ *(d
+606628*
+1J\ J(d
 
-535826*
-1*O *([
+606629*
+1JO J([
 
-535626*
-1*É *(à
+606429*
+1JÉ J(à
 
-535625*
-1,	 ,(
+606428*
+1L	 L(
 
-535626*
-1, ,(
+606429*
+1L L(
 
-535626*
-1- -(
+606429*
+1M M(
 
-535626*
-1-' -(,
+606429*
+1M' M(,
 
-535644*
-1/ /(
+606451*
+1O O( 
 
-531026*
-11 1(
+601029*
+1Q Q(
 
-531048*
-11 1(
+601055*
+1Q Q(
 
-533026*
-11 1(
+603429*
+1Q Q(
 
-532748*
-11 1(
+603055*
+1Q Q(
 
-533040*
-11 1((
+603446*
+1Q Q((
 
-535826*
-12 2(#
+606629*
+1R R(#
 
-535826*
-12$ 2((
+606629*
+1R$ R((
 
-536048*
-12$ 2((
+606855*
+1R$ R((
 
-533048*
-14 4(
+603455*
+1T T(3
 
-536240*
-14! 4(3
+607046*
+1T! T(3
 
-531026*
-14 4(
+601029*
+1T T(
 
-531048*
-14 4(
+601055*
+1T T(
 
-533026*
-14 4( 
+603429*
+1T T( 
 
-532748*
-14 4( 
+603055*
+1T T( 
 
-536425*
-17 7(
+607228*
+1W W(
 
-536426*
-17 7(
+607229*
+1W W(
 
-536444*
-17 7("
+607251*
+1W W(.
 
-536448*
-17 7("
+607255*
+1W W(.
 
-536640*
-17# 7(.
+607446*
+1W# W(.
 
-536426*
-17 7("
+607229*
+1W W("
 
-536844*
-18 8(
+607651*
+1X X(
 
-536448*
-18 8(
+607255*
+1X X(
 
-537040*
-18 8(
+607846*
+1X X(
 
-537248*
-19 9(
+608055*
+1Y Y(K
 
-537440*
-19: 9(K
+608246*
+1Y: Y(K
 
-537244*
-19 9(
+608051*
+1Y Y(7
 
-536848*
-19 9(
+607655*
+1Y Y(7
 
-537640*
-19, 9(7
+608446*
+1Y, Y(7
 
-536844*
-19 9(
+607651*
+1Y Y()
 
-536448*
-19 9(
+607255*
+1Y Y()
 
-537040*
-19 9()
+607846*
+1Y Y()
 
-535644*
-19L 9(X
+606451*
+1YL Y(\
 
-535644*
-1; ;(
+606451*
+1[ [(
 
-531048*
-1; ;(
+601055*
+1[ [(
 
-533525*
-1> >(
+604028*
+1^ ^(
 
-533526*
-1> >(
+604029*
+1^ ^(
 
-533544*
-1>  >(2
+604051*
+1^  ^(2
 
-531048*
-1>  >(2
+601055*
+1^  ^(2
 
-534140*
-1>  >(2
+604746*
+1^  ^(2
 
-535644*
-1? ?(
+606451*
+1_ _(*
 
-533548*
-1? ?(
+604055*
+1_ _(*
 
-537840*
-1? ?(*
+608646*
+1_ _(*
 
-803044*
-1C	 C(
+883451*
+1h	 h(
 
-803026*
-1C	 C(
+883429*
+1h	 h(
 
-803026*
-1D
- D(
+883429*
+1i
+ i(
 
-802748*
-1D
- D(
+883055*
+1i
+ i(
 
-833047*
-1G G(+
+923454*
+1q q(+
 
-833025*
-1G, G(8
+923428*
+1q, q(8
 
-833026*
-1G G(+
+923429*
+1q q(+
 
-831026*
-1H H(
+921029*
+1r r(
 
-831048*
-1H H(
+921055*
+1r r(
 
-833026*
-1H H(
+923429*
+1r r(
 
-832748*
-1H H(
+923055*
+1r r(

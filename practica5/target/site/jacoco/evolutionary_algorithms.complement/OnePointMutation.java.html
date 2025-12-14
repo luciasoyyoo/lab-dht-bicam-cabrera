@@ -5,7 +5,10 @@ import java.util.concurrent.ThreadLocalRandom;
 import metaheurictics.strategy.Strategy;
 import problem.definition.State;
 
-<span class="fc" id="L8">public class OnePointMutation extends Mutation {</span>
+/**
+ * OnePointMutation - applies the one-point mutation operator.
+ */
+<span class="fc" id="L11">public class OnePointMutation extends Mutation {</span>
 
 
     /**
@@ -16,15 +19,21 @@ import problem.definition.State;
      */
     @SuppressWarnings(&quot;squid:S2245&quot;)
     @Override
+    /**
+     * mutation - applies the mutation to the state.
+     * @param state
+     * @param PM
+     * @return returns the mutated state
+     */
     public State mutation(State state, double PM) {
-<span class="fc" id="L20">        double probM = ThreadLocalRandom.current().nextDouble();</span>
-<span class="pc bpc" id="L21" title="1 of 2 branches missed.">		if(PM &gt;= probM)</span>
+<span class="fc" id="L29">        double probM = ThreadLocalRandom.current().nextDouble();</span>
+<span class="pc bpc" id="L30" title="1 of 2 branches missed.">		if(PM &gt;= probM)</span>
 		{
-<span class="nc" id="L23">			Object key = Strategy.getStrategy().getProblem().getCodification().getAleatoryKey();</span>
-<span class="nc" id="L24">			Object value = Strategy.getStrategy().getProblem().getCodification().getVariableAleatoryValue((Integer)key);</span>
-<span class="nc" id="L25">			state.getCode().set((Integer) key, value);</span>
+<span class="nc" id="L32">			Object key = Strategy.getStrategy().getProblem().getCodification().getAleatoryKey();</span>
+<span class="nc" id="L33">			Object value = Strategy.getStrategy().getProblem().getCodification().getVariableAleatoryValue((Integer)key);</span>
+<span class="nc" id="L34">			state.getCode().set((Integer) key, value);</span>
 		}
-<span class="fc" id="L27">		return state;</span>
+<span class="fc" id="L36">		return state;</span>
 	}
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

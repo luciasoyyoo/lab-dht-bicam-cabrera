@@ -2,9 +2,29 @@
 
 import java.util.List;
 
-<span class="fc" id="L5">public abstract class Operator {</span>
+/**
+ * Operator
+ *
+ * @brief Interfaz abstracta para operadores que generan nuevos estados a
+ *        partir de un estado actual o que producen estados aleatorios.
+ */
+<span class="fc" id="L11">public abstract class Operator {</span>
 	
+		/**
+		 * Generar nuevos estados a partir de un estado dado.
+		 *
+		 * @param stateCurrent estado base
+		 * @param operatornumber Ã­ndice de operador (uso dependiente de la implementaciÃ³n)
+		 * @return lista de estados generados
+		 */
 		public abstract List&lt;State&gt; generatedNewState(State stateCurrent, Integer operatornumber);
+		
+		/**
+		 * Generar un conjunto de estados aleatorios.
+		 *
+		 * @param operatornumber Ã­ndice/semilla opcional para la generaciÃ³n
+		 * @return lista de estados aleatorios
+		 */
 		public abstract List&lt;State&gt; generateRandomState (Integer operatornumber);
 
 	}

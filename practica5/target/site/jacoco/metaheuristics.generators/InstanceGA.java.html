@@ -5,39 +5,54 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 
-<span class="fc" id="L8">public class InstanceGA implements Runnable {</span>
+/**
+ * InstanceGA - class that implements the Runnable interface to create an instance of
+ *               the Genetic Algorithm generator.
+ */
+<span class="fc" id="L12">public class InstanceGA implements Runnable {</span>
 
-<span class="fc" id="L10">	private static final Logger LOGGER = Logger.getLogger(InstanceGA.class.getName());</span>
+<span class="fc" id="L14">	private static final Logger LOGGER = Logger.getLogger(InstanceGA.class.getName());</span>
 
-<span class="fc" id="L12">	private boolean terminate = false;</span>
+<span class="fc" id="L16">	private boolean terminate = false;</span>
     
+	/**
+	 * run - create an instance of the Genetic Algorithm generator.
+	 */
 	public void run() {
-<span class="fc" id="L15">		FactoryGenerator ifFactoryGenerator = new FactoryGenerator();</span>
-<span class="fc" id="L16">		Generator generatorGA = null;</span>
+<span class="fc" id="L22">		FactoryGenerator ifFactoryGenerator = new FactoryGenerator();</span>
+<span class="fc" id="L23">		Generator generatorGA = null;</span>
 		try {
-<span class="fc" id="L18">			generatorGA = ifFactoryGenerator.createGenerator(GeneratorType.GeneticAlgorithm);</span>
-<span class="nc" id="L19">		} catch (Exception e) {</span>
-<span class="nc" id="L20">			LOGGER.log(Level.SEVERE, &quot;Failed to create GeneticAlgorithm generator&quot;, e);</span>
-<span class="fc" id="L21">		}</span>
-<span class="fc" id="L22">		boolean find = false;</span>
-<span class="fc" id="L23">		int i = 0;</span>
-<span class="fc bfc" id="L24" title="All 2 branches covered.">		while (find == false) {</span>
-<span class="pc bpc" id="L25" title="1 of 2 branches missed.">			if(MultiGenerator.getListGenerators()[i].getType().equals(GeneratorType.GeneticAlgorithm)){</span>
-<span class="fc" id="L26">				MultiGenerator.getListGenerators()[i] = generatorGA;</span>
-<span class="fc" id="L27">				find = true;</span>
+<span class="fc" id="L25">			generatorGA = ifFactoryGenerator.createGenerator(GeneratorType.GeneticAlgorithm);</span>
+<span class="nc" id="L26">		} catch (Exception e) {</span>
+<span class="nc" id="L27">			LOGGER.log(Level.SEVERE, &quot;Failed to create GeneticAlgorithm generator&quot;, e);</span>
+<span class="fc" id="L28">		}</span>
+<span class="fc" id="L29">		boolean find = false;</span>
+<span class="fc" id="L30">		int i = 0;</span>
+<span class="fc bfc" id="L31" title="All 2 branches covered.">		while (find == false) {</span>
+<span class="pc bpc" id="L32" title="1 of 2 branches missed.">			if(MultiGenerator.getListGenerators()[i].getType().equals(GeneratorType.GeneticAlgorithm)){</span>
+<span class="fc" id="L33">				MultiGenerator.getListGenerators()[i] = generatorGA;</span>
+<span class="fc" id="L34">				find = true;</span>
 			}
-<span class="nc" id="L29">			else i++;</span>
+<span class="nc" id="L36">			else i++;</span>
 		}
-<span class="fc" id="L31">		terminate = true;</span>
-<span class="fc" id="L32">	}</span>
+<span class="fc" id="L38">		terminate = true;</span>
+<span class="fc" id="L39">	}</span>
 
+	/**
+	 * isTerminate - check if the instance is terminated.
+	 * @return true if terminated, false otherwise
+	 */
 	public boolean isTerminate() {
-<span class="fc" id="L35">		return terminate;</span>
+<span class="fc" id="L46">		return terminate;</span>
 	}
 
+	/**
+	 * setTerminate - determine the termination status of the instance.
+	 * @param terminate true to terminate, false to continue
+	 */
 	public void setTerminate(boolean terminate) {
-<span class="nc" id="L39">		this.terminate = terminate;</span>
-<span class="nc" id="L40">	}</span>
+<span class="nc" id="L54">		this.terminate = terminate;</span>
+<span class="nc" id="L55">	}</span>
 
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

@@ -11,26 +11,47 @@ import problem.definition.Problem;
 import problem.definition.State;
 import problem.definition.Problem.ProblemType;
 
-<span class="fc" id="L14">public class AcceptBest extends AcceptableCandidate {</span>
+/**
+ * AcceptBest - Accept the candidate only if it improves (or ties) the current state.
+ *
+ * @brief Accepts the candidate state when it is better according to the
+ *        problem objective type (maximize/minimize).
+ */
+<span class="fc" id="L20">public class AcceptBest extends AcceptableCandidate {</span>
 
 	@Override
+	/**
+	 * Evaluate and decide acceptance of a candidate state.
+	 *
+	 * @param stateCurrent   current state
+	 * @param stateCandidate candidate state to evaluate
+	 * @return true if candidate should be accepted according to the problem
+	 *         objective (maximization/minimization), false otherwise
+	 * @throws IllegalArgumentException when arguments are invalid
+	 * @throws SecurityException on reflective access problems
+	 * @throws ClassNotFoundException when a referenced class cannot be found
+	 * @throws InstantiationException when a class cannot be instantiated reflectively
+	 * @throws IllegalAccessException on illegal reflective access
+	 * @throws InvocationTargetException when a reflective call throws an exception
+	 * @throws NoSuchMethodException when a reflective method lookup fails
+	 */
 	public Boolean acceptCandidate(State stateCurrent, State stateCandidate) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
-<span class="fc" id="L18">		Boolean accept = null;</span>
-<span class="fc" id="L19">		Problem problem = Strategy.getStrategy().getProblem();</span>
-<span class="pc bpc" id="L20" title="1 of 2 branches missed.">		if(problem.getTypeProblem().equals(ProblemType.Maximizar)) {</span>
-<span class="fc bfc" id="L21" title="All 2 branches covered.">			if (stateCandidate.getEvaluation().get(0) &gt;= stateCurrent.getEvaluation().get(0)) {</span>
-<span class="fc" id="L22">				accept = true;</span>
+<span class="fc" id="L39">		Boolean accept = null;</span>
+<span class="fc" id="L40">		Problem problem = Strategy.getStrategy().getProblem();</span>
+<span class="pc bpc" id="L41" title="1 of 2 branches missed.">		if(problem.getTypeProblem().equals(ProblemType.Maximizar)) {</span>
+<span class="fc bfc" id="L42" title="All 2 branches covered.">			if (stateCandidate.getEvaluation().get(0) &gt;= stateCurrent.getEvaluation().get(0)) {</span>
+<span class="fc" id="L43">				accept = true;</span>
 			} else {
-<span class="fc" id="L24">				accept = false;</span>
+<span class="fc" id="L45">				accept = false;</span>
 			}
 		} else {
-<span class="nc bnc" id="L27" title="All 2 branches missed.">			if (stateCandidate.getEvaluation().get(0) &lt;= stateCurrent.getEvaluation().get(0)) {</span>
-<span class="nc" id="L28">				accept = true;</span>
+<span class="nc bnc" id="L48" title="All 2 branches missed.">			if (stateCandidate.getEvaluation().get(0) &lt;= stateCurrent.getEvaluation().get(0)) {</span>
+<span class="nc" id="L49">				accept = true;</span>
 			} else {
-<span class="nc" id="L30">				accept = false;</span>
+<span class="nc" id="L51">				accept = false;</span>
 			}
 		}
-<span class="fc" id="L33">		return accept;</span>
+<span class="fc" id="L54">		return accept;</span>
 	}
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

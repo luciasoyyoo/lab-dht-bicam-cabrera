@@ -5,8 +5,16 @@ import java.util.List;
 import problem.definition.State;
 
 
-<span class="fc" id="L8">public abstract class FatherSelection {</span>
-	
+/**
+ * FatherSelection - selects the best fathers from the population.
+ */
+<span class="fc" id="L11">public abstract class FatherSelection {</span>
+	/**
+	 * selection - selects the best fathers from the population.
+	 * @param listState
+	 * @param truncation
+	 * @return returns a list of selected fathers
+	 */
 	public abstract List&lt;State&gt; selection(List&lt;State&gt; listState, int truncation);
 
 }

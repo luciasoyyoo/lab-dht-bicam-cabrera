@@ -17,9 +17,9 @@ import local_search.candidate_type.CandidateValue;
 import local_search.complement.StrategyType;
 import metaheurictics.strategy.Strategy;
 
-
-
-
+/**
+ * MultiobjectiveHillClimbingRestart - class that implements the Multiobjective Hill Climbing with Restart metaheuristic.
+ */
 public class MultiobjectiveHillClimbingRestart extends Generator{
 
 	protected CandidateValue candidatevalue;
@@ -35,14 +35,14 @@ public class MultiobjectiveHillClimbingRestart extends Generator{
 <span class="fc" id="L35">	private List&lt;State&gt; visitedState = new ArrayList&lt;State&gt;();</span>
 	private static final int sizeNeighbors = 10;
 
-	/**
-	 * Accessor for sizeNeighbors.
-	 */
 	public static int getSizeNeighbors() {
-<span class="fc" id="L42">		return sizeNeighbors;</span>
+<span class="fc" id="L39">		return sizeNeighbors;</span>
 	}
 
 
+	/**
+	 * MultiobjectiveHillClimbingRestart - class that implements the Multiobjective Hill Climbing with Restart metaheuristic.
+	 */
 	public MultiobjectiveHillClimbingRestart() {
 <span class="fc" id="L47">		super();</span>
 <span class="fc" id="L48">		this.typeAcceptation = AcceptType.AcceptNotDominated;</span>
@@ -57,156 +57,176 @@ public class MultiobjectiveHillClimbingRestart extends Generator{
 <span class="fc" id="L57">	}</span>
 
 	@Override
+	/**
+	 * generate - generate a new state based on the operator number.
+	 * @param operatornumber the operator number to use for generating the state
+	 * @return the generated state
+	 */
 	public State generate(Integer operatornumber) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
-<span class="fc" id="L61">		List&lt;State&gt; neighborhood = Strategy.getStrategy().getProblem().getOperator().generatedNewState(stateReferenceHC, operatornumber);</span>
-<span class="fc" id="L62">		State statecandidate = candidatevalue.stateCandidate(stateReferenceHC, typeCandidate, strategy, operatornumber, neighborhood);</span>
-<span class="fc" id="L63">		return statecandidate;</span>
+<span class="fc" id="L66">		List&lt;State&gt; neighborhood = Strategy.getStrategy().getProblem().getOperator().generatedNewState(stateReferenceHC, operatornumber);</span>
+<span class="fc" id="L67">		State statecandidate = candidatevalue.stateCandidate(stateReferenceHC, typeCandidate, strategy, operatornumber, neighborhood);</span>
+<span class="fc" id="L68">		return statecandidate;</span>
 	}
 
 	@Override
+	/**
+	 * updateReference - update the reference state and the list of visited states.
+	 * @param stateCandidate 
+	 * @param countIterationsCurrent 
+	 */
 	public void updateReference(State stateCandidate, Integer countIterationsCurrent) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
 		//Agregando la primera soluciï¿½n a la lista de soluciones no dominadas
 
-<span class="pc bpc" id="L70" title="1 of 2 branches missed.">		if(Strategy.getStrategy().listRefPoblacFinal.size() == 0){</span>
-<span class="fc" id="L71">			Strategy.getStrategy().listRefPoblacFinal.add(stateReferenceHC.clone());</span>
+<span class="pc bpc" id="L80" title="1 of 2 branches missed.">		if(Strategy.getStrategy().listRefPoblacFinal.size() == 0){</span>
+<span class="fc" id="L81">			Strategy.getStrategy().listRefPoblacFinal.add(stateReferenceHC.clone());</span>
 		}
 
-<span class="fc" id="L74">		ifacceptCandidate = new FactoryAcceptCandidate();</span>
-<span class="fc" id="L75">		AcceptableCandidate candidate = ifacceptCandidate.createAcceptCandidate(typeAcceptation);</span>
-<span class="fc" id="L76">		State lastState = Strategy.getStrategy().listRefPoblacFinal.get(Strategy.getStrategy().listRefPoblacFinal.size()-1);</span>
-<span class="fc" id="L77">		List&lt;State&gt; neighborhood = Strategy.getStrategy().getProblem().getOperator().generatedNewState(stateReferenceHC, getSizeNeighbors());</span>
-<span class="fc" id="L78">		int i= 0;</span>
+<span class="fc" id="L84">		ifacceptCandidate = new FactoryAcceptCandidate();</span>
+<span class="fc" id="L85">		AcceptableCandidate candidate = ifacceptCandidate.createAcceptCandidate(typeAcceptation);</span>
+<span class="fc" id="L86">		State lastState = Strategy.getStrategy().listRefPoblacFinal.get(Strategy.getStrategy().listRefPoblacFinal.size()-1);</span>
+<span class="fc" id="L87">		List&lt;State&gt; neighborhood = Strategy.getStrategy().getProblem().getOperator().generatedNewState(stateReferenceHC, getSizeNeighbors());</span>
+<span class="fc" id="L88">		int i= 0;</span>
 
-<span class="fc" id="L80">		Boolean accept = candidate.acceptCandidate(lastState, stateCandidate.clone());</span>
+<span class="fc" id="L90">		Boolean accept = candidate.acceptCandidate(lastState, stateCandidate.clone());</span>
 
-<span class="fc bfc" id="L82" title="All 2 branches covered.">		if(accept.equals(true)){</span>
-<span class="fc" id="L83">			stateReferenceHC = stateCandidate.clone();</span>
-<span class="fc" id="L84">			visitedState = new ArrayList&lt;State&gt;();</span>
+<span class="fc bfc" id="L92" title="All 2 branches covered.">		if(accept.equals(true)){</span>
+<span class="fc" id="L93">			stateReferenceHC = stateCandidate.clone();</span>
+<span class="fc" id="L94">			visitedState = new ArrayList&lt;State&gt;();</span>
 			//tomar xc q pertenesca a la vecindad de xa
 		}
 		else{
-<span class="fc" id="L88">			boolean stop = false;</span>
-<span class="pc bpc" id="L89" title="1 of 4 branches missed.">			while (i &lt; neighborhood.size()&amp;&amp; stop==false) {</span>
-<span class="pc bpc" id="L90" title="1 of 2 branches missed.">				if (contain(neighborhood.get(i))==false) {</span>
-<span class="fc" id="L91">					stateCandidate = neighborhood.get(i);</span>
-<span class="fc" id="L92">					Strategy.getStrategy().getProblem().Evaluate(stateCandidate);  </span>
-<span class="fc" id="L93">					visitedState.add(stateCandidate);</span>
-<span class="fc" id="L94">					accept = candidate.acceptCandidate(lastState, stateCandidate.clone());</span>
-<span class="fc" id="L95">					stop=true;</span>
+<span class="fc" id="L98">			boolean stop = false;</span>
+<span class="pc bpc" id="L99" title="1 of 4 branches missed.">			while (i &lt; neighborhood.size()&amp;&amp; stop==false) {</span>
+<span class="pc bpc" id="L100" title="1 of 2 branches missed.">				if (contain(neighborhood.get(i))==false) {</span>
+<span class="fc" id="L101">					stateCandidate = neighborhood.get(i);</span>
+<span class="fc" id="L102">					Strategy.getStrategy().getProblem().Evaluate(stateCandidate);  </span>
+<span class="fc" id="L103">					visitedState.add(stateCandidate);</span>
+<span class="fc" id="L104">					accept = candidate.acceptCandidate(lastState, stateCandidate.clone());</span>
+<span class="fc" id="L105">					stop=true;</span>
 				}
-<span class="fc" id="L97">				i++;</span>
+<span class="fc" id="L107">				i++;</span>
 			}
-<span class="pc bpc" id="L99" title="1 of 2 branches missed.">			while (stop == false) {</span>
-<span class="nc" id="L100">				stateCandidate = Strategy.getStrategy().getProblem().getOperator().generateRandomState(1).get(0);</span>
-<span class="nc bnc" id="L101" title="All 2 branches missed.">				if (contain(stateCandidate)==false) {</span>
-<span class="nc" id="L102">					Strategy.getStrategy().getProblem().Evaluate(stateCandidate);  </span>
-<span class="nc" id="L103">					stop=true;</span>
-<span class="nc" id="L104">					accept = candidate.acceptCandidate(lastState, stateCandidate.clone());</span>
+<span class="pc bpc" id="L109" title="1 of 2 branches missed.">			while (stop == false) {</span>
+<span class="nc" id="L110">				stateCandidate = Strategy.getStrategy().getProblem().getOperator().generateRandomState(1).get(0);</span>
+<span class="nc bnc" id="L111" title="All 2 branches missed.">				if (contain(stateCandidate)==false) {</span>
+<span class="nc" id="L112">					Strategy.getStrategy().getProblem().Evaluate(stateCandidate);  </span>
+<span class="nc" id="L113">					stop=true;</span>
+<span class="nc" id="L114">					accept = candidate.acceptCandidate(lastState, stateCandidate.clone());</span>
 
 				}
 			}
-<span class="pc bpc" id="L108" title="1 of 2 branches missed.">			if(accept.equals(true)){</span>
-<span class="fc" id="L109">				stateReferenceHC = stateCandidate.clone();</span>
-<span class="fc" id="L110">				visitedState = new ArrayList&lt;State&gt;();</span>
+<span class="pc bpc" id="L118" title="1 of 2 branches missed.">			if(accept.equals(true)){</span>
+<span class="fc" id="L119">				stateReferenceHC = stateCandidate.clone();</span>
+<span class="fc" id="L120">				visitedState = new ArrayList&lt;State&gt;();</span>
 				//tomar xc q pertenesca a la vecindad de xa
 			}
 		}
 
 
-<span class="fc" id="L116">		getReferenceList();</span>
-<span class="fc" id="L117">	}</span>
+<span class="fc" id="L126">		getReferenceList();</span>
+<span class="fc" id="L127">	}</span>
 
 	@Override
 	public List&lt;State&gt; getReferenceList() {
-<span class="fc" id="L121">		listStateReference.add(stateReferenceHC.clone());</span>
-<span class="fc" id="L122">		return listStateReference;</span>
+<span class="fc" id="L131">		listStateReference.add(stateReferenceHC.clone());</span>
+<span class="fc" id="L132">		return listStateReference;</span>
 	}
 
 	@Override
 	public State getReference() {
-<span class="fc" id="L127">		return stateReferenceHC;</span>
+<span class="fc" id="L137">		return stateReferenceHC;</span>
 	}
 
 	public void setStateRef(State stateRef) {
-<span class="fc" id="L131">		this.stateReferenceHC = stateRef;</span>
-<span class="fc" id="L132">	}</span>
+<span class="fc" id="L141">		this.stateReferenceHC = stateRef;</span>
+<span class="fc" id="L142">	}</span>
 
 	@Override
 	public void setInitialReference(State stateInitialRef) {
-<span class="nc" id="L136">		this.stateReferenceHC = stateInitialRef;</span>
-<span class="nc" id="L137">	}</span>
+<span class="nc" id="L146">		this.stateReferenceHC = stateInitialRef;</span>
+<span class="nc" id="L147">	}</span>
 
 	public GeneratorType getGeneratorType() {
-<span class="nc" id="L140">		return generatortype;</span>
+<span class="nc" id="L150">		return generatortype;</span>
 	}
 
 	public void setGeneratorType(GeneratorType generatortype) {
-<span class="nc" id="L144">		this.generatortype = generatortype;</span>
-<span class="nc" id="L145">	}</span>
+<span class="nc" id="L154">		this.generatortype = generatortype;</span>
+<span class="nc" id="L155">	}</span>
 
 	@Override
 	public GeneratorType getType() {
-<span class="fc" id="L149">		return this.generatortype;</span>
+<span class="fc" id="L159">		return this.generatortype;</span>
 	}
 
 	@Override
 	public List&lt;State&gt; getSonList() {
 		// TODO Auto-generated method stub
-<span class="nc" id="L155">		return null;</span>
+<span class="nc" id="L165">		return null;</span>
 	}
 
+	/**
+	 * contain - check if the state is contained in the visited states.
+	 * @param state 
+	 * @return return true if the state is contained, false otherwise
+	 */
 	private boolean contain(State state){
-<span class="fc" id="L159">		boolean found = false;</span>
-<span class="pc bpc" id="L160" title="1 of 2 branches missed.">		for (Iterator&lt;State&gt; iter = visitedState.iterator(); iter.hasNext();) {</span>
-<span class="nc" id="L161">			State element = (State) iter.next();</span>
-<span class="nc bnc" id="L162" title="All 2 branches missed.">			if(element.Comparator(state)==true){</span>
-<span class="nc" id="L163">				found = true;</span>
+<span class="fc" id="L174">		boolean found = false;</span>
+<span class="pc bpc" id="L175" title="1 of 2 branches missed.">		for (Iterator&lt;State&gt; iter = visitedState.iterator(); iter.hasNext();) {</span>
+<span class="nc" id="L176">			State element = (State) iter.next();</span>
+<span class="nc bnc" id="L177" title="All 2 branches missed.">			if(element.Comparator(state)==true){</span>
+<span class="nc" id="L178">				found = true;</span>
 			}
-<span class="nc" id="L165">		}</span>
-<span class="fc" id="L166">		return found;</span>
+<span class="nc" id="L180">		}</span>
+<span class="fc" id="L181">		return found;</span>
 	}
 
 	@Override
+	/**
+	 * awardUpdateREF - award the update of the reference state.
+	 * @param stateCandidate 
+	 * @return return true if the reference state was updated, false otherwise
+	 */
 	public boolean awardUpdateREF(State stateCandidate) {
 		// TODO Auto-generated method stub
-<span class="nc" id="L172">		return false;</span>
+<span class="nc" id="L192">		return false;</span>
 	}
 
 
 	@Override
 	public float getWeight() {
 		// TODO Auto-generated method stub
-<span class="nc" id="L179">		return 0;</span>
+<span class="nc" id="L199">		return 0;</span>
 	}
 
 	@Override
 	public void setWeight(float weight) {
 		// TODO Auto-generated method stub
 
-<span class="nc" id="L186">	}</span>
+<span class="nc" id="L206">	}</span>
 
 	@Override
 	public float[] getTrace() {
 		// TODO Auto-generated method stub
-<span class="pc bpc" id="L191" title="1 of 2 branches missed.">		if (this.listTrace == null) return new float[0];</span>
-<span class="fc" id="L192">		float[] arr = new float[this.listTrace.size()];</span>
-<span class="fc bfc" id="L193" title="All 2 branches covered.">		for (int i = 0; i &lt; this.listTrace.size(); i++) {</span>
-<span class="fc" id="L194">			Float v = this.listTrace.get(i);</span>
-<span class="pc bpc" id="L195" title="1 of 2 branches missed.">			arr[i] = (v == null) ? 0f : v.floatValue();</span>
+<span class="pc bpc" id="L211" title="1 of 2 branches missed.">		if (this.listTrace == null) return new float[0];</span>
+<span class="fc" id="L212">		float[] arr = new float[this.listTrace.size()];</span>
+<span class="fc bfc" id="L213" title="All 2 branches covered.">		for (int i = 0; i &lt; this.listTrace.size(); i++) {</span>
+<span class="fc" id="L214">			Float v = this.listTrace.get(i);</span>
+<span class="pc bpc" id="L215" title="1 of 2 branches missed.">			arr[i] = (v == null) ? 0f : v.floatValue();</span>
 		}
-<span class="fc" id="L197">		return arr;</span>
+<span class="fc" id="L217">		return arr;</span>
 	}
 
 	@Override
 	public int[] getListCountBetterGender() {
 		// This generator doesn't maintain listCount arrays; return empty array to avoid nulls
-<span class="nc" id="L203">		return new int[0];</span>
+<span class="nc" id="L223">		return new int[0];</span>
 	}
 
 	@Override
 	public int[] getListCountGender() {
 		// This generator doesn't maintain listCount arrays; return empty array to avoid nulls
-<span class="nc" id="L209">		return new int[0];</span>
+<span class="nc" id="L229">		return new int[0];</span>
 	}
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

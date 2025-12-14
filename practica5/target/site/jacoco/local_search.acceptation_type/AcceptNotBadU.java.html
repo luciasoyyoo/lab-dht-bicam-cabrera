@@ -11,26 +11,47 @@ import problem.definition.Problem;
 import problem.definition.State;
 import problem.definition.Problem.ProblemType;
 
-<span class="fc" id="L14">public class AcceptNotBadU extends AcceptableCandidate{</span>
+/**
+ * AcceptNotBadU - Threshold based acceptation strategy.
+ *
+ * @brief Accepts a candidate when the evaluation difference between the
+ *        current and candidate state is below/above a configured threshold
+ *        (depending on maximization/minimization).
+ */
+<span class="fc" id="L21">public class AcceptNotBadU extends AcceptableCandidate{</span>
 
 	@Override
+	/**
+	 * Decide acceptance using a configured threshold in the strategy.
+	 *
+	 * @param stateCurrent  the current state
+	 * @param stateCandidate the candidate state
+	 * @return true if candidate is accepted according to threshold, false otherwise
+	 * @throws IllegalArgumentException on invalid arguments
+	 * @throws SecurityException on reflective access problems
+	 * @throws ClassNotFoundException when a referenced class cannot be found
+	 * @throws InstantiationException on reflective instantiation failures
+	 * @throws IllegalAccessException on illegal reflective access
+	 * @throws InvocationTargetException when a reflective call throws
+	 * @throws NoSuchMethodException when a reflective method lookup fails
+	 */
 	public Boolean acceptCandidate(State stateCurrent, State stateCandidate) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
-<span class="fc" id="L18">		Boolean accept = null;</span>
-<span class="fc" id="L19">		Problem problem = Strategy.getStrategy().getProblem();</span>
-<span class="fc bfc" id="L20" title="All 2 branches covered.">		if (problem.getTypeProblem().equals(ProblemType.Maximizar)) {</span>
-<span class="fc" id="L21">			Double result = stateCurrent.getEvaluation().get(0) - stateCandidate.getEvaluation().get(0);</span>
-<span class="fc bfc" id="L22" title="All 2 branches covered.">			if (result &lt; Strategy.getStrategy().getThreshold())</span>
-<span class="fc" id="L23">				accept = true;</span>
+<span class="fc" id="L39">		Boolean accept = null;</span>
+<span class="fc" id="L40">		Problem problem = Strategy.getStrategy().getProblem();</span>
+<span class="fc bfc" id="L41" title="All 2 branches covered.">		if (problem.getTypeProblem().equals(ProblemType.Maximizar)) {</span>
+<span class="fc" id="L42">			Double result = stateCurrent.getEvaluation().get(0) - stateCandidate.getEvaluation().get(0);</span>
+<span class="fc bfc" id="L43" title="All 2 branches covered.">			if (result &lt; Strategy.getStrategy().getThreshold())</span>
+<span class="fc" id="L44">				accept = true;</span>
 			else
-<span class="fc" id="L25">				accept = false;</span>
-<span class="fc" id="L26">		} else {</span>
-<span class="fc" id="L27">			Double result_min = stateCurrent.getEvaluation().get(0) - stateCandidate.getEvaluation().get(0);</span>
-<span class="fc bfc" id="L28" title="All 2 branches covered.">			if (result_min &gt; Strategy.getStrategy().getThreshold())</span>
-<span class="fc" id="L29">				accept = true;</span>
+<span class="fc" id="L46">				accept = false;</span>
+<span class="fc" id="L47">		} else {</span>
+<span class="fc" id="L48">			Double result_min = stateCurrent.getEvaluation().get(0) - stateCandidate.getEvaluation().get(0);</span>
+<span class="fc bfc" id="L49" title="All 2 branches covered.">			if (result_min &gt; Strategy.getStrategy().getThreshold())</span>
+<span class="fc" id="L50">				accept = true;</span>
 			else
-<span class="fc" id="L31">				accept = false;</span>
+<span class="fc" id="L52">				accept = false;</span>
 		}
-<span class="fc" id="L33">		return accept;</span>
+<span class="fc" id="L54">		return accept;</span>
 	}
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

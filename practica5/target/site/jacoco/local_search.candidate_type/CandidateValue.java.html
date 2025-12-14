@@ -18,6 +18,14 @@ import metaheurictics.strategy.Strategy;
 import factory_interface.IFFactoryCandidate;
 import factory_method.FactoryCandidate;
 
+/**
+ * CandidateValue - Factory/wrapper for creating and using SearchCandidate
+ *                  selection strategies.
+ *
+ * @brief Responsible for creating concrete SearchCandidate implementations
+ *        (via factories), filtering neighborhoods using tabu lists and
+ *        returning candidate states chosen by the selected strategy.
+ */
 public class CandidateValue {
 
 
@@ -29,47 +37,81 @@ public class CandidateValue {
 
 	private SearchCandidate searchcandidate;
 
-<span class="fc" id="L32">	public CandidateValue(){}</span>
+<span class="fc" id="L40">	public CandidateValue(){}</span>
 
 	// Keep a no-arg constructor; parameterized constructor was removed because its fields were unused.
 
+	/**
+	 * Create a new SearchCandidate instance for the provided candidate type.
+	 *
+	 * @param typecandidate the enum value describing which concrete
+	 *                      SearchCandidate to create
+	 * @return a new SearchCandidate instance
+	 * @throws ReflectiveOperationException when the factory cannot create the class
+	 */
 	public SearchCandidate newSearchCandidate(CandidateType typecandidate) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
-<span class="fc" id="L37">		ifFactory = new FactoryCandidate();</span>
-<span class="fc" id="L38">		searchcandidate = ifFactory.createSearchCandidate(typecandidate);</span>
-<span class="fc" id="L39">		return searchcandidate;</span>
+<span class="fc" id="L53">		ifFactory = new FactoryCandidate();</span>
+<span class="fc" id="L54">		searchcandidate = ifFactory.createSearchCandidate(typecandidate);</span>
+<span class="fc" id="L55">		return searchcandidate;</span>
 	}
 
+	/**
+	 * Choose a candidate state from the provided neighborhood according to the
+	 * specified candidate selection type and strategy.
+	 *
+	 * If the StrategyType is TABU, the neighborhood is first filtered through
+	 * the tabu list. On exception the method will attempt to regenerate the
+	 * neighborhood via the strategy's problem operator and retry.
+	 *
+	 * @param stateCurrent   the current state
+	 * @param typeCandidate  which candidate selection strategy to use
+	 * @param strategy       the local search strategy type (e.g. TABU)
+	 * @param operatornumber operator index used to generate new states if needed
+	 * @param neighborhood   list of neighbor states to select from
+	 * @return the chosen candidate state
+	 * @throws ReflectiveOperationException when factory/reflective creation fails
+	 */
 	public State stateCandidate(State stateCurrent, CandidateType typeCandidate, StrategyType strategy, Integer operatornumber, List&lt;State&gt; neighborhood) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException{
 		//Problem problem = ExecuteGenerator.getExecuteGenerator().getProblem();
 		State stateCandidate;
-<span class="fc" id="L45">		List&lt;State&gt; auxList = new ArrayList&lt;State&gt;();</span>
-<span class="fc bfc" id="L46" title="All 2 branches covered.">		for (int i = 0; i &lt; neighborhood.size(); i++) {</span>
-<span class="fc" id="L47">			auxList.add(neighborhood.get(i));</span>
+<span class="fc" id="L77">		List&lt;State&gt; auxList = new ArrayList&lt;State&gt;();</span>
+<span class="fc bfc" id="L78" title="All 2 branches covered.">		for (int i = 0; i &lt; neighborhood.size(); i++) {</span>
+<span class="fc" id="L79">			auxList.add(neighborhood.get(i));</span>
 		}
-<span class="fc" id="L49">		this.tabusolution = new TabuSolutions();</span>
-<span class="fc bfc" id="L50" title="All 2 branches covered.">		if (strategy.equals(StrategyType.TABU)) {</span>
+<span class="fc" id="L81">		this.tabusolution = new TabuSolutions();</span>
+<span class="fc bfc" id="L82" title="All 2 branches covered.">		if (strategy.equals(StrategyType.TABU)) {</span>
 			try {
-<span class="fc" id="L52">				auxList = this.tabusolution.filterNeighborhood(auxList);</span>
+<span class="fc" id="L84">				auxList = this.tabusolution.filterNeighborhood(auxList);</span>
 			}
-<span class="nc" id="L54">			catch (Exception e) {</span>
-<span class="nc" id="L55">				Strategy strategys = Strategy.getStrategy();</span>
-<span class="nc bnc" id="L56" title="All 2 branches missed.">				if(strategys.getProblem()!=null){</span>
-<span class="nc" id="L57">					neighborhood = strategys.getProblem().getOperator().generatedNewState(neighborhood.get(0), operatornumber);</span>
+<span class="nc" id="L86">			catch (Exception e) {</span>
+<span class="nc" id="L87">				Strategy strategys = Strategy.getStrategy();</span>
+<span class="nc bnc" id="L88" title="All 2 branches missed.">				if(strategys.getProblem()!=null){</span>
+<span class="nc" id="L89">					neighborhood = strategys.getProblem().getOperator().generatedNewState(neighborhood.get(0), operatornumber);</span>
 				}
-<span class="nc" id="L59">				return stateCandidate(stateCurrent, typeCandidate, strategy, operatornumber, neighborhood);</span>
-<span class="fc" id="L60">			}</span>
+<span class="nc" id="L91">				return stateCandidate(stateCurrent, typeCandidate, strategy, operatornumber, neighborhood);</span>
+<span class="fc" id="L92">			}</span>
 		}
-<span class="fc" id="L62">		SearchCandidate searchCand = newSearchCandidate(typeCandidate);</span>
-<span class="fc" id="L63">		stateCandidate = searchCand.stateSearch(auxList);</span>
-<span class="fc" id="L64">		return stateCandidate;</span>
+<span class="fc" id="L94">		SearchCandidate searchCand = newSearchCandidate(typeCandidate);</span>
+<span class="fc" id="L95">		stateCandidate = searchCand.stateSearch(auxList);</span>
+<span class="fc" id="L96">		return stateCandidate;</span>
 	}
 
+	/**
+	 * Get the currently stored tabu solutions helper instance.
+	 *
+	 * @return TabuSolutions manager used for neighborhood filtering
+	 */
 	public TabuSolutions getTabusolution() {
-<span class="nc" id="L68">		return tabusolution;</span>
+<span class="nc" id="L105">		return tabusolution;</span>
 	}
 
+	/**
+	 * Set the TabuSolutions helper used by this CandidateValue.
+	 *
+	 * @param tabusolution TabuSolutions instance to use for neighborhood filtering
+	 */
 	public void setTabusolution(TabuSolutions tabusolution) {
-<span class="nc" id="L72">		this.tabusolution = tabusolution;</span>
-<span class="nc" id="L73">	}</span>
+<span class="nc" id="L114">		this.tabusolution = tabusolution;</span>
+<span class="nc" id="L115">	}</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

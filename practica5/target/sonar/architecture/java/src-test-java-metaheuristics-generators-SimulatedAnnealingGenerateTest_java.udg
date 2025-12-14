@@ -1,5 +1,5 @@
 
-1.0!luciasoyyoo_lab-dht-bicam-cabreraJavaFrontend"1764946322602*java2.BÃ
+1.0!luciasoyyoo_lab-dht-bicam-cabreraJavaFrontend"1765722119876*java2.B‹
 P
 Ksrc/test/java/metaheuristics/generators/SimulatedAnnealingGenerateTest.java2
 	
@@ -23,114 +23,133 @@ module-key5
 access13
 
 public14
-
-simple-name15
-$
-SimulatedAnnealingGenerateTest16
-G
-Ametaheuristics.generators.SimulatedAnnealingGenerateTest#setup()V18
-
-method19
-
-setup20
-&
- org.junit.jupiter.api.BeforeEach22
-
-unknown23
-
-annotated by24
-
-
-uses25
-
-testutils.TestHelper27
 
 
-references28
-Q
-Ktestutils.TestHelper#initStrategyWithProblem(Lproblem/definition/Problem;)V30
+full-range15
+
+(16:1)-(67:2)16
+
+simple-name17
+$
+SimulatedAnnealingGenerateTest18
+G
+Ametaheuristics.generators.SimulatedAnnealingGenerateTest#setup()V20
+
+method21
+
+(18:5)-(21:6)22
 
-calls31
- 
-problem.definition.Problem33
+setup23
+&
+ org.junit.jupiter.api.BeforeEach25
 
-returns34
+unknown26
+
+annotated by27
+
+
+uses28
+
+testutils.TestHelper30
+
+
+references31
+Q
+Ktestutils.TestHelper#initStrategyWithProblem(Lproblem/definition/Problem;)V33
+
+calls34
+ 
+problem.definition.Problem36
+
+returns37
 ^
-Xtestutils.TestHelper#createMinimalProblemWithCodification(I)Lproblem/definition/Problem;36
+Xtestutils.TestHelper#createMinimalProblemWithCodification(I)Lproblem/definition/Problem;39
 t
-nmetaheuristics.generators.SimulatedAnnealingGenerateTest#generate_returnsCandidate_fromOperatorNeighborhood()V38
+nmetaheuristics.generators.SimulatedAnnealingGenerateTest#generate_returnsCandidate_fromOperatorNeighborhood()V41
+
+(23:5)-(66:6)42
 8
-2generate_returnsCandidate_fromOperatorNeighborhood39
+2generate_returnsCandidate_fromOperatorNeighborhood43
  
-org.junit.jupiter.api.Test41
+org.junit.jupiter.api.Test45
 
-is type42
+is type46
 &
- metaheurictics.strategy.Strategy44
+ metaheurictics.strategy.Strategy48
 O
-Imetaheurictics.strategy.Strategy#getProblem()Lproblem/definition/Problem;46
+Imetaheurictics.strategy.Strategy#getProblem()Lproblem/definition/Problem;50
 V
-Pmetaheurictics.strategy.Strategy#getStrategy()Lmetaheurictics/strategy/Strategy;48
+Pmetaheurictics.strategy.Strategy#getStrategy()Lmetaheurictics/strategy/Strategy;52
 L
-Fproblem.definition.Problem#setOperator(Lproblem/definition/Operator;)V50
+Fproblem.definition.Problem#setOperator(Lproblem/definition/Operator;)V54
 !
-problem.definition.Operator52
+problem.definition.Operator56
 @
-:metaheuristics.generators.SimulatedAnnealingGenerateTest$154
+:metaheuristics.generators.SimulatedAnnealingGenerateTest$158
 
-	protected55
+	protected59
+
+(27:38)-(43:10)60
 ’
-‹metaheuristics.generators.SimulatedAnnealingGenerateTest$1#generatedNewState(Lproblem/definition/State;Ljava/lang/Integer;)Ljava/util/List;57
+‹metaheuristics.generators.SimulatedAnnealingGenerateTest$1#generatedNewState(Lproblem/definition/State;Ljava/lang/Integer;)Ljava/util/List;62
+
+(28:13)-(37:14)63
 
-generatedNewState58
+generatedNewState64
 
-problem.definition.State60
+problem.definition.State66
 
-	has param61
+	has param67
 >
-8problem.definition.State#setCode(Ljava/util/ArrayList;)V63
+8problem.definition.State#setCode(Ljava/util/ArrayList;)V69
 B
-<metaheuristics.generators.SimulatedAnnealingGenerateTest$1$165
+<metaheuristics.generators.SimulatedAnnealingGenerateTest$1$171
+
+(32:50)-(32:63)72
 D
->problem.definition.State#setEvaluation(Ljava/util/ArrayList;)V67
+>problem.definition.State#setEvaluation(Ljava/util/ArrayList;)V74
 y
-smetaheuristics.generators.SimulatedAnnealingGenerateTest$1#generateRandomState(Ljava/lang/Integer;)Ljava/util/List;69
+smetaheuristics.generators.SimulatedAnnealingGenerateTest$1#generateRandomState(Ljava/lang/Integer;)Ljava/util/List;76
+
+(39:13)-(42:14)77
 
-generateRandomState70
+generateRandomState78
 2
-,metaheuristics.generators.SimulatedAnnealing72
+,metaheuristics.generators.SimulatedAnnealing80
 @
-:metaheuristics.generators.SimulatedAnnealingGenerateTest$274
+:metaheuristics.generators.SimulatedAnnealingGenerateTest$282
+
+(47:69)-(47:81)83
 [
-Umetaheuristics.generators.SimulatedAnnealing#setStateRef(Lproblem/definition/State;)V76
+Umetaheuristics.generators.SimulatedAnnealing#setStateRef(Lproblem/definition/State;)V85
 j
-dmetaheuristics.generators.SimulatedAnnealing#generate(Ljava/lang/Integer;)Lproblem/definition/State;78
+dmetaheuristics.generators.SimulatedAnnealing#generate(Ljava/lang/Integer;)Lproblem/definition/State;87
 &
- org.junit.jupiter.api.Assertions80
+ org.junit.jupiter.api.Assertions89
 I
-Corg.junit.jupiter.api.Assertions#assertNotNull(Ljava/lang/Object;)V82
+Corg.junit.jupiter.api.Assertions#assertNotNull(Ljava/lang/Object;)V91
 C
-=problem.definition.State#getEvaluation()Ljava/util/ArrayList;84
+=problem.definition.State#getEvaluation()Ljava/util/ArrayList;93
 r
-lmetaheuristics.generators.SimulatedAnnealing#updateReference(Lproblem/definition/State;Ljava/lang/Integer;)V86
+lmetaheuristics.generators.SimulatedAnnealing#updateReference(Lproblem/definition/State;Ljava/lang/Integer;)V95
 I
-Cmetaheuristics.generators.SimulatedAnnealing#getCountIterationsT()I88
+Cmetaheuristics.generators.SimulatedAnnealing#getCountIterationsT()I97
 Z
-Torg.junit.jupiter.api.Assertions#assertEquals(Ljava/lang/Object;Ljava/lang/Object;)V90
--
-'metaheuristics.generators.GeneratorType92
-e
-_metaheuristics.generators.SimulatedAnnealing#getType()Lmetaheuristics/generators/GeneratorType;94
-@
-:metaheuristics.generators.GeneratorType.SimulatedAnnealing96
-U
-Ometaheuristics.generators.SimulatedAnnealing#getReferenceList()Ljava/util/List;98
+Torg.junit.jupiter.api.Assertions#assertEquals(Ljava/lang/Object;Ljava/lang/Object;)V99
+.
+'metaheuristics.generators.GeneratorType101
+f
+_metaheuristics.generators.SimulatedAnnealing#getType()Lmetaheuristics/generators/GeneratorType;103
+A
+:metaheuristics.generators.GeneratorType.SimulatedAnnealing105
+V
+Ometaheuristics.generators.SimulatedAnnealing#getReferenceList()Ljava/util/List;107
 J
-Cmetaheuristics.generators.SimulatedAnnealing#getListCountGender()[I100
+Cmetaheuristics.generators.SimulatedAnnealing#getListCountGender()[I109
 P
-Imetaheuristics.generators.SimulatedAnnealing#getListCountBetterGender()[I102
+Imetaheuristics.generators.SimulatedAnnealing#getListCountBetterGender()[I111
 @
-9metaheuristics.generators.SimulatedAnnealing#getTrace()[F104J#
+9metaheuristics.generators.SimulatedAnnealing#getTrace()[F113J#
 !
 1
 12
@@ -146,20 +165,20 @@ Imetaheuristics.generators.SimulatedAnnealing#getListCountBetterGender()[I102
 
 
 5
-6j×
+6jÅ	
 
-21
-212223
+24
+242526
 
-101
-10110223
+110
+11011126
 
-81
-818223
->
-108
+90
+909126
+J
+10D
 101112 *
-1 (,:7B
+1 (,:7B$
 
 
 13
@@ -168,426 +187,458 @@ Imetaheuristics.generators.SimulatedAnnealing#getListCountBetterGender()[I102
 
 15
 16
-6
-640
-646512 *
-1 2  (3256:7B
 
 
-13
-55
-
-75
-757623
-
-26
-262723
-
-95
-959623
-
-47
-474823
-
-77
-777823
-
-93
-939423
-
-35
-353623
-
-99
-9910023
+17
+18
 B
-56<
-565719 *
-1 (253:7B
+70<
+707112 *
+1 2  (?261:7B
 
 
 13
-14
+59
 
 
 15
-58
+72
+
+84
+848526
 
 29
-293023
-
-32
-323323
-
-83
-838423
-
-91
-919223
-B
-17<
-171819 *
-1 (210:7B
-
-
-13
-14
-
-
-15
-20
-B
-37<
-373819 *
-1 (210:7B
-
-
-13
-14
-
-
-15
-39
-
-59
-596023
-
-40
-404123
+293026
 
-103
-10310423
-
-66
-666723
-
-89
-899023
-
-43
-434423
-
-45
-454623
-6
-530
-535412 *
-1& ('237:7B
-
-
-13
-55
-
-97
-979823
-6
-730
-737412 *
-1/E /(F237:7B
-
-
-13
-55
-
-85
-858623
-
-79
-798023
-B
-68<
-686919 *
-1' '(253:7B
-
-
-13
-14
-
-
-15
-70
-
-71
-717223
-
-87
-878823
-
-49
-495023
-
-62
-626323
+104
+10410526
 
 51
-515223rå
+515226
+
+86
+868726
+
+102
+10210326
+
+38
+383926
+
+108
+10810926
+N
+61H
+616221 *
+1  (1257:7B$
+
+
+13
+14
+
+
+15
+63
+
+
+17
+64
+
+32
+323326
+
+35
+353626
+
+92
+929326
+
+100
+10010126
+N
+19H
+192021 *
+1 (210:7B$
+
+
+13
+14
+
+
+15
+22
+
+
+17
+23
+N
+40H
+404121 *
+1 (C210:7B$
+
+
+13
+14
+
+
+15
+42
+
+
+17
+43
+
+65
+656626
+
+44
+444526
+
+112
+11211326
+
+73
+737426
+
+98
+989926
+
+47
+474826
+
+49
+495026
+B
+57<
+575812 *
+1& +(
+240:7B
+
+
+13
+59
+
+
+15
+60
+
+106
+10610726
+B
+81<
+818212 *
+1/E /(Q240:7B
+
+
+13
+59
+
+
+15
+83
+
+94
+949526
+
+88
+888926
+N
+75H
+757621 *
+1(  ((3257:7B$
+
+
+13
+14
+
+
+15
+77
+
+
+17
+78
+
+79
+798026
+
+96
+969726
+
+53
+535426
+
+68
+686926
+
+55
+555626rì
 
-172124*
+192427*
 1 (
 
-172125*
+192428*
 1 (
 
-172628*
-1	 (
+192931*
+1	 (+
 
-172931*
+193234*
 1 (+
 
-172625*
+192928*
 1	 (
 
-173234*
-1, (6
+193537*
+1, ([
 
-172628*
-1, (6
+192931*
+1, ([
 
-173531*
+193834*
 17 ([
 
-172625*
+192928*
 1, (6
 
-374024*
+404427*
 1 (
 
 
-374025*
+404428*
 1 (
 
 
-373242*
+403546*
 1 (
 
-373225*
+403528*
 1	 (
 
-373234*
-1 (#
+403537*
+1 (N
 
-374328*
-1 (#
+404731*
+1 (N
 
-374531*
+404934*
 1D (N
 
-374334*
-1 (#
+404737*
+1 (A
 
-374328*
-1 (#
+404731*
+1 (A
 
-374731*
+405134*
 16 (A
 
-374325*
+404728*
 1- (5
 
-373228*
-1	 (
-
+403531*
+1	 (
 
-374931*
+405334*
 1 (
 
-375131*
+405534*
 1 (#
 
-565961*
+616567*
 12 (7
 
-565925*
+616528*
 1 (
 
-565942*
+616546*
 18 (D
 
-565925*
+616528*
 12 (7
 
-565925*
+616528*
 1 (
 
-565942*
+616546*
 1 (
 
-565925*
+616528*
 1 (
 
-565931*
+616534*
 1 ($
 
-565928*
-1   (
+616531*
+1   (
 
-566231*
+616834*
 1   (
 
-565928*
-1" "(
+616531*
+1" "( 
 
-566631*
+617334*
 1" "( 
 
-685925*
+756528*
 1( ((
 
-685925*
+756528*
 1)& )(+
 
-377142*
+407946*
 1. .(
 
-377125*
+407928*
 1.	 .(
 
-377131*
+407934*
 1.% .(7
 
-375942*
+406546*
 1/ /(
 
-375925*
+406528*
 1/	 /(
 
-375931*
+406534*
 1/ /(
 
-375928*
-1/" /(%
+406531*
+1/" /(-
 
-376231*
+406834*
 1/& /(-
 
-375928*
-10D 0(G
+406531*
+10D 0(U
 
-376631*
+407334*
 10H 0(U
 
-377128*
-11	 1(
+407931*
+11	 1(
 
-377531*
+408434*
 11 1(
 
-375942*
+406546*
 14 4(
 
-375925*
+406528*
 14	 4(
 
-375934*
-14 4(
+406537*
+14 4(&
 
-377128*
-14 4(
+407931*
+14 4(&
 
-377731*
+408634*
 14 4(&
 
-377928*
+408831*
 15	 5(
 
-378131*
+409034*
 15	 5(
 
-377928*
+408831*
 17	 7(
 
-378131*
+409034*
 17	 7(
 
-375928*
-17 7( 
+406531*
+17 7(.
 
-378331*
+409234*
 17! 7(.
 
-377128*
-1:	 :(
+407931*
+1:	 :(
 
-378531*
+409434*
 1: :(
 
-377128*
-1:' :(9
+407931*
+1:' :(M
 
-378731*
+409634*
 1:: :(M
 
-377125*
+407928*
 1:' :(9
 
-377928*
+408831*
 1=	 =(
 
-378931*
+409834*
 1=	 =(
+
+4010037*
+1= =( 
 
-379134*
-1= =(
-
-377128*
-1= =(
-
-379331*
+407931*
+1= =( 
+
+4010234*
 1= =( 
-
-379125*
+
+4010028*
 1=$ =(1
-
-379125*
+
+4010028*
+1=2 =(D
+
+4010431*
 1=2 =(D
 
-379528*
-1=2 =(D
-
-377928*
+408831*
 1>	 >(
 
-378131*
+409034*
 1>	 >(
 
-377128*
-1> >(
-
-379731*
+407931*
+1> >(*
+
+4010634*
 1> >(*
 
-377928*
+408831*
 1?	 ?(
 
-378131*
+409034*
 1?	 ?(
 
-377128*
-1? ?(
-
-379931*
+407931*
+1? ?(,
+
+4010834*
 1? ?(,
 
-377928*
+408831*
 1@	 @(
 
-378131*
+409034*
 1@	 @(
 
-377128*
-1@ @(
+407931*
+1@ @(2
 
-3710131*
+4011034*
 1@ @(2
 
-377928*
+408831*
 1A	 A(
 
-378131*
+409034*
 1A	 A(
 
-377128*
-1A A(
+407931*
+1A A("
 
-3710331*
+4011234*
 1A A("

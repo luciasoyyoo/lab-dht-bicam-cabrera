@@ -101,10 +101,6 @@ public class HillClimbingRestart extends Generator{
 
 
 	@Override
-	/**
-	 * getReferenceList - get the list of reference states.
-	 * @return the list of reference states
-	 */
 	public List<State> getReferenceList() {
 		if (stateReferenceHC != null) {
 			if (listStateReference.isEmpty() || listStateReference.get(listStateReference.size() - 1) != stateReferenceHC) {
@@ -115,70 +111,40 @@ public class HillClimbingRestart extends Generator{
 	}
 
 	@Override
-	/**
-	 * getReference - get the reference state.
-	 * @return the reference state
-	 */
 	public State getReference() {
 		return (stateReferenceHC == null) ? null : new State(stateReferenceHC);
 	}
 
-	/**
-	 * setStateRef - set the reference state.
-	 * @param stateRef 
-	 */
 	public void setStateRef(State stateRef) {
 		this.stateReferenceHC = (stateRef == null) ? null : new State(stateRef);
 	}
 
 	@Override
-	/**
-	 * setInitialReference - set the initial reference state.
-	 * @param stateInitialRef 
-	 */
 	public void setInitialReference(State stateInitialRef) {
 		this.stateReferenceHC = (stateInitialRef == null) ? null : new State(stateInitialRef);
 	}
 
-	/**
-	 * getGeneratorType - get the generator type.
-	 * @return the generator type
-	 */
 	public GeneratorType getGeneratorType() {
 		return generatortype;
 	}
 
-	/**
-	 * setGeneratorType - set the generator type.
-	 * @param generatortype 
-	 */
+
 	public void setGeneratorType(GeneratorType generatortype) {
 		this.generatortype = generatortype;
 	}
 
 	@Override
-	/**
-	 * getType - get the generator type.
-	 * @return the generator type
-	 */
 	public GeneratorType getType() {
 		return this.generatortype;
 	}
 
 	@Override
-	/**
-	 * getSonList - get the list of son states.
-	 * @return the list of son states
-	 */
 	public List<State> getSonList() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	/**
-	 * setTypeCandidate - set the candidate type.
-	 * @param typeCandidate 
-	 */
+
 	public void setTypeCandidate(CandidateType typeCandidate){
 		this.typeCandidate = typeCandidate;
 	}
@@ -196,20 +162,12 @@ public class HillClimbingRestart extends Generator{
 
 
 	@Override
-	/**
-	 * getWeight - get the weight of the state.
-	 * @return the weight of the state
-	 */
 	public float getWeight() {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
-	/**
-	 * setWeight - set the weight of the state.
-	 * @param weight 
-	 */
 	public void setWeight(float weight) {
 		// TODO Auto-generated method stub
 		
@@ -218,30 +176,18 @@ public class HillClimbingRestart extends Generator{
 	
 	
 	@Override
-	/**
-	 * getListCountBetterGender - get the list of count better gender.
-	 * @return the list of count better gender
-	 */
 	public int[] getListCountBetterGender() {
 		// TODO Auto-generated method stub
 		return (this.listCountBetterGender == null) ? new int[0] : java.util.Arrays.copyOf(this.listCountBetterGender, this.listCountBetterGender.length);
 	}
 
 	@Override
-	/**
-	 * getListCountGender - get the list of count gender.
-	 * @return the list of count gender
-	 */
 	public int[] getListCountGender() {
 		// TODO Auto-generated method stub
 		return (this.listCountGender == null) ? new int[0] : java.util.Arrays.copyOf(this.listCountGender, this.listCountGender.length);
 	}
 
 	@Override
-	/**
-	 * getTrace - get the trace of the state.
-	 * @return the trace of the state
-	 */
 	public float[] getTrace() {
 		// TODO Auto-generated method stub
 		return (this.listTrace == null) ? new float[0] : java.util.Arrays.copyOf(this.listTrace, this.listTrace.length);

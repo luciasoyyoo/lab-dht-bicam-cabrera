@@ -2,27 +2,60 @@
 
 import problem.definition.Problem.ProblemType;
 
-<span class="fc" id="L5">public abstract class ObjetiveFunction {</span>
+/**
+ * ObjetiveFunction
+ *
+ * @brief Representa una funciÃ³n objetivo del problema. Puede ser usada en
+ *        problemas mono o multi-objetivo y contiene el peso y el tipo
+ *        (Maximizar/Minimizar).
+ */
+<span class="fc" id="L12">public abstract class ObjetiveFunction {</span>
 	
 	private ProblemType typeProblem;
 	private float weight;
 	
+	/**
+	 * Obtener el peso relativo de esta funciÃ³n objetivo.
+	 *
+	 * @return peso (float)
+	 */
 	public float getWeight() {
-<span class="fc" id="L11">		return weight;</span>
+<span class="fc" id="L23">		return weight;</span>
 	}
 
+	/**
+	 * Establecer el peso relativo de la funciÃ³n objetivo.
+	 *
+	 * @param weight valor de peso
+	 */
 	public void setWeight(float weight) {
-<span class="fc" id="L15">		this.weight = weight;</span>
-<span class="fc" id="L16">	}</span>
+<span class="fc" id="L32">		this.weight = weight;</span>
+<span class="fc" id="L33">	}</span>
 
+	/**
+	 * Obtener si la funciÃ³n es de tipo Maximizar o Minimizar.
+	 *
+	 * @return tipo de problema asociado a la funciÃ³n
+	 */
 	public ProblemType getTypeProblem() {
-<span class="fc" id="L19">		return typeProblem;</span>
+<span class="fc" id="L41">		return typeProblem;</span>
 	}
 
+	/**
+	 * Establecer el tipo (Maximizar/Minimizar) de la funciÃ³n objetivo.
+	 *
+	 * @param typeProblem tipo a asignar
+	 */
 	public void setTypeProblem(ProblemType typeProblem) {
-<span class="fc" id="L23">		this.typeProblem = typeProblem;</span>
-<span class="fc" id="L24">	}</span>
+<span class="fc" id="L50">		this.typeProblem = typeProblem;</span>
+<span class="fc" id="L51">	}</span>
 
+	/**
+	 * Evaluar el estado respecto a esta funciÃ³n objetivo.
+	 *
+	 * @param state estado a evaluar
+	 * @return valor de evaluaciÃ³n (Double)
+	 */
 	public abstract Double Evaluation(State state);
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

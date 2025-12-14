@@ -6,22 +6,37 @@ import metaheurictics.strategy.Strategy;
 
 import problem.definition.State;
 
-<span class="fc" id="L9">public class AcceptNotDominatedTabu extends AcceptableCandidate {</span>
+/**
+ * AcceptNotDominatedTabu - Acceptation that integrates a tabu-like Pareto list.
+ *
+ * @brief Maintains a list of non-dominated solutions and checks whether the
+ *        candidate should be accepted into that list. Intended for tabu-like
+ *        multi-objective variants.
+ */
+<span class="fc" id="L16">public class AcceptNotDominatedTabu extends AcceptableCandidate {</span>
 
 	@Override
+	/**
+	 * Evaluate candidate against the non-dominated list and update it.
+	 *
+	 * @param stateCurrent  the current state
+	 * @param stateCandidate the candidate state
+	 * @return true if candidate processing succeeded (this method returns true
+	 *         in current implementation), false if not
+	 */
 	public Boolean acceptCandidate(State stateCurrent, State stateCandidate) {
-<span class="fc" id="L13">		List&lt;State&gt; list = Strategy.getStrategy().listRefPoblacFinal;</span>
+<span class="fc" id="L28">		List&lt;State&gt; list = Strategy.getStrategy().listRefPoblacFinal;</span>
 		
-<span class="fc" id="L15">		Dominance dominance = new Dominance();</span>
-<span class="pc bpc" id="L16" title="1 of 2 branches missed.">		if(list.size() == 0){</span>
-<span class="fc" id="L17">			list.add(stateCurrent.clone());</span>
+<span class="fc" id="L30">		Dominance dominance = new Dominance();</span>
+<span class="pc bpc" id="L31" title="1 of 2 branches missed.">		if(list.size() == 0){</span>
+<span class="fc" id="L32">			list.add(stateCurrent.clone());</span>
 		}
-		//Verificando si la soluciï¿½n candidata domina a alguna de las soluciones de la lista de soluciones no dominadas
-		//De ser asï¿½ se eliminan de la lista y se adiciona la nueva soluciï¿½n en la lista
-		//De lo contrario no se adiciona la soluciï¿½n candidata a la lista
+		//Verificando si la soluciÃ³n candidata domina a alguna de las soluciones de la lista de soluciones no dominadas
+		//De ser asi se eliminan de la lista y se adiciona la nueva soluciÃ³n en la lista
+		//De lo contrario no se adiciona la soluciÃ³n candidata a la lista
 		//Si fue insertada en la lista entonces la solucion candidata se convierte en solucion actual
-<span class="fc" id="L23">		dominance.listDominance(stateCandidate, list);</span>
-<span class="fc" id="L24">		return true;</span>
+<span class="fc" id="L38">		dominance.listDominance(stateCandidate, list);</span>
+<span class="fc" id="L39">		return true;</span>
 	}
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

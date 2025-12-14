@@ -4,6 +4,15 @@ import java.util.ArrayList;
 
 import metaheuristics.generators.GeneratorType;
 
+/**
+ * State
+ *
+ * @brief Representa una soluciÃ³n (estado) dentro del espacio de bÃºsqueda.
+ *
+ * Contiene la codificaciÃ³n de la soluciÃ³n, su evaluaciÃ³n (lista de valores
+ * para problemas multiobjetivo), un identificador numÃ©rico y el tipo de
+ * generador que produjo este estado.
+ */
 public class State implements Cloneable {
 	
 	protected GeneratorType typeGenerator;
@@ -11,96 +20,176 @@ public class State implements Cloneable {
 	protected int number;
 	protected ArrayList&lt;Object&gt; code;
 	
-<span class="fc" id="L14">	public State(State ps) {</span>
-<span class="pc bpc" id="L15" title="1 of 2 branches missed.">		if (ps == null) {</span>
-<span class="nc" id="L16">			this.code = new ArrayList&lt;Object&gt;();</span>
-<span class="nc" id="L17">			this.evaluation = null;</span>
-<span class="nc" id="L18">			this.number = 0;</span>
-<span class="nc" id="L19">			this.typeGenerator = null;</span>
-<span class="nc" id="L20">			return;</span>
+	/**
+	 * Constructor copia.
+	 *
+	 * Realiza copias defensivas de las colecciones internas.
+	 *
+	 * @param ps estado a copiar (puede ser null)
+	 */
+<span class="fc" id="L30">	public State(State ps) {</span>
+<span class="pc bpc" id="L31" title="1 of 2 branches missed.">		if (ps == null) {</span>
+<span class="nc" id="L32">			this.code = new ArrayList&lt;Object&gt;();</span>
+<span class="nc" id="L33">			this.evaluation = null;</span>
+<span class="nc" id="L34">			this.number = 0;</span>
+<span class="nc" id="L35">			this.typeGenerator = null;</span>
+<span class="nc" id="L36">			return;</span>
 		}
-<span class="fc" id="L22">		typeGenerator = ps.getTypeGenerator();</span>
-<span class="fc" id="L23">		ArrayList&lt;Double&gt; eval = ps.getEvaluation();</span>
-<span class="fc bfc" id="L24" title="All 2 branches covered.">		this.evaluation = (eval == null) ? null : new ArrayList&lt;Double&gt;(eval);</span>
-<span class="fc" id="L25">		number = ps.getNumber();</span>
-<span class="fc" id="L26">		ArrayList&lt;Object&gt; c = ps.getCode();</span>
-<span class="pc bpc" id="L27" title="1 of 2 branches missed.">		this.code = (c == null) ? new ArrayList&lt;Object&gt;() : new ArrayList&lt;Object&gt;(c);</span>
-<span class="fc" id="L28">	}</span>
+<span class="fc" id="L38">		typeGenerator = ps.getTypeGenerator();</span>
+<span class="fc" id="L39">		ArrayList&lt;Double&gt; eval = ps.getEvaluation();</span>
+<span class="fc bfc" id="L40" title="All 2 branches covered.">		this.evaluation = (eval == null) ? null : new ArrayList&lt;Double&gt;(eval);</span>
+<span class="fc" id="L41">		number = ps.getNumber();</span>
+<span class="fc" id="L42">		ArrayList&lt;Object&gt; c = ps.getCode();</span>
+<span class="pc bpc" id="L43" title="1 of 2 branches missed.">		this.code = (c == null) ? new ArrayList&lt;Object&gt;() : new ArrayList&lt;Object&gt;(c);</span>
+<span class="fc" id="L44">	}</span>
 	
+	/**
+	 * Construir un estado a partir de la representaciÃ³n de cÃ³digo.
+	 *
+	 * @param code lista de objetos que representan la codificaciÃ³n interna
+	 */
 	public State(ArrayList&lt;Object&gt; code) {
-<span class="fc" id="L31">		super();</span>
-<span class="pc bpc" id="L32" title="1 of 2 branches missed.">		this.code = (code == null) ? new ArrayList&lt;Object&gt;() : new ArrayList&lt;Object&gt;(code);</span>
-<span class="fc" id="L33">	}</span>
+<span class="fc" id="L52">		super();</span>
+<span class="pc bpc" id="L53" title="1 of 2 branches missed.">		this.code = (code == null) ? new ArrayList&lt;Object&gt;() : new ArrayList&lt;Object&gt;(code);</span>
+<span class="fc" id="L54">	}</span>
 	
-<span class="fc" id="L35">	public State() {</span>
-<span class="fc" id="L36">		code=new ArrayList&lt;Object&gt;();</span>
-<span class="fc" id="L37">	}	</span>
+	/**
+	 * Constructor por defecto: crea un estado con cÃ³digo vacÃ­o.
+	 */
+<span class="fc" id="L59">	public State() {</span>
+<span class="fc" id="L60">		code=new ArrayList&lt;Object&gt;();</span>
+<span class="fc" id="L61">	}	</span>
 	
+	/**
+	 * Obtener la codificaciÃ³n del estado (copia defensiva).
+	 *
+	 * @return lista con los elementos de cÃ³digo
+	 */
 	public ArrayList&lt;Object&gt; getCode() {
-<span class="pc bpc" id="L40" title="1 of 2 branches missed.">		return (code == null) ? new ArrayList&lt;Object&gt;() : new ArrayList&lt;Object&gt;(code);</span>
+<span class="pc bpc" id="L69" title="1 of 2 branches missed.">		return (code == null) ? new ArrayList&lt;Object&gt;() : new ArrayList&lt;Object&gt;(code);</span>
 	}
 
+	/**
+	 * Establecer la codificaciÃ³n del estado (se copia la lista entrante).
+	 *
+	 * @param listCode nueva codificaciÃ³n
+	 */
 	public void setCode(ArrayList&lt;Object&gt; listCode) {
-<span class="fc bfc" id="L44" title="All 2 branches covered.">		this.code = (listCode == null) ? new ArrayList&lt;Object&gt;() : new ArrayList&lt;Object&gt;(listCode);</span>
-<span class="fc" id="L45">	}</span>
+<span class="fc bfc" id="L78" title="All 2 branches covered.">		this.code = (listCode == null) ? new ArrayList&lt;Object&gt;() : new ArrayList&lt;Object&gt;(listCode);</span>
+<span class="fc" id="L79">	}</span>
 
+	/**
+	 * Obtener el tipo de generador asociado a este estado.
+	 *
+	 * @return tipo de generador
+	 */
 	public GeneratorType getTypeGenerator() {
-<span class="fc" id="L48">		return typeGenerator;</span>
+<span class="fc" id="L87">		return typeGenerator;</span>
 	}
+	/**
+	 * Establecer el tipo de generador responsable de crear este estado.
+	 *
+	 * @param typeGenerator tipo de generador
+	 */
 	public void setTypeGenerator(GeneratorType typeGenerator) {
-<span class="fc" id="L51">		this.typeGenerator = typeGenerator;</span>
-<span class="fc" id="L52">	}</span>
+<span class="fc" id="L95">		this.typeGenerator = typeGenerator;</span>
+<span class="fc" id="L96">	}</span>
 
 	
+	/**
+	 * Obtener la lista de evaluaciones del estado.
+	 *
+	 * @return copia de la lista de evaluaciones (puede ser null)
+	 */
 	public ArrayList&lt;Double&gt; getEvaluation() {
-<span class="fc bfc" id="L56" title="All 2 branches covered.">		return (evaluation == null) ? null : new ArrayList&lt;Double&gt;(evaluation);</span>
+<span class="fc bfc" id="L105" title="All 2 branches covered.">		return (evaluation == null) ? null : new ArrayList&lt;Double&gt;(evaluation);</span>
 	}
 
+	/**
+	 * Establecer la lista de evaluaciones del estado (copia defensiva).
+	 *
+	 * @param evaluation lista de doubles que representan la evaluaciÃ³n
+	 */
 	public void setEvaluation(ArrayList&lt;Double&gt; evaluation) {
-<span class="fc bfc" id="L60" title="All 2 branches covered.">		this.evaluation = (evaluation == null) ? null : new ArrayList&lt;Double&gt;(evaluation);</span>
-<span class="fc" id="L61">	}</span>
+<span class="fc bfc" id="L114" title="All 2 branches covered.">		this.evaluation = (evaluation == null) ? null : new ArrayList&lt;Double&gt;(evaluation);</span>
+<span class="fc" id="L115">	}</span>
 
+	/**
+	 * Obtener el identificador numÃ©rico del estado.
+	 *
+	 * @return nÃºmero asignado al estado
+	 */
 	public int getNumber() {
-<span class="fc" id="L64">		return number;</span>
+<span class="fc" id="L123">		return number;</span>
 	}
+	/**
+	 * Asignar el identificador numÃ©rico al estado.
+	 *
+	 * @param number nuevo identificador
+	 */
 	public void setNumber(int number) {
-<span class="fc" id="L67">		this.number = number;</span>
-<span class="fc" id="L68">	}</span>
+<span class="fc" id="L131">		this.number = number;</span>
+<span class="fc" id="L132">	}</span>
 	@Override
+	/**
+	 * clone
+	 *
+	 * @brief Devuelve una copia superficial segura (deep-copy de colecciones
+	 *        mutables) del estado.
+	 *
+	 * @return nueva instancia {@link State} con copias de las colecciones
+	 */
 	public State clone(){
 		try {
-<span class="fc" id="L72">			State s = (State) super.clone();</span>
+<span class="fc" id="L144">			State s = (State) super.clone();</span>
 			// deep-copy mutable collections
-<span class="pc bpc" id="L74" title="1 of 2 branches missed.">			s.code = (this.code == null) ? new ArrayList&lt;Object&gt;() : new ArrayList&lt;Object&gt;(this.code);</span>
-<span class="fc bfc" id="L75" title="All 2 branches covered.">			s.evaluation = (this.evaluation == null) ? null : new ArrayList&lt;Double&gt;(this.evaluation);</span>
+<span class="pc bpc" id="L146" title="1 of 2 branches missed.">			s.code = (this.code == null) ? new ArrayList&lt;Object&gt;() : new ArrayList&lt;Object&gt;(this.code);</span>
+<span class="fc bfc" id="L147" title="All 2 branches covered.">			s.evaluation = (this.evaluation == null) ? null : new ArrayList&lt;Double&gt;(this.evaluation);</span>
 			// primitive and enum-like fields are safe to copy by assignment
-<span class="fc" id="L77">			return s;</span>
-<span class="nc" id="L78">		} catch (CloneNotSupportedException e) {</span>
+<span class="fc" id="L149">			return s;</span>
+<span class="nc" id="L150">		} catch (CloneNotSupportedException e) {</span>
 			// fallback to copy constructor
-<span class="nc" id="L80">			return new State(this);</span>
+<span class="nc" id="L152">			return new State(this);</span>
 		}
 	}
 	
+	/**
+	 * Obtener una copia por valor del estado (implementado con copy-constructor).
+	 *
+	 * @return objeto {@link State} nuevo
+	 */
 	public Object getCopy(){
-<span class="fc" id="L85">		return new State(this);</span>
+<span class="fc" id="L162">		return new State(this);</span>
 	}
 	
+	/**
+	 * Comparar la codificaciÃ³n de dos estados.
+	 *
+	 * @param state estado con el que comparar
+	 * @return true si las listas de cÃ³digo son iguales
+	 */
 	public boolean Comparator(State state){
 
-<span class="fc" id="L90">		boolean result=false;</span>
-<span class="fc bfc" id="L91" title="All 2 branches covered.">		if(state.getCode().equals(getCode())){</span>
-<span class="fc" id="L92">			result=true;</span>
+<span class="fc" id="L173">		boolean result=false;</span>
+<span class="fc bfc" id="L174" title="All 2 branches covered.">		if(state.getCode().equals(getCode())){</span>
+<span class="fc" id="L175">			result=true;</span>
 		}
-<span class="fc" id="L94">		return result;</span>
+<span class="fc" id="L177">		return result;</span>
 	}
+	/**
+	 * Calcular la distancia (cantidad de posiciones diferentes) entre dos cÃ³digos.
+	 *
+	 * @param state otro estado a comparar
+	 * @return nÃºmero de posiciones distintas
+	 */
 	public double Distance(State state){
-<span class="fc" id="L97">		double distancia = 0;</span>
-<span class="fc bfc" id="L98" title="All 2 branches covered.">		for (int i = 0; i &lt; state.getCode().size(); i++) {</span>
-<span class="fc bfc" id="L99" title="All 2 branches covered.">			if (!(state.getCode().get(i).equals(this.getCode().get(i)))) {</span>
-<span class="fc" id="L100">				distancia++;</span>
+<span class="fc" id="L186">		double distancia = 0;</span>
+<span class="fc bfc" id="L187" title="All 2 branches covered.">		for (int i = 0; i &lt; state.getCode().size(); i++) {</span>
+<span class="fc bfc" id="L188" title="All 2 branches covered.">			if (!(state.getCode().get(i).equals(this.getCode().get(i)))) {</span>
+<span class="fc" id="L189">				distancia++;</span>
 			}
 		}
-<span class="fc" id="L103">	return distancia;</span>
+<span class="fc" id="L192">	return distancia;</span>
 	}
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

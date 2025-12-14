@@ -6,35 +6,54 @@ import java.util.List;
 
 import problem.definition.State;
 
-<span class="fc" id="L9">public class TabuSolutions {</span>
-	
-<span class="fc" id="L11">	public static final List&lt;State&gt; listTabu = Collections.synchronizedList(new ArrayList&lt;State&gt;());</span>
+/**
+ * TabuSolutions - helper that manages a tabu list and filters neighborhoods.
+ *
+ * @brief Provides a synchronized global tabu list and a utility to remove tabu
+ *        entries from candidate neighborhoods. The filtering method will
+ *        throw an Exception if all neighbors are tabu.
+ */
+<span class="fc" id="L16">public class TabuSolutions {</span>
+    
+	/** Global synchronized tabu list shared by the local search components. */
+<span class="fc" id="L19">	public static final List&lt;State&gt; listTabu = Collections.synchronizedList(new ArrayList&lt;State&gt;());</span>
 
+	/** Maximum number of elements allowed in the tabu list (unused/placeholder). */
 	public static final int maxelements = 0; 
 
+	/**
+	 * Remove tabu solutions from the supplied neighborhood list.
+	 *
+	 * This method iterates the provided neighborhood and removes any element
+	 * that equals an element in the global `listTabu`. If after filtering the
+	 * neighborhood becomes empty the method throws an Exception to signal the
+	 * caller that no valid neighbors remain.
+	 *
+	 * @param listNeighborhood list of neighbor States to filter
+	 * @return a filtered List&lt;State&gt; with tabu entries removed
+	 * @throws Exception when no neighbors remain after filtering
+	 */
 	public List&lt;State&gt; filterNeighborhood(List&lt;State&gt; listNeighborhood) throws Exception {
 	List&lt;State&gt; listFiltrate;
-		//List&lt;ProblemState&gt; auxList = new ArrayList&lt;ProblemState&gt;();
-		//auxList = listNeighborhood;
-		//Problem problem = new Problem();
-<span class="fc bfc" id="L20" title="All 2 branches covered.">		if (!listTabu.isEmpty()) {</span>
-<span class="pc bpc" id="L21" title="1 of 2 branches missed.">			for (int i = listNeighborhood.size() - 1; i &gt;= 0 ; i--) {</span>
-<span class="fc" id="L22">				int count_tabu = 0; </span>
-<span class="fc bfc" id="L23" title="All 2 branches covered.">				while (listTabu.size() &gt; count_tabu) {</span>
-<span class="fc bfc" id="L24" title="All 2 branches covered.">					if (listNeighborhood.get(i).equals(listTabu.get(count_tabu))) {</span>
-<span class="fc" id="L25">						listNeighborhood.remove(i);</span>
+		// If there are entries in the tabu list, remove matching neighbors
+<span class="fc bfc" id="L39" title="All 2 branches covered.">		if (!listTabu.isEmpty()) {</span>
+<span class="pc bpc" id="L40" title="1 of 2 branches missed.">			for (int i = listNeighborhood.size() - 1; i &gt;= 0 ; i--) {</span>
+<span class="fc" id="L41">				int count_tabu = 0; </span>
+<span class="fc bfc" id="L42" title="All 2 branches covered.">				while (listTabu.size() &gt; count_tabu) {</span>
+<span class="fc bfc" id="L43" title="All 2 branches covered.">					if (listNeighborhood.get(i).equals(listTabu.get(count_tabu))) {</span>
+<span class="fc" id="L44">						listNeighborhood.remove(i);</span>
 					}
-<span class="fc" id="L27">					count_tabu++;</span>
+<span class="fc" id="L46">					count_tabu++;</span>
 				}
 			}
-<span class="nc" id="L30">			listFiltrate = listNeighborhood;</span>
-<span class="nc bnc" id="L31" title="All 2 branches missed.">			if (listFiltrate.isEmpty()) {</span>
-<span class="nc" id="L32">				throw new Exception();</span>
+<span class="nc" id="L49">			listFiltrate = listNeighborhood;</span>
+<span class="nc bnc" id="L50" title="All 2 branches missed.">			if (listFiltrate.isEmpty()) {</span>
+<span class="nc" id="L51">				throw new Exception();</span>
 			}
 		} else {
-<span class="fc" id="L35">			listFiltrate = listNeighborhood;</span>
+<span class="fc" id="L54">			listFiltrate = listNeighborhood;</span>
 		}
-<span class="fc" id="L37">		return listFiltrate;</span>
+<span class="fc" id="L56">		return listFiltrate;</span>
 	}
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

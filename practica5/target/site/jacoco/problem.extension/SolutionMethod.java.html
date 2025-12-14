@@ -2,8 +2,21 @@
 
 import problem.definition.State;
 
-<span class="fc" id="L5">public abstract class SolutionMethod {</span>
+/**
+ * SolutionMethod
+ *
+ * @brief AbstracciÃ³n para mÃ©todos concretos que evalÃºan un {@link problem.definition.State}.
+ *
+ * Implementaciones especÃ­ficas calculan y asignan la lista de evaluaciones del estado.
+ */
+<span class="fc" id="L12">public abstract class SolutionMethod {</span>
 
+	/**
+	 * Evaluar un estado segÃºn el mÃ©todo de soluciÃ³n concreto.
+	 *
+	 * @param state estado a evaluar; se espera que la implementaciÃ³n modifique
+	 *              la lista de evaluaciones del estado.
+	 */
 	public abstract void evaluationState(State state);
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

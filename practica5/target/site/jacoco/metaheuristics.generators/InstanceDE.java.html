@@ -5,40 +5,55 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 
-<span class="fc" id="L8">public class InstanceDE implements Runnable {</span>
+/**
+ * InstanceDE - class that implements the Runnable interface to create an instance of
+ *               the Distribution Estimation Algorithm generator.
+ */
+<span class="fc" id="L12">public class InstanceDE implements Runnable {</span>
 
-<span class="fc" id="L10">	private static final Logger LOGGER = Logger.getLogger(InstanceDE.class.getName());</span>
+<span class="fc" id="L14">	private static final Logger LOGGER = Logger.getLogger(InstanceDE.class.getName());</span>
 
-<span class="fc" id="L12">	private boolean terminate = false;</span>
+<span class="fc" id="L16">	private boolean terminate = false;</span>
     
+	/**
+	 * run - create an instance of the Distribution Estimation Algorithm generator.
+	 */
 	public void run() {
-<span class="fc" id="L15">		FactoryGenerator ifFactoryGenerator = new FactoryGenerator();</span>
-<span class="fc" id="L16">		Generator generatorDE = null;</span>
+<span class="fc" id="L22">		FactoryGenerator ifFactoryGenerator = new FactoryGenerator();</span>
+<span class="fc" id="L23">		Generator generatorDE = null;</span>
 		try {
-<span class="fc" id="L18">			generatorDE = ifFactoryGenerator.createGenerator(GeneratorType.DistributionEstimationAlgorithm);</span>
-<span class="nc" id="L19">		} catch (Exception e) {</span>
+<span class="fc" id="L25">			generatorDE = ifFactoryGenerator.createGenerator(GeneratorType.DistributionEstimationAlgorithm);</span>
+<span class="nc" id="L26">		} catch (Exception e) {</span>
 			// Log exception instead of printing stack trace so debug info is available
 			// but the code is safe for production.
-<span class="nc" id="L22">			LOGGER.log(Level.SEVERE, &quot;Failed to create DistributionEstimationAlgorithm generator&quot;, e);</span>
-<span class="fc" id="L23">		}</span>
-<span class="fc" id="L24">		boolean find = false;</span>
-<span class="fc" id="L25">		int i = 0;</span>
-<span class="fc bfc" id="L26" title="All 2 branches covered.">		while (find == false) {</span>
-<span class="fc bfc" id="L27" title="All 2 branches covered.">			if(MultiGenerator.getListGenerators()[i].getType().equals(GeneratorType.DistributionEstimationAlgorithm)){</span>
-<span class="fc" id="L28">				MultiGenerator.getListGenerators()[i] = generatorDE;</span>
-<span class="fc" id="L29">				find = true;</span>
+<span class="nc" id="L29">			LOGGER.log(Level.SEVERE, &quot;Failed to create DistributionEstimationAlgorithm generator&quot;, e);</span>
+<span class="fc" id="L30">		}</span>
+<span class="fc" id="L31">		boolean find = false;</span>
+<span class="fc" id="L32">		int i = 0;</span>
+<span class="fc bfc" id="L33" title="All 2 branches covered.">		while (find == false) {</span>
+<span class="fc bfc" id="L34" title="All 2 branches covered.">			if(MultiGenerator.getListGenerators()[i].getType().equals(GeneratorType.DistributionEstimationAlgorithm)){</span>
+<span class="fc" id="L35">				MultiGenerator.getListGenerators()[i] = generatorDE;</span>
+<span class="fc" id="L36">				find = true;</span>
 			}
-<span class="fc" id="L31">			else i++;    </span>
+<span class="fc" id="L38">			else i++;    </span>
 		}
-<span class="fc" id="L33">		terminate = true;</span>
-<span class="fc" id="L34">	}</span>
+<span class="fc" id="L40">		terminate = true;</span>
+<span class="fc" id="L41">	}</span>
 
+	/**
+	 * isTerminate - check if the instance is terminated.
+	 * @return true if terminated, false otherwise
+	 */
 	public boolean isTerminate() {
-<span class="fc" id="L37">		return terminate;</span>
+<span class="fc" id="L48">		return terminate;</span>
 	}
 
+	/**
+	 * setTerminate - set the termination status of the instance.
+	 * @param terminate true to terminate, false to continue
+	 */
 	public void setTerminate(boolean terminate) {
-<span class="nc" id="L41">		this.terminate = terminate;</span>
-<span class="nc" id="L42">	}</span>
+<span class="nc" id="L56">		this.terminate = terminate;</span>
+<span class="nc" id="L57">	}</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

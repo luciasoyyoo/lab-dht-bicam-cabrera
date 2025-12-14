@@ -2,22 +2,26 @@
 
 import java.lang.reflect.InvocationTargetException;
 
-
 import evolutionary_algorithms.complement.Distribution;
 import evolutionary_algorithms.complement.DistributionType;
 import factory_interface.IFFactoryDistribution;
 
-
-
-
-<span class="fc" id="L13">public class FactoryDistribution implements IFFactoryDistribution {</span>
+/**
+ * FactoryDistribution - Interface for creating distribution strategies.
+ */
+<span class="fc" id="L12">public class FactoryDistribution implements IFFactoryDistribution {</span>
 	private Distribution distribution;
 
+	/**
+	 * createDistribution - Creates an instance of Distribution based on the provided DistributionType.
+	 * @param distributiontype 
+	 * @return returns an instance of Distribution
+	 */
 	public Distribution createDistribution(DistributionType distributiontype) throws IllegalArgumentException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException {
 		
-<span class="fc" id="L18">		String className = &quot;evolutionary_algorithms.complement.&quot; + distributiontype.toString();</span>
-<span class="fc" id="L19">		distribution = (Distribution) FactoryLoader.getInstance(className);</span>
-<span class="fc" id="L20">		return distribution;</span>
+<span class="fc" id="L22">		String className = &quot;evolutionary_algorithms.complement.&quot; + distributiontype.toString();</span>
+<span class="fc" id="L23">		distribution = (Distribution) FactoryLoader.getInstance(className);</span>
+<span class="fc" id="L24">		return distribution;</span>
 	}
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

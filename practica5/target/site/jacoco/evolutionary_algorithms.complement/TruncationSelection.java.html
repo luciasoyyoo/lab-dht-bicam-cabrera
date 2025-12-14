@@ -9,51 +9,70 @@ import metaheurictics.strategy.Strategy;
 import problem.definition.State;
 import problem.definition.Problem.ProblemType;
 
-<span class="nc" id="L12">public class TruncationSelection extends FatherSelection {</span>
+/**
+ * TruncationSelection - applies truncation selection strategy.
+ */
+<span class="nc" id="L15">public class TruncationSelection extends FatherSelection {</span>
 	
+	/**
+	 * orderBetter - applies truncation selection strategy.
+	 * @param listState 
+	 * @return returns the list of states ordered from best to worst.
+	 */
 	public List&lt;State&gt; orderBetter (List&lt;State&gt; listState){
-<span class="nc" id="L15">		State var = null;</span>
-<span class="nc bnc" id="L16" title="All 2 branches missed.">		for (int i = 0; i &lt; listState.size()- 1; i++) {</span>
-<span class="nc bnc" id="L17" title="All 2 branches missed.">			for (int j = i+1; j &lt; listState.size(); j++) {</span>
-<span class="nc bnc" id="L18" title="All 2 branches missed.">				if(listState.get(i).getEvaluation().get(0) &lt; listState.get(j).getEvaluation().get(0)){</span>
-<span class="nc" id="L19">					var = listState.get(i);</span>
-<span class="nc" id="L20">					listState.set(i, listState.get(j));</span>
-<span class="nc" id="L21">					listState.set(j,var);</span>
+<span class="nc" id="L23">		State var = null;</span>
+<span class="nc bnc" id="L24" title="All 2 branches missed.">		for (int i = 0; i &lt; listState.size()- 1; i++) {</span>
+<span class="nc bnc" id="L25" title="All 2 branches missed.">			for (int j = i+1; j &lt; listState.size(); j++) {</span>
+<span class="nc bnc" id="L26" title="All 2 branches missed.">				if(listState.get(i).getEvaluation().get(0) &lt; listState.get(j).getEvaluation().get(0)){</span>
+<span class="nc" id="L27">					var = listState.get(i);</span>
+<span class="nc" id="L28">					listState.set(i, listState.get(j));</span>
+<span class="nc" id="L29">					listState.set(j,var);</span>
 				}
 			}
 		}
-<span class="nc" id="L25">		return listState;</span>
+<span class="nc" id="L33">		return listState;</span>
 	}
 	
+	/**
+	 * ascOrderBetter - applies truncation selection strategy.
+	 * @param listState 
+	 * @return returns the list of states ordered from worst to best.
+	 */
 	public List&lt;State&gt; ascOrderBetter (List&lt;State&gt; listState){
-<span class="nc" id="L29">		State var = null;</span>
-<span class="nc bnc" id="L30" title="All 2 branches missed.">		for (int i = 0; i &lt; listState.size()- 1; i++) {</span>
-<span class="nc bnc" id="L31" title="All 2 branches missed.">			for (int j = i+1; j &lt; listState.size(); j++) {</span>
-<span class="nc bnc" id="L32" title="All 2 branches missed.">				if(listState.get(i).getEvaluation().get(0) &gt; listState.get(j).getEvaluation().get(0)){</span>
-<span class="nc" id="L33">					var = listState.get(i);</span>
-<span class="nc" id="L34">					listState.set(i, listState.get(j));</span>
-<span class="nc" id="L35">					listState.set(j,var);</span>
+<span class="nc" id="L42">		State var = null;</span>
+<span class="nc bnc" id="L43" title="All 2 branches missed.">		for (int i = 0; i &lt; listState.size()- 1; i++) {</span>
+<span class="nc bnc" id="L44" title="All 2 branches missed.">			for (int j = i+1; j &lt; listState.size(); j++) {</span>
+<span class="nc bnc" id="L45" title="All 2 branches missed.">				if(listState.get(i).getEvaluation().get(0) &gt; listState.get(j).getEvaluation().get(0)){</span>
+<span class="nc" id="L46">					var = listState.get(i);</span>
+<span class="nc" id="L47">					listState.set(i, listState.get(j));</span>
+<span class="nc" id="L48">					listState.set(j,var);</span>
 				}
 			}
 		}
-<span class="nc" id="L39">		return listState;</span>
+<span class="nc" id="L52">		return listState;</span>
 	}
     
 	@Override
+	/**
+	 * selection - applies truncation selection strategy.
+	 * @param listState 
+	 * @param truncation 
+	 * @return returns the selected list of states based on truncation.
+	 */
 	public List&lt;State&gt; selection(List&lt;State&gt; listState, int truncation) {
-<span class="nc" id="L44">		List&lt;State&gt; AuxList = new ArrayList&lt;State&gt;();</span>
-<span class="nc bnc" id="L45" title="All 2 branches missed.">		if (Strategy.getStrategy().getProblem().getTypeProblem().equals(ProblemType.Maximizar)) {</span>
-<span class="nc" id="L46">			listState = orderBetter(listState);</span>
+<span class="nc" id="L63">		List&lt;State&gt; AuxList = new ArrayList&lt;State&gt;();</span>
+<span class="nc bnc" id="L64" title="All 2 branches missed.">		if (Strategy.getStrategy().getProblem().getTypeProblem().equals(ProblemType.Maximizar)) {</span>
+<span class="nc" id="L65">			listState = orderBetter(listState);</span>
 		} else {
-<span class="nc bnc" id="L48" title="All 2 branches missed.">			if(Strategy.getStrategy().getProblem().getTypeProblem().equals(ProblemType.Minimizar))</span>
-<span class="nc" id="L49">				listState = ascOrderBetter(listState);</span>
+<span class="nc bnc" id="L67" title="All 2 branches missed.">			if(Strategy.getStrategy().getProblem().getTypeProblem().equals(ProblemType.Minimizar))</span>
+<span class="nc" id="L68">				listState = ascOrderBetter(listState);</span>
 		}
-<span class="nc" id="L51">		int i = 0;</span>
-<span class="nc bnc" id="L52" title="All 2 branches missed.">		while(AuxList.size()&lt; truncation){</span>
-<span class="nc" id="L53">			AuxList.add(listState.get(i));</span>
-<span class="nc" id="L54">			i++;</span>
+<span class="nc" id="L70">		int i = 0;</span>
+<span class="nc bnc" id="L71" title="All 2 branches missed.">		while(AuxList.size()&lt; truncation){</span>
+<span class="nc" id="L72">			AuxList.add(listState.get(i));</span>
+<span class="nc" id="L73">			i++;</span>
 		}
-<span class="nc" id="L56">		return AuxList;</span>
+<span class="nc" id="L75">		return AuxList;</span>
 	}
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

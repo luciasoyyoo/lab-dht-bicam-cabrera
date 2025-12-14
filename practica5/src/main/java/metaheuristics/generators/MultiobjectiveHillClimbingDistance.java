@@ -17,7 +17,7 @@ import local_search.complement.StrategyType;
 import metaheurictics.strategy.Strategy;
 
 /**
- * MultiobjectiveHillClimbingDistance - class that implements the Multiobjective Hill Climbing Distance metaheuristic.
+ * @brief MultiobjectiveHillClimbingDistance - class that implements the Multiobjective Hill Climbing Distance metaheuristic.
  */
 public class MultiobjectiveHillClimbingDistance extends Generator{
 
@@ -35,6 +35,7 @@ public class MultiobjectiveHillClimbingDistance extends Generator{
 	private static final int sizeNeighbors = 10;
 
 	/**
+	 * @brief getSizeNeighbors - get the size of the neighborhood.
 	 * Accessor for sizeNeighbors.
 	 */
 	public static int getSizeNeighbors() {
@@ -45,7 +46,7 @@ public class MultiobjectiveHillClimbingDistance extends Generator{
 
 
 	/**
-	 * MultiobjectiveHillClimbingDistance - class that implements the Multiobjective Hill Climbing Distance metaheuristic.
+	 * @brief MultiobjectiveHillClimbingDistance - class that implements the Multiobjective Hill Climbing Distance metaheuristic.
 	 */
 	public MultiobjectiveHillClimbingDistance() {
 		super();
@@ -61,7 +62,7 @@ public class MultiobjectiveHillClimbingDistance extends Generator{
 
 	@Override
 	/**
-	 * generate - generate a new state based on the operator number.
+	 * @brief generate - generate a new state based on the operator number.
 	 * @param operatornumber the operator number to use for generating the state
 	 * @return the generated state
 	 */
@@ -72,7 +73,7 @@ public class MultiobjectiveHillClimbingDistance extends Generator{
 	}
 
 	/**
-	 * updateReference - update the reference state and the list of visited states.
+	 * @brief updateReference - update the reference state and the list of visited states.
 	 * @param stateCandidate
 	 * @param countIterationsCurrent
 	 * @throws IllegalArgumentException
@@ -137,7 +138,7 @@ public class MultiobjectiveHillClimbingDistance extends Generator{
 	}
 
 	/**
-	 * solutionMoreDistance - find the solution with the maximum distance.
+	 * @brief solutionMoreDistance - find the solution with the maximum distance.
 	 * @param state the list of states
 	 * @param distanceSolution the list of distances corresponding to the states
 	 * @return the state with the maximum distance
@@ -161,71 +162,39 @@ public class MultiobjectiveHillClimbingDistance extends Generator{
 	}
 
 	@Override
-	/**
-	 * getReferenceList - get the list of reference states.
-	 * @return the list of reference states
-	 */
 	public List<State> getReferenceList() {
 		listStateReference.add(stateReferenceHC.clone());
 		return listStateReference;
 	}
 
 	@Override
-	/**
-	 * getReference - get the reference state.
-	 * @return the reference state
-	 */
 	public State getReference() {
 		return stateReferenceHC;
 	}
 
-	/**
-	 * setStateRef - set the reference state.
-	 * @param stateRef the reference state to set
-	 */
 	public void setStateRef(State stateRef) {
 		this.stateReferenceHC = stateRef;
 	}
 
 	@Override
-	/**
-	 * setInitialReference - set the initial reference state.
-	 * @param stateInitialRef the initial reference state to set
-	 */
 	public void setInitialReference(State stateInitialRef) {
 		this.stateReferenceHC = stateInitialRef;
 	}
 
-	/**
-	 * getGeneratorType - get the generator type.
-	 * @return the generator type
-	 */
 	public GeneratorType getGeneratorType() {
 		return generatortype;
 	}
 
-	/**
-	 * setGeneratorType - set the generator type.
-	 * @param generatortype the generator type to set
-	 */
 	public void setGeneratorType(GeneratorType generatortype) {
 		this.generatortype = generatortype;
 	}
 
 	@Override
-	/**
-	 * getType - get the generator type.
-	 * @return the generator type
-	 */
 	public GeneratorType getType() {
 		return this.generatortype;
 	}
 
 	@Override
-	/**
-	 * getSonList - get the list of child states.
-	 * @return the list of child states
-	 */
 	public List<State> getSonList() {
 		// TODO Auto-generated method stub
 		return null;
@@ -241,10 +210,9 @@ public class MultiobjectiveHillClimbingDistance extends Generator{
 			State solA = solutions[k];
 			distance = solA.Distance(lastSolution);
 			listDist.add(distanceSolution.get(k)+distance);
-//			distanceSolution.set(k, distanceSolution.get(k) + distance);
 		}
 		distance = 0.0;
-		//Calculando la distancia del �ltimo elemento (elemento insertado) respecto al resto de los elementos
+		//Calculando la distancia del último elemento (elemento insertado) respecto al resto de los elementos
 		if (solutions.length==1) {
 			return distanceSolution;
 		
@@ -255,7 +223,6 @@ public class MultiobjectiveHillClimbingDistance extends Generator{
 				distance += lastSolution.Distance(solB);
 			}
 			listDist.add(distance);
-//			distanceSolution.add(distance);
 			distanceSolution=listDist;
 			
 			return distanceSolution;
@@ -265,7 +232,7 @@ public class MultiobjectiveHillClimbingDistance extends Generator{
 
 
 	/**
-	 * contain - check if the state is contained in the visited states.
+	 * @brief contain - check if the state is contained in the visited states.
 	 * @param state 
 	 * @return return true if the state is contained, false otherwise
 	 */
@@ -282,7 +249,7 @@ public class MultiobjectiveHillClimbingDistance extends Generator{
 
 	@Override
 	/**
-	 * awardUpdateREF - check if the candidate state should update the reference state.
+	 * @brief awardUpdateREF - check if the candidate state should update the reference state.
 	 * @param stateCandidate 
 	 * @return return true if the reference state should be updated, false otherwise
 	 */
@@ -293,50 +260,31 @@ public class MultiobjectiveHillClimbingDistance extends Generator{
 
 
 	@Override
-	/**
-	 * getWeight - get the weight of the generator.
-	 * @return the weight of the generator
-	 */
+
 	public float getWeight() {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
-	/**
-	 * setWeight - set the weight of the generator.
-	 * @param weight 
-	 */
 	public void setWeight(float weight) {
 		// TODO Auto-generated method stub
 
 	}
 
 	@Override
-	/**
-	 * getListCountBetterGender - get the list of counts for better gender.
-	 * @return the list of counts for better gender
-	 */
 	public int[] getListCountBetterGender() {
 		// This generator doesn't maintain listCount arrays; return empty array to avoid nulls
 		return new int[0];
 	}
 
 	@Override
-	/**
-	 * getListCountGender - get the list of counts for gender.
-	 * @return the list of counts for gender
-	 */
 	public int[] getListCountGender() {
 		// This generator doesn't maintain listCount arrays; return empty array to avoid nulls
 		return new int[0];
 	}
 
 	@Override
-	/**
-	 * getTrace - get the trace of the generator.
-	 * @return the trace of the generator
-	 */
 	public float[] getTrace() {
 		// TODO Auto-generated method stub
 		if (this.listTrace == null) return new float[0];

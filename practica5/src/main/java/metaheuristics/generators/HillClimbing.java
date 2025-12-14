@@ -22,7 +22,7 @@ import factory_method.FactoryAcceptCandidate;
 
 
 /**
- * HillClimbing - class that implements the Hill Climbing metaheuristic.
+ * @brief HillClimbing - class that implements the Hill Climbing metaheuristic.
  */
 public class HillClimbing extends Generator{
 
@@ -36,14 +36,12 @@ public class HillClimbing extends Generator{
 	protected List<State> listStateReference = new ArrayList<State>(); 
 	protected float weight;
 	
-	//problemas dinamicos
-	//problemas dinamicos: use instance fields from Generator (countGender, countBetterGender)
 	private int[] listCountBetterGender = new int[10];
 	private int[] listCountGender = new int[10];
 	private float[] listTrace = new float[1200000];
 	
 	/**
-	 * HillClimbing - class that implements the Hill Climbing metaheuristic.
+	 * @brief HillClimbing - class that implements the Hill Climbing metaheuristic.
 	 */
 	public HillClimbing() {
 		super();
@@ -65,7 +63,7 @@ public class HillClimbing extends Generator{
 
 	@Override
 	/**
-	 * generate - generate a new state based on the current state and the operator number.
+	 * @brief generate - generate a new state based on the current state and the operator number.
 	 * @param operatornumber the operator number to use for generating the new state
 	 * @return the newly generated state
 	 */
@@ -78,7 +76,7 @@ public class HillClimbing extends Generator{
 
 	@Override
 	/**
-	 * updateReference - update the reference state if the candidate state is accepted.
+	 * @brief updateReference - update the reference state if the candidate state is accepted.
 	 * @param stateCandidate 
 	 * @param countIterationsCurrent 
 	 */
@@ -90,11 +88,11 @@ public class HillClimbing extends Generator{
 		  stateReferenceHC = stateCandidate;
 	}
 	
-	@Override
-	/**
-	 * getReferenceList - get the list of reference states.
-	 * @return the list of reference states
-	 */
+
+	public CandidateValue getCandidateValue() {
+		return candidatevalue;
+	}
+
 	public List<State> getReferenceList() {
 		if (stateReferenceHC != null) {
 			// keep internal list updated but do not expose it directly
@@ -106,77 +104,45 @@ public class HillClimbing extends Generator{
 	}
 
 	@Override
-	/**
-	 * getReference - get the reference state.
-	 * @return the reference state
-	 */
 	public State getReference() {
 		return (stateReferenceHC == null) ? null : new State(stateReferenceHC);
 	}
 
-	/**
-	 * setStateRef - set the reference state.
-	 * @param stateRef 
-	 */
 	public void setStateRef(State stateRef) {
 		this.stateReferenceHC = (stateRef == null) ? null : new State(stateRef);
 	}
 
 	@Override
-	/**
-	 * setInitialReference - set the initial reference state.
-	 * @param stateInitialRef 
-	 */
 	public void setInitialReference(State stateInitialRef) {
 		this.stateReferenceHC = (stateInitialRef == null) ? null : new State(stateInitialRef);
 	}
 
-	/**
-	 * getGeneratorType - get the generator type.
-	 * @return the generator type
-	 */
 	public GeneratorType getGeneratorType() {
 		return generatortype;
 	}
 
-	/**
-	 * setGeneratorType - set the generator type.
-	 * @param generatortype 
-	 */
 	public void setGeneratorType(GeneratorType generatortype) {
 		this.generatortype = generatortype;
 	}
 
 	@Override
-	/**
-	 * getType - get the generator type.
-	 * @return the generator type
-	 */
 	public GeneratorType getType() {
 		return this.generatortype;
 	}
 
 	@Override
-	/**
-	 * getSonList - get the list of son states.
-	 * @return the list of son states
-	 */
 	public List<State> getSonList() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	/**
-	 * setTypeCandidate - set the type of candidate.
-	 * @param typeCandidate 
-	 */
 	public void setTypeCandidate(CandidateType typeCandidate){
 		this.typeCandidate = typeCandidate;
 	}
 
 	@Override
 	/**
-	 * awardUpdateREF - award the update of the reference state if the candidate state is accepted.
+	 * @brief awardUpdateREF - award the update of the reference state if the candidate state is accepted.
 	 * @param stateCandidate 
 	 * @return returns true if the update is awarded, false otherwise.
 	 */
@@ -186,50 +152,30 @@ public class HillClimbing extends Generator{
 	}
 
 	@Override
-	/**
-	 * getWeight - get the weight of the candidate.
-	 * @return the weight of the candidate
-	 */
 	public float getWeight() {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
-	/**
-	 * setWeight - set the weight of the candidate.
-	 * @param weight 
-	 */
 	public void setWeight(float weight) {
 		// TODO Auto-generated method stub
 		
 	}
 	
 	@Override
-	/**
-	 * getListCountBetterGender - get the list of counts of better candidates by gender.
-	 * @return the list of counts of better candidates by gender
-	 */
 	public int[] getListCountBetterGender() {
 		// TODO Auto-generated method stub
 		return (this.listCountBetterGender == null) ? new int[0] : java.util.Arrays.copyOf(this.listCountBetterGender, this.listCountBetterGender.length);
 	}
 
 	@Override
-	/**
-	 * getListCountGender - get the list of counts of candidates by gender.
-	 * @return the list of counts of candidates by gender
-	 */
 	public int[] getListCountGender() {
 		// TODO Auto-generated method stub
 		return (this.listCountGender == null) ? new int[0] : java.util.Arrays.copyOf(this.listCountGender, this.listCountGender.length);
 	}
 
 	@Override
-	/**
-	 * getTrace - get the trace of the candidate.
-	 * @return the trace of the candidate
-	 */
 	public float[] getTrace() {
 		// TODO Auto-generated method stub
 		return (this.listTrace == null) ? new float[0] : java.util.Arrays.copyOf(this.listTrace, this.listTrace.length);

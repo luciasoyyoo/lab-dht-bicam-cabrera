@@ -4,8 +4,17 @@
 
 package local_search.complement;
 
-<span class="fc" id="L7">public enum StrategyType</span>
+/**
+ * StrategyType - enumeration of local search strategy modes.
+ *
+ * @brief Represents the two supported local search strategy types: a TABU
+ *        variant which uses tabu lists and a NORMAL (non-tabu) variant.
+ */
+<span class="fc" id="L13">public enum StrategyType</span>
 {
-<span class="fc" id="L9">	TABU, NORMAL;	</span>
+	/** Use tabu-list based neighborhood filtering and behavior. */
+<span class="fc" id="L16">	TABU,</span>
+	/** Use normal (non-tabu) neighborhood processing. */
+<span class="fc" id="L18">	NORMAL; 	</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>
