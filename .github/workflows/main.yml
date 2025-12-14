@@ -65,14 +65,13 @@ jobs:
       - name: Análisis con SonarCloud
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_TOKEN: ${{ b3e4a68e15f0b710e1606996bfbfe5f165eba514 }}
         working-directory: practica5
         run: |
           mvn verify sonar:sonar \
           -Dsonar.projectKey=luciasoyyoo_lab-dht-bicam-cabrera \
           -Dsonar.organization=luciasoyyoo \
           -Dsonar.host.url=https://sonarcloud.io
-          -Dsonar.token=b3e4a68e15f0b710e1606996bfbfe5f165eba514
 
 
   artifact:
